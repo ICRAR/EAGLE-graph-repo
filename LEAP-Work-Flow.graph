@@ -215,6 +215,14 @@
                 {
                     "Id": "c254e6ee-7ea4-4e6f-8c06-69474219f0cd",
                     "IdText": "UVW"
+                },
+                {
+                    "Id": "831f0aa3-812f-4fd2-acf5-6f0cabb28701",
+                    "IdText": "Flags"
+                },
+                {
+                    "Id": "5ca0181f-221e-40fa-af5f-93cb5d2a3252",
+                    "IdText": "config"
                 }
             ],
             "outputPorts": [
@@ -498,10 +506,10 @@
             "width": 712.7984699674997,
             "height": 733.3730557565816,
             "collapsed": false,
-            "showPorts": false,
+            "showPorts": true,
             "streaming": false,
             "subject": null,
-            "selected": false,
+            "selected": true,
             "expanded": true,
             "inputApplicationName": "sleep",
             "outputApplicationName": "",
@@ -567,7 +575,7 @@
                 {
                     "text": "Number of copies",
                     "name": "num_of_copies",
-                    "value": "2",
+                    "value": "10",
                     "description": ""
                 },
                 {
@@ -1003,6 +1011,10 @@
                 {
                     "Id": "425fe54c-c1ba-46c3-abb4-081687cd69dc",
                     "IdText": "FoV"
+                },
+                {
+                    "Id": "0ba3b9ca-eebd-47ec-8509-57a4cc2929bd",
+                    "IdText": "Flags"
                 }
             ],
             "inputLocalPorts": [],
@@ -1314,8 +1326,8 @@
             "key": -20,
             "text": "CalibratorCatalogue",
             "description": "",
-            "x": 694.4967046591983,
-            "y": 192.18479696503596,
+            "x": 657.5263772031504,
+            "y": 40.195672979060994,
             "width": 200,
             "height": 200,
             "collapsed": false,
@@ -1387,15 +1399,15 @@
             "key": -21,
             "text": "Gather",
             "description": "Placeholder 'gather' description",
-            "x": 701.2749985536864,
-            "y": 57.974577854174726,
+            "x": 664.3046710976386,
+            "y": -94.0145461318002,
             "width": 200,
             "height": 200,
             "collapsed": false,
-            "showPorts": true,
+            "showPorts": false,
             "streaming": false,
             "subject": null,
-            "selected": true,
+            "selected": false,
             "expanded": true,
             "inputApplicationName": "QueryEngine",
             "outputApplicationName": "",
@@ -1409,7 +1421,12 @@
                     "IdText": "query"
                 }
             ],
-            "outputPorts": [],
+            "outputPorts": [
+                {
+                    "Id": "d9ceccbe-cdf5-49f8-b5a3-05bfa2ca8a5c",
+                    "IdText": "queryResult"
+                }
+            ],
             "inputLocalPorts": [
                 {
                     "Id": "2621abe4-a16e-4d03-b4a3-635c76e4b0cc",
@@ -1465,65 +1482,6 @@
             ]
         },
         {
-            "category": "Memory",
-            "categoryType": "Data",
-            "isData": true,
-            "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
-            "drawOrderHint": 0,
-            "key": -7,
-            "text": "directionList",
-            "description": "",
-            "x": 778.7220275881416,
-            "y": 356.66969086922614,
-            "width": 200,
-            "height": 200,
-            "collapsed": false,
-            "showPorts": false,
-            "streaming": false,
-            "subject": null,
-            "selected": false,
-            "expanded": false,
-            "inputApplicationName": "",
-            "outputApplicationName": "",
-            "exitApplicationName": "",
-            "inputApplicationType": "None",
-            "outputApplicationType": "None",
-            "exitApplicationType": "None",
-            "inputPorts": [
-                {
-                    "Id": "3f2371d0-86de-4b09-9698-f2b97bca90c0",
-                    "IdText": "directionList"
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "d2f3c133-a9a6-42b8-8d9a-56a162da3539",
-                    "IdText": "directionList"
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "fields": [
-                {
-                    "text": "Data volume",
-                    "name": "data_volume",
-                    "value": "5",
-                    "description": ""
-                },
-                {
-                    "text": "Group end",
-                    "name": "group_end",
-                    "value": "0",
-                    "description": ""
-                }
-            ]
-        },
-        {
             "category": "PythonApp",
             "categoryType": "Application",
             "isData": false,
@@ -1535,8 +1493,8 @@
             "key": -23,
             "text": "Get Cal Sources",
             "description": "",
-            "x": 297.6535713686304,
-            "y": 114.38606843334962,
+            "x": 341.4702557609836,
+            "y": 136.29441062952617,
             "width": 200,
             "height": 200,
             "collapsed": false,
@@ -1565,10 +1523,6 @@
                 {
                     "Id": "27f51df6-9f0b-4eed-aa38-e4b9e60bea1f",
                     "IdText": "query"
-                },
-                {
-                    "Id": "3f490807-78bf-466a-a5a8-99ebe46baa17",
-                    "IdText": "directionList"
                 }
             ],
             "inputLocalPorts": [],
@@ -1632,12 +1586,150 @@
             "exitApplicationType": "None",
             "inputPorts": [
                 {
+                    "Id": "91f0619c-6f98-4b8b-b06d-2df5023f938c",
+                    "IdText": "query"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "e9e5d67c-531d-4014-8952-fa04b528dc3d",
+                    "IdText": "query"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": "5",
+                    "description": ""
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": "0",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "category": "PythonApp",
+            "categoryType": "Application",
+            "isData": false,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#3498DB",
+            "drawOrderHint": 0,
+            "key": -15,
+            "text": "Filter Cal Sources",
+            "description": "",
+            "x": 742.6667722284669,
+            "y": 329.3616762333323,
+            "width": 200,
+            "height": 200,
+            "collapsed": false,
+            "showPorts": false,
+            "streaming": false,
+            "subject": null,
+            "selected": false,
+            "expanded": false,
+            "inputApplicationName": "",
+            "outputApplicationName": "",
+            "exitApplicationName": "",
+            "inputApplicationType": "Unknown",
+            "outputApplicationType": "Unknown",
+            "exitApplicationType": "None",
+            "inputPorts": [
+                {
+                    "Id": "a214c4c4-0e76-4389-83ee-35dff9105f17",
+                    "IdText": "PhaseCentre"
+                },
+                {
+                    "Id": "01ee558b-eb65-4e00-997e-b279d0d1d552",
+                    "IdText": "FoV"
+                },
+                {
+                    "Id": "77ea90e4-98ac-4575-9b77-ed463763a696",
+                    "IdText": "queryResult"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "3f490807-78bf-466a-a5a8-99ebe46baa17",
+                    "IdText": "directionList"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "fields": [
+                {
+                    "text": "Execution time",
+                    "name": "execution_time",
+                    "value": "5",
+                    "description": ""
+                },
+                {
+                    "text": "Num CPUs",
+                    "name": "num_cpus",
+                    "value": "1",
+                    "description": ""
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": "0",
+                    "description": ""
+                },
+                {
+                    "text": "Appclass",
+                    "name": "appclass",
+                    "value": "dlg.apps.simple.SleepApp",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "category": "Memory",
+            "categoryType": "Data",
+            "isData": true,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#394BB2",
+            "drawOrderHint": 0,
+            "key": -17,
+            "text": "queryResult",
+            "description": "",
+            "x": 731.5989738318482,
+            "y": 259.43634236222755,
+            "width": 200,
+            "height": 200,
+            "collapsed": false,
+            "showPorts": false,
+            "streaming": false,
+            "subject": null,
+            "selected": false,
+            "expanded": false,
+            "inputApplicationName": "",
+            "outputApplicationName": "",
+            "exitApplicationName": "",
+            "inputApplicationType": "None",
+            "outputApplicationType": "None",
+            "exitApplicationType": "None",
+            "inputPorts": [
+                {
                     "Id": "752a000e-4d82-4311-961e-f321bdfcd254",
                     "IdText": "event"
                 },
                 {
-                    "Id": "91f0619c-6f98-4b8b-b06d-2df5023f938c",
-                    "IdText": "query"
+                    "Id": "91201391-67a2-43f9-aa95-c21eb94b28b6",
+                    "IdText": "queryResult"
                 }
             ],
             "outputPorts": [
@@ -1646,8 +1738,75 @@
                     "IdText": "event"
                 },
                 {
-                    "Id": "e9e5d67c-531d-4014-8952-fa04b528dc3d",
-                    "IdText": "query"
+                    "Id": "4c7c8e19-22d6-4503-97f5-3831f5414763",
+                    "IdText": "queryResult"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": "5",
+                    "description": ""
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": "0",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "category": "Memory",
+            "categoryType": "Data",
+            "isData": true,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#394BB2",
+            "drawOrderHint": 0,
+            "key": -25,
+            "text": "directionList",
+            "description": "",
+            "x": 831.7371276319924,
+            "y": 476.52133084675853,
+            "width": 200,
+            "height": 200,
+            "collapsed": false,
+            "showPorts": false,
+            "streaming": false,
+            "subject": null,
+            "selected": false,
+            "expanded": false,
+            "inputApplicationName": "",
+            "outputApplicationName": "",
+            "exitApplicationName": "",
+            "inputApplicationType": "None",
+            "outputApplicationType": "None",
+            "exitApplicationType": "None",
+            "inputPorts": [
+                {
+                    "Id": "752a000e-4d82-4311-961e-f321bdfcd254",
+                    "IdText": "event"
+                },
+                {
+                    "Id": "75606cc4-c15c-471c-833a-353b52c80722",
+                    "IdText": "directionList"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "f6a2b7ab-cf16-4a9d-b886-58ddf5873512",
+                    "IdText": "event"
+                },
+                {
+                    "Id": "ba598fa0-eb57-41b6-b481-c36115d476bc",
+                    "IdText": "directionList"
                 }
             ],
             "inputLocalPorts": [],
@@ -1792,18 +1951,6 @@
             "toPort": "b74de00b-80a1-4075-8115-22cc9cc82b01"
         },
         {
-            "from": -7,
-            "fromPort": "d2f3c133-a9a6-42b8-8d9a-56a162da3539",
-            "to": -11,
-            "toPort": "11fe5abb-9066-4655-ac05-190a152f75be"
-        },
-        {
-            "from": -23,
-            "fromPort": "27f51df6-9f0b-4eed-aa38-e4b9e60bea1f",
-            "to": -24,
-            "toPort": "91f0619c-6f98-4b8b-b06d-2df5023f938c"
-        },
-        {
             "from": -24,
             "fromPort": "e9e5d67c-531d-4014-8952-fa04b528dc3d",
             "to": -21,
@@ -1820,12 +1967,6 @@
             "fromPort": "425fe54c-c1ba-46c3-abb4-081687cd69dc",
             "to": -23,
             "toPort": "01ee558b-eb65-4e00-997e-b279d0d1d552"
-        },
-        {
-            "from": -7,
-            "fromPort": "3f2371d0-86de-4b09-9698-f2b97bca90c0",
-            "to": -23,
-            "toPort": "3f490807-78bf-466a-a5a8-99ebe46baa17"
         },
         {
             "from": -4,
@@ -1850,6 +1991,48 @@
             "fromPort": "8d6086d8-fc60-4f35-afec-584191c7a4b3",
             "to": -12,
             "toPort": "33aabd28-de7a-4479-892a-c9a83c9518d2"
+        },
+        {
+            "from": -4,
+            "fromPort": "0ba3b9ca-eebd-47ec-8509-57a4cc2929bd",
+            "to": -2,
+            "toPort": "831f0aa3-812f-4fd2-acf5-6f0cabb28701"
+        },
+        {
+            "from": -18,
+            "fromPort": "456a2ee8-e6b7-48dd-9727-b506b354067d",
+            "to": -2,
+            "toPort": "5ca0181f-221e-40fa-af5f-93cb5d2a3252"
+        },
+        {
+            "from": -23,
+            "fromPort": "27f51df6-9f0b-4eed-aa38-e4b9e60bea1f",
+            "to": -24,
+            "toPort": "91f0619c-6f98-4b8b-b06d-2df5023f938c"
+        },
+        {
+            "from": -21,
+            "fromPort": "d9ceccbe-cdf5-49f8-b5a3-05bfa2ca8a5c",
+            "to": -17,
+            "toPort": "91201391-67a2-43f9-aa95-c21eb94b28b6"
+        },
+        {
+            "from": -17,
+            "fromPort": "4c7c8e19-22d6-4503-97f5-3831f5414763",
+            "to": -15,
+            "toPort": "77ea90e4-98ac-4575-9b77-ed463763a696"
+        },
+        {
+            "from": -15,
+            "fromPort": "3f490807-78bf-466a-a5a8-99ebe46baa17",
+            "to": -25,
+            "toPort": "75606cc4-c15c-471c-833a-353b52c80722"
+        },
+        {
+            "from": -25,
+            "fromPort": "ba598fa0-eb57-41b6-b481-c36115d476bc",
+            "to": -11,
+            "toPort": "11fe5abb-9066-4655-ac05-190a152f75be"
         }
     ]
 }
