@@ -41,88 +41,9 @@
             "loop_aware": "0", 
             "from": -6, 
             "to": -5
-        }, 
-        {
-            "toPort": "dc41a80d-4055-42f2-825b-59107ed2389d", 
-            "fromPort": "65a37edd-cd93-44e4-ac43-f1dcca1d89d5", 
-            "loop_aware": "0", 
-            "from": -1, 
-            "to": -3
         }
     ], 
     "nodeDataArray": [
-        {
-            "outputPorts": [
-                {
-                    "IdText": "MeasurementSet", 
-                    "Id": "65a37edd-cd93-44e4-ac43-f1dcca1d89d5"
-                }
-            ], 
-            "color": "#394BB2", 
-            "text": "MeasurementSet", 
-            "isGroup": false, 
-            "height": 200, 
-            "streaming": false, 
-            "subject": null, 
-            "category": "File", 
-            "outputAppFields": [], 
-            "selected": false, 
-            "canHaveInputs": true, 
-            "showPorts": false, 
-            "width": 200, 
-            "inputAppFields": [], 
-            "exitApplicationType": "None", 
-            "inputApplicationType": "None", 
-            "inputApplicationName": "", 
-            "drawOrderHint": 0, 
-            "outputApplicationType": "None", 
-            "description": "", 
-            "outputLocalPorts": [], 
-            "collapsed": false, 
-            "canHaveOutputs": true, 
-            "outputApplicationName": "", 
-            "inputLocalPorts": [], 
-            "key": -1, 
-            "isData": true, 
-            "fields": [
-                {
-                    "text": "Data volume", 
-                    "name": "data_volume", 
-                    "value": "5", 
-                    "description": ""
-                }, 
-                {
-                    "text": "Group end", 
-                    "name": "group_end", 
-                    "value": "0", 
-                    "description": ""
-                }, 
-                {
-                    "text": "Check file path exists", 
-                    "name": "check_filepath_exists", 
-                    "value": "1", 
-                    "description": ""
-                }, 
-                {
-                    "text": "File path", 
-                    "name": "filepath", 
-                    "value": "", 
-                    "description": ""
-                }, 
-                {
-                    "text": "Directory name", 
-                    "name": "dirname", 
-                    "value": "", 
-                    "description": ""
-                }
-            ], 
-            "expanded": false, 
-            "exitApplicationName": "", 
-            "inputPorts": [], 
-            "y": 346.1320032576826, 
-            "x": 426.2609360025041, 
-            "categoryType": "Data"
-        }, 
         {
             "outputPorts": [], 
             "color": "#DDAD00", 
@@ -133,9 +54,9 @@
             "subject": null, 
             "category": "Scatter", 
             "outputAppFields": [], 
-            "selected": true, 
+            "selected": false, 
             "canHaveInputs": true, 
-            "showPorts": true, 
+            "showPorts": false, 
             "width": 657, 
             "inputAppFields": [
                 {
@@ -157,14 +78,14 @@
                     "description": ""
                 }, 
                 {
-                    "text": "Arg01", 
-                    "name": "Arg01", 
-                    "value": "", 
-                    "description": "The command line to be executed"
+                    "text": "Appclass", 
+                    "name": "appclass", 
+                    "value": "leap_drops.ProduceConfig.ProduceConfig", 
+                    "description": ""
                 }
             ], 
             "exitApplicationType": "None", 
-            "inputApplicationType": "BashShellApp", 
+            "inputApplicationType": "Component", 
             "inputApplicationName": "ProduceConfig", 
             "drawOrderHint": 0, 
             "outputApplicationType": "None", 
@@ -227,9 +148,9 @@
             "subject": null, 
             "category": "Gather", 
             "outputAppFields": [], 
-            "selected": false, 
+            "selected": true, 
             "canHaveInputs": true, 
-            "showPorts": false, 
+            "showPorts": true, 
             "width": 200, 
             "inputAppFields": [
                 {
@@ -428,13 +349,13 @@
                 {
                     "text": "File path", 
                     "name": "filepath", 
-                    "value": "", 
+                    "value": "directions.csv", 
                     "description": ""
                 }, 
                 {
                     "text": "Directory name", 
                     "name": "dirname", 
-                    "value": "", 
+                    "value": "/Users/james/working/leap-accelerate/leap_drops/", 
                     "description": ""
                 }
             ], 
@@ -501,7 +422,7 @@
             "height": 200, 
             "streaming": false, 
             "subject": null, 
-            "category": "PythonApp", 
+            "category": "Component", 
             "group": -2, 
             "selected": false, 
             "canHaveInputs": true, 
@@ -544,7 +465,13 @@
                 {
                     "text": "Appclass", 
                     "name": "appclass", 
-                    "value": "CallLeap", 
+                    "value": "leap_drops.CallLeap.CallLeap", 
+                    "description": ""
+                }, 
+                {
+                    "text": "measurementSetFilename", 
+                    "name": "measurementsetfilename", 
+                    "value": "/Users/james/working/leap-accelerate/testdata/1197638568-32.ms", 
                     "description": ""
                 }
             ], 
@@ -554,10 +481,6 @@
                 {
                     "IdText": "Config", 
                     "Id": "9d6b4617-ebc1-4208-9d0d-609237a810a1"
-                }, 
-                {
-                    "IdText": "MeasurementSet", 
-                    "Id": "dc41a80d-4055-42f2-825b-59107ed2389d"
                 }
             ], 
             "y": 352, 
@@ -630,7 +553,7 @@
                 {
                     "text": "Directory name", 
                     "name": "dirname", 
-                    "value": "", 
+                    "value": "/Users/james/working/leap-accelerate/leap_drops/output/", 
                     "description": ""
                 }
             ], 
@@ -716,7 +639,7 @@
                 {
                     "text": "Directory name", 
                     "name": "dirname", 
-                    "value": "", 
+                    "value": "/Users/james/working/leap-accelerate/leap_drops/output/", 
                     "description": ""
                 }
             ], 
