@@ -796,8 +796,8 @@
             "key": -45,
             "text": "Image",
             "description": "",
-            "x": 1606.281791432287,
-            "y": 1229.632784702434,
+            "x": 1562.5365880554646,
+            "y": 1251.5053863908447,
             "width": 200,
             "height": 200,
             "collapsed": false,
@@ -807,7 +807,12 @@
             "selected": false,
             "expanded": false,
             "group": -46,
-            "inputPorts": [],
+            "inputPorts": [
+                {
+                    "Id": "9011f04b-a0dd-45b4-b3f4-05bc5f8a84fe",
+                    "IdText": "image"
+                }
+            ],
             "outputPorts": [
                 {
                     "Id": "d7173407-6a96-4692-9885-6ddd9b07a7da",
@@ -1711,10 +1716,10 @@
             "width": 200,
             "height": 200,
             "collapsed": false,
-            "showPorts": true,
+            "showPorts": false,
             "streaming": false,
             "subject": null,
-            "selected": true,
+            "selected": false,
             "expanded": false,
             "inputPorts": [
                 {
@@ -1910,6 +1915,167 @@
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [],
+            "inputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "outputAppFields": []
+        },
+        {
+            "category": "Branch",
+            "categoryType": "Control",
+            "isData": false,
+            "isGroup": false,
+            "canHaveInputs": false,
+            "canHaveOutputs": false,
+            "color": "#00BDA1",
+            "drawOrderHint": 0,
+            "key": -7,
+            "text": "checkResiduals",
+            "description": "A conditional branch to control flow.",
+            "x": 1783.575266806654,
+            "y": 1248.2108911146615,
+            "width": 200,
+            "height": 200,
+            "collapsed": false,
+            "showPorts": true,
+            "streaming": false,
+            "subject": null,
+            "selected": true,
+            "expanded": false,
+            "group": -46,
+            "inputPorts": [
+                {
+                    "Id": "9f5446bc-52b5-4ab7-a330-4f4509a609f3",
+                    "IdText": "image"
+                },
+                {
+                    "Id": "d0b2e533-8a5c-44e1-b0d0-5cd8ebf808af",
+                    "IdText": "modelImage"
+                }
+            ],
+            "outputPorts": [],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [],
+            "inputAppFields": [
+                {
+                    "text": "Execution time",
+                    "name": "execution_time",
+                    "value": "5",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
+                },
+                {
+                    "text": "Num CPUs",
+                    "name": "num_cpus",
+                    "value": "1",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": "0",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
+                },
+                {
+                    "text": "Appclass",
+                    "name": "appclass",
+                    "value": "test.graphsRepository",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
+                }
+            ],
+            "inputApplicationName": "checkResiduals",
+            "inputApplicationType": "PythonApp",
+            "outputApplicationName": "writeFinalImage",
+            "outputApplicationType": "PythonApp",
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "outputAppFields": []
+        },
+        {
+            "category": "File",
+            "categoryType": "Data",
+            "isData": true,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#394BB2",
+            "drawOrderHint": 0,
+            "key": -13,
+            "text": "End",
+            "description": "",
+            "x": 2130.5198362515425,
+            "y": 1238.395531366956,
+            "width": 200,
+            "height": 200,
+            "collapsed": false,
+            "showPorts": false,
+            "streaming": false,
+            "subject": null,
+            "selected": false,
+            "expanded": false,
+            "inputPorts": [
+                {
+                    "Id": "d663d959-f1b8-420e-8bdd-14c4f8ddb071",
+                    "IdText": "image"
+                }
+            ],
+            "outputPorts": [],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": "5",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": "0",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
+                },
+                {
+                    "text": "Check file path exists",
+                    "name": "check_filepath_exists",
+                    "value": "1",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
+                },
+                {
+                    "text": "File path",
+                    "name": "filepath",
+                    "value": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
+                },
+                {
+                    "text": "Directory name",
+                    "name": "dirname",
+                    "value": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
+                }
+            ],
             "inputAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
@@ -2150,6 +2316,20 @@
             "fromPort": "ce82dde6-e634-4639-95c7-25821156c325",
             "to": -8,
             "toPort": "7cabde7e-4b7b-46ba-89b7-92ce86ace30d",
+            "loop_aware": "0"
+        },
+        {
+            "from": -45,
+            "fromPort": "9011f04b-a0dd-45b4-b3f4-05bc5f8a84fe",
+            "to": -28,
+            "toPort": "714e6db3-a48c-44de-bf18-b8bd30d7dec5",
+            "loop_aware": "0"
+        },
+        {
+            "from": -45,
+            "fromPort": "d7173407-6a96-4692-9885-6ddd9b07a7da",
+            "to": -7,
+            "toPort": "9f5446bc-52b5-4ab7-a330-4f4509a609f3",
             "loop_aware": "0"
         }
     ]
