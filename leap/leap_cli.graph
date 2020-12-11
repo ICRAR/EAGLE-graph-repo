@@ -27,6 +27,7 @@
             "height": 200,
             "collapsed": false,
             "showPorts": false,
+            "flipPorts": false,
             "streaming": false,
             "subject": null,
             "selected": false,
@@ -45,31 +46,41 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": "5",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": "0",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": "1",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "/tmp/leap_test/config_test.json",
-                    "description": ""
+                    "value": "/var/dlg_home/testdata/config_test.json",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Directory name",
                     "name": "dirname",
                     "value": "",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 }
             ],
             "inputAppFields": [],
@@ -99,71 +110,36 @@
             "height": 436,
             "collapsed": false,
             "showPorts": false,
+            "flipPorts": false,
             "streaming": false,
             "subject": null,
             "selected": false,
             "expanded": true,
-            "inputPorts": [
-                {
-                    "Id": "641f1060-3b14-4434-8924-706081be307e",
-                    "IdText": "Config"
-                }
-            ],
+            "inputPorts": [],
             "outputPorts": [],
-            "inputLocalPorts": [
-                {
-                    "Id": "6aa15f60-4927-4cb1-9ad0-fd504b381737",
-                    "IdText": "event"
-                }
-            ],
-            "outputLocalPorts": [
-                {
-                    "Id": "e1c858aa-e691-47a8-a84c-2c383eaa6c0f",
-                    "IdText": "Config"
-                }
-            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
             "fields": [
                 {
                     "text": "Number of copies",
                     "name": "num_of_copies",
                     "value": "2",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Scatter axis",
                     "name": "scatter_axis",
                     "value": "time",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 }
             ],
-            "inputAppFields": [
-                {
-                    "text": "Execution time",
-                    "name": "execution_time",
-                    "value": "1",
-                    "description": ""
-                },
-                {
-                    "text": "Num CPUs",
-                    "name": "num_cpus",
-                    "value": "1",
-                    "description": ""
-                },
-                {
-                    "text": "Group start",
-                    "name": "group_start",
-                    "value": "0",
-                    "description": ""
-                },
-                {
-                    "text": "Arg01",
-                    "name": "Arg01",
-                    "value": "cat %i0 > %o0",
-                    "description": "The command line to be executed"
-                }
-            ],
-            "inputApplicationName": "CallLeap",
-            "inputApplicationType": "BashShellApp",
+            "inputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "exitApplicationName": "",
@@ -181,13 +157,14 @@
             "drawOrderHint": 0,
             "key": -5,
             "text": "Gather",
-            "description": "Placeholder 'gather' description",
+            "description": "Merge the individual results into a single file",
             "x": 1358.8636714194383,
             "y": 274.6774227473356,
             "width": 200,
             "height": 200,
             "collapsed": false,
             "showPorts": true,
+            "flipPorts": false,
             "streaming": false,
             "subject": null,
             "selected": true,
@@ -216,13 +193,9 @@
                     "text": "Number of inputs",
                     "name": "num_of_inputs",
                     "value": "2",
-                    "description": ""
-                },
-                {
-                    "text": "Gather axis",
-                    "name": "gather_axis",
-                    "value": "frequency",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 }
             ],
             "inputAppFields": [
@@ -230,25 +203,33 @@
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": "5",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": "1",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": "0",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Arg01",
                     "name": "Arg01",
-                    "value": "cat %i0 %i1 >> %o0",
-                    "description": "The command line to be executed"
+                    "value": "cat %i0.json %i1.json >> %o0",
+                    "description": "The command line to be executed",
+                    "readonly": false,
+                    "type": "Unknown"
                 }
             ],
             "inputApplicationName": "LEAPGather",
@@ -269,7 +250,7 @@
             "color": "#394BB2",
             "drawOrderHint": 0,
             "key": -6,
-            "text": "Result",
+            "text": "IntermediateResult",
             "description": "",
             "x": 1045.7217616000235,
             "y": 323.24709731275095,
@@ -277,6 +258,7 @@
             "height": 200,
             "collapsed": false,
             "showPorts": false,
+            "flipPorts": false,
             "streaming": false,
             "subject": null,
             "selected": false,
@@ -284,19 +266,11 @@
             "group": -2,
             "inputPorts": [
                 {
-                    "Id": "fde7c93f-0f86-41bd-bb24-11a7b7abe77e",
-                    "IdText": "event"
-                },
-                {
                     "Id": "c45d0e04-c447-4fd4-b00a-7cd615b6fc80",
                     "IdText": "Result"
                 }
             ],
             "outputPorts": [
-                {
-                    "Id": "9f33d0a6-717d-4029-bc4c-0778cbcddf6c",
-                    "IdText": "event"
-                },
                 {
                     "Id": "1519b160-7827-4699-9ac3-ed8ada27fcec",
                     "IdText": "Result"
@@ -309,31 +283,41 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": "5",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": "0",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": "0",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "/tmp/leap_test/ska_low_cal.json",
-                    "description": ""
+                    "value": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Directory name",
                     "name": "dirname",
-                    "value": "",
-                    "description": ""
+                    "value": "/var/dlg_home/workspace",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 }
             ],
             "inputAppFields": [],
@@ -355,7 +339,7 @@
             "color": "#394BB2",
             "drawOrderHint": 0,
             "key": -7,
-            "text": "End",
+            "text": "finalOut",
             "description": "",
             "x": 1392.275775356245,
             "y": 387.9840737636212,
@@ -363,6 +347,7 @@
             "height": 200,
             "collapsed": false,
             "showPorts": false,
+            "flipPorts": false,
             "streaming": false,
             "subject": null,
             "selected": false,
@@ -382,31 +367,41 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": "5",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": "0",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": "0",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "/tmp/leap_test/final.out",
-                    "description": ""
+                    "value": "final.out",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Directory name",
                     "name": "dirname",
-                    "value": "",
-                    "description": ""
+                    "value": "/var/dlg_home/testdata",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 }
             ],
             "inputAppFields": [],
@@ -436,6 +431,7 @@
             "height": 90.2271675598681,
             "collapsed": false,
             "showPorts": false,
+            "flipPorts": false,
             "streaming": false,
             "subject": null,
             "selected": false,
@@ -449,7 +445,9 @@
                     "text": "Comment",
                     "name": "comment",
                     "value": "This is assuming shared file system for the MS.  Scatter Input App is directly calling LEAP with the correct command line parameters.",
-                    "description": "The text value of the comment"
+                    "description": "The text value of the comment",
+                    "readonly": false,
+                    "type": "Unknown"
                 }
             ],
             "inputAppFields": [],
@@ -473,12 +471,13 @@
             "key": -4,
             "text": "ConfigFile",
             "description": "",
-            "x": 667.9986112611319,
-            "y": 424.6765611277333,
+            "x": 769.9986112611319,
+            "y": 369.6765611277333,
             "width": 200,
             "height": 200,
             "collapsed": false,
             "showPorts": false,
+            "flipPorts": false,
             "streaming": false,
             "subject": null,
             "selected": false,
@@ -503,31 +502,41 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": "5",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": "0",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": "0",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "File path",
                     "name": "filepath",
                     "value": "",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Directory name",
                     "name": "dirname",
-                    "value": "",
-                    "description": ""
+                    "value": "/var/dlg_home/workspace",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 }
             ],
             "inputAppFields": [],
@@ -557,6 +566,7 @@
             "height": 200,
             "collapsed": false,
             "showPorts": false,
+            "flipPorts": false,
             "streaming": false,
             "subject": null,
             "selected": false,
@@ -581,55 +591,154 @@
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": "5",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": "2",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": "0",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Image",
                     "name": "image",
-                    "value": "icrar/leap_cli:0.4.2",
-                    "description": ""
+                    "value": "icrar/leap_cli:0.7.0",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Command",
                     "name": "command",
-                    "value": "LeapAccelerateCLI -c /tmp/leap_test/config_test.json",
-                    "description": ""
+                    "value": "LeapAccelerateCLI -c %i0 -o %o0 -s 103 -v 0",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "User",
                     "name": "user",
                     "value": "",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Ensure User And Switch",
                     "name": "ensureUserAndSwitch",
                     "value": "0",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Remove Container",
                     "name": "removeContainer",
                     "value": "0",
-                    "description": ""
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
                 },
                 {
                     "text": "Additional Bindings",
                     "name": "additionalBindings",
-                    "value": "/tmp/ray_tmp_mount/tmp/leap_test:/tmp/leap_test",
-                    "description": ""
+                    "value": "/var/dlg_home",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
+                }
+            ],
+            "inputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "outputAppFields": []
+        },
+        {
+            "category": "BashShellApp",
+            "categoryType": "Application",
+            "isData": false,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#1C2833",
+            "drawOrderHint": 0,
+            "key": -3,
+            "text": "splitConfig",
+            "description": "An application component run within the Bash Shell",
+            "x": 706,
+            "y": 476,
+            "width": 200,
+            "height": 200,
+            "collapsed": false,
+            "showPorts": false,
+            "flipPorts": false,
+            "streaming": false,
+            "subject": null,
+            "selected": false,
+            "expanded": false,
+            "group": -2,
+            "inputPorts": [
+                {
+                    "Id": "726eaf45-da64-4c1e-b091-9a8f8594d8a6",
+                    "IdText": "Config"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "7c38f305-ab6d-4165-8cfc-e7a744ddbba2",
+                    "IdText": "Config"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Execution time",
+                    "name": "execution_time",
+                    "value": "5",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
+                },
+                {
+                    "text": "Num CPUs",
+                    "name": "num_cpus",
+                    "value": "1",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": "0",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown"
+                },
+                {
+                    "text": "Arg01",
+                    "name": "Arg01",
+                    "value": "cat %i0 > %o0",
+                    "description": "The command line to be executed",
+                    "readonly": false,
+                    "type": "Unknown"
                 }
             ],
             "inputAppFields": [],
@@ -658,20 +767,6 @@
             "loop_aware": "0"
         },
         {
-            "from": -1,
-            "fromPort": "5609a2fc-8337-4861-92b6-284953a47b37",
-            "to": -2,
-            "toPort": "641f1060-3b14-4434-8924-706081be307e",
-            "loop_aware": "0"
-        },
-        {
-            "from": -2,
-            "fromPort": "e1c858aa-e691-47a8-a84c-2c383eaa6c0f",
-            "to": -4,
-            "toPort": "a1c8fd8c-6589-4953-8367-65efb469ea99",
-            "loop_aware": "0"
-        },
-        {
             "from": -4,
             "fromPort": "5609a2fc-8337-4861-92b6-284953a47b37",
             "to": -10,
@@ -683,6 +778,20 @@
             "fromPort": "a15f56ba-b8aa-4f13-9e5e-e1d0339e42b2",
             "to": -6,
             "toPort": "c45d0e04-c447-4fd4-b00a-7cd615b6fc80",
+            "loop_aware": "0"
+        },
+        {
+            "from": -1,
+            "fromPort": "5609a2fc-8337-4861-92b6-284953a47b37",
+            "to": -3,
+            "toPort": "726eaf45-da64-4c1e-b091-9a8f8594d8a6",
+            "loop_aware": "0"
+        },
+        {
+            "from": -3,
+            "fromPort": "7c38f305-ab6d-4165-8cfc-e7a744ddbba2",
+            "to": -4,
+            "toPort": "a1c8fd8c-6589-4953-8367-65efb469ea99",
             "loop_aware": "0"
         }
     ]
