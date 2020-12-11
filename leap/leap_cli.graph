@@ -102,10 +102,10 @@
             "color": "#DDAD00",
             "drawOrderHint": 0,
             "key": -2,
-            "text": "Scatter",
-            "description": "Placeholder 'scatter' description",
-            "x": 667.9296252941459,
-            "y": 148.69343360203084,
+            "text": "Direction Scatter",
+            "description": "Distribute the directions and run one LEAP instance per direction.",
+            "x": 662.9296252941459,
+            "y": 113.69343360203084,
             "width": 657,
             "height": 436,
             "collapsed": false,
@@ -123,15 +123,7 @@
                 {
                     "text": "Number of copies",
                     "name": "num_of_copies",
-                    "value": "2",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Unknown"
-                },
-                {
-                    "text": "Scatter axis",
-                    "name": "scatter_axis",
-                    "value": "time",
+                    "value": "3",
                     "description": "",
                     "readonly": false,
                     "type": "Unknown"
@@ -163,11 +155,11 @@
             "width": 200,
             "height": 200,
             "collapsed": false,
-            "showPorts": true,
+            "showPorts": false,
             "flipPorts": false,
             "streaming": false,
             "subject": null,
-            "selected": true,
+            "selected": false,
             "expanded": true,
             "inputPorts": [
                 {
@@ -181,18 +173,13 @@
                     "IdText": "Result"
                 }
             ],
-            "inputLocalPorts": [
-                {
-                    "Id": "2621abe4-a16e-4d03-b4a3-635c76e4b0cc",
-                    "IdText": "event"
-                }
-            ],
+            "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
                 {
                     "text": "Number of inputs",
                     "name": "num_of_inputs",
-                    "value": "2",
+                    "value": "3",
                     "description": "",
                     "readonly": false,
                     "type": "Unknown"
@@ -226,7 +213,7 @@
                 {
                     "text": "Arg01",
                     "name": "Arg01",
-                    "value": "cat %i0.json %i1.json >> %o0",
+                    "value": "cat %i0.json %i1.json > %o0",
                     "description": "The command line to be executed",
                     "readonly": false,
                     "type": "Unknown"
@@ -252,8 +239,8 @@
             "key": -6,
             "text": "IntermediateResult",
             "description": "",
-            "x": 1045.7217616000235,
-            "y": 323.24709731275095,
+            "x": 1112.7217616000235,
+            "y": 402.24709731275095,
             "width": 200,
             "height": 200,
             "collapsed": false,
@@ -471,8 +458,8 @@
             "key": -4,
             "text": "ConfigFile",
             "description": "",
-            "x": 769.9986112611319,
-            "y": 369.6765611277333,
+            "x": 855.9986112611319,
+            "y": 225.6765611277333,
             "width": 200,
             "height": 200,
             "collapsed": false,
@@ -559,17 +546,17 @@
             "drawOrderHint": 0,
             "key": -10,
             "text": "LeapAccelerate",
-            "description": "An application component run from a Docker image",
-            "x": 849.272871552052,
-            "y": 233.9983604622185,
+            "description": "Component to run the LEAP-accelerate docker container.",
+            "x": 937.272871552052,
+            "y": 393.9983604622185,
             "width": 200,
             "height": 200,
             "collapsed": false,
-            "showPorts": false,
+            "showPorts": true,
             "flipPorts": false,
             "streaming": false,
             "subject": null,
-            "selected": false,
+            "selected": true,
             "expanded": false,
             "group": -2,
             "inputPorts": [
@@ -598,7 +585,7 @@
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
-                    "value": "2",
+                    "value": "1",
                     "description": "",
                     "readonly": false,
                     "type": "Unknown"
@@ -646,7 +633,7 @@
                 {
                     "text": "Remove Container",
                     "name": "removeContainer",
-                    "value": "0",
+                    "value": "1",
                     "description": "",
                     "readonly": false,
                     "type": "Unknown"
@@ -681,8 +668,8 @@
             "key": -3,
             "text": "splitConfig",
             "description": "An application component run within the Bash Shell",
-            "x": 706,
-            "y": 476,
+            "x": 691,
+            "y": 218,
             "width": 200,
             "height": 200,
             "collapsed": false,
