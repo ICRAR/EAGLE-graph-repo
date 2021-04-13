@@ -164,10 +164,10 @@
             "color": "#331C54",
             "drawOrderHint": 0,
             "key": -4,
-            "text": "Image",
-            "description": "An application component run from a Docker image",
-            "x": 629,
-            "y": 427.99,
+            "text": "yanda_imager",
+            "description": "This docker app runs the Yandasoft Imager. It uses an askapsoft compliant configuration file on input, which defines all the required parameters.",
+            "x": 561,
+            "y": 429.99,
             "width": 200,
             "height": 200,
             "collapsed": false,
@@ -188,20 +188,14 @@
             ],
             "outputPorts": [
                 {
-                    "Id": "03cb7b44-1b6b-4aa3-8780-0cacea16c2ad",
-                    "IdText": "restored_image",
+                    "Id": "845a7afe-b479-49a4-a986-f28efaaae1ac",
+                    "IdText": "residual.cont.taylor.0",
                     "event": false,
                     "type": "Unknown"
                 },
                 {
-                    "Id": "e53aa113-fe7d-485c-b8de-1f0f620f7c3a",
-                    "IdText": "residual_image",
-                    "event": false,
-                    "type": "Unknown"
-                },
-                {
-                    "Id": "bf3b4d80-eed6-4431-af2d-e0346bc5c426",
-                    "IdText": "testing_image",
+                    "Id": "c1f4eec8-8b09-4e83-9824-57a39ce8f90b",
+                    "IdText": "image.cont.taylor.0.restored",
                     "event": false,
                     "type": "Unknown"
                 }
@@ -236,7 +230,7 @@
                 {
                     "text": "Image",
                     "name": "image",
-                    "value": "registry.gitlab.com/askapsdp/all_yandasoft:latest",
+                    "value": "icrar/yanda_imager:0.1",
                     "description": "Name of the docker image to be used for this application",
                     "readonly": false,
                     "type": "String"
@@ -244,7 +238,7 @@
                 {
                     "text": "Command",
                     "name": "command",
-                    "value": "mpirun -np 4 --allow-run-as-root imager -c %i0",
+                    "value": "cd /var/dlg_home/workspace && mpirun -np 4 --allow-run-as-root imager -c %i0",
                     "description": "The command line to run within the docker instance",
                     "readonly": false,
                     "type": "String"
@@ -306,7 +300,7 @@
             "drawOrderHint": 0,
             "key": -7,
             "text": "Publish",
-            "description": "An application component run within the Bash Shell",
+            "description": "This is just a tar command packing the input files together.",
             "x": 1098,
             "y": 289.99,
             "width": 200,
@@ -321,14 +315,14 @@
             "readonly": false,
             "inputPorts": [
                 {
-                    "Id": "6bd0a86a-586e-4d5e-b173-60c45de3ed55",
-                    "IdText": "restored_image",
+                    "Id": "2a786d1a-8b7b-47c1-b8f7-a9f498c70c6d",
+                    "IdText": "residual.cont.taylor.0",
                     "event": false,
                     "type": "Unknown"
                 },
                 {
-                    "Id": "15d9b012-e0ef-4185-8e60-9d6e26de5444",
-                    "IdText": "residual_image",
+                    "Id": "020fbd40-ce97-4ffa-8add-302029557c50",
+                    "IdText": "image.cont.taylor.0.restored",
                     "event": false,
                     "type": "Unknown"
                 }
@@ -391,103 +385,6 @@
             "exitApplicationKey": null
         },
         {
-            "category": "File",
-            "categoryType": "Data",
-            "isData": true,
-            "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
-            "drawOrderHint": 0,
-            "key": -5,
-            "text": "testing_image",
-            "description": "",
-            "x": 904,
-            "y": 598.99,
-            "width": 200,
-            "height": 200,
-            "collapsed": false,
-            "showPorts": false,
-            "flipPorts": false,
-            "streaming": false,
-            "subject": null,
-            "selected": false,
-            "expanded": false,
-            "readonly": false,
-            "inputPorts": [
-                {
-                    "Id": "4c0bc65b-94f9-4c35-b6b8-c026a5b546c6",
-                    "IdText": "testing_image",
-                    "event": false,
-                    "type": "Unknown"
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "ec7647af-8527-405a-8794-90fab2602615",
-                    "IdText": "testing_image",
-                    "event": false,
-                    "type": "Unknown"
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Data volume",
-                    "name": "data_volume",
-                    "value": 5,
-                    "description": "Estimated size of the data contained in this node",
-                    "readonly": false,
-                    "type": "Float"
-                },
-                {
-                    "text": "Group end",
-                    "name": "group_end",
-                    "value": false,
-                    "description": "Is this node the end of a group?",
-                    "readonly": false,
-                    "type": "Boolean"
-                },
-                {
-                    "text": "Check file path exists",
-                    "name": "check_filepath_exists",
-                    "value": false,
-                    "description": "Perform a check to make sure the file path exists before proceeding with the application",
-                    "readonly": false,
-                    "type": "Boolean"
-                },
-                {
-                    "text": "File path",
-                    "name": "filepath",
-                    "value": "",
-                    "description": "Path to the file for this node",
-                    "readonly": false,
-                    "type": "String"
-                },
-                {
-                    "text": "Directory name",
-                    "name": "dirname",
-                    "value": "",
-                    "description": "Name of the directory containing the file for this node",
-                    "readonly": false,
-                    "type": "String"
-                }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "exitAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
-        },
-        {
             "category": "Docker",
             "categoryType": "Application",
             "isData": false,
@@ -497,10 +394,10 @@
             "color": "#331C54",
             "drawOrderHint": 0,
             "key": -6,
-            "text": "Examine",
-            "description": "An application component run from a Docker image",
+            "text": "imgstat",
+            "description": "This docker app runs the casacore imgstat application on its input.",
             "x": 1096,
-            "y": 605.99,
+            "y": 604.99,
             "width": 200,
             "height": 200,
             "collapsed": false,
@@ -513,8 +410,8 @@
             "readonly": false,
             "inputPorts": [
                 {
-                    "Id": "6b6112d9-a0ee-461a-bb93-dd9965808f7c",
-                    "IdText": "testing_image",
+                    "Id": "94d7560d-5a1f-422f-b937-ca91a5e2afcc",
+                    "IdText": "image.cont.taylor.0.restored",
                     "event": false,
                     "type": "Unknown"
                 }
@@ -557,7 +454,7 @@
                 {
                     "text": "Image",
                     "name": "image",
-                    "value": "registry.gitlab.com/askapsdp/all_yandasoft ",
+                    "value": "registry.gitlab.com/askapsdp/all_yandasoft:latest",
                     "description": "Name of the docker image to be used for this application",
                     "readonly": false,
                     "type": "String"
@@ -627,7 +524,7 @@
             "drawOrderHint": 0,
             "key": -10,
             "text": "Test",
-            "description": "An application component run within the Bash Shell",
+            "description": "Another bash command to extract the the relevant result line and test whether it is in the desired range.",
             "x": 1450,
             "y": 601.99,
             "width": 200,
@@ -991,11 +888,11 @@
             "canHaveOutputs": true,
             "color": "#394BB2",
             "drawOrderHint": 0,
-            "key": -9,
-            "text": "residual_image",
+            "key": -3,
+            "text": "image.cont.taylor.0.restored",
             "description": "",
-            "x": 906.5,
-            "y": 440.99,
+            "x": 828.5,
+            "y": 517.49,
             "width": 200,
             "height": 200,
             "collapsed": false,
@@ -1008,16 +905,16 @@
             "readonly": false,
             "inputPorts": [
                 {
-                    "Id": "33813a97-0fe3-4727-8331-e7d5928c4aa9",
-                    "IdText": "residual_image",
+                    "Id": "62c510a9-2313-49e5-aed0-979df3cef7a0",
+                    "IdText": "image.cont.taylor.0.restored",
                     "event": false,
                     "type": "Unknown"
                 }
             ],
             "outputPorts": [
                 {
-                    "Id": "b5730858-1aa2-44e6-8b5d-36e93cc57dc6",
-                    "IdText": "residual_image",
+                    "Id": "0461848b-6d6d-46b8-9c72-10a8cd1c37d6",
+                    "IdText": "image.cont.taylor.0.restored",
                     "event": false,
                     "type": "Unknown"
                 }
@@ -1052,7 +949,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "",
+                    "value": "/var/dlg_home/workspace/image.cont.taylor.0.restored",
                     "description": "Path to the file for this node",
                     "readonly": false,
                     "type": "String"
@@ -1088,11 +985,11 @@
             "canHaveOutputs": true,
             "color": "#394BB2",
             "drawOrderHint": 0,
-            "key": -8,
-            "text": "restored_image",
+            "key": -5,
+            "text": "residual.cont.taylor.0",
             "description": "",
-            "x": 855.5,
-            "y": 308.99,
+            "x": 829.5,
+            "y": 359.99,
             "width": 200,
             "height": 200,
             "collapsed": false,
@@ -1105,16 +1002,16 @@
             "readonly": false,
             "inputPorts": [
                 {
-                    "Id": "648c4b9e-323d-43e3-8b0a-8f9c8fe16aaf",
-                    "IdText": "restored_image",
+                    "Id": "ddd6cd1c-dcea-4b9b-ba4d-e861d615f0c4",
+                    "IdText": "residual.cont.taylor.0",
                     "event": false,
                     "type": "Unknown"
                 }
             ],
             "outputPorts": [
                 {
-                    "Id": "031397d9-e30f-4062-a9ed-ce4838a8a469",
-                    "IdText": "restored_image",
+                    "Id": "ca09a8bd-f311-481d-aece-2e44f02d7fe6",
+                    "IdText": "residual.cont.taylor.0",
                     "event": false,
                     "type": "Unknown"
                 }
@@ -1149,7 +1046,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "",
+                    "value": "/var/dlg_home/workspace/residual.cont.taylor.0",
                     "description": "Path to the file for this node",
                     "readonly": false,
                     "type": "String"
@@ -1178,20 +1075,6 @@
         }
     ],
     "linkDataArray": [
-        {
-            "from": -5,
-            "fromPort": "ec7647af-8527-405a-8794-90fab2602615",
-            "to": -6,
-            "toPort": "6b6112d9-a0ee-461a-bb93-dd9965808f7c",
-            "loop_aware": "0"
-        },
-        {
-            "from": -4,
-            "fromPort": "bf3b4d80-eed6-4431-af2d-e0346bc5c426",
-            "to": -5,
-            "toPort": "4c0bc65b-94f9-4c35-b6b8-c026a5b546c6",
-            "loop_aware": "0"
-        },
         {
             "from": -2,
             "fromPort": "5fe7e0da-d881-495e-acfb-1d3539cd46c8",
@@ -1228,31 +1111,38 @@
             "loop_aware": "0"
         },
         {
-            "from": -4,
-            "fromPort": "e53aa113-fe7d-485c-b8de-1f0f620f7c3a",
-            "to": -9,
-            "toPort": "33813a97-0fe3-4727-8331-e7d5928c4aa9",
-            "loop_aware": "0"
-        },
-        {
-            "from": -9,
-            "fromPort": "b5730858-1aa2-44e6-8b5d-36e93cc57dc6",
-            "to": -7,
-            "toPort": "15d9b012-e0ef-4185-8e60-9d6e26de5444",
+            "from": -3,
+            "fromPort": "0461848b-6d6d-46b8-9c72-10a8cd1c37d6",
+            "to": -6,
+            "toPort": "94d7560d-5a1f-422f-b937-ca91a5e2afcc",
             "loop_aware": "0"
         },
         {
             "from": -4,
-            "fromPort": "03cb7b44-1b6b-4aa3-8780-0cacea16c2ad",
-            "to": -8,
-            "toPort": "648c4b9e-323d-43e3-8b0a-8f9c8fe16aaf",
+            "fromPort": "845a7afe-b479-49a4-a986-f28efaaae1ac",
+            "to": -5,
+            "toPort": "ddd6cd1c-dcea-4b9b-ba4d-e861d615f0c4",
             "loop_aware": "0"
         },
         {
-            "from": -8,
-            "fromPort": "031397d9-e30f-4062-a9ed-ce4838a8a469",
+            "from": -5,
+            "fromPort": "ca09a8bd-f311-481d-aece-2e44f02d7fe6",
             "to": -7,
-            "toPort": "6bd0a86a-586e-4d5e-b173-60c45de3ed55",
+            "toPort": "2a786d1a-8b7b-47c1-b8f7-a9f498c70c6d",
+            "loop_aware": "0"
+        },
+        {
+            "from": -3,
+            "fromPort": "0461848b-6d6d-46b8-9c72-10a8cd1c37d6",
+            "to": -7,
+            "toPort": "020fbd40-ce97-4ffa-8add-302029557c50",
+            "loop_aware": "0"
+        },
+        {
+            "from": -4,
+            "fromPort": "c1f4eec8-8b09-4e83-9824-57a39ce8f90b",
+            "to": -3,
+            "toPort": "62c510a9-2313-49e5-aed0-979df3cef7a0",
             "loop_aware": "0"
         }
     ]
