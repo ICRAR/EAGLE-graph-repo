@@ -366,7 +366,7 @@
                 {
                     "text": "Arg01",
                     "name": "Arg01",
-                    "value": "cd /var/dlg_home/testdata && tar --dereference -cvjf %o0 rascil",
+                    "value": "cd /var/dlg_home/testdata && tar --dereference -cvjf %o0 --exclude functest.ms rascil",
                     "description": "The command line to be executed",
                     "readonly": false,
                     "type": "Unknown"
@@ -1357,7 +1357,7 @@
                 {
                     "text": "Arg01",
                     "name": "Arg01",
-                    "value": "tar --strip-components=3 -xf %i0 -C /var/dlg_home/testdata && mkdir -p /var/dlg_home/testdata/rascil && cd /var/dlg_home/testdata/rascil && cp ../*.in . && ln -s ../functest.ms functest.ms",
+                    "value": "tar --strip-components=3 -xf %i0 -C /var/dlg_home/testdata && mkdir -p /var/dlg_home/testdata/rascil && cd /var/dlg_home/testdata/rascil && cp ../*.in . && ln -sf ../functest.ms functest.ms",
                     "description": "The command line to be executed",
                     "readonly": false,
                     "type": "String"
