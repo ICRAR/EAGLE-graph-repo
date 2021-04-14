@@ -25,8 +25,8 @@
             "key": -1,
             "text": "Description",
             "description": "",
-            "x": 344,
-            "y": 44.99000000000001,
+            "x": 356.9608652951162,
+            "y": 77.39216323779047,
             "width": 207,
             "height": 100,
             "collapsed": false,
@@ -230,7 +230,7 @@
                 {
                     "text": "Image",
                     "name": "image",
-                    "value": "icrar/yanda_imager:0.1",
+                    "value": "icrar/yanda_imager:0.2",
                     "description": "Name of the docker image to be used for this application",
                     "readonly": false,
                     "type": "String"
@@ -454,7 +454,7 @@
                 {
                     "text": "Image",
                     "name": "image",
-                    "value": "registry.gitlab.com/askapsdp/all_yandasoft:latest",
+                    "value": "icrar/yanda_imgstat:0.1",
                     "description": "Name of the docker image to be used for this application",
                     "readonly": false,
                     "type": "String"
@@ -525,8 +525,8 @@
             "key": -10,
             "text": "Test",
             "description": "Another bash command to extract the the relevant result line and test whether it is in the desired range.",
-            "x": 1450,
-            "y": 601.99,
+            "x": 1452.1601442158526,
+            "y": 603.0700721079263,
             "width": 200,
             "height": 200,
             "collapsed": false,
@@ -583,7 +583,7 @@
                 {
                     "text": "Arg01",
                     "name": "Arg01",
-                    "value": "cat %i0 | head -1 | awk '{ if ( \\$1 < 0.99 || \\$1 > 1.01 ) exit(1); else exit(0) }'",
+                    "value": "cat %i0 | head -1 | awk '{ if ( $1 < 0.99 || $1 > 1.01 ) exit(1); else exit(0) }'",
                     "description": "The command line to be executed",
                     "readonly": false,
                     "type": "Unknown"
@@ -672,7 +672,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "",
+                    "value": "result.txt",
                     "description": "Path to the file for this node",
                     "readonly": false,
                     "type": "String"
@@ -731,7 +731,14 @@
                     "type": "Unknown"
                 }
             ],
-            "outputPorts": [],
+            "outputPorts": [
+                {
+                    "Id": "d8e957ce-07b6-4157-b5c8-b02999cb63e4",
+                    "IdText": "fileObject",
+                    "event": false,
+                    "type": "Unknown"
+                }
+            ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
@@ -762,7 +769,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "",
+                    "value": "functest.tar.gz",
                     "description": "",
                     "readonly": false,
                     "type": "Unknown"
@@ -774,96 +781,6 @@
                     "description": "",
                     "readonly": false,
                     "type": "Unknown"
-                }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "exitAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
-        },
-        {
-            "category": "NGAS",
-            "categoryType": "Data",
-            "isData": true,
-            "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
-            "drawOrderHint": 0,
-            "key": -13,
-            "text": "functest.tar.gz",
-            "description": "",
-            "x": 1407,
-            "y": 180.99,
-            "width": 200,
-            "height": 200,
-            "collapsed": false,
-            "showPorts": false,
-            "flipPorts": false,
-            "streaming": false,
-            "subject": null,
-            "selected": false,
-            "expanded": false,
-            "readonly": false,
-            "inputPorts": [
-                {
-                    "Id": "cd9c644c-c3f2-4848-8907-2f8bb42ad820",
-                    "IdText": "output",
-                    "event": false,
-                    "type": "Unknown"
-                }
-            ],
-            "outputPorts": [],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Data volume",
-                    "name": "data_volume",
-                    "value": 5,
-                    "description": "Estimated size of the data contained in this node",
-                    "readonly": false,
-                    "type": "Float"
-                },
-                {
-                    "text": "Group end",
-                    "name": "group_end",
-                    "value": false,
-                    "description": "Is this node the end of a group?",
-                    "readonly": false,
-                    "type": "Boolean"
-                },
-                {
-                    "text": "NGAS Server",
-                    "name": "ngasSrv",
-                    "value": "localhost",
-                    "description": "The URL of the NGAS Server",
-                    "readonly": false,
-                    "type": "String"
-                },
-                {
-                    "text": "NGAS Port",
-                    "name": "ngasPort",
-                    "value": 7777,
-                    "description": "The port of the NGAS Server",
-                    "readonly": false,
-                    "type": "Integer"
-                },
-                {
-                    "text": "File ID",
-                    "name": "ngasFileId",
-                    "value": "functest.tar.gz",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String"
                 }
             ],
             "inputAppFields": [],
@@ -1101,13 +1018,6 @@
             "fromPort": "51c774e6-d9cb-4ce1-8cf7-7c669a8bfa56",
             "to": -12,
             "toPort": "014634a9-3798-4f14-a3d7-f437663a1d2e",
-            "loop_aware": "0"
-        },
-        {
-            "from": -7,
-            "fromPort": "51c774e6-d9cb-4ce1-8cf7-7c669a8bfa56",
-            "to": -13,
-            "toPort": "cd9c644c-c3f2-4848-8907-2f8bb42ad820",
             "loop_aware": "0"
         },
         {
