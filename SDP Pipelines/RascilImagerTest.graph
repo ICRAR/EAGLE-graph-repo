@@ -126,10 +126,10 @@
                 {
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
-                    "value": "1",
+                    "value": false,
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Boolean"
                 },
                 {
                     "text": "File path",
@@ -879,10 +879,10 @@
                 {
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
-                    "value": "1",
+                    "value": false,
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Boolean"
                 },
                 {
                     "text": "File path",
@@ -1199,104 +1199,6 @@
             "exitApplicationKey": null
         },
         {
-            "category": "NGAS",
-            "categoryType": "Data",
-            "isData": true,
-            "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
-            "drawOrderHint": 0,
-            "key": -13,
-            "text": "NGAS ContImg_Test.tar.gz",
-            "description": "",
-            "x": -52.722891566265034,
-            "y": -21.253012048192794,
-            "width": 200,
-            "height": 200,
-            "collapsed": false,
-            "showPorts": false,
-            "flipPorts": false,
-            "streaming": false,
-            "subject": null,
-            "selected": false,
-            "expanded": false,
-            "readonly": false,
-            "inputPorts": [],
-            "outputPorts": [
-                {
-                    "Id": "b26b2253-336f-454d-a072-65a654309211",
-                    "IdText": "ContImg_Test.tar.gz",
-                    "event": false,
-                    "type": "Unknown"
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Data volume",
-                    "name": "data_volume",
-                    "value": 5,
-                    "description": "Estimated size of the data contained in this node",
-                    "readonly": false,
-                    "type": "Float"
-                },
-                {
-                    "text": "Group end",
-                    "name": "group_end",
-                    "value": false,
-                    "description": "Is this node the end of a group?",
-                    "readonly": false,
-                    "type": "Boolean"
-                },
-                {
-                    "text": "NGAS Server",
-                    "name": "ngasSrv",
-                    "value": "ngas.ddns.net",
-                    "description": "The URL of the NGAS Server",
-                    "readonly": false,
-                    "type": "String"
-                },
-                {
-                    "text": "NGAS Port",
-                    "name": "ngasPort",
-                    "value": 7777,
-                    "description": "The port of the NGAS Server",
-                    "readonly": false,
-                    "type": "Integer"
-                },
-                {
-                    "text": "Mime Type",
-                    "name": "ngasMime",
-                    "value": "application/octet-stream",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String"
-                },
-                {
-                    "text": "File ID",
-                    "name": "ngasFileId",
-                    "value": "ContImg_Test.tar.gz",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String"
-                }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "exitAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
-        },
-        {
             "category": "PythonApp",
             "categoryType": "Application",
             "isData": false,
@@ -1402,11 +1304,11 @@
             "width": 200,
             "height": 200,
             "collapsed": false,
-            "showPorts": false,
+            "showPorts": true,
             "flipPorts": false,
             "streaming": false,
             "subject": null,
-            "selected": false,
+            "selected": true,
             "expanded": false,
             "readonly": false,
             "inputPorts": [
@@ -1455,7 +1357,7 @@
                 {
                     "text": "Arg01",
                     "name": "Arg01",
-                    "value": "tar --strip-components=3 -xf %i0 -C /var/dlg_home/testdata && mkdir -p /var/dlg_home/testdata/rascil && cd /var/dlg_home/testdata/rascil && cp ../*.in .",
+                    "value": "tar --strip-components=3 -xf %i0 -C /var/dlg_home/testdata && mkdir -p /var/dlg_home/testdata/rascil && cd /var/dlg_home/testdata/rascil && cp ../*.in . && ln -s ../functest.ms functest.ms",
                     "description": "The command line to be executed",
                     "readonly": false,
                     "type": "String"
@@ -1570,6 +1472,96 @@
             "exitApplicationName": "",
             "exitApplicationType": "None",
             "exitApplicationKey": null
+        },
+        {
+            "category": "NGAS",
+            "categoryType": "Data",
+            "isData": true,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#394BB2",
+            "drawOrderHint": 0,
+            "key": -13,
+            "text": "NGAS",
+            "description": "",
+            "x": -42.057457471282945,
+            "y": -37.579427059603724,
+            "width": 200,
+            "height": 200,
+            "collapsed": false,
+            "showPorts": false,
+            "flipPorts": false,
+            "streaming": false,
+            "subject": null,
+            "selected": false,
+            "expanded": false,
+            "readonly": false,
+            "inputPorts": [],
+            "outputPorts": [
+                {
+                    "Id": "ba646748-eb41-4527-98bb-5ae8a4ffbb99",
+                    "IdText": "ContImg_Test.tar.gz",
+                    "event": false,
+                    "type": "Unknown"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float"
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean"
+                },
+                {
+                    "text": "NGAS Server",
+                    "name": "ngasSrv",
+                    "value": "ngas.ddns.net",
+                    "description": "The URL of the NGAS Server",
+                    "readonly": false,
+                    "type": "String"
+                },
+                {
+                    "text": "NGAS Port",
+                    "name": "ngasPort",
+                    "value": 7777,
+                    "description": "The port of the NGAS Server",
+                    "readonly": false,
+                    "type": "Integer"
+                },
+                {
+                    "text": "File Id",
+                    "name": "ngasFileId",
+                    "value": "ContImg_Test.tar.gz",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String"
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "exitAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "exitApplicationKey": null
         }
     ],
     "linkDataArray": [
@@ -1651,13 +1643,6 @@
             "loop_aware": "0"
         },
         {
-            "from": -13,
-            "fromPort": "b26b2253-336f-454d-a072-65a654309211",
-            "to": -14,
-            "toPort": "815b9685-a4d9-4f0f-9339-7b9557bb17bd",
-            "loop_aware": "0"
-        },
-        {
             "from": -14,
             "fromPort": "cbf5189c-4e8b-47ce-9903-91c98d93268b",
             "to": -16,
@@ -1675,6 +1660,20 @@
             "from": -15,
             "fromPort": "94f65e2d-df6c-49de-9ec5-cbad244765f7",
             "to": -2,
+            "toPort": "48ad7359-66ab-4d2e-ad04-3c5d4abd7047",
+            "loop_aware": "0"
+        },
+        {
+            "from": -13,
+            "fromPort": "ba646748-eb41-4527-98bb-5ae8a4ffbb99",
+            "to": -14,
+            "toPort": "815b9685-a4d9-4f0f-9339-7b9557bb17bd",
+            "loop_aware": "0"
+        },
+        {
+            "from": -15,
+            "fromPort": "94f65e2d-df6c-49de-9ec5-cbad244765f7",
+            "to": -9,
             "toPort": "48ad7359-66ab-4d2e-ad04-3c5d4abd7047",
             "loop_aware": "0"
         }
