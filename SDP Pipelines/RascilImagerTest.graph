@@ -25,8 +25,8 @@
             "key": -1,
             "text": "Description",
             "description": "",
-            "x": 129.17998483424708,
-            "y": 0,
+            "x": 406.2884185691868,
+            "y": 42.16867469879519,
             "width": 226.25820568927793,
             "height": 100,
             "collapsed": false,
@@ -76,8 +76,8 @@
             "key": -2,
             "text": "Imager config",
             "description": "",
-            "x": 0,
-            "y": 335.17973874099886,
+            "x": -30.120481927710852,
+            "y": 421.926726692806,
             "width": 200,
             "height": 200,
             "collapsed": false,
@@ -1197,6 +1197,379 @@
             "exitApplicationName": "",
             "exitApplicationType": "None",
             "exitApplicationKey": null
+        },
+        {
+            "category": "NGAS",
+            "categoryType": "Data",
+            "isData": true,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#394BB2",
+            "drawOrderHint": 0,
+            "key": -13,
+            "text": "NGAS ContImg_Test.tar.gz",
+            "description": "",
+            "x": -52.722891566265034,
+            "y": -21.253012048192794,
+            "width": 200,
+            "height": 200,
+            "collapsed": false,
+            "showPorts": false,
+            "flipPorts": false,
+            "streaming": false,
+            "subject": null,
+            "selected": false,
+            "expanded": false,
+            "readonly": false,
+            "inputPorts": [],
+            "outputPorts": [
+                {
+                    "Id": "b26b2253-336f-454d-a072-65a654309211",
+                    "IdText": "ContImg_Test.tar.gz",
+                    "event": false,
+                    "type": "Unknown"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float"
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean"
+                },
+                {
+                    "text": "NGAS Server",
+                    "name": "ngasSrv",
+                    "value": "ngas.ddns.net",
+                    "description": "The URL of the NGAS Server",
+                    "readonly": false,
+                    "type": "String"
+                },
+                {
+                    "text": "NGAS Port",
+                    "name": "ngasPort",
+                    "value": 7777,
+                    "description": "The port of the NGAS Server",
+                    "readonly": false,
+                    "type": "Integer"
+                },
+                {
+                    "text": "Mime Type",
+                    "name": "ngasMime",
+                    "value": "application/octet-stream",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String"
+                },
+                {
+                    "text": "File ID",
+                    "name": "ngasFileId",
+                    "value": "ContImg_Test.tar.gz",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String"
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "exitAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "exitApplicationKey": null
+        },
+        {
+            "category": "PythonApp",
+            "categoryType": "Application",
+            "isData": false,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#3498DB",
+            "drawOrderHint": 0,
+            "key": -14,
+            "text": "Get data",
+            "description": "A simple APP that copies its inputs into its outputs. All inputs are copied into all outputs in the order they were declared in the graph. If an input is a container (e.g. a directory) it copies the content recursively.",
+            "x": -46.97590361445785,
+            "y": 94.50602409638559,
+            "width": 200,
+            "height": 200,
+            "collapsed": false,
+            "showPorts": false,
+            "flipPorts": false,
+            "streaming": false,
+            "subject": null,
+            "selected": false,
+            "expanded": false,
+            "readonly": true,
+            "inputPorts": [
+                {
+                    "Id": "815b9685-a4d9-4f0f-9339-7b9557bb17bd",
+                    "IdText": "ContImg_Test.tar.gz",
+                    "event": false,
+                    "type": "Unknown"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "cbf5189c-4e8b-47ce-9903-91c98d93268b",
+                    "IdText": "ContImg_Test.tar.gz",
+                    "event": false,
+                    "type": "Unknown"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "appclass",
+                    "name": "appclass",
+                    "value": "dlg.apps.simple.CopyApp",
+                    "description": "Application class",
+                    "readonly": true,
+                    "type": "String"
+                },
+                {
+                    "text": "Execution time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "description": "Estimated execution time",
+                    "readonly": false,
+                    "type": "Float"
+                },
+                {
+                    "text": "Num CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "description": "Number of cores used",
+                    "readonly": false,
+                    "type": "Integer"
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "description": "Component is start of a group",
+                    "readonly": false,
+                    "type": "Boolean"
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "exitAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "exitApplicationKey": null
+        },
+        {
+            "category": "BashShellApp",
+            "categoryType": "Application",
+            "isData": false,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#1C2833",
+            "drawOrderHint": 0,
+            "key": -15,
+            "text": "Unpack",
+            "description": "An application component run within the Bash Shell",
+            "x": -42.66563593225499,
+            "y": 276.719827251681,
+            "width": 200,
+            "height": 200,
+            "collapsed": false,
+            "showPorts": false,
+            "flipPorts": false,
+            "streaming": false,
+            "subject": null,
+            "selected": false,
+            "expanded": false,
+            "readonly": false,
+            "inputPorts": [
+                {
+                    "Id": "a23f3115-1980-4750-8050-38ef9a5f0354",
+                    "IdText": "ContImg_Test.tar.gz",
+                    "event": false,
+                    "type": "Unknown"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "94f65e2d-df6c-49de-9ec5-cbad244765f7",
+                    "IdText": "config",
+                    "event": false,
+                    "type": "Unknown"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Execution time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "description": "Estimate of execution time (in seconds) for this application.",
+                    "readonly": false,
+                    "type": "Float"
+                },
+                {
+                    "text": "Num CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "description": "Number of CPUs used for this application.",
+                    "readonly": false,
+                    "type": "Integer"
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean"
+                },
+                {
+                    "text": "Arg01",
+                    "name": "Arg01",
+                    "value": "tar --strip-components=3 -xf %i0 -C /var/dlg_home/testdata && mkdir -p /var/dlg_home/testdata/rascil && cd /var/dlg_home/testdata/rascil && cp ../*.in .",
+                    "description": "The command line to be executed",
+                    "readonly": false,
+                    "type": "String"
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "exitAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "exitApplicationKey": null
+        },
+        {
+            "category": "File",
+            "categoryType": "Data",
+            "isData": true,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#394BB2",
+            "drawOrderHint": 0,
+            "key": -16,
+            "text": "ContImg_Test.tar.gz",
+            "description": "",
+            "x": -44.218360134802204,
+            "y": 180.79364856559968,
+            "width": 200,
+            "height": 200,
+            "collapsed": false,
+            "showPorts": false,
+            "flipPorts": false,
+            "streaming": false,
+            "subject": null,
+            "selected": false,
+            "expanded": false,
+            "readonly": false,
+            "inputPorts": [
+                {
+                    "Id": "ae9bdbeb-ec20-4cdc-8e22-98d3b34143c8",
+                    "IdText": "ContImg_Test.tar.gz",
+                    "event": false,
+                    "type": "Unknown"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "e1cf1290-bc84-476e-912e-ce33363ad6d3",
+                    "IdText": "ContImg_Test.tar.gz",
+                    "event": false,
+                    "type": "Unknown"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float"
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean"
+                },
+                {
+                    "text": "Check file path exists",
+                    "name": "check_filepath_exists",
+                    "value": false,
+                    "description": "Perform a check to make sure the file path exists before proceeding with the application",
+                    "readonly": false,
+                    "type": "Boolean"
+                },
+                {
+                    "text": "File path",
+                    "name": "filepath",
+                    "value": "",
+                    "description": "Path to the file for this node",
+                    "readonly": false,
+                    "type": "String"
+                },
+                {
+                    "text": "Directory name",
+                    "name": "dirname",
+                    "value": "",
+                    "description": "Name of the directory containing the file for this node",
+                    "readonly": false,
+                    "type": "String"
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "exitAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "exitApplicationKey": null
         }
     ],
     "linkDataArray": [
@@ -1275,6 +1648,34 @@
             "fromPort": "230e63da-d48f-4779-8ec2-c80d4413cf31",
             "to": -12,
             "toPort": "286968cf-3200-4074-ac54-43ec869a431c",
+            "loop_aware": "0"
+        },
+        {
+            "from": -13,
+            "fromPort": "b26b2253-336f-454d-a072-65a654309211",
+            "to": -14,
+            "toPort": "815b9685-a4d9-4f0f-9339-7b9557bb17bd",
+            "loop_aware": "0"
+        },
+        {
+            "from": -14,
+            "fromPort": "cbf5189c-4e8b-47ce-9903-91c98d93268b",
+            "to": -16,
+            "toPort": "ae9bdbeb-ec20-4cdc-8e22-98d3b34143c8",
+            "loop_aware": "0"
+        },
+        {
+            "from": -16,
+            "fromPort": "e1cf1290-bc84-476e-912e-ce33363ad6d3",
+            "to": -15,
+            "toPort": "a23f3115-1980-4750-8050-38ef9a5f0354",
+            "loop_aware": "0"
+        },
+        {
+            "from": -15,
+            "fromPort": "94f65e2d-df6c-49de-9ec5-cbad244765f7",
+            "to": -2,
+            "toPort": "48ad7359-66ab-4d2e-ad04-3c5d4abd7047",
             "loop_aware": "0"
         }
     ]
