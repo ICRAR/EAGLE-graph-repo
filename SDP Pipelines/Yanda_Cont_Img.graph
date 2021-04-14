@@ -76,8 +76,8 @@
             "key": -2,
             "text": "Config",
             "description": "",
-            "x": 442.0298677480054,
-            "y": 626.06598389606,
+            "x": 551.5019174374469,
+            "y": 474.66846836810936,
             "width": 200,
             "height": 200,
             "collapsed": false,
@@ -126,15 +126,15 @@
                 {
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
-                    "value": "1",
+                    "value": false,
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Boolean"
                 },
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "/var/dlg_home/testdata/functest.in",
+                    "value": "/var/dlg_home/testdata/yanda/functest.in",
                     "description": "",
                     "readonly": false,
                     "type": "Unknown"
@@ -245,7 +245,7 @@
                 {
                     "text": "Command",
                     "name": "command",
-                    "value": "cd /var/dlg_home/workspace && mpirun -np 4 --allow-run-as-root imager -c %i0",
+                    "value": "cd /var/dlg_home/workspace/yanda && mpirun -np 4 --allow-run-as-root imager -c %i0",
                     "description": "The command line to run within the docker instance",
                     "readonly": false,
                     "type": "String"
@@ -1014,11 +1014,11 @@
             "width": 200,
             "height": 200,
             "collapsed": false,
-            "showPorts": true,
+            "showPorts": false,
             "flipPorts": false,
             "streaming": false,
             "subject": null,
-            "selected": true,
+            "selected": false,
             "expanded": false,
             "readonly": false,
             "inputPorts": [
@@ -1202,7 +1202,7 @@
             "height": 200,
             "collapsed": false,
             "showPorts": false,
-            "flipPorts": false,
+            "flipPorts": true,
             "streaming": false,
             "subject": null,
             "selected": false,
@@ -1389,7 +1389,7 @@
             "height": 200,
             "collapsed": false,
             "showPorts": false,
-            "flipPorts": false,
+            "flipPorts": true,
             "streaming": false,
             "subject": null,
             "selected": false,
@@ -1538,7 +1538,7 @@
                 {
                     "text": "Arg01",
                     "name": "Arg01",
-                    "value": "tar --strip-components=3 -xf %i0 -C /var/dlg_home/testdata",
+                    "value": "tar -xf %i0 -C /var/dlg_home/testdata && mkdir -p yanda && cd /var/dlg_home/testdata/yanda && mv ../functest.in .",
                     "description": "The command line to be executed",
                     "readonly": false,
                     "type": "String"
