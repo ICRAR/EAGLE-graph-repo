@@ -348,26 +348,26 @@
                 {
                     "text": "Execution time",
                     "name": "execution_time",
-                    "value": "5",
+                    "value": 5,
                     "description": "Estimate of execution time (in seconds) for this application.",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Integer"
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
-                    "value": "1",
+                    "value": 1,
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Integer"
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
-                    "value": "0",
+                    "value": false,
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Boolean"
                 },
                 {
                     "text": "Arg01",
@@ -582,18 +582,18 @@
                 {
                     "text": "Group start",
                     "name": "group_start",
-                    "value": "0",
+                    "value": false,
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Boolean"
                 },
                 {
-                    "text": "Arg01",
+                    "text": "Command",
                     "name": "Arg01",
                     "value": "cat %i0 | head -1 | awk '{ if ( $1 < 0.99 || $1 > 1.01 ) exit(1); else exit(0) }'",
                     "description": "The command line to be executed",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "String"
                 }
             ],
             "inputAppFields": [],
@@ -1299,11 +1299,11 @@
             "width": 200,
             "height": 200,
             "collapsed": false,
-            "showPorts": false,
+            "showPorts": true,
             "flipPorts": false,
             "streaming": false,
             "subject": null,
-            "selected": false,
+            "selected": true,
             "expanded": false,
             "readonly": true,
             "inputPorts": [
@@ -1536,7 +1536,7 @@
                     "type": "Boolean"
                 },
                 {
-                    "text": "Arg01",
+                    "text": "Command",
                     "name": "Arg01",
                     "value": "tar -xf %i0 -C /var/dlg_home/testdata && mkdir -p yanda && cd /var/dlg_home/testdata/yanda && mv ../functest.in .",
                     "description": "The command line to be executed",
