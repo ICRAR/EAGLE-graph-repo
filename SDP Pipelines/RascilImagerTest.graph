@@ -315,7 +315,7 @@
                 {
                     "text": "Arg01",
                     "name": "Arg01",
-                    "value": "cd /var/dlg_home/testdata && sed -i 's/file\\:\\/\\/\\/\\/var\\/dlg_home\\/testdata\\/rascil\\///g' rascil/index.html && tar --dereference -cvjf %o0 --exclude functest.ms rascil",
+                    "value": "cd /var/dlg_home/testdata && sed -i 's/file\\:\\/\\/\\/\\/var\\/dlg_home\\/testdata\\/rascil\\///g' rascil/index.html && tar --dereference -cvjf %o0 --exclude functest.ms rascil && rm -rf rascil",
                     "description": "The command line to be executed",
                     "readonly": false,
                     "type": "Unknown"
@@ -642,11 +642,11 @@
             "width": 200,
             "height": 200,
             "collapsed": false,
-            "showPorts": false,
+            "showPorts": true,
             "flipPorts": false,
             "streaming": false,
             "subject": null,
-            "selected": false,
+            "selected": true,
             "expanded": false,
             "readonly": false,
             "inputPorts": [
@@ -715,7 +715,7 @@
                 {
                     "text": "Command",
                     "name": "command",
-                    "value": "cd /var/dlg_home/testdata/rascil && python $RASCIL/rascil/apps/ci_checker/ci_checker_main.py --ingest_fitsname_restored=%i0 --ingest_fitsname_residual=%i1 @%i2",
+                    "value": "cd /var/dlg_home/testdata/rascil && python $RASCIL/rascil/apps/ci_checker/ci_checker_main.py --ingest_fitsname_restored=%i0 --ingest_fitsname_residual=%i1 @%i2 && rm -rf dask-worker-space",
                     "description": "The command line to run within the docker instance",
                     "readonly": false,
                     "type": "String"
