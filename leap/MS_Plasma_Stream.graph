@@ -44,6 +44,12 @@
                     "IdText": "MS",
                     "event": false,
                     "type": "Complex"
+                },
+                {
+                    "Id": "5f72ef69-0302-4029-be41-0c5f1b804039",
+                    "IdText": "event",
+                    "event": true,
+                    "type": "Unknown"
                 }
             ],
             "inputLocalPorts": [],
@@ -115,8 +121,8 @@
             "key": -2,
             "text": "MS",
             "description": "MS",
-            "x": 1179.727447921175,
-            "y": 261.80833749912824,
+            "x": 1201.5889014725415,
+            "y": 276.38263986670603,
             "width": 200,
             "height": 200,
             "collapsed": false,
@@ -135,7 +141,14 @@
                     "type": "Complex"
                 }
             ],
-            "outputPorts": [],
+            "outputPorts": [
+                {
+                    "Id": "198cf339-d6f6-4723-8b40-0951137f3868",
+                    "IdText": "event",
+                    "event": true,
+                    "type": "Unknown"
+                }
+            ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
@@ -239,8 +252,8 @@
                 {
                     "text": "plasma_path",
                     "name": "plasma_path",
-                    "value": "/tmp/plasma",
-                    "description": "Path to plasma store.",
+                    "value": "/var/dlg_home/tmp/plasma.socket",
+                    "description": "Path to plasma store socket",
                     "readonly": false,
                     "type": "String"
                 },
@@ -301,8 +314,8 @@
             "drawOrderHint": 0,
             "key": -3,
             "text": "MS Plasma Consumer",
-            "description": "Stream Measurement Set one correlator timestep at a time via Plasma.",
-            "x": 985.7560885594726,
+            "description": "Consumes Measurement Set stream one correlator timestep at a time via Plasma.",
+            "x": 986.7971101571567,
             "y": 260.73778518789715,
             "width": 200,
             "height": 200,
@@ -328,6 +341,12 @@
                     "IdText": "MS",
                     "event": false,
                     "type": "Complex"
+                },
+                {
+                    "Id": "2932b827-294c-4a06-a0af-3ac6979e7821",
+                    "IdText": "event",
+                    "event": true,
+                    "type": "Unknown"
                 }
             ],
             "inputLocalPorts": [],
@@ -336,8 +355,8 @@
                 {
                     "text": "plasma_path",
                     "name": "plasma_path",
-                    "value": "/tmp/plasma",
-                    "description": "Path to plasma store.",
+                    "value": "/var/dlg_home/tmp/plasma.socket",
+                    "description": "Path to plasma store socket",
                     "readonly": false,
                     "type": "String"
                 },
@@ -388,6 +407,195 @@
             "exitApplicationKey": null
         },
         {
+            "category": "Description",
+            "categoryType": "Other",
+            "isData": false,
+            "isGroup": false,
+            "canHaveInputs": false,
+            "canHaveOutputs": false,
+            "color": "#9B3065",
+            "drawOrderHint": 0,
+            "key": -5,
+            "text": "Description",
+            "description": "A node that places a description in the graph. The description should be used to communicate the purpose of the graph",
+            "x": 357.20408800488383,
+            "y": -23.85741724870592,
+            "width": 215.89929175095918,
+            "height": 119.44358037500865,
+            "collapsed": false,
+            "showPorts": false,
+            "flipPorts": false,
+            "streaming": false,
+            "subject": null,
+            "selected": false,
+            "expanded": false,
+            "readonly": false,
+            "inputPorts": [],
+            "outputPorts": [],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Description",
+                    "name": "description",
+                    "value": "This graph encapsulates the first attempt to generate a working streaming graph using the Arrow Plasma memory store as a data exchange mechanism between two components. This is related to ticket YAN-708.",
+                    "description": "The text value of the description",
+                    "readonly": false,
+                    "type": "String"
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "exitAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "exitApplicationKey": null
+        },
+        {
+            "category": "Docker",
+            "categoryType": "Application",
+            "isData": false,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#331C54",
+            "drawOrderHint": 0,
+            "key": -6,
+            "text": "Plasma Store",
+            "description": "This starts the plasma store in a separate container. Problem is shutdown at the end of the execution does not happen.",
+            "x": 729.9328995400987,
+            "y": 78.86860475438222,
+            "width": 200,
+            "height": 200,
+            "collapsed": false,
+            "showPorts": false,
+            "flipPorts": false,
+            "streaming": false,
+            "subject": null,
+            "selected": false,
+            "expanded": false,
+            "readonly": false,
+            "inputPorts": [
+                {
+                    "Id": "0a32c1e9-a6ee-4600-b3d0-4a43745a5857",
+                    "IdText": "event",
+                    "event": true,
+                    "type": "Unknown"
+                }
+            ],
+            "outputPorts": [],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Execution time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "description": "Estimate of execution time (in seconds) for this application.",
+                    "readonly": false,
+                    "type": "Float"
+                },
+                {
+                    "text": "Num CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "description": "Number of CPUs used for this application.",
+                    "readonly": false,
+                    "type": "Integer"
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean"
+                },
+                {
+                    "text": "Image",
+                    "name": "image",
+                    "value": "icrar/plasma_store:0.3",
+                    "description": "The name of the docker image to be used for this application",
+                    "readonly": false,
+                    "type": "String"
+                },
+                {
+                    "text": "Tag",
+                    "name": "tag",
+                    "value": "",
+                    "description": "The tag of the docker image to be used for this application",
+                    "readonly": false,
+                    "type": "String"
+                },
+                {
+                    "text": "Digest",
+                    "name": "digest",
+                    "value": "",
+                    "description": "The hexadecimal hash (long version) of the docker image to be used for this application",
+                    "readonly": false,
+                    "type": "String"
+                },
+                {
+                    "text": "Command",
+                    "name": "command",
+                    "value": "plasma_store -m 10000000 -s /var/dlg_home/tmp/plasma.socket",
+                    "description": "The command line to run within the docker instance. The specified command will be executed in a bash shell. That means that images will need a bash shell.",
+                    "readonly": false,
+                    "type": "String"
+                },
+                {
+                    "text": "User",
+                    "name": "user",
+                    "value": "",
+                    "description": "Username of the user who will run the application within the docker image",
+                    "readonly": false,
+                    "type": "String"
+                },
+                {
+                    "text": "Ensure User And Switch",
+                    "name": "ensureUserAndSwitch",
+                    "value": false,
+                    "description": "Make sure the user specified in the User parameter exists and then run the docker container as that user",
+                    "readonly": false,
+                    "type": "Boolean"
+                },
+                {
+                    "text": "Remove Container",
+                    "name": "removeContainer",
+                    "value": false,
+                    "description": "Instruct Docker engine to delete the container after execution is complete",
+                    "readonly": false,
+                    "type": "Boolean"
+                },
+                {
+                    "text": "Additional Bindings",
+                    "name": "additionalBindings",
+                    "value": "/var/dlg_home:/var/dlg_home",
+                    "description": "Directories which will be visible inside the container during run-time. Format is srcdir_on_host:trgtdir_on_container. Multiple entries can be separated by commas.",
+                    "readonly": false,
+                    "type": "String"
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "exitAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "exitApplicationKey": null
+        },
+        {
             "category": "Plasma",
             "categoryType": "Data",
             "isData": true,
@@ -397,10 +605,10 @@
             "color": "#394BB2",
             "drawOrderHint": 0,
             "key": -1,
-            "text": "MS stream",
+            "text": "MS",
             "description": "",
-            "x": 737.3284045552833,
-            "y": 261.8547154359951,
+            "x": 753.781650725974,
+            "y": 266.35854594276157,
             "width": 200,
             "height": 200,
             "collapsed": false,
@@ -413,7 +621,7 @@
             "readonly": false,
             "inputPorts": [
                 {
-                    "Id": "76278398-88c2-411e-a9c3-208b36979089",
+                    "Id": "e51ac901-a329-4e0d-8b60-ea4eabbac83b",
                     "IdText": "MS_stream",
                     "event": false,
                     "type": "Unknown"
@@ -421,7 +629,7 @@
             ],
             "outputPorts": [
                 {
-                    "Id": "756d1ede-20a0-472c-8972-cf2a88d939d1",
+                    "Id": "5de288d4-3bcb-459f-8b77-a503504dc736",
                     "IdText": "MS_stream",
                     "event": false,
                     "type": "Unknown"
@@ -445,55 +653,12 @@
                     "description": "Is this node the end of a group?",
                     "readonly": false,
                     "type": "Boolean"
-                }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "exitAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
-        },
-        {
-            "category": "Description",
-            "categoryType": "Other",
-            "isData": false,
-            "isGroup": false,
-            "canHaveInputs": false,
-            "canHaveOutputs": false,
-            "color": "#9B3065",
-            "drawOrderHint": 0,
-            "key": -5,
-            "text": "Description",
-            "description": "A node that places a description in the graph. The description should be used to communicate the purpose of the graph",
-            "x": 357.20408800488383,
-            "y": -23.85741724870592,
-            "width": 215.89929175095918,
-            "height": 119.44358037500865,
-            "collapsed": false,
-            "showPorts": true,
-            "flipPorts": false,
-            "streaming": false,
-            "subject": null,
-            "selected": true,
-            "expanded": false,
-            "readonly": false,
-            "inputPorts": [],
-            "outputPorts": [],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
+                },
                 {
-                    "text": "Description",
-                    "name": "description",
-                    "value": "This graph encapsulates the first attempt to generate a working streaming graph using the Arrow Plasma memory store as a data exchange mechanism between two components. This is related to ticket YAN-708.",
-                    "description": "The text value of the description",
+                    "text": "plasma path",
+                    "name": "plasma_path",
+                    "value": "/var/dlg_home/tmp/plasma.socket",
+                    "description": "Path to plasma socket",
                     "readonly": false,
                     "type": "String"
                 }
@@ -528,17 +693,24 @@
             "loop_aware": "0"
         },
         {
+            "from": -4,
+            "fromPort": "12dde2b7-e3ff-4733-9fbf-fc33e44bc9f6",
+            "to": -1,
+            "toPort": "e51ac901-a329-4e0d-8b60-ea4eabbac83b",
+            "loop_aware": "0"
+        },
+        {
             "from": -1,
-            "fromPort": "756d1ede-20a0-472c-8972-cf2a88d939d1",
+            "fromPort": "5de288d4-3bcb-459f-8b77-a503504dc736",
             "to": -3,
             "toPort": "dc629455-4442-4fa2-ac61-8c7dd5608d6f",
             "loop_aware": "0"
         },
         {
-            "from": -4,
-            "fromPort": "12dde2b7-e3ff-4733-9fbf-fc33e44bc9f6",
-            "to": -1,
-            "toPort": "76278398-88c2-411e-a9c3-208b36979089",
+            "from": -10,
+            "fromPort": "5f72ef69-0302-4029-be41-0c5f1b804039",
+            "to": -6,
+            "toPort": "0a32c1e9-a6ee-4600-b3d0-4a43745a5857",
             "loop_aware": "0"
         }
     ]
