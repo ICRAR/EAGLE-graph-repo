@@ -7,8 +7,8 @@
         "filePath": "leap/MS_Plasma_Stream.graph",
         "sha": "",
         "git_url": "",
-        "eagleVersion": "v3.0.2:HEAD",
-        "eagleCommitHash": "5fdd3863355dd800394f5b3d71efc226921643f9",
+        "eagleVersion": "v3.0.4",
+        "eagleCommitHash": "9dffb2c3f02e3f230247356191a5ca4e8e2c11a1",
         "schemaVersion": "OJS",
         "readonly": true
     },
@@ -82,7 +82,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "/var/dlg_home/testdata/test.ms",
+                    "value": "/tmp/.dlg/var/dlg_home/testdata/test.ms",
                     "description": "Path to the file for this node",
                     "readonly": false,
                     "type": "String"
@@ -141,7 +141,14 @@
                     "type": "Complex"
                 }
             ],
-            "outputPorts": [],
+            "outputPorts": [
+                {
+                    "Id": "5a6d490a-0b65-4866-8ae5-e1f112582036",
+                    "IdText": "event",
+                    "event": true,
+                    "type": "String"
+                }
+            ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
@@ -245,7 +252,7 @@
                 {
                     "text": "plasma_path",
                     "name": "plasma_path",
-                    "value": "/var/dlg_home/tmp/plasma.socket",
+                    "value": "/tmp/.dlg/var/dlg_home/tmp/plasma.socket",
                     "description": "Path to plasma store socket",
                     "readonly": false,
                     "type": "String"
@@ -342,7 +349,7 @@
                 {
                     "text": "plasma_path",
                     "name": "plasma_path",
-                    "value": "/var/dlg_home/tmp/plasma.socket",
+                    "value": "/tmp/.dlg/var/dlg_home/tmp/plasma.socket",
                     "description": "Path to plasma store socket",
                     "readonly": false,
                     "type": "String"
@@ -531,7 +538,7 @@
                 {
                     "text": "Command",
                     "name": "command",
-                    "value": "plasma_store -m 10000000 -s /var/dlg_home/tmp/plasma.socket",
+                    "value": "plasma_store -m 10000000 -s /tmp/.dlg/var/dlg_home/tmp/plasma.socket",
                     "description": "The command line to run within the docker instance. The specified command will be executed in a bash shell. That means that images will need a bash shell.",
                     "readonly": false,
                     "type": "String"
@@ -555,7 +562,7 @@
                 {
                     "text": "Remove Container",
                     "name": "removeContainer",
-                    "value": false,
+                    "value": true,
                     "description": "Instruct Docker engine to delete the container after execution is complete",
                     "readonly": false,
                     "type": "Boolean"
@@ -563,7 +570,7 @@
                 {
                     "text": "Additional Bindings",
                     "name": "additionalBindings",
-                    "value": "/var/dlg_home:/var/dlg_home",
+                    "value": "/tmp/.dlg/var/dlg_home:/tmp/.dlg/var/dlg_home",
                     "description": "Directories which will be visible inside the container during run-time. Format is srcdir_on_host:trgtdir_on_container. Multiple entries can be separated by commas.",
                     "readonly": false,
                     "type": "String"
@@ -644,7 +651,7 @@
                 {
                     "text": "plasma path",
                     "name": "plasma_path",
-                    "value": "/var/dlg_home/tmp/plasma.socket",
+                    "value": "/tmp/.dlg/var/dlg_home/tmp/plasma.socket",
                     "description": "Path to plasma socket",
                     "readonly": false,
                     "type": "String"
