@@ -134,12 +134,12 @@
             "width": 200,
             "height": 200,
             "collapsed": false,
-            "showPorts": true,
+            "showPorts": false,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
-            "selected": true,
+            "selected": false,
             "expanded": false,
             "readonly": false,
             "group": -2,
@@ -463,97 +463,6 @@
             "exitApplicationKey": null
         },
         {
-            "category": "File",
-            "categoryType": "Data",
-            "isData": true,
-            "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
-            "drawOrderHint": 0,
-            "key": -8,
-            "text": "Result",
-            "description": "",
-            "x": 1332.1070614364232,
-            "y": 556.3657926710129,
-            "width": 200,
-            "height": 200,
-            "collapsed": false,
-            "showPorts": false,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "selected": false,
-            "expanded": false,
-            "readonly": false,
-            "inputPorts": [
-                {
-                    "Id": "fbd40ff4-a868-4eaa-a4c5-e007d09cf8b2",
-                    "IdText": "result",
-                    "event": false,
-                    "type": "String"
-                }
-            ],
-            "outputPorts": [],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Data volume",
-                    "name": "data_volume",
-                    "value": 5,
-                    "description": "Estimated size of the data contained in this node",
-                    "readonly": false,
-                    "type": "Float"
-                },
-                {
-                    "text": "Group end",
-                    "name": "group_end",
-                    "value": false,
-                    "description": "Is this node the end of a group?",
-                    "readonly": false,
-                    "type": "Boolean"
-                },
-                {
-                    "text": "Check file path exists",
-                    "name": "check_filepath_exists",
-                    "value": false,
-                    "description": "Perform a check to make sure the file path exists before proceeding with the application",
-                    "readonly": false,
-                    "type": "Boolean"
-                },
-                {
-                    "text": "File path",
-                    "name": "filepath",
-                    "value": "",
-                    "description": "Path to the file for this node",
-                    "readonly": false,
-                    "type": "String"
-                },
-                {
-                    "text": "Directory name",
-                    "name": "dirname",
-                    "value": "",
-                    "description": "Name of the directory containing the file for this node",
-                    "readonly": false,
-                    "type": "String"
-                }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "exitAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
-        },
-        {
             "category": "Memory",
             "categoryType": "Data",
             "isData": true,
@@ -793,6 +702,73 @@
             "exitApplicationName": "",
             "exitApplicationType": "None",
             "exitApplicationKey": null
+        },
+        {
+            "category": "Memory",
+            "categoryType": "Data",
+            "isData": true,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#394BB2",
+            "drawOrderHint": 0,
+            "key": -8,
+            "text": "Memory",
+            "description": "",
+            "x": 1394.7030709214453,
+            "y": 559.3846649303431,
+            "width": 200,
+            "height": 200,
+            "collapsed": false,
+            "showPorts": false,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "selected": false,
+            "expanded": false,
+            "readonly": false,
+            "inputPorts": [
+                {
+                    "Id": "a3fc79e8-0c88-41a9-b339-4f3667c47247",
+                    "IdText": "result",
+                    "event": false,
+                    "type": "String"
+                }
+            ],
+            "outputPorts": [],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float"
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean"
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "exitAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "exitApplicationKey": null
         }
     ],
     "linkDataArray": [
@@ -825,13 +801,6 @@
             "loop_aware": "0"
         },
         {
-            "from": -7,
-            "fromPort": "66d8030d-85e5-4489-ab31-bc0be6fe0acf",
-            "to": -8,
-            "toPort": "fbd40ff4-a868-4eaa-a4c5-e007d09cf8b2",
-            "loop_aware": "0"
-        },
-        {
             "from": -9,
             "fromPort": "0cc55af1-2cb9-44d0-a1b0-6d38a04e2e6c",
             "to": -4,
@@ -850,6 +819,13 @@
             "fromPort": "a2456874-1336-48d7-bcf0-e08c7877a62f",
             "to": -3,
             "toPort": "d4cad215-9e44-461a-b1a8-b49edc67b80f",
+            "loop_aware": "0"
+        },
+        {
+            "from": -7,
+            "fromPort": "66d8030d-85e5-4489-ab31-bc0be6fe0acf",
+            "to": -8,
+            "toPort": "a3fc79e8-0c88-41a9-b339-4f3667c47247",
             "loop_aware": "0"
         }
     ]
