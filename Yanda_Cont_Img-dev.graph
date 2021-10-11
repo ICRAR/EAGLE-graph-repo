@@ -134,7 +134,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "/tmp/.dlg/testdata/yanda/functest.in",
+                    "value": "functest.in",
                     "description": "",
                     "readonly": false,
                     "type": "Unknown"
@@ -237,7 +237,7 @@
                 {
                     "text": "Image",
                     "name": "image",
-                    "value": "icrar/yanda_imager:0.2",
+                    "value": "icrar/yanda_imager:0.3",
                     "description": "Name of the docker image to be used for this application",
                     "readonly": false,
                     "type": "String"
@@ -245,7 +245,7 @@
                 {
                     "text": "Command",
                     "name": "command",
-                    "value": "cd /tmp/.dlg/workspace/yanda && mpirun -np 4 --allow-run-as-root imager -c %i0",
+                    "value": "cd `dirname %i0` && mpirun -np 4 --allow-run-as-root imager -c %i0",
                     "description": "The command line to run within the docker instance",
                     "readonly": false,
                     "type": "String"
@@ -873,7 +873,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "/tmp/.dlg/workspace/yanda/image.cont.taylor.0.restored",
+                    "value": "image.cont.taylor.0.restored",
                     "description": "Path to the file for this node",
                     "readonly": false,
                     "type": "String"
@@ -970,7 +970,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "/tmp/.dlg/workspace/yanda/residual.cont.taylor.0",
+                    "value": "residual.cont.taylor.0",
                     "description": "Path to the file for this node",
                     "readonly": false,
                     "type": "String"
@@ -1441,7 +1441,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "ContImg_Test.tar.gz",
+                    "value": "",
                     "description": "Path to the file for this node",
                     "readonly": false,
                     "type": "String"
@@ -1538,7 +1538,7 @@
                 {
                     "text": "Command",
                     "name": "Arg01",
-                    "value": "tar -xf %i0 -C /tmp/.dlg/testdata && mkdir -p /tmp/.dlg/testdata/yanda && cd /tmp/.dlg/testdata/yanda && mv ../functest.in .",
+                    "value": "cd `dirname %i0` && tar -xf %i0",
                     "description": "The command line to be executed",
                     "readonly": false,
                     "type": "String"
