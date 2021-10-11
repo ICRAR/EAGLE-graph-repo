@@ -26,7 +26,7 @@
             "text": "Description",
             "description": "",
             "x": 705.5352778427458,
-            "y": 92.60670731707323,
+            "y": 111.26075731201888,
             "width": 207,
             "height": 100,
             "collapsed": false,
@@ -76,8 +76,8 @@
             "key": -2,
             "text": "Config",
             "description": "",
-            "x": 549.6058844790615,
-            "y": 472.7724354097239,
+            "x": 550.6058844790615,
+            "y": 491.42648540466956,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -134,7 +134,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "/tmp/.dlg/testdata/yanda/functest-fits.in",
+                    "value": "functest-fits.in",
                     "description": "",
                     "readonly": false,
                     "type": "Unknown"
@@ -174,7 +174,7 @@
             "text": "yanda_imager",
             "description": "This docker app runs the Yandasoft Imager. It uses an askapsoft compliant configuration file on input, which defines all the required parameters.",
             "x": 713.3195980917105,
-            "y": 385.04899830347824,
+            "y": 403.7030482984239,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -245,7 +245,7 @@
                 {
                     "text": "Command",
                     "name": "command",
-                    "value": "cd /tmp/.dlg/workspace/yanda && mpirun -np 4 --allow-run-as-root imager -c %i0 ",
+                    "value": "mpirun -np 4 --allow-run-as-root imager -c %i0 && chmod -R a+w ../*",
                     "description": "The command line to run within the docker instance",
                     "readonly": false,
                     "type": "String"
@@ -309,7 +309,7 @@
             "text": "Pack results",
             "description": "This is just a tar command packing the output directories together.",
             "x": 1176.3602376653282,
-            "y": 559.7244083344118,
+            "y": 578.3784583293575,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -403,8 +403,8 @@
             "key": -12,
             "text": "functest.tar.gz",
             "description": "",
-            "x": 1388.6565879436182,
-            "y": 537.7430625649249,
+            "x": 1389.6565879436182,
+            "y": 556.3971125598706,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -500,12 +500,12 @@
             "key": -3,
             "text": "image.cont.taylor.0.restored",
             "description": "",
-            "x": 832.8249278718572,
-            "y": 737.584146944022,
+            "x": 834.8249278718572,
+            "y": 757.2381969389677,
             "width": 200,
             "height": 72,
             "collapsed": false,
-            "showPorts": true,
+            "showPorts": false,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
@@ -558,7 +558,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "/tmp/.dlg/workspace/yanda/image.cont.taylor.0.restored.fits",
+                    "value": "image.cont.taylor.0.restored",
                     "description": "Path to the file for this node",
                     "readonly": false,
                     "type": "String"
@@ -597,12 +597,12 @@
             "key": -5,
             "text": "residual.cont.taylor.0",
             "description": "",
-            "x": 912.8329225420771,
-            "y": 645.8476595003013,
+            "x": 894.8329225420771,
+            "y": 631.501709495247,
             "width": 200,
             "height": 72,
             "collapsed": false,
-            "showPorts": true,
+            "showPorts": false,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
@@ -655,7 +655,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "/tmp/.dlg/workspace/yanda/residual.cont.taylor.0.fits",
+                    "value": "residual.cont.taylor.0",
                     "description": "Path to the file for this node",
                     "readonly": false,
                     "type": "String"
@@ -695,7 +695,7 @@
             "text": "NGAS functest.tar.gz",
             "description": "",
             "x": 1795.410389871375,
-            "y": 548.2737154001115,
+            "y": 566.9277653950572,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -793,7 +793,7 @@
             "text": "Archive results",
             "description": "A simple APP that copies its inputs into its outputs. All inputs are copied into all outputs in the order they were declared in the graph. If an input is a container (e.g. a directory) it copies the content recursively.",
             "x": 1589.0739223688463,
-            "y": 570.6820636213961,
+            "y": 589.3361136163418,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -881,12 +881,12 @@
             "key": -15,
             "text": "ContImg_Test.tar.gz",
             "description": "",
-            "x": 242.80738632724095,
-            "y": 286.0439854091056,
+            "x": 246.80738632724095,
+            "y": 357.6980354040512,
             "width": 200,
             "height": 72,
             "collapsed": false,
-            "showPorts": true,
+            "showPorts": false,
             "flipPorts": true,
             "streaming": false,
             "precious": false,
@@ -939,7 +939,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "/tmp/.dlg/testdata/ContImg_Test.tar.gz",
+                    "value": "",
                     "description": "Path to the file for this node",
                     "readonly": false,
                     "type": "String"
@@ -949,101 +949,6 @@
                     "name": "dirname",
                     "value": "",
                     "description": "Name of the directory containing the file for this node",
-                    "readonly": false,
-                    "type": "String"
-                }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "exitAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
-        },
-        {
-            "category": "BashShellApp",
-            "categoryType": "Application",
-            "isData": false,
-            "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#1C2833",
-            "drawOrderHint": 0,
-            "key": -16,
-            "text": "Unpack",
-            "description": "An application component run within the Bash Shell",
-            "x": 379.13024384015444,
-            "y": 465.55424394473414,
-            "width": 200,
-            "height": 72,
-            "collapsed": false,
-            "showPorts": false,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "expanded": false,
-            "readonly": false,
-            "inputPorts": [
-                {
-                    "Id": "faae21fb-87bf-4aeb-b533-0851696e7e20",
-                    "IdText": "fileObject",
-                    "event": false,
-                    "type": "String"
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "94f65e2d-df6c-49de-9ec5-cbad244765f7",
-                    "IdText": "config",
-                    "event": false,
-                    "type": "String"
-                },
-                {
-                    "Id": "01bd34a3-0bd6-4e0b-96f0-984e12d11203",
-                    "IdText": "CI_config",
-                    "event": false,
-                    "type": "String"
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Execution time",
-                    "name": "execution_time",
-                    "value": 5,
-                    "description": "Estimate of execution time (in seconds) for this application.",
-                    "readonly": false,
-                    "type": "Float"
-                },
-                {
-                    "text": "Num CPUs",
-                    "name": "num_cpus",
-                    "value": 1,
-                    "description": "Number of CPUs used for this application.",
-                    "readonly": false,
-                    "type": "Integer"
-                },
-                {
-                    "text": "Group start",
-                    "name": "group_start",
-                    "value": false,
-                    "description": "Is this node the start of a group?",
-                    "readonly": false,
-                    "type": "Boolean"
-                },
-                {
-                    "text": "Command",
-                    "name": "Arg01",
-                    "value": "tar -xf %i0 -C /tmp/.dlg/testdata && mkdir -p /tmp/.dlg/testdata/yanda && cd /tmp/.dlg/testdata/yanda && mv ../functest.in . && mv ../ci_checker.in .",
-                    "description": "The command line to be executed",
                     "readonly": false,
                     "type": "String"
                 }
@@ -1074,7 +979,7 @@
             "text": "RASCIL Checker",
             "description": "This docker app runs the casacore imgstat application on its input.",
             "x": 1198,
-            "y": 847,
+            "y": 865.6540499949457,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -1144,7 +1049,7 @@
                 {
                     "text": "Command",
                     "name": "command",
-                    "value": "cd /tmp/.dlg/testdata/yanda && python /rascil/rascil/apps/imaging_qa/imaging_qa_diagnostics.py --ingest_fitsname_restored=/tmp/.dlg/workspace/yanda/image.cont.taylor.0.restored.fits --ingest_fitsname_residual=/tmp/.dlg/workspace/yanda/residual.cont.taylor.0.fits @/tmp/.dlg/testdata/rascil/ci_checker.in",
+                    "value": "python /rascil/rascil/apps/imaging_qa_main.py --ingest_fitsname_restored=%i0 --ingest_fitsname_residual=%i1 @%i2",
                     "description": "The command line to run within the docker instance",
                     "readonly": false,
                     "type": "String"
@@ -1207,12 +1112,12 @@
             "key": -14,
             "text": "Checker config",
             "description": "",
-            "x": 834.8518434794403,
-            "y": 1008,
+            "x": 822.8518434794403,
+            "y": 858.6540499949456,
             "width": 200,
             "height": 72,
             "collapsed": false,
-            "showPorts": true,
+            "showPorts": false,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
@@ -1265,7 +1170,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "/tmp/.dlg/testdata/yanda/ci_checker.in",
+                    "value": "ci_checker.in",
                     "description": "",
                     "readonly": false,
                     "type": "Unknown"
@@ -1305,11 +1210,11 @@
             "text": "NGAS ContImg_Test.tar.gz",
             "description": "",
             "x": 218.82163848253347,
-            "y": -18.65404999494565,
+            "y": 0,
             "width": 200,
             "height": 72,
             "collapsed": false,
-            "showPorts": true,
+            "showPorts": false,
             "flipPorts": true,
             "streaming": false,
             "precious": false,
@@ -1403,7 +1308,7 @@
             "text": "Get data",
             "description": "A simple APP that copies its inputs into its outputs. All inputs are copied into all outputs in the order they were declared in the graph. If an input is a container (e.g. a directory) it copies the content recursively.",
             "x": 151.62550002166165,
-            "y": 145.0061807731743,
+            "y": 163.66023076811996,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -1478,6 +1383,101 @@
             "exitApplicationName": "",
             "exitApplicationType": "None",
             "exitApplicationKey": null
+        },
+        {
+            "category": "BashShellApp",
+            "categoryType": "Application",
+            "isData": false,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#1C2833",
+            "drawOrderHint": 0,
+            "key": -6,
+            "text": "Unpack",
+            "description": "An application component run within the Bash Shell",
+            "x": 415,
+            "y": 590,
+            "width": 200,
+            "height": 72,
+            "collapsed": false,
+            "showPorts": false,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "inputPorts": [
+                {
+                    "Id": "f8b2a49a-60a4-46a8-b118-199c92ced11a",
+                    "IdText": "fileObject",
+                    "event": false,
+                    "type": "String"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "abbc8067-381f-4ecf-a986-98f6348a65c4",
+                    "IdText": "config",
+                    "event": false,
+                    "type": "String"
+                },
+                {
+                    "Id": "2d192117-f40f-469b-808f-b1ff579bbc88",
+                    "IdText": "CI_config",
+                    "event": false,
+                    "type": "String"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Execution time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "description": "Estimate of execution time (in seconds) for this application.",
+                    "readonly": false,
+                    "type": "Float"
+                },
+                {
+                    "text": "Num CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "description": "Number of CPUs used for this application.",
+                    "readonly": false,
+                    "type": "Integer"
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean"
+                },
+                {
+                    "text": "Command",
+                    "name": "Arg01",
+                    "value": "cd `dirname %i0` && echo $PWD && tar -xvf %i0 ",
+                    "description": "The command line to be executed",
+                    "readonly": false,
+                    "type": "String"
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "exitAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "exitApplicationKey": null
         }
     ],
     "linkDataArray": [
@@ -1510,20 +1510,6 @@
             "loop_aware": "0"
         },
         {
-            "from": -16,
-            "fromPort": "94f65e2d-df6c-49de-9ec5-cbad244765f7",
-            "to": -2,
-            "toPort": "48ad7359-66ab-4d2e-ad04-3c5d4abd7047",
-            "loop_aware": "0"
-        },
-        {
-            "from": -15,
-            "fromPort": "211a479e-de29-4842-b31a-36a2bd97e042",
-            "to": -16,
-            "toPort": "faae21fb-87bf-4aeb-b533-0851696e7e20",
-            "loop_aware": "0"
-        },
-        {
             "from": -4,
             "fromPort": "cff7e896-e69f-4ade-8c59-42346b1b5b91",
             "to": -3,
@@ -1549,13 +1535,6 @@
             "fromPort": "5c78339a-2cbf-482c-9df2-7cb9bc4879e0",
             "to": -7,
             "toPort": "0cac193d-0de9-4aba-9dd5-9344081e6f36",
-            "loop_aware": "0"
-        },
-        {
-            "from": -16,
-            "fromPort": "01bd34a3-0bd6-4e0b-96f0-984e12d11203",
-            "to": -14,
-            "toPort": "c82c0355-6f0b-437a-881a-22a3eec2bfd8",
             "loop_aware": "0"
         },
         {
@@ -1591,6 +1570,27 @@
             "fromPort": "177d0c66-36dd-4a9a-8993-b0d76b77b7b6",
             "to": -15,
             "toPort": "2769aca5-365a-45c5-8b16-95b132b0a170",
+            "loop_aware": "0"
+        },
+        {
+            "from": -15,
+            "fromPort": "211a479e-de29-4842-b31a-36a2bd97e042",
+            "to": -6,
+            "toPort": "f8b2a49a-60a4-46a8-b118-199c92ced11a",
+            "loop_aware": "0"
+        },
+        {
+            "from": -6,
+            "fromPort": "abbc8067-381f-4ecf-a986-98f6348a65c4",
+            "to": -2,
+            "toPort": "48ad7359-66ab-4d2e-ad04-3c5d4abd7047",
+            "loop_aware": "0"
+        },
+        {
+            "from": -6,
+            "fromPort": "2d192117-f40f-469b-808f-b1ff579bbc88",
+            "to": -14,
+            "toPort": "c82c0355-6f0b-437a-881a-22a3eec2bfd8",
             "loop_aware": "0"
         }
     ]
