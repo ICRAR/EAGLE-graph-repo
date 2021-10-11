@@ -237,7 +237,7 @@
                 {
                     "text": "Image",
                     "name": "image",
-                    "value": "icrar/yanda_imager:0.2",
+                    "value": "icrar/yanda_imager:0.3",
                     "description": "Name of the docker image to be used for this application",
                     "readonly": false,
                     "type": "String"
@@ -245,7 +245,7 @@
                 {
                     "text": "Command",
                     "name": "command",
-                    "value": "mpirun -np 4 --allow-run-as-root imager -c %i0 && chmod -R a+w ../*",
+                    "value": "cd `dirname %i0` && mpirun -np 4 --allow-run-as-root imager -c %i0",
                     "description": "The command line to run within the docker instance",
                     "readonly": false,
                     "type": "String"
@@ -498,7 +498,7 @@
             "color": "#394BB2",
             "drawOrderHint": 0,
             "key": -3,
-            "text": "image.cont.taylor.0.restored",
+            "text": "image.cont.taylor.0.restored.fits",
             "description": "",
             "x": 834.8249278718572,
             "y": 757.2381969389677,
@@ -558,7 +558,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "image.cont.taylor.0.restored",
+                    "value": "image.cont.taylor.0.restored.fits",
                     "description": "Path to the file for this node",
                     "readonly": false,
                     "type": "String"
@@ -595,7 +595,7 @@
             "color": "#394BB2",
             "drawOrderHint": 0,
             "key": -5,
-            "text": "residual.cont.taylor.0",
+            "text": "residual.cont.taylor.0.fits",
             "description": "",
             "x": 894.8329225420771,
             "y": 631.501709495247,
@@ -655,7 +655,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "residual.cont.taylor.0",
+                    "value": "residual.cont.taylor.0.fits",
                     "description": "Path to the file for this node",
                     "readonly": false,
                     "type": "String"
@@ -1007,7 +1007,7 @@
                     "Id": "9b1a2d0e-7409-46cf-9067-992db84c7fb6",
                     "IdText": "config",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "String"
                 }
             ],
             "outputPorts": [],
@@ -1049,7 +1049,7 @@
                 {
                     "text": "Command",
                     "name": "command",
-                    "value": "python /rascil/rascil/apps/imaging_qa_main.py --ingest_fitsname_restored=%i0 --ingest_fitsname_residual=%i1 @%i2",
+                    "value": "cd `dirname %i0` && python /rascil/rascil/apps/imaging_qa_main.py --ingest_fitsname_restored=%i0 --ingest_fitsname_residual=%i1 --finder_beam_maj=0.011 --finder_beam_min=0.0072 --finder_beam_pos_angle=-0.3 --plot_source=True",
                     "description": "The command line to run within the docker instance",
                     "readonly": false,
                     "type": "String"
@@ -1129,7 +1129,7 @@
                     "Id": "c82c0355-6f0b-437a-881a-22a3eec2bfd8",
                     "IdText": "CI_config",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "String"
                 }
             ],
             "outputPorts": [
@@ -1137,7 +1137,7 @@
                     "Id": "62f79e96-51c9-4058-8ca7-676ea9b49ee9",
                     "IdText": "config",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "String"
                 }
             ],
             "inputLocalPorts": [],
@@ -1214,7 +1214,7 @@
             "width": 200,
             "height": 72,
             "collapsed": false,
-            "showPorts": false,
+            "showPorts": true,
             "flipPorts": true,
             "streaming": false,
             "precious": false,
@@ -1460,7 +1460,7 @@
                 {
                     "text": "Command",
                     "name": "Arg01",
-                    "value": "cd `dirname %i0` && echo $PWD && tar -xvf %i0 ",
+                    "value": "chmod -R a+xw `dirname %i01` && cd `dirname %i0` && echo $PWD && tar -xvf %i0 ",
                     "description": "The command line to be executed",
                     "readonly": false,
                     "type": "String"
