@@ -4,7 +4,7 @@
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "filePath": "SDP Pipelines/Yanda_Cont_Img.graph",
+        "filePath": "Yanda_Cont_Img-dev.graph",
         "sha": "",
         "git_url": "",
         "eagleVersion": "v3.0.7",
@@ -76,8 +76,8 @@
             "key": -2,
             "text": "Config",
             "description": "",
-            "x": 552.5019174374469,
-            "y": 476.66846836810936,
+            "x": 551.5019174374469,
+            "y": 474.66846836810936,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -134,7 +134,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "/tmp/.dlg/testdata/yanda/functest.in",
+                    "value": "functest.in",
                     "description": "",
                     "readonly": false,
                     "type": "Unknown"
@@ -237,7 +237,7 @@
                 {
                     "text": "Image",
                     "name": "image",
-                    "value": "icrar/yanda_imager:0.2",
+                    "value": "icrar/yanda_imager:0.3",
                     "description": "Name of the docker image to be used for this application",
                     "readonly": false,
                     "type": "String"
@@ -245,7 +245,7 @@
                 {
                     "text": "Command",
                     "name": "command",
-                    "value": "cd /tmp/.dlg/workspace/yanda && mpirun -np 4 --allow-run-as-root imager -c %i0",
+                    "value": "cd `dirname %i0` && mpirun -np 4 --allow-run-as-root imager -c %i0",
                     "description": "The command line to run within the docker instance",
                     "readonly": false,
                     "type": "String"
@@ -280,7 +280,7 @@
                     "value": "/tmp/.dlg:/tmp/.dlg",
                     "description": "Any additional bindings that should be passed through to the image",
                     "readonly": false,
-                    "type": "String"
+                    "type": ""
                 }
             ],
             "inputAppFields": [],
@@ -404,7 +404,7 @@
             "text": "imgstat QA",
             "description": "This docker app runs the casacore imgstat application on its input.",
             "x": 1181.3555741076998,
-            "y": 713.8330026048982,
+            "y": 712.8330026048982,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -816,7 +816,7 @@
             "text": "image.cont.taylor.0.restored",
             "description": "",
             "x": 946.8249278718572,
-            "y": 614.584146944022,
+            "y": 615.584146944022,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -873,7 +873,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "/tmp/.dlg/workspace/yanda/image.cont.taylor.0.restored",
+                    "value": "image.cont.taylor.0.restored",
                     "description": "Path to the file for this node",
                     "readonly": false,
                     "type": "String"
@@ -913,7 +913,7 @@
             "text": "residual.cont.taylor.0",
             "description": "",
             "x": 948.8329225420771,
-            "y": 446.84765950030135,
+            "y": 445.84765950030135,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -970,7 +970,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "/tmp/.dlg/workspace/yanda/residual.cont.taylor.0",
+                    "value": "residual.cont.taylor.0",
                     "description": "Path to the file for this node",
                     "readonly": false,
                     "type": "String"
@@ -1294,7 +1294,7 @@
             "key": -14,
             "text": "Get data",
             "description": "A simple APP that copies its inputs into its outputs. All inputs are copied into all outputs in the order they were declared in the graph. If an input is a container (e.g. a directory) it copies the content recursively.",
-            "x": 459.96123590693753,
+            "x": 458.96123590693753,
             "y": 173.1646679427606,
             "width": 200,
             "height": 72,
@@ -1441,7 +1441,7 @@
                 {
                     "text": "File path",
                     "name": "filepath",
-                    "value": "ContImg_Test.tar.gz",
+                    "value": "",
                     "description": "Path to the file for this node",
                     "readonly": false,
                     "type": "String"
@@ -1538,7 +1538,7 @@
                 {
                     "text": "Command",
                     "name": "Arg01",
-                    "value": "tar -xf %i0 -C /tmp/.dlg/testdata && mkdir -p /tmp/.dlg/testdata/yanda && cd /tmp/.dlg/testdata/yanda && mv ../functest.in .",
+                    "value": "cd `dirname %i0` && tar -xf %i0",
                     "description": "The command line to be executed",
                     "readonly": false,
                     "type": "String"
