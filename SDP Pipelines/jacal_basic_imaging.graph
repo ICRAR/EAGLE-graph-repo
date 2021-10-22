@@ -4,178 +4,89 @@
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "filePath": "SDP Pipelines/test_basic_imaging.graph",
+        "filePath": "SDP Pipelines/jacal_basic_imaging.graph",
         "sha": "",
         "git_url": "",
         "eagleVersion": "v3.0.7",
-        "eagleCommitHash": "0abd3cf5b36eb28fa935b144a6d6c321925a52a7",
+        "eagleCommitHash": "22390da0cdb583164ddab06336b9422d530733cb",
         "schemaVersion": "OJS",
         "readonly": true
     },
     "nodeDataArray": [
         {
-            "category": "DynlibApp",
-            "categoryType": "Application",
-            "isData": false,
-            "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#3470AA",
-            "drawOrderHint": 0,
-            "key": -5,
-            "text": "CalcNE",
-            "description": "",
-            "x": 148,
-            "y": 270,
-            "width": 200,
-            "height": 72,
-            "collapsed": false,
-            "showPorts": false,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "expanded": false,
-            "readonly": true,
-            "inputPorts": [
-                {
-                    "Id": "a775adcf-e2df-4161-8539-c99ef8f00ee2",
-                    "IdText": "L-L",
-                    "event": false,
-                    "type": "String"
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "9b7c7416-1ec0-4c3d-a769-b3ee30168afd",
-                    "IdText": "R-L",
-                    "event": false,
-                    "type": "String"
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Execution Time",
-                    "name": "execution_time",
-                    "value": "5",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Unknown"
-                },
-                {
-                    "text": "Group Start",
-                    "name": "group_start",
-                    "value": "0",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Unknown"
-                },
-                {
-                    "text": "Number of CPUs",
-                    "name": "num_cpus",
-                    "value": "1",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Unknown"
-                },
-                {
-                    "text": "Library Path",
-                    "name": "libpath",
-                    "value": "/home/build/jacal/libjacal.so",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Unknown"
-                },
-                {
-                    "text": "name",
-                    "name": "name",
-                    "value": "LoadVis",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String"
-                },
-                {
-                    "text": "parset_filename",
-                    "name": "parset_filename",
-                    "value": "%i0",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String"
-                }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "exitAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
-        },
-        {
-            "category": "Memory",
-            "categoryType": "Data",
+            "category": "File",
             "isData": true,
             "isGroup": false,
             "canHaveInputs": true,
             "canHaveOutputs": true,
             "color": "#394BB2",
             "drawOrderHint": 0,
-            "key": -6,
-            "text": "Normal Equation",
-            "description": "",
-            "x": 320,
-            "y": 310,
+            "key": -1,
+            "text": "Config File",
+            "description": "A standard file on a filesystem mounted to the deployment machine",
+            "x": 573.7535239497452,
+            "y": 26.879240067888787,
             "width": 200,
             "height": 72,
             "collapsed": false,
-            "showPorts": false,
+            "showPorts": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
             "expanded": false,
-            "readonly": true,
-            "inputPorts": [
-                {
-                    "Id": "01012a92-9ca1-4977-9091-c0c362cf520a",
-                    "IdText": "R-L",
-                    "event": false,
-                    "type": "String"
-                }
-            ],
+            "readonly": false,
+            "inputPorts": [],
             "outputPorts": [
                 {
-                    "Id": "951d4ef5-2f76-4f8a-95f5-5639fafff847",
-                    "IdText": "R-L",
+                    "Id": "3c11599b-27c1-42c9-8510-a3741b733815",
+                    "IdText": "Config",
                     "event": false,
-                    "type": "String"
+                    "type": "LOFAR::ParameterSet"
                 }
             ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Data Volume",
+                    "text": "Data volume",
                     "name": "data_volume",
-                    "value": "5",
-                    "description": "",
+                    "value": 5,
+                    "description": "Estimated size of the data contained in this node",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Float"
                 },
                 {
-                    "text": "Group End",
+                    "text": "Group end",
                     "name": "group_end",
-                    "value": "0",
-                    "description": "",
+                    "value": false,
+                    "description": "Is this node the end of a group?",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Boolean"
+                },
+                {
+                    "text": "Check file path exists",
+                    "name": "check_filepath_exists",
+                    "value": true,
+                    "description": "Perform a check to make sure the file path exists before proceeding with the application",
+                    "readonly": false,
+                    "type": "Boolean"
+                },
+                {
+                    "text": "File path",
+                    "name": "filepath",
+                    "value": "/tmp/.dlg/workspace/test_basic_imaging.in",
+                    "description": "Path to the file for this node",
+                    "readonly": false,
+                    "type": "String"
+                },
+                {
+                    "text": "Directory name",
+                    "name": "dirname",
+                    "value": "",
+                    "description": "Name of the directory containing the file for this node",
+                    "readonly": false,
+                    "type": "String"
                 }
             ],
             "inputAppFields": [],
@@ -193,202 +104,17 @@
         },
         {
             "category": "DynlibApp",
-            "categoryType": "Application",
             "isData": false,
             "isGroup": false,
             "canHaveInputs": true,
             "canHaveOutputs": true,
             "color": "#3470AA",
             "drawOrderHint": 0,
-            "key": -4,
-            "text": "SolveNE",
-            "description": "",
-            "x": 478,
-            "y": 370,
-            "width": 200,
-            "height": 72,
-            "collapsed": false,
-            "showPorts": false,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "expanded": false,
-            "readonly": true,
-            "inputPorts": [
-                {
-                    "Id": "3fb6a8f3-3daa-4e5b-ae6d-6793552c68bb",
-                    "IdText": "R-L",
-                    "event": false,
-                    "type": "String"
-                },
-                {
-                    "Id": "461b02a4-461d-4ed5-b2e3-9e0ae875ad95",
-                    "IdText": "B-T",
-                    "event": false,
-                    "type": "String"
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "6deed685-c17b-4fc8-a508-5cdff9186dbb",
-                    "IdText": "R-L",
-                    "event": false,
-                    "type": "String"
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Execution Time",
-                    "name": "execution_time",
-                    "value": "5",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Unknown"
-                },
-                {
-                    "text": "Group Start",
-                    "name": "group_start",
-                    "value": "0",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Unknown"
-                },
-                {
-                    "text": "Number of CPUs",
-                    "name": "num_cpus",
-                    "value": "1",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Unknown"
-                },
-                {
-                    "text": "Library Path",
-                    "name": "libpath",
-                    "value": "/home/build/jacal/libjacal.so",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String"
-                },
-                {
-                    "text": "name",
-                    "name": "name",
-                    "value": "SolveNE",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String"
-                },
-                {
-                    "text": "parset_filename",
-                    "name": "parset_filename",
-                    "value": "%i1",
-                    "description": "Pointer to config file",
-                    "readonly": false,
-                    "type": "String"
-                }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "exitAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
-        },
-        {
-            "category": "Memory",
-            "categoryType": "Data",
-            "isData": true,
-            "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
-            "drawOrderHint": 0,
-            "key": -8,
-            "text": "Solved Model",
-            "description": "",
-            "x": 646,
-            "y": 424,
-            "width": 200,
-            "height": 72,
-            "collapsed": false,
-            "showPorts": false,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "expanded": false,
-            "readonly": true,
-            "inputPorts": [
-                {
-                    "Id": "52ff41e6-8292-4023-8bed-eccd02f66dcb",
-                    "IdText": "R-L",
-                    "event": false,
-                    "type": "String"
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "05a5bf63-9e86-4d04-96c2-a569fa09efc9",
-                    "IdText": "R-L",
-                    "event": false,
-                    "type": "String"
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Data Volume",
-                    "name": "data_volume",
-                    "value": "5",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Unknown"
-                },
-                {
-                    "text": "Group End",
-                    "name": "group_end",
-                    "value": "0",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Unknown"
-                }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "exitAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
-        },
-        {
-            "category": "DynlibApp",
-            "categoryType": "Application",
-            "isData": false,
-            "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#3470AA",
-            "drawOrderHint": 0,
-            "key": -9,
+            "key": -3,
             "text": "Output Model",
             "description": "",
-            "x": 822,
-            "y": 473,
+            "x": 1396.207901137316,
+            "y": 224.684867440712,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -398,19 +124,25 @@
             "precious": false,
             "subject": null,
             "expanded": false,
-            "readonly": true,
+            "readonly": false,
             "inputPorts": [
                 {
-                    "Id": "a66d4466-1572-4351-8c24-26aac8a275cd",
-                    "IdText": "R-L",
+                    "Id": "bad68a1c-e7bc-4b24-93d0-75fc48e194c2",
+                    "IdText": "Config",
                     "event": false,
-                    "type": "String"
+                    "type": "LOFAR::ParameterSet"
                 },
                 {
-                    "Id": "0a506155-42e7-4760-aa44-ad5128551f39",
-                    "IdText": "R-T",
+                    "Id": "9c688acf-5441-4186-a6f3-1fa29c8c2552",
+                    "IdText": "Model",
                     "event": false,
-                    "type": "String"
+                    "type": "scimath::Params"
+                },
+                {
+                    "Id": "ddd699f9-d495-4fcd-be3c-a5eff6da2db4",
+                    "IdText": "Restored Model",
+                    "event": false,
+                    "type": "scimath::Params"
                 }
             ],
             "outputPorts": [],
@@ -480,19 +212,18 @@
             "exitApplicationKey": null
         },
         {
-            "category": "File",
-            "categoryType": "Data",
-            "isData": true,
+            "category": "DynlibApp",
+            "isData": false,
             "isGroup": false,
             "canHaveInputs": true,
             "canHaveOutputs": true,
-            "color": "#394BB2",
+            "color": "#3470AA",
             "drawOrderHint": 0,
-            "key": -1,
-            "text": "Config File",
-            "description": "A standard file on a filesystem mounted to the deployment machine",
-            "x": 17.335000000000036,
-            "y": 421.83500000000004,
+            "key": -2,
+            "text": "SolveNE",
+            "description": "Implements an ASKAPSoft solver. This essentially takes a NormalEquation and generates a set of params usually via a minor cycle deconvolution.\nThis takes a configuration and a set of normal equations and uses the Solver requested in in the ParameterSet to produce an ouput model.",
+            "x": 299.1353286382573,
+            "y": 331.1906494619552,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -503,67 +234,68 @@
             "subject": null,
             "expanded": false,
             "readonly": false,
-            "inputPorts": [],
+            "inputPorts": [
+                {
+                    "Id": "ed8102ff-47e4-4777-b5e6-642cabcefe14",
+                    "IdText": "Config",
+                    "event": false,
+                    "type": "LOFAR::ParameterSet"
+                },
+                {
+                    "Id": "90edb0ae-041f-45b9-9f1a-54521416817b",
+                    "IdText": "Normal",
+                    "event": false,
+                    "type": "scimath::ImagingNormalEquations"
+                }
+            ],
             "outputPorts": [
                 {
-                    "Id": "841accc1-7981-4e93-9161-3ef71a9bde00",
-                    "IdText": "L-L",
+                    "Id": "3e2f7c4f-84d7-46ad-b802-f6eff24b30f4",
+                    "IdText": "Model",
                     "event": false,
-                    "type": "String"
-                },
-                {
-                    "Id": "72c256f8-ddb5-4f74-a36e-a66eb6e7cf92",
-                    "IdText": "B-T",
-                    "event": false,
-                    "type": "String"
-                },
-                {
-                    "Id": "7eab8162-7418-43e7-98f6-aec6eefc9b86",
-                    "IdText": "R-T",
-                    "event": false,
-                    "type": "String"
+                    "type": "scimath::Params"
                 }
             ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Data volume",
-                    "name": "data_volume",
+                    "text": "Arg01",
+                    "name": "Arg01",
+                    "value": "name=SolveNE",
+                    "description": "",
+                    "readonly": true,
+                    "type": "String"
+                },
+                {
+                    "text": "Execution time",
+                    "name": "execution_time",
                     "value": 5,
-                    "description": "Estimated size of the data contained in this node",
+                    "description": "Estimated execution time",
                     "readonly": false,
                     "type": "Float"
                 },
                 {
-                    "text": "Group end",
-                    "name": "group_end",
+                    "text": "Num CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "description": "Number of cores used",
+                    "readonly": false,
+                    "type": "Integer"
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
                     "value": false,
-                    "description": "Is this node the end of a group?",
+                    "description": "Component is start of a group",
                     "readonly": false,
                     "type": "Boolean"
                 },
                 {
-                    "text": "Check file path exists",
-                    "name": "check_filepath_exists",
-                    "value": true,
-                    "description": "Perform a check to make sure the file path exists before proceeding with the application",
-                    "readonly": false,
-                    "type": "Boolean"
-                },
-                {
-                    "text": "File path",
-                    "name": "filepath",
-                    "value": "/home/jacal/test/daliuge/test_basic_imaging.in",
-                    "description": "Path to the file for this node",
-                    "readonly": false,
-                    "type": "String"
-                },
-                {
-                    "text": "Directory name",
-                    "name": "dirname",
-                    "value": "",
-                    "description": "Name of the directory containing the file for this node",
+                    "text": "Library Path",
+                    "name": "libpath",
+                    "value": "/home/build/jacal/libjacal.so",
+                    "description": "",
                     "readonly": false,
                     "type": "String"
                 }
@@ -580,56 +312,638 @@
             "exitApplicationName": "",
             "exitApplicationType": "None",
             "exitApplicationKey": null
+        },
+        {
+            "category": "Memory",
+            "isData": true,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#394BB2",
+            "drawOrderHint": 0,
+            "key": -9,
+            "text": "Normal",
+            "description": "",
+            "x": 139.12963539381934,
+            "y": 279.9711157680121,
+            "width": 200,
+            "height": 72,
+            "collapsed": false,
+            "showPorts": false,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "inputPorts": [
+                {
+                    "Id": "d5a78f91-c43a-41aa-9ea8-8ae61bdbd585",
+                    "IdText": "Normal",
+                    "event": false,
+                    "type": "scimath::ImagingNormalEquations"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "62cd658d-45af-4f7e-869d-3bde31205c5f",
+                    "IdText": "Normal",
+                    "event": false,
+                    "type": "scimath::ImagingNormalEquations"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "exitAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "exitApplicationKey": null
+        },
+        {
+            "category": "File",
+            "isData": true,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#394BB2",
+            "drawOrderHint": 0,
+            "key": -10,
+            "text": "Model",
+            "description": "",
+            "x": 478.77230356521494,
+            "y": 350.88741227350886,
+            "width": 200,
+            "height": 72,
+            "collapsed": false,
+            "showPorts": false,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "inputPorts": [
+                {
+                    "Id": "99f9d5f0-62b5-4de3-889e-0900c289a0c2",
+                    "IdText": "Model",
+                    "event": false,
+                    "type": "scimath::Params"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "fbbef037-60e3-463d-9ce9-fd68716b819f",
+                    "IdText": "Model",
+                    "event": false,
+                    "type": "scimath::Params"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "exitAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "exitApplicationKey": null
+        },
+        {
+            "category": "DynlibApp",
+            "isData": false,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#3470AA",
+            "drawOrderHint": 0,
+            "key": -4,
+            "text": "RestoreSolver",
+            "description": "Implements an ASKAPSoft Restore solver. This essentially takes a NormalEquation and a set of \"params\" and creates a restored image.\nThis takes a configuration and a set of normal equations and uses the Solver requested in in the ParameterSet to produce an ouput model.",
+            "x": 1058.9557807242786,
+            "y": 383.17443896497196,
+            "width": 200,
+            "height": 72,
+            "collapsed": false,
+            "showPorts": false,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "inputPorts": [
+                {
+                    "Id": "60eb6587-52a3-493e-9df5-678c08a5baba",
+                    "IdText": "Config",
+                    "event": false,
+                    "type": "LOFAR::ParameterSet"
+                },
+                {
+                    "Id": "062d9236-0056-4335-8150-ab9649ed48c2",
+                    "IdText": "Normal",
+                    "event": false,
+                    "type": "scimath::ImagingNormalEquations"
+                },
+                {
+                    "Id": "b5054a30-61d8-4136-bca2-0daff166a309",
+                    "IdText": "Model",
+                    "event": false,
+                    "type": "scimath::Params"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "558df11f-dbfb-4e4c-bdff-622789bdf07d",
+                    "IdText": "Restored Model",
+                    "event": false,
+                    "type": "scimath::Params"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Arg01",
+                    "name": "Arg01",
+                    "value": "name=RestoreSolver",
+                    "description": "",
+                    "readonly": true,
+                    "type": "String"
+                },
+                {
+                    "text": "Execution time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "description": "Estimated execution time",
+                    "readonly": false,
+                    "type": "Float"
+                },
+                {
+                    "text": "Num CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "description": "Number of cores used",
+                    "readonly": false,
+                    "type": "Integer"
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "description": "Component is start of a group",
+                    "readonly": false,
+                    "type": "Boolean"
+                },
+                {
+                    "text": "Library Path",
+                    "name": "libpath",
+                    "value": "/home/build/jacal/libjacal.so",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String"
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "exitAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "exitApplicationKey": null
+        },
+        {
+            "category": "Memory",
+            "isData": true,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#394BB2",
+            "drawOrderHint": 0,
+            "key": -8,
+            "text": "Normal",
+            "description": "",
+            "x": 887.5639891827976,
+            "y": 525.2443302474446,
+            "width": 200,
+            "height": 72,
+            "collapsed": false,
+            "showPorts": false,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "inputPorts": [
+                {
+                    "Id": "8f350ba1-744f-4368-9949-bfa811d2568d",
+                    "IdText": "Normal",
+                    "event": false,
+                    "type": "scimath::ImagingNormalEquations"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "bff7d020-f77b-4f2d-a45c-d474892589ec",
+                    "IdText": "Normal",
+                    "event": false,
+                    "type": "scimath::ImagingNormalEquations"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "exitAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "exitApplicationKey": null
+        },
+        {
+            "category": "DynlibApp",
+            "isData": false,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#3470AA",
+            "drawOrderHint": 0,
+            "key": -11,
+            "text": "CalcNE",
+            "description": "Calculates the Normal Equations\nThis class encorporates all the tasks to read from a measurement set; subtract a model; grid residual visibilities and FFT the grid",
+            "x": 0,
+            "y": 184.4936293583582,
+            "width": 200,
+            "height": 72,
+            "collapsed": false,
+            "showPorts": false,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "inputPorts": [
+                {
+                    "Id": "d2fab2d8-4a86-40e1-81a5-ec2cec70aab6",
+                    "IdText": "Config",
+                    "event": false,
+                    "type": "LOFAR::ParameterSet"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "34dbc649-0ff3-4ab6-8c91-3b890e0ee36b",
+                    "IdText": "Normal",
+                    "event": false,
+                    "type": "scimath::ImagingNormalEquations"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Library Path",
+                    "name": "libpath",
+                    "value": "/home/build/jacal/libjacal.so",
+                    "description": "The path to the JACAL library",
+                    "readonly": true,
+                    "type": "String"
+                },
+                {
+                    "text": "Arg01",
+                    "name": "Arg01",
+                    "value": "name=CalcNE",
+                    "description": "",
+                    "readonly": true,
+                    "type": "String"
+                },
+                {
+                    "text": "Execution time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "description": "Estimated execution time",
+                    "readonly": false,
+                    "type": "Float"
+                },
+                {
+                    "text": "Num CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "description": "Number of cores used",
+                    "readonly": false,
+                    "type": "Integer"
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "description": "Component is start of a group",
+                    "readonly": false,
+                    "type": "Boolean"
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "exitAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "exitApplicationKey": null
+        },
+        {
+            "category": "DynlibApp",
+            "isData": false,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#3470AA",
+            "drawOrderHint": 0,
+            "key": -7,
+            "text": "CalcNE",
+            "description": "Calculates the Normal Equations\nThis class encorporates all the tasks to read from a measurement set; subtract a model; grid residual visibilities and FFT the grid",
+            "x": 680.7606622415503,
+            "y": 519.9984740978105,
+            "width": 200,
+            "height": 72,
+            "collapsed": false,
+            "showPorts": false,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "inputPorts": [
+                {
+                    "Id": "bc376e09-e758-4846-9ed7-a3cb3704909a",
+                    "IdText": "Config",
+                    "event": false,
+                    "type": "LOFAR::ParameterSet"
+                },
+                {
+                    "Id": "c5392bf4-bac0-42be-883c-195ea10317a1",
+                    "IdText": "Model",
+                    "event": false,
+                    "type": "scimath::Params"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "5417c224-0f84-440a-8ce0-ca7c5eb647bc",
+                    "IdText": "Normal",
+                    "event": false,
+                    "type": "scimath::ImagingNormalEquations"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Library Path",
+                    "name": "libpath",
+                    "value": "/home/build/jacal/libjacal.so",
+                    "description": "The path to the JACAL library",
+                    "readonly": true,
+                    "type": "String"
+                },
+                {
+                    "text": "Arg01",
+                    "name": "Arg01",
+                    "value": "name=CalcNE",
+                    "description": "",
+                    "readonly": true,
+                    "type": "String"
+                },
+                {
+                    "text": "Execution time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "description": "Estimated execution time",
+                    "readonly": false,
+                    "type": "Float"
+                },
+                {
+                    "text": "Num CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "description": "Number of cores used",
+                    "readonly": false,
+                    "type": "Integer"
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "description": "Component is start of a group",
+                    "readonly": false,
+                    "type": "Boolean"
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "exitAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "exitApplicationKey": null
+        },
+        {
+            "category": "Memory",
+            "isData": true,
+            "isGroup": false,
+            "canHaveInputs": true,
+            "canHaveOutputs": true,
+            "color": "#394BB2",
+            "drawOrderHint": 0,
+            "key": -5,
+            "text": "Restored Model",
+            "description": "",
+            "x": 1223.5818409307974,
+            "y": 323.92965320284196,
+            "width": 200,
+            "height": 72,
+            "collapsed": false,
+            "showPorts": false,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "inputPorts": [
+                {
+                    "Id": "b1504a32-5f69-471d-b65c-b8125985044e",
+                    "IdText": "Restored Model",
+                    "event": false,
+                    "type": "scimath::Params"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "e6e52165-9536-41b3-bded-bdb465530c4b",
+                    "IdText": "Restored Model",
+                    "event": false,
+                    "type": "scimath::Params"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "exitAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "exitApplicationName": "",
+            "exitApplicationType": "None",
+            "exitApplicationKey": null
         }
     ],
     "linkDataArray": [
         {
-            "from": -5,
-            "fromPort": "9b7c7416-1ec0-4c3d-a769-b3ee30168afd",
-            "to": -6,
-            "toPort": "01012a92-9ca1-4977-9091-c0c362cf520a",
+            "from": -1,
+            "fromPort": "3c11599b-27c1-42c9-8510-a3741b733815",
+            "to": -3,
+            "toPort": "bad68a1c-e7bc-4b24-93d0-75fc48e194c2",
             "loop_aware": "0"
         },
         {
-            "from": -4,
-            "fromPort": "6deed685-c17b-4fc8-a508-5cdff9186dbb",
-            "to": -8,
-            "toPort": "52ff41e6-8292-4023-8bed-eccd02f66dcb",
+            "from": -1,
+            "fromPort": "3c11599b-27c1-42c9-8510-a3741b733815",
+            "to": -2,
+            "toPort": "ed8102ff-47e4-4777-b5e6-642cabcefe14",
             "loop_aware": "0"
         },
         {
-            "from": -6,
-            "fromPort": "951d4ef5-2f76-4f8a-95f5-5639fafff847",
+            "from": -9,
+            "fromPort": "62cd658d-45af-4f7e-869d-3bde31205c5f",
+            "to": -2,
+            "toPort": "90edb0ae-041f-45b9-9f1a-54521416817b",
+            "loop_aware": "0"
+        },
+        {
+            "from": -2,
+            "fromPort": "3e2f7c4f-84d7-46ad-b802-f6eff24b30f4",
+            "to": -10,
+            "toPort": "99f9d5f0-62b5-4de3-889e-0900c289a0c2",
+            "loop_aware": "0"
+        },
+        {
+            "from": -1,
+            "fromPort": "3c11599b-27c1-42c9-8510-a3741b733815",
             "to": -4,
-            "toPort": "3fb6a8f3-3daa-4e5b-ae6d-6793552c68bb",
+            "toPort": "60eb6587-52a3-493e-9df5-678c08a5baba",
+            "loop_aware": "0"
+        },
+        {
+            "from": -10,
+            "fromPort": "fbbef037-60e3-463d-9ce9-fd68716b819f",
+            "to": -4,
+            "toPort": "b5054a30-61d8-4136-bca2-0daff166a309",
             "loop_aware": "0"
         },
         {
             "from": -8,
-            "fromPort": "05a5bf63-9e86-4d04-96c2-a569fa09efc9",
-            "to": -9,
-            "toPort": "a66d4466-1572-4351-8c24-26aac8a275cd",
-            "loop_aware": "0"
-        },
-        {
-            "from": -1,
-            "fromPort": "841accc1-7981-4e93-9161-3ef71a9bde00",
-            "to": -5,
-            "toPort": "a775adcf-e2df-4161-8539-c99ef8f00ee2",
-            "loop_aware": "0"
-        },
-        {
-            "from": -1,
-            "fromPort": "72c256f8-ddb5-4f74-a36e-a66eb6e7cf92",
+            "fromPort": "bff7d020-f77b-4f2d-a45c-d474892589ec",
             "to": -4,
-            "toPort": "461b02a4-461d-4ed5-b2e3-9e0ae875ad95",
+            "toPort": "062d9236-0056-4335-8150-ab9649ed48c2",
             "loop_aware": "0"
         },
         {
             "from": -1,
-            "fromPort": "7eab8162-7418-43e7-98f6-aec6eefc9b86",
+            "fromPort": "3c11599b-27c1-42c9-8510-a3741b733815",
+            "to": -11,
+            "toPort": "d2fab2d8-4a86-40e1-81a5-ec2cec70aab6",
+            "loop_aware": "0"
+        },
+        {
+            "from": -11,
+            "fromPort": "34dbc649-0ff3-4ab6-8c91-3b890e0ee36b",
             "to": -9,
-            "toPort": "0a506155-42e7-4760-aa44-ad5128551f39",
+            "toPort": "d5a78f91-c43a-41aa-9ea8-8ae61bdbd585",
+            "loop_aware": "0"
+        },
+        {
+            "from": -1,
+            "fromPort": "3c11599b-27c1-42c9-8510-a3741b733815",
+            "to": -7,
+            "toPort": "bc376e09-e758-4846-9ed7-a3cb3704909a",
+            "loop_aware": "0"
+        },
+        {
+            "from": -10,
+            "fromPort": "fbbef037-60e3-463d-9ce9-fd68716b819f",
+            "to": -7,
+            "toPort": "c5392bf4-bac0-42be-883c-195ea10317a1",
+            "loop_aware": "0"
+        },
+        {
+            "from": -7,
+            "fromPort": "5417c224-0f84-440a-8ce0-ca7c5eb647bc",
+            "to": -8,
+            "toPort": "8f350ba1-744f-4368-9949-bfa811d2568d",
+            "loop_aware": "0"
+        },
+        {
+            "from": -10,
+            "fromPort": "fbbef037-60e3-463d-9ce9-fd68716b819f",
+            "to": -3,
+            "toPort": "9c688acf-5441-4186-a6f3-1fa29c8c2552",
+            "loop_aware": "0"
+        },
+        {
+            "from": -4,
+            "fromPort": "558df11f-dbfb-4e4c-bdff-622789bdf07d",
+            "to": -5,
+            "toPort": "b1504a32-5f69-471d-b65c-b8125985044e",
+            "loop_aware": "0"
+        },
+        {
+            "from": -5,
+            "fromPort": "e6e52165-9536-41b3-bded-bdb465530c4b",
+            "to": -3,
+            "toPort": "ddd699f9-d495-4fcd-be3c-a5eff6da2db4",
             "loop_aware": "0"
         }
     ]
