@@ -8,7 +8,7 @@
         "sha": "",
         "git_url": "",
         "eagleVersion": "v3.2.0",
-        "eagleCommitHash": "12c7792d06b4408b43647bb764b03616eab8dd8a",
+        "eagleCommitHash": "15a22539459213ba0e5421ea97c09173dc975316",
         "schemaVersion": "OJS",
         "readonly": true
     },
@@ -24,11 +24,11 @@
             "key": -1,
             "text": "Description",
             "description": "",
-            "x": 392.61464198071883,
-            "y": 25.11521521288031,
+            "x": 378.61464198071883,
+            "y": 55.115215212880315,
             "width": 203.32409704359478,
             "height": 138.7811321752724,
-            "collapsed": true,
+            "collapsed": false,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
@@ -45,7 +45,7 @@
                 {
                     "text": "",
                     "name": "",
-                    "value": "This pattern shows a branch construct. NOTE: Branches are still work in progress and will not work as desired in the execution engine. This graph will also be used to guide and test the further implementation.",
+                    "value": "Graph example demonstrating how to construct a graph and develop the associated code for a branchApp that is actually making a decision based on some input and passing along some output to the correct branch.\n",
                     "description": "",
                     "readonly": false,
                     "type": "Unknown"
@@ -73,13 +73,13 @@
             "color": "rgb(88 167 94)",
             "drawOrderHint": 0,
             "key": -2,
-            "text": "Branch",
+            "text": "mean < 0.5",
             "description": "A conditional branch to control flow.",
-            "x": 707,
+            "x": 708,
             "y": 360,
             "width": 200,
             "height": 72,
-            "collapsed": true,
+            "collapsed": false,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
@@ -102,18 +102,18 @@
                 {
                     "Id": "aaa06365-563e-4d9a-95ec-99effbcd4b5a",
                     "IdText": "Y",
-                    "text": "",
+                    "text": "Y",
                     "event": false,
-                    "type": "String",
-                    "description": ""
+                    "type": "float",
+                    "description": "Port carrying the mean value of the array if mean < 0.5"
                 },
                 {
                     "Id": "9936b611-99c7-469d-901f-1dd060faf239",
                     "IdText": "N",
-                    "text": "",
+                    "text": "N",
                     "event": false,
-                    "type": "String",
-                    "description": ""
+                    "type": "float",
+                    "description": "Port carrying the mean value of the array if mean >= 0.5"
                 }
             ],
             "inputLocalPorts": [],
@@ -292,8 +292,8 @@
             "key": -5,
             "text": "Memory",
             "description": "In-memory storage of intermediate data products",
-            "x": 549.3166684521676,
-            "y": 323.1026132077936,
+            "x": 575.3166684521676,
+            "y": 303.1026132077936,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -367,10 +367,10 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -3,
-            "text": "File",
+            "text": "Mean value",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "x": 985.2948519078232,
-            "y": 386.71467696337095,
+            "x": 919.2948519078232,
+            "y": 497.71467696337095,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -384,12 +384,12 @@
             "sha": "",
             "inputPorts": [
                 {
-                    "Id": "68d06d64-3c4a-4577-b5c0-54aeebfe4f33",
-                    "IdText": "N",
-                    "text": "",
+                    "Id": "39798450-9576-4c77-b9f8-faf149cb493d",
+                    "IdText": "Y",
+                    "text": "Y",
                     "event": false,
-                    "type": "String",
-                    "description": ""
+                    "type": "float",
+                    "description": "Port carrying the mean value of the array if mean < 0.5"
                 }
             ],
             "outputPorts": [],
@@ -459,10 +459,10 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -4,
-            "text": "File",
+            "text": "Mean value",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "x": 916.2948519078232,
-            "y": 523.714676963371,
+            "x": 961.2948519078232,
+            "y": 389.71467696337095,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -476,12 +476,12 @@
             "sha": "",
             "inputPorts": [
                 {
-                    "Id": "b740e062-aeb1-4244-b39b-3ebfae28b59d",
-                    "IdText": "Y",
-                    "text": "",
+                    "Id": "ae868cbe-bafd-424e-8295-0cf1bba85fd2",
+                    "IdText": "N",
+                    "text": "N",
                     "event": false,
-                    "type": "String",
-                    "description": ""
+                    "type": "float",
+                    "description": "Port carrying the mean value of the array if mean >= 0.5"
                 }
             ],
             "outputPorts": [],
@@ -560,16 +560,16 @@
         },
         {
             "from": -2,
-            "fromPort": "9936b611-99c7-469d-901f-1dd060faf239",
+            "fromPort": "aaa06365-563e-4d9a-95ec-99effbcd4b5a",
             "to": -3,
-            "toPort": "68d06d64-3c4a-4577-b5c0-54aeebfe4f33",
+            "toPort": "39798450-9576-4c77-b9f8-faf149cb493d",
             "loop_aware": "0"
         },
         {
             "from": -2,
-            "fromPort": "aaa06365-563e-4d9a-95ec-99effbcd4b5a",
+            "fromPort": "9936b611-99c7-469d-901f-1dd060faf239",
             "to": -4,
-            "toPort": "b740e062-aeb1-4244-b39b-3ebfae28b59d",
+            "toPort": "ae868cbe-bafd-424e-8295-0cf1bba85fd2",
             "loop_aware": "0"
         }
     ]
