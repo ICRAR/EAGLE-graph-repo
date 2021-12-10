@@ -1,0 +1,352 @@
+{
+    "modelData": {
+        "fileType": "Palette",
+        "repoService": "GitHub",
+        "repoBranch": "master",
+        "repo": "ICRAR/EAGLE-graph-repo",
+        "filePath": "jq.palette",
+        "eagleVersion": "v4.1.0",
+        "eagleCommitHash": "cc930b7db7009d7583f03694b2720b69a08491c9",
+        "schemaVersion": "Unknown",
+        "readonly": false,
+        "sha": "",
+        "gitUrl": "",
+        "lastModifiedName": "",
+        "lastModifiedEmail": "",
+        "lastModifiedDatetime": ""
+    },
+    "nodeDataArray": [
+        {
+            "category": "Docker",
+            "key": -1,
+            "text": "jq",
+            "description": "Small little container packing the very powerful jq command-line JSON processor. \nThe specific command in this example extracts the relevant tags from a EAGLE palette into a new palette file.",
+            "streaming": false,
+            "precious": false,
+            "git_url": "",
+            "sha": "",
+            "inputPorts": [
+                {
+                    "Id": "cc278d55-c5cf-4409-be92-fa48774059c2",
+                    "IdText": "content",
+                    "text": "Content",
+                    "event": false,
+                    "type": "String",
+                    "description": " The port carrying the content read from the URL."
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "42b2a2dd-fe39-40bd-bb24-150b9a7c14cc",
+                    "IdText": "content",
+                    "text": "Content",
+                    "event": false,
+                    "type": "String",
+                    "description": " The port carrying the content read from the URL."
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Execution time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimate of execution time (in seconds) for this application.",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false
+                },
+                {
+                    "text": "Num CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "1",
+                    "description": "Number of CPUs used for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false
+                },
+                {
+                    "text": "Image",
+                    "name": "image",
+                    "value": "icrar/jq:0.4",
+                    "defaultValue": "icrar/",
+                    "description": "The name of the docker image to be used for this application",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false
+                },
+                {
+                    "text": "Tag",
+                    "name": "tag",
+                    "value": "",
+                    "defaultValue": "1.0",
+                    "description": "The tag of the docker image to be used for this application",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false
+                },
+                {
+                    "text": "Digest",
+                    "name": "digest",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "The hexadecimal hash (long version) of the docker image to be used for this application",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false
+                },
+                {
+                    "text": "Command",
+                    "name": "command",
+                    "value": "/usr/bin/jq 'delpaths([paths|select(.[-1]|strings|startswith(\"output\") or startswith(\"input\") or startswith(\"exit\") or test([\"^y$|^x$|height|width|flipPorts|collapsed|color|drawOrderHint|expanded|subject\"]))])' %i0> %o0",
+                    "defaultValue": "",
+                    "description": "The command line to run within the docker instance. The specified command will be executed in a bash shell. That means that images will need a bash shell.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false
+                },
+                {
+                    "text": "User",
+                    "name": "user",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Username of the user who will run the application within the docker image",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false
+                },
+                {
+                    "text": "Ensure User And Switch",
+                    "name": "ensureUserAndSwitch",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Make sure the user specified in the User parameter exists and then run the docker container as that user",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false
+                },
+                {
+                    "text": "Remove Container",
+                    "name": "removeContainer",
+                    "value": true,
+                    "defaultValue": "true",
+                    "description": "Instruct Docker engine to delete the container after execution is complete",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false
+                },
+                {
+                    "text": "Additional Bindings",
+                    "name": "additionalBindings",
+                    "value": "/tmp/.dlg:/tmp/.dlg",
+                    "defaultValue": "",
+                    "description": "Directories which will be visible inside the container during run-time. Format is srcdir_on_host:trgtdir_on_container. Multiple entries can be separated by commas.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false
+                },
+                {
+                    "text": "Port Mappings",
+                    "name": "portMappings",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Port mappings on the host machine",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false
+                }
+            ],
+            "applicationParams": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null
+        },
+        {
+            "category": "File",
+            "key": -2,
+            "text": "Output Palette File",
+            "description": "A standard file on a filesystem mounted to the deployment machine",
+            "streaming": false,
+            "precious": false,
+            "git_url": "",
+            "sha": "",
+            "inputPorts": [
+                {
+                    "Id": "5d0a0862-fff2-4409-8cec-a8f38f979b9b",
+                    "IdText": "content",
+                    "text": "Content",
+                    "event": false,
+                    "type": "String",
+                    "description": " The port carrying the content read from the URL."
+                }
+            ],
+            "outputPorts": [],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false
+                },
+                {
+                    "text": "Check file path exists",
+                    "name": "check_filepath_exists",
+                    "value": true,
+                    "defaultValue": "true",
+                    "description": "Perform a check to make sure the file path exists before proceeding with the application",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false
+                },
+                {
+                    "text": "File path",
+                    "name": "filepath",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Path to the file for this node",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false
+                },
+                {
+                    "text": "Directory name",
+                    "name": "dirname",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Name of the directory containing the file for this node",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false
+                }
+            ],
+            "applicationParams": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null
+        },
+        {
+            "category": "File",
+            "key": -3,
+            "text": "Input Palette File",
+            "description": "A standard file on a filesystem mounted to the deployment machine",
+            "streaming": false,
+            "precious": false,
+            "git_url": "",
+            "sha": "",
+            "inputPorts": [],
+            "outputPorts": [
+                {
+                    "Id": "6f3fbfa0-a7da-467b-be30-122193704d88",
+                    "IdText": "content",
+                    "text": "Content",
+                    "event": false,
+                    "type": "String",
+                    "description": " The port carrying the content read from the URL."
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false
+                },
+                {
+                    "text": "Check file path exists",
+                    "name": "check_filepath_exists",
+                    "value": true,
+                    "defaultValue": "true",
+                    "description": "Perform a check to make sure the file path exists before proceeding with the application",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false
+                },
+                {
+                    "text": "File path",
+                    "name": "filepath",
+                    "value": "/tmp/.dlg/testdata/test.palette",
+                    "defaultValue": "",
+                    "description": "Path to the file for this node",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false
+                },
+                {
+                    "text": "Directory name",
+                    "name": "dirname",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Name of the directory containing the file for this node",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false
+                }
+            ],
+            "applicationParams": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null
+        }
+    ],
+    "linkDataArray": []
+}
