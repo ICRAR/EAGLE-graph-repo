@@ -1,0 +1,585 @@
+{
+    "modelData": {
+        "fileType": "Graph",
+        "repoService": "GitHub",
+        "repoBranch": "master",
+        "repo": "ICRAR/EAGLE-graph-repo",
+        "filePath": "FileCollector.graph",
+        "eagleVersion": "v4.1.0",
+        "eagleCommitHash": "cc930b7db7009d7583f03694b2720b69a08491c9",
+        "schemaVersion": "OJS",
+        "readonly": true,
+        "sha": "",
+        "gitUrl": "",
+        "lastModifiedName": "",
+        "lastModifiedEmail": "",
+        "lastModifiedDatetime": ""
+    },
+    "nodeDataArray": [
+        {
+            "category": "Memory",
+            "isGroup": false,
+            "color": "#2c2c2c",
+            "drawOrderHint": 0,
+            "key": -5,
+            "text": "array",
+            "description": "In-memory storage of intermediate data products",
+            "x": 731.3293254308712,
+            "y": 84.98570934253135,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": true,
+            "git_url": "",
+            "sha": "",
+            "inputPorts": [
+                {
+                    "Id": "81c00bd2-7403-4b6b-85c9-bfc1d308eeda",
+                    "IdText": "array",
+                    "text": "list of strings",
+                    "event": false,
+                    "type": "array",
+                    "description": "Port carrying list of files found"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "9d2e1b95-c1d6-4190-842a-9e2f0d078336",
+                    "IdText": "rest_array",
+                    "text": "rest_array",
+                    "event": false,
+                    "type": "array",
+                    "description": " Port for the rest of the array"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false
+                }
+            ],
+            "applicationParams": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null
+        },
+        {
+            "category": "Loop",
+            "isGroup": true,
+            "color": "rgb(221, 173, 0)",
+            "drawOrderHint": 0,
+            "key": -2,
+            "text": "Loop",
+            "description": "Components inside a Loop will be repeatedly executed for a fixed number of times",
+            "x": 974.6093184142263,
+            "y": 73.80109322242635,
+            "width": 257.8885102782422,
+            "height": 286.7325143112259,
+            "collapsed": false,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "git_url": "",
+            "sha": "",
+            "inputPorts": [],
+            "outputPorts": [],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Number loops",
+                    "name": "num_of_iter",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "The number of iterations performed by this loop construct",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false
+                }
+            ],
+            "applicationParams": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null
+        },
+        {
+            "category": "PythonApp",
+            "isGroup": false,
+            "color": "#0059a5",
+            "drawOrderHint": 0,
+            "key": -3,
+            "text": "PickOne",
+            "description": "App that picks the first element of an input list, passes that to all outputs, except the first one. The first output is used to pass the remaining array on. This app is useful for a loop.",
+            "x": 935.7381548135021,
+            "y": 157.5015563175019,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "git_url": "",
+            "sha": "",
+            "group": -2,
+            "inputPorts": [
+                {
+                    "Id": "055cdf24-e209-408c-86ac-cf769737a366",
+                    "IdText": "rest_array",
+                    "text": "rest_array",
+                    "event": false,
+                    "type": "array",
+                    "description": " Port for the rest of the array"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "0872a97e-076f-458e-85f2-fdd4cd3e75a5",
+                    "IdText": "rest_array",
+                    "text": "rest_array",
+                    "event": false,
+                    "type": "array",
+                    "description": " Port for the rest of the array"
+                },
+                {
+                    "Id": "bd47bacb-cfcc-48c7-8f72-c32e02d631da",
+                    "IdText": "data",
+                    "text": "Data",
+                    "event": false,
+                    "type": "String",
+                    "description": ""
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Execution time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimate of execution time (in seconds) for this application.",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false
+                },
+                {
+                    "text": "Num CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "1",
+                    "description": "Number of CPUs used for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false
+                },
+                {
+                    "text": "Appclass",
+                    "name": "appclass",
+                    "value": "daliuge_component_examples.appComponents.PickOne",
+                    "defaultValue": "daliuge_component_examples.appComponents.PickOne",
+                    "description": "The python class that implements this application",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": true,
+                    "defaultValue": "false",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false
+                }
+            ],
+            "applicationParams": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null
+        },
+        {
+            "category": "File",
+            "isGroup": false,
+            "color": "#2c2c2c",
+            "drawOrderHint": 0,
+            "key": -4,
+            "text": "File",
+            "description": "A standard file on a filesystem mounted to the deployment machine",
+            "x": 1029.405439816895,
+            "y": 233.01561734144477,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "git_url": "",
+            "sha": "",
+            "group": -2,
+            "inputPorts": [
+                {
+                    "Id": "2bc074ad-386d-40a6-a997-69668774646e",
+                    "IdText": "data",
+                    "text": "Data",
+                    "event": false,
+                    "type": "String",
+                    "description": ""
+                }
+            ],
+            "outputPorts": [],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false
+                },
+                {
+                    "text": "Check file path exists",
+                    "name": "check_filepath_exists",
+                    "value": true,
+                    "defaultValue": "true",
+                    "description": "Perform a check to make sure the file path exists before proceeding with the application",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false
+                },
+                {
+                    "text": "File path",
+                    "name": "filepath",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Path to the file for this node",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false
+                },
+                {
+                    "text": "Directory name",
+                    "name": "dirname",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Name of the directory containing the file for this node",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false
+                }
+            ],
+            "applicationParams": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null
+        },
+        {
+            "category": "Memory",
+            "isGroup": false,
+            "color": "#2c2c2c",
+            "drawOrderHint": 0,
+            "key": -6,
+            "text": "array",
+            "description": "In-memory storage of intermediate data products",
+            "x": 1067.8859374545123,
+            "y": 152.26775498564442,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "git_url": "",
+            "sha": "",
+            "group": -2,
+            "inputPorts": [
+                {
+                    "Id": "19fe74fd-827a-4c43-b1be-a48dcd2b75d2",
+                    "IdText": "rest_array",
+                    "text": "rest_array",
+                    "event": false,
+                    "type": "array",
+                    "description": " Port for the input array(s)"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "46ebbd1a-a092-442a-b096-ad025df480b9",
+                    "IdText": "array",
+                    "text": "list of strings",
+                    "event": false,
+                    "type": "array",
+                    "description": "Port carrying list of files found"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": true,
+                    "defaultValue": "false",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false
+                }
+            ],
+            "applicationParams": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null
+        },
+        {
+            "category": "PythonApp",
+            "isGroup": false,
+            "color": "#0059a5",
+            "drawOrderHint": 0,
+            "key": -1,
+            "text": "RandomArrayApp",
+            "description": "A testing APP that does not take any input and produces a random array of type int64, if integer is set to True, else of type float64. size indicates the number of elements ranging between the values low and high. The resulting array will be send to all connected output apps. \ninteger: bool [True], generate integer array low: float, lower boundary (will be converted to int for integer arrays) high: float, upper boundary (will be converted to int for integer arrays) size: int, number of array elements",
+            "x": 512.1338192364726,
+            "y": 44.843415320154634,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "git_url": "https://github.com/ICRAR/daliuge.git",
+            "sha": "4f6a67ca",
+            "inputPorts": [],
+            "outputPorts": [
+                {
+                    "Id": "fb4ad016-a5cc-43e0-8272-9cf894ea4687",
+                    "IdText": "array",
+                    "text": "Array",
+                    "event": false,
+                    "type": "Array",
+                    "description": " Port carrying the averaged array"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Size",
+                    "name": "size",
+                    "value": 10,
+                    "defaultValue": "100",
+                    "description": "The size of the array",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false
+                },
+                {
+                    "text": "Integer",
+                    "name": "integer",
+                    "value": true,
+                    "defaultValue": "True",
+                    "description": "Generate integer array?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false
+                },
+                {
+                    "text": "Low",
+                    "name": "low",
+                    "value": "0",
+                    "defaultValue": "0",
+                    "description": "Low value of range in array [inclusive]",
+                    "readonly": false,
+                    "type": "float",
+                    "precious": false
+                },
+                {
+                    "text": "High",
+                    "name": "high",
+                    "value": "100",
+                    "defaultValue": "1",
+                    "description": "High value of range of array [exclusive]",
+                    "readonly": false,
+                    "type": "float",
+                    "precious": false
+                },
+                {
+                    "text": "Application class",
+                    "name": "appclass",
+                    "value": "dlg.apps.simple.RandomArrayApp",
+                    "defaultValue": "dlg.apps.simple.RandomArrayApp",
+                    "description": "Application class",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false
+                },
+                {
+                    "text": "Execution time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimated execution time",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false
+                },
+                {
+                    "text": "Num CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "1",
+                    "description": "Number of cores used",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Component is start of a group",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false
+                }
+            ],
+            "applicationParams": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null
+        }
+    ],
+    "linkDataArray": [
+        {
+            "from": -3,
+            "fromPort": "bd47bacb-cfcc-48c7-8f72-c32e02d631da",
+            "to": -4,
+            "toPort": "2bc074ad-386d-40a6-a997-69668774646e",
+            "loop_aware": "0"
+        },
+        {
+            "from": -3,
+            "fromPort": "0872a97e-076f-458e-85f2-fdd4cd3e75a5",
+            "to": -6,
+            "toPort": "19fe74fd-827a-4c43-b1be-a48dcd2b75d2",
+            "loop_aware": "0"
+        },
+        {
+            "from": -1,
+            "fromPort": "fb4ad016-a5cc-43e0-8272-9cf894ea4687",
+            "to": -5,
+            "toPort": "81c00bd2-7403-4b6b-85c9-bfc1d308eeda",
+            "loop_aware": "0"
+        },
+        {
+            "from": -5,
+            "fromPort": "9d2e1b95-c1d6-4190-842a-9e2f0d078336",
+            "to": -3,
+            "toPort": "055cdf24-e209-408c-86ac-cf769737a366",
+            "loop_aware": "1"
+        }
+    ]
+}
