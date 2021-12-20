@@ -5,22 +5,21 @@
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
         "filePath": "SDP Pipelines/RascilImagerTest.graph",
-        "sha": "",
-        "git_url": "",
-        "eagleVersion": "v3.0.7",
-        "eagleCommitHash": "0abd3cf5b36eb28fa935b144a6d6c321925a52a7",
+        "eagleVersion": "v4.1.0:eagle-587",
+        "eagleCommitHash": "6519a768c2c596d08a8b6802285086bad2a991f9",
         "schemaVersion": "OJS",
-        "readonly": true
+        "readonly": true,
+        "sha": "",
+        "gitUrl": "",
+        "lastModifiedName": "",
+        "lastModifiedEmail": "",
+        "lastModifiedDatetime": ""
     },
     "nodeDataArray": [
         {
             "category": "File",
-            "categoryType": "Data",
-            "isData": true,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
+            "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -2,
             "text": "Imager config",
@@ -29,28 +28,33 @@
             "y": 378.46734461343516,
             "width": 200,
             "height": 72,
-            "collapsed": false,
-            "showPorts": false,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [
                 {
                     "Id": "48ad7359-66ab-4d2e-ad04-3c5d4abd7047",
                     "IdText": "config",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "5fe7e0da-d881-495e-acfb-1d3539cd46c8",
                     "IdText": "config",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -60,64 +64,67 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": "5",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "precious": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": "0",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "precious": false
                 },
                 {
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": false,
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 },
                 {
                     "text": "File path",
                     "name": "filepath",
                     "value": "/tmp/.dlg/testdata/rascil/rascil_imager.in",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "precious": false
                 },
                 {
                     "text": "Directory name",
                     "name": "dirname",
                     "value": "",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "Docker",
-            "categoryType": "Application",
-            "isData": false,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#331C54",
+            "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -3,
             "text": "rascil_imager",
@@ -126,34 +133,41 @@
             "y": 374.94182667713096,
             "width": 200,
             "height": 72,
-            "collapsed": false,
-            "showPorts": false,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [
                 {
                     "Id": "2bd70c65-e0d5-443a-9d64-46724b140491",
                     "IdText": "config",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "856d6067-8634-4b8d-ab51-23e55ba6df14",
                     "IdText": "restored_image",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 },
                 {
                     "Id": "d6b22102-d556-4a1c-b610-b4a9801ea769",
                     "IdText": "residual_image",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -163,96 +177,107 @@
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimate of execution time (in seconds) for this application.",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
+                    "defaultValue": "",
                     "description": "Number of CPUs used for this application.",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Is this node the start of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 },
                 {
                     "text": "Image",
                     "name": "image",
-                    "value": "nexus.engageska-portugal.pt/rascil-docker/rascil-full:latest",
+                    "value": "artefact.skatelescope.org/rascil-imaging-qa:0.5.0 ",
+                    "defaultValue": "",
                     "description": "Name of the docker image to be used for this application",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 },
                 {
                     "text": "Command",
                     "name": "command",
-                    "value": "cd /tmp/.dlg/testdata/rascil && python $RASCIL/rascil/apps/rascil_imager.py @%i0",
+                    "value": "cd /tmp/dlg/testdata/rascil && python $RASCIL/rascil/apps/rascil_imager.py @%i0",
+                    "defaultValue": "",
                     "description": "The command line to run within the docker instance",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 },
                 {
                     "text": "User",
                     "name": "user",
                     "value": "",
+                    "defaultValue": "",
                     "description": "Username of the user who will run the application within the docker image",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 },
                 {
                     "text": "Ensure User And Switch",
                     "name": "ensureUserAndSwitch",
                     "value": 0,
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 },
                 {
                     "text": "Remove Container",
                     "name": "removeContainer",
                     "value": 1,
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 },
                 {
                     "text": "Additional Bindings",
                     "name": "additionalBindings",
-                    "value": "/tmp/.dlg:/tmp/.dlg",
+                    "value": "/tmp/dlg:/tmp/dlg",
+                    "defaultValue": "",
                     "description": "Any additional bindings that should be passed through to the image",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "BashShellApp",
-            "categoryType": "Application",
-            "isData": false,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#1C2833",
+            "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -4,
             "text": "Pack results",
@@ -261,28 +286,33 @@
             "y": 420.9639258299294,
             "width": 200,
             "height": 72,
-            "collapsed": false,
-            "showPorts": false,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [
                 {
                     "Id": "06f0e0d2-1f01-45aa-8625-d78b30b5e4ef",
                     "IdText": "event",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "51c774e6-d9cb-4ce1-8cf7-7c669a8bfa56",
                     "IdText": "output",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -292,56 +322,57 @@
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": "5",
+                    "defaultValue": "",
                     "description": "Estimate of execution time (in seconds) for this application.",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "precious": false
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": "1",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "precious": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": "0",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "precious": false
                 },
                 {
                     "text": "Arg01",
                     "name": "Arg01",
                     "value": "cd /tmp/.dlg/testdata && sed -i 's/file\\:\\/\\/\\/\\/tmp\\/.dlg\\/testdata\\/rascil\\///g' rascil/index.html && tar --dereference -cvjf %o0 --exclude functest.ms rascil && rm -rf rascil",
+                    "defaultValue": "",
                     "description": "The command line to be executed",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "File",
-            "categoryType": "Data",
-            "isData": true,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
+            "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -5,
             "text": "restored_image",
@@ -350,28 +381,33 @@
             "y": 347.68282471402716,
             "width": 200,
             "height": 72,
-            "collapsed": false,
-            "showPorts": false,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [
                 {
                     "Id": "4ed69c5f-07dd-4bdf-b88c-baf60bd30f7a",
                     "IdText": "restored_image",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "14ede1d9-311b-42d0-91a7-2cfa3611fead",
                     "IdText": "restored_image",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -381,64 +417,67 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 },
                 {
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Perform a check to make sure the file path exists before proceeding with the application",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 },
                 {
                     "text": "File path",
                     "name": "filepath",
                     "value": "/tmp/.dlg/testdata/rascil/functest_nmoment1_cip_restored_centre.fits",
+                    "defaultValue": "",
                     "description": "Path to the file for this node",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 },
                 {
                     "text": "Directory name",
                     "name": "dirname",
                     "value": "",
+                    "defaultValue": "",
                     "description": "Name of the directory containing the file for this node",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "File",
-            "categoryType": "Data",
-            "isData": true,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
+            "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -6,
             "text": "residual_image",
@@ -447,28 +486,33 @@
             "y": 445.1944649248217,
             "width": 200,
             "height": 72,
-            "collapsed": false,
-            "showPorts": false,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [
                 {
                     "Id": "c15a1e87-472c-4c33-b6d0-106a39444f00",
                     "IdText": "residual_image",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "4b400463-e1e4-4370-8268-8828849c55a9",
                     "IdText": "residual_image",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -478,64 +522,67 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 },
                 {
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Perform a check to make sure the file path exists before proceeding with the application",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 },
                 {
                     "text": "File path",
                     "name": "filepath",
                     "value": "/tmp/.dlg/testdata/rascil/functest_nmoment1_cip_residual.fits",
+                    "defaultValue": "",
                     "description": "Path to the file for this node",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 },
                 {
                     "text": "Directory name",
                     "name": "dirname",
                     "value": "",
+                    "defaultValue": "",
                     "description": "Name of the directory containing the file for this node",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "File",
-            "categoryType": "Data",
-            "isData": true,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
+            "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -7,
             "text": "functest_rascil.tar.gz",
@@ -544,28 +591,33 @@
             "y": 425.1951855807447,
             "width": 200,
             "height": 72,
-            "collapsed": false,
-            "showPorts": false,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [
                 {
                     "Id": "014634a9-3798-4f14-a3d7-f437663a1d2e",
                     "IdText": "output",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "d8e957ce-07b6-4157-b5c8-b02999cb63e4",
                     "IdText": "fileObject",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -575,106 +627,118 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": "5",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "precious": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": "0",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "precious": false
                 },
                 {
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": "1",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "precious": false
                 },
                 {
                     "text": "File path",
                     "name": "filepath",
                     "value": "functest_rascil.tar.gz",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "precious": false
                 },
                 {
                     "text": "Directory name",
                     "name": "dirname",
                     "value": "",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "Docker",
-            "categoryType": "Application",
-            "isData": false,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#331C54",
+            "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -8,
             "text": "RASCIL Checker",
             "description": "This docker app runs the casacore imgstat application on its input.",
-            "x": 718.2738654914676,
+            "x": 719.2738654914676,
             "y": 418.78732934115055,
             "width": 200,
             "height": 72,
-            "collapsed": false,
-            "showPorts": false,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [
                 {
                     "Id": "de3e4218-a9b1-4207-8146-89185e76d65c",
                     "IdText": "restored_image",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 },
                 {
                     "Id": "b372295a-0528-4b3e-9fe1-1127a95f5ea3",
                     "IdText": "residual_image",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 },
                 {
                     "Id": "9e2ad54b-0b14-445e-8215-567f394801f9",
                     "IdText": "config",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "6607c7a3-66e6-4c52-bc24-2e6184a07b29",
                     "IdText": "event",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -684,96 +748,107 @@
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimate of execution time (in seconds) for this application.",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
+                    "defaultValue": "",
                     "description": "Number of CPUs used for this application.",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Is this node the start of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 },
                 {
                     "text": "Image",
                     "name": "image",
-                    "value": "nexus.engageska-portugal.pt/rascil-docker/rascil-full:latest",
+                    "value": "artefact.skatelescope.org/rascil-imaging-qa:0.5.0 ",
+                    "defaultValue": "",
                     "description": "Name of the docker image to be used for this application",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 },
                 {
                     "text": "Command",
                     "name": "command",
-                    "value": "cd /tmp/.dlg/testdata/rascil && python $RASCIL/rascil/apps/imaging_qa_main.py --ingest_fitsname_restored=%i0 --ingest_fitsname_residual=%i1 @%i2 && rm -rf dask-worker-space",
+                    "value": "cd /tmp/dlg/testdata/rascil && python $RASCIL/rascil/apps/imaging_qa_main.py --ingest_fitsname_restored=%i0 --ingest_fitsname_residual=%i1 @%i2 && rm -rf dask-worker-space",
+                    "defaultValue": "",
                     "description": "The command line to run within the docker instance",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 },
                 {
                     "text": "User",
                     "name": "user",
                     "value": "",
+                    "defaultValue": "",
                     "description": "Username of the user who will run the application within the docker image",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 },
                 {
                     "text": "Ensure User And Switch",
                     "name": "ensureUserAndSwitch",
                     "value": 0,
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 },
                 {
                     "text": "Remove Container",
                     "name": "removeContainer",
                     "value": 1,
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 },
                 {
                     "text": "Additional Bindings",
                     "name": "additionalBindings",
-                    "value": "/tmp/.dlg:/tmp/.dlg",
+                    "value": "/tmp/dlg:/tmp/dlg",
+                    "defaultValue": "",
                     "description": "Any additional bindings that should be passed through to the image",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "File",
-            "categoryType": "Data",
-            "isData": true,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
+            "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -9,
             "text": "Checker config",
@@ -782,28 +857,33 @@
             "y": 542.3965548518602,
             "width": 200,
             "height": 72,
-            "collapsed": false,
-            "showPorts": false,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [
                 {
                     "Id": "48ad7359-66ab-4d2e-ad04-3c5d4abd7047",
                     "IdText": "config",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "5fe7e0da-d881-495e-acfb-1d3539cd46c8",
                     "IdText": "config",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -813,64 +893,67 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": "5",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "precious": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": "0",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "precious": false
                 },
                 {
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": false,
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 },
                 {
                     "text": "File path",
                     "name": "filepath",
                     "value": "/tmp/.dlg/testdata/rascil/ci_checker.in",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "precious": false
                 },
                 {
                     "text": "Directory name",
                     "name": "dirname",
                     "value": "",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "File",
-            "categoryType": "Data",
-            "isData": true,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
+            "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -10,
             "text": "event",
@@ -879,28 +962,33 @@
             "y": 422.624783133245,
             "width": 200,
             "height": 72,
-            "collapsed": false,
-            "showPorts": false,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [
                 {
                     "Id": "e8fae6b5-6d03-45a4-901d-e00eca57e25c",
                     "IdText": "event",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "ce53ce31-55a8-473e-aa93-73e47c1213fc",
                     "IdText": "event",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -910,64 +998,67 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 },
                 {
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Perform a check to make sure the file path exists before proceeding with the application",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 },
                 {
                     "text": "File path",
                     "name": "filepath",
                     "value": "/tmp/.dlg/testdata/rascil/index.html",
+                    "defaultValue": "",
                     "description": "Path to the file for this node",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 },
                 {
                     "text": "Directory name",
                     "name": "dirname",
                     "value": "",
+                    "defaultValue": "",
                     "description": "Name of the directory containing the file for this node",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "PythonApp",
-            "categoryType": "Application",
-            "isData": false,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#3498DB",
+            "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -11,
             "text": "CopyApp",
@@ -976,28 +1067,33 @@
             "y": 563.673597326719,
             "width": 200,
             "height": 72,
-            "collapsed": false,
-            "showPorts": false,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
             "expanded": false,
             "readonly": true,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [
                 {
                     "Id": "829aaed1-d642-4ba3-ad08-4a327dd969a6",
                     "IdText": "fileObject",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "230e63da-d48f-4779-8ec2-c80d4413cf31",
                     "IdText": "fileObject",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -1007,56 +1103,57 @@
                     "text": "appclass",
                     "name": "appclass",
                     "value": "dlg.apps.simple.CopyApp",
+                    "defaultValue": "",
                     "description": "Application class",
                     "readonly": true,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 },
                 {
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimated execution time",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
+                    "defaultValue": "",
                     "description": "Number of cores used",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Component is start of a group",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "NGAS",
-            "categoryType": "Data",
-            "isData": true,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
+            "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -12,
             "text": "NGAS functest_rascil.tar.gz",
@@ -1065,20 +1162,23 @@
             "y": 557.9471387438358,
             "width": 200,
             "height": 72,
-            "collapsed": false,
-            "showPorts": false,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [
                 {
                     "Id": "286968cf-3200-4074-ac54-43ec869a431c",
                     "IdText": "fileObject",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "outputPorts": [],
@@ -1089,72 +1189,77 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 },
                 {
                     "text": "NGAS Server",
                     "name": "ngasSrv",
                     "value": "ngas.ddns.net",
+                    "defaultValue": "",
                     "description": "The URL of the NGAS Server",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 },
                 {
                     "text": "NGAS Port",
                     "name": "ngasPort",
                     "value": 7777,
+                    "defaultValue": "",
                     "description": "The port of the NGAS Server",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 },
                 {
                     "text": "Mime Type",
                     "name": "ngasMime",
                     "value": "application/octet-stream",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 },
                 {
                     "text": "File ID",
                     "name": "ngasFileId",
                     "value": "functest_rascil.tar.gz",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "PythonApp",
-            "categoryType": "Application",
-            "isData": false,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#3498DB",
+            "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -14,
             "text": "Get data",
@@ -1163,28 +1268,33 @@
             "y": 114.55029165205153,
             "width": 200,
             "height": 72,
-            "collapsed": false,
-            "showPorts": false,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
             "expanded": false,
             "readonly": true,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [
                 {
                     "Id": "4e3ecf3b-511e-45eb-ad4f-0ea0c33e88c9",
                     "IdText": "fileObject",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "9f74943e-fa98-41f2-87a8-3997021e7ed3",
                     "IdText": "fileObject",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -1194,56 +1304,57 @@
                     "text": "appclass",
                     "name": "appclass",
                     "value": "dlg.apps.simple.CopyApp",
+                    "defaultValue": "",
                     "description": "Application class",
                     "readonly": true,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 },
                 {
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimated execution time",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
+                    "defaultValue": "",
                     "description": "Number of cores used",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Component is start of a group",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "BashShellApp",
-            "categoryType": "Application",
-            "isData": false,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#1C2833",
+            "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -15,
             "text": "Unpack",
@@ -1252,28 +1363,33 @@
             "y": 463.21012957860313,
             "width": 200,
             "height": 72,
-            "collapsed": false,
-            "showPorts": false,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [
                 {
                     "Id": "33985745-f207-46b6-8eab-1cfb7728712c",
                     "IdText": "fileObject",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "94f65e2d-df6c-49de-9ec5-cbad244765f7",
                     "IdText": "config",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -1283,56 +1399,57 @@
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimate of execution time (in seconds) for this application.",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
+                    "defaultValue": "",
                     "description": "Number of CPUs used for this application.",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Is this node the start of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 },
                 {
                     "text": "Arg01",
                     "name": "Arg01",
                     "value": "tar -xf %i0 -C /tmp/.dlg/testdata && mkdir -p /tmp/.dlg/testdata/rascil && cd /tmp/.dlg/testdata/rascil && cp ../*.in . && ln -sf ../functest.ms functest.ms",
+                    "defaultValue": "",
                     "description": "The command line to be executed",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "File",
-            "categoryType": "Data",
-            "isData": true,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
+            "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -16,
             "text": "ContImg_Test.tar.gz",
@@ -1341,28 +1458,33 @@
             "y": 279.0491697861721,
             "width": 200,
             "height": 72,
-            "collapsed": false,
-            "showPorts": false,
+            "collapsed": true,
             "flipPorts": true,
             "streaming": false,
             "precious": false,
             "subject": null,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [
                 {
                     "Id": "8ce94847-62d1-4b67-83d6-94ffa3a2d7d9",
                     "IdText": "fileObject",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "33f02658-eda9-45ad-8665-98471ae714de",
                     "IdText": "fileObject",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -1372,64 +1494,67 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 },
                 {
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Perform a check to make sure the file path exists before proceeding with the application",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 },
                 {
                     "text": "File path",
                     "name": "filepath",
                     "value": "",
+                    "defaultValue": "",
                     "description": "Path to the file for this node",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 },
                 {
                     "text": "Directory name",
                     "name": "dirname",
                     "value": "",
+                    "defaultValue": "",
                     "description": "Name of the directory containing the file for this node",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "NGAS",
-            "categoryType": "Data",
-            "isData": true,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
+            "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -13,
             "text": "ContImg_test.tar.gz",
@@ -1438,21 +1563,24 @@
             "y": 0,
             "width": 200,
             "height": 72,
-            "collapsed": false,
-            "showPorts": false,
+            "collapsed": true,
             "flipPorts": true,
             "streaming": false,
             "precious": false,
             "subject": null,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [],
             "outputPorts": [
                 {
                     "Id": "d7a0cc79-a841-4587-9c0d-d28396bef153",
                     "IdText": "fileObject",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -1462,64 +1590,67 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 },
                 {
                     "text": "NGAS Server",
                     "name": "ngasSrv",
                     "value": "ngas.ddns.net",
+                    "defaultValue": "",
                     "description": "The URL of the NGAS Server",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 },
                 {
                     "text": "NGAS Port",
                     "name": "ngasPort",
                     "value": 7777,
+                    "defaultValue": "",
                     "description": "The port of the NGAS Server",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 },
                 {
                     "text": "File Id",
                     "name": "ngasFileId",
                     "value": "ContImg_Test.tar.gz",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "BashShellApp",
-            "categoryType": "Application",
-            "isData": false,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#1C2833",
+            "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -1,
             "text": "Publish results",
@@ -1528,20 +1659,23 @@
             "y": 253.58581101072588,
             "width": 200,
             "height": 72,
-            "collapsed": false,
-            "showPorts": false,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [
                 {
                     "Id": "b7c20fb1-6b0e-4ad9-845f-38e77e50ee50",
                     "IdText": "fileObject",
+                    "text": "",
                     "event": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "description": ""
                 }
             ],
             "outputPorts": [],
@@ -1552,47 +1686,52 @@
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimate of execution time (in seconds) for this application.",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
+                    "defaultValue": "",
                     "description": "Number of CPUs used for this application.",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Is this node the start of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 },
                 {
                     "text": "Arg01",
                     "name": "Arg01",
                     "value": "cd /tmp/.dlg/www && TZ='UTC' resdir=rascil`date +%Y-%m-%dT%H:%M:%S` && mkdir $resdir && cd $resdir && tar --strip-components=1 -xf %i0",
+                    "defaultValue": "",
                     "description": "The command line to be executed",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         }
     ],
     "linkDataArray": [
