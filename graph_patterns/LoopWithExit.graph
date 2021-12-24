@@ -1,26 +1,25 @@
 {
     "modelData": {
-        "fileType": "graph",
+        "fileType": "Graph",
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
         "filePath": "graph_patterns/LoopWithExit.graph",
-        "sha": "",
-        "git_url": "",
-        "eagleVersion": "v3.0.5",
-        "eagleCommitHash": "4b29bb5d2c8de0b6f98e66204c24dde59a611022",
+        "eagleVersion": "v4.1.0",
+        "eagleCommitHash": "b876272393bcbb840d943744d8210bffa333a9e6",
         "schemaVersion": "OJS",
-        "readonly": true
+        "readonly": true,
+        "sha": "",
+        "gitUrl": "",
+        "lastModifiedName": "",
+        "lastModifiedEmail": "",
+        "lastModifiedDatetime": ""
     },
     "nodeDataArray": [
         {
             "category": "Description",
-            "categoryType": "Other",
-            "isData": false,
             "isGroup": false,
-            "canHaveInputs": false,
-            "canHaveOutputs": false,
-            "color": "#9B3065",
+            "color": "rgb(157 43 96)",
             "drawOrderHint": 0,
             "key": -1,
             "text": "Description",
@@ -29,15 +28,15 @@
             "y": 101.63414908176681,
             "width": 210.4536010020516,
             "height": 129.96086531078936,
-            "collapsed": false,
-            "showPorts": false,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
-            "selected": false,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [],
             "outputPorts": [],
             "inputLocalPorts": [],
@@ -47,32 +46,27 @@
                     "text": "",
                     "name": "",
                     "value": "Graph pattern for a Loop with an exit condition. Note that the edge between 'Keep Going' and 'Do a bit more' is Loop aware, while the edge between 'Break' and 'Do a bit more' is not.",
+                    "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown"
+                    "type": "Unknown",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "Loop",
-            "categoryType": "Group",
-            "isData": false,
             "isGroup": true,
-            "canHaveInputs": false,
-            "canHaveOutputs": false,
-            "color": "#512E5F",
+            "color": "rgb(221, 173, 0)",
             "drawOrderHint": 0,
             "key": -2,
             "text": "Loop",
@@ -82,14 +76,14 @@
             "width": 492.70085995930435,
             "height": 353.66795068108826,
             "collapsed": false,
-            "showPorts": false,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
-            "selected": false,
             "expanded": true,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [],
             "outputPorts": [],
             "inputLocalPorts": [],
@@ -99,70 +93,71 @@
                     "text": "Number loops",
                     "name": "num_of_iter",
                     "value": 3,
+                    "defaultValue": "",
                     "description": "The number of iterations performed by this loop construct",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "Branch",
-            "categoryType": "Control",
-            "isData": false,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#00BDA1",
+            "color": "rgb(88 167 94)",
             "drawOrderHint": 0,
             "key": -3,
             "text": "Break",
             "description": "A conditional branch to control flow.",
             "x": 693.2908607606081,
-            "y": 577.4639899794839,
+            "y": 549.4639899794839,
             "width": 200,
-            "height": 200,
-            "collapsed": false,
-            "showPorts": false,
+            "height": 72,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
-            "selected": false,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "group": -2,
             "inputPorts": [
                 {
                     "Id": "d4cad215-9e44-461a-b1a8-b49edc67b80f",
                     "IdText": "test",
+                    "text": "",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "cf5e841a-a885-444c-8f9a-c00cf996cd77",
                     "IdText": "N",
+                    "text": "",
                     "event": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "description": ""
                 },
                 {
                     "Id": "17d9d29b-8cec-4541-ab93-b74cb109e924",
                     "IdText": "Y",
+                    "text": "",
                     "event": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -172,96 +167,103 @@
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 1,
+                    "defaultValue": "",
                     "description": "Estimate of execution time (in seconds) for this application.",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
+                    "defaultValue": "",
                     "description": "Number of CPUs used for this application.",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Is this node the start of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 },
                 {
                     "text": "Appclass",
                     "name": "appclass",
                     "value": "dlg.apps.simple.SimpleBranch",
+                    "defaultValue": "",
                     "description": "The python class that implements this branch construct",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 },
                 {
                     "text": "Result",
                     "name": "result",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Break the Loop: Hard wired comparison result",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "Memory",
-            "categoryType": "Data",
-            "isData": true,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
+            "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -5,
             "text": "Break",
             "description": "",
-            "x": 877.3754178471758,
-            "y": 465.4194639531635,
+            "x": 861.3754178471758,
+            "y": 494.4194639531635,
             "width": 200,
-            "height": 200,
-            "collapsed": false,
-            "showPorts": false,
+            "height": 72,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
-            "selected": false,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "group": -2,
             "inputPorts": [
                 {
                     "Id": "02d6a107-17ca-49c7-a86c-86e5bbbd313e",
                     "IdText": "Y",
+                    "text": "",
                     "event": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "f171b63f-11cf-4cb0-88e8-59f24d40c124",
                     "IdText": "leave",
+                    "text": "",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -271,40 +273,37 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "Memory",
-            "categoryType": "Data",
-            "isData": true,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
+            "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -6,
             "text": "Keep going",
@@ -312,31 +311,35 @@
             "x": 824.9633659768655,
             "y": 662.2993619941042,
             "width": 200,
-            "height": 200,
-            "collapsed": false,
-            "showPorts": false,
+            "height": 72,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
-            "selected": false,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "group": -2,
             "inputPorts": [
                 {
                     "Id": "abaa0a4f-bcf4-402d-bf22-5b04b1484020",
                     "IdText": "N",
+                    "text": "",
                     "event": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "86b3a603-1a9b-4263-b95e-fe293d285718",
                     "IdText": "leave",
+                    "text": "",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -346,71 +349,72 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": 1,
+                    "defaultValue": "",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "PythonApp",
-            "categoryType": "Application",
-            "isData": false,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#3498DB",
+            "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -7,
             "text": "Do a bit more",
             "description": "An application component in the form of a Python app",
-            "x": 1082.2659974873873,
-            "y": 544.8668315687564,
+            "x": 1002.2659974873873,
+            "y": 496.8668315687564,
             "width": 200,
-            "height": 200,
-            "collapsed": false,
-            "showPorts": false,
+            "height": 72,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
-            "selected": false,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [
                 {
                     "Id": "adca4562-2239-4100-a31c-d784ed5c56d4",
                     "IdText": "leave",
+                    "text": "",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "66d8030d-85e5-4489-ab31-bc0be6fe0acf",
                     "IdText": "result",
+                    "text": "",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -420,56 +424,57 @@
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimate of execution time (in seconds) for this application.",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
+                    "defaultValue": "",
                     "description": "Number of CPUs used for this application.",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Is this node the start of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 },
                 {
                     "text": "Appclass",
                     "name": "appclass",
                     "value": "dlg.apps.simple.SleepApp",
+                    "defaultValue": "",
                     "description": "The python class that implements this application",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "Memory",
-            "categoryType": "Data",
-            "isData": true,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
+            "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -9,
             "text": "With something",
@@ -477,23 +482,25 @@
             "x": 437.2788156608006,
             "y": 295.02576761972216,
             "width": 200,
-            "height": 200,
-            "collapsed": false,
-            "showPorts": false,
+            "height": 72,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
-            "selected": false,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [],
             "outputPorts": [
                 {
                     "Id": "0cc55af1-2cb9-44d0-a1b0-6d38a04e2e6c",
                     "IdText": "input",
+                    "text": "",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -503,72 +510,73 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "PythonApp",
-            "categoryType": "Application",
-            "isData": false,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#3498DB",
+            "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -4,
             "text": "Do something",
             "description": "A simple APP that sleeps the specified amount of time (0 by default). This is mainly useful (and used) to test graph translation and structure without executing real algorithms. Very useful for debugging.",
-            "x": 558.5405872846006,
-            "y": 468.55554425377954,
+            "x": 500.54058728460063,
+            "y": 465.55554425377954,
             "width": 200,
-            "height": 200,
-            "collapsed": false,
-            "showPorts": false,
+            "height": 72,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
-            "selected": false,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "group": -2,
             "inputPorts": [
                 {
                     "Id": "9c94e03a-bdc6-406f-97c5-7f02ef786b63",
                     "IdText": "input",
+                    "text": "",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "99e8f17b-6445-4ff3-8310-62a960e7805b",
                     "IdText": "result",
+                    "text": "",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -578,96 +586,103 @@
                     "text": "sleepTime",
                     "name": "sleepTime",
                     "value": 2,
+                    "defaultValue": "",
                     "description": "the number of seconds to sleep",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 },
                 {
                     "text": "appclass",
                     "name": "appclass",
                     "value": "dlg.apps.simple.SleepApp",
+                    "defaultValue": "",
                     "description": "Application class",
                     "readonly": true,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false
                 },
                 {
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimated execution time",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
+                    "defaultValue": "",
                     "description": "Number of cores used",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": 1,
+                    "defaultValue": "",
                     "description": "Component is start of a group",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "Memory",
-            "categoryType": "Data",
-            "isData": true,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
+            "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -10,
             "text": "Intermediate Result",
             "description": "",
-            "x": 745.6600452213248,
-            "y": 465.4194639531639,
+            "x": 629.6600452213248,
+            "y": 468.4194639531639,
             "width": 200,
-            "height": 200,
-            "collapsed": false,
-            "showPorts": false,
+            "height": 72,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
-            "selected": false,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "group": -2,
             "inputPorts": [
                 {
                     "Id": "63857044-f9cc-4f85-97bd-24453fdf0968",
                     "IdText": "result",
+                    "text": "",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": ""
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "a2456874-1336-48d7-bcf0-e08c7877a62f",
                     "IdText": "test",
+                    "text": "",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": ""
                 }
             ],
             "inputLocalPorts": [],
@@ -677,63 +692,62 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         },
         {
             "category": "Memory",
-            "categoryType": "Data",
-            "isData": true,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
+            "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -8,
             "text": "Memory",
             "description": "",
-            "x": 1394.7030709214453,
-            "y": 559.3846649303431,
+            "x": 1108.7030709214453,
+            "y": 497.3846649303431,
             "width": 200,
-            "height": 200,
-            "collapsed": false,
-            "showPorts": false,
+            "height": 72,
+            "collapsed": true,
             "flipPorts": false,
             "streaming": false,
             "precious": false,
             "subject": null,
-            "selected": false,
             "expanded": false,
             "readonly": false,
+            "git_url": "",
+            "sha": "",
             "inputPorts": [
                 {
                     "Id": "a3fc79e8-0c88-41a9-b339-4f3667c47247",
                     "IdText": "result",
+                    "text": "",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": ""
                 }
             ],
             "outputPorts": [],
@@ -744,31 +758,32 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
+                    "defaultValue": "",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
+                    "defaultValue": "",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false
                 }
             ],
+            "applicationParams": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationKey": null
         }
     ],
     "linkDataArray": [
@@ -785,13 +800,6 @@
             "to": -6,
             "toPort": "abaa0a4f-bcf4-402d-bf22-5b04b1484020",
             "loop_aware": "0"
-        },
-        {
-            "from": -6,
-            "fromPort": "86b3a603-1a9b-4263-b95e-fe293d285718",
-            "to": -7,
-            "toPort": "adca4562-2239-4100-a31c-d784ed5c56d4",
-            "loop_aware": "1"
         },
         {
             "from": -5,
