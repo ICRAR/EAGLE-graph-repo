@@ -358,6 +358,14 @@
                     "event": false,
                     "type": "Complex",
                     "description": ""
+                },
+                {
+                    "Id": "5ecb6344-fe9b-4dcc-bd25-1de15bcd1974",
+                    "IdText": "event",
+                    "text": "event",
+                    "event": false,
+                    "type": "String",
+                    "description": "keep going"
                 }
             ],
             "outputPorts": [
@@ -1053,8 +1061,8 @@
             "key": -13,
             "text": "RASCIL Checker",
             "description": "This docker app runs the casacore imgstat application on its input.",
-            "x": 734.168474366827,
-            "y": 570.7695127783683,
+            "x": 735.168474366827,
+            "y": 571.7695127783683,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -1092,7 +1100,16 @@
                     "description": ""
                 }
             ],
-            "outputPorts": [],
+            "outputPorts": [
+                {
+                    "Id": "14b47e5b-be46-40f7-b790-405bd99e5ba6",
+                    "IdText": "event",
+                    "text": "event",
+                    "event": false,
+                    "type": "String",
+                    "description": "keep going"
+                }
+            ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
@@ -1605,6 +1622,81 @@
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationKey": null
+        },
+        {
+            "category": "SharedMemory",
+            "isGroup": false,
+            "color": "#2c2c2c",
+            "drawOrderHint": 0,
+            "key": -10,
+            "text": "event",
+            "description": "Shared memory storage of intermediate data products. Implemented using shmem.",
+            "x": 731.4089345229933,
+            "y": 454.42679711515734,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": true,
+            "git_url": "",
+            "sha": "",
+            "inputPorts": [
+                {
+                    "Id": "8238bd5f-a7ab-4f52-8b6c-7f464b9fa2c9",
+                    "IdText": "event",
+                    "text": "event",
+                    "event": false,
+                    "type": "event",
+                    "description": ""
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "e6e8e559-09c7-4cfd-8b02-0d666e4b5721",
+                    "IdText": "event",
+                    "text": "event",
+                    "event": false,
+                    "type": "event",
+                    "description": ""
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false
+                }
+            ],
+            "applicationParams": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null
         }
     ],
     "linkDataArray": [
@@ -1718,6 +1810,20 @@
             "fromPort": "2d192117-f40f-469b-808f-b1ff579bbc88",
             "to": -14,
             "toPort": "c82c0355-6f0b-437a-881a-22a3eec2bfd8",
+            "loop_aware": "0"
+        },
+        {
+            "from": -13,
+            "fromPort": "14b47e5b-be46-40f7-b790-405bd99e5ba6",
+            "to": -10,
+            "toPort": "8238bd5f-a7ab-4f52-8b6c-7f464b9fa2c9",
+            "loop_aware": "0"
+        },
+        {
+            "from": -10,
+            "fromPort": "e6e8e559-09c7-4cfd-8b02-0d666e4b5721",
+            "to": -7,
+            "toPort": "5ecb6344-fe9b-4dcc-bd25-1de15bcd1974",
             "loop_aware": "0"
         }
     ]
