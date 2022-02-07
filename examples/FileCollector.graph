@@ -466,9 +466,9 @@
                 {
                     "Id": "8a5da425-97bb-45ad-a0e0-b2a60724906b",
                     "IdText": "data",
-                    "text": "Data",
+                    "text": "data",
                     "event": false,
-                    "type": "String",
+                    "type": "array",
                     "description": ""
                 }
             ],
@@ -704,8 +704,8 @@
             "key": -8,
             "text": "element",
             "description": "In-memory storage of intermediate data products",
-            "x": 1006.8629912896538,
-            "y": 246.9971350378703,
+            "x": 925.8629912896538,
+            "y": 227.9971350378703,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -755,7 +755,7 @@
                 {
                     "text": "Group end",
                     "name": "group_end",
-                    "value": true,
+                    "value": false,
                     "defaultValue": "",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
@@ -780,10 +780,10 @@
             "color": "rgb(88 167 94)",
             "drawOrderHint": 0,
             "key": -10,
-            "text": "Branch",
+            "text": "len(array) > 0",
             "description": "A conditional branch to control flow.",
-            "x": 1140.3787831826119,
-            "y": 66.1018900907597,
+            "x": 1118.3787831826119,
+            "y": 80.1018900907597,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -800,27 +800,27 @@
                 {
                     "Id": "04cbede2-56a3-4fff-9c18-d7fc7106eb70",
                     "IdText": "array",
-                    "text": "Array",
+                    "text": "array",
                     "event": false,
-                    "type": "Array",
-                    "description": " Port carrying the averaged array"
+                    "type": "array",
+                    "description": "port to input the array to check"
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "b253bbb7-9c69-43c1-a1d7-e3612a7ec5dd",
-                    "IdText": "rest_array",
+                    "IdText": "Y",
                     "text": "Y",
                     "event": false,
-                    "type": "String",
+                    "type": "array",
                     "description": ""
                 },
                 {
                     "Id": "1f7d5b9a-47ad-4d26-8487-3787a6a5f733",
                     "IdText": "N",
-                    "text": "",
+                    "text": "N",
                     "event": false,
-                    "type": "String",
+                    "type": "array",
                     "description": ""
                 }
             ],
@@ -831,7 +831,7 @@
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
-                    "defaultValue": "5",
+                    "defaultValue": "",
                     "description": "Estimate of execution time (in seconds) for this application.",
                     "readonly": false,
                     "type": "Float",
@@ -842,7 +842,7 @@
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
-                    "defaultValue": "1",
+                    "defaultValue": "",
                     "description": "Number of CPUs used for this application.",
                     "readonly": false,
                     "type": "Integer",
@@ -853,7 +853,7 @@
                     "text": "Group start",
                     "name": "group_start",
                     "value": false,
-                    "defaultValue": "false",
+                    "defaultValue": "",
                     "description": "Is this node the start of a group?",
                     "readonly": false,
                     "type": "Boolean",
@@ -864,7 +864,7 @@
                     "text": "Appclass",
                     "name": "appclass",
                     "value": "dlg_example_cmpts.apps.LengthCheck",
-                    "defaultValue": "dlg_example_cmpts.apps.LengthCheck",
+                    "defaultValue": "",
                     "description": "The python class that implements this branch construct",
                     "readonly": false,
                     "type": "String",
@@ -890,8 +890,8 @@
             "key": -9,
             "text": "rest_array",
             "description": "In-memory storage of the rest of the input array. NOTE: the name rest_array is important here, else the PickOne application does not know which output to use to write to remaining vector to.",
-            "x": 1234.2727508057505,
-            "y": 156.18322848582423,
+            "x": 1216.3314409180925,
+            "y": 168.37906697246882,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -906,9 +906,9 @@
             "group": -2,
             "inputPorts": [
                 {
-                    "Id": "57800f67-4515-4bb9-bbdb-1378aab0632a",
-                    "IdText": "rest_array",
-                    "text": "rest_array",
+                    "Id": "630aa792-ff62-48f5-b4e7-2d22cb8bb1bb",
+                    "IdText": "Y",
+                    "text": "Y",
                     "event": false,
                     "type": "array",
                     "description": " Port for the input array(s)"
@@ -916,7 +916,7 @@
             ],
             "outputPorts": [
                 {
-                    "Id": "8e9bac23-837e-4661-a6f9-88d68f960456",
+                    "Id": "83f9b178-e09f-4f84-a717-16e7c23c7b57",
                     "IdText": "array",
                     "text": "list of strings",
                     "event": false,
@@ -959,6 +959,84 @@
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationKey": null
+        },
+        {
+            "category": "Memory",
+            "isGroup": false,
+            "color": "#2c2c2c",
+            "drawOrderHint": 0,
+            "key": -11,
+            "text": "rest_array",
+            "description": "In-memory storage of the rest of the input array. NOTE: the name rest_array is important here, else the PickOne application does not know which output to use to write to remaining vector to.",
+            "x": 1266.3314409180925,
+            "y": 67.37906697246882,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "git_url": "",
+            "sha": "",
+            "group": -2,
+            "inputPorts": [
+                {
+                    "Id": "95bf35b0-c9e0-468d-993e-78eba98029d9",
+                    "IdText": "N",
+                    "text": "N",
+                    "event": false,
+                    "type": "array",
+                    "description": " Port for the input array(s)"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "11bf70fe-981d-4a29-a4c9-779a95d99a9e",
+                    "IdText": "array",
+                    "text": "list of strings",
+                    "event": false,
+                    "type": "array",
+                    "description": "Port carrying list of files found"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false,
+                    "options": []
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": []
+                }
+            ],
+            "applicationArgs": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null
         }
     ],
     "linkDataArray": [
@@ -975,13 +1053,6 @@
             "to": -5,
             "toPort": "81c00bd2-7403-4b6b-85c9-bfc1d308eeda",
             "loop_aware": "0"
-        },
-        {
-            "from": -8,
-            "fromPort": "bec799ed-2363-4339-b3d3-188f43dfb479",
-            "to": -7,
-            "toPort": "8a5da425-97bb-45ad-a0e0-b2a60724906b",
-            "loop_aware": "1"
         },
         {
             "from": -7,
@@ -1005,17 +1076,31 @@
             "loop_aware": "0"
         },
         {
+            "from": -8,
+            "fromPort": "bec799ed-2363-4339-b3d3-188f43dfb479",
+            "to": -7,
+            "toPort": "8a5da425-97bb-45ad-a0e0-b2a60724906b",
+            "loop_aware": "0"
+        },
+        {
             "from": -6,
             "fromPort": "46ebbd1a-a092-442a-b096-ad025df480b9",
             "to": -10,
             "toPort": "04cbede2-56a3-4fff-9c18-d7fc7106eb70",
-            "loop_aware": "1"
+            "loop_aware": "0"
         },
         {
             "from": -10,
             "fromPort": "b253bbb7-9c69-43c1-a1d7-e3612a7ec5dd",
             "to": -9,
-            "toPort": "57800f67-4515-4bb9-bbdb-1378aab0632a",
+            "toPort": "630aa792-ff62-48f5-b4e7-2d22cb8bb1bb",
+            "loop_aware": "0"
+        },
+        {
+            "from": -10,
+            "fromPort": "1f7d5b9a-47ad-4d26-8487-3787a6a5f733",
+            "to": -11,
+            "toPort": "95bf35b0-c9e0-468d-993e-78eba98029d9",
             "loop_aware": "0"
         }
     ]
