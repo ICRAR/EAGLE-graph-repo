@@ -14,7 +14,7 @@
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": "",
-        "numLGNodes": 7
+        "numLGNodes": 8
     },
     "nodeDataArray": [
         {
@@ -25,7 +25,7 @@
             "key": -1,
             "text": "glob.glob",
             "description": "An application that wraps a simple python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output. \nUsers indicate the function to be wrapped via the ``func_name`` parameter. Otherwise, users can also *send* over the python code using the ``func_code`` parameter. The code needs to be base64-encoded and produced with the marshal module of the same Python version used to run DALiuGE.\nBoth inputs and outputs are serialized using the pickle protocol.",
-            "x": 1562.5,
+            "x": 1562.8719466982905,
             "y": 335.5,
             "width": 200,
             "height": 72,
@@ -40,19 +40,19 @@
             "sha": "c2f0a30",
             "inputPorts": [
                 {
-                    "Id": "e5689767-d284-4c8f-8859-ab27df96681a",
-                    "IdText": "pathname",
-                    "text": "pathname",
-                    "event": false,
-                    "type": "String",
-                    "description": " The port carrying the content read from the URL."
-                },
-                {
                     "Id": "b84d1c2a-7fdb-4516-8633-b6f38f4eac79",
                     "IdText": "recursive",
                     "text": "recursive",
                     "event": false,
                     "type": "Boolean",
+                    "description": ""
+                },
+                {
+                    "Id": "3dc35b09-5206-48e3-883d-feec2d776738",
+                    "IdText": "pathname",
+                    "text": "pathname",
+                    "event": false,
+                    "type": "string",
                     "description": ""
                 }
             ],
@@ -147,8 +147,8 @@
                     "text": "Function Name",
                     "name": "func_name",
                     "value": "glob.glob",
-                    "defaultValue": "",
-                    "description": "Python fuction name",
+                    "defaultValue": "glob.glob",
+                    "description": "Return a list of paths matching a pathname pattern.\nThe pattern may contain simple shell-style wildcards a la\nfnmatch. However, unlike fnmatch, filenames starting with a\ndot are special cases that are not matched by '*' and '?'\npatterns.\nIf recursive is true, the pattern '**' will match any files and\nzero or more directories and subdirectories.",
                     "readonly": false,
                     "type": "String",
                     "precious": false,
@@ -180,23 +180,11 @@
                     "positional": false
                 },
                 {
-                    "text": "Function Defaults",
-                    "name": "func_defaults",
-                    "value": "{\"pathname\":\"**\", \"recursive\":True}",
-                    "defaultValue": "",
-                    "description": "Mapping from argname to default value. Should match only the last part of the argnames list",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Function Arguments Mapping",
-                    "name": "func_arg_mapping",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Mapping between argument name and input drop uids",
+                    "text": "filepath",
+                    "name": "filepath",
+                    "value": "**",
+                    "defaultValue": "**",
+                    "description": "",
                     "readonly": false,
                     "type": "String",
                     "precious": false,
@@ -820,7 +808,7 @@
             "text": "generate",
             "description": "An application component able to run an arbitrary command within the Bash Shell",
             "x": 1347.5,
-            "y": 452.5,
+            "y": 452.12805330170943,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -1107,6 +1095,57 @@
             "outputApplicationType": "None",
             "outputApplicationKey": null,
             "outputApplicationDescription": ""
+        },
+        {
+            "category": "Description",
+            "isGroup": false,
+            "color": "rgb(157 43 96)",
+            "drawOrderHint": 0,
+            "key": -8,
+            "text": "Description",
+            "description": "A node that places a description in the graph. The description should be used to communicate the purpose of the graph",
+            "x": 1498.5267426026574,
+            "y": 133.837224441051,
+            "width": 202.97557358632437,
+            "height": 123.32864436409545,
+            "collapsed": false,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "git_url": "",
+            "sha": "",
+            "inputPorts": [],
+            "outputPorts": [],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Description",
+                    "name": "description",
+                    "value": "Graph is an example for multiple named input ports being passed to a Python function. Using the correct port names is mandatory, but the order of the ports is irrelevant.",
+                    "defaultValue": "",
+                    "description": "The text value of the description",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
         }
     ],
     "linkDataArray": [
@@ -1115,13 +1154,6 @@
             "fromPort": "ff0e33d5-2fa2-4acf-a1b6-769f77a1ec08",
             "to": -3,
             "toPort": "164b0726-cc8f-4e76-8bf3-3de0f57525cf",
-            "loop_aware": "0"
-        },
-        {
-            "from": -3,
-            "fromPort": "40e3b8c1-3b02-4e36-9699-2a791a28524a",
-            "to": -1,
-            "toPort": "e5689767-d284-4c8f-8859-ab27df96681a",
             "loop_aware": "0"
         },
         {
@@ -1150,6 +1182,13 @@
             "fromPort": "eda8e891-9595-40b3-b5f1-c34e86ce7fa7",
             "to": -1,
             "toPort": "b84d1c2a-7fdb-4516-8633-b6f38f4eac79",
+            "loop_aware": "0"
+        },
+        {
+            "from": -3,
+            "fromPort": "40e3b8c1-3b02-4e36-9699-2a791a28524a",
+            "to": -1,
+            "toPort": "3dc35b09-5206-48e3-883d-feec2d776738",
             "loop_aware": "0"
         }
     ]
