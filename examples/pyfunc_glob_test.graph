@@ -182,7 +182,7 @@
                 {
                     "text": "Function Defaults",
                     "name": "func_defaults",
-                    "value": "{\"kwargs\":{\"pathname\"=\"**\", \"recursive\"=True}, \"args\":[]}",
+                    "value": "{\"pathname\":\"**\", \"recursive\":True}",
                     "defaultValue": "",
                     "description": "Mapping from argname to default value. Should match only the last part of the argnames list",
                     "readonly": false,
@@ -849,7 +849,7 @@
                 {
                     "text": "Command",
                     "name": "command",
-                    "value": "echo \"True\" > %o0",
+                    "value": "echo \"False\" > %o0",
                     "defaultValue": "",
                     "description": "The command to be executed",
                     "readonly": false,
@@ -992,15 +992,15 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "Memory",
+            "category": "File",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -7,
             "text": "recursive",
-            "description": "In-memory storage of intermediate data products",
-            "x": 1460,
-            "y": 423,
+            "description": "A standard file on a filesystem mounted to the deployment machine \nIn some cases drops are created **outside** the context of a session, most notably during unit tests. In these cases the base directory is a fixed location under ``/tmp``.\nThe following table summarizes the calculation of the final path used by the ``FileDrop`` class depending on its parameters:\n============ ===================== ===================== ========== . filepath ------------ ------------------------------------------------------ dirname empty relative absolute ============ ===================== ===================== ========== **empty** /``$B``/``$u`` /``$B``/``$f`` /``$f`` **relative** /``$B``/``$d``/``$u`` /``$B``/``$d``/``$f`` **ERROR** **absolute** /``$d``/``$u`` /``$d``/``$f`` **ERROR** ============ ===================== ===================== ==========\nIn the table, ``$f`` is the value of ``filepath``, ``$d`` is the value of ``dirname``, ``$u`` is the drop's UID and ``$B`` is the base directory for this drop's session, namely ``/the/cwd/$session_id``.",
+            "x": 1462,
+            "y": 428,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -1014,7 +1014,7 @@
             "sha": "90d1f2c",
             "inputPorts": [
                 {
-                    "Id": "550bdd6f-75e7-4b04-b8a6-e53a54ae6659",
+                    "Id": "d26ff5ed-9ad0-444c-8b1c-f17bd41ffda1",
                     "IdText": "recursive",
                     "text": "recursive",
                     "event": false,
@@ -1024,7 +1024,7 @@
             ],
             "outputPorts": [
                 {
-                    "Id": "850bf0f7-597e-4d20-8fbc-d39dc663db2e",
+                    "Id": "eda8e891-9595-40b3-b5f1-c34e86ce7fa7",
                     "IdText": "recursive",
                     "text": "recursive",
                     "event": false,
@@ -1055,6 +1055,42 @@
                     "description": "Is this node the end of a group?",
                     "readonly": false,
                     "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "Check file path exists",
+                    "name": "check_filepath_exists",
+                    "value": true,
+                    "defaultValue": "True",
+                    "description": "Perform a check to make sure the file path exists before proceeding with the application",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "File Path",
+                    "name": "filepath",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Path to the file for this node",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "Directory name",
+                    "name": "dirname",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Path to the file for this node",
+                    "readonly": false,
+                    "type": "String",
                     "precious": false,
                     "options": [],
                     "positional": "false"
@@ -1106,12 +1142,12 @@
             "from": -6,
             "fromPort": "5fcfbc2a-7480-4edb-94d9-cfb61be2cc71",
             "to": -7,
-            "toPort": "550bdd6f-75e7-4b04-b8a6-e53a54ae6659",
+            "toPort": "d26ff5ed-9ad0-444c-8b1c-f17bd41ffda1",
             "loop_aware": "0"
         },
         {
             "from": -7,
-            "fromPort": "850bf0f7-597e-4d20-8fbc-d39dc663db2e",
+            "fromPort": "eda8e891-9595-40b3-b5f1-c34e86ce7fa7",
             "to": -1,
             "toPort": "b84d1c2a-7fdb-4516-8633-b6f38f4eac79",
             "loop_aware": "0"
