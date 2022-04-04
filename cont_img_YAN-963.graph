@@ -539,7 +539,7 @@
             "text": "RASCIL_fft_image_to_griddata",
             "description": "fft_image_to_griddata(im)",
             "x": 1208.5610328758987,
-            "y": 521.0306382509166,
+            "y": 520.0306382509166,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -868,7 +868,7 @@
             "key": -32,
             "text": "subtract_components",
             "description": "Subtract component from image plane\nCould be a python array operation",
-            "x": 1517.1151246186962,
+            "x": 1520.1151246186962,
             "y": 637.2783997859019,
             "width": 200,
             "height": 72,
@@ -1890,8 +1890,8 @@
             "key": -48,
             "text": "RMV",
             "description": "Residual Model Visibilities",
-            "x": 1462.5807868627874,
-            "y": 398.87906867899864,
+            "x": 1460.5807868627874,
+            "y": 410.87906867899864,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -2055,7 +2055,7 @@
             "text": "FRV",
             "description": "",
             "x": 2044.3334270577366,
-            "y": 383.87906867899864,
+            "y": 382.87906867899864,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -2230,8 +2230,8 @@
             "key": -52,
             "text": "RASCIL_grid_blockvisibility_to_griddata",
             "description": "Parameters\nvis \u2013 blockvisibility to be gridded\n\ngriddata \u2013 GridData\n\ncf \u2013 Convolution function\n\nReturns\nGridData",
-            "x": 2192.258930571331,
-            "y": 318.63170887394773,
+            "x": 2194.258930571331,
+            "y": 317.63170887394773,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -4353,8 +4353,8 @@
             "key": -29,
             "text": "flagging_blockvisibility",
             "description": "Flagging BlockVisibility",
-            "x": 2398.960198297613,
-            "y": 124.51094222212137,
+            "x": 2384.960198297613,
+            "y": 175.51094222212137,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -4367,15 +4367,24 @@
             "git_url": "",
             "sha": "1.0",
             "group": -57,
-            "inputPorts": [],
+            "inputPorts": [
+                {
+                    "Id": "5ff5adfb-fe5a-4183-aa22-ec5b9544d9bb",
+                    "IdText": "bvis",
+                    "text": "bvis",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "BlockVis "
+                }
+            ],
             "outputPorts": [
                 {
-                    "Id": "1ad15db5-616b-4ead-b8db-73096314060f",
-                    "IdText": "output",
-                    "text": "output",
+                    "Id": "622e131f-efe5-40b4-8716-426ce87f00fa",
+                    "IdText": "bvis",
+                    "text": "bvis",
                     "event": false,
-                    "type": "None",
-                    "description": "BlockVisibility"
+                    "type": "Complex",
+                    "description": "BlockVis "
                 }
             ],
             "inputLocalPorts": [],
@@ -4540,7 +4549,7 @@
             "width": 200,
             "height": 72,
             "collapsed": false,
-            "flipPorts": false,
+            "flipPorts": true,
             "streaming": false,
             "precious": false,
             "subject": null,
@@ -4549,15 +4558,32 @@
             "git_url": "",
             "sha": "1.0",
             "group": -57,
-            "inputPorts": [],
+            "inputPorts": [
+                {
+                    "Id": "79c185c3-54e1-44db-9f0c-55889aec12b0",
+                    "IdText": "comps_test",
+                    "text": "comps_test",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "Input Model as Components"
+                },
+                {
+                    "Id": "981339aa-8f96-4026-a6fc-b4a45028c336",
+                    "IdText": "comps_ref",
+                    "text": "comps_ref",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "Merge Model Components into Reference"
+                }
+            ],
             "outputPorts": [
                 {
-                    "Id": "616d9114-6274-48bf-a14a-239b88fa323c",
-                    "IdText": "output",
-                    "text": "output",
+                    "Id": "983e5c02-1ada-450d-b0ed-b188b835e459",
+                    "IdText": "comps_ref",
+                    "text": "comps_ref",
                     "event": false,
-                    "type": "None",
-                    "description": ""
+                    "type": "Complex",
+                    "description": "Merge Model Components into Reference"
                 }
             ],
             "inputLocalPorts": [],
@@ -4693,12 +4719,12 @@
             "key": -31,
             "text": "find_skycomponents",
             "description": "Find gaussian components in Image above a certain threshold as Skycomponent",
-            "x": 2015.4201771285784,
-            "y": 637.4037579088326,
+            "x": 1973.4201771285784,
+            "y": 628.4037579088326,
             "width": 200,
             "height": 72,
             "collapsed": false,
-            "flipPorts": false,
+            "flipPorts": true,
             "streaming": false,
             "precious": false,
             "subject": null,
@@ -4707,15 +4733,24 @@
             "git_url": "",
             "sha": "1.0",
             "group": -43,
-            "inputPorts": [],
+            "inputPorts": [
+                {
+                    "Id": "df5d294f-1f0e-45c5-8607-23e67ba7d8ec",
+                    "IdText": "im",
+                    "text": "im",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "Image"
+                }
+            ],
             "outputPorts": [
                 {
-                    "Id": "82795ccf-fd76-444d-b40f-dba3d52f138a",
-                    "IdText": "output",
-                    "text": "output",
+                    "Id": "4b9e5638-9a95-4718-9868-f9205b0bd0da",
+                    "IdText": "sc",
+                    "text": "sc",
                     "event": false,
-                    "type": "List[Skycomponent]",
-                    "description": "list of sky components"
+                    "type": "Complex",
+                    "description": "Model as Components"
                 }
             ],
             "inputLocalPorts": [],
@@ -4863,12 +4898,12 @@
             "key": -33,
             "text": "fft_image_to_griddata",
             "description": "Fill griddata with transform of im",
-            "x": 1238.8211720820034,
-            "y": 604.4271547221415,
+            "x": 1241.8211720820034,
+            "y": 603.4271547221415,
             "width": 200,
             "height": 72,
             "collapsed": false,
-            "flipPorts": false,
+            "flipPorts": true,
             "streaming": false,
             "precious": false,
             "subject": null,
@@ -4877,7 +4912,32 @@
             "git_url": "",
             "sha": "1.0",
             "group": -46,
-            "inputPorts": [],
+            "inputPorts": [
+                {
+                    "Id": "09b9dd62-e07d-41c9-b7d3-d13aaf7889e9",
+                    "IdText": "Y",
+                    "text": "",
+                    "event": false,
+                    "type": "Boolean",
+                    "description": ""
+                },
+                {
+                    "Id": "72c776fd-b467-4d41-9191-4085b56a11a7",
+                    "IdText": "im",
+                    "text": "im",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "Image"
+                },
+                {
+                    "Id": "0ab72109-5990-44c2-8bc7-c1018d6336f0",
+                    "IdText": "gcf",
+                    "text": "gcf",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "Gain Convolution Function"
+                }
+            ],
             "outputPorts": [
                 {
                     "Id": "b6bbba0b-a54c-4575-a5d9-c3e65c2ebd12",
@@ -4886,6 +4946,14 @@
                     "event": false,
                     "type": "None",
                     "description": ""
+                },
+                {
+                    "Id": "47955c98-c620-48d4-a94c-bdacd01c1d31",
+                    "IdText": "griddata",
+                    "text": "griddata",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "Visibilities, Gridded"
                 }
             ],
             "inputLocalPorts": [],
@@ -5018,351 +5086,11 @@
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
-            "key": -34,
-            "text": "subtract_visibility",
-            "description": "Subtract model_vis from vis, returning new visibility",
-            "x": 1671.5824519389826,
-            "y": 369.5397871976998,
-            "width": 200,
-            "height": 72,
-            "collapsed": false,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "expanded": false,
-            "readonly": false,
-            "git_url": "",
-            "sha": "1.0",
-            "group": -46,
-            "inputPorts": [],
-            "outputPorts": [
-                {
-                    "Id": "7d8762b9-fb1f-4b03-ba36-22d4a9aaf8cd",
-                    "IdText": "output",
-                    "text": "output",
-                    "event": false,
-                    "type": "None",
-                    "description": ""
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Application Class",
-                    "name": "appclass",
-                    "value": "dlg.apps.pyfunc.PyFuncApp",
-                    "defaultValue": "",
-                    "description": "The python class that implements this application",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "Execution Time",
-                    "name": "execution_time",
-                    "value": 5,
-                    "defaultValue": "",
-                    "description": "Estimate of execution time (in seconds) for this application.",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "No. of CPUs",
-                    "name": "num_cpus",
-                    "value": 1,
-                    "defaultValue": "",
-                    "description": "Number of CPUs used for this application.",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "Group start",
-                    "name": "group_start",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Is this node the start of a group?",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                }
-            ],
-            "applicationArgs": [
-                {
-                    "text": "Function Name",
-                    "name": "func_name",
-                    "value": "rascil.processing_components.visibility.operations.subtract_visibility",
-                    "defaultValue": "",
-                    "description": "Python function name",
-                    "readonly": true,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": "true"
-                },
-                {
-                    "text": "Pickle",
-                    "name": "pickle",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Whether the python arguments are pickled.",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": "true"
-                },
-                {
-                    "text": "vis",
-                    "name": "vis",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "vis",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "model_vis",
-                    "name": "model_vis",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "model_vis",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "inplace",
-                    "name": "inplace",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "inputApplicationDescription": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "outputApplicationDescription": ""
-        },
-        {
-            "category": "PythonApp",
-            "isGroup": false,
-            "color": "#0059a5",
-            "drawOrderHint": 0,
-            "key": -36,
-            "text": "flagging_blockvisibility",
-            "description": "Flagging BlockVisibility",
-            "x": 1954.0035290165506,
-            "y": 410.49084337394714,
-            "width": 200,
-            "height": 72,
-            "collapsed": false,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "expanded": false,
-            "readonly": false,
-            "git_url": "",
-            "sha": "1.0",
-            "group": -46,
-            "inputPorts": [],
-            "outputPorts": [
-                {
-                    "Id": "4ab17c8e-77a4-4914-9149-899e1f5429c1",
-                    "IdText": "output",
-                    "text": "output",
-                    "event": false,
-                    "type": "None",
-                    "description": "BlockVisibility"
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Application Class",
-                    "name": "appclass",
-                    "value": "dlg.apps.pyfunc.PyFuncApp",
-                    "defaultValue": "",
-                    "description": "The python class that implements this application",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "Execution Time",
-                    "name": "execution_time",
-                    "value": 5,
-                    "defaultValue": "",
-                    "description": "Estimate of execution time (in seconds) for this application.",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "No. of CPUs",
-                    "name": "num_cpus",
-                    "value": 1,
-                    "defaultValue": "",
-                    "description": "Number of CPUs used for this application.",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "Group start",
-                    "name": "group_start",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Is this node the start of a group?",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                }
-            ],
-            "applicationArgs": [
-                {
-                    "text": "Function Name",
-                    "name": "func_name",
-                    "value": "rascil.processing_components.flagging.operations.flagging_blockvisibility",
-                    "defaultValue": "",
-                    "description": "Python function name",
-                    "readonly": true,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": "true"
-                },
-                {
-                    "text": "Pickle",
-                    "name": "pickle",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Whether the python arguments are pickled.",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": "true"
-                },
-                {
-                    "text": "bvis",
-                    "name": "bvis",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "BlockVisibility",
-                    "readonly": false,
-                    "type": "bvis",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "baselines",
-                    "name": "baselines",
-                    "value": "None",
-                    "defaultValue": "",
-                    "description": "The list of baseline numbers to flag",
-                    "readonly": false,
-                    "type": "baselines",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "antennas",
-                    "name": "antennas",
-                    "value": "None",
-                    "defaultValue": "",
-                    "description": "The list of antenna number to flag",
-                    "readonly": false,
-                    "type": "antennas",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "channels",
-                    "name": "channels",
-                    "value": "None",
-                    "defaultValue": "",
-                    "description": "The list of Channel number to flag",
-                    "readonly": false,
-                    "type": "channels",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "polarisations",
-                    "name": "polarisations",
-                    "value": "None",
-                    "defaultValue": "",
-                    "description": "The list of polarisations to flag",
-                    "readonly": false,
-                    "type": "polarisations",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "inputApplicationDescription": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "outputApplicationDescription": ""
-        },
-        {
-            "category": "PythonApp",
-            "isGroup": false,
-            "color": "#0059a5",
-            "drawOrderHint": 0,
             "key": -37,
             "text": "degrid_blockvisibility_from_griddata",
             "description": "Degrid blockVisibility from a GridData",
-            "x": 1367.9797940805968,
-            "y": 383.6608410515782,
+            "x": 1311.9797940805968,
+            "y": 374.6608410515782,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -5375,15 +5103,24 @@
             "git_url": "",
             "sha": "1.0",
             "group": -46,
-            "inputPorts": [],
+            "inputPorts": [
+                {
+                    "Id": "d779877f-d07c-40a6-af02-534b0cf26702",
+                    "IdText": "griddata",
+                    "text": "griddata",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "Visibilities, Gridded"
+                }
+            ],
             "outputPorts": [
                 {
-                    "Id": "dd1f6f7c-e4be-4413-a60f-5f2301cee928",
-                    "IdText": "output",
-                    "text": "output",
+                    "Id": "0b5d3e6e-7b7b-4157-be08-c7edba4f3303",
+                    "IdText": "vis",
+                    "text": "vis",
                     "event": false,
-                    "type": "None",
-                    "description": "BlockVisibility"
+                    "type": "Complex",
+                    "description": "BlockVis "
                 }
             ],
             "inputLocalPorts": [],
@@ -5531,8 +5268,8 @@
             "key": -56,
             "text": "grid_blockvisibility_to_griddata",
             "description": "Grid BlockVisibility onto a GridData",
-            "x": 2342.3325099982067,
-            "y": 366.7155764269241,
+            "x": 2321.3325099982067,
+            "y": 372.7155764269241,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -5545,15 +5282,32 @@
             "git_url": "",
             "sha": "1.0",
             "group": -46,
-            "inputPorts": [],
+            "inputPorts": [
+                {
+                    "Id": "186a96a4-f5a4-4a53-9410-d23160d357e7",
+                    "IdText": "vis",
+                    "text": "vis",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "BlockVis "
+                },
+                {
+                    "Id": "f74206c1-3525-4d04-ba67-2ebf377d0bc2",
+                    "IdText": "vis",
+                    "text": "vis",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "BlockVis "
+                }
+            ],
             "outputPorts": [
                 {
-                    "Id": "9ecb72c7-f0cc-4890-8e72-cf35817296e9",
-                    "IdText": "output",
-                    "text": "output",
+                    "Id": "299ab776-3fda-4850-a695-6aeb179a349c",
+                    "IdText": "griddata",
+                    "text": "griddata",
                     "event": false,
-                    "type": "None",
-                    "description": "GridData"
+                    "type": "Complex",
+                    "description": "Visibilities, Gridded"
                 }
             ],
             "inputLocalPorts": [],
@@ -5598,7 +5352,7 @@
                 {
                     "text": "Group start",
                     "name": "group_start",
-                    "value": false,
+                    "value": true,
                     "defaultValue": "",
                     "description": "Is this node the start of a group?",
                     "readonly": false,
@@ -5689,8 +5443,8 @@
             "key": -58,
             "text": "fft_griddata_to_image",
             "description": "FFT griddata after applying gcf\n\nIf imaginary is true the data array is complex",
-            "x": 2319.738823832001,
-            "y": 588.4161219328153,
+            "x": 2292.738823832001,
+            "y": 592.4161219328153,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -5703,15 +5457,24 @@
             "git_url": "",
             "sha": "1.0",
             "group": -46,
-            "inputPorts": [],
+            "inputPorts": [
+                {
+                    "Id": "5d2bf408-347c-4f3b-a0fc-66419b595dbb",
+                    "IdText": "griddata",
+                    "text": "griddata",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "Visibilities, Gridded"
+                }
+            ],
             "outputPorts": [
                 {
-                    "Id": "91b43ccd-0b73-4243-ba03-52620787ddf0",
-                    "IdText": "output",
-                    "text": "output",
+                    "Id": "03655aca-a58c-497b-a08e-0d51575a59d4",
+                    "IdText": "im",
+                    "text": "im",
                     "event": false,
-                    "type": "None",
-                    "description": ""
+                    "type": "Complex",
+                    "description": "Image"
                 }
             ],
             "inputLocalPorts": [],
@@ -5968,6 +5731,372 @@
                     "description": "",
                     "readonly": false,
                     "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "isGroup": false,
+            "color": "#0059a5",
+            "drawOrderHint": 0,
+            "key": -10,
+            "text": "flagging_blockvisibility",
+            "description": "Flagging BlockVisibility",
+            "x": 1901.9601982976128,
+            "y": 423.51094222212134,
+            "width": 200,
+            "height": 72,
+            "collapsed": false,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "git_url": "",
+            "sha": "1.0",
+            "group": -46,
+            "inputPorts": [
+                {
+                    "Id": "a5fa3c55-39f7-467c-8528-3a1c89d6937c",
+                    "IdText": "bvis",
+                    "text": "bvis",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "BlockVis "
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "ec4aed41-2cf4-455e-b191-109da3319723",
+                    "IdText": "bvis",
+                    "text": "bvis",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "BlockVis "
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg.apps.pyfunc.PyFuncApp",
+                    "defaultValue": "",
+                    "description": "The python class that implements this application",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimate of execution time (in seconds) for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of CPUs used for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "Function Name",
+                    "name": "func_name",
+                    "value": "rascil.processing_components.flagging.operations.flagging_blockvisibility",
+                    "defaultValue": "",
+                    "description": "Python function name",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": "true"
+                },
+                {
+                    "text": "Pickle",
+                    "name": "pickle",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Whether the python arguments are pickled.",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": "true"
+                },
+                {
+                    "text": "bvis",
+                    "name": "bvis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "BlockVisibility",
+                    "readonly": false,
+                    "type": "bvis",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "baselines",
+                    "name": "baselines",
+                    "value": "None",
+                    "defaultValue": "",
+                    "description": "The list of baseline numbers to flag",
+                    "readonly": false,
+                    "type": "baselines",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "antennas",
+                    "name": "antennas",
+                    "value": "None",
+                    "defaultValue": "",
+                    "description": "The list of antenna number to flag",
+                    "readonly": false,
+                    "type": "antennas",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "channels",
+                    "name": "channels",
+                    "value": "None",
+                    "defaultValue": "",
+                    "description": "The list of Channel number to flag",
+                    "readonly": false,
+                    "type": "channels",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "polarisations",
+                    "name": "polarisations",
+                    "value": "None",
+                    "defaultValue": "",
+                    "description": "The list of polarisations to flag",
+                    "readonly": false,
+                    "type": "polarisations",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "isGroup": false,
+            "color": "#0059a5",
+            "drawOrderHint": 0,
+            "key": -36,
+            "text": "subtract_visibility",
+            "description": "Subtract model_vis from vis, returning new visibility",
+            "x": 1608.8673445690029,
+            "y": 384.3282424625154,
+            "width": 200,
+            "height": 72,
+            "collapsed": false,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "git_url": "",
+            "sha": "1.0",
+            "group": -46,
+            "inputPorts": [
+                {
+                    "Id": "f9af4c10-633b-4114-83e8-f16faf3f2499",
+                    "IdText": "vis",
+                    "text": "vis",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "BlockVis "
+                },
+                {
+                    "Id": "9a40246b-cf37-4be1-a927-15f8141f8c99",
+                    "IdText": "modelvis",
+                    "text": "modevis",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "Model as BlockVis "
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "1b13b680-76a0-4722-b805-9bd39474fee8",
+                    "IdText": "vis",
+                    "text": "vis",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "BlockVis "
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg.apps.pyfunc.PyFuncApp",
+                    "defaultValue": "",
+                    "description": "The python class that implements this application",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimate of execution time (in seconds) for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of CPUs used for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "Function Name",
+                    "name": "func_name",
+                    "value": "rascil.processing_components.visibility.operations.subtract_visibility",
+                    "defaultValue": "",
+                    "description": "Python function name",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": "true"
+                },
+                {
+                    "text": "Pickle",
+                    "name": "pickle",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Whether the python arguments are pickled.",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": "true"
+                },
+                {
+                    "text": "vis",
+                    "name": "vis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "vis",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "modelvis",
+                    "name": "modelvis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": true
+                },
+                {
+                    "text": "inplace",
+                    "name": "inplace",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Boolean",
                     "precious": false,
                     "options": [],
                     "positional": "false"
