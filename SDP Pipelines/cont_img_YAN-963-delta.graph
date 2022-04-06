@@ -14,7 +14,7 @@
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": "",
-        "numLGNodes": 56
+        "numLGNodes": 55
     },
     "nodeDataArray": [
         {
@@ -128,7 +128,7 @@
             "key": -7,
             "text": "Config",
             "description": "Is this an image or a list?\n",
-            "x": 702.3861245331487,
+            "x": 713.6371957350383,
             "y": -15.321511290846697,
             "width": 200,
             "height": 72,
@@ -166,6 +166,14 @@
                     "event": false,
                     "type": "Complex",
                     "description": "Image parameters"
+                },
+                {
+                    "Id": "aba9ce2f-2a71-421e-932c-0b039d101e1b",
+                    "IdText": "msfile",
+                    "text": "msfile",
+                    "event": false,
+                    "type": "String",
+                    "description": "input MS file"
                 }
             ],
             "inputLocalPorts": [],
@@ -756,193 +764,6 @@
                     "description": "Type of calibration matrix T or G or B",
                     "readonly": false,
                     "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "kwargs",
-                    "name": "kwargs",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "inputApplicationDescription": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "outputApplicationDescription": ""
-        },
-        {
-            "category": "PythonApp",
-            "isGroup": false,
-            "color": "#0059a5",
-            "drawOrderHint": 0,
-            "key": -19,
-            "text": "apply_gaintable",
-            "description": "Apply a gain table to a block visibility\n\nThe corrected visibility is::\n\n    V_corrected = {g_i * g_j^*}^-1 V_obs\n\nIf the visibility data are polarised e.g. polarisation_frame(\"linear\") then the inverse operator\nrepresents an actual inverse of the gains.",
-            "x": 1947.8468037828877,
-            "y": 246.82266513683655,
-            "width": 200,
-            "height": 72,
-            "collapsed": true,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "expanded": false,
-            "readonly": false,
-            "git_url": "",
-            "sha": "1.0",
-            "group": -57,
-            "inputPorts": [
-                {
-                    "Id": "21048085-ceb4-482a-b204-6cdb19051465",
-                    "IdText": "vis",
-                    "text": "vis",
-                    "event": false,
-                    "type": "Complex",
-                    "description": "BlockVis "
-                },
-                {
-                    "Id": "c032baca-c012-4348-a66f-94a9e951c76e",
-                    "IdText": "gt",
-                    "text": "gt",
-                    "event": false,
-                    "type": "Complex",
-                    "description": "Gain Table"
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "028ad0aa-c10e-4223-b852-7f7820025551",
-                    "IdText": "vis",
-                    "text": "vis",
-                    "event": false,
-                    "type": "Complex",
-                    "description": "BlockVis "
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Application Class",
-                    "name": "appclass",
-                    "value": "dlg.apps.pyfunc.PyFuncApp",
-                    "defaultValue": "",
-                    "description": "The python class that implements this application",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "Execution Time",
-                    "name": "execution_time",
-                    "value": 5,
-                    "defaultValue": "",
-                    "description": "Estimate of execution time (in seconds) for this application.",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "No. of CPUs",
-                    "name": "num_cpus",
-                    "value": 1,
-                    "defaultValue": "",
-                    "description": "Number of CPUs used for this application.",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "Group start",
-                    "name": "group_start",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Is this node the start of a group?",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                }
-            ],
-            "applicationArgs": [
-                {
-                    "text": "Function Name",
-                    "name": "func_name",
-                    "value": "rascil.processing_components.calibration.operations.apply_gaintable",
-                    "defaultValue": "",
-                    "description": "Python function name",
-                    "readonly": true,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": "true"
-                },
-                {
-                    "text": "Pickle",
-                    "name": "pickle",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Whether the python arguments are pickled.",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": "true"
-                },
-                {
-                    "text": "vis",
-                    "name": "vis",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "blockvisibility to have gains applied",
-                    "readonly": false,
-                    "type": "BlockVisibility",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "gt",
-                    "name": "gt",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Gaintable to be applied",
-                    "readonly": false,
-                    "type": "GainTable",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "inverse",
-                    "name": "inverse",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Apply the inverse (default=False)",
-                    "readonly": false,
-                    "type": "Boolean",
                     "precious": false,
                     "options": [],
                     "positional": "false"
@@ -2253,7 +2074,16 @@
             "readonly": false,
             "git_url": "",
             "sha": "",
-            "inputPorts": [],
+            "inputPorts": [
+                {
+                    "Id": "c23a1e98-3b88-4684-bd16-c894890615e8",
+                    "IdText": "vis",
+                    "text": "vis",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "BlockVis "
+                }
+            ],
             "outputPorts": [
                 {
                     "Id": "2388e488-8c0f-44b4-8d56-883998e5090c",
@@ -3781,193 +3611,6 @@
                 }
             ],
             "applicationArgs": [],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "inputApplicationDescription": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "outputApplicationDescription": ""
-        },
-        {
-            "category": "PythonApp",
-            "isGroup": false,
-            "color": "#0059a5",
-            "drawOrderHint": 0,
-            "key": -9,
-            "text": "predict_awprojection",
-            "description": "Predict using convolutional degridding and an AW kernel\n\nNote that the gridding correction function (gcf) and convolution function (cf) can be passed\nas a partial function. So the caller must supply a partial function to\ncalculate the gcf, cf tuple for an image model.",
-            "x": 1418.9904345062055,
-            "y": 482.49698021870665,
-            "width": 200,
-            "height": 72,
-            "collapsed": true,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "expanded": false,
-            "readonly": false,
-            "git_url": "",
-            "sha": "1.0",
-            "group": -46,
-            "inputPorts": [
-                {
-                    "Id": "e527a1e2-0e5d-47e6-a4e5-40515397dee9",
-                    "IdText": "vis",
-                    "text": "vis",
-                    "event": false,
-                    "type": "Complex",
-                    "description": "BlockVis "
-                },
-                {
-                    "Id": "37dc599d-61da-41a8-b0fc-a213794c75e6",
-                    "IdText": "sc",
-                    "text": "sc",
-                    "event": false,
-                    "type": "Complex",
-                    "description": "Model as Components"
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "39c1f095-51e5-49f9-940d-b3ea7d3d87ef",
-                    "IdText": "modelvis",
-                    "text": "modevis",
-                    "event": false,
-                    "type": "Complex",
-                    "description": "Model as BlockVis "
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Application Class",
-                    "name": "appclass",
-                    "value": "dlg.apps.pyfunc.PyFuncApp",
-                    "defaultValue": "",
-                    "description": "The python class that implements this application",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "Execution Time",
-                    "name": "execution_time",
-                    "value": 5,
-                    "defaultValue": "",
-                    "description": "Estimate of execution time (in seconds) for this application.",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "No. of CPUs",
-                    "name": "num_cpus",
-                    "value": 1,
-                    "defaultValue": "",
-                    "description": "Number of CPUs used for this application.",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "Group start",
-                    "name": "group_start",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Is this node the start of a group?",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                }
-            ],
-            "applicationArgs": [
-                {
-                    "text": "Function Name",
-                    "name": "func_name",
-                    "value": "rascil.processing_components.imaging.base.predict_awprojection",
-                    "defaultValue": "",
-                    "description": "Python function name",
-                    "readonly": true,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": "true"
-                },
-                {
-                    "text": "Pickle",
-                    "name": "pickle",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Whether the python arguments are pickled.",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": "true"
-                },
-                {
-                    "text": "vis",
-                    "name": "vis",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "blockvisibility to be predicted",
-                    "readonly": false,
-                    "type": "BlockVisibility",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "model",
-                    "name": "model",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "model image",
-                    "readonly": false,
-                    "type": "Image",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "gcfcf",
-                    "name": "gcfcf",
-                    "value": "None",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "gcfcf",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "kwargs",
-                    "name": "kwargs",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                }
-            ],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -6698,6 +6341,244 @@
             "outputApplicationType": "None",
             "outputApplicationKey": null,
             "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "isGroup": false,
+            "color": "#0059a5",
+            "drawOrderHint": 0,
+            "key": -41,
+            "text": "create_blockvisibility_from_ms",
+            "description": "Minimal MS to BlockVisibility converter\n\nThe MS format is much more general than the RASCIL BlockVisibility so we cut many corners.\nThis requires casacore to be installed. If not an exception ModuleNotFoundError is raised.\n\nCreates a list of BlockVisibility's, split by field and spectral window\n\nReading of a subset of channels is possible using either start_chan and end_chan or channnum. Using start_chan\nand end_chan is preferred since it only reads the channels required. Channum is more flexible and can be used to\nread a random list of channels.",
+            "x": 1280.506873249111,
+            "y": -160.64819199768885,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "git_url": "",
+            "sha": "1.0",
+            "inputPorts": [
+                {
+                    "Id": "290050c3-ccab-4207-a07f-c66d68373411",
+                    "IdText": "msfile",
+                    "text": "msfile",
+                    "event": false,
+                    "type": "String",
+                    "description": "input MS file"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "e4ff4d89-a636-438a-8c9a-64c252cdcd72",
+                    "IdText": "vis",
+                    "text": "vis",
+                    "event": false,
+                    "type": "vis",
+                    "description": ""
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg.apps.pyfunc.PyFuncApp",
+                    "defaultValue": "",
+                    "description": "The python class that implements this application",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimate of execution time (in seconds) for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of CPUs used for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "Function Name",
+                    "name": "func_name",
+                    "value": "rascil.processing_components.visibility.base.create_blockvisibility_from_ms",
+                    "defaultValue": "",
+                    "description": "Python function name",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": "true"
+                },
+                {
+                    "text": "Pickle",
+                    "name": "pickle",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Whether the python arguments are pickled.",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": "true"
+                },
+                {
+                    "text": "msname",
+                    "name": "msname",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "File name of MS",
+                    "readonly": false,
+                    "type": "msname",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "channum",
+                    "name": "channum",
+                    "value": "None",
+                    "defaultValue": "",
+                    "description": "range of channels e.g. range(17,32), default is None meaning all",
+                    "readonly": false,
+                    "type": "channum",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "start_chan",
+                    "name": "start_chan",
+                    "value": "None",
+                    "defaultValue": "",
+                    "description": "Starting channel to read",
+                    "readonly": false,
+                    "type": "start_chan",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "end_chan",
+                    "name": "end_chan",
+                    "value": "None",
+                    "defaultValue": "",
+                    "description": "End channel to read",
+                    "readonly": false,
+                    "type": "end_chan",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "ack",
+                    "name": "ack",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Ask casacore to acknowledge each table operation",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "datacolumn",
+                    "name": "datacolumn",
+                    "value": "DATA",
+                    "defaultValue": "",
+                    "description": "MS data column to read DATA, CORRECTED_DATA, or MODEL_DATA",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "selected_sources",
+                    "name": "selected_sources",
+                    "value": "None",
+                    "defaultValue": "",
+                    "description": "Sources to select",
+                    "readonly": false,
+                    "type": "selected_sources",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "selected_dds",
+                    "name": "selected_dds",
+                    "value": "None",
+                    "defaultValue": "",
+                    "description": "Data descriptors to select",
+                    "readonly": false,
+                    "type": "selected_dds",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "average_channels",
+                    "name": "average_channels",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Average all channels read",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
         }
     ],
     "linkDataArray": [
@@ -6762,20 +6643,6 @@
             "fromPort": "498413ee-08a6-4668-8ea4-0f8e3dda7384",
             "to": -11,
             "toPort": "b0cf1def-827a-4085-99c6-dd6151a93616",
-            "loop_aware": "0"
-        },
-        {
-            "from": -34,
-            "fromPort": "2388e488-8c0f-44b4-8d56-883998e5090c",
-            "to": -19,
-            "toPort": "21048085-ceb4-482a-b204-6cdb19051465",
-            "loop_aware": "1"
-        },
-        {
-            "from": -19,
-            "fromPort": "028ad0aa-c10e-4223-b852-7f7820025551",
-            "to": -16,
-            "toPort": "7e2f8261-6255-40d0-b713-57e3173fcf57",
             "loop_aware": "0"
         },
         {
@@ -6898,25 +6765,11 @@
             "loop_aware": "1"
         },
         {
-            "from": -9,
-            "fromPort": "39c1f095-51e5-49f9-940d-b3ea7d3d87ef",
-            "to": -21,
-            "toPort": "01f322fa-2e27-4521-b755-1740d6cc0c11",
-            "loop_aware": "0"
-        },
-        {
             "from": -21,
             "fromPort": "f35c47fd-d41e-4de7-8dfd-4b7cef15ec4c",
             "to": -36,
             "toPort": "9a40246b-cf37-4be1-a927-15f8141f8c99",
             "loop_aware": "0"
-        },
-        {
-            "from": -38,
-            "fromPort": "e5543ae5-5d4f-4f3b-b7be-9986de3d9e27",
-            "to": -9,
-            "toPort": "e527a1e2-0e5d-47e6-a4e5-40515397dee9",
-            "loop_aware": "1"
         },
         {
             "from": -40,
@@ -6961,13 +6814,6 @@
             "loop_aware": "0"
         },
         {
-            "from": -39,
-            "fromPort": "8c6f33db-dc44-45bd-85d2-f919f4afb5d5",
-            "to": -9,
-            "toPort": "37dc599d-61da-41a8-b0fc-a213794c75e6",
-            "loop_aware": "0"
-        },
-        {
             "from": -43,
             "fromPort": "cfacb3c6-945c-4e68-b421-3322e7ff7b09",
             "to": -42,
@@ -7008,13 +6854,6 @@
             "to": -18,
             "toPort": "f4f48573-dffd-4c34-a241-38b8851e74a2",
             "loop_aware": "1"
-        },
-        {
-            "from": -11,
-            "fromPort": "5dcee8b1-5211-46b2-8677-455d26c6eb4d",
-            "to": -19,
-            "toPort": "c032baca-c012-4348-a66f-94a9e951c76e",
-            "loop_aware": "0"
         },
         {
             "from": -7,
@@ -7147,6 +6986,20 @@
             "fromPort": "629acaf2-b251-4f01-8bb1-cb384654ae3a",
             "to": -50,
             "toPort": "549aca30-b00a-4850-b3c7-5c833dad3fcf",
+            "loop_aware": "0"
+        },
+        {
+            "from": -41,
+            "fromPort": "e4ff4d89-a636-438a-8c9a-64c252cdcd72",
+            "to": -34,
+            "toPort": "c23a1e98-3b88-4684-bd16-c894890615e8",
+            "loop_aware": "0"
+        },
+        {
+            "from": -7,
+            "fromPort": "aba9ce2f-2a71-421e-932c-0b039d101e1b",
+            "to": -41,
+            "toPort": "290050c3-ccab-4207-a07f-c66d68373411",
             "loop_aware": "0"
         }
     ]
