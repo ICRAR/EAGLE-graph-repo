@@ -14,7 +14,7 @@
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": "",
-        "numLGNodes": 54
+        "numLGNodes": 55
     },
     "nodeDataArray": [
         {
@@ -311,201 +311,6 @@
                 }
             ],
             "applicationArgs": [],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "inputApplicationDescription": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "outputApplicationDescription": ""
-        },
-        {
-            "category": "PythonApp",
-            "isGroup": false,
-            "color": "#0059a5",
-            "drawOrderHint": 0,
-            "key": -14,
-            "text": "predict_awprojection",
-            "description": "Predict using convolutional degridding and an AW kernel\n\nNote that the gridding correction function (gcf) and convolution function (cf) can be passed\nas a partial function. So the caller must supply a partial function to\ncalculate the gcf, cf tuple for an image model.",
-            "x": 1218.8534013208484,
-            "y": 204.26793130055188,
-            "width": 200,
-            "height": 72,
-            "collapsed": true,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "expanded": false,
-            "readonly": false,
-            "git_url": "",
-            "sha": "1.0",
-            "group": -57,
-            "inputPorts": [
-                {
-                    "Id": "9699d1ff-7074-43c0-ab80-a4824a05cee6",
-                    "IdText": "vis",
-                    "text": "vis",
-                    "event": false,
-                    "type": "Complex",
-                    "description": "BlockVis "
-                },
-                {
-                    "Id": "ec9317ed-f5b2-4476-a3a6-7daa2fca19e3",
-                    "IdText": "sc",
-                    "text": "sc",
-                    "event": false,
-                    "type": "Complex",
-                    "description": "Model as Components"
-                },
-                {
-                    "Id": "790a7463-6da1-45fd-9285-fbd2729955f6",
-                    "IdText": "sc_ref",
-                    "text": "sc_ref",
-                    "event": false,
-                    "type": "sc",
-                    "description": ""
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "13339320-3b49-486b-8ba6-468fc5debde6",
-                    "IdText": "modelvis",
-                    "text": "modevis",
-                    "event": false,
-                    "type": "Complex",
-                    "description": "Model as BlockVis "
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Application Class",
-                    "name": "appclass",
-                    "value": "dlg.apps.pyfunc.PyFuncApp",
-                    "defaultValue": "",
-                    "description": "The python class that implements this application",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "Execution Time",
-                    "name": "execution_time",
-                    "value": 5,
-                    "defaultValue": "",
-                    "description": "Estimate of execution time (in seconds) for this application.",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "No. of CPUs",
-                    "name": "num_cpus",
-                    "value": 1,
-                    "defaultValue": "",
-                    "description": "Number of CPUs used for this application.",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "Group start",
-                    "name": "group_start",
-                    "value": true,
-                    "defaultValue": "",
-                    "description": "Is this node the start of a group?",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                }
-            ],
-            "applicationArgs": [
-                {
-                    "text": "Function Name",
-                    "name": "func_name",
-                    "value": "rascil.processing_components.imaging.base.predict_awprojection",
-                    "defaultValue": "",
-                    "description": "Python function name",
-                    "readonly": true,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": "true"
-                },
-                {
-                    "text": "Pickle",
-                    "name": "pickle",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Whether the python arguments are pickled.",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": "true"
-                },
-                {
-                    "text": "vis",
-                    "name": "vis",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "blockvisibility to be predicted",
-                    "readonly": false,
-                    "type": "BlockVisibility",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "model",
-                    "name": "model",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "model image",
-                    "readonly": false,
-                    "type": "Image",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "gcfcf",
-                    "name": "gcfcf",
-                    "value": "None",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "gcfcf",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "kwargs",
-                    "name": "kwargs",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                }
-            ],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -2312,8 +2117,8 @@
             "key": -61,
             "text": "sc",
             "description": "In-memory storage of intermediate data products",
-            "x": 1120.609667760628,
-            "y": 226.91470984229267,
+            "x": 1126.3441491127858,
+            "y": 328.2238803970799,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -6462,6 +6267,271 @@
             "outputApplicationType": "None",
             "outputApplicationKey": null,
             "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "isGroup": false,
+            "color": "#0059a5",
+            "drawOrderHint": 0,
+            "key": -31,
+            "text": "dft_skycomponent_visibility",
+            "description": "DFT to get the visibility from a Skycomponent, for BlockVisibility",
+            "x": 1109.3008202299973,
+            "y": 131.20892205501713,
+            "width": 200,
+            "height": 72,
+            "collapsed": false,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": false,
+            "git_url": "",
+            "sha": "1.0",
+            "group": -57,
+            "inputPorts": [
+                {
+                    "Id": "68c46c4a-1b4c-49f3-9db8-8bfbd461a163",
+                    "IdText": "vis",
+                    "text": "vis",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "BlockVis "
+                },
+                {
+                    "Id": "b88080e2-cca0-4c45-a4a0-46278a88f807",
+                    "IdText": "sc",
+                    "text": "sc",
+                    "event": false,
+                    "type": "sc",
+                    "description": ""
+                },
+                {
+                    "Id": "46b6390e-4cd7-4e39-827a-31b7ed1003de",
+                    "IdText": "sc_ref",
+                    "text": "sc_ref",
+                    "event": false,
+                    "type": "sc",
+                    "description": ""
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "9fd9a7ec-1cc7-4e60-bb79-9804b7082208",
+                    "IdText": "modelvis",
+                    "text": "modelvis",
+                    "event": false,
+                    "type": "modelvis",
+                    "description": ""
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg.apps.pyfunc.PyFuncApp",
+                    "defaultValue": "",
+                    "description": "The python class that implements this application",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimate of execution time (in seconds) for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of CPUs used for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": true,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "Function Name",
+                    "name": "func_name",
+                    "value": "rascil.processing_components.imaging.dft.dft_skycomponent_visibility",
+                    "defaultValue": "",
+                    "description": "Python function name",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": "true"
+                },
+                {
+                    "text": "Pickle",
+                    "name": "pickle",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Whether the python arguments are pickled.",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": "true"
+                },
+                {
+                    "text": "vis",
+                    "name": "vis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "BlockVisibility",
+                    "readonly": false,
+                    "type": "BlockVisibility",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "sc",
+                    "name": "sc",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Skycomponent or list of SkyComponents",
+                    "readonly": false,
+                    "type": "Union]",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "kwargs",
+                    "name": "kwargs",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "Memory",
+            "isGroup": false,
+            "color": "#2c2c2c",
+            "drawOrderHint": 0,
+            "key": -41,
+            "text": "modelvis",
+            "description": "In-memory storage of intermediate data products",
+            "x": 1354.784100601357,
+            "y": 156.45281082473605,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "readonly": true,
+            "git_url": "EAGLE_test_repo",
+            "sha": "master",
+            "group": -57,
+            "inputPorts": [
+                {
+                    "Id": "770a805b-52b1-4254-b141-abaf928622b1",
+                    "IdText": "modelvis",
+                    "text": "modelvis",
+                    "event": false,
+                    "type": "modelvis",
+                    "description": ""
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "a76b34f1-f257-4173-831f-b358d5811971",
+                    "IdText": "modelvis",
+                    "text": "modelvis",
+                    "event": false,
+                    "type": "modelvis",
+                    "description": ""
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "defaultValue": "False",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": "false"
+                }
+            ],
+            "applicationArgs": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
         }
     ],
     "linkDataArray": [
@@ -6484,20 +6554,6 @@
             "fromPort": "4b637a76-127e-4185-bdd8-e880ef9c78b9",
             "to": -61,
             "toPort": "9dc02a00-1e9e-4d91-8f5f-b7fc1f61eb7a",
-            "loop_aware": "0"
-        },
-        {
-            "from": -34,
-            "fromPort": "2388e488-8c0f-44b4-8d56-883998e5090c",
-            "to": -14,
-            "toPort": "9699d1ff-7074-43c0-ab80-a4824a05cee6",
-            "loop_aware": "1"
-        },
-        {
-            "from": -14,
-            "fromPort": "13339320-3b49-486b-8ba6-468fc5debde6",
-            "to": -4,
-            "toPort": "47c0056d-c5f3-4ade-b5a9-2c2c0f5fc6db",
             "loop_aware": "0"
         },
         {
@@ -6753,13 +6809,6 @@
             "loop_aware": "1"
         },
         {
-            "from": -61,
-            "fromPort": "80259270-474d-45d6-b3e0-7642d68db29e",
-            "to": -14,
-            "toPort": "790a7463-6da1-45fd-9285-fbd2729955f6",
-            "loop_aware": "0"
-        },
-        {
             "from": -30,
             "fromPort": "983e5c02-1ada-450d-b0ed-b188b835e459",
             "to": -12,
@@ -6898,6 +6947,41 @@
             "to": -49,
             "toPort": "61bbf51b-bf51-4b0e-96d6-801be558598a",
             "loop_aware": "1"
+        },
+        {
+            "from": -31,
+            "fromPort": "9fd9a7ec-1cc7-4e60-bb79-9804b7082208",
+            "to": -41,
+            "toPort": "770a805b-52b1-4254-b141-abaf928622b1",
+            "loop_aware": "0"
+        },
+        {
+            "from": -41,
+            "fromPort": "a76b34f1-f257-4173-831f-b358d5811971",
+            "to": -18,
+            "toPort": "3199de0f-641b-4806-9e82-0799094540a9",
+            "loop_aware": "0"
+        },
+        {
+            "from": -61,
+            "fromPort": "80259270-474d-45d6-b3e0-7642d68db29e",
+            "to": -31,
+            "toPort": "46b6390e-4cd7-4e39-827a-31b7ed1003de",
+            "loop_aware": "0"
+        },
+        {
+            "from": -34,
+            "fromPort": "2388e488-8c0f-44b4-8d56-883998e5090c",
+            "to": -31,
+            "toPort": "68c46c4a-1b4c-49f3-9db8-8bfbd461a163",
+            "loop_aware": "1"
+        },
+        {
+            "from": -31,
+            "fromPort": "9fd9a7ec-1cc7-4e60-bb79-9804b7082208",
+            "to": -4,
+            "toPort": "47c0056d-c5f3-4ade-b5a9-2c2c0f5fc6db",
+            "loop_aware": "0"
         }
     ]
 }
