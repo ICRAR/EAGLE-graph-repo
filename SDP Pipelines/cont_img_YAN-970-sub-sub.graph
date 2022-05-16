@@ -1167,10 +1167,10 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -11,
-            "text": "gt",
+            "text": "Gain Table",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "x": 1356.2187762199571,
-            "y": -250.35003278247675,
+            "x": 1693.617219463179,
+            "y": -249.78863770220516,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -1234,7 +1234,7 @@
                 {
                     "text": "File Path",
                     "name": "filepath",
-                    "value": "",
+                    "value": "gain_table",
                     "defaultValue": "",
                     "description": "Path to the file for this node",
                     "readonly": false,
@@ -2312,166 +2312,6 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "Memory",
-            "isGroup": false,
-            "color": "#2c2c2c",
-            "drawOrderHint": 0,
-            "key": -30,
-            "text": "sc",
-            "description": "In-memory storage of intermediate data products",
-            "x": 1655.1332302930764,
-            "y": -79.72539799132122,
-            "width": 200,
-            "height": 72,
-            "collapsed": true,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "expanded": false,
-            "git_url": "https://github.com/ICRAR/daliuge.git",
-            "sha": "226fab0",
-            "inputPorts": [
-                {
-                    "Id": "cc739dd9-47d3-4d39-b2d4-ee2e5a05f0ca",
-                    "IdText": "sc",
-                    "text": "sc",
-                    "event": false,
-                    "type": "sc",
-                    "description": ""
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "a82d4417-e5a8-4fd2-9ce9-b8b29490bce8",
-                    "IdText": "sc",
-                    "text": "sc",
-                    "event": false,
-                    "type": "sc",
-                    "description": ""
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Data volume",
-                    "name": "data_volume",
-                    "value": 5,
-                    "defaultValue": "",
-                    "description": "Estimated size of the data contained in this node",
-                    "readonly": false,
-                    "type": "Float",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "Group end",
-                    "name": "group_end",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Is this node the end of a group?",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                }
-            ],
-            "applicationArgs": [],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "inputApplicationDescription": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "outputApplicationDescription": ""
-        },
-        {
-            "category": "Memory",
-            "isGroup": false,
-            "color": "#2c2c2c",
-            "drawOrderHint": 0,
-            "key": -32,
-            "text": "cg",
-            "description": "In-memory storage of intermediate data products",
-            "x": 1728.2174594657838,
-            "y": 33.003987414204374,
-            "width": 200,
-            "height": 72,
-            "collapsed": true,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "expanded": false,
-            "git_url": "https://github.com/ICRAR/daliuge.git",
-            "sha": "226fab0",
-            "inputPorts": [
-                {
-                    "Id": "7cc2693e-0b94-4615-a222-4b5315357382",
-                    "IdText": "cg",
-                    "text": "cg",
-                    "event": false,
-                    "type": "cg",
-                    "description": ""
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "3f2a20e5-dd84-43d8-90f5-f091c1969d52",
-                    "IdText": "cg",
-                    "text": "cg",
-                    "event": false,
-                    "type": "cg",
-                    "description": ""
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Data volume",
-                    "name": "data_volume",
-                    "value": 5,
-                    "defaultValue": "",
-                    "description": "Estimated size of the data contained in this node",
-                    "readonly": false,
-                    "type": "Float",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                },
-                {
-                    "text": "Group end",
-                    "name": "group_end",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Is this node the end of a group?",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": "false"
-                }
-            ],
-            "applicationArgs": [],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "inputApplicationDescription": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "outputApplicationDescription": ""
-        },
-        {
             "category": "PythonApp",
             "isGroup": false,
             "color": "#0059a5",
@@ -2479,8 +2319,8 @@
             "key": -37,
             "text": "create_convolutionfunction_from_image",
             "description": "Create a convolution function from an image\n\nThe griddata has axes [chan, pol, z, dy, dx, y, x] where z, y, x are spatial axes in either sky or Fourier plane. The\norder in the WCS is reversed so the grid_WCS describes UU, VV, WW, STOKES, FREQ axes\n\nThe axes UU,VV have the same physical stride as the image, The axes DUU, DVV are subsampled.\n\nConvolution function holds the original sky plane projection in the projection_wcs.",
-            "x": 1547.1604155705265,
-            "y": 33.93031595979484,
+            "x": 1517.406476316133,
+            "y": 32.80752579925167,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -2512,10 +2352,10 @@
             "outputPorts": [
                 {
                     "Id": "f572a630-ed19-4bd5-98d7-4c50e1d9b982",
-                    "IdText": "cg",
-                    "text": "cg",
+                    "IdText": "cf",
+                    "text": "cf",
                     "event": false,
-                    "type": "cg",
+                    "type": "cf",
                     "description": ""
                 }
             ],
@@ -3262,8 +3102,8 @@
             "key": -1,
             "text": "create_image_from_visibility",
             "description": "Make an empty image from params and BlockVisibility\n\nThis makes an empty, template image consistent with the visibility, allowing optional overriding of select\nparameters. This is a convenience function and does not transform the visibilities.",
-            "x": 836.518481023259,
-            "y": -172.48888050479673,
+            "x": 819.1152335348398,
+            "y": -166.31353462180928,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -3774,6 +3614,220 @@
             "outputApplicationType": "None",
             "outputApplicationKey": null,
             "outputApplicationDescription": ""
+        },
+        {
+            "category": "File",
+            "isGroup": false,
+            "color": "#2c2c2c",
+            "drawOrderHint": 0,
+            "key": -3,
+            "text": "Sky Components",
+            "description": "A standard file on a filesystem mounted to the deployment machine",
+            "x": 1701.686645756261,
+            "y": -79.37911192174637,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "git_url": "https://github.com/ICRAR/daliuge.git",
+            "sha": "a8844e1",
+            "inputPorts": [
+                {
+                    "Id": "e476b418-d6c8-4a60-b2f1-55de20bd05fb",
+                    "IdText": "sc",
+                    "text": "sc",
+                    "event": false,
+                    "type": "sc",
+                    "description": ""
+                }
+            ],
+            "outputPorts": [],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "defaultValue": "False",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Check file path exists",
+                    "name": "check_filepath_exists",
+                    "value": true,
+                    "defaultValue": "True",
+                    "description": "Perform a check to make sure the file path exists before proceeding with the application",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "File Path",
+                    "name": "filepath",
+                    "value": "sky_components",
+                    "defaultValue": "",
+                    "description": "Path to the file for this node",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Directory name",
+                    "name": "dirname",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Path to the file for this node",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "File",
+            "isGroup": false,
+            "color": "#2c2c2c",
+            "drawOrderHint": 0,
+            "key": -8,
+            "text": "Convolution Function",
+            "description": "A standard file on a filesystem mounted to the deployment machine",
+            "x": 1701.686645756261,
+            "y": 32.338509052298704,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "git_url": "https://github.com/ICRAR/daliuge.git",
+            "sha": "a8844e1",
+            "inputPorts": [
+                {
+                    "Id": "f0b7dff1-d303-42d0-9751-d42e9e1a7ee0",
+                    "IdText": "cf",
+                    "text": "cf",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "Convolution Function"
+                }
+            ],
+            "outputPorts": [],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "defaultValue": "False",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Check file path exists",
+                    "name": "check_filepath_exists",
+                    "value": true,
+                    "defaultValue": "True",
+                    "description": "Perform a check to make sure the file path exists before proceeding with the application",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "File Path",
+                    "name": "filepath",
+                    "value": "convolution_function",
+                    "defaultValue": "",
+                    "description": "Path to the file for this node",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Directory name",
+                    "name": "dirname",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Path to the file for this node",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
         }
     ],
     "linkDataArray": [
@@ -3858,14 +3912,6 @@
             "closesLoop": false
         },
         {
-            "from": -29,
-            "fromPort": "8ac988bd-4af5-441f-8dd2-d28a0f91bd60",
-            "to": -30,
-            "toPort": "cc739dd9-47d3-4d39-b2d4-ee2e5a05f0ca",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
             "from": -22,
             "fromPort": "ef74c66f-4b17-4f1d-bc4c-2e5ffa874ade",
             "to": -28,
@@ -3879,14 +3925,6 @@
             "to": -29,
             "toPort": "724b5aec-d081-467c-92c7-93e31965a247",
             "loop_aware": "1",
-            "closesLoop": false
-        },
-        {
-            "from": -37,
-            "fromPort": "f572a630-ed19-4bd5-98d7-4c50e1d9b982",
-            "to": -32,
-            "toPort": "7cc2693e-0b94-4615-a222-4b5315357382",
-            "loop_aware": "0",
             "closesLoop": false
         },
         {
@@ -4046,6 +4084,22 @@
             "fromPort": "5f1a2211-d150-43b0-8a78-1468994ad3ac",
             "to": -60,
             "toPort": "6fb15dd1-add1-464c-a9fc-da3b8d01389b",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -29,
+            "fromPort": "8ac988bd-4af5-441f-8dd2-d28a0f91bd60",
+            "to": -3,
+            "toPort": "e476b418-d6c8-4a60-b2f1-55de20bd05fb",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -37,
+            "fromPort": "f572a630-ed19-4bd5-98d7-4c50e1d9b982",
+            "to": -8,
+            "toPort": "f0b7dff1-d303-42d0-9751-d42e9e1a7ee0",
             "loop_aware": "0",
             "closesLoop": false
         }
