@@ -14,7 +14,7 @@
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": 0,
-        "numLGNodes": 34
+        "numLGNodes": 35
     },
     "nodeDataArray": [
         {
@@ -4473,6 +4473,159 @@
             "outputApplicationType": "None",
             "outputApplicationKey": null,
             "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "isGroup": false,
+            "color": "#0059a5",
+            "drawOrderHint": 0,
+            "key": -30,
+            "text": "export_image_to_fits",
+            "description": "Write an image to fits",
+            "x": 1763.014807976602,
+            "y": -171.75970798868372,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "git_url": "",
+            "sha": "1.0",
+            "inputPorts": [
+                {
+                    "Id": "d36b1711-c2e9-41d4-8c2f-55003338aad4",
+                    "IdText": "im",
+                    "text": "output",
+                    "event": false,
+                    "type": "Image",
+                    "description": "Image"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "49c680bd-dbb5-49ad-bc7f-b4fca84e138d",
+                    "IdText": "fits",
+                    "text": "fits",
+                    "event": false,
+                    "type": "fits",
+                    "description": "n image to fits  :param im: Image :param fitsfile: Name of output fits file in storage :returns: None  See also     :py:func:`rascil.processing_components.image.operations.import_image_from_array`"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg.apps.pyfunc.PyFuncApp",
+                    "defaultValue": "",
+                    "description": "The python class that implements this application",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimate of execution time (in seconds) for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of CPUs used for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "Function Name",
+                    "name": "func_name",
+                    "value": "rascil.processing_components.image.operations.export_image_to_fits",
+                    "defaultValue": "",
+                    "description": "Python function name",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": true
+                },
+                {
+                    "text": "Pickle",
+                    "name": "pickle",
+                    "value": true,
+                    "defaultValue": "",
+                    "description": "Whether the python arguments are pickled.",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": true
+                },
+                {
+                    "text": "im",
+                    "name": "im",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Image",
+                    "readonly": false,
+                    "type": "Image",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "fitsfile",
+                    "name": "fitsfile",
+                    "value": "image.fits",
+                    "defaultValue": "",
+                    "description": "Name of output fits file in storage",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
         }
     ],
     "linkDataArray": [
@@ -4801,6 +4954,14 @@
             "fromPort": "2518b9e2-0fca-454f-92aa-eb681caedfcf",
             "to": -21,
             "toPort": "7770f9bc-5d2b-460b-9382-a6e1977cd523",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -28,
+            "fromPort": "3019ba7b-87ee-4234-b904-eabb88e456bb",
+            "to": -30,
+            "toPort": "d36b1711-c2e9-41d4-8c2f-55003338aad4",
             "loop_aware": "0",
             "closesLoop": false
         }
