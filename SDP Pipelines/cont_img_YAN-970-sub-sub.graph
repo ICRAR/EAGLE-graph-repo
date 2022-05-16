@@ -2045,7 +2045,7 @@
                 {
                     "text": "threshold",
                     "name": "threshold",
-                    "value": 1,
+                    "value": 0.1,
                     "defaultValue": "",
                     "description": "Threshold for component detection. Default: 1 Jy.",
                     "readonly": false,
@@ -3794,61 +3794,6 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "PythonApp",
-            "isGroup": false,
-            "color": "#0059a5",
-            "drawOrderHint": 0,
-            "key": -22,
-            "text": "PickOne",
-            "description": "App that picks the first element of an input list, passes that to all outputs, except the first one. The first output is used to pass the remaining array on. This app is useful for a loop.",
-            "x": 1324.657017931686,
-            "y": -83.62375098752632,
-            "width": 200,
-            "height": 72,
-            "collapsed": true,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "expanded": false,
-            "git_url": "https://github.com/ICRAR/daliuge-component-examples",
-            "sha": "e1e2a29",
-            "inputPorts": [
-                {
-                    "Id": "925bf061-bacb-4182-afb1-9995dfb9b330",
-                    "IdText": "griddata",
-                    "text": "griddata",
-                    "event": false,
-                    "type": "Complex",
-                    "description": " List of elements"
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "32c430d3-68a1-4451-99b1-2976d61c7ab0",
-                    "IdText": "griddata",
-                    "text": "griddata",
-                    "event": false,
-                    "type": "complex",
-                    "description": " Port carrying the first element of input array the type is dependent on the list element type."
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [],
-            "applicationArgs": [],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "inputApplicationDescription": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "outputApplicationDescription": ""
-        },
-        {
             "category": "Memory",
             "isGroup": false,
             "color": "#2c2c2c",
@@ -4226,9 +4171,210 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg.apps.pyfunc.PyFuncApp",
+                    "defaultValue": "",
+                    "description": "The python class that implements this application",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "applicationArgs": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "isGroup": false,
+            "color": "#0059a5",
+            "drawOrderHint": 0,
+            "key": -22,
+            "text": "griddataExtract",
+            "description": "An application that wraps a simple python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output.",
+            "x": 1313.5036453794776,
+            "y": -81.30455906385863,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "git_url": "https://github.com/ICRAR/daliuge.git",
+            "sha": "b09c1dd",
+            "inputPorts": [
+                {
+                    "Id": "78b71bd7-a222-4ce5-b77a-06b2dcf0276f",
+                    "IdText": "griddata",
+                    "text": "griddata",
+                    "event": false,
+                    "type": "griddata",
+                    "description": ""
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "388a4659-af13-4d68-90cd-fec8e60ed251",
+                    "IdText": "griddata",
+                    "text": "griddata",
+                    "event": false,
+                    "type": "griddata",
+                    "description": ""
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg.apps.pyfunc.PyFuncApp",
+                    "defaultValue": "dlg.apps.pyfunc.PyFuncApp",
+                    "description": "Application class",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimated execution time",
+                    "readonly": true,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "1",
+                    "description": "Number of cores used",
+                    "readonly": true,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "False",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Input error rate (%)",
+                    "name": "input_error_threshold",
+                    "value": 0,
+                    "defaultValue": "0",
+                    "description": "The allowed failure rate of the inputs (in percent), before this component goes to ERROR state and is not executed",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Number of tries",
+                    "name": "n_tries",
+                    "value": 1,
+                    "defaultValue": "1",
+                    "description": "Specifies the number of times the 'run' method will be executed before finally giving up",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "Function Name",
+                    "name": "func_name",
+                    "value": "contrib.functions.griddataExtract",
+                    "defaultValue": "",
+                    "description": "Python function name",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Function Code",
+                    "name": "func_code",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Python function code, e.g. 'def function_name(args): return args'",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Pickle",
+                    "name": "pickle",
+                    "value": true,
+                    "defaultValue": "false",
+                    "description": "Whether the python arguments are pickled.",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Function Defaults",
+                    "name": "func_defaults",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Mapping from argname to default value. Should match only the last part of the argnames list. Values are interpreted as Python code literals and that means string values need to be quoted.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Function Arguments Mapping",
+                    "name": "func_arg_mapping",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Mapping between argument name and input drop uids",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -4483,14 +4629,6 @@
             "closesLoop": false
         },
         {
-            "from": -10,
-            "fromPort": "616569be-7853-41c6-bf7c-faa0d349919c",
-            "to": -22,
-            "toPort": "925bf061-bacb-4182-afb1-9995dfb9b330",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
             "from": -1,
             "fromPort": "39450923-6aa8-4ba0-8de3-eb42f9aa1048",
             "to": -16,
@@ -4539,18 +4677,26 @@
             "closesLoop": false
         },
         {
-            "from": -22,
-            "fromPort": "32c430d3-68a1-4451-99b1-2976d61c7ab0",
-            "to": -25,
-            "toPort": "bff12136-83c1-437d-990d-6b458a43a0f5",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
             "from": -25,
             "fromPort": "5eb2c9ab-a253-4099-ac82-941618d5707e",
             "to": -17,
             "toPort": "a920871d-bf45-4241-9c46-1abbd3e4932a",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -10,
+            "fromPort": "616569be-7853-41c6-bf7c-faa0d349919c",
+            "to": -22,
+            "toPort": "78b71bd7-a222-4ce5-b77a-06b2dcf0276f",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -22,
+            "fromPort": "388a4659-af13-4d68-90cd-fec8e60ed251",
+            "to": -25,
+            "toPort": "bff12136-83c1-437d-990d-6b458a43a0f5",
             "loop_aware": "0",
             "closesLoop": false
         }
