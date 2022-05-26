@@ -5,15 +5,16 @@
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
         "filePath": "examples/SOFIA_test.graph",
-        "eagleVersion": "v4.1.0",
-        "eagleCommitHash": "d03a02e0fb1c671875383913aa060dd687bf226e",
+        "eagleVersion": "v4.4.0",
+        "eagleCommitHash": "30ca11ac1bdcaed689c1b592a40cf7940819db92",
         "schemaVersion": "OJS",
         "readonly": true,
         "sha": "",
         "gitUrl": "",
         "lastModifiedName": "",
         "lastModifiedEmail": "",
-        "lastModifiedDatetime": ""
+        "lastModifiedDatetime": 0,
+        "numLGNodes": 6
     },
     "nodeDataArray": [
         {
@@ -34,7 +35,6 @@
             "precious": false,
             "subject": null,
             "expanded": false,
-            "readonly": false,
             "git_url": "",
             "sha": "",
             "inputPorts": [
@@ -90,7 +90,7 @@
                     "defaultValue": "",
                     "description": "User to execute the command with (can be empty)",
                     "readonly": false,
-                    "type": "string",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -1752,6 +1752,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "cube",
+                    "name": "cube",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "par",
+                    "name": "pars",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -1759,9 +1783,11 @@
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
+            "inputApplicationDescription": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
         },
         {
             "category": "PythonApp",
@@ -1781,7 +1807,6 @@
             "precious": false,
             "subject": null,
             "expanded": false,
-            "readonly": false,
             "git_url": "https://github.com/ICRAR/daliuge.git",
             "sha": "c2f0a30",
             "inputPorts": [],
@@ -1895,6 +1920,18 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "Content",
+                    "name": "content",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": " The port carrying the content read from the URL.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -1902,9 +1939,11 @@
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
+            "inputApplicationDescription": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
         },
         {
             "category": "BashShellApp",
@@ -1924,7 +1963,6 @@
             "precious": false,
             "subject": null,
             "expanded": false,
-            "readonly": false,
             "git_url": "https://github.com/ICRAR/daliuge.git",
             "sha": "c2f0a30",
             "inputPorts": [
@@ -1933,7 +1971,7 @@
                     "IdText": "content",
                     "text": "content",
                     "event": false,
-                    "type": "content",
+                    "type": "Unknown",
                     "description": ""
                 }
             ],
@@ -1961,7 +1999,7 @@
                 {
                     "text": "Command",
                     "name": "command",
-                    "value": "cd $DLG_SESSION_ID && tar -xzf %i0 && rm %i0",
+                    "value": "cd $DLG_SESSION_ID && tar -xzf %i0 && rm %i0 && mv sofia_test_datacube.fits %o1",
                     "defaultValue": "",
                     "description": "The command to be executed",
                     "readonly": false,
@@ -2091,15 +2129,54 @@
                     "positional": false
                 }
             ],
-            "applicationArgs": [],
+            "applicationArgs": [
+                {
+                    "text": "content",
+                    "name": "content",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "par",
+                    "name": "pars",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "cube",
+                    "name": "cube",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
+            "inputApplicationDescription": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
         },
         {
             "category": "File",
@@ -2119,7 +2196,6 @@
             "precious": false,
             "subject": null,
             "expanded": false,
-            "readonly": true,
             "git_url": "https://github.com/ICRAR/daliuge.git",
             "sha": "c2f0a30",
             "inputPorts": [
@@ -2218,6 +2294,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "content",
+                    "name": "content",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "content",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "content",
+                    "name": "content",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "content",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -2225,9 +2325,11 @@
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
+            "inputApplicationDescription": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
         },
         {
             "category": "File",
@@ -2247,7 +2349,6 @@
             "precious": false,
             "subject": null,
             "expanded": false,
-            "readonly": false,
             "git_url": "",
             "sha": "",
             "inputPorts": [
@@ -2334,15 +2435,42 @@
                     "positional": false
                 }
             ],
-            "applicationArgs": [],
+            "applicationArgs": [
+                {
+                    "text": "par",
+                    "name": "pars",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "par",
+                    "name": "pars",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
+            "inputApplicationDescription": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
         },
         {
             "category": "File",
@@ -2362,7 +2490,6 @@
             "precious": false,
             "subject": null,
             "expanded": false,
-            "readonly": true,
             "git_url": "https://github.com/ICRAR/daliuge.git",
             "sha": "c2f0a30",
             "inputPorts": [
@@ -2461,6 +2588,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "cube",
+                    "name": "cube",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "cube",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "cube",
+                    "name": "cube",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "cube",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -2468,9 +2619,11 @@
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
+            "inputApplicationDescription": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
-            "outputApplicationKey": null
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
         }
     ],
     "linkDataArray": [
@@ -2479,42 +2632,48 @@
             "fromPort": "1e093180-12e6-4c7d-8c95-0c8fad12a672",
             "to": -4,
             "toPort": "4c5a2391-19af-4421-90c0-1f6a8ba11bed",
-            "loop_aware": "0"
+            "loop_aware": "0",
+            "closesLoop": false
         },
         {
             "from": -4,
             "fromPort": "43799f16-a611-43dc-a43c-1830ff62f373",
             "to": -2,
             "toPort": "57b82a85-935f-4ea1-bc3c-253e131b3849",
-            "loop_aware": "0"
+            "loop_aware": "0",
+            "closesLoop": false
         },
         {
             "from": -7,
             "fromPort": "42bdc7ad-e029-4314-848f-8c94889ecc45",
             "to": -1,
             "toPort": "b8057e73-dfc9-4972-a7b8-0ae2cc6733a4",
-            "loop_aware": "0"
+            "loop_aware": "0",
+            "closesLoop": false
         },
         {
             "from": -2,
             "fromPort": "0590608d-155b-4e4b-a06f-f081d3ea75e8",
             "to": -7,
             "toPort": "8d9cbfc6-c5e3-42ce-bf40-edb177f0838a",
-            "loop_aware": "0"
+            "loop_aware": "0",
+            "closesLoop": false
         },
         {
             "from": -2,
             "fromPort": "779ecdbc-1383-4cb6-a9d2-f6c1c9687e28",
             "to": -5,
             "toPort": "30536cab-5687-4b7c-ba96-0d4d571a6b60",
-            "loop_aware": "0"
+            "loop_aware": "0",
+            "closesLoop": false
         },
         {
             "from": -5,
             "fromPort": "74017efd-8a30-4fbe-b4ff-540c264de867",
             "to": -1,
             "toPort": "e1d8d373-63c3-48eb-9496-8c99fb6b19a0",
-            "loop_aware": "0"
+            "loop_aware": "0",
+            "closesLoop": false
         }
     ]
 }
