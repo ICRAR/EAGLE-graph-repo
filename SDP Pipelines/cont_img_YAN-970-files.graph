@@ -357,6 +357,42 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "phasecentre",
+                    "name": "phasecentre",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "polarisation_frame",
+                    "name": "polarisation_frame",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "sc_ref",
+                    "name": "sc_ref",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Model as Components",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -439,6 +475,30 @@
                 }
             ],
             "applicationArgs": [
+                {
+                    "text": "sc_ref",
+                    "name": "sc_ref",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "sc",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "sc",
+                    "name": "sc",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "sc",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
                 {
                     "text": "sc_ref",
                     "name": "sc_ref",
@@ -887,176 +947,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false
-                }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "inputApplicationDescription": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "outputApplicationDescription": ""
-        },
-        {
-            "category": "PythonApp",
-            "isGroup": false,
-            "color": "#0059a5",
-            "drawOrderHint": 0,
-            "key": -63,
-            "text": "create_blockvisibility_from_ms",
-            "description": "Minimal MS to BlockVisibility converter\n\nThe MS format is much more general than the RASCIL BlockVisibility so we cut many corners.\nThis requires casacore to be installed. If not an exception ModuleNotFoundError is raised.\n\nCreates a list of BlockVisibility's, split by field and spectral window\n\nReading of a subset of channels is possible using either start_chan and end_chan or channnum. Using start_chan\nand end_chan is preferred since it only reads the channels required. Channum is more flexible and can be used to\nread a random list of channels.",
-            "x": 496.64537993832465,
-            "y": -247.8699937813141,
-            "width": 200,
-            "height": 72,
-            "collapsed": true,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "expanded": false,
-            "git_url": "",
-            "sha": "1.0",
-            "inputPorts": [
+                },
                 {
-                    "Id": "dbd83be6-c3b7-47fa-a900-2eafd87b1370",
-                    "IdText": "msname",
-                    "text": "msname",
-                    "event": false,
-                    "type": "String",
-                    "description": "File name of MS"
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "a1a56047-81b2-4aab-8441-978d73679680",
-                    "IdText": "vis",
                     "text": "vis",
-                    "event": false,
-                    "type": "Unknown",
-                    "description": ""
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Application Class",
-                    "name": "appclass",
-                    "value": "dlg.apps.pyfunc.PyFuncApp",
+                    "name": "vis",
+                    "value": "",
                     "defaultValue": "",
-                    "description": "The python class that implements this application",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Execution Time",
-                    "name": "execution_time",
-                    "value": 5,
-                    "defaultValue": "",
-                    "description": "Estimate of execution time (in seconds) for this application.",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "No. of CPUs",
-                    "name": "num_cpus",
-                    "value": 1,
-                    "defaultValue": "",
-                    "description": "Number of CPUs used for this application.",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Group start",
-                    "name": "group_start",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Is this node the start of a group?",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                }
-            ],
-            "applicationArgs": [
-                {
-                    "text": "Function Name",
-                    "name": "func_name",
-                    "value": "rascil.processing_components.visibility.base.create_blockvisibility_from_ms",
-                    "defaultValue": "",
-                    "description": "Python function name",
-                    "readonly": true,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": true
-                },
-                {
-                    "text": "Input Parser",
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "",
-                    "description": "Input port parsing technique",
-                    "readonly": false,
-                    "type": "Select",
-                    "precious": false,
-                    "options": [
-                        "pickle",
-                        "npy",
-                        "eval",
-                        "path",
-                        "dataurl"
-                    ],
-                    "positional": false
-                },
-                {
-                    "text": "Output Parser",
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "",
-                    "description": "output port parsing technique",
-                    "readonly": false,
-                    "type": "Select",
-                    "precious": false,
-                    "options": [
-                        "pickle",
-                        "eval",
-                        "npy"
-                    ],
-                    "positional": false
-                },
-                {
-                    "text": "msname",
-                    "name": "msname",
-                    "value": "$DLG_ROOT/testdata/1197634128-cal_avg32.ms",
-                    "defaultValue": "",
-                    "description": "File name of MS",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "channum",
-                    "name": "channum",
-                    "value": "[0]",
-                    "defaultValue": "",
-                    "description": "range of channels e.g. range(17,32), default is None meaning all",
+                    "description": "BlockVis ",
                     "readonly": false,
                     "type": "Complex",
                     "precious": false,
@@ -1064,80 +961,8 @@
                     "positional": false
                 },
                 {
-                    "text": "end_chan",
-                    "name": "end_chan",
-                    "value": "None",
-                    "defaultValue": "",
-                    "description": "End channel to read",
-                    "readonly": false,
-                    "type": "Complex",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "ack",
-                    "name": "ack",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Ask casacore to acknowledge each table operation",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "datacolumn",
-                    "name": "datacolumn",
-                    "value": "DATA",
-                    "defaultValue": "",
-                    "description": "MS data column to read DATA, CORRECTED_DATA, or MODEL_DATA",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "selected_dds",
-                    "name": "selected_dds",
-                    "value": "[0]",
-                    "defaultValue": "",
-                    "description": "Data descriptors to select",
-                    "readonly": false,
-                    "type": "Json",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "average_channels",
-                    "name": "average_channels",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Average all channels read",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "start_chan",
-                    "name": "start_chan",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "vis",
-                    "name": "vis",
+                    "text": "sc",
+                    "name": "sc",
                     "value": "",
                     "defaultValue": "",
                     "description": "",
@@ -1148,92 +973,8 @@
                     "positional": false
                 },
                 {
-                    "text": "start_chan",
-                    "name": "start_chan",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "vis",
-                    "name": "vis",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Unknown",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "start_chan",
-                    "name": "start_chan",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "vis",
-                    "name": "vis",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Unknown",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "start_chan",
-                    "name": "start_chan",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "vis",
-                    "name": "vis",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Unknown",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "start_chan",
-                    "name": "start_chan",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "vis",
-                    "name": "vis",
+                    "text": "modelvis",
+                    "name": "modelvis",
                     "value": "",
                     "defaultValue": "",
                     "description": "",
@@ -1263,8 +1004,8 @@
             "key": -4,
             "text": "polarisation_frame_from_names",
             "description": "An application that wraps a simple python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output.",
-            "x": 363.00150725433326,
-            "y": 6.132948007992168,
+            "x": 366.00150725433326,
+            "y": -44.86705199200783,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -1281,7 +1022,7 @@
                     "IdText": "names",
                     "text": "names",
                     "event": false,
-                    "type": "names",
+                    "type": "Unknown",
                     "description": ""
                 }
             ],
@@ -1451,7 +1192,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "names",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -1475,7 +1216,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "names",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -1499,7 +1240,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "names",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -1523,7 +1264,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "names",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -1547,7 +1288,31 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "names",
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "polarisation_frame",
+                    "name": "polarisation_frame",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "names",
+                    "name": "names",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -1964,6 +1729,42 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "vis",
+                    "name": "vis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "BlockVis ",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "modevis",
+                    "name": "modelvis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Model as BlockVis ",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "gt",
+                    "name": "gt",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Gain Table",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -2073,6 +1874,18 @@
                 }
             ],
             "applicationArgs": [
+                {
+                    "text": "gt",
+                    "name": "gt",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Gain Table",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
                 {
                     "text": "gt",
                     "name": "gt",
@@ -2277,6 +2090,54 @@
                     "precious": false,
                     "options": [],
                     "positional": true
+                },
+                {
+                    "text": "vis",
+                    "name": "vis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "BlockVis ",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "cf",
+                    "name": "cf",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Convolution Function",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "griddata",
+                    "name": "griddata",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "griddata",
+                    "name": "griddata",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Visibilities, Gridded",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 },
                 {
                     "text": "vis",
@@ -2802,6 +2663,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "im",
+                    "name": "im",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "sc",
+                    "name": "sc",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -3179,6 +3064,42 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "im",
+                    "name": "im",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Image parameters",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "polarisation_frame",
+                    "name": "polarisation_frame",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "polarisation_frame",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "cf",
+                    "name": "cf",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "cf",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -3200,8 +3121,8 @@
             "key": -18,
             "text": "create_griddata_from_image",
             "description": "Create a GridData from an image",
-            "x": 854.8644129760814,
-            "y": -86.32164099396935,
+            "x": 857.8644129760814,
+            "y": -82.32164099396935,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -3323,6 +3244,42 @@
                     "value": "None",
                     "defaultValue": "",
                     "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "im",
+                    "name": "im",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Image",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "polarisation_frame",
+                    "name": "polarisation_frame",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "output",
+                    "name": "griddata",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "GridData",
                     "readonly": false,
                     "type": "Unknown",
                     "precious": false,
@@ -3885,6 +3842,42 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "output",
+                    "name": "im",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Image",
+                    "readonly": false,
+                    "type": "Image",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "polarisation_frame",
+                    "name": "polarisation_frame",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "cf",
+                    "name": "cf",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Convolution Function",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -4086,6 +4079,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "cf",
+                    "name": "cf",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "cf",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "cf",
+                    "name": "cf",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "cf",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -4107,8 +4124,8 @@
             "key": -1,
             "text": "create_image_from_visibility",
             "description": "Make an empty image from params and BlockVisibility\n\nThis makes an empty, template image consistent with the visibility, allowing optional overriding of select\nparameters. This is a convenience function and does not transform the visibilities.",
-            "x": 893.1249766839956,
-            "y": -172.58579337057657,
+            "x": 839.1249766839956,
+            "y": -160.58579337057657,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -4403,6 +4420,42 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "vis",
+                    "name": "vis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "polarisation_frame",
+                    "name": "polarisation_frame",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "im",
+                    "name": "im",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "image  See also     :py:func:`rascil.processing_components.image.operations.create_image`",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -4424,8 +4477,8 @@
             "key": -5,
             "text": "polarisation_frame",
             "description": "In-memory storage of intermediate data products",
-            "x": 486.56464818721173,
-            "y": 34.85878976837131,
+            "x": 528.5646481872118,
+            "y": 40.85878976837131,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -4442,7 +4495,7 @@
                     "IdText": "polarisation_frame",
                     "text": "polarisation_frame",
                     "event": false,
-                    "type": "polarisation_frame",
+                    "type": "Unknown",
                     "description": ""
                 }
             ],
@@ -4452,7 +4505,7 @@
                     "IdText": "polarisation_frame",
                     "text": "polarisation_frame",
                     "event": false,
-                    "type": "polarisation_frame",
+                    "type": "Unknown",
                     "description": ""
                 }
             ],
@@ -4492,7 +4545,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "polarisation_frame",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -4504,7 +4557,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "polarisation_frame",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -4516,7 +4569,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "polarisation_frame",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -4528,7 +4581,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "polarisation_frame",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -4540,7 +4593,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "polarisation_frame",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -4552,7 +4605,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "polarisation_frame",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -4564,7 +4617,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "polarisation_frame",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -4576,7 +4629,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "polarisation_frame",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -4588,7 +4641,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "polarisation_frame",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -4600,7 +4653,31 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "polarisation_frame",
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "polarisation_frame",
+                    "name": "polarisation_frame",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "polarisation_frame",
+                    "name": "polarisation_frame",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -4722,6 +4799,30 @@
                 }
             ],
             "applicationArgs": [
+                {
+                    "text": "phasecentre",
+                    "name": "phasecentre",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "phasecentre",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "phasecentre",
+                    "name": "phasecentre",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "phasecentre",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
                 {
                     "text": "phasecentre",
                     "name": "phasecentre",
@@ -5009,6 +5110,18 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "sc",
+                    "name": "sc",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "sc",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -5118,6 +5231,18 @@
                 }
             ],
             "applicationArgs": [
+                {
+                    "text": "cf",
+                    "name": "cf",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Convolution Function",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
                 {
                     "text": "cf",
                     "name": "cf",
@@ -5314,6 +5439,42 @@
                     "precious": false,
                     "options": [],
                     "positional": true
+                },
+                {
+                    "text": "griddata",
+                    "name": "griddata",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Visibilities, Gridded",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "wcs",
+                    "name": "wcs",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "im",
+                    "name": "im",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 },
                 {
                     "text": "griddata",
@@ -5695,6 +5856,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "im",
+                    "name": "im",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "im",
+                    "name": "im",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -5881,6 +6066,30 @@
                     "description": "Mapping between argument name and input drop uids",
                     "readonly": false,
                     "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "griddata",
+                    "name": "griddata",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "griddata",
+                    "name": "griddata",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -6313,6 +6522,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "vis",
+                    "name": "vis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "xarray list of visibilities",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "vis",
+                    "name": "vis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -6499,6 +6732,30 @@
                     "description": "Mapping between argument name and input drop uids",
                     "readonly": false,
                     "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "vis",
+                    "name": "vis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "phasecentre",
+                    "name": "phasecentre",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -6931,6 +7188,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "vis",
+                    "name": "vis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "names",
+                    "name": "names",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -7013,6 +7294,30 @@
                 }
             ],
             "applicationArgs": [
+                {
+                    "text": "names",
+                    "name": "names",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "names",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "names",
+                    "name": "names",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "names",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
                 {
                     "text": "names",
                     "name": "names",
@@ -7333,6 +7638,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "modelvis",
+                    "name": "modelvis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "modelvis",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "modelvis",
+                    "name": "modelvis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "modelvis",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -7354,8 +7683,8 @@
             "key": -12,
             "text": "[vis]",
             "description": "In-memory storage of intermediate data products",
-            "x": 665.8261676365476,
-            "y": -247.56052067370806,
+            "x": 682.8261676365476,
+            "y": -249.56052067370808,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -7372,7 +7701,7 @@
                     "IdText": "vis",
                     "text": "vis",
                     "event": false,
-                    "type": "vis",
+                    "type": "Unknown",
                     "description": ""
                 }
             ],
@@ -7382,7 +7711,7 @@
                     "IdText": "vis",
                     "text": "vis",
                     "event": false,
-                    "type": "vis",
+                    "type": "Unknown",
                     "description": ""
                 }
             ],
@@ -7422,7 +7751,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "vis",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -7434,7 +7763,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "vis",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -7446,7 +7775,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "vis",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -7458,7 +7787,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "vis",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -7470,7 +7799,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "vis",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -7482,7 +7811,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "vis",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -7494,7 +7823,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "vis",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -7506,7 +7835,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "vis",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -7518,7 +7847,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "vis",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -7530,7 +7859,31 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "vis",
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "vis",
+                    "name": "vis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "vis",
+                    "name": "vis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -7672,6 +8025,30 @@
                     "description": "Name of output fits file in storage",
                     "readonly": false,
                     "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "im",
+                    "name": "im",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Image",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "fits",
+                    "name": "fits",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "n image to fits  :param im: Image :param fitsfile: Name of output fits file in storage :returns: None  See also     :py:func:`rascil.processing_components.image.operations.import_image_from_array`",
+                    "readonly": false,
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -8104,6 +8481,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "im",
+                    "name": "im",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Image",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "wcs",
+                    "name": "wcs",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -8186,6 +8587,30 @@
                 }
             ],
             "applicationArgs": [
+                {
+                    "text": "wcs",
+                    "name": "wcs",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "wcs",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "wcs",
+                    "name": "wcs",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "wcs",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
                 {
                     "text": "wcs",
                     "name": "wcs",
@@ -8542,6 +8967,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "Hello",
+                    "name": "hello",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": " The port carrying the message produced by the app.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Content",
+                    "name": "content",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": " The port carrying the content read from the URL.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -8746,6 +9195,18 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "Hello",
+                    "name": "hello",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": " The port carrying the message produced by the app.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -8852,6 +9313,30 @@
                 }
             ],
             "applicationArgs": [
+                {
+                    "text": "hello",
+                    "name": "hello",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "hello",
+                    "name": "hello",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
                 {
                     "text": "hello",
                     "name": "hello",
@@ -9280,6 +9765,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "Content",
+                    "name": "content",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": " The port carrying the content read from the URL.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "msname",
+                    "name": "msname",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "The output MS file",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -9398,6 +9907,30 @@
                 }
             ],
             "applicationArgs": [
+                {
+                    "text": "output",
+                    "name": "griddata",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "griddata",
+                    "name": "griddata",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
                 {
                     "text": "output",
                     "name": "griddata",
@@ -9682,6 +10215,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "griddata",
+                    "name": "griddata",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "griddata",
+                    "name": "griddata",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -9800,6 +10357,30 @@
                 }
             ],
             "applicationArgs": [
+                {
+                    "text": "griddata",
+                    "name": "griddata",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "griddata",
+                    "name": "griddata",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
                 {
                     "text": "griddata",
                     "name": "griddata",
@@ -10060,6 +10641,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "im",
+                    "name": "im",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "im",
+                    "name": "im",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -10249,6 +10854,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "vis",
+                    "name": "vis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "vis",
+                    "name": "vis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -10309,7 +10938,7 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
-                    "defaultValue": "5",
+                    "defaultValue": "",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
                     "type": "Float",
@@ -10321,7 +10950,7 @@
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
-                    "defaultValue": "False",
+                    "defaultValue": "",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
                     "type": "Boolean",
@@ -10333,7 +10962,7 @@
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": false,
-                    "defaultValue": "true",
+                    "defaultValue": "",
                     "description": "Perform a check to make sure the file path exists before proceeding with the application",
                     "readonly": false,
                     "type": "Boolean",
@@ -10387,6 +11016,337 @@
                     "description": "",
                     "readonly": false,
                     "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "msname",
+                    "name": "msname",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "msname",
+                    "name": "msname",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "isGroup": false,
+            "color": "#0059a5",
+            "drawOrderHint": 0,
+            "key": -10,
+            "text": "create_blockvisibility_from_ms",
+            "description": "Minimal MS to BlockVisibility converter\n\nThe MS format is much more general than the RASCIL BlockVisibility so we cut many corners.\nThis requires casacore to be installed. If not an exception ModuleNotFoundError is raised.\n\nCreates a list of BlockVisibility's, split by field and spectral window\n\nReading of a subset of channels is possible using either start_chan and end_chan or channnum. Using start_chan\nand end_chan is preferred since it only reads the channels required. Channum is more flexible and can be used to\nread a random list of channels.",
+            "x": 561.0805382891742,
+            "y": -282.92061525073814,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "git_url": "",
+            "sha": "1.0",
+            "inputPorts": [
+                {
+                    "Id": "27432d79-a46a-44d9-baf5-7c63d7beff78",
+                    "IdText": "msname",
+                    "text": "msname",
+                    "event": false,
+                    "type": "String",
+                    "description": "File name of MS"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "917968bd-f1fe-45d3-aafe-a21ced563191",
+                    "IdText": "vis",
+                    "text": "vis",
+                    "event": false,
+                    "type": "Unknown",
+                    "description": ""
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg.apps.pyfunc.PyFuncApp",
+                    "defaultValue": "",
+                    "description": "The python class that implements this application",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimate of execution time (in seconds) for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of CPUs used for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "Function Name",
+                    "name": "func_name",
+                    "value": "rascil.processing_components.visibility.base.create_blockvisibility_from_ms",
+                    "defaultValue": "",
+                    "description": "Python function name",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": true
+                },
+                {
+                    "text": "Input Parser",
+                    "name": "input_parser",
+                    "value": "path",
+                    "defaultValue": "",
+                    "description": "Input port parsing technique",
+                    "readonly": false,
+                    "type": "Select",
+                    "precious": false,
+                    "options": [
+                        "pickle",
+                        "npy",
+                        "eval",
+                        "path",
+                        "dataurl"
+                    ],
+                    "positional": false
+                },
+                {
+                    "text": "Output Parser",
+                    "name": "output_parser",
+                    "value": "pickle",
+                    "defaultValue": "",
+                    "description": "output port parsing technique",
+                    "readonly": false,
+                    "type": "Select",
+                    "precious": false,
+                    "options": [
+                        "pickle",
+                        "eval",
+                        "npy"
+                    ],
+                    "positional": false
+                },
+                {
+                    "text": "msname",
+                    "name": "msname",
+                    "value": "$DLG_ROOT/testdata/1197634128-cal_avg32.ms",
+                    "defaultValue": "",
+                    "description": "File name of MS",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "channum",
+                    "name": "channum",
+                    "value": "[0]",
+                    "defaultValue": "",
+                    "description": "range of channels e.g. range(17,32), default is None meaning all",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "end_chan",
+                    "name": "end_chan",
+                    "value": "None",
+                    "defaultValue": "",
+                    "description": "End channel to read",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "ack",
+                    "name": "ack",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Ask casacore to acknowledge each table operation",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "datacolumn",
+                    "name": "datacolumn",
+                    "value": "DATA",
+                    "defaultValue": "",
+                    "description": "MS data column to read DATA, CORRECTED_DATA, or MODEL_DATA",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "selected_dds",
+                    "name": "selected_dds",
+                    "value": "[0]",
+                    "defaultValue": "",
+                    "description": "Data descriptors to select",
+                    "readonly": false,
+                    "type": "Json",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "average_channels",
+                    "name": "average_channels",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Average all channels read",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "msname",
+                    "name": "msname",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "File name of MS",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "vis",
+                    "name": "vis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "msname",
+                    "name": "msname",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "File name of MS",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "vis",
+                    "name": "vis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "msname",
+                    "name": "msname",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "File name of MS",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "vis",
+                    "name": "vis",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -10562,14 +11522,6 @@
             "fromPort": "98615809-518e-4163-8e1f-d51ee79bd960",
             "to": -13,
             "toPort": "a2bcbe28-dbc5-4302-ba9a-382a34b56e34",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
-            "from": -63,
-            "fromPort": "a1a56047-81b2-4aab-8441-978d73679680",
-            "to": -12,
-            "toPort": "dd7ba56a-be95-4c5b-92f7-b055c400b5aa",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -10784,8 +11736,32 @@
         {
             "from": -33,
             "fromPort": "b67440a9-9b1c-4c1e-9280-f571f2e4d6a9",
-            "to": -63,
-            "toPort": "dbd83be6-c3b7-47fa-a900-2eafd87b1370",
+            "to": -10,
+            "toPort": "27432d79-a46a-44d9-baf5-7c63d7beff78",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -10,
+            "fromPort": "917968bd-f1fe-45d3-aafe-a21ced563191",
+            "to": -12,
+            "toPort": "dd7ba56a-be95-4c5b-92f7-b055c400b5aa",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -5,
+            "fromPort": "790b7965-2e14-4da4-84ad-502ecd7321e1",
+            "to": -1,
+            "toPort": "64322303-6b84-46da-b893-372fa6f2e3b2",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -5,
+            "fromPort": "790b7965-2e14-4da4-84ad-502ecd7321e1",
+            "to": -18,
+            "toPort": "7d5496f8-e269-473c-bea5-e6548b11f91e",
             "loop_aware": "0",
             "closesLoop": false
         }
