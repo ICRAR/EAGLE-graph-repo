@@ -14,7 +14,7 @@
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": 0,
-        "numLGNodes": 40
+        "numLGNodes": 42
     },
     "nodeDataArray": [
         {
@@ -644,7 +644,7 @@
             "key": -4,
             "text": "polarisation_frame_from_names",
             "description": "An application that wraps a simple python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output.",
-            "x": 366.00150725433326,
+            "x": 366.9439646050479,
             "y": -44.86705199200783,
             "width": 200,
             "height": 72,
@@ -2087,239 +2087,6 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "PythonApp",
-            "isGroup": false,
-            "color": "#0059a5",
-            "drawOrderHint": 0,
-            "key": -20,
-            "text": "create_convolutionfunction_from_image",
-            "description": "Create a convolution function from an image\n\nThe griddata has axes [chan, pol, z, dy, dx, y, x] where z, y, x are spatial axes in either sky or Fourier plane. The\norder in the WCS is reversed so the grid_WCS describes UU, VV, WW, STOKES, FREQ axes\n\nThe axes UU,VV have the same physical stride as the image, The axes DUU, DVV are subsampled.\n\nConvolution function holds the original sky plane projection in the projection_wcs.",
-            "x": 796.895594679006,
-            "y": -9.108699080964234,
-            "width": 200,
-            "height": 72,
-            "collapsed": true,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "expanded": true,
-            "git_url": "",
-            "sha": "1.0",
-            "inputPorts": [
-                {
-                    "Id": "25c00e81-a694-4d7d-a82b-7e20371c7807",
-                    "IdText": "im",
-                    "text": "output",
-                    "event": false,
-                    "type": "Unknown",
-                    "description": "Image"
-                },
-                {
-                    "Id": "f4ad698e-4513-46fa-aa95-7f46ef680ad2",
-                    "IdText": "polarisation_frame",
-                    "text": "polarisation_frame",
-                    "event": false,
-                    "type": "Complex",
-                    "description": ""
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "914137c9-82ef-48a9-905e-fe0a9660bf71",
-                    "IdText": "cf",
-                    "text": "cf",
-                    "event": false,
-                    "type": "Complex",
-                    "description": "Convolution Function"
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Application Class",
-                    "name": "appclass",
-                    "value": "dlg.apps.pyfunc.PyFuncApp",
-                    "defaultValue": "",
-                    "description": "The python class that implements this application",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Execution Time",
-                    "name": "execution_time",
-                    "value": 5,
-                    "defaultValue": "",
-                    "description": "Estimate of execution time (in seconds) for this application.",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "No. of CPUs",
-                    "name": "num_cpus",
-                    "value": 1,
-                    "defaultValue": "",
-                    "description": "Number of CPUs used for this application.",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Group start",
-                    "name": "group_start",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Is this node the start of a group?",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                }
-            ],
-            "applicationArgs": [
-                {
-                    "text": "Function Name",
-                    "name": "func_name",
-                    "value": "rascil.processing_components.griddata.convolution_functions.create_convolutionfunction_from_image",
-                    "defaultValue": "",
-                    "description": "Python function name",
-                    "readonly": true,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": true
-                },
-                {
-                    "text": "Pickle",
-                    "name": "pickle",
-                    "value": true,
-                    "defaultValue": "",
-                    "description": "Whether the python arguments are pickled.",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": true
-                },
-                {
-                    "text": "nw",
-                    "name": "nw",
-                    "value": 1,
-                    "defaultValue": "",
-                    "description": "Number of z axes, usually z is W",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "wstep",
-                    "name": "wstep",
-                    "value": 100000000000000,
-                    "defaultValue": "",
-                    "description": "Step in z, usually z is W",
-                    "readonly": false,
-                    "type": "Float",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "wtype",
-                    "name": "wtype",
-                    "value": "WW",
-                    "defaultValue": "",
-                    "description": "Type of z, usually 'WW'",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "oversampling",
-                    "name": "oversampling",
-                    "value": 1,
-                    "defaultValue": "",
-                    "description": "Oversampling (size of dy, dx axes)",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "support",
-                    "name": "support",
-                    "value": 16,
-                    "defaultValue": "",
-                    "description": "Support of final convolution function (size of y, x axes)",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "output",
-                    "name": "im",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Image",
-                    "readonly": false,
-                    "type": "Unknown",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "polarisation_frame",
-                    "name": "polarisation_frame",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Complex",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "cf",
-                    "name": "cf",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Convolution Function",
-                    "readonly": false,
-                    "type": "Complex",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "inputApplicationDescription": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "outputApplicationDescription": ""
-        },
-        {
             "category": "Memory",
             "isGroup": false,
             "color": "#2c2c2c",
@@ -2570,7 +2337,7 @@
                     "IdText": "phasecentre",
                     "text": "phasecentre",
                     "event": false,
-                    "type": "phasecentre",
+                    "type": "Unknown",
                     "description": ""
                 }
             ],
@@ -2580,7 +2347,7 @@
                     "IdText": "phasecentre",
                     "text": "phasecentre",
                     "event": false,
-                    "type": "phasecentre",
+                    "type": "Unknown",
                     "description": ""
                 }
             ],
@@ -2656,7 +2423,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "phasecentre",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -2668,7 +2435,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "phasecentre",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -2680,7 +2447,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "phasecentre",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -2692,7 +2459,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "phasecentre",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -2704,7 +2471,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "phasecentre",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -2716,7 +2483,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "phasecentre",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -2728,7 +2495,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "phasecentre",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -2740,7 +2507,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "phasecentre",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -2752,7 +2519,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "phasecentre",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -2764,7 +2531,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "phasecentre",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -2776,7 +2543,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "phasecentre",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -2788,7 +2555,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "phasecentre",
+                    "type": "Unknown",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -8179,15 +7946,212 @@
             "outputApplicationDescription": ""
         },
         {
+            "category": "PythonApp",
+            "isGroup": false,
+            "color": "#0059a5",
+            "drawOrderHint": 0,
+            "key": -23,
+            "text": "create_pswf_convolutionfunction",
+            "description": "Fill an Anti-Aliasing filter into a ConvolutionFunction\n\nFill the Prolate Spheroidal Wave Function into a GriData with the specified oversampling. Only the inner\nnon-zero part is retained\n\nAlso returns the griddata correction function as an image",
+            "x": 839.8066835408102,
+            "y": -1.0138353992387352,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "git_url": "",
+            "sha": "1.0",
+            "inputPorts": [
+                {
+                    "Id": "69fca35e-d9ab-45d0-a6a1-d6d922754727",
+                    "IdText": "im",
+                    "text": "im",
+                    "event": false,
+                    "type": "Unknown",
+                    "description": "Image template"
+                },
+                {
+                    "Id": "ab73f1db-5788-44a2-8263-61d5f86161ac",
+                    "IdText": "polarisation_frame",
+                    "text": "polarisation_frame",
+                    "event": false,
+                    "type": "Unknown",
+                    "description": ""
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "8d20f95d-7aa3-4e4f-b699-29189b4cdbc9",
+                    "IdText": "cf",
+                    "text": "cf",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "griddata correction Image, griddata kernel as ConvolutionFunction"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg.apps.pyfunc.PyFuncApp",
+                    "defaultValue": "",
+                    "description": "The python class that implements this application",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimate of execution time (in seconds) for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of CPUs used for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "Function Name",
+                    "name": "func_name",
+                    "value": "rascil.processing_components.griddata.kernels.create_pswf_convolutionfunction",
+                    "defaultValue": "",
+                    "description": "Python function name",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": true
+                },
+                {
+                    "text": "Pickle",
+                    "name": "pickle",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Whether the python arguments are pickled.",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": true
+                },
+                {
+                    "text": "im",
+                    "name": "im",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Image template",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "oversampling",
+                    "name": "oversampling",
+                    "value": 127,
+                    "defaultValue": "",
+                    "description": "Oversampling of the convolution function in uv space",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "support",
+                    "name": "support",
+                    "value": 8,
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "polarisation_frame",
+                    "name": "polarisation_frame",
+                    "value": "None",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Unknown",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "cf",
+                    "name": "cf",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "griddata correction Image, griddata kernel as ConvolutionFunction",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
             "category": "File",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
-            "key": -1,
-            "text": "cf",
+            "key": -40,
+            "text": "[cf]",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "x": 954.5296367327267,
-            "y": -9.468613649208407,
+            "x": 924.5032235793042,
+            "y": -6.300160441616171,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -8210,7 +8174,7 @@
             ],
             "outputPorts": [
                 {
-                    "Id": "52b7535c-d429-40d3-b5d9-54fe8e9a9ea0",
+                    "Id": "df67c4a1-c48a-4363-ac88-af4391f60fba",
                     "IdText": "cf",
                     "text": "cf",
                     "event": false,
@@ -8390,6 +8354,432 @@
             "outputApplicationType": "None",
             "outputApplicationKey": null,
             "outputApplicationDescription": ""
+        },
+        {
+            "category": "File",
+            "isGroup": false,
+            "color": "#2c2c2c",
+            "drawOrderHint": 0,
+            "key": -20,
+            "text": "cf",
+            "description": "A standard file on a filesystem mounted to the deployment machine",
+            "x": 1100.609335406762,
+            "y": -20.504757424475542,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "git_url": "https://github.com/ICRAR/daliuge.git",
+            "sha": "a8844e1",
+            "inputPorts": [
+                {
+                    "Id": "f0b7dff1-d303-42d0-9751-d42e9e1a7ee0",
+                    "IdText": "cf",
+                    "text": "cf",
+                    "event": false,
+                    "type": "Complex",
+                    "description": "Convolution Function"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "974c3e33-214d-41de-a089-0102f8a4a553",
+                    "IdText": "cf",
+                    "text": "cf",
+                    "event": false,
+                    "type": "Complex",
+                    "description": ""
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Check file path exists",
+                    "name": "check_filepath_exists",
+                    "value": true,
+                    "defaultValue": "",
+                    "description": "Perform a check to make sure the file path exists before proceeding with the application",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "File Path",
+                    "name": "filepath",
+                    "value": "convolution_function",
+                    "defaultValue": "",
+                    "description": "Path to the file for this node",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Directory name",
+                    "name": "dirname",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Path to the file for this node",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "cf",
+                    "name": "cf",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Convolution Function",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "cf",
+                    "name": "cf",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Convolution Function",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "cf",
+                    "name": "cf",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Convolution Function",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "cf",
+                    "name": "cf",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Convolution Function",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "cf",
+                    "name": "cf",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Convolution Function",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "cf",
+                    "name": "cf",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Convolution Function",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "cf",
+                    "name": "cf",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Convolution Function",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "cf",
+                    "name": "cf",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "isGroup": false,
+            "color": "#0059a5",
+            "drawOrderHint": 0,
+            "key": -1,
+            "text": "cfExtract",
+            "description": "An application that wraps a simple python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output.",
+            "x": 1020.4234514268992,
+            "y": -8.636311288900501,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "git_url": "https://github.com/ICRAR/daliuge.git",
+            "sha": "b09c1dd",
+            "inputPorts": [
+                {
+                    "Id": "adb1ea4a-94c7-4e0a-8b80-e0050d31553b",
+                    "IdText": "cf",
+                    "text": "[cf]",
+                    "event": false,
+                    "type": "Complex",
+                    "description": ""
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "24436563-5698-4a58-bdec-e0070a183362",
+                    "IdText": "cf",
+                    "text": "cf",
+                    "event": false,
+                    "type": "Complex",
+                    "description": ""
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg.apps.pyfunc.PyFuncApp",
+                    "defaultValue": "",
+                    "description": "Application class",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimated execution time",
+                    "readonly": true,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of cores used",
+                    "readonly": true,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Input error rate (%)",
+                    "name": "input_error_threshold",
+                    "value": 0,
+                    "defaultValue": "",
+                    "description": "The allowed failure rate of the inputs (in percent), before this component goes to ERROR state and is not executed",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Number of tries",
+                    "name": "n_tries",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Specifies the number of times the 'run' method will be executed before finally giving up",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "Function Name",
+                    "name": "func_name",
+                    "value": "rascil_tweaks.functions.cfExtract",
+                    "defaultValue": "",
+                    "description": "Python function name",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Function Code",
+                    "name": "func_code",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Python function code, e.g. 'def function_name(args): return args'",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Pickle",
+                    "name": "pickle",
+                    "value": true,
+                    "defaultValue": "",
+                    "description": "Whether the python arguments are pickled.",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Function Defaults",
+                    "name": "func_defaults",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Mapping from argname to default value. Should match only the last part of the argnames list. Values are interpreted as Python code literals and that means string values need to be quoted.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Function Arguments Mapping",
+                    "name": "func_arg_mapping",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Mapping between argument name and input drop uids",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "[cf]",
+                    "name": "cf",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "cf",
+                    "name": "cf",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
         }
     ],
     "linkDataArray": [
@@ -8436,14 +8826,6 @@
         {
             "from": -5,
             "fromPort": "790b7965-2e14-4da4-84ad-502ecd7321e1",
-            "to": -20,
-            "toPort": "f4ad698e-4513-46fa-aa95-7f46ef680ad2",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
-            "from": -5,
-            "fromPort": "790b7965-2e14-4da4-84ad-502ecd7321e1",
             "to": -37,
             "toPort": "96c8024b-222b-489d-8193-50871f29b3f2",
             "loop_aware": "0",
@@ -8478,14 +8860,6 @@
             "fromPort": "a0fd2154-836b-4548-b8e3-a361fe62dbab",
             "to": -18,
             "toPort": "7b5cefd3-399a-47af-8e85-74aa973cc788",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
-            "from": -16,
-            "fromPort": "a0fd2154-836b-4548-b8e3-a361fe62dbab",
-            "to": -20,
-            "toPort": "25c00e81-a694-4d7d-a82b-7e20371c7807",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -8770,18 +9144,50 @@
             "closesLoop": false
         },
         {
-            "from": -20,
-            "fromPort": "914137c9-82ef-48a9-905e-fe0a9660bf71",
-            "to": -1,
+            "from": -23,
+            "fromPort": "8d20f95d-7aa3-4e4f-b699-29189b4cdbc9",
+            "to": -40,
             "toPort": "f0b7dff1-d303-42d0-9751-d42e9e1a7ee0",
             "loop_aware": "0",
             "closesLoop": false
         },
         {
-            "from": -1,
-            "fromPort": "52b7535c-d429-40d3-b5d9-54fe8e9a9ea0",
+            "from": -5,
+            "fromPort": "790b7965-2e14-4da4-84ad-502ecd7321e1",
+            "to": -23,
+            "toPort": "ab73f1db-5788-44a2-8263-61d5f86161ac",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -16,
+            "fromPort": "a0fd2154-836b-4548-b8e3-a361fe62dbab",
+            "to": -23,
+            "toPort": "69fca35e-d9ab-45d0-a6a1-d6d922754727",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -20,
+            "fromPort": "974c3e33-214d-41de-a089-0102f8a4a553",
             "to": -21,
             "toPort": "737201a4-3c7c-472b-b73f-09bceb6662bf",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -40,
+            "fromPort": "df67c4a1-c48a-4363-ac88-af4391f60fba",
+            "to": -1,
+            "toPort": "adb1ea4a-94c7-4e0a-8b80-e0050d31553b",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -1,
+            "fromPort": "24436563-5698-4a58-bdec-e0070a183362",
+            "to": -20,
+            "toPort": "f0b7dff1-d303-42d0-9751-d42e9e1a7ee0",
             "loop_aware": "0",
             "closesLoop": false
         }
