@@ -18,167 +18,6 @@
     },
     "nodeDataArray": [
         {
-            "category": "PythonApp",
-            "isGroup": false,
-            "color": "#0059a5",
-            "drawOrderHint": 0,
-            "key": -1,
-            "text": "glob.glob",
-            "description": "An application that wraps a simple python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output. \nUsers indicate the function to be wrapped via the ``func_name`` parameter. Otherwise, users can also *send* over the python code using the ``func_code`` parameter. The code needs to be base64-encoded and produced with the marshal module of the same Python version used to run DALiuGE.\nBoth inputs and outputs are serialized using the pickle protocol.",
-            "x": 1560.741042283622,
-            "y": 333.9018216889984,
-            "width": 200,
-            "height": 72,
-            "collapsed": true,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "expanded": false,
-            "git_url": "https://github.com/ICRAR/daliuge.git",
-            "sha": "c2f0a30",
-            "inputPorts": [
-                {
-                    "Id": "b84d1c2a-7fdb-4516-8633-b6f38f4eac79",
-                    "IdText": "recursive",
-                    "text": "recursive",
-                    "event": false,
-                    "type": "String",
-                    "description": ""
-                },
-                {
-                    "Id": "3dc35b09-5206-48e3-883d-feec2d776738",
-                    "IdText": "pathname",
-                    "text": "pathname",
-                    "event": false,
-                    "type": "String",
-                    "description": ""
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "82a60cdf-5625-437d-ba2b-80a9fb95a0ee",
-                    "IdText": "content",
-                    "text": "content",
-                    "event": false,
-                    "type": "String",
-                    "description": " The port carrying the content read from the URL."
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Application Class",
-                    "name": "appclass",
-                    "value": "dlg.apps.pyfunc.PyFuncApp",
-                    "defaultValue": "",
-                    "description": "Application class",
-                    "readonly": true,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Execution Time",
-                    "name": "execution_time",
-                    "value": 5,
-                    "defaultValue": "",
-                    "description": "Estimated execution time",
-                    "readonly": true,
-                    "type": "Float",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "No. of CPUs",
-                    "name": "num_cpus",
-                    "value": 1,
-                    "defaultValue": "",
-                    "description": "Number of cores used",
-                    "readonly": true,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Group start",
-                    "name": "group_start",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Is this node the start of a group?",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Input error rate (%)",
-                    "name": "input_error_threshold",
-                    "value": 0,
-                    "defaultValue": "",
-                    "description": "the allowed failure rate of the inputs (in percent), before this component goes to ERROR state and is not executed",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Number of tries",
-                    "name": "n_tries",
-                    "value": 1,
-                    "defaultValue": "",
-                    "description": "Specifies the number of times the 'run' method will be executed before finally giving up",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                }
-            ],
-            "applicationArgs": [
-                {
-                    "text": "Function Name",
-                    "name": "func_name",
-                    "value": "glob.glob",
-                    "defaultValue": "",
-                    "description": "Return a list of paths matching a pathname pattern.\nThe pattern may contain simple shell-style wildcards a la\nfnmatch. However, unlike fnmatch, filenames starting with a\ndot are special cases that are not matched by '*' and '?'\npatterns.\nIf recursive is true, the pattern '**' will match any files and\nzero or more directories and subdirectories.",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Pickle",
-                    "name": "pickle",
-                    "value": true,
-                    "defaultValue": "",
-                    "description": "Whether the python arguments are pickled.",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "inputApplicationDescription": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "outputApplicationDescription": ""
-        },
-        {
             "category": "BashShellApp",
             "isGroup": false,
             "color": "#0059a5",
@@ -733,7 +572,7 @@
                 {
                     "text": "Command",
                     "name": "command",
-                    "value": "echo \"False\" > %o0",
+                    "value": "echo \"True\" > %o0",
                     "defaultValue": "",
                     "description": "The command to be executed",
                     "readonly": false,
@@ -883,8 +722,8 @@
             "key": -7,
             "text": "recursive",
             "description": "A standard file on a filesystem mounted to the deployment machine \nIn some cases drops are created **outside** the context of a session, most notably during unit tests. In these cases the base directory is a fixed location under ``/tmp``.\nThe following table summarizes the calculation of the final path used by the ``FileDrop`` class depending on its parameters:\n============ ===================== ===================== ========== . filepath ------------ ------------------------------------------------------ dirname empty relative absolute ============ ===================== ===================== ========== **empty** /``$B``/``$u`` /``$B``/``$f`` /``$f`` **relative** /``$B``/``$d``/``$u`` /``$B``/``$d``/``$f`` **ERROR** **absolute** /``$d``/``$u`` /``$d``/``$f`` **ERROR** ============ ===================== ===================== ==========\nIn the table, ``$f`` is the value of ``filepath``, ``$d`` is the value of ``dirname``, ``$u`` is the drop's UID and ``$B`` is the base directory for this drop's session, namely ``/the/cwd/$session_id``.",
-            "x": 1463,
-            "y": 428,
+            "x": 1465,
+            "y": 426,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -911,7 +750,7 @@
                     "IdText": "recursive",
                     "text": "recursive",
                     "event": false,
-                    "type": "String",
+                    "type": "Boolean",
                     "description": ""
                 }
             ],
@@ -1027,6 +866,226 @@
             "outputApplicationType": "None",
             "outputApplicationKey": null,
             "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "isGroup": false,
+            "color": "#0059a5",
+            "drawOrderHint": 0,
+            "key": -12,
+            "text": "glob",
+            "description": "An application that wraps a simple python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output.",
+            "x": 1584.2349999999997,
+            "y": 375.58263887138025,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "git_url": "https://github.com/ICRAR/daliuge.git",
+            "sha": "19a6f70",
+            "inputPorts": [
+                {
+                    "Id": "a59bf460-80ee-422f-8c49-4aa8453e7b95",
+                    "IdText": "pathname",
+                    "text": "pathname",
+                    "event": false,
+                    "type": "String",
+                    "description": ""
+                },
+                {
+                    "Id": "f77cfd6f-5e77-413e-b534-3a94b7125e11",
+                    "IdText": "recursive",
+                    "text": "recursive",
+                    "event": false,
+                    "type": "Boolean",
+                    "description": ""
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "823f7a6f-eada-4782-8609-1d79b08dc700",
+                    "IdText": "content",
+                    "text": "content",
+                    "event": false,
+                    "type": "String",
+                    "description": ""
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg.apps.pyfunc.PyFuncApp",
+                    "defaultValue": "",
+                    "description": "Application class",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimated execution time",
+                    "readonly": true,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of cores used",
+                    "readonly": true,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Input error rate (%)",
+                    "name": "input_error_threshold",
+                    "value": 0,
+                    "defaultValue": "",
+                    "description": "The allowed failure rate of the inputs (in percent), before this component goes to ERROR state and is not executed",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Number of tries",
+                    "name": "n_tries",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Specifies the number of times the 'run' method will be executed before finally giving up",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "Function Name",
+                    "name": "func_name",
+                    "value": "glob.glob",
+                    "defaultValue": "",
+                    "description": "Python function name",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Function Code",
+                    "name": "func_code",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Python function code, e.g. 'def function_name(args): return args'",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Input Parser",
+                    "name": "input_parser",
+                    "value": "eval",
+                    "defaultValue": "",
+                    "description": "Input port parsing technique",
+                    "readonly": false,
+                    "type": "Select",
+                    "precious": false,
+                    "options": [
+                        "pickle",
+                        "eval",
+                        "npy",
+                        "path",
+                        "dataurl"
+                    ],
+                    "positional": false
+                },
+                {
+                    "text": "Output Parser",
+                    "name": "output_parser",
+                    "value": "eval",
+                    "defaultValue": "",
+                    "description": "output port parsing technique",
+                    "readonly": false,
+                    "type": "Select",
+                    "precious": false,
+                    "options": [
+                        "",
+                        "pickle",
+                        "eval",
+                        "npy"
+                    ],
+                    "positional": false
+                },
+                {
+                    "text": "Function Defaults",
+                    "name": "func_defaults",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Mapping from argname to default value. Should match only the last part of the argnames list. Values are interpreted as Python code literals and that means string values need to be quoted.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Function Arguments Mapping",
+                    "name": "func_arg_mapping",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Mapping between argument name and input drop uids",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
         }
     ],
     "linkDataArray": [
@@ -1035,14 +1094,6 @@
             "fromPort": "ff0e33d5-2fa2-4acf-a1b6-769f77a1ec08",
             "to": -3,
             "toPort": "164b0726-cc8f-4e76-8bf3-3de0f57525cf",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
-            "from": -1,
-            "fromPort": "82a60cdf-5625-437d-ba2b-80a9fb95a0ee",
-            "to": -5,
-            "toPort": "b2f11521-2eb3-4da9-97be-7bdf620d703c",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -1063,18 +1114,26 @@
             "closesLoop": false
         },
         {
+            "from": -12,
+            "fromPort": "823f7a6f-eada-4782-8609-1d79b08dc700",
+            "to": -5,
+            "toPort": "b2f11521-2eb3-4da9-97be-7bdf620d703c",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
             "from": -7,
             "fromPort": "eda8e891-9595-40b3-b5f1-c34e86ce7fa7",
-            "to": -1,
-            "toPort": "b84d1c2a-7fdb-4516-8633-b6f38f4eac79",
+            "to": -12,
+            "toPort": "f77cfd6f-5e77-413e-b534-3a94b7125e11",
             "loop_aware": "0",
             "closesLoop": false
         },
         {
             "from": -3,
             "fromPort": "40e3b8c1-3b02-4e36-9699-2a791a28524a",
-            "to": -1,
-            "toPort": "3dc35b09-5206-48e3-883d-feec2d776738",
+            "to": -12,
+            "toPort": "a59bf460-80ee-422f-8c49-4aa8453e7b95",
             "loop_aware": "0",
             "closesLoop": false
         }
