@@ -14,7 +14,7 @@
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": 0,
-        "numLGNodes": 43
+        "numLGNodes": 44
     },
     "nodeDataArray": [
         {
@@ -202,7 +202,7 @@
                     "IdText": "vis",
                     "text": "vis",
                     "event": false,
-                    "type": "Unknown",
+                    "type": "Complex",
                     "description": ""
                 }
             ],
@@ -1945,7 +1945,7 @@
                     "IdText": "vis",
                     "text": "vis",
                     "event": false,
-                    "type": "Unknown",
+                    "type": "Complex",
                     "description": ""
                 }
             ],
@@ -2594,150 +2594,6 @@
                 }
             ],
             "applicationArgs": [],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "inputApplicationDescription": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "outputApplicationDescription": ""
-        },
-        {
-            "category": "PythonApp",
-            "isGroup": false,
-            "color": "#0059a5",
-            "drawOrderHint": 0,
-            "key": -78,
-            "text": "import_image_from_fits",
-            "description": "Read an Image from fits",
-            "x": 324.66004453137384,
-            "y": -105.13799695589806,
-            "width": 200,
-            "height": 72,
-            "collapsed": true,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "expanded": false,
-            "git_url": "",
-            "sha": "1.0",
-            "inputPorts": [],
-            "outputPorts": [
-                {
-                    "Id": "1b79fe64-2e01-430a-8674-a696d85c33ed",
-                    "IdText": "im",
-                    "text": "im",
-                    "event": false,
-                    "type": "Complex",
-                    "description": "Image  See also     :py:func:`rascil.processing_components.image.operations.export_image_to_array`"
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Application Class",
-                    "name": "appclass",
-                    "value": "dlg.apps.pyfunc.PyFuncApp",
-                    "defaultValue": "",
-                    "description": "The python class that implements this application",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Execution Time",
-                    "name": "execution_time",
-                    "value": 5,
-                    "defaultValue": "",
-                    "description": "Estimate of execution time (in seconds) for this application.",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "No. of CPUs",
-                    "name": "num_cpus",
-                    "value": 1,
-                    "defaultValue": "",
-                    "description": "Number of CPUs used for this application.",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Group start",
-                    "name": "group_start",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Is this node the start of a group?",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                }
-            ],
-            "applicationArgs": [
-                {
-                    "text": "Function Name",
-                    "name": "func_name",
-                    "value": "rascil.processing_components.image.operations.import_image_from_fits",
-                    "defaultValue": "",
-                    "description": "Python function name",
-                    "readonly": true,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": true
-                },
-                {
-                    "text": "Pickle",
-                    "name": "pickle",
-                    "value": true,
-                    "defaultValue": "",
-                    "description": "Whether the python arguments are pickled.",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": true
-                },
-                {
-                    "text": "fitsfile",
-                    "name": "fitsfile",
-                    "value": "image_avg32-MFS-image.fits",
-                    "defaultValue": "",
-                    "description": "FITS file in storage",
-                    "readonly": false,
-                    "type": "Python",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "fixpol",
-                    "name": "fixpol",
-                    "value": true,
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                }
-            ],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -5415,6 +5271,276 @@
             "outputApplicationType": "None",
             "outputApplicationKey": null,
             "outputApplicationDescription": ""
+        },
+        {
+            "category": "File",
+            "isGroup": false,
+            "color": "#2c2c2c",
+            "drawOrderHint": 0,
+            "key": -37,
+            "text": "FITS",
+            "description": "A standard file on a filesystem mounted to the deployment machine",
+            "x": 230.28431525357402,
+            "y": -105.75128470346054,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "git_url": "https://github.com/ICRAR/daliuge.git",
+            "sha": "ae33343",
+            "inputPorts": [],
+            "outputPorts": [
+                {
+                    "Id": "704c34fe-c727-4f85-b7d4-d8a3cfbed0e2",
+                    "IdText": "fitsfile",
+                    "text": "fitsfile",
+                    "event": false,
+                    "type": "String",
+                    "description": ""
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Check file path exists",
+                    "name": "check_filepath_exists",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Perform a check to make sure the file path exists before proceeding with the application",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "File Path",
+                    "name": "filepath",
+                    "value": "$DLG_ROOT/testdata/image-MFS-image.fits",
+                    "defaultValue": "",
+                    "description": "Path to the file for this node",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Directory name",
+                    "name": "dirname",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Path to the file for this node",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "isGroup": false,
+            "color": "#0059a5",
+            "drawOrderHint": 0,
+            "key": -38,
+            "text": "import_image_from_fits",
+            "description": "Minimal MS to BlockVisibility converter\n\nThe MS format is much more general than the RASCIL BlockVisibility so we cut many corners.\nThis requires casacore to be installed. If not an exception ModuleNotFoundError is raised.\n\nCreates a list of BlockVisibility's, split by field and spectral window\n\nReading of a subset of channels is possible using either start_chan and end_chan or channnum. Using start_chan\nand end_chan is preferred since it only reads the channels required. Channum is more flexible and can be used to\nread a random list of channels.",
+            "x": 325.9518461962336,
+            "y": -106.20131231569022,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "git_url": "",
+            "sha": "1.0",
+            "inputPorts": [
+                {
+                    "Id": "a413cdfe-47be-4cea-a996-cc7fbe151658",
+                    "IdText": "fitsfile",
+                    "text": "fitsfile",
+                    "event": false,
+                    "type": "String",
+                    "description": "File name of FITS file"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "54749e09-6808-4340-870d-0abd596c7a12",
+                    "IdText": "im",
+                    "text": "im",
+                    "event": false,
+                    "type": "Complex",
+                    "description": ""
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg.apps.pyfunc.PyFuncApp",
+                    "defaultValue": "",
+                    "description": "The python class that implements this application",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimate of execution time (in seconds) for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of CPUs used for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "Function Name",
+                    "name": "func_name",
+                    "value": "rascil.processing_components.image.operations.import_image_from_fits",
+                    "defaultValue": "",
+                    "description": "Python function name",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": true
+                },
+                {
+                    "text": "Input Parser",
+                    "name": "input_parser",
+                    "value": "path",
+                    "defaultValue": "",
+                    "description": "Input port parsing technique",
+                    "readonly": false,
+                    "type": "Select",
+                    "precious": false,
+                    "options": [
+                        "pickle",
+                        "npy",
+                        "eval",
+                        "path",
+                        "dataurl"
+                    ],
+                    "positional": false
+                },
+                {
+                    "text": "Output Parser",
+                    "name": "output_parser",
+                    "value": "pickle",
+                    "defaultValue": "",
+                    "description": "output port parsing technique",
+                    "readonly": false,
+                    "type": "Select",
+                    "precious": false,
+                    "options": [
+                        "pickle",
+                        "eval",
+                        "npy"
+                    ],
+                    "positional": false
+                },
+                {
+                    "text": "fixpol",
+                    "name": "fixpol",
+                    "value": true,
+                    "defaultValue": "",
+                    "description": "Average all channels read",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
         }
     ],
     "linkDataArray": [
@@ -5520,14 +5646,6 @@
             "to": -80,
             "toPort": "8a1a4206-a030-4f22-aac3-2d4805900681",
             "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
-            "from": -78,
-            "fromPort": "1b79fe64-2e01-430a-8674-a696d85c33ed",
-            "to": -79,
-            "toPort": "a5246efd-52da-44d2-88b0-3ec821b477b4",
-            "loop_aware": "1",
             "closesLoop": false
         },
         {
@@ -5807,6 +5925,22 @@
             "fromPort": "af1a54ec-6128-4f7f-ad6b-928c8683bc27",
             "to": -29,
             "toPort": "724b5aec-d081-467c-92c7-93e31965a247",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -38,
+            "fromPort": "54749e09-6808-4340-870d-0abd596c7a12",
+            "to": -79,
+            "toPort": "a5246efd-52da-44d2-88b0-3ec821b477b4",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -37,
+            "fromPort": "704c34fe-c727-4f85-b7d4-d8a3cfbed0e2",
+            "to": -38,
+            "toPort": "a413cdfe-47be-4cea-a996-cc7fbe151658",
             "loop_aware": "0",
             "closesLoop": false
         }
