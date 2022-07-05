@@ -5,8 +5,8 @@
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
         "filePath": "cont_img_image_vis_download.graph",
-        "eagleVersion": "v4.4.0",
-        "eagleCommitHash": "89685c170ab50551bd9d85e9ddd77f94695ab0bf",
+        "eagleVersion": "v4.5.1",
+        "eagleCommitHash": "e5e2b5359fa73779fe5239991ef721070bbbadd9",
         "schemaVersion": "OJS",
         "readonly": true,
         "sha": "",
@@ -174,7 +174,7 @@
             "key": -63,
             "text": "create_blockvisibility_from_ms",
             "description": "Minimal MS to BlockVisibility converter\n\nThe MS format is much more general than the RASCIL BlockVisibility so we cut many corners.\nThis requires casacore to be installed. If not an exception ModuleNotFoundError is raised.\n\nCreates a list of BlockVisibility's, split by field and spectral window\n\nReading of a subset of channels is possible using either start_chan and end_chan or channnum. Using start_chan\nand end_chan is preferred since it only reads the channels required. Channum is more flexible and can be used to\nread a random list of channels.",
-            "x": 452.63332012437405,
+            "x": 453.63332012437405,
             "y": -297.3296985651873,
             "width": 200,
             "height": 72,
@@ -256,20 +256,6 @@
                     "precious": false,
                     "options": [],
                     "positional": false
-                }
-            ],
-            "applicationArgs": [
-                {
-                    "text": "Function Name",
-                    "name": "func_name",
-                    "value": "rascil.processing_components.visibility.base.create_blockvisibility_from_ms",
-                    "defaultValue": "",
-                    "description": "Python function name",
-                    "readonly": true,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": true
                 },
                 {
                     "text": "Input Parser",
@@ -304,6 +290,20 @@
                         "npy"
                     ],
                     "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "Function Name",
+                    "name": "func_name",
+                    "value": "rascil.processing_components.visibility.base.create_blockvisibility_from_ms",
+                    "defaultValue": "",
+                    "description": "Python function name",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": true
                 },
                 {
                     "text": "channum",
@@ -312,19 +312,7 @@
                     "defaultValue": "",
                     "description": "range of channels e.g. range(17,32), default is None meaning all",
                     "readonly": false,
-                    "type": "Complex",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "end_chan",
-                    "name": "end_chan",
-                    "value": "None",
-                    "defaultValue": "",
-                    "description": "End channel to read",
-                    "readonly": false,
-                    "type": "Complex",
+                    "type": "Json",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -5478,20 +5466,6 @@
                     "precious": false,
                     "options": [],
                     "positional": false
-                }
-            ],
-            "applicationArgs": [
-                {
-                    "text": "Function Name",
-                    "name": "func_name",
-                    "value": "rascil.processing_components.image.operations.import_image_from_fits",
-                    "defaultValue": "",
-                    "description": "Python function name",
-                    "readonly": true,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": true
                 },
                 {
                     "text": "Input Parser",
@@ -5526,6 +5500,20 @@
                         "npy"
                     ],
                     "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "Function Name",
+                    "name": "func_name",
+                    "value": "rascil.processing_components.image.operations.import_image_from_fits",
+                    "defaultValue": "",
+                    "description": "Python function name",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": true
                 },
                 {
                     "text": "fixpol",
@@ -6163,7 +6151,7 @@
                 {
                     "text": "Command",
                     "name": "command",
-                    "value": "tar -x --strip-components=3",
+                    "value": "tar",
                     "defaultValue": "",
                     "description": "The command to be executed",
                     "readonly": false,
@@ -6211,7 +6199,7 @@
                 {
                     "text": "Param value separator",
                     "name": "paramValueSeparator",
-                    "value": " ",
+                    "value": "=",
                     "defaultValue": "",
                     "description": "Separator character(s) between parameters on the command line",
                     "readonly": false,
@@ -6223,7 +6211,7 @@
                 {
                     "text": "Argument prefix",
                     "name": "argumentPrefix",
-                    "value": "-",
+                    "value": "--",
                     "defaultValue": "",
                     "description": "Prefix to each keyed argument on the command line",
                     "readonly": false,
@@ -6293,7 +6281,32 @@
                     "positional": false
                 }
             ],
-            "applicationArgs": [],
+            "applicationArgs": [
+                {
+                    "text": "action",
+                    "name": "x",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": true,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "strip-components",
+                    "name": "strip-components",
+                    "value": 3,
+                    "defaultValue": "0",
+                    "description": "strip components from path during extraction",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
