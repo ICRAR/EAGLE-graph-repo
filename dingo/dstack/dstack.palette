@@ -1,0 +1,1288 @@
+{
+    "modelData": {
+        "fileType": "Palette",
+        "repoService": "GitHub",
+        "repoBranch": "master",
+        "repo": "alxndrwllmsn/EAGLE-graph-repo",
+        "filePath": "dingo/dstack/dstack.palette",
+        "eagleVersion": "v4.5.2",
+        "eagleCommitHash": "fc70a7587a6223322914cb82bf199ffb4be301de",
+        "schemaVersion": "",
+        "readonly": true,
+        "sha": "",
+        "gitUrl": "",
+        "lastModifiedName": "",
+        "lastModifiedEmail": "",
+        "lastModifiedDatetime": 0,
+        "numLGNodes": 9
+    },
+    "nodeDataArray": [
+        {
+            "category": "PythonApp",
+            "key": -5,
+            "text": "Combine Input Strings",
+            "description": "The purpose here is to take a filename from each input, without knowing \nthe number of inputs, and output a string of each of the filenames separated by a space.",
+            "streaming": false,
+            "precious": false,
+            "git_url": "https://github.com/ICRAR/daliuge",
+            "sha": "bb5f78c",
+            "embedKey": -4,
+            "inputPorts": [
+                {
+                    "Id": "3fc5c010-d1f7-459b-a3f0-8217e528da23",
+                    "IdText": "fnamesIn",
+                    "text": "filenames in",
+                    "event": false,
+                    "type": "String",
+                    "description": ""
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "1a704119-e487-4c5e-8291-321863e82ed2",
+                    "IdText": "output",
+                    "text": "output",
+                    "event": false,
+                    "type": "String",
+                    "description": ""
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg_dstack_components.apps.CombineInputString",
+                    "defaultValue": "",
+                    "description": "Application class",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of cores used",
+                    "readonly": true,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimated execution time",
+                    "readonly": true,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "key": -9,
+            "text": "Create Cdec Parset",
+            "description": "This App takes in a set of grids as paths, a template parset path and outputs a full parset.",
+            "streaming": false,
+            "precious": false,
+            "git_url": "https://github.com/ICRAR/daliuge",
+            "sha": "bb5f78c",
+            "inputPorts": [
+                {
+                    "Id": "40f3d4c0-0e37-4296-a7e1-afc5a0aa707b",
+                    "IdText": "visgrid",
+                    "text": "Visibility Grid",
+                    "event": false,
+                    "type": "String",
+                    "description": "The input visibility grid"
+                },
+                {
+                    "Id": "1a6c6263-5ee0-4203-84eb-00b7ae95fa18",
+                    "IdText": "psfgrid",
+                    "text": "PSF Grid",
+                    "event": false,
+                    "type": "String",
+                    "description": "The input psfgrid"
+                },
+                {
+                    "Id": "2bcb4ed9-f34c-4cc8-9d5f-2ed6fde993ce",
+                    "IdText": "pcfgrid",
+                    "text": "PCF Grid",
+                    "event": false,
+                    "type": "String",
+                    "description": "The input pcfgrid"
+                },
+                {
+                    "Id": "94a62d66-8ba3-4eea-9e83-5f005726611c",
+                    "IdText": "parset",
+                    "text": "Parset",
+                    "event": false,
+                    "type": "String",
+                    "description": "The template parset to use for the parset creation."
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "681b5307-a0c8-4016-90b7-01f1f61dc5be",
+                    "IdText": "parset_out",
+                    "text": "Output Parset",
+                    "event": false,
+                    "type": "String",
+                    "description": ""
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg_dstack_components.apps.CreateCdecParset",
+                    "defaultValue": "",
+                    "description": "Application class",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of cores used",
+                    "readonly": true,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimated execution time",
+                    "readonly": true,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of Procs",
+                    "name": "num_of_procs",
+                    "value": 11,
+                    "defaultValue": "1",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "CASA Data Path",
+                    "name": "casadata",
+                    "value": "/scratch/director2193/awilliamson1/component-testing/casadata",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Imager",
+                    "name": "imager",
+                    "value": "Cdeconvolver",
+                    "defaultValue": "",
+                    "description": "The imager to use",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Name",
+                    "name": "name",
+                    "value": "image.dal_test.deep",
+                    "defaultValue": "",
+                    "description": "The name format to use",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Projection",
+                    "name": "projection",
+                    "value": "WProject",
+                    "defaultValue": "",
+                    "description": "The projection to use",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Output Path",
+                    "name": "outpath",
+                    "value": "/",
+                    "defaultValue": "",
+                    "description": "The output path",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Template Name",
+                    "name": "templateName",
+                    "value": "image.deep",
+                    "defaultValue": "",
+                    "description": "The name template to use",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Extra Arguments",
+                    "name": "extraArgs",
+                    "value": "nchanpercore=10 nwriters=10",
+                    "defaultValue": "",
+                    "description": "A space separated list of arguments of the form argname=argvalue. Current extraArgs nchanpercore and nwriters.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "key": -3,
+            "text": "Create Parset",
+            "description": "This App takes in a measurement set path, a template parset path and outputs a full parset.",
+            "streaming": false,
+            "precious": false,
+            "git_url": "https://github.com/ICRAR/daliuge",
+            "sha": "63d7df9",
+            "inputPorts": [
+                {
+                    "Id": "641133e5-d2d6-4223-ab90-7c7bc5e7ccfc",
+                    "IdText": "mSet",
+                    "text": "Measurement Set",
+                    "event": false,
+                    "type": "String",
+                    "description": "The filename of the input measurement set."
+                },
+                {
+                    "Id": "b7d395db-2be7-4342-b1b8-0782646105d7",
+                    "IdText": "parset",
+                    "text": "Parset",
+                    "event": false,
+                    "type": "String",
+                    "description": "The template parset to use for the parset creation."
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "176ff461-3dd5-469f-8eda-6a842a786bab",
+                    "IdText": "parset_out",
+                    "text": "Output Parset",
+                    "event": false,
+                    "type": "String",
+                    "description": "The parset to output"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg_dstack_components.apps.CreateParset",
+                    "defaultValue": "",
+                    "description": "Application class",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of cores used",
+                    "readonly": true,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimated execution time",
+                    "readonly": true,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "CASA Data Path",
+                    "name": "casadata",
+                    "value": "/scratch/director2193/awilliamson1/component-testing/casadata",
+                    "defaultValue": "",
+                    "description": "The location of the CASA Telemetry data",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Imager",
+                    "name": "imager",
+                    "value": "Cimager",
+                    "defaultValue": "",
+                    "description": "The imager to use",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Name",
+                    "name": "name",
+                    "value": "image.dal_test.dumpgrid",
+                    "defaultValue": "",
+                    "description": "The name format to use",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Projection",
+                    "name": "projection",
+                    "value": "WProject",
+                    "defaultValue": "",
+                    "description": "The projection to use",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Output Path",
+                    "name": "outpath",
+                    "value": "../parsets/",
+                    "defaultValue": "",
+                    "description": "The output path",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Template Name",
+                    "name": "templateName",
+                    "value": "image.template",
+                    "defaultValue": "",
+                    "description": "The name template to use",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Extra Arguments",
+                    "name": "extraArgs",
+                    "value": "Cniter=1 Cgain=0 freqframe=bary Channels=[100,6] IrestFrequency=HI nchanpercore=2 nwriters=50",
+                    "defaultValue": "",
+                    "description": "A space separated list of arguments of the form argname=argvalue. Current extraArgs are Cniter, Cgain, freqframe, Channels, IrestFrequency, nchanpercore, and nwriters.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "key": -6,
+            "text": "Deep Imaging",
+            "description": "Run's the askapsoft cdeconvolver with the parameters specified.",
+            "streaming": false,
+            "precious": false,
+            "git_url": "https://github.com/ICRAR/daliuge",
+            "sha": "bb5f78c",
+            "inputPorts": [
+                {
+                    "Id": "462e448c-bea2-4f94-b670-71e730d827a0",
+                    "IdText": "parset",
+                    "text": "Parset",
+                    "event": false,
+                    "type": "String",
+                    "description": "The parset with which to run the imager"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "ddfde493-2422-45aa-9f18-c60fffaffc77",
+                    "IdText": "logfile",
+                    "text": "Log File",
+                    "event": false,
+                    "type": "String",
+                    "description": "The place to put all the logs"
+                },
+                {
+                    "Id": "8adf22ac-c051-4dbc-9a2a-040ee1c0ac7e",
+                    "IdText": "model",
+                    "text": "Model",
+                    "event": false,
+                    "type": "String",
+                    "description": "The output model"
+                },
+                {
+                    "Id": "eeafa08c-72a2-4a6a-a26d-efbe9906cd54",
+                    "IdText": "image",
+                    "text": "Image",
+                    "event": false,
+                    "type": "String",
+                    "description": "The output image"
+                },
+                {
+                    "Id": "f89af347-bb1d-47cb-83f8-1921bbd6da15",
+                    "IdText": "residual",
+                    "text": "Residual",
+                    "event": false,
+                    "type": "String",
+                    "description": "The output residual"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg_dstack_components.apps.DeepImaging",
+                    "defaultValue": "",
+                    "description": "Application class",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of cores used",
+                    "readonly": true,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimated execution time",
+                    "readonly": true,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of Procs",
+                    "name": "num_of_procs",
+                    "value": 10,
+                    "defaultValue": "1",
+                    "description": "the number of processes to use for srun",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "Run Test",
+                    "name": "echo_test",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Echo the command instead of running the program",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "key": -4,
+            "text": "First Pass Imaging",
+            "description": "Run's the askapsoft imager with the given parameter set, then writes the resultant filenames to the output to link with the next step.",
+            "streaming": false,
+            "precious": false,
+            "git_url": "https://github.com/ICRAR/daliuge",
+            "sha": "bb5f78c",
+            "inputPorts": [
+                {
+                    "Id": "dea091e6-427a-4937-8fdb-1710f8ddb78e",
+                    "IdText": "parset",
+                    "text": "Parset",
+                    "event": false,
+                    "type": "String",
+                    "description": "The parset with which to run the imager"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "fa2721b8-8902-4479-b89e-8559900ea307",
+                    "IdText": "logfile",
+                    "text": "Log File",
+                    "event": false,
+                    "type": "String",
+                    "description": "The place to put all the logs"
+                },
+                {
+                    "Id": "adb1df5b-964c-4140-8482-368a9fea01b9",
+                    "IdText": "visgrid",
+                    "text": "Visibility Grid",
+                    "event": false,
+                    "type": "String",
+                    "description": "The output visibility grid"
+                },
+                {
+                    "Id": "bda56e60-ba64-4584-93ad-188506da11f6",
+                    "IdText": "psfgrid",
+                    "text": "PSFGrid",
+                    "event": false,
+                    "type": "String",
+                    "description": "The output psfgrid"
+                },
+                {
+                    "Id": "bfb236b7-a27c-4499-8e37-678bf1ee1fb4",
+                    "IdText": "pcfgrid",
+                    "text": "PCFGrid",
+                    "event": false,
+                    "type": "String",
+                    "description": "The output pcfgrid"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg_dstack_components.apps.FirstPassImaging",
+                    "defaultValue": "",
+                    "description": "Application class",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of cores used",
+                    "readonly": true,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimated execution time",
+                    "readonly": true,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of Procs",
+                    "name": "num_of_procs",
+                    "value": 1,
+                    "defaultValue": "1",
+                    "description": "the number of processes to use for srun",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "Run Test",
+                    "name": "echo_test",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Echo the command instead of running the program",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "key": -8,
+            "text": "GenericGather",
+            "description": "A placeholder APP to aid construction of new applications. This is mainly useful (and used) when starting a new workflow from scratch.",
+            "streaming": false,
+            "precious": false,
+            "git_url": "https://github.com/ICRAR/daliuge",
+            "sha": "bb5f78c",
+            "embedKey": -7,
+            "inputPorts": [
+                {
+                    "Id": "88378f43-4452-4b94-89c5-4f7d6051583d",
+                    "IdText": "input",
+                    "text": "input",
+                    "event": false,
+                    "type": "String",
+                    "description": ""
+                }
+            ],
+            "outputPorts": [],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg_dstack_components.apps.GenericGather",
+                    "defaultValue": "",
+                    "description": "Application class",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of cores used",
+                    "readonly": true,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimated execution time",
+                    "readonly": true,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "key": -1,
+            "text": "Grid Stacking",
+            "description": "This App takes in a list of filenames and runs a subprocess that stacks all of the grids given as the input into a file given as the output.",
+            "streaming": false,
+            "precious": false,
+            "git_url": "https://github.com/ICRAR/daliuge",
+            "sha": "63d7df9",
+            "inputPorts": [
+                {
+                    "Id": "87ba5840-ed33-4aab-9cf4-02f7619b191d",
+                    "IdText": "fnamesIn",
+                    "text": "Filenames",
+                    "event": false,
+                    "type": "String",
+                    "description": ""
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "bf31c9be-e9c5-4e04-b563-4581c7713270",
+                    "IdText": "fileOut",
+                    "text": "Output File",
+                    "event": false,
+                    "type": "String",
+                    "description": ""
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg_dstack_components.apps.GridStacking",
+                    "defaultValue": "",
+                    "description": "Application class",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of cores used",
+                    "readonly": true,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimated execution time",
+                    "readonly": true,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "CASA Data Path",
+                    "name": "casadata",
+                    "value": "/scratch/director2193/awilliamson1/component-testing/casadata",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Run as Test",
+                    "name": "echo_test",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Echo the command instead of running the program",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "key": -2,
+            "text": "Scatter Filenames",
+            "description": "This app takes in a file containing a list of paths (one path per line) and sends each via the output.",
+            "streaming": false,
+            "precious": false,
+            "git_url": "https://github.com/ICRAR/daliuge",
+            "sha": "63d7df9",
+            "inputPorts": [
+                {
+                    "Id": "cc48ed5d-42c8-4766-95fd-08589ccfadfb",
+                    "IdText": "inFile",
+                    "text": "Input File",
+                    "event": false,
+                    "type": "String",
+                    "description": "The input file containing the list of files."
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "ba959bd2-597a-42be-b02b-1efaf91073c1",
+                    "IdText": "outFilename",
+                    "text": "Output File Name",
+                    "event": false,
+                    "type": "String",
+                    "description": "The output file name"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg_dstack_components.apps.ScatterFilenames",
+                    "defaultValue": "",
+                    "description": "Application class",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of cores used",
+                    "readonly": true,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimated execution time",
+                    "readonly": true,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "key": -7,
+            "text": "grid stacking",
+            "description": "Currently just prints the input port\n",
+            "streaming": false,
+            "precious": false,
+            "git_url": "https://github.com/ICRAR/daliuge",
+            "sha": "bb5f78c",
+            "embedKey": -6,
+            "inputPorts": [
+                {
+                    "Id": "e8c97055-04b2-46d0-b73f-6f2a90186fd1",
+                    "IdText": "fnamesIn",
+                    "text": "filenames_In",
+                    "event": false,
+                    "type": "String",
+                    "description": ""
+                }
+            ],
+            "outputPorts": [],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg.apps.pyfunc.PyFuncApp",
+                    "defaultValue": "",
+                    "description": "Application class",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "",
+                    "description": "Estimated execution time",
+                    "readonly": true,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Number of cores used",
+                    "readonly": true,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Input error rate (%)",
+                    "name": "input_error_threshold",
+                    "value": 0,
+                    "defaultValue": "",
+                    "description": "The allowed failure rate of the inputs (in percent), before this component goes to ERROR state and is not executed",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Number of tries",
+                    "name": "n_tries",
+                    "value": 1,
+                    "defaultValue": "",
+                    "description": "Specifies the number of times the 'run' method will be executed before finally giving up",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "Function Name",
+                    "name": "func_name",
+                    "value": "dlg_dstack_components.pyfuncApps.grid_stacking",
+                    "defaultValue": "",
+                    "description": "Python function name",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Function Code",
+                    "name": "func_code",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Python function code, e.g. 'def function_name(args): return args'",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Input Parser",
+                    "name": "input_parser",
+                    "value": "path",
+                    "defaultValue": "",
+                    "description": "Input port parsing technique",
+                    "readonly": false,
+                    "type": "Select",
+                    "precious": false,
+                    "options": [
+                        "pickle",
+                        "eval",
+                        "npy",
+                        "path",
+                        "dataurl"
+                    ],
+                    "positional": false
+                },
+                {
+                    "text": "Output Parser",
+                    "name": "output_parser",
+                    "value": "pickle",
+                    "defaultValue": "",
+                    "description": "output port parsing technique",
+                    "readonly": false,
+                    "type": "Select",
+                    "precious": false,
+                    "options": [
+                        "pickle",
+                        "eval",
+                        "npy"
+                    ],
+                    "positional": false
+                },
+                {
+                    "text": "Function Defaults",
+                    "name": "func_defaults",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Mapping from argname to default value. Should match only the last part of the argnames list. Values are interpreted as Python code literals and that means string values need to be quoted.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Function Arguments Mapping",
+                    "name": "func_arg_mapping",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Mapping between argument name and input drop uids",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        }
+    ],
+    "linkDataArray": []
+}
