@@ -25,7 +25,7 @@
             "key": -1,
             "text": "sofia",
             "description": "SoFiA, the Source Finding Application, is a new HI source finding pipeline intended to detect and parameterise galaxies in HI data cubes. While the software is still under development, several stable versions of SoFiA have already been released. This wiki contains user documentation and technical information on SoFiA and its individual modules.",
-            "x": 1469.581977758297,
+            "x": 1470.581977758297,
             "y": 338.5998902911708,
             "width": 200,
             "height": 72,
@@ -62,7 +62,7 @@
                 {
                     "text": "Image",
                     "name": "image",
-                    "value": "sofiapipeline/sofia2",
+                    "value": "sofiapipeline/sofia2:latest",
                     "defaultValue": "",
                     "description": "SoFiA, the Source Finding Application, is a new HI source finding pipeline intended to detect and parameterise galaxies in HI data cubes. While the software is still under development, several stable versions of SoFiA have already been released. This wiki contains user documentation and technical information on SoFiA and its individual modules.",
                     "readonly": false,
@@ -84,30 +84,6 @@
                     "positional": false
                 },
                 {
-                    "text": "User",
-                    "name": "user",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "User to execute the command with (can be empty)",
-                    "readonly": false,
-                    "type": "Unknown",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Ensure User And Switch",
-                    "name": "ensureUserAndSwitch",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Switch to user inside container",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
                     "text": "Remove Container",
                     "name": "removeContainer",
                     "value": true,
@@ -115,18 +91,6 @@
                     "description": "Remove container after termination",
                     "readonly": false,
                     "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Additional Bindings",
-                    "name": "additionalBindings",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Additional volume bindings",
-                    "readonly": false,
-                    "type": "String",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -1744,7 +1708,7 @@
                 {
                     "text": "input.data",
                     "name": "input.data",
-                    "value": "%i1",
+                    "value": "",
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
@@ -1922,155 +1886,6 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "BashShellApp",
-            "isGroup": false,
-            "color": "#0059a5",
-            "drawOrderHint": 0,
-            "key": -2,
-            "text": "unpack",
-            "description": "An application component able to run an arbitrary command within the Bash Shell",
-            "x": 1210,
-            "y": 317,
-            "width": 200,
-            "height": 72,
-            "collapsed": true,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "expanded": false,
-            "git_url": "https://github.com/ICRAR/daliuge.git",
-            "sha": "c2f0a30",
-            "inputPorts": [
-                {
-                    "Id": "57b82a85-935f-4ea1-bc3c-253e131b3849",
-                    "IdText": "content",
-                    "text": "content",
-                    "event": false,
-                    "type": "String",
-                    "description": ""
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "0590608d-155b-4e4b-a06f-f081d3ea75e8",
-                    "IdText": "pars",
-                    "text": "par",
-                    "event": false,
-                    "type": "String",
-                    "description": ""
-                },
-                {
-                    "Id": "779ecdbc-1383-4cb6-a9d2-f6c1c9687e28",
-                    "IdText": "cube",
-                    "text": "cube",
-                    "event": false,
-                    "type": "Complex",
-                    "description": ""
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Command",
-                    "name": "command",
-                    "value": "tar -xf",
-                    "defaultValue": "",
-                    "description": "The command to be executed",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Command Line Arguments",
-                    "name": "command_line_arguments",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Additional command line arguments to be added to the command line to be executed",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Param value separator",
-                    "name": "paramValueSeparator",
-                    "value": " ",
-                    "defaultValue": "",
-                    "description": "Separator character(s) between parameters on the command line",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Execution Time",
-                    "name": "execution_time",
-                    "value": 5,
-                    "defaultValue": "",
-                    "description": "Estimated execution time",
-                    "readonly": true,
-                    "type": "Float",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "No. of CPUs",
-                    "name": "num_cpus",
-                    "value": 1,
-                    "defaultValue": "",
-                    "description": "Number of cores used",
-                    "readonly": true,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Group start",
-                    "name": "group_start",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Is this node the start of a group?",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                }
-            ],
-            "applicationArgs": [
-                {
-                    "text": "content",
-                    "name": "content",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": true
-                }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "inputApplicationDescription": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "outputApplicationDescription": ""
-        },
-        {
             "category": "File",
             "isGroup": false,
             "color": "#2c2c2c",
@@ -2170,8 +1985,8 @@
             "key": -7,
             "text": "sofia.par",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "x": 1331,
-            "y": 321,
+            "x": 1347,
+            "y": 264,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -2286,8 +2101,8 @@
             "key": -6,
             "text": "cube",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "x": 1319.4362090466504,
-            "y": 430.60043883531665,
+            "x": 1353.4362090466504,
+            "y": 394.60043883531665,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -2304,7 +2119,7 @@
                     "IdText": "cube",
                     "text": "cube",
                     "event": false,
-                    "type": "Complex",
+                    "type": "String",
                     "description": ""
                 }
             ],
@@ -2348,7 +2163,7 @@
                 {
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
-                    "value": true,
+                    "value": false,
                     "defaultValue": "",
                     "description": "Perform a check to make sure the file path exists before proceeding with the application",
                     "readonly": false,
@@ -2393,6 +2208,159 @@
             "outputApplicationType": "None",
             "outputApplicationKey": null,
             "outputApplicationDescription": ""
+        },
+        {
+            "category": "BashShellApp",
+            "isGroup": false,
+            "color": "#0059a5",
+            "drawOrderHint": 0,
+            "key": -8,
+            "text": "unpack",
+            "description": "An application component run within the Bash Shell",
+            "x": 1216.4705461240355,
+            "y": 317.9156547240716,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "git_url": "",
+            "sha": "",
+            "inputPorts": [
+                {
+                    "Id": "d4aa3b5e-6260-4cf7-8662-99dcc75672b6",
+                    "IdText": "f",
+                    "text": "Content",
+                    "event": false,
+                    "type": "String",
+                    "description": " The port carrying the content read from the URL."
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "6a005e69-5348-4b73-b8b3-eefba8e64b4f",
+                    "IdText": "dummy",
+                    "text": "dummy",
+                    "event": false,
+                    "type": "String",
+                    "description": ""
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Execution time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "0",
+                    "description": "Estimate of execution time (in seconds) for this application.",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Num CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "0",
+                    "description": "Number of CPUs used for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Param Value Separator",
+                    "name": "paramValueSeparator",
+                    "value": " ",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Argument prefix",
+                    "name": "argumentPrefix",
+                    "value": "--",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Command",
+                    "name": "command",
+                    "value": "tar",
+                    "defaultValue": "",
+                    "description": "The command to be executed",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "action",
+                    "name": "x",
+                    "value": " ",
+                    "defaultValue": " ",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Content",
+                    "name": "f",
+                    "value": " ",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
         }
     ],
     "linkDataArray": [
@@ -2405,14 +2373,6 @@
             "closesLoop": false
         },
         {
-            "from": -4,
-            "fromPort": "43799f16-a611-43dc-a43c-1830ff62f373",
-            "to": -2,
-            "toPort": "57b82a85-935f-4ea1-bc3c-253e131b3849",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
             "from": -7,
             "fromPort": "42bdc7ad-e029-4314-848f-8c94889ecc45",
             "to": -1,
@@ -2421,26 +2381,34 @@
             "closesLoop": false
         },
         {
-            "from": -2,
-            "fromPort": "0590608d-155b-4e4b-a06f-f081d3ea75e8",
+            "from": -6,
+            "fromPort": "bc9d3163-c7c3-4e6f-927d-1b8c5de1cb28",
+            "to": -1,
+            "toPort": "ae152698-5ff9-453f-a8e8-7bf921ce1062",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -4,
+            "fromPort": "43799f16-a611-43dc-a43c-1830ff62f373",
+            "to": -8,
+            "toPort": "d4aa3b5e-6260-4cf7-8662-99dcc75672b6",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -8,
+            "fromPort": "6a005e69-5348-4b73-b8b3-eefba8e64b4f",
             "to": -7,
             "toPort": "8d9cbfc6-c5e3-42ce-bf40-edb177f0838a",
             "loop_aware": "0",
             "closesLoop": false
         },
         {
-            "from": -2,
-            "fromPort": "779ecdbc-1383-4cb6-a9d2-f6c1c9687e28",
+            "from": -8,
+            "fromPort": "6a005e69-5348-4b73-b8b3-eefba8e64b4f",
             "to": -6,
             "toPort": "4131c889-64f5-4b0e-aa19-e8f447f46afe",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
-            "from": -6,
-            "fromPort": "bc9d3163-c7c3-4e6f-927d-1b8c5de1cb28",
-            "to": -1,
-            "toPort": "ae152698-5ff9-453f-a8e8-7bf921ce1062",
             "loop_aware": "0",
             "closesLoop": false
         }
