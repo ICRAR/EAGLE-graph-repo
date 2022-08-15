@@ -14,7 +14,7 @@
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": 0,
-        "numLGNodes": 6
+        "numLGNodes": 8
     },
     "nodeDataArray": [
         {
@@ -25,8 +25,8 @@
             "key": -1,
             "text": "sofia",
             "description": "SoFiA, the Source Finding Application, is a new HI source finding pipeline intended to detect and parameterise galaxies in HI data cubes. While the software is still under development, several stable versions of SoFiA have already been released. This wiki contains user documentation and technical information on SoFiA and its individual modules.",
-            "x": 1470.581977758297,
-            "y": 338.5998902911708,
+            "x": 1602.581977758297,
+            "y": 337.5998902911708,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -1985,8 +1985,8 @@
             "key": -7,
             "text": "sofia.par",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "x": 1347,
-            "y": 264,
+            "x": 1307,
+            "y": 274,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -2101,8 +2101,8 @@
             "key": -6,
             "text": "cube",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "x": 1353.4362090466504,
-            "y": 394.60043883531665,
+            "x": 1405.4362090466504,
+            "y": 395.60043883531665,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -2361,6 +2361,251 @@
             "outputApplicationType": "None",
             "outputApplicationKey": null,
             "outputApplicationDescription": ""
+        },
+        {
+            "category": "BashShellApp",
+            "isGroup": false,
+            "color": "#0059a5",
+            "drawOrderHint": 0,
+            "key": -2,
+            "text": "rm input.data",
+            "description": "An application component able to run an arbitrary command within the Bash Shell",
+            "x": 1402.5259888791484,
+            "y": 261.9002194176584,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "git_url": "https://github.com/ICRAR/daliuge",
+            "sha": "66dd9be",
+            "inputPorts": [
+                {
+                    "Id": "213b8720-fce7-40af-b01b-fb50507ef5a7",
+                    "IdText": "par",
+                    "text": "par",
+                    "event": false,
+                    "type": "String",
+                    "description": ""
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "f94a3d7f-3a66-4bea-93be-db895ac2c33c",
+                    "IdText": "content",
+                    "text": "Content",
+                    "event": false,
+                    "type": "String",
+                    "description": " The port carrying the content read from the URL."
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Command",
+                    "name": "command",
+                    "value": "sed -i \"/input.data/d\"",
+                    "defaultValue": "",
+                    "description": "The command to be executed",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Param value separator",
+                    "name": "paramValueSeparator",
+                    "value": " ",
+                    "defaultValue": " ",
+                    "description": "Separator character(s) between parameters on the command line",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Argument prefix",
+                    "name": "argumentPrefix",
+                    "value": "-",
+                    "defaultValue": "--",
+                    "description": "Prefix to each keyed argument on the command line",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimated execution time",
+                    "readonly": true,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "1",
+                    "description": "Number of cores used",
+                    "readonly": true,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "False",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Input error rate (%)",
+                    "name": "input_error_threshold",
+                    "value": 0,
+                    "defaultValue": "0",
+                    "description": "the allowed failure rate of the inputs (in percent), before this component goes to ERROR state and is not executed",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Number of tries",
+                    "name": "n_tries",
+                    "value": 1,
+                    "defaultValue": "1",
+                    "description": "Specifies the number of times the 'run' method will be executed before finally giving up",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "par",
+                    "name": "par",
+                    "value": null,
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": true
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "File",
+            "isGroup": false,
+            "color": "#2c2c2c",
+            "drawOrderHint": 0,
+            "key": -5,
+            "text": "sofia.par",
+            "description": "Modified parameter file",
+            "x": 1501.0539833187227,
+            "y": 289.2500548544146,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "git_url": "https://github.com/ICRAR/daliuge",
+            "sha": "66dd9be",
+            "inputPorts": [
+                {
+                    "Id": "4b96e9f5-075d-430c-8362-29e9d597b6eb",
+                    "IdText": "content",
+                    "text": "Content",
+                    "event": false,
+                    "type": "String",
+                    "description": ""
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "e1116109-4dea-410c-bcad-d69d3c87935b",
+                    "IdText": "input.data",
+                    "text": "input.data",
+                    "event": false,
+                    "type": "String",
+                    "description": ""
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "defaultValue": "False",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
         }
     ],
     "linkDataArray": [
@@ -2369,14 +2614,6 @@
             "fromPort": "1e093180-12e6-4c7d-8c95-0c8fad12a672",
             "to": -4,
             "toPort": "4c5a2391-19af-4421-90c0-1f6a8ba11bed",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
-            "from": -7,
-            "fromPort": "42bdc7ad-e029-4314-848f-8c94889ecc45",
-            "to": -1,
-            "toPort": "b8057e73-dfc9-4972-a7b8-0ae2cc6733a4",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -2409,6 +2646,30 @@
             "fromPort": "6a005e69-5348-4b73-b8b3-eefba8e64b4f",
             "to": -6,
             "toPort": "4131c889-64f5-4b0e-aa19-e8f447f46afe",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -7,
+            "fromPort": "42bdc7ad-e029-4314-848f-8c94889ecc45",
+            "to": -2,
+            "toPort": "213b8720-fce7-40af-b01b-fb50507ef5a7",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -2,
+            "fromPort": "f94a3d7f-3a66-4bea-93be-db895ac2c33c",
+            "to": -5,
+            "toPort": "4b96e9f5-075d-430c-8362-29e9d597b6eb",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -5,
+            "fromPort": "e1116109-4dea-410c-bcad-d69d3c87935b",
+            "to": -1,
+            "toPort": "ae152698-5ff9-453f-a8e8-7bf921ce1062",
             "loop_aware": "0",
             "closesLoop": false
         }
