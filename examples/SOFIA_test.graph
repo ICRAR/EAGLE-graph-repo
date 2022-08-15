@@ -5,8 +5,8 @@
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
         "filePath": "examples/SOFIA_test.graph",
-        "eagleVersion": "v4.4.0",
-        "eagleCommitHash": "89685c170ab50551bd9d85e9ddd77f94695ab0bf",
+        "eagleVersion": "v4.5.5",
+        "eagleCommitHash": "33c76f928cb1ba8317f079f74a48af13e50df702",
         "schemaVersion": "OJS",
         "readonly": true,
         "sha": "",
@@ -1929,7 +1929,7 @@
             "key": -2,
             "text": "unpack",
             "description": "An application component able to run an arbitrary command within the Bash Shell",
-            "x": 1208,
+            "x": 1210,
             "y": 317,
             "width": 200,
             "height": 72,
@@ -1947,7 +1947,7 @@
                     "IdText": "content",
                     "text": "content",
                     "event": false,
-                    "type": "Unknown",
+                    "type": "String",
                     "description": ""
                 }
             ],
@@ -1975,33 +1975,9 @@
                 {
                     "text": "Command",
                     "name": "command",
-                    "value": "cd $DLG_ROOT/workspace/$DLG_SESSION_ID && tar -xf %i0",
+                    "value": "tar -xf",
                     "defaultValue": "",
                     "description": "The command to be executed",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Input Redirection",
-                    "name": "input_redirection",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "The command line argument that specifies the input into this application",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Output Redirection",
-                    "name": "output_redirection",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "The command line argument that specifies the output from this application",
                     "readonly": false,
                     "type": "String",
                     "precious": false,
@@ -2026,18 +2002,6 @@
                     "value": " ",
                     "defaultValue": "",
                     "description": "Separator character(s) between parameters on the command line",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Argument prefix",
-                    "name": "argumentPrefix",
-                    "value": "--",
-                    "defaultValue": "",
-                    "description": "Prefix to each keyed argument on the command line",
                     "readonly": false,
                     "type": "String",
                     "precious": false,
@@ -2079,30 +2043,6 @@
                     "precious": false,
                     "options": [],
                     "positional": false
-                },
-                {
-                    "text": "Input error rate (%)",
-                    "name": "input_error_threshold",
-                    "value": 0,
-                    "defaultValue": "",
-                    "description": "the allowed failure rate of the inputs (in percent), before this component goes to ERROR state and is not executed",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Number of tries",
-                    "name": "n_tries",
-                    "value": 1,
-                    "defaultValue": "",
-                    "description": "Specifies the number of times the 'run' method will be executed before finally giving up",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
                 }
             ],
             "applicationArgs": [
@@ -2113,34 +2053,10 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Unknown",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "par",
-                    "name": "pars",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
                     "type": "String",
                     "precious": false,
                     "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "cube",
-                    "name": "cube",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Complex",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
+                    "positional": true
                 }
             ],
             "inputAppFields": [],
@@ -2190,7 +2106,7 @@
                     "IdText": "content",
                     "text": "content",
                     "event": false,
-                    "type": "Unknown",
+                    "type": "String",
                     "description": ""
                 }
             ],
