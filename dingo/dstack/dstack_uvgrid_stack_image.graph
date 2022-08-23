@@ -1811,6 +1811,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "Input File",
+                    "name": "inFile",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "The input file containing the list of files.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Output File Name",
+                    "name": "outFilename",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "The output file name",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "outputAppFields": [],
@@ -1938,6 +1962,30 @@
                     "description": "Is this node the start of a group?",
                     "readonly": true,
                     "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "filenames in",
+                    "name": "fnamesIn",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "output",
+                    "name": "output",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -2383,6 +2431,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "filenames in",
+                    "name": "fnamesIn",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "output",
+                    "name": "output",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "outputAppFields": [],
@@ -2657,6 +2729,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "filenames in",
+                    "name": "fnamesIn",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "output",
+                    "name": "output",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "outputAppFields": [],
@@ -2692,6 +2788,14 @@
             "sha": "63d7df9",
             "group": -10,
             "inputPorts": [
+                {
+                    "Id": "983fa2a5-1332-4388-8112-5cc66f9ad0c3",
+                    "IdText": "nchannels",
+                    "text": "Num Channels",
+                    "event": false,
+                    "type": "Integer",
+                    "description": ""
+                },
                 {
                     "Id": "641133e5-d2d6-4223-ab90-7c7bc5e7ccfc",
                     "IdText": "mSet",
@@ -2852,6 +2956,18 @@
                     "description": "A space separated list of arguments of the form argname=argvalue. Current extraArgs are Cniter, Cgain, freqframe, Channels, IrestFrequency, nchanpercore, and nwriters.",
                     "readonly": false,
                     "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Auto NCores",
+                    "name": "auto_ncore",
+                    "value": true,
+                    "defaultValue": "",
+                    "description": "Automatically determine the number of channels per core from the SLURM_NTASKS environment variable",
+                    "readonly": false,
+                    "type": "Boolean",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -3726,6 +3842,18 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "Auto NCores",
+                    "name": "auto_ncores",
+                    "value": true,
+                    "defaultValue": "on",
+                    "description": "Automatically determine the number of channels per core from the SLURM_NTASKS environment variable",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -3892,6 +4020,18 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "Auto NCores",
+                    "name": "auto_ncores",
+                    "value": true,
+                    "defaultValue": "",
+                    "description": "Automatically determine the number of channels per core from the SLURM_NTASKS environment variable",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -4020,18 +4160,6 @@
                     "precious": false,
                     "options": [],
                     "positional": false
-                },
-                {
-                    "text": "No. of Procs",
-                    "name": "num_of_procs",
-                    "value": 11,
-                    "defaultValue": "1",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
                 }
             ],
             "applicationArgs": [
@@ -4110,7 +4238,7 @@
                 {
                     "text": "Extra Arguments",
                     "name": "extraArgs",
-                    "value": "nchanpercore=10 nwriters=10",
+                    "value": "nchanpercore=10 nwriters=1",
                     "defaultValue": "",
                     "description": "A space separated list of arguments of the form argname=argvalue. Current extraArgs nchanpercore and nwriters.",
                     "readonly": false,
@@ -4127,6 +4255,30 @@
                     "description": "Output profiling information to file",
                     "readonly": false,
                     "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Auto NCores",
+                    "name": "auto_ncores",
+                    "value": true,
+                    "defaultValue": "on",
+                    "description": "Automatically determine the number of channels per core from the SLURM_NTASKS environment variable",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Num Channels",
+                    "name": "nchannels",
+                    "value": 100,
+                    "defaultValue": "0",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Integer",
                     "precious": false,
                     "options": [],
                     "positional": false
