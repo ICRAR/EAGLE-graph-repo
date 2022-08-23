@@ -5,8 +5,8 @@
         "repoBranch": "master",
         "repo": "alxndrwllmsn/EAGLE-graph-repo",
         "filePath": "dingo/dstack/dstack.palette",
-        "eagleVersion": "v4.5.2",
-        "eagleCommitHash": "fc70a7587a6223322914cb82bf199ffb4be301de",
+        "eagleVersion": "v4.5.5",
+        "eagleCommitHash": "29fbf87a35c8c94506db1573a5f51430c747b15f",
         "schemaVersion": "",
         "readonly": true,
         "sha": "",
@@ -19,6 +19,7 @@
     "nodeDataArray": [
         {
             "category": "PythonApp",
+            "categoryType": "Application",
             "key": -5,
             "text": "Combine Input Strings",
             "description": "The purpose here is to take a filename from each input, without knowing \nthe number of inputs, and output a string of each of the filenames separated by a space.",
@@ -113,6 +114,7 @@
         },
         {
             "category": "PythonApp",
+            "categoryType": "Application",
             "key": -9,
             "text": "Create Cdec Parset",
             "description": "This App takes in a set of grids as paths, a template parset path and outputs a full parset.",
@@ -312,6 +314,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "Auto NCores",
+                    "name": "auto_ncore",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Automatically determine the number of channels per core from the SLURM_NTASKS environment variable",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Num Channels",
+                    "name": "nchannels",
+                    "value": null,
+                    "defaultValue": "0",
+                    "description": "The number of channels in the input dataset",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -327,6 +353,7 @@
         },
         {
             "category": "PythonApp",
+            "categoryType": "Application",
             "key": -3,
             "text": "Create Parset",
             "description": "This App takes in a measurement set path, a template parset path and outputs a full parset.",
@@ -498,6 +525,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "Auto NCores",
+                    "name": "auto_ncores",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Automatically determine the number of channels per core from the SLURM_NTASKS environment variable",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Num Channels",
+                    "name": "nchannels",
+                    "value": 0,
+                    "defaultValue": "0",
+                    "description": "The number of channels in the input dataset",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -513,6 +564,7 @@
         },
         {
             "category": "PythonApp",
+            "categoryType": "Application",
             "key": -6,
             "text": "Deep Imaging",
             "description": "Run's the askapsoft cdeconvolver with the parameters specified.",
@@ -640,6 +692,18 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "Auto NCores",
+                    "name": "auto_ncore",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Automatically determine the number of channels per core from the SLURM_NTASKS environment variable",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -655,6 +719,7 @@
         },
         {
             "category": "PythonApp",
+            "categoryType": "Application",
             "key": -4,
             "text": "First Pass Imaging",
             "description": "Run's the askapsoft imager with the given parameter set, then writes the resultant filenames to the output to link with the next step.",
@@ -782,6 +847,18 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "Auto NCores",
+                    "name": "auto_ncore",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "Automatically determine the number of channels per core from the SLURM_NTASKS environment variable",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -797,6 +874,7 @@
         },
         {
             "category": "PythonApp",
+            "categoryType": "Application",
             "key": -8,
             "text": "GenericGather",
             "description": "A placeholder APP to aid construction of new applications. This is mainly useful (and used) when starting a new workflow from scratch.",
@@ -882,6 +960,7 @@
         },
         {
             "category": "PythonApp",
+            "categoryType": "Application",
             "key": -1,
             "text": "Grid Stacking",
             "description": "This App takes in a list of filenames and runs a subprocess that stacks all of the grids given as the input into a file given as the output.",
@@ -1000,6 +1079,7 @@
         },
         {
             "category": "PythonApp",
+            "categoryType": "Application",
             "key": -2,
             "text": "Scatter Filenames",
             "description": "This app takes in a file containing a list of paths (one path per line) and sends each via the output.",
@@ -1093,6 +1173,7 @@
         },
         {
             "category": "PythonApp",
+            "categoryType": "Application",
             "key": -7,
             "text": "grid stacking",
             "description": "Currently just prints the input port\n",
