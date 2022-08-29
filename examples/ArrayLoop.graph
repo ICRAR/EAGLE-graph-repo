@@ -6,7 +6,7 @@
         "repo": "ICRAR/EAGLE-graph-repo",
         "filePath": "examples/ArrayLoop.graph",
         "eagleVersion": "v4.5.5",
-        "eagleCommitHash": "33c76f928cb1ba8317f079f74a48af13e50df702",
+        "eagleCommitHash": "e49b71579a3dc4cf3063ad9d581985265f89f149",
         "schemaVersion": "OJS",
         "readonly": true,
         "sha": "",
@@ -19,6 +19,7 @@
     "nodeDataArray": [
         {
             "category": "Memory",
+            "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -43,7 +44,7 @@
                     "IdText": "array",
                     "text": "array",
                     "event": false,
-                    "type": "Complex",
+                    "type": "Object",
                     "description": "array\n"
                 }
             ],
@@ -53,7 +54,7 @@
                     "IdText": "array",
                     "text": "array",
                     "event": false,
-                    "type": "Complex",
+                    "type": "Object",
                     "description": "array"
                 }
             ],
@@ -64,7 +65,7 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
                     "type": "Float",
@@ -76,7 +77,7 @@
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
                     "type": "Boolean",
@@ -99,6 +100,7 @@
         },
         {
             "category": "Loop",
+            "categoryType": "Construct",
             "isGroup": true,
             "color": "rgb(211 165 0)",
             "drawOrderHint": 0,
@@ -127,7 +129,7 @@
                     "text": "Number loops",
                     "name": "num_of_iter",
                     "value": 2,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "The number of iterations performed by this loop construct",
                     "readonly": false,
                     "type": "Integer",
@@ -150,6 +152,7 @@
         },
         {
             "category": "PythonApp",
+            "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
@@ -175,7 +178,7 @@
                     "IdText": "rest_array",
                     "text": "rest_array",
                     "event": false,
-                    "type": "Complex",
+                    "type": "Object",
                     "description": " Port for the rest of the array"
                 }
             ],
@@ -185,7 +188,7 @@
                     "IdText": "rest_array",
                     "text": "rest_array",
                     "event": false,
-                    "type": "Complex",
+                    "type": "Object",
                     "description": " Port for the rest of the array"
                 },
                 {
@@ -204,7 +207,7 @@
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimate of execution time (in seconds) for this application.",
                     "readonly": false,
                     "type": "Float",
@@ -216,7 +219,7 @@
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Number of CPUs used for this application.",
                     "readonly": false,
                     "type": "Integer",
@@ -228,7 +231,7 @@
                     "text": "Group start",
                     "name": "group_start",
                     "value": true,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the start of a group?",
                     "readonly": false,
                     "type": "Boolean",
@@ -252,7 +255,7 @@
                     "text": "Group start",
                     "name": "group_start",
                     "value": true,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the start of a group?",
                     "readonly": false,
                     "type": "Boolean",
@@ -275,6 +278,7 @@
         },
         {
             "category": "File",
+            "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -312,7 +316,7 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
                     "type": "Float",
@@ -324,7 +328,7 @@
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
                     "type": "Boolean",
@@ -336,7 +340,7 @@
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": true,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Perform a check to make sure the file path exists before proceeding with the application",
                     "readonly": false,
                     "type": "Boolean",
@@ -383,6 +387,7 @@
         },
         {
             "category": "Memory",
+            "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -408,7 +413,7 @@
                     "IdText": "rest_array",
                     "text": "rest_array",
                     "event": false,
-                    "type": "Complex",
+                    "type": "Object",
                     "description": " Port for the input array(s)"
                 }
             ],
@@ -418,7 +423,7 @@
                     "IdText": "rest_array",
                     "text": "rest_array",
                     "event": false,
-                    "type": "Complex",
+                    "type": "Object",
                     "description": "Port carrying list of files found"
                 }
             ],
@@ -429,7 +434,7 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
                     "type": "Float",
@@ -441,7 +446,7 @@
                     "text": "Group end",
                     "name": "group_end",
                     "value": true,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
                     "type": "Boolean",
@@ -464,6 +469,7 @@
         },
         {
             "category": "PythonApp",
+            "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
@@ -489,7 +495,7 @@
                     "IdText": "array",
                     "text": "Array",
                     "event": false,
-                    "type": "Complex",
+                    "type": "Object",
                     "description": " Port carrying the averaged array"
                 }
             ],
@@ -497,10 +503,60 @@
             "outputLocalPorts": [],
             "fields": [
                 {
+                    "text": "Application class",
+                    "name": "appclass",
+                    "value": "dlg.apps.simple.RandomArrayApp",
+                    "defaultValue": "",
+                    "description": "Application class",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Execution time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "0",
+                    "description": "Estimated execution time",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Num CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "0",
+                    "description": "Number of cores used",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Component is start of a group",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [
+                {
                     "text": "Size",
                     "name": "size",
                     "value": 80000,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "The size of the array",
                     "readonly": false,
                     "type": "Integer",
@@ -512,7 +568,7 @@
                     "text": "Integer",
                     "name": "integer",
                     "value": true,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Generate integer array?",
                     "readonly": false,
                     "type": "Boolean",
@@ -543,57 +599,8 @@
                     "precious": false,
                     "options": [],
                     "positional": false
-                },
-                {
-                    "text": "Application class",
-                    "name": "appclass",
-                    "value": "dlg.apps.simple.RandomArrayApp",
-                    "defaultValue": "",
-                    "description": "Application class",
-                    "readonly": true,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Execution time",
-                    "name": "execution_time",
-                    "value": 5,
-                    "defaultValue": "",
-                    "description": "Estimated execution time",
-                    "readonly": false,
-                    "type": "Float",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Num CPUs",
-                    "name": "num_cpus",
-                    "value": 1,
-                    "defaultValue": "",
-                    "description": "Number of cores used",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Group start",
-                    "name": "group_start",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Component is start of a group",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -607,6 +614,7 @@
         },
         {
             "category": "Scatter",
+            "categoryType": "Construct",
             "isGroup": true,
             "color": "rgb(211 165 0)",
             "drawOrderHint": 0,
@@ -631,7 +639,7 @@
                     "IdText": "array",
                     "text": "array",
                     "event": false,
-                    "type": "Complex",
+                    "type": "Object",
                     "description": "Input array"
                 }
             ],
@@ -652,7 +660,7 @@
                     "text": "Number of copies",
                     "name": "num_of_copies",
                     "value": 2,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "The number of outputs generated by this construct",
                     "readonly": false,
                     "type": "Integer",
@@ -770,6 +778,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "array",
+                    "name": "array",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Input array",
+                    "readonly": false,
+                    "type": "Object",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "rest_array",
+                    "name": "rest_array",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Complex",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "outputAppFields": [],
@@ -783,6 +815,7 @@
         },
         {
             "category": "Memory",
+            "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -818,7 +851,7 @@
                     "IdText": "rest_array",
                     "text": "rest_array",
                     "event": false,
-                    "type": "Complex",
+                    "type": "Object",
                     "description": ""
                 }
             ],
@@ -844,6 +877,7 @@
             "fromPort": "bd47bacb-cfcc-48c7-8f72-c32e02d631da",
             "to": -4,
             "toPort": "2bc074ad-386d-40a6-a997-69668774646e",
+            "dataType": "String",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -852,6 +886,7 @@
             "fromPort": "0872a97e-076f-458e-85f2-fdd4cd3e75a5",
             "to": -6,
             "toPort": "19fe74fd-827a-4c43-b1be-a48dcd2b75d2",
+            "dataType": "Object",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -860,6 +895,7 @@
             "fromPort": "fb4ad016-a5cc-43e0-8272-9cf894ea4687",
             "to": -5,
             "toPort": "81c00bd2-7403-4b6b-85c9-bfc1d308eeda",
+            "dataType": "Object",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -868,6 +904,7 @@
             "fromPort": "ac25b2d6-954d-4348-a85e-f4b056c62623",
             "to": -3,
             "toPort": "055cdf24-e209-408c-86ac-cf769737a366",
+            "dataType": "Object",
             "loop_aware": "1",
             "closesLoop": false
         },
@@ -876,6 +913,7 @@
             "fromPort": "6c0b1c42-556a-4651-b05b-2d6fbdd7c692",
             "to": -7,
             "toPort": "da3a2cdc-a73b-4055-a7c9-398b0101a586",
+            "dataType": "Object",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -884,6 +922,7 @@
             "fromPort": "46ebbd1a-a092-442a-b096-ad025df480b9",
             "to": -3,
             "toPort": "055cdf24-e209-408c-86ac-cf769737a366",
+            "dataType": "Object",
             "loop_aware": "0",
             "closesLoop": true
         },
@@ -892,6 +931,7 @@
             "fromPort": "ef7bb4e2-e75b-493d-938b-81215fa10256",
             "to": -9,
             "toPort": "5cabc52e-ead6-4b92-8987-0b4bd7ba8f3e",
+            "dataType": "Complex",
             "loop_aware": "1",
             "closesLoop": false
         }
