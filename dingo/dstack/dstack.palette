@@ -6,7 +6,7 @@
         "repo": "alxndrwllmsn/EAGLE-graph-repo",
         "filePath": "dingo/dstack/dstack.palette",
         "eagleVersion": "v4.5.5",
-        "eagleCommitHash": "29fbf87a35c8c94506db1573a5f51430c747b15f",
+        "eagleCommitHash": "e49b71579a3dc4cf3063ad9d581985265f89f149",
         "schemaVersion": "",
         "readonly": true,
         "sha": "",
@@ -14,7 +14,7 @@
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": 0,
-        "numLGNodes": 9
+        "numLGNodes": 8
     },
     "nodeDataArray": [
         {
@@ -244,6 +244,18 @@
                     "positional": false
                 },
                 {
+                    "text": "Container Path",
+                    "name": "container_path",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "The path to the container running the dstack package",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
                     "text": "Imager",
                     "name": "imager",
                     "value": "Cdeconvolver",
@@ -448,6 +460,18 @@
                     "value": "/scratch/director2193/awilliamson1/component-testing/casadata",
                     "defaultValue": "",
                     "description": "The location of the CASA Telemetry data",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Container Path",
+                    "name": "container_path",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "The path to the container running the dstack package",
                     "readonly": false,
                     "type": "String",
                     "precious": false,
@@ -704,6 +728,18 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "Container Path",
+                    "name": "container_path",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "The path to the container running the yandasoft stack",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "inputAppFields": [],
@@ -856,6 +892,18 @@
                     "description": "Automatically determine the number of channels per core from the SLURM_NTASKS environment variable",
                     "readonly": false,
                     "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Container Path",
+                    "name": "container_path",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "The path to the container running the yandasoft stack",
+                    "readonly": false,
+                    "type": "String",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -1054,6 +1102,18 @@
                     "positional": false
                 },
                 {
+                    "text": "Container Path",
+                    "name": "container_path",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "The path to the container running the dstack package",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
                     "text": "Run as Test",
                     "name": "echo_test",
                     "value": false,
@@ -1160,199 +1220,6 @@
                 }
             ],
             "applicationArgs": [],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "inputApplicationDescription": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "outputApplicationDescription": ""
-        },
-        {
-            "category": "PythonApp",
-            "categoryType": "Application",
-            "key": -7,
-            "text": "grid stacking",
-            "description": "Currently just prints the input port\n",
-            "streaming": false,
-            "precious": false,
-            "git_url": "https://github.com/ICRAR/daliuge",
-            "sha": "bb5f78c",
-            "embedKey": -6,
-            "inputPorts": [
-                {
-                    "Id": "e8c97055-04b2-46d0-b73f-6f2a90186fd1",
-                    "IdText": "fnamesIn",
-                    "text": "filenames_In",
-                    "event": false,
-                    "type": "String",
-                    "description": ""
-                }
-            ],
-            "outputPorts": [],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Application Class",
-                    "name": "appclass",
-                    "value": "dlg.apps.pyfunc.PyFuncApp",
-                    "defaultValue": "",
-                    "description": "Application class",
-                    "readonly": true,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Execution Time",
-                    "name": "execution_time",
-                    "value": 5,
-                    "defaultValue": "",
-                    "description": "Estimated execution time",
-                    "readonly": true,
-                    "type": "Float",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "No. of CPUs",
-                    "name": "num_cpus",
-                    "value": 1,
-                    "defaultValue": "",
-                    "description": "Number of cores used",
-                    "readonly": true,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Group start",
-                    "name": "group_start",
-                    "value": false,
-                    "defaultValue": "",
-                    "description": "Is this node the start of a group?",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Input error rate (%)",
-                    "name": "input_error_threshold",
-                    "value": 0,
-                    "defaultValue": "",
-                    "description": "The allowed failure rate of the inputs (in percent), before this component goes to ERROR state and is not executed",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Number of tries",
-                    "name": "n_tries",
-                    "value": 1,
-                    "defaultValue": "",
-                    "description": "Specifies the number of times the 'run' method will be executed before finally giving up",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                }
-            ],
-            "applicationArgs": [
-                {
-                    "text": "Function Name",
-                    "name": "func_name",
-                    "value": "dlg_dstack_components.pyfuncApps.grid_stacking",
-                    "defaultValue": "",
-                    "description": "Python function name",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Function Code",
-                    "name": "func_code",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Python function code, e.g. 'def function_name(args): return args'",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Input Parser",
-                    "name": "input_parser",
-                    "value": "path",
-                    "defaultValue": "",
-                    "description": "Input port parsing technique",
-                    "readonly": false,
-                    "type": "Select",
-                    "precious": false,
-                    "options": [
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "positional": false
-                },
-                {
-                    "text": "Output Parser",
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "",
-                    "description": "output port parsing technique",
-                    "readonly": false,
-                    "type": "Select",
-                    "precious": false,
-                    "options": [
-                        "pickle",
-                        "eval",
-                        "npy"
-                    ],
-                    "positional": false
-                },
-                {
-                    "text": "Function Defaults",
-                    "name": "func_defaults",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Mapping from argname to default value. Should match only the last part of the argnames list. Values are interpreted as Python code literals and that means string values need to be quoted.",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Function Arguments Mapping",
-                    "name": "func_arg_mapping",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Mapping between argument name and input drop uids",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                }
-            ],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
