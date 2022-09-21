@@ -617,6 +617,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "Input File",
+                    "name": "inFile",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "The input file containing the list of files.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Output File Name",
+                    "name": "outFilename",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "The output file name",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "outputAppFields": [],
@@ -819,7 +843,7 @@
                 {
                     "text": "Extra Arguments",
                     "name": "extraArgs",
-                    "value": "Cniter=1 Cgain=0 freqframe=bary Channels=[100,6387] IrestFrequency=HI nchanpercore=4 nwriters=1",
+                    "value": "Cniter=1 Cgain=0 freqframe=bary Channels=[108,6387] IrestFrequency=HI nchanpercore=4 nwriters=27",
                     "defaultValue": "",
                     "description": "A space separated list of arguments of the form argname=argvalue. Current extraArgs are Cniter, Cgain, freqframe, Channels, IrestFrequency, nchanpercore, and nwriters.",
                     "readonly": false,
@@ -843,7 +867,7 @@
                 {
                     "text": "Num Channels",
                     "name": "nchannels",
-                    "value": 100,
+                    "value": null,
                     "defaultValue": "0",
                     "description": "",
                     "readonly": false,
@@ -865,88 +889,6 @@
                     "positional": false
                 }
             ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "inputApplicationDescription": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "outputApplicationDescription": ""
-        },
-        {
-            "category": "Memory",
-            "categoryType": "Data",
-            "isGroup": false,
-            "color": "#2c2c2c",
-            "drawOrderHint": 0,
-            "key": -40,
-            "text": "Output File Name",
-            "description": "In-memory storage of intermediate data products",
-            "x": -393.91726115793796,
-            "y": -758.8354559681326,
-            "width": 200,
-            "height": 72,
-            "collapsed": true,
-            "flipPorts": false,
-            "streaming": false,
-            "precious": false,
-            "subject": null,
-            "expanded": false,
-            "git_url": "https://github.com/ICRAR/daliuge",
-            "sha": "63d7df9",
-            "group": -10,
-            "inputPorts": [
-                {
-                    "Id": "45014463-6315-4ed6-b511-8b7df4c13039",
-                    "IdText": "outFilename",
-                    "text": "Output File Name",
-                    "event": false,
-                    "type": "String",
-                    "description": ""
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "e6f32ba2-e7df-42fe-ab06-e75eb88a704d",
-                    "IdText": "mSet",
-                    "text": "Measurement Set",
-                    "event": false,
-                    "type": "String",
-                    "description": ""
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Data volume",
-                    "name": "data_volume",
-                    "value": 5,
-                    "defaultValue": "0",
-                    "description": "Estimated size of the data contained in this node",
-                    "readonly": false,
-                    "type": "Float",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Group end",
-                    "name": "group_end",
-                    "value": false,
-                    "defaultValue": "false",
-                    "description": "Is this node the end of a group?",
-                    "readonly": true,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                }
-            ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -1406,7 +1348,7 @@
                 {
                     "text": "No. of CPUs",
                     "name": "num_cpus",
-                    "value": 26,
+                    "value": 27,
                     "defaultValue": "0",
                     "description": "Number of cores used",
                     "readonly": true,
@@ -1442,7 +1384,7 @@
                 {
                     "text": "No. of Procs",
                     "name": "num_of_procs",
-                    "value": 26,
+                    "value": 27,
                     "defaultValue": "1",
                     "description": "the number of processes to use for srun",
                     "readonly": false,
@@ -1512,6 +1454,88 @@
             "outputApplicationType": "None",
             "outputApplicationKey": null,
             "outputApplicationDescription": ""
+        },
+        {
+            "category": "SharedMemory",
+            "categoryType": "Data",
+            "isGroup": false,
+            "color": "#2c2c2c",
+            "drawOrderHint": 0,
+            "key": -3,
+            "text": "Output File Name",
+            "description": "Data stored in shared memory",
+            "x": -388.1047726356654,
+            "y": -761.1133502289836,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "streaming": false,
+            "precious": false,
+            "subject": null,
+            "expanded": false,
+            "git_url": "https://github.com/ICRAR/daliuge",
+            "sha": "30bc92a",
+            "group": -10,
+            "inputPorts": [
+                {
+                    "Id": "3b1ac7be-98ac-492b-bdab-9bded5f3a7aa",
+                    "IdText": "dummy",
+                    "text": "dummy",
+                    "event": false,
+                    "type": "String",
+                    "description": "Dummy input port"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "98631824-21f4-4882-b100-b1d560adc75b",
+                    "IdText": "dummy",
+                    "text": "dummy",
+                    "event": false,
+                    "type": "String",
+                    "description": "Dummy output port"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "defaultValue": "False",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
         }
     ],
     "linkDataArray": [
@@ -1520,24 +1544,6 @@
             "fromPort": "d50b77ea-4f83-4d40-9366-170653449588",
             "to": -10,
             "toPort": "cc48ed5d-42c8-4766-95fd-08589ccfadfb",
-            "dataType": "String",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
-            "from": -10,
-            "fromPort": "ba959bd2-597a-42be-b02b-1efaf91073c1",
-            "to": -40,
-            "toPort": "45014463-6315-4ed6-b511-8b7df4c13039",
-            "dataType": "String",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
-            "from": -40,
-            "fromPort": "e6f32ba2-e7df-42fe-ab06-e75eb88a704d",
-            "to": -1,
-            "toPort": "641133e5-d2d6-4223-ab90-7c7bc5e7ccfc",
             "dataType": "String",
             "loop_aware": "0",
             "closesLoop": false
@@ -1601,6 +1607,24 @@
             "fromPort": "1bca2aa6-c846-4602-a2df-aa500b846466",
             "to": -9,
             "toPort": "615870ea-3c29-4882-b8f4-78c2919f2e46",
+            "dataType": "String",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -10,
+            "fromPort": "ba959bd2-597a-42be-b02b-1efaf91073c1",
+            "to": -3,
+            "toPort": "3b1ac7be-98ac-492b-bdab-9bded5f3a7aa",
+            "dataType": "String",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -3,
+            "fromPort": "98631824-21f4-4882-b100-b1d560adc75b",
+            "to": -1,
+            "toPort": "641133e5-d2d6-4223-ab90-7c7bc5e7ccfc",
             "dataType": "String",
             "loop_aware": "0",
             "closesLoop": false
