@@ -6,7 +6,7 @@
         "repo": "ICRAR/EAGLE-graph-repo",
         "filePath": "SDP Pipelines/dowloadUploadRealtimeData.graph",
         "eagleVersion": "v4.5.5",
-        "eagleCommitHash": "6e441d27841d70d598f6bd82a17081b709a88289",
+        "eagleCommitHash": "33c76f928cb1ba8317f079f74a48af13e50df702",
         "schemaVersion": "OJS",
         "readonly": true,
         "sha": "",
@@ -19,7 +19,6 @@
     "nodeDataArray": [
         {
             "category": "Scatter",
-            "categoryType": "Construct",
             "isGroup": true,
             "color": "rgb(211 165 0)",
             "drawOrderHint": 0,
@@ -243,6 +242,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "File List",
+                    "name": "urlList",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "List of log file IDs",
+                    "readonly": false,
+                    "type": "Object",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "rest_array",
+                    "name": "rest_array",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": " List of elements",
+                    "readonly": false,
+                    "type": "Object.array",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "outputAppFields": [],
@@ -256,7 +279,6 @@
         },
         {
             "category": "File",
-            "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -374,7 +396,6 @@
         },
         {
             "category": "File",
-            "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -482,7 +503,6 @@
         },
         {
             "category": "PythonApp",
-            "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
@@ -648,7 +668,6 @@
         },
         {
             "category": "PythonApp",
-            "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
@@ -754,13 +773,12 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "File",
-            "categoryType": "Data",
+            "category": "Memory",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -2,
-            "text": "File",
+            "text": "Content",
             "description": "A standard file on a filesystem mounted to the deployment machine",
             "x": 760.6140089985117,
             "y": -356.9000279774852,
@@ -872,7 +890,6 @@
         },
         {
             "category": "PythonApp",
-            "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
@@ -973,8 +990,7 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "File",
-            "categoryType": "Data",
+            "category": "Memory",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -1091,13 +1107,12 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "File",
-            "categoryType": "Data",
+            "category": "Memory",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -9,
-            "text": "File",
+            "text": "Element",
             "description": "A standard file on a filesystem mounted to the deployment machine",
             "x": 1091.2878729469994,
             "y": -321.8727755364325,
@@ -1210,7 +1225,6 @@
         },
         {
             "category": "S3",
-            "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -1331,7 +1345,6 @@
         },
         {
             "category": "PythonApp",
-            "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
@@ -1478,7 +1491,6 @@
             "fromPort": "6dcac898-32a8-40d8-9e98-8d597ac3d3da",
             "to": -8,
             "toPort": "e0cc485a-7deb-4fee-8a51-d49931cecd39",
-            "dataType": "String",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -1487,7 +1499,6 @@
             "fromPort": "2fa3770c-5b83-4300-9a51-1c438d7d4fab",
             "to": -7,
             "toPort": "3a128168-0cec-48d6-b5ea-5c4b1cfa5108",
-            "dataType": "String",
             "loop_aware": "1",
             "closesLoop": false
         },
@@ -1496,7 +1507,6 @@
             "fromPort": "e9e7e4b5-2366-4503-af4a-be10cbbbb992",
             "to": -2,
             "toPort": "a02fc50e-174a-4e7d-9b05-49290a6e0921",
-            "dataType": "Object.Array",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -1505,7 +1515,6 @@
             "fromPort": "8da1617f-8844-4983-997d-c81a43067775",
             "to": -4,
             "toPort": "9ed37560-e3e3-4752-a60c-073e5cde5855",
-            "dataType": "Object",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -1514,7 +1523,6 @@
             "fromPort": "27f411cf-bec6-463d-ab57-010388bf52f9",
             "to": -10,
             "toPort": "77ec7eea-09c4-4cc5-a6c0-f72c3c949c9f",
-            "dataType": "Object.array",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -1523,7 +1531,6 @@
             "fromPort": "e0e7f3a3-ad52-4f9e-8e6e-1a989feba4d7",
             "to": -5,
             "toPort": "ef0a775c-0802-4dca-a306-56745bfe5e1c",
-            "dataType": "Object.array",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -1532,7 +1539,6 @@
             "fromPort": "f558cf98-6a14-449d-854d-6edfbc395b0f",
             "to": -9,
             "toPort": "79c1dcaa-79e5-4f3f-8181-2c71c4a75cae",
-            "dataType": "Object.element",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -1541,7 +1547,6 @@
             "fromPort": "b655136d-f1f3-44b5-b0a6-0c7c04ceec02",
             "to": -6,
             "toPort": "13d3778d-6e36-4374-9fcc-5e0c1b7bf3a3",
-            "dataType": "Object",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -1550,7 +1555,6 @@
             "fromPort": "9fa394f2-bf1b-456d-9428-18df43488d67",
             "to": -13,
             "toPort": "448b05fb-8159-48e1-8f14-c40f994107d1",
-            "dataType": "String",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -1559,7 +1563,6 @@
             "fromPort": "37307606-ca91-4045-89bc-cd1eeaf6d26c",
             "to": -14,
             "toPort": "bd0a9c48-0d1d-4199-b050-60f7d6ba1dbf",
-            "dataType": "String",
             "loop_aware": "0",
             "closesLoop": false
         }
