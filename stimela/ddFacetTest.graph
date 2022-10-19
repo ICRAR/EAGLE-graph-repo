@@ -856,7 +856,7 @@
                 {
                     "text": "Additional Bindings",
                     "name": "additionalBindings",
-                    "value": "",
+                    "value": "/tmp:/tmp",
                     "defaultValue": "",
                     "description": "Additional volume bindings",
                     "readonly": false,
@@ -931,6 +931,18 @@
                     "value": " ",
                     "defaultValue": " ",
                     "description": "Prefix for command line arguments",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "shmSize",
+                    "name": "shmSize",
+                    "value": "8g",
+                    "defaultValue": "256m",
+                    "description": "The size of the shared memory for the docker container",
                     "readonly": false,
                     "type": "String",
                     "precious": false,
@@ -1638,7 +1650,7 @@
                 {
                     "text": "Parallel-NCPU",
                     "name": "Parallel-NCPU",
-                    "value": 0,
+                    "value": 1,
                     "defaultValue": "0",
                     "description": "Number of processes / threads to use in parallel mode. 0 - all available. 1 - disable parallelism",
                     "readonly": false,
