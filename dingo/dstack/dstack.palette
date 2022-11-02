@@ -6,7 +6,7 @@
         "repo": "alxndrwllmsn/EAGLE-graph-repo",
         "filePath": "dingo/dstack/dstack.palette",
         "eagleVersion": "v4.5.5",
-        "eagleCommitHash": "097419704662522acc237ae1d5c672fc20e0245b",
+        "eagleCommitHash": "33c76f928cb1ba8317f079f74a48af13e50df702",
         "schemaVersion": "",
         "readonly": true,
         "sha": "",
@@ -14,12 +14,11 @@
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": 0,
-        "numLGNodes": 9
+        "numLGNodes": 11
     },
     "nodeDataArray": [
         {
             "category": "PythonApp",
-            "categoryType": "Application",
             "key": -5,
             "text": "Combine Input Strings",
             "description": "The purpose here is to take a filename from each input, without knowing \nthe number of inputs, and output a string of each of the filenames separated by a space.",
@@ -114,7 +113,6 @@
         },
         {
             "category": "PythonApp",
-            "categoryType": "Application",
             "key": -9,
             "text": "Create Cdec Parset",
             "description": "This App takes in a set of grids as paths, a template parset path and outputs a full parset.",
@@ -365,7 +363,6 @@
         },
         {
             "category": "PythonApp",
-            "categoryType": "Application",
             "key": -3,
             "text": "Create Parset",
             "description": "This App takes in a measurement set path, a template parset path and outputs a full parset.",
@@ -588,7 +585,6 @@
         },
         {
             "category": "PythonApp",
-            "categoryType": "Application",
             "key": -6,
             "text": "Deep Imaging",
             "description": "Run's the askapsoft cdeconvolver with the parameters specified.",
@@ -755,7 +751,6 @@
         },
         {
             "category": "PythonApp",
-            "categoryType": "Application",
             "key": -4,
             "text": "First Pass Imaging",
             "description": "Run's the askapsoft imager with the given parameter set, then writes the resultant filenames to the output to link with the next step.",
@@ -934,7 +929,6 @@
         },
         {
             "category": "PythonApp",
-            "categoryType": "Application",
             "key": -8,
             "text": "GenericGather",
             "description": "A placeholder APP to aid construction of new applications. This is mainly useful (and used) when starting a new workflow from scratch.",
@@ -1020,7 +1014,6 @@
         },
         {
             "category": "PythonApp",
-            "categoryType": "Application",
             "key": -1,
             "text": "Grid Stacking",
             "description": "This App takes in a list of filenames and runs a subprocess that stacks all of the grids given as the input into a file given as the output.",
@@ -1151,7 +1144,6 @@
         },
         {
             "category": "PythonApp",
-            "categoryType": "Application",
             "key": -2,
             "text": "Scatter Filenames",
             "description": "This app takes in a file containing a list of paths (one path per line) and sends each via the output.",
@@ -1245,7 +1237,6 @@
         },
         {
             "category": "PythonApp",
-            "categoryType": "Application",
             "key": -7,
             "text": "Test Srun",
             "description": "Tests that an srun app will run",
@@ -1321,6 +1312,229 @@
                     "positional": false
                 }
             ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "File",
+            "key": -11,
+            "text": "File",
+            "description": "A standard file on a filesystem mounted to the deployment machine",
+            "streaming": false,
+            "precious": false,
+            "git_url": "",
+            "sha": "",
+            "inputPorts": [
+                {
+                    "Id": "df91b2a1-ea67-4cab-81d5-c7245ed8f89b",
+                    "IdText": "dummy",
+                    "text": "dummy",
+                    "event": false,
+                    "type": "Object",
+                    "description": "Dummy input port"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "2510c5e3-745d-44db-9e46-a9bde055ea75",
+                    "IdText": "dummy",
+                    "text": "dummy",
+                    "event": false,
+                    "type": "Object",
+                    "description": "Dummy output port"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "defaultValue": "False",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Check file path exists",
+                    "name": "check_filepath_exists",
+                    "value": true,
+                    "defaultValue": "True",
+                    "description": "Perform a check to make sure the file path exists before proceeding with the application",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "File Path",
+                    "name": "filepath",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Path to the file for this node",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Directory name",
+                    "name": "dirname",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Path to the file for this node",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg_dstack_components.FileIDDROP",
+                    "defaultValue": "",
+                    "description": "Import direction for application class",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Order ID",
+                    "name": "order_id",
+                    "value": 0,
+                    "defaultValue": "0",
+                    "description": "A parameter that allows the user to assign an id that defines it's order in the output list (this is a quick fix until named outputs are fixed)",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "Memory",
+            "key": -10,
+            "text": "Memory",
+            "description": "In-memory storage of intermediate data products",
+            "streaming": false,
+            "precious": false,
+            "git_url": "",
+            "sha": "",
+            "group": -10,
+            "inputPorts": [
+                {
+                    "Id": "8e89e867-7ce2-4e36-8db5-644053c12572",
+                    "IdText": "dummy",
+                    "text": "dummy",
+                    "event": false,
+                    "type": "Object",
+                    "description": "Dummy input port"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "fbede6ab-1e21-4b62-9cbe-b1b53b80d6af",
+                    "IdText": "dummy",
+                    "text": "dummy",
+                    "event": false,
+                    "type": "Object",
+                    "description": "Dummy output port"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "defaultValue": "False",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "DropClass",
+                    "name": "appclass",
+                    "value": "dlg_dstack_components.MemoryIDDROP",
+                    "defaultValue": "",
+                    "description": "Import direction for application class",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Order ID",
+                    "name": "order_id",
+                    "value": 0,
+                    "defaultValue": "0",
+                    "description": "A parameter that allows the user to assign an id that defines it's order in the output list (this is a quick fix until named outputs are fixed)",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
