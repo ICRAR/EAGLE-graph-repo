@@ -424,6 +424,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "Input File",
+                    "name": "inFile",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "The input file containing the list of files.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Output File Name",
+                    "name": "outFilename",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "The output file name",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "outputAppFields": [],
@@ -690,8 +714,8 @@
             "key": -7,
             "text": "First Pass Imaging",
             "description": "Run's the askapsoft imager with the given parameter set, then writes the resultant filenames to the output to link with the next step.",
-            "x": 151.03467299713583,
-            "y": -704.5321336446374,
+            "x": 157.91544031587517,
+            "y": -732.0552029195948,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -815,7 +839,7 @@
                 {
                     "text": "Run Test",
                     "name": "echo_test",
-                    "value": true,
+                    "value": false,
                     "defaultValue": "false",
                     "description": "Echo the command instead of running the program",
                     "readonly": false,
@@ -1290,11 +1314,11 @@
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
-            "key": -9,
+            "key": -4,
             "text": "Log File",
             "description": "A generic Data drop, whose functionality can be provided by an arbitrary class, as specified in the 'dataclass' component parameter",
-            "x": 382.8133630026615,
-            "y": -808.3922641906511,
+            "x": 392.4116311770185,
+            "y": -808.2949376976159,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -1308,7 +1332,7 @@
             "group": -10,
             "inputPorts": [
                 {
-                    "Id": "1ffceb09-174d-4f2b-8c7f-7bb3ff69a4c0",
+                    "Id": "d9b78bc5-95da-4b2f-96db-6793afa5e67c",
                     "IdText": "logfile",
                     "text": "LogFile",
                     "event": false,
@@ -1318,7 +1342,7 @@
             ],
             "outputPorts": [
                 {
-                    "Id": "0c6ce59e-da14-4f48-b7a9-f5acee85bdaa",
+                    "Id": "c95a5eed-6229-4be9-b8aa-9cc57b53f587",
                     "IdText": "logfile",
                     "text": "LogFile",
                     "event": false,
@@ -1332,7 +1356,7 @@
                 {
                     "text": "Data Class",
                     "name": "dataclass",
-                    "value": "dlg_dstack_components.FileIDDROP",
+                    "value": "dlg_dstack_components.data.FileIDDROP",
                     "defaultValue": "my.awesome.data.Component",
                     "description": "The python class that implements this data component",
                     "readonly": true,
@@ -1376,6 +1400,30 @@
                     "precious": false,
                     "options": [],
                     "positional": false
+                },
+                {
+                    "text": "File Path",
+                    "name": "filepath",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Directory Name",
+                    "name": "",
+                    "value": "data/",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
                 }
             ],
             "applicationArgs": [],
@@ -1396,10 +1444,10 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -5,
-            "text": "VisGrid",
+            "text": "Grid",
             "description": "A generic Data drop, whose functionality can be provided by an arbitrary class, as specified in the 'dataclass' component parameter",
-            "x": 386.3599507195731,
-            "y": -745.151006825039,
+            "x": 391.0354777132707,
+            "y": -732.6064971914826,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -1413,9 +1461,9 @@
             "group": -10,
             "inputPorts": [
                 {
-                    "Id": "064a676c-4b82-4075-a044-70c0ea8ce1da",
-                    "IdText": "visgrid",
-                    "text": "visgrid",
+                    "Id": "23427a87-4c86-45be-b6d5-78781d0f59e8",
+                    "IdText": "grid",
+                    "text": "grid",
                     "event": false,
                     "type": "String",
                     "description": "Dummy input port"
@@ -1423,9 +1471,9 @@
             ],
             "outputPorts": [
                 {
-                    "Id": "b2fc7987-49ab-47e4-903f-2a07edfead5d",
-                    "IdText": "visgrid",
-                    "text": "visgrid",
+                    "Id": "7387e549-e3e5-465e-9766-c0e45e5ec026",
+                    "IdText": "grid",
+                    "text": "grid",
                     "event": false,
                     "type": "String",
                     "description": "Dummy output port"
@@ -1437,7 +1485,7 @@
                 {
                     "text": "Data Class",
                     "name": "dataclass",
-                    "value": "dlg_dstack_components.MemoryIDDROP",
+                    "value": "dlg_dstack_components.data.MemoryIDDROP",
                     "defaultValue": "my.awesome.data.Component",
                     "description": "The python class that implements this data component",
                     "readonly": true,
@@ -1500,11 +1548,11 @@
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
-            "key": -4,
-            "text": "PSFGrid",
+            "key": -6,
+            "text": "Grid",
             "description": "A generic Data drop, whose functionality can be provided by an arbitrary class, as specified in the 'dataclass' component parameter",
-            "x": 392.973918692236,
-            "y": -684.1219899783023,
+            "x": 388.283170785775,
+            "y": -678.9365121053155,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -1518,9 +1566,9 @@
             "group": -10,
             "inputPorts": [
                 {
-                    "Id": "c67a898d-0f86-4fac-8de5-7fe2b7f10921",
-                    "IdText": "psfgrid",
-                    "text": "psfgrid",
+                    "Id": "3c4cfa5f-7773-4188-9248-8fc970a6f6e8",
+                    "IdText": "grid",
+                    "text": "grid",
                     "event": false,
                     "type": "String",
                     "description": "Dummy input port"
@@ -1528,9 +1576,9 @@
             ],
             "outputPorts": [
                 {
-                    "Id": "875c91d7-acae-4632-b77e-b4d8b9938379",
-                    "IdText": "psfgrid",
-                    "text": "psfgrid",
+                    "Id": "2f65da3e-c4d1-4c52-8ad4-463900e5cd18",
+                    "IdText": "grid",
+                    "text": "grid",
                     "event": false,
                     "type": "String",
                     "description": "Dummy output port"
@@ -1542,7 +1590,7 @@
                 {
                     "text": "Data Class",
                     "name": "dataclass",
-                    "value": "dlg_dstack_components.MemoryIDDROP",
+                    "value": "dlg_dstack_components.data.MemoryIDDROP",
                     "defaultValue": "my.awesome.data.Component",
                     "description": "The python class that implements this data component",
                     "readonly": true,
@@ -1578,7 +1626,7 @@
                 {
                     "text": "Order ID",
                     "name": "order_id",
-                    "value": 2,
+                    "value": 1,
                     "defaultValue": "0",
                     "description": "A parameter that allows the user to assign an id that defines it's order in the output list (this is a quick fix until named outputs are fixed)",
                     "readonly": false,
@@ -1605,11 +1653,11 @@
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
-            "key": -6,
-            "text": "PCFGrid",
+            "key": -8,
+            "text": "Grid",
             "description": "A generic Data drop, whose functionality can be provided by an arbitrary class, as specified in the 'dataclass' component parameter",
-            "x": 394.31980547270865,
-            "y": -622.2111980765753,
+            "x": 392.4116311770186,
+            "y": -607.3765319904263,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -1623,9 +1671,9 @@
             "group": -10,
             "inputPorts": [
                 {
-                    "Id": "8a548185-b44b-4f75-8e74-1a371a547b29",
-                    "IdText": "pcfgrid",
-                    "text": "pcfgrid",
+                    "Id": "7ba33422-c431-4a80-a415-cb5683d2cb99",
+                    "IdText": "grid",
+                    "text": "grid",
                     "event": false,
                     "type": "String",
                     "description": "Dummy input port"
@@ -1633,9 +1681,9 @@
             ],
             "outputPorts": [
                 {
-                    "Id": "a35bd21c-e6a2-4f69-a9eb-01932e67a6f2",
-                    "IdText": "pcfgrid",
-                    "text": "pcfgrid",
+                    "Id": "abfbb17f-7a5b-4a59-8ccb-ae7269e44a95",
+                    "IdText": "grid",
+                    "text": "grid",
                     "event": false,
                     "type": "String",
                     "description": "Dummy output port"
@@ -1647,7 +1695,7 @@
                 {
                     "text": "Data Class",
                     "name": "dataclass",
-                    "value": "dlg_dstack_components.MemoryIDDROP",
+                    "value": "dlg_dstack_components.data.MemoryIDDROP",
                     "defaultValue": "my.awesome.data.Component",
                     "description": "The python class that implements this data component",
                     "readonly": true,
@@ -1683,7 +1731,7 @@
                 {
                     "text": "Order ID",
                     "name": "order_id",
-                    "value": 3,
+                    "value": 1,
                     "defaultValue": "0",
                     "description": "A parameter that allows the user to assign an id that defines it's order in the output list (this is a quick fix until named outputs are fixed)",
                     "readonly": false,
@@ -1758,8 +1806,8 @@
         {
             "from": -7,
             "fromPort": "888e58ff-31f2-4543-82f0-24839f1c56e9",
-            "to": -9,
-            "toPort": "1ffceb09-174d-4f2b-8c7f-7bb3ff69a4c0",
+            "to": -4,
+            "toPort": "d9b78bc5-95da-4b2f-96db-6793afa5e67c",
             "loop_aware": "1",
             "closesLoop": false
         },
@@ -1767,23 +1815,23 @@
             "from": -7,
             "fromPort": "b13e2fe1-a91e-47f3-b7c1-d236eee7e2ec",
             "to": -5,
-            "toPort": "064a676c-4b82-4075-a044-70c0ea8ce1da",
+            "toPort": "23427a87-4c86-45be-b6d5-78781d0f59e8",
             "loop_aware": "0",
             "closesLoop": false
         },
         {
             "from": -7,
             "fromPort": "57ebf873-20dd-41a9-804b-5536e632809c",
-            "to": -4,
-            "toPort": "c67a898d-0f86-4fac-8de5-7fe2b7f10921",
+            "to": -6,
+            "toPort": "3c4cfa5f-7773-4188-9248-8fc970a6f6e8",
             "loop_aware": "0",
             "closesLoop": false
         },
         {
             "from": -7,
             "fromPort": "1bca2aa6-c846-4602-a2df-aa500b846466",
-            "to": -6,
-            "toPort": "8a548185-b44b-4f75-8e74-1a371a547b29",
+            "to": -8,
+            "toPort": "7ba33422-c431-4a80-a415-cb5683d2cb99",
             "loop_aware": "0",
             "closesLoop": false
         }
