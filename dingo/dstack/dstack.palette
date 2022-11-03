@@ -14,7 +14,7 @@
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": 0,
-        "numLGNodes": 11
+        "numLGNodes": 13
     },
     "nodeDataArray": [
         {
@@ -1416,13 +1416,199 @@
                     "positional": false
                 },
                 {
-                    "text": "Application Class",
-                    "name": "appclass",
+                    "text": "DropClass",
+                    "name": "dataclass",
                     "value": "dlg_dstack_components.FileIDDROP",
                     "defaultValue": "",
                     "description": "Import direction for application class",
                     "readonly": false,
                     "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Order ID",
+                    "name": "order_id",
+                    "value": 0,
+                    "defaultValue": "0",
+                    "description": "A parameter that allows the user to assign an id that defines it's order in the output list (this is a quick fix until named outputs are fixed)",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "Memory",
+            "key": -13,
+            "text": "Grid",
+            "description": "A generic Data drop, whose functionality can be provided by an arbitrary class, as specified in the 'dataclass' component parameter",
+            "streaming": false,
+            "precious": false,
+            "git_url": "",
+            "sha": "",
+            "inputPorts": [
+                {
+                    "Id": "064a676c-4b82-4075-a044-70c0ea8ce1da",
+                    "IdText": "grid",
+                    "text": "grid",
+                    "event": false,
+                    "type": "String",
+                    "description": "Dummy input port"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "b2fc7987-49ab-47e4-903f-2a07edfead5d",
+                    "IdText": "grid",
+                    "text": "grid",
+                    "event": false,
+                    "type": "String",
+                    "description": "Dummy output port"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data Class",
+                    "name": "dataclass",
+                    "value": "dlg_dstack_components.MemoryIDDROP",
+                    "defaultValue": "my.awesome.data.Component",
+                    "description": "The python class that implements this data component",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "defaultValue": "False",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Order ID",
+                    "name": "order_id",
+                    "value": 1,
+                    "defaultValue": "0",
+                    "description": "A parameter that allows the user to assign an id that defines it's order in the output list (this is a quick fix until named outputs are fixed)",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                }
+            ],
+            "applicationArgs": [],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
+        },
+        {
+            "category": "File",
+            "key": -12,
+            "text": "Log File",
+            "description": "A generic Data drop, whose functionality can be provided by an arbitrary class, as specified in the 'dataclass' component parameter",
+            "streaming": false,
+            "precious": false,
+            "git_url": "",
+            "sha": "",
+            "inputPorts": [
+                {
+                    "Id": "1ffceb09-174d-4f2b-8c7f-7bb3ff69a4c0",
+                    "IdText": "logfile",
+                    "text": "LogFile",
+                    "event": false,
+                    "type": "String",
+                    "description": "Dummy input port"
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "0c6ce59e-da14-4f48-b7a9-f5acee85bdaa",
+                    "IdText": "logfile",
+                    "text": "LogFile",
+                    "event": false,
+                    "type": "Object",
+                    "description": "Dummy output port"
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Data Class",
+                    "name": "dataclass",
+                    "value": "dlg_dstack_components.FileIDDROP",
+                    "defaultValue": "my.awesome.data.Component",
+                    "description": "The python class that implements this data component",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Data volume",
+                    "name": "data_volume",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimated size of the data contained in this node",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false
+                },
+                {
+                    "text": "Group end",
+                    "name": "group_end",
+                    "value": false,
+                    "defaultValue": "False",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
                     "precious": false,
                     "options": [],
                     "positional": false
@@ -1511,7 +1697,7 @@
                 },
                 {
                     "text": "DropClass",
-                    "name": "appclass",
+                    "name": "dataclass",
                     "value": "dlg_dstack_components.MemoryIDDROP",
                     "defaultValue": "",
                     "description": "Import direction for application class",
