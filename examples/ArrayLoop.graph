@@ -5,12 +5,14 @@
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
         "filePath": "examples/ArrayLoop.graph",
-        "eagleVersion": "Unknown",
-        "eagleCommitHash": "Unknown",
+        "eagleVersion": "v4.5.5",
+        "eagleCommitHash": "4d772e6378d9e6846ae3c3c4bd9ddef0434e99e2",
         "schemaVersion": "OJS",
         "readonly": true,
-        "sha": "",
-        "gitUrl": "",
+        "repositoryUrl": "",
+        "commitHash": "",
+        "downloadUrl": "",
+        "signature": "",
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": 0,
@@ -19,6 +21,7 @@
     "nodeDataArray": [
         {
             "category": "Memory",
+            "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -34,17 +37,20 @@
             "streaming": false,
             "precious": false,
             "subject": null,
-            "expanded": false,
-            "git_url": "",
-            "sha": "",
+            "expanded": true,
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "inputPorts": [
                 {
                     "Id": "81c00bd2-7403-4b6b-85c9-bfc1d308eeda",
                     "IdText": "array",
                     "text": "array",
                     "event": false,
-                    "type": "Complex",
-                    "description": "array\n"
+                    "type": "Object",
+                    "description": "array\n",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [
@@ -53,8 +59,9 @@
                     "IdText": "array",
                     "text": "array",
                     "event": false,
-                    "type": "Complex",
-                    "description": "array"
+                    "type": "Object",
+                    "description": "array",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
@@ -64,25 +71,27 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -99,8 +108,9 @@
         },
         {
             "category": "Loop",
+            "categoryType": "Construct",
             "isGroup": true,
-            "color": "rgb(221, 173, 0)",
+            "color": "rgb(211 165 0)",
             "drawOrderHint": 0,
             "key": -2,
             "text": "Loop",
@@ -114,9 +124,11 @@
             "streaming": false,
             "precious": false,
             "subject": null,
-            "expanded": false,
-            "git_url": "",
-            "sha": "",
+            "expanded": true,
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "group": -7,
             "inputPorts": [],
             "outputPorts": [],
@@ -127,13 +139,14 @@
                     "text": "Number loops",
                     "name": "num_of_iter",
                     "value": 2,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "The number of iterations performed by this loop construct",
                     "readonly": false,
                     "type": "Integer",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -150,6 +163,7 @@
         },
         {
             "category": "PythonApp",
+            "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
@@ -165,9 +179,11 @@
             "streaming": false,
             "precious": false,
             "subject": null,
-            "expanded": false,
-            "git_url": "",
-            "sha": "",
+            "expanded": true,
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "group": -2,
             "inputPorts": [
                 {
@@ -175,8 +191,9 @@
                     "IdText": "rest_array",
                     "text": "rest_array",
                     "event": false,
-                    "type": "Complex",
-                    "description": " Port for the rest of the array"
+                    "type": "Object",
+                    "description": " Port for the rest of the array",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [
@@ -185,8 +202,9 @@
                     "IdText": "rest_array",
                     "text": "rest_array",
                     "event": false,
-                    "type": "Complex",
-                    "description": " Port for the rest of the array"
+                    "type": "Object",
+                    "description": " Port for the rest of the array",
+                    "keyAttribute": false
                 },
                 {
                     "Id": "bd47bacb-cfcc-48c7-8f72-c32e02d631da",
@@ -194,7 +212,8 @@
                     "text": "Data",
                     "event": false,
                     "type": "String",
-                    "description": ""
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
@@ -204,61 +223,53 @@
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimate of execution time (in seconds) for this application.",
                     "readonly": false,
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Number of CPUs used for this application.",
                     "readonly": false,
                     "type": "Integer",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": true,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the start of a group?",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Appclass",
                     "name": "appclass",
-                    "value": "dlg_example_cmpts.apps.PickOne",
+                    "value": "dlg.apps.simple.PickOne",
                     "defaultValue": "",
                     "description": "The python class that implements this application",
                     "readonly": true,
                     "type": "String",
                     "precious": false,
                     "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Group start",
-                    "name": "group_start",
-                    "value": true,
-                    "defaultValue": "",
-                    "description": "Is this node the start of a group?",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -275,6 +286,7 @@
         },
         {
             "category": "File",
+            "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -290,9 +302,11 @@
             "streaming": false,
             "precious": false,
             "subject": null,
-            "expanded": false,
-            "git_url": "",
-            "sha": "",
+            "expanded": true,
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "group": -2,
             "inputPorts": [
                 {
@@ -301,7 +315,8 @@
                     "text": "Data",
                     "event": false,
                     "type": "String",
-                    "description": ""
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [],
@@ -312,37 +327,40 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": true,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Perform a check to make sure the file path exists before proceeding with the application",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "File path",
@@ -354,7 +372,8 @@
                     "type": "String",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Directory name",
@@ -366,7 +385,8 @@
                     "type": "String",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -383,6 +403,7 @@
         },
         {
             "category": "Memory",
+            "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -398,9 +419,11 @@
             "streaming": false,
             "precious": false,
             "subject": null,
-            "expanded": false,
-            "git_url": "",
-            "sha": "",
+            "expanded": true,
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "group": -2,
             "inputPorts": [
                 {
@@ -408,8 +431,9 @@
                     "IdText": "rest_array",
                     "text": "rest_array",
                     "event": false,
-                    "type": "Complex",
-                    "description": " Port for the input array(s)"
+                    "type": "Object",
+                    "description": " Port for the input array(s)",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [
@@ -418,8 +442,9 @@
                     "IdText": "rest_array",
                     "text": "rest_array",
                     "event": false,
-                    "type": "Complex",
-                    "description": "Port carrying list of files found"
+                    "type": "Object",
+                    "description": "Port carrying list of files found",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
@@ -429,25 +454,27 @@
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": true,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -464,13 +491,14 @@
         },
         {
             "category": "PythonApp",
+            "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -1,
             "text": "RandomArrayApp",
             "description": "A testing APP that does not take any input and produces a random array of type int64, if integer is set to True, else of type float64. size indicates the number of elements ranging between the values low and high. The resulting array will be send to all connected output apps. \ninteger: bool [True], generate integer array low: float, lower boundary (will be converted to int for integer arrays) high: float, upper boundary (will be converted to int for integer arrays) size: int, number of array elements",
-            "x": 545.5097087503365,
+            "x": 544.5097087503365,
             "y": -179.86737951936044,
             "width": 200,
             "height": 72,
@@ -479,9 +507,11 @@
             "streaming": false,
             "precious": false,
             "subject": null,
-            "expanded": false,
-            "git_url": "https://github.com/ICRAR/daliuge.git",
-            "sha": "4f6a67ca",
+            "expanded": true,
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "inputPorts": [],
             "outputPorts": [
                 {
@@ -489,61 +519,14 @@
                     "IdText": "array",
                     "text": "Array",
                     "event": false,
-                    "type": "Complex",
-                    "description": " Port carrying the averaged array"
+                    "type": "Object",
+                    "description": " Port carrying the averaged array",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
-                {
-                    "text": "Size",
-                    "name": "size",
-                    "value": 80000000,
-                    "defaultValue": "",
-                    "description": "The size of the array",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Integer",
-                    "name": "integer",
-                    "value": true,
-                    "defaultValue": "",
-                    "description": "Generate integer array?",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Low",
-                    "name": "low",
-                    "value": "0",
-                    "defaultValue": "",
-                    "description": "Low value of range in array [inclusive]",
-                    "readonly": false,
-                    "type": "Unknown",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "High",
-                    "name": "high",
-                    "value": "100",
-                    "defaultValue": "",
-                    "description": "High value of range of array [exclusive]",
-                    "readonly": false,
-                    "type": "Unknown",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
-                },
                 {
                     "text": "Application class",
                     "name": "appclass",
@@ -554,46 +537,103 @@
                     "type": "String",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimated execution time",
                     "readonly": false,
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Number of cores used",
                     "readonly": false,
                     "type": "Integer",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": false,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Component is start of a group",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
-            "applicationArgs": [],
+            "applicationArgs": [
+                {
+                    "text": "Size",
+                    "name": "size",
+                    "value": 80000,
+                    "defaultValue": "0",
+                    "description": "The size of the array",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": true
+                },
+                {
+                    "text": "Integer",
+                    "name": "integer",
+                    "value": true,
+                    "defaultValue": "false",
+                    "description": "Generate integer array?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Low",
+                    "name": "low",
+                    "value": 0,
+                    "defaultValue": "0",
+                    "description": "Low value of range in array [inclusive]",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": true
+                },
+                {
+                    "text": "High",
+                    "name": "high",
+                    "value": 1000,
+                    "defaultValue": "1000",
+                    "description": "High value of range of array [exclusive]",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": true
+                }
+            ],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -607,8 +647,9 @@
         },
         {
             "category": "Scatter",
+            "categoryType": "Construct",
             "isGroup": true,
-            "color": "rgb(221, 173, 0)",
+            "color": "rgb(211 165 0)",
             "drawOrderHint": 0,
             "key": -7,
             "text": "Scatter",
@@ -622,17 +663,20 @@
             "streaming": false,
             "precious": false,
             "subject": null,
-            "expanded": false,
-            "git_url": "",
-            "sha": "",
+            "expanded": true,
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "inputPorts": [
                 {
                     "Id": "da3a2cdc-a73b-4055-a7c9-398b0101a586",
                     "IdText": "array",
                     "text": "array",
                     "event": false,
-                    "type": "Complex",
-                    "description": "Input array"
+                    "type": "Object",
+                    "description": "Input array",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [],
@@ -642,8 +686,9 @@
                     "IdText": "rest_array",
                     "text": "rest_array",
                     "event": false,
-                    "type": "Complex",
-                    "description": ""
+                    "type": "Object",
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "outputLocalPorts": [],
@@ -651,26 +696,15 @@
                 {
                     "text": "Number of copies",
                     "name": "num_of_copies",
-                    "value": 2,
-                    "defaultValue": "",
+                    "value": 10,
+                    "defaultValue": "0",
                     "description": "The number of outputs generated by this construct",
                     "readonly": false,
                     "type": "Integer",
                     "precious": false,
                     "options": [],
-                    "positional": false
-                },
-                {
-                    "text": "Scatter axis",
-                    "name": "scatter_axis",
-                    "value": "time",
-                    "defaultValue": "",
-                    "description": "The axis used to split the input into multiple outputs",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -685,7 +719,8 @@
                     "type": "String",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Execution time",
@@ -697,7 +732,8 @@
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Num CPUs",
@@ -709,7 +745,8 @@
                     "type": "Integer",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group start",
@@ -721,19 +758,60 @@
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
-                    "text": "list of strings",
+                    "text": "array",
                     "name": "array",
                     "value": "",
                     "defaultValue": "",
-                    "description": "Port carrying list of files found",
+                    "description": "Input array",
                     "readonly": false,
-                    "type": "Unknown",
+                    "type": "Object",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "rest_array",
+                    "name": "rest_array",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "array",
+                    "name": "array",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Input array",
+                    "readonly": false,
+                    "type": "Object",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "rest_array",
+                    "name": "rest_array",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "outputAppFields": [],
@@ -747,6 +825,7 @@
         },
         {
             "category": "Memory",
+            "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -762,9 +841,11 @@
             "streaming": false,
             "precious": false,
             "subject": null,
-            "expanded": false,
-            "git_url": "",
-            "sha": "",
+            "expanded": true,
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "group": -7,
             "inputPorts": [
                 {
@@ -772,8 +853,9 @@
                     "IdText": "rest_array",
                     "text": "rest_array",
                     "event": false,
-                    "type": "Complex",
-                    "description": "Port carrying list of files found"
+                    "type": "Object",
+                    "description": "Port carrying list of files found",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [
@@ -782,8 +864,9 @@
                     "IdText": "rest_array",
                     "text": "rest_array",
                     "event": false,
-                    "type": "Complex",
-                    "description": ""
+                    "type": "Object",
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
@@ -808,6 +891,7 @@
             "fromPort": "bd47bacb-cfcc-48c7-8f72-c32e02d631da",
             "to": -4,
             "toPort": "2bc074ad-386d-40a6-a997-69668774646e",
+            "dataType": "String",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -816,6 +900,7 @@
             "fromPort": "0872a97e-076f-458e-85f2-fdd4cd3e75a5",
             "to": -6,
             "toPort": "19fe74fd-827a-4c43-b1be-a48dcd2b75d2",
+            "dataType": "Object",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -824,6 +909,7 @@
             "fromPort": "fb4ad016-a5cc-43e0-8272-9cf894ea4687",
             "to": -5,
             "toPort": "81c00bd2-7403-4b6b-85c9-bfc1d308eeda",
+            "dataType": "Object",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -832,6 +918,7 @@
             "fromPort": "ac25b2d6-954d-4348-a85e-f4b056c62623",
             "to": -3,
             "toPort": "055cdf24-e209-408c-86ac-cf769737a366",
+            "dataType": "Object",
             "loop_aware": "1",
             "closesLoop": false
         },
@@ -840,6 +927,7 @@
             "fromPort": "6c0b1c42-556a-4651-b05b-2d6fbdd7c692",
             "to": -7,
             "toPort": "da3a2cdc-a73b-4055-a7c9-398b0101a586",
+            "dataType": "Object",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -848,6 +936,7 @@
             "fromPort": "46ebbd1a-a092-442a-b096-ad025df480b9",
             "to": -3,
             "toPort": "055cdf24-e209-408c-86ac-cf769737a366",
+            "dataType": "Object",
             "loop_aware": "0",
             "closesLoop": true
         },
@@ -856,6 +945,7 @@
             "fromPort": "ef7bb4e2-e75b-493d-938b-81215fa10256",
             "to": -9,
             "toPort": "5cabc52e-ead6-4b92-8987-0b4bd7ba8f3e",
+            "dataType": "Object",
             "loop_aware": "1",
             "closesLoop": false
         }
