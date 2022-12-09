@@ -5,12 +5,14 @@
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
         "filePath": "examples/FileCollectorScatter.graph",
-        "eagleVersion": "v4.5.5",
-        "eagleCommitHash": "33c76f928cb1ba8317f079f74a48af13e50df702",
+        "eagleVersion": "v5.0.0",
+        "eagleCommitHash": "cda1aa3f9789eb4ec0801a6cf0b33730b85d4226",
         "schemaVersion": "OJS",
         "readonly": true,
-        "sha": "",
-        "gitUrl": "",
+        "repositoryUrl": "",
+        "commitHash": "",
+        "downloadUrl": "",
+        "signature": "",
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": 0,
@@ -19,6 +21,7 @@
     "nodeDataArray": [
         {
             "category": "Memory",
+            "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -31,12 +34,12 @@
             "height": 72,
             "collapsed": true,
             "flipPorts": false,
-            "streaming": false,
-            "precious": false,
             "subject": null,
             "expanded": true,
-            "git_url": "",
-            "sha": "",
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "inputPorts": [
                 {
                     "Id": "81c00bd2-7403-4b6b-85c9-bfc1d308eeda",
@@ -44,7 +47,8 @@
                     "text": "list of strings",
                     "event": false,
                     "type": "Object.Array",
-                    "description": "Port carrying list of files found"
+                    "description": "Port carrying list of files found",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [
@@ -54,35 +58,64 @@
                     "text": "array",
                     "event": false,
                     "type": "Object.Array",
-                    "description": " Port for the rest of the array"
+                    "description": " Port for the rest of the array",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
                 {
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -99,6 +132,7 @@
         },
         {
             "category": "Loop",
+            "categoryType": "Construct",
             "isGroup": true,
             "color": "rgb(211 165 0)",
             "drawOrderHint": 0,
@@ -111,12 +145,12 @@
             "height": 383.8306256725438,
             "collapsed": false,
             "flipPorts": false,
-            "streaming": false,
-            "precious": false,
             "subject": null,
             "expanded": true,
-            "git_url": "",
-            "sha": "",
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "group": -12,
             "inputPorts": [],
             "outputPorts": [],
@@ -124,16 +158,43 @@
             "outputLocalPorts": [],
             "fields": [
                 {
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
                     "text": "Number loops",
                     "name": "num_of_iter",
                     "value": 6,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "The number of iterations performed by this loop construct",
                     "readonly": false,
                     "type": "Integer",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -150,6 +211,7 @@
         },
         {
             "category": "PythonApp",
+            "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
@@ -162,12 +224,12 @@
             "height": 72,
             "collapsed": true,
             "flipPorts": false,
-            "streaming": false,
-            "precious": false,
             "subject": null,
             "expanded": true,
-            "git_url": "",
-            "sha": "",
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "group": -2,
             "inputPorts": [
                 {
@@ -175,8 +237,9 @@
                     "IdText": "rest_array",
                     "text": "rest_array",
                     "event": false,
-                    "type": "rest_array",
-                    "description": " Port for the rest of the array"
+                    "type": "Object.rest_array",
+                    "description": " Port for the rest of the array",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [
@@ -185,8 +248,9 @@
                     "IdText": "rest_array",
                     "text": "rest_array",
                     "event": false,
-                    "type": "rest_array",
-                    "description": " Port for the rest of the array"
+                    "type": "Object.rest_array",
+                    "description": " Port for the rest of the array",
+                    "keyAttribute": false
                 },
                 {
                     "Id": "bd47bacb-cfcc-48c7-8f72-c32e02d631da",
@@ -194,47 +258,77 @@
                     "text": "Data",
                     "event": false,
                     "type": "String",
-                    "description": ""
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
                 {
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimate of execution time (in seconds) for this application.",
                     "readonly": false,
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Number of CPUs used for this application.",
                     "readonly": false,
                     "type": "Integer",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": true,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the start of a group?",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Appclass",
@@ -246,19 +340,21 @@
                     "type": "String",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": true,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the start of a group?",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -275,6 +371,7 @@
         },
         {
             "category": "File",
+            "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -287,12 +384,12 @@
             "height": 72,
             "collapsed": true,
             "flipPorts": false,
-            "streaming": false,
-            "precious": false,
             "subject": null,
             "expanded": false,
-            "git_url": "",
-            "sha": "",
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "group": -2,
             "inputPorts": [
                 {
@@ -301,7 +398,8 @@
                     "text": "Data",
                     "event": false,
                     "type": "String",
-                    "description": ""
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [],
@@ -309,40 +407,69 @@
             "outputLocalPorts": [],
             "fields": [
                 {
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": false,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Perform a check to make sure the file path exists before proceeding with the application",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "File path",
@@ -354,7 +481,8 @@
                     "type": "String",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Directory name",
@@ -366,7 +494,8 @@
                     "type": "String",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -383,6 +512,7 @@
         },
         {
             "category": "Memory",
+            "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -395,12 +525,12 @@
             "height": 72,
             "collapsed": true,
             "flipPorts": false,
-            "streaming": false,
-            "precious": false,
             "subject": null,
             "expanded": false,
-            "git_url": "",
-            "sha": "",
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "group": -2,
             "inputPorts": [
                 {
@@ -408,8 +538,9 @@
                     "IdText": "rest_array",
                     "text": "rest_array",
                     "event": false,
-                    "type": "rest_array",
-                    "description": " Port for the input array(s)"
+                    "type": "Object.rest_array",
+                    "description": " Port for the input array(s)",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [
@@ -418,36 +549,65 @@
                     "IdText": "array",
                     "text": "list of strings",
                     "event": false,
-                    "type": "array",
-                    "description": "Port carrying list of files found"
+                    "type": "Object.array",
+                    "description": "Port carrying list of files found",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
                 {
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -464,6 +624,7 @@
         },
         {
             "category": "PythonApp",
+            "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
@@ -476,12 +637,12 @@
             "height": 72,
             "collapsed": true,
             "flipPorts": false,
-            "streaming": false,
-            "precious": false,
             "subject": null,
             "expanded": false,
-            "git_url": "https://github.com/ICRAR/daliuge.git",
-            "sha": "4f6a67ca",
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "group": -2,
             "inputPorts": [
                 {
@@ -490,7 +651,8 @@
                     "text": "data",
                     "event": false,
                     "type": "String",
-                    "description": ""
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [
@@ -500,12 +662,39 @@
                     "text": "Data",
                     "event": false,
                     "type": "String",
-                    "description": ""
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
+                {
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
                 {
                     "text": "Application Class",
                     "name": "appclass",
@@ -516,7 +705,8 @@
                     "type": "String",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Remote User",
@@ -528,7 +718,8 @@
                     "type": "String",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Private Key Path",
@@ -540,55 +731,60 @@
                     "type": "String",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Timeout",
                     "name": "timeout",
                     "value": null,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Connection timeout in seconds",
                     "readonly": false,
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimated execution time",
                     "readonly": false,
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Number of cores used",
                     "readonly": false,
                     "type": "Integer",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": false,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Component is start of a group",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "URL Template",
@@ -600,7 +796,8 @@
                     "type": "String",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -617,6 +814,7 @@
         },
         {
             "category": "PythonApp",
+            "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
@@ -629,12 +827,12 @@
             "height": 72,
             "collapsed": true,
             "flipPorts": false,
-            "streaming": false,
-            "precious": false,
             "subject": null,
             "expanded": true,
-            "git_url": "",
-            "sha": "",
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "inputPorts": [],
             "outputPorts": [
                 {
@@ -643,47 +841,77 @@
                     "text": "list of strings",
                     "event": false,
                     "type": "Object.Array",
-                    "description": "Port carrying list of files found"
+                    "description": "Port carrying list of files found",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
                 {
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimate of execution time (in seconds) for this application.",
                     "readonly": false,
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Number of CPUs used for this application.",
                     "readonly": false,
                     "type": "Integer",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": false,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the start of a group?",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Appclass",
@@ -695,7 +923,8 @@
                     "type": "String",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "wildcard",
@@ -707,7 +936,8 @@
                     "type": "String",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "filepath",
@@ -719,7 +949,8 @@
                     "type": "String",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -736,6 +967,7 @@
         },
         {
             "category": "Memory",
+            "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -748,12 +980,12 @@
             "height": 72,
             "collapsed": true,
             "flipPorts": false,
-            "streaming": false,
-            "precious": false,
             "subject": null,
             "expanded": false,
-            "git_url": "",
-            "sha": "",
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "group": -2,
             "inputPorts": [
                 {
@@ -762,7 +994,8 @@
                     "text": "data",
                     "event": false,
                     "type": "String",
-                    "description": ""
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [
@@ -772,35 +1005,64 @@
                     "text": "data",
                     "event": false,
                     "type": "String",
-                    "description": ""
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
                 {
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -817,6 +1079,7 @@
         },
         {
             "category": "Branch",
+            "categoryType": "Control",
             "isGroup": false,
             "color": "rgb(88 167 94)",
             "drawOrderHint": 0,
@@ -829,12 +1092,12 @@
             "height": 72,
             "collapsed": false,
             "flipPorts": false,
-            "streaming": false,
-            "precious": false,
             "subject": null,
             "expanded": false,
-            "git_url": "",
-            "sha": "",
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "group": -2,
             "inputPorts": [
                 {
@@ -842,8 +1105,9 @@
                     "IdText": "array",
                     "text": "array",
                     "event": false,
-                    "type": "array",
-                    "description": "port to input the array to check"
+                    "type": "Object.array",
+                    "description": "port to input the array to check",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [
@@ -852,56 +1116,87 @@
                     "IdText": "Y",
                     "text": "Y",
                     "event": false,
-                    "type": "array",
-                    "description": ""
+                    "type": "Object.array",
+                    "description": "",
+                    "keyAttribute": false
                 },
                 {
                     "Id": "1f7d5b9a-47ad-4d26-8487-3787a6a5f733",
                     "IdText": "N",
                     "text": "N",
                     "event": false,
-                    "type": "array",
-                    "description": ""
+                    "type": "Object.array",
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
                 {
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimate of execution time (in seconds) for this application.",
                     "readonly": false,
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Number of CPUs used for this application.",
                     "readonly": false,
                     "type": "Integer",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": false,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the start of a group?",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Appclass",
@@ -913,7 +1208,8 @@
                     "type": "String",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -930,6 +1226,7 @@
         },
         {
             "category": "Memory",
+            "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -942,12 +1239,12 @@
             "height": 72,
             "collapsed": true,
             "flipPorts": true,
-            "streaming": false,
-            "precious": false,
             "subject": null,
             "expanded": false,
-            "git_url": "",
-            "sha": "",
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "group": -2,
             "inputPorts": [
                 {
@@ -955,8 +1252,9 @@
                     "IdText": "Y",
                     "text": "Y",
                     "event": false,
-                    "type": "array",
-                    "description": " Port for the input array(s)"
+                    "type": "Object.array",
+                    "description": " Port for the input array(s)",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [
@@ -965,36 +1263,65 @@
                     "IdText": "array",
                     "text": "list of strings",
                     "event": false,
-                    "type": "rest_array",
-                    "description": "Port carrying list of files found"
+                    "type": "Object.rest_array",
+                    "description": "Port carrying list of files found",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
                 {
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": true,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -1011,6 +1338,7 @@
         },
         {
             "category": "Memory",
+            "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -1023,12 +1351,12 @@
             "height": 72,
             "collapsed": true,
             "flipPorts": false,
-            "streaming": false,
-            "precious": false,
             "subject": null,
             "expanded": false,
-            "git_url": "",
-            "sha": "",
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "group": -2,
             "inputPorts": [
                 {
@@ -1036,8 +1364,9 @@
                     "IdText": "N",
                     "text": "N",
                     "event": false,
-                    "type": "array",
-                    "description": " Port for the input array(s)"
+                    "type": "Object.array",
+                    "description": " Port for the input array(s)",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [
@@ -1046,36 +1375,65 @@
                     "IdText": "array",
                     "text": "list of strings",
                     "event": false,
-                    "type": "array",
-                    "description": "Port carrying list of files found"
+                    "type": "Object.array",
+                    "description": "Port carrying list of files found",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
                 {
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -1092,6 +1450,7 @@
         },
         {
             "category": "Scatter",
+            "categoryType": "Construct",
             "isGroup": true,
             "color": "rgb(211 165 0)",
             "drawOrderHint": 0,
@@ -1104,12 +1463,12 @@
             "height": 485.20591647790184,
             "collapsed": false,
             "flipPorts": false,
-            "streaming": false,
-            "precious": false,
             "subject": null,
             "expanded": true,
-            "git_url": "",
-            "sha": "",
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "inputPorts": [
                 {
                     "Id": "ee14c53b-5127-4559-8e60-419a30dbf622",
@@ -1117,7 +1476,8 @@
                     "text": "Array",
                     "event": false,
                     "type": "Object.Array",
-                    "description": " Port carrying the averaged array"
+                    "description": " Port carrying the averaged array",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [],
@@ -1127,23 +1487,51 @@
                     "IdText": "rest_array",
                     "text": "rest_array",
                     "event": false,
-                    "type": "rest_array",
-                    "description": " A numpy array of arrays, where the first axis is of length <numSplit>"
+                    "type": "Object.rest_array",
+                    "description": " A numpy array of arrays, where the first axis is of length <numSplit>",
+                    "keyAttribute": false
                 }
             ],
             "outputLocalPorts": [],
             "fields": [
                 {
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
                     "text": "Number of copies",
                     "name": "num_of_copies",
                     "value": 8,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "The number of outputs generated by this construct",
                     "readonly": false,
                     "type": "Integer",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Scatter axis",
@@ -1152,10 +1540,11 @@
                     "defaultValue": "",
                     "description": "The axis used to split the input into multiple outputs",
                     "readonly": false,
-                    "type": "rest_array",
+                    "type": "Object.rest_array",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -1170,7 +1559,8 @@
                     "type": "String",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Execution time",
@@ -1182,7 +1572,8 @@
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Num CPUs",
@@ -1194,7 +1585,8 @@
                     "type": "Integer",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group start",
@@ -1206,7 +1598,8 @@
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Array",
@@ -1218,7 +1611,34 @@
                     "type": "Object.Array",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "rest_array",
+                    "name": "rest_array",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": " A numpy array of arrays, where the first axis is of length <numSplit>",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Array",
+                    "name": "array",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": " Port carrying the averaged array",
+                    "readonly": false,
+                    "type": "Object.Array",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "rest_array",
@@ -1227,10 +1647,11 @@
                     "defaultValue": "",
                     "description": " A numpy array of arrays, where the first axis is of length <numSplit>",
                     "readonly": false,
-                    "type": "rest_array",
+                    "type": "Object.rest_array",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "outputAppFields": [],
@@ -1244,6 +1665,7 @@
         },
         {
             "category": "Memory",
+            "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
@@ -1256,12 +1678,12 @@
             "height": 72,
             "collapsed": true,
             "flipPorts": false,
-            "streaming": false,
-            "precious": false,
             "subject": null,
-            "expanded": false,
-            "git_url": "",
-            "sha": "",
+            "expanded": true,
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "group": -12,
             "inputPorts": [
                 {
@@ -1269,8 +1691,9 @@
                     "IdText": "rest_array",
                     "text": "rest_array",
                     "event": false,
-                    "type": "rest_array",
-                    "description": ""
+                    "type": "Object.rest_array",
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [
@@ -1279,36 +1702,65 @@
                     "IdText": "rest_array",
                     "text": "rest_array",
                     "event": false,
-                    "type": "rest_array",
-                    "description": ""
+                    "type": "Object.rest_array",
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
                 {
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
                     "type": "Float",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
-                    "positional": false
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
             "applicationArgs": [],
@@ -1330,6 +1782,7 @@
             "fromPort": "9e7039ae-280c-489b-892d-891141f9c421",
             "to": -5,
             "toPort": "81c00bd2-7403-4b6b-85c9-bfc1d308eeda",
+            "dataType": "Object.Array",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -1338,6 +1791,7 @@
             "fromPort": "26528196-cde6-4845-99ff-ea84c4d296ac",
             "to": -4,
             "toPort": "2bc074ad-386d-40a6-a997-69668774646e",
+            "dataType": "String",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -1346,6 +1800,7 @@
             "fromPort": "bd47bacb-cfcc-48c7-8f72-c32e02d631da",
             "to": -8,
             "toPort": "42d57bd6-561a-43e1-8a33-0d4b7d05e914",
+            "dataType": "String",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -1354,6 +1809,7 @@
             "fromPort": "0872a97e-076f-458e-85f2-fdd4cd3e75a5",
             "to": -6,
             "toPort": "19fe74fd-827a-4c43-b1be-a48dcd2b75d2",
+            "dataType": "Object.rest_array",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -1362,6 +1818,7 @@
             "fromPort": "bec799ed-2363-4339-b3d3-188f43dfb479",
             "to": -7,
             "toPort": "8a5da425-97bb-45ad-a0e0-b2a60724906b",
+            "dataType": "String",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -1370,6 +1827,7 @@
             "fromPort": "46ebbd1a-a092-442a-b096-ad025df480b9",
             "to": -10,
             "toPort": "04cbede2-56a3-4fff-9c18-d7fc7106eb70",
+            "dataType": "Object.array",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -1378,6 +1836,7 @@
             "fromPort": "b253bbb7-9c69-43c1-a1d7-e3612a7ec5dd",
             "to": -9,
             "toPort": "630aa792-ff62-48f5-b4e7-2d22cb8bb1bb",
+            "dataType": "Object.array",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -1386,6 +1845,7 @@
             "fromPort": "1f7d5b9a-47ad-4d26-8487-3787a6a5f733",
             "to": -11,
             "toPort": "95bf35b0-c9e0-468d-993e-78eba98029d9",
+            "dataType": "Object.array",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -1394,6 +1854,7 @@
             "fromPort": "9d2e1b95-c1d6-4190-842a-9e2f0d078336",
             "to": -12,
             "toPort": "ee14c53b-5127-4559-8e60-419a30dbf622",
+            "dataType": "Object.Array",
             "loop_aware": "0",
             "closesLoop": false
         },
@@ -1402,6 +1863,7 @@
             "fromPort": "f01bb1d8-42dd-4a84-8050-648cf98a038f",
             "to": -14,
             "toPort": "112ab44b-215e-44bb-bfca-8a124ff2f2b2",
+            "dataType": "Object.rest_array",
             "loop_aware": "1",
             "closesLoop": false
         },
@@ -1410,6 +1872,7 @@
             "fromPort": "ae2a3b7d-df08-470a-ad72-55464c53c2ed",
             "to": -3,
             "toPort": "055cdf24-e209-408c-86ac-cf769737a366",
+            "dataType": "Object.rest_array",
             "loop_aware": "1",
             "closesLoop": false
         },
@@ -1418,6 +1881,7 @@
             "fromPort": "83f9b178-e09f-4f84-a717-16e7c23c7b57",
             "to": -3,
             "toPort": "055cdf24-e209-408c-86ac-cf769737a366",
+            "dataType": "Object.rest_array",
             "loop_aware": "0",
             "closesLoop": true
         }
