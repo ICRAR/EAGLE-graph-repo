@@ -1,26 +1,29 @@
 {
     "modelData": {
-        "fileType": "graph",
+        "fileType": "Graph",
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
         "filePath": "examples/ngasTest.graph",
-        "sha": "",
-        "git_url": "",
-        "eagleVersion": "v3.0.6",
-        "eagleCommitHash": "91468f4abdba89c57e759db234f7ebd06c259094",
+        "eagleVersion": "v5.0.2",
+        "eagleCommitHash": "03e501c70edc704739c7dd9c73aae44780502418",
         "schemaVersion": "OJS",
-        "readonly": true
+        "readonly": true,
+        "repositoryUrl": "",
+        "commitHash": "",
+        "downloadUrl": "",
+        "signature": "",
+        "lastModifiedName": "",
+        "lastModifiedEmail": "",
+        "lastModifiedDatetime": 0,
+        "numLGNodes": 6
     },
     "nodeDataArray": [
         {
             "category": "NGAS",
             "categoryType": "Data",
-            "isData": true,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
+            "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -1,
             "text": "NGASgeneric",
@@ -28,114 +31,178 @@
             "x": 311.40104208426624,
             "y": 224.3070036847975,
             "width": 200,
-            "height": 200,
-            "collapsed": false,
-            "showPorts": false,
+            "height": 72,
+            "collapsed": true,
             "flipPorts": false,
-            "streaming": false,
-            "precious": false,
             "subject": null,
-            "selected": false,
             "expanded": false,
-            "readonly": false,
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "inputPorts": [],
             "outputPorts": [
                 {
                     "Id": "e1ba50f7-1bed-473f-a8d3-e18eb36c2254",
                     "IdText": "hello",
+                    "text": "hello",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
                 {
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
+                    "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
+                    "defaultValue": "false",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "NGAS Server",
                     "name": "ngasSrv",
                     "value": "ngas.ddns.net",
+                    "defaultValue": "",
                     "description": "The URL of the NGAS Server",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "NGAS Port",
                     "name": "ngasPort",
                     "value": 7777,
+                    "defaultValue": "0",
                     "description": "The port of the NGAS Server",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "File ID",
                     "name": "ngasFileId",
                     "value": "HelloWorldOut.txt",
+                    "defaultValue": "",
                     "description": "File ID on NGAS (for retrieval only)",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Connection timeout",
                     "name": "ngasConnectTimeout",
                     "value": 2,
+                    "defaultValue": "0",
                     "description": "Timeout for connecting to the NGAS server",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "NGAS mime-type",
                     "name": "ngasMime",
                     "value": "application/octet-stream",
+                    "defaultValue": "",
                     "description": "Mime-type to be used for archiving",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "NGAS timeout",
                     "name": "ngasTimeout",
                     "value": 2,
+                    "defaultValue": "0",
                     "description": "Timeout for receiving responses for NGAS",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
+            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
+            "inputApplicationDescription": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationDescription": ""
         },
         {
             "category": "File",
             "categoryType": "Data",
-            "isData": true,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
+            "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -3,
             "text": "hello",
@@ -143,97 +210,149 @@
             "x": 917.4250436357602,
             "y": 246.08400543022788,
             "width": 200,
-            "height": 200,
-            "collapsed": false,
-            "showPorts": false,
+            "height": 72,
+            "collapsed": true,
             "flipPorts": false,
-            "streaming": false,
-            "precious": false,
             "subject": null,
-            "selected": false,
             "expanded": false,
-            "readonly": false,
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "inputPorts": [
                 {
                     "Id": "9cf38a5a-6536-4e02-b0ce-1b87df6b5eab",
                     "IdText": "hello",
+                    "text": "hello",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "01343d7d-a489-4614-9ba8-9a08b729d960",
                     "IdText": "hello",
+                    "text": "hello",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
                 {
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
+                    "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
+                    "defaultValue": "false",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": false,
+                    "defaultValue": "false",
                     "description": "Perform a check to make sure the file path exists before proceeding with the application",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "File path",
                     "name": "filepath",
                     "value": "",
+                    "defaultValue": "",
                     "description": "Path to the file for this node",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Directory name",
                     "name": "dirname",
                     "value": "",
+                    "defaultValue": "",
                     "description": "Name of the directory containing the file for this node",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
+            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
+            "inputApplicationDescription": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationDescription": ""
         },
         {
             "category": "PythonApp",
             "categoryType": "Application",
-            "isData": false,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#3498DB",
+            "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -2,
             "text": "CopyApp",
@@ -241,89 +360,136 @@
             "x": 639.009434634622,
             "y": 153.48101884797438,
             "width": 200,
-            "height": 200,
-            "collapsed": false,
-            "showPorts": false,
+            "height": 72,
+            "collapsed": true,
             "flipPorts": false,
-            "streaming": false,
-            "precious": false,
             "subject": null,
-            "selected": false,
             "expanded": false,
-            "readonly": false,
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "inputPorts": [
                 {
                     "Id": "e459d094-ad85-4028-a805-76d08b3c26fc",
                     "IdText": "hello",
+                    "text": "hello",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "7596a83d-93c9-42f3-ba4e-4f85f4a1442d",
                     "IdText": "hello",
+                    "text": "hello",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
                 {
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
                     "text": "appclass",
                     "name": "appclass",
                     "value": "dlg.apps.simple.CopyApp",
+                    "defaultValue": "",
                     "description": "Application class",
                     "readonly": true,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
+                    "defaultValue": "0",
                     "description": "Estimated execution time",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
+                    "defaultValue": "0",
                     "description": "Number of cores used",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": false,
+                    "defaultValue": "false",
                     "description": "Component is start of a group",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
+            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
+            "inputApplicationDescription": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationDescription": ""
         },
         {
             "category": "NGAS",
             "categoryType": "Data",
-            "isData": true,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#394BB2",
+            "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -4,
             "text": "NGASgeneric",
@@ -331,22 +497,24 @@
             "x": 1414.025525890551,
             "y": 199.6105152240318,
             "width": 200,
-            "height": 200,
-            "collapsed": false,
-            "showPorts": false,
+            "height": 72,
+            "collapsed": true,
             "flipPorts": false,
-            "streaming": false,
-            "precious": false,
             "subject": null,
-            "selected": false,
             "expanded": false,
-            "readonly": false,
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "inputPorts": [
                 {
                     "Id": "e7d5e960-4dd0-42a8-80c5-389cb8fe3be2",
                     "IdText": "hello",
+                    "text": "hello",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [],
@@ -354,91 +522,153 @@
             "outputLocalPorts": [],
             "fields": [
                 {
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
                     "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
+                    "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group end",
                     "name": "group_end",
                     "value": false,
+                    "defaultValue": "false",
                     "description": "Is this node the end of a group?",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "NGAS Server",
                     "name": "ngasSrv",
                     "value": "ngas.ddns.net",
+                    "defaultValue": "",
                     "description": "The URL of the NGAS Server",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "NGAS Port",
                     "name": "ngasPort",
                     "value": 7777,
+                    "defaultValue": "0",
                     "description": "The port of the NGAS Server",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "File ID",
                     "name": "ngasFileId",
                     "value": "",
+                    "defaultValue": "",
                     "description": "File ID on NGAS (for retrieval only)",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Connection timeout",
                     "name": "ngasConnectTimeout",
                     "value": 2,
+                    "defaultValue": "0",
                     "description": "Timeout for connecting to the NGAS server",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "NGAS mime-type",
                     "name": "ngasMime",
                     "value": "text/ascii",
+                    "defaultValue": "",
                     "description": "Mime-type to be used for archiving",
                     "readonly": false,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "NGAS timeout",
                     "name": "ngasTimeout",
                     "value": 2,
+                    "defaultValue": "0",
                     "description": "Timeout for receiving responses for NGAS",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
+            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
+            "inputApplicationDescription": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationDescription": ""
         },
         {
             "category": "PythonApp",
             "categoryType": "Application",
-            "isData": false,
             "isGroup": false,
-            "canHaveInputs": true,
-            "canHaveOutputs": true,
-            "color": "#3498DB",
+            "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -5,
             "text": "CopyApp",
@@ -446,89 +676,136 @@
             "x": 1143.0340345207346,
             "y": 232.19201241194952,
             "width": 200,
-            "height": 200,
-            "collapsed": false,
-            "showPorts": false,
+            "height": 72,
+            "collapsed": true,
             "flipPorts": false,
-            "streaming": false,
-            "precious": false,
             "subject": null,
-            "selected": false,
             "expanded": false,
-            "readonly": false,
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "inputPorts": [
                 {
                     "Id": "43e97584-3b56-47c4-b8a5-bce5e64461a8",
                     "IdText": "hello",
+                    "text": "hello",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "outputPorts": [
                 {
                     "Id": "ee14a67f-d799-4caa-964f-3d4ce9d46312",
                     "IdText": "hello",
+                    "text": "hello",
                     "event": false,
-                    "type": "String"
+                    "type": "String",
+                    "description": "",
+                    "keyAttribute": false
                 }
             ],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
                 {
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
                     "text": "appclass",
                     "name": "appclass",
                     "value": "dlg.apps.simple.CopyApp",
+                    "defaultValue": "",
                     "description": "Application class",
                     "readonly": true,
-                    "type": "String"
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
+                    "defaultValue": "0",
                     "description": "Estimated execution time",
                     "readonly": false,
-                    "type": "Float"
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
+                    "defaultValue": "0",
                     "description": "Number of cores used",
                     "readonly": false,
-                    "type": "Integer"
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 },
                 {
                     "text": "Group start",
                     "name": "group_start",
                     "value": false,
+                    "defaultValue": "false",
                     "description": "Component is start of a group",
                     "readonly": false,
-                    "type": "Boolean"
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
+            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
+            "inputApplicationDescription": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationDescription": ""
         },
         {
             "category": "Description",
             "categoryType": "Other",
-            "isData": false,
             "isGroup": false,
-            "canHaveInputs": false,
-            "canHaveOutputs": false,
-            "color": "#9B3065",
+            "color": "rgb(157 43 96)",
             "drawOrderHint": 0,
             "key": -6,
             "text": "Description",
@@ -537,41 +814,57 @@
             "y": -122.8909214588946,
             "width": 204.91094273566023,
             "height": 100,
-            "collapsed": false,
-            "showPorts": false,
+            "collapsed": true,
             "flipPorts": false,
-            "streaming": false,
-            "precious": false,
             "subject": null,
-            "selected": false,
             "expanded": false,
-            "readonly": false,
+            "repositoryUrl": "",
+            "commitHash": "",
+            "paletteDownloadUrl": "",
+            "dataHash": "",
             "inputPorts": [],
             "outputPorts": [],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Description",
-                    "name": "description",
-                    "value": "This graph retrieves a HelloWorld file from NGAS and copies it back to NGAS with a different name.",
-                    "description": "The text value of the description",
+                    "text": "Persist",
+                    "name": "persist",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
                     "readonly": false,
-                    "type": "String"
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Streaming",
+                    "name": "streaming",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
                 }
             ],
+            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
-            "exitAppFields": [],
             "inputApplicationName": "",
             "inputApplicationType": "None",
             "inputApplicationKey": null,
+            "inputApplicationDescription": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationKey": null,
-            "exitApplicationName": "",
-            "exitApplicationType": "None",
-            "exitApplicationKey": null
+            "outputApplicationDescription": ""
         }
     ],
     "linkDataArray": [
@@ -580,28 +873,36 @@
             "fromPort": "e1ba50f7-1bed-473f-a8d3-e18eb36c2254",
             "to": -2,
             "toPort": "e459d094-ad85-4028-a805-76d08b3c26fc",
-            "loop_aware": "0"
+            "dataType": "String",
+            "loop_aware": "0",
+            "closesLoop": false
         },
         {
             "from": -2,
             "fromPort": "7596a83d-93c9-42f3-ba4e-4f85f4a1442d",
             "to": -3,
             "toPort": "9cf38a5a-6536-4e02-b0ce-1b87df6b5eab",
-            "loop_aware": "0"
+            "dataType": "String",
+            "loop_aware": "0",
+            "closesLoop": false
         },
         {
             "from": -3,
             "fromPort": "01343d7d-a489-4614-9ba8-9a08b729d960",
             "to": -5,
             "toPort": "43e97584-3b56-47c4-b8a5-bce5e64461a8",
-            "loop_aware": "0"
+            "dataType": "String",
+            "loop_aware": "0",
+            "closesLoop": false
         },
         {
             "from": -5,
             "fromPort": "ee14a67f-d799-4caa-964f-3d4ce9d46312",
             "to": -4,
             "toPort": "e7d5e960-4dd0-42a8-80c5-389cb8fe3be2",
-            "loop_aware": "0"
+            "dataType": "String",
+            "loop_aware": "0",
+            "closesLoop": false
         }
     ]
 }
