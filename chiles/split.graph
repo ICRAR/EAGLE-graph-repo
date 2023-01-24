@@ -1518,7 +1518,17 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -7,
-            "inputPorts": [],
+            "inputPorts": [
+                {
+                    "Id": "996c97e6-3706-411d-b3fb-a4e204c0b02b",
+                    "IdText": "ms_name",
+                    "text": "MS Name",
+                    "event": false,
+                    "type": "String",
+                    "description": "",
+                    "keyAttribute": false
+                }
+            ],
             "outputPorts": [],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
@@ -1552,7 +1562,7 @@
                 {
                     "text": "Number loops",
                     "name": "num_of_iter",
-                    "value": 2,
+                    "value": 100,
                     "defaultValue": "0",
                     "description": "The number of iterations performed by this loop construct",
                     "readonly": false,
@@ -1612,6 +1622,19 @@
                     "description": "Is this node the start of a group?",
                     "readonly": false,
                     "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "MS Name",
+                    "name": "ms_name",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
                     "precious": false,
                     "options": [],
                     "positional": false,
@@ -2507,10 +2530,10 @@
             "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -16,
-            "text": "PythonApp",
+            "text": "SpwDetails",
             "description": "A placeholder APP to aid construction of new applications. This is mainly useful (and used) when starting a new workflow from scratch.",
-            "x": 635.8070394729041,
-            "y": -172.88340260295865,
+            "x": 669.303943975025,
+            "y": -172.88340260295863,
             "width": 200,
             "height": 72,
             "collapsed": false,
@@ -2673,6 +2696,15 @@
             "toPort": "9546fab4-81fa-4fbd-968c-1113b39eaafc",
             "dataType": "Object",
             "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -11,
+            "fromPort": "43610c2b-ecd4-487f-8828-a2605b1bafe5",
+            "to": -13,
+            "toPort": "996c97e6-3706-411d-b3fb-a4e204c0b02b",
+            "dataType": "String",
+            "loop_aware": "1",
             "closesLoop": false
         }
     ]
