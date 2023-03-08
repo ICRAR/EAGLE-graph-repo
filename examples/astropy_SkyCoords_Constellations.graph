@@ -906,204 +906,6 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "PythonApp",
-            "categoryType": "Application",
-            "isGroup": false,
-            "color": "#0059a5",
-            "drawOrderHint": 0,
-            "key": -6,
-            "text": "SkyCoord::separation",
-            "description": "Computes on-sky separation between this coordinate and another.\n\n.. note::\n\n    If the ``other`` coordinate object is in a different frame, it is\n    first transformed to the frame of this object. This can lead to\n    unintuitive behavior if not accounted for. Particularly of note is\n    that ``self.separation(other)`` and ``other.separation(self)`` may\n    not give the same answer in this case.\n\nFor more on how to use this (and related) functionality, see the\nexamples in :doc:`astropy:/coordinates/matchsep`.\n\nParameters\n----------\nother : `~astropy.coordinates.SkyCoord` or `~astropy.coordinates.BaseCoordinateFrame`\n    The coordinate to get the separation to.\n\nReturns\n-------\nsep : `~astropy.coordinates.Angle`\n    The on-sky separation between this and the ``other`` coordinate.\n\nNotes\n-----\nThe separation is calculated using the Vincenty formula, which\nis stable at all locations, including poles and antipodes [1]_.\n\n.. [1] https://en.wikipedia.org/wiki/Great-circle_distanc",
-            "x": 673.9040592789332,
-            "y": 105.82698817238202,
-            "width": 200,
-            "height": 72,
-            "collapsed": true,
-            "flipPorts": false,
-            "subject": null,
-            "expanded": true,
-            "repositoryUrl": "coordinates",
-            "commitHash": "0.1",
-            "paletteDownloadUrl": "",
-            "dataHash": "360109820e5902aa32b0a1480b162184fb8e09811e8a4bef5088cd9bd33238cc",
-            "inputPorts": [
-                {
-                    "Id": "490a2b49-8808-4178-9dfd-b883f1318739",
-                    "IdText": "self",
-                    "text": "self",
-                    "event": false,
-                    "type": "Object.self",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "15579254-5c7c-4c9e-8a87-e918893fa3d5",
-                    "IdText": "other",
-                    "text": "other",
-                    "event": false,
-                    "type": "Object.other",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "7b39a412-50cb-4066-8f74-0174a8cdcb16",
-                    "IdText": "",
-                    "text": "",
-                    "event": false,
-                    "type": "String",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Persist",
-                    "name": "persist",
-                    "value": false,
-                    "defaultValue": "false",
-                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false
-                },
-                {
-                    "text": "Streaming",
-                    "name": "streaming",
-                    "value": false,
-                    "defaultValue": "false",
-                    "description": "Specifies whether this data component streams input and output data",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false
-                },
-                {
-                    "text": "Application Class",
-                    "name": "appclass",
-                    "value": "dlg.apps.pyfunc.PyFuncApp",
-                    "defaultValue": "dlg.apps.pyfunc.PyFuncApp",
-                    "description": "The python class that implements this application",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false
-                },
-                {
-                    "text": "Execution Time",
-                    "name": "execution_time",
-                    "value": 5,
-                    "defaultValue": "5",
-                    "description": "Estimate of execution time (in seconds) for this application.",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false
-                },
-                {
-                    "text": "No. of CPUs",
-                    "name": "num_cpus",
-                    "value": 1,
-                    "defaultValue": "1",
-                    "description": "Number of CPUs used for this application.",
-                    "readonly": false,
-                    "type": "Integer",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false
-                },
-                {
-                    "text": "Group start",
-                    "name": "group_start",
-                    "value": false,
-                    "defaultValue": "false",
-                    "description": "Is this node the start of a group?",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false
-                }
-            ],
-            "applicationArgs": [
-                {
-                    "text": "Function Name",
-                    "name": "func_name",
-                    "value": "astropy.coordinates.sky_coordinate.SkyCoord.separation",
-                    "defaultValue": "astropy.coordinates.sky_coordinate.SkyCoord.separation",
-                    "description": "Python function name",
-                    "readonly": true,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": true,
-                    "keyAttribute": false
-                },
-                {
-                    "text": "Input Parser",
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "readonly": false,
-                    "type": "Select",
-                    "precious": false,
-                    "options": [
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "positional": false,
-                    "keyAttribute": false
-                },
-                {
-                    "text": "Output Parser",
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "readonly": false,
-                    "type": "Select",
-                    "precious": false,
-                    "options": [
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "positional": false,
-                    "keyAttribute": false
-                }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "inputApplicationDescription": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "outputApplicationDescription": ""
-        },
-        {
             "category": "Memory",
             "categoryType": "Data",
             "isGroup": false,
@@ -1112,8 +914,8 @@
             "key": -7,
             "text": "SkyCoord1",
             "description": "In-memory storage of intermediate data products",
-            "x": 568.7571888203775,
-            "y": 57.476343775039254,
+            "x": 593.8559666769719,
+            "y": 59.61240997560045,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -1223,8 +1025,8 @@
             "key": -8,
             "text": "Separation",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "x": 785.6583377412182,
-            "y": 106.23409261533364,
+            "x": 851.3423734084749,
+            "y": 105.16605951505305,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -1238,25 +1040,15 @@
             "inputPorts": [
                 {
                     "Id": "4b2563ec-bff3-4be5-8279-ddce0a724b34",
-                    "IdText": "dummy",
-                    "text": "dummy",
+                    "IdText": "sep",
+                    "text": "sep",
                     "event": false,
                     "type": "String",
                     "description": "Dummy input port",
                     "keyAttribute": false
                 }
             ],
-            "outputPorts": [
-                {
-                    "Id": "81cfa034-da80-4987-9004-6014dbafe38e",
-                    "IdText": "dummy",
-                    "text": "dummy",
-                    "event": false,
-                    "type": "Object",
-                    "description": "Dummy output port",
-                    "keyAttribute": false
-                }
-            ],
+            "outputPorts": [],
             "inputLocalPorts": [],
             "outputLocalPorts": [],
             "fields": [
@@ -1363,6 +1155,191 @@
             "outputApplicationType": "None",
             "outputApplicationKey": null,
             "outputApplicationDescription": ""
+        },
+        {
+            "category": "PythonApp",
+            "categoryType": "Application",
+            "isGroup": false,
+            "color": "#0059a5",
+            "drawOrderHint": 0,
+            "key": -9,
+            "text": "SkyCoord::separation",
+            "description": "Computes on-sky separation between this coordinate and another.\n\n.. note::\n\n    If the ``other`` coordinate object is in a different frame, it is\n    first transformed to the frame of this object. This can lead to\n    unintuitive behavior if not accounted for. Particularly of note is\n    that ``self.separation(other)`` and ``other.separation(self)`` may\n    not give the same answer in this case.\n\nFor more on how to use this (and related) functionality, see the\nexamples in :doc:`astropy:/coordinates/matchsep`.",
+            "x": 740.1658040352926,
+            "y": 103.99350780373292,
+            "width": 200,
+            "height": 72,
+            "collapsed": true,
+            "flipPorts": false,
+            "subject": null,
+            "expanded": true,
+            "repositoryUrl": "dlg",
+            "commitHash": "0.1",
+            "paletteDownloadUrl": "",
+            "dataHash": "dc5b5ecd2b46ff1b19371ce8c97455ffc5b34aa2b2179f90e7142605d28caec4",
+            "inputPorts": [
+                {
+                    "Id": "365dcd2b-8712-43ff-ac36-06d69297d2f1",
+                    "IdText": "self",
+                    "text": "self",
+                    "event": false,
+                    "type": "Object.self",
+                    "description": "",
+                    "keyAttribute": false
+                },
+                {
+                    "Id": "21e9ac77-295e-4879-bbf2-e2d8302207b4",
+                    "IdText": "other",
+                    "text": "other",
+                    "event": false,
+                    "type": "Object.other",
+                    "description": " `~astropy.coordinates.SkyCoord` or `~astropy.coordinates.BaseCoordinateFrame`     The coordinate to get the separation to.  Returns ------- ",
+                    "keyAttribute": false
+                }
+            ],
+            "outputPorts": [
+                {
+                    "Id": "79af08a3-dfeb-4088-ac38-96c378d3530c",
+                    "IdText": "sep",
+                    "text": "sep",
+                    "event": false,
+                    "type": "String",
+                    "description": "",
+                    "keyAttribute": false
+                }
+            ],
+            "inputLocalPorts": [],
+            "outputLocalPorts": [],
+            "fields": [
+                {
+                    "text": "Application Class",
+                    "name": "appclass",
+                    "value": "dlg.apps.pyfunc.PyFuncApp",
+                    "defaultValue": "dlg.apps.pyfunc.PyFuncApp",
+                    "description": "The python class that implements this application",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Execution Time",
+                    "name": "execution_time",
+                    "value": 5,
+                    "defaultValue": "5",
+                    "description": "Estimate of execution time (in seconds) for this application.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "No. of CPUs",
+                    "name": "num_cpus",
+                    "value": 1,
+                    "defaultValue": "1",
+                    "description": "Number of cores used.",
+                    "readonly": false,
+                    "type": "Integer",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Group start",
+                    "name": "group_start",
+                    "value": false,
+                    "defaultValue": "false",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "sep",
+                    "name": "sep",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false
+                }
+            ],
+            "applicationArgs": [
+                {
+                    "text": "Function Name",
+                    "name": "func_name",
+                    "value": "astropy.coordinates.sky_coordinate.SkyCoord.separation",
+                    "defaultValue": "astropy.coordinates.sky_coordinate.SkyCoord.separation",
+                    "description": "Python function name",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": true,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Input Parser",
+                    "name": "input_parser",
+                    "value": "pickle",
+                    "defaultValue": "pickle",
+                    "description": "Input port parsing technique",
+                    "readonly": false,
+                    "type": "Select",
+                    "precious": false,
+                    "options": [
+                        "pickle",
+                        "eval",
+                        "npy",
+                        "path",
+                        "dataurl"
+                    ],
+                    "positional": false,
+                    "keyAttribute": false
+                },
+                {
+                    "text": "Output Parser",
+                    "name": "output_parser",
+                    "value": "pickle",
+                    "defaultValue": "pickle",
+                    "description": "Output port parsing technique",
+                    "readonly": false,
+                    "type": "Select",
+                    "precious": false,
+                    "options": [
+                        "pickle",
+                        "eval",
+                        "npy",
+                        "path",
+                        "dataurl"
+                    ],
+                    "positional": false,
+                    "keyAttribute": false
+                }
+            ],
+            "inputAppFields": [],
+            "outputAppFields": [],
+            "inputApplicationName": "",
+            "inputApplicationType": "None",
+            "inputApplicationKey": null,
+            "inputApplicationDescription": "",
+            "outputApplicationName": "",
+            "outputApplicationType": "None",
+            "outputApplicationKey": null,
+            "outputApplicationDescription": ""
         }
     ],
     "linkDataArray": [
@@ -1394,15 +1371,6 @@
             "closesLoop": false
         },
         {
-            "from": -3,
-            "fromPort": "78d2f762-41e5-4500-abde-9c9f4ee274a3",
-            "to": -6,
-            "toPort": "490a2b49-8808-4178-9dfd-b883f1318739",
-            "dataType": "Object.self",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
             "from": -2,
             "fromPort": "e47d0727-2ef3-40f8-b060-88844c1fb45f",
             "to": -7,
@@ -1412,17 +1380,26 @@
             "closesLoop": false
         },
         {
+            "from": -3,
+            "fromPort": "78d2f762-41e5-4500-abde-9c9f4ee274a3",
+            "to": -9,
+            "toPort": "365dcd2b-8712-43ff-ac36-06d69297d2f1",
+            "dataType": "Object.self",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
             "from": -7,
             "fromPort": "22dac931-24df-46fe-90b2-65fe640eb82f",
-            "to": -6,
-            "toPort": "15579254-5c7c-4c9e-8a87-e918893fa3d5",
+            "to": -9,
+            "toPort": "21e9ac77-295e-4879-bbf2-e2d8302207b4",
             "dataType": "Object.other",
             "loop_aware": "0",
             "closesLoop": false
         },
         {
-            "from": -6,
-            "fromPort": "7b39a412-50cb-4066-8f74-0174a8cdcb16",
+            "from": -9,
+            "fromPort": "79af08a3-dfeb-4088-ac38-96c378d3530c",
             "to": -8,
             "toPort": "4b2563ec-bff3-4be5-8279-ddce0a724b34",
             "dataType": "String",
