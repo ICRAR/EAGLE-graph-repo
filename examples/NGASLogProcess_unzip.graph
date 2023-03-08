@@ -667,7 +667,7 @@
                 {
                     "text": "URL Template",
                     "name": "urlTempl",
-                    "value": "http://ngas.ddns.net:7777/RETRIEVE?file_id=%i0",
+                    "value": "http://ngas.ddns.net:7777/RETRIEVE?file_id={urlPart}",
                     "defaultValue": "",
                     "description": "The URL to retrieve",
                     "readonly": false,
@@ -1524,7 +1524,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -18,
-            "text": "result",
+            "text": "Log-file",
             "description": "A standard file on a filesystem mounted to the deployment machine \nIn some cases drops are created **outside** the context of a session, most notably during unit tests. In these cases the base directory is a fixed location under ``/tmp``.\nThe following table summarizes the calculation of the final path used by the ``FileDrop`` class depending on its parameters:\n============ ===================== ===================== ========== . filepath ------------ ------------------------------------------------------ dirname empty relative absolute ============ ===================== ===================== ========== **empty** /``$B``/``$u`` /``$B``/``$f`` /``$f`` **relative** /``$B``/``$d``/``$u`` /``$B``/``$d``/``$f`` **ERROR** **absolute** /``$d``/``$u`` /``$d``/``$f`` **ERROR** ============ ===================== ===================== ==========\nIn the table, ``$f`` is the value of ``filepath``, ``$d`` is the value of ``dirname``, ``$u`` is the drop's UID and ``$B`` is the base directory for this drop's session, namelly ``/the/cwd/$session_id``.",
             "x": 1677.6702947969059,
             "y": -17.520851105019347,
@@ -1619,7 +1619,7 @@
                 {
                     "text": "File Path",
                     "name": "filepath",
-                    "value": "result/",
+                    "value": "log_files/",
                     "defaultValue": "",
                     "description": "Path to the file for this node",
                     "readonly": false,
