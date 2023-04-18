@@ -1,12 +1,14 @@
 {
     "modelData": {
+        "filePath": "graph_patterns/LoopWithExit.graph",
         "fileType": "Graph",
+        "shortDescription": "",
+        "detailedDescription": "",
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "filePath": "graph_patterns/LoopWithExit.graph",
-        "eagleVersion": "v5.0.2",
-        "eagleCommitHash": "03e501c70edc704739c7dd9c73aae44780502418",
+        "eagleVersion": "v5.1.0:eagle-1022",
+        "eagleCommitHash": "433af03ecb7a364dc7900c7a3745981e056a2a12",
         "schemaVersion": "OJS",
         "readonly": true,
         "repositoryUrl": "",
@@ -16,87 +18,9 @@
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": 0,
-        "numLGNodes": 10
+        "numLGNodes": 9
     },
     "nodeDataArray": [
-        {
-            "category": "Description",
-            "categoryType": "Other",
-            "isGroup": false,
-            "color": "rgb(157 43 96)",
-            "drawOrderHint": 0,
-            "key": -1,
-            "text": "Description",
-            "description": "",
-            "x": 539.7241054809072,
-            "y": 101.63414908176681,
-            "width": 210.4536010020516,
-            "height": 129.96086531078936,
-            "collapsed": true,
-            "flipPorts": false,
-            "subject": null,
-            "expanded": false,
-            "repositoryUrl": "",
-            "commitHash": "",
-            "paletteDownloadUrl": "",
-            "dataHash": "",
-            "inputPorts": [],
-            "outputPorts": [],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
-            "fields": [
-                {
-                    "text": "Persist",
-                    "name": "persist",
-                    "value": false,
-                    "defaultValue": "false",
-                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false
-                },
-                {
-                    "text": "Streaming",
-                    "name": "streaming",
-                    "value": false,
-                    "defaultValue": "false",
-                    "description": "Specifies whether this data component streams input and output data",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false
-                },
-                {
-                    "text": "",
-                    "name": "",
-                    "value": "Graph pattern for a Loop with an exit condition. Note that the edge between 'Keep Going' and 'Do a bit more' is Loop aware, while the edge between 'Break' and 'Do a bit more' is not.",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Unknown",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false
-                }
-            ],
-            "applicationArgs": [],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
-            "inputApplicationKey": null,
-            "inputApplicationDescription": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationKey": null,
-            "outputApplicationDescription": ""
-        },
         {
             "category": "Loop",
             "categoryType": "Construct",
@@ -104,7 +28,7 @@
             "color": "rgb(211 165 0)",
             "drawOrderHint": 0,
             "key": -2,
-            "text": "Loop",
+            "name": "Loop",
             "description": "Placeholder 'loop' description",
             "x": 534.383658756505,
             "y": 398.09072020041015,
@@ -118,14 +42,9 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
-            "inputPorts": [],
-            "outputPorts": [],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
-                    "name": "persist",
+                    "name": "Persist",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Specifies whether this data component contains data that should not be deleted after execution",
@@ -134,11 +53,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "81ac13b6-6d48-49fd-b661-9c60b5479a92",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
-                    "name": "streaming",
+                    "name": "Streaming",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Specifies whether this data component streams input and output data",
@@ -147,11 +68,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "442e9bb2-712b-4a12-b13f-331797a9f14a",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Number loops",
-                    "name": "num_of_iter",
+                    "name": "Number loops",
                     "value": 3,
                     "defaultValue": "0",
                     "description": "The number of iterations performed by this loop construct",
@@ -160,10 +83,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "e0e86e4f-c1ed-4411-b51a-21cd817eecbe",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -182,7 +107,7 @@
             "color": "rgb(88 167 94)",
             "drawOrderHint": 0,
             "key": -3,
-            "text": "Break",
+            "name": "Break",
             "description": "A conditional branch to control flow.",
             "x": 734.2908607606081,
             "y": 549.4639899794839,
@@ -191,49 +116,15 @@
             "collapsed": false,
             "flipPorts": false,
             "subject": null,
-            "expanded": false,
+            "expanded": true,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -2,
-            "inputPorts": [
-                {
-                    "Id": "d4cad215-9e44-461a-b1a8-b49edc67b80f",
-                    "IdText": "test",
-                    "text": "test",
-                    "event": false,
-                    "type": "String",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "cf5e841a-a885-444c-8f9a-c00cf996cd77",
-                    "IdText": "N",
-                    "text": "N",
-                    "event": false,
-                    "type": "Boolean",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "17d9d29b-8cec-4541-ab93-b74cb109e924",
-                    "IdText": "Y",
-                    "text": "Y",
-                    "event": false,
-                    "type": "Boolean",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
-                    "name": "persist",
+                    "name": "Persist",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Specifies whether this data component contains data that should not be deleted after execution",
@@ -242,11 +133,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "7bd06ae7-c1a5-4d13-ade7-e7b9185919ca",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
-                    "name": "streaming",
+                    "name": "Streaming",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Specifies whether this data component streams input and output data",
@@ -255,11 +148,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "d8344e84-37ec-4396-9bc8-2346a166abc3",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Execution time",
-                    "name": "execution_time",
+                    "name": "Execution time",
                     "value": 1,
                     "defaultValue": "0",
                     "description": "Estimate of execution time (in seconds) for this application.",
@@ -268,11 +163,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "7eba9684-74a9-42ab-b1ac-90230b53820d",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Num CPUs",
-                    "name": "num_cpus",
+                    "name": "Num CPUs",
                     "value": 1,
                     "defaultValue": "0",
                     "description": "Number of CPUs used for this application.",
@@ -281,11 +178,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "8926160f-0832-4f15-ac84-21430b1b9f86",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
-                    "name": "group_start",
+                    "name": "Group start",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Is this node the start of a group?",
@@ -294,11 +193,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "05fa2b79-48e0-4d4e-9738-9dc58aa0a683",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Appclass",
-                    "name": "appclass",
+                    "name": "Appclass",
                     "value": "dlg.apps.simple.SimpleBranch",
                     "defaultValue": "",
                     "description": "The python class that implements this branch construct",
@@ -307,11 +208,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "8f18744f-9f77-4112-89c1-d5a51674894e",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Result",
-                    "name": "result",
+                    "name": "Result",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Break the Loop: Hard wired comparison result",
@@ -320,10 +223,57 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "1a1085e8-c2ce-43ca-91c5-fa78bf999d6b",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "test",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "d4cad215-9e44-461a-b1a8-b49edc67b80f",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "N",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "cf5e841a-a885-444c-8f9a-c00cf996cd77",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
+                },
+                {
+                    "name": "Y",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "17d9d29b-8cec-4541-ab93-b74cb109e924",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -342,7 +292,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -5,
-            "text": "Break",
+            "name": "Break",
             "description": "",
             "x": 883.3754178471758,
             "y": 494.4194639531635,
@@ -357,34 +307,9 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -2,
-            "inputPorts": [
-                {
-                    "Id": "02d6a107-17ca-49c7-a86c-86e5bbbd313e",
-                    "IdText": "Y",
-                    "text": "Y",
-                    "event": false,
-                    "type": "Boolean",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "f171b63f-11cf-4cb0-88e8-59f24d40c124",
-                    "IdText": "leave",
-                    "text": "leave",
-                    "event": false,
-                    "type": "String",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
-                    "name": "persist",
+                    "name": "Persist",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Specifies whether this data component contains data that should not be deleted after execution",
@@ -393,11 +318,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "b5eb3aa3-07e3-4dbd-9c88-5c934c9e9180",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
-                    "name": "streaming",
+                    "name": "Streaming",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Specifies whether this data component streams input and output data",
@@ -406,11 +333,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "b3e1045f-211d-400f-a513-f2bec095020a",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
-                    "name": "data_volume",
+                    "name": "Data volume",
                     "value": 5,
                     "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
@@ -419,11 +348,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "db3efcb2-3ced-49c8-9580-a3288a629954",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
-                    "name": "group_end",
+                    "name": "Group end",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Is this node the end of a group?",
@@ -432,10 +363,42 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "9df2b861-7f34-4127-85d3-8e4da380ee9d",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "Y",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "02d6a107-17ca-49c7-a86c-86e5bbbd313e",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "leave",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "f171b63f-11cf-4cb0-88e8-59f24d40c124",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -454,7 +417,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -6,
-            "text": "Keep going",
+            "name": "Keep going",
             "description": "",
             "x": 669.5921354676337,
             "y": 662.81031905684,
@@ -463,40 +426,15 @@
             "collapsed": true,
             "flipPorts": true,
             "subject": null,
-            "expanded": false,
+            "expanded": true,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -2,
-            "inputPorts": [
-                {
-                    "Id": "abaa0a4f-bcf4-402d-bf22-5b04b1484020",
-                    "IdText": "N",
-                    "text": "N",
-                    "event": false,
-                    "type": "Boolean",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "86b3a603-1a9b-4263-b95e-fe293d285718",
-                    "IdText": "input",
-                    "text": "output",
-                    "event": false,
-                    "type": "String",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
-                    "name": "persist",
+                    "name": "Persist",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Specifies whether this data component contains data that should not be deleted after execution",
@@ -505,11 +443,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "7b963542-1816-4775-9476-36933923e3df",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
-                    "name": "streaming",
+                    "name": "Streaming",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Specifies whether this data component streams input and output data",
@@ -518,11 +458,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "ba9542d4-3e1a-464b-b9d8-43155c6c1c4d",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
-                    "name": "data_volume",
+                    "name": "Data volume",
                     "value": 5,
                     "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
@@ -531,11 +473,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "98209719-e5da-43a9-9d40-3e1c84554399",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
-                    "name": "group_end",
+                    "name": "Group end",
                     "value": true,
                     "defaultValue": "false",
                     "description": "Is this node the end of a group?",
@@ -544,10 +488,42 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "d7ea75e0-9416-4623-86ec-0574814ac0a7",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "N",
+                    "value": false,
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "abaa0a4f-bcf4-402d-bf22-5b04b1484020",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "output",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "86b3a603-1a9b-4263-b95e-fe293d285718",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -560,13 +536,13 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "PythonApp",
+            "category": "Component",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -7,
-            "text": "Do a bit more",
+            "name": "Do a bit more",
             "description": "An application component in the form of a Python app",
             "x": 1002.2659974873873,
             "y": 496.8668315687564,
@@ -580,34 +556,9 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
-            "inputPorts": [
-                {
-                    "Id": "adca4562-2239-4100-a31c-d784ed5c56d4",
-                    "IdText": "leave",
-                    "text": "leave",
-                    "event": false,
-                    "type": "String",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "66d8030d-85e5-4489-ab31-bc0be6fe0acf",
-                    "IdText": "result",
-                    "text": "result",
-                    "event": false,
-                    "type": "String",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
-                    "name": "persist",
+                    "name": "Persist",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Specifies whether this data component contains data that should not be deleted after execution",
@@ -616,11 +567,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "c19c21c5-720e-4479-9539-510c25173c28",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
-                    "name": "streaming",
+                    "name": "Streaming",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Specifies whether this data component streams input and output data",
@@ -629,11 +582,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "793e8c74-6788-48cc-9e8e-9639e55538f3",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Execution time",
-                    "name": "execution_time",
+                    "name": "Execution time",
                     "value": 5,
                     "defaultValue": "0",
                     "description": "Estimate of execution time (in seconds) for this application.",
@@ -642,11 +597,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "a6e9b6ac-1d10-4d7a-8f48-c237307248ae",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Num CPUs",
-                    "name": "num_cpus",
+                    "name": "Num CPUs",
                     "value": 1,
                     "defaultValue": "0",
                     "description": "Number of CPUs used for this application.",
@@ -655,11 +612,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "7277f675-1944-40eb-a5a8-975a2585bf15",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
-                    "name": "group_start",
+                    "name": "Group start",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Is this node the start of a group?",
@@ -668,11 +627,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "b6023fc5-2692-4933-973c-2f6d98210b57",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Appclass",
-                    "name": "appclass",
+                    "name": "Appclass",
                     "value": "dlg.apps.simple.SleepApp",
                     "defaultValue": "",
                     "description": "The python class that implements this application",
@@ -681,10 +642,42 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "8ecdd652-1c5b-47ca-bd2a-f6bab3446cac",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "leave",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "adca4562-2239-4100-a31c-d784ed5c56d4",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "result",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "66d8030d-85e5-4489-ab31-bc0be6fe0acf",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -703,7 +696,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -9,
-            "text": "With something",
+            "name": "With something",
             "description": "",
             "x": 437.2788156608006,
             "y": 295.02576761972216,
@@ -717,24 +710,9 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
-            "inputPorts": [],
-            "outputPorts": [
-                {
-                    "Id": "0cc55af1-2cb9-44d0-a1b0-6d38a04e2e6c",
-                    "IdText": "input",
-                    "text": "input",
-                    "event": false,
-                    "type": "String",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
-                    "name": "persist",
+                    "name": "Persist",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Specifies whether this data component contains data that should not be deleted after execution",
@@ -743,11 +721,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "066dcc1d-19d8-4b99-83d2-92ca63044940",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
-                    "name": "streaming",
+                    "name": "Streaming",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Specifies whether this data component streams input and output data",
@@ -756,11 +736,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "876317e8-756b-4848-a941-6354052d8617",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
-                    "name": "data_volume",
+                    "name": "Data volume",
                     "value": 5,
                     "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
@@ -769,11 +751,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "d854a6a4-717f-4fee-887e-75be423578c8",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
-                    "name": "group_end",
+                    "name": "Group end",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Is this node the end of a group?",
@@ -782,10 +766,27 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "0078bc7c-d6f0-471d-941e-f12985c3913f",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "input",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "0cc55af1-2cb9-44d0-a1b0-6d38a04e2e6c",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -798,13 +799,13 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "PythonApp",
+            "category": "Component",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -4,
-            "text": "Do something",
+            "name": "Do something",
             "description": "A simple APP that sleeps the specified amount of time (0 by default). This is mainly useful (and used) to test graph translation and structure without executing real algorithms. Very useful for debugging.",
             "x": 529.5405872846006,
             "y": 465.55554425377954,
@@ -813,40 +814,15 @@
             "collapsed": true,
             "flipPorts": false,
             "subject": null,
-            "expanded": false,
+            "expanded": true,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -2,
-            "inputPorts": [
-                {
-                    "Id": "9c94e03a-bdc6-406f-97c5-7f02ef786b63",
-                    "IdText": "input",
-                    "text": "input",
-                    "event": false,
-                    "type": "String",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "99e8f17b-6445-4ff3-8310-62a960e7805b",
-                    "IdText": "result",
-                    "text": "result",
-                    "event": false,
-                    "type": "String",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
-                    "name": "persist",
+                    "name": "Persist",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Specifies whether this data component contains data that should not be deleted after execution",
@@ -855,11 +831,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "47d5b49d-ab06-4bb9-98bd-5d903f577f28",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
-                    "name": "streaming",
+                    "name": "Streaming",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Specifies whether this data component streams input and output data",
@@ -868,10 +846,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "05ee4369-d212-43d4-83c3-7ae6e6f72b4b",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "sleepTime",
                     "name": "sleepTime",
                     "value": 2,
                     "defaultValue": "0",
@@ -881,10 +861,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "b7c5c51f-5b77-4845-a2c9-106913e1efdb",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "appclass",
                     "name": "appclass",
                     "value": "dlg.apps.simple.SleepApp",
                     "defaultValue": "",
@@ -894,11 +876,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "1fb7bbf9-8440-48ca-94c1-266134e9afca",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Execution time",
-                    "name": "execution_time",
+                    "name": "Execution time",
                     "value": 5,
                     "defaultValue": "0",
                     "description": "Estimated execution time",
@@ -907,11 +891,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "7fe455f7-e8bb-485d-a8d4-8c74d0cd2eb5",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Num CPUs",
-                    "name": "num_cpus",
+                    "name": "Num CPUs",
                     "value": 1,
                     "defaultValue": "0",
                     "description": "Number of cores used",
@@ -920,11 +906,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "b51ec081-5477-40fd-a17c-59fb3b5bb712",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
-                    "name": "group_start",
+                    "name": "Group start",
                     "value": true,
                     "defaultValue": "false",
                     "description": "Component is start of a group",
@@ -933,10 +921,42 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "6e13425b-3b3d-47f5-9da1-7a8b3eec12ab",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "input",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "9c94e03a-bdc6-406f-97c5-7f02ef786b63",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "result",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "99e8f17b-6445-4ff3-8310-62a960e7805b",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -955,7 +975,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -10,
-            "text": "Intermediate Result",
+            "name": "Intermediate Result",
             "description": "",
             "x": 660.6600452213248,
             "y": 466.4194639531639,
@@ -970,34 +990,9 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -2,
-            "inputPorts": [
-                {
-                    "Id": "63857044-f9cc-4f85-97bd-24453fdf0968",
-                    "IdText": "result",
-                    "text": "result",
-                    "event": false,
-                    "type": "String",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "a2456874-1336-48d7-bcf0-e08c7877a62f",
-                    "IdText": "test",
-                    "text": "test",
-                    "event": false,
-                    "type": "String",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
-                    "name": "persist",
+                    "name": "Persist",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Specifies whether this data component contains data that should not be deleted after execution",
@@ -1006,11 +1001,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "78820907-0739-45a0-b13f-081a0e9dd625",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
-                    "name": "streaming",
+                    "name": "Streaming",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Specifies whether this data component streams input and output data",
@@ -1019,11 +1016,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "2a5aa2bb-04d3-4b5c-a8f7-c94077b03eeb",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
-                    "name": "data_volume",
+                    "name": "Data volume",
                     "value": 5,
                     "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
@@ -1032,11 +1031,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "7c2fd229-6a39-4f71-9dc9-273eda2f62ce",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
-                    "name": "group_end",
+                    "name": "Group end",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Is this node the end of a group?",
@@ -1045,10 +1046,42 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "baa39b4f-e0b7-4cd3-8393-e07265388b91",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "result",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "63857044-f9cc-4f85-97bd-24453fdf0968",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "test",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "a2456874-1336-48d7-bcf0-e08c7877a62f",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -1067,7 +1100,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -8,
-            "text": "Memory",
+            "name": "Memory",
             "description": "",
             "x": 1108.7030709214453,
             "y": 497.3846649303431,
@@ -1081,24 +1114,9 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
-            "inputPorts": [
-                {
-                    "Id": "a3fc79e8-0c88-41a9-b339-4f3667c47247",
-                    "IdText": "result",
-                    "text": "result",
-                    "event": false,
-                    "type": "String",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
-                    "name": "persist",
+                    "name": "Persist",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Specifies whether this data component contains data that should not be deleted after execution",
@@ -1107,11 +1125,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "73a9d0bc-88d3-45dc-9d15-05b9e6d62828",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
-                    "name": "streaming",
+                    "name": "Streaming",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Specifies whether this data component streams input and output data",
@@ -1120,11 +1140,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "13e4d680-43f9-43ba-a843-64cced4046b9",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
-                    "name": "data_volume",
+                    "name": "Data volume",
                     "value": 5,
                     "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
@@ -1133,11 +1155,13 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "fea60728-4493-4877-baa7-eeabdbdfe2f8",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
-                    "name": "group_end",
+                    "name": "Group end",
                     "value": false,
                     "defaultValue": "false",
                     "description": "Is this node the end of a group?",
@@ -1146,10 +1170,27 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "9c66b48b-8826-4247-8895-dfb6dbef4bc5",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "result",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "a3fc79e8-0c88-41a9-b339-4f3667c47247",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
