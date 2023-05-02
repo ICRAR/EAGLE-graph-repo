@@ -22,7 +22,7 @@
     },
     "nodeDataArray": [
         {
-            "category": "Memory",
+            "category": "File",
             "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
@@ -324,7 +324,7 @@
                     "usage": "InputOutput"
                 },
                 {
-                    "name": "data",
+                    "name": "element",
                     "value": "",
                     "defaultValue": "",
                     "description": "",
@@ -475,21 +475,6 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "ce79744c-1a3d-49c4-8f11-5a5bbaeddb1f",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
-                },
-                {
-                    "name": "dirname",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Name of the directory containing the file for this node",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false,
-                    "id": "e4b3135b-8d62-4661-8e94-214061008652",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -774,7 +759,7 @@
                 },
                 {
                     "name": "filepath",
-                    "value": "$DLG_ROOT/workspace/ArrayLoop7_2023-03-02T13-55-04.378797",
+                    "value": "$DLG_ROOT/testdata",
                     "defaultValue": "$DLG_ROOT/code/lib/python3.8/site-packages/dlg_example_cmpts",
                     "description": "The path to search. Default is current workspace",
                     "readonly": false,
@@ -788,7 +773,7 @@
                     "usage": "NoPort"
                 },
                 {
-                    "name": "array",
+                    "name": "list of strings",
                     "value": "",
                     "defaultValue": "",
                     "description": "Port carrying list of files found",
@@ -827,7 +812,7 @@
             "y": 134.5553257502728,
             "width": 200,
             "height": 72,
-            "collapsed": false,
+            "collapsed": true,
             "flipPorts": false,
             "subject": null,
             "expanded": true,
@@ -1389,36 +1374,6 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "6e78976f-8e39-4f55-9b26-c3b848e74623",
-                    "parameterType": "Unknown",
-                    "usage": "NoPort"
-                },
-                {
-                    "name": "rest_array",
-                    "value": false,
-                    "defaultValue": "false",
-                    "description": " A numpy array of arrays, where the first axis is of length <numSplit>",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false,
-                    "id": "2061bad8-5410-4576-aa79-bd3967b2fb94",
-                    "parameterType": "Unknown",
-                    "usage": "NoPort"
-                },
-                {
-                    "name": "array",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": " Port carrying the averaged array",
-                    "readonly": false,
-                    "type": "Object.Array",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false,
                     "id": "ee14c53b-5127-4559-8e60-419a30dbf622",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
@@ -1568,8 +1523,8 @@
             "key": -7,
             "name": "AdvUrlRetrieve",
             "description": "An APP that retrieves the content of a URL and writes it to all outputs. The URL can be specified either completely or partially through the inputs. In that case the urlTempl parameter can use placeholders to construct the final URL.",
-            "x": 1113.0451280309148,
-            "y": 308.4847411644697,
+            "x": 1089.0451280309148,
+            "y": 304.4847411644697,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -1629,7 +1584,7 @@
                 },
                 {
                     "name": "urlTempl",
-                    "value": "file://{name}",
+                    "value": "file://{url}",
                     "defaultValue": "https://eagle.icrar.org",
                     "description": "The URL to retrieve # noqa: E501",
                     "readonly": false,
@@ -1643,7 +1598,7 @@
                     "usage": "NoPort"
                 },
                 {
-                    "name": "name",
+                    "name": "url",
                     "value": "",
                     "defaultValue": "",
                     "description": "The port carrying the content read from the URL. # noqa: E501",
@@ -1685,7 +1640,7 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "Memory",
+            "category": "File",
             "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
@@ -1693,8 +1648,8 @@
             "key": -8,
             "name": "Name",
             "description": "In-memory storage of intermediate data products",
-            "x": 1012.4854061884016,
-            "y": 308.2755225641545,
+            "x": 962.4854061884016,
+            "y": 237.27552256415453,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -1768,7 +1723,7 @@
                     "usage": "NoPort"
                 },
                 {
-                    "name": "data",
+                    "name": "element",
                     "value": "",
                     "defaultValue": "",
                     "description": "",
@@ -1780,22 +1735,7 @@
                     "keyAttribute": false,
                     "id": "c29d0801-68c3-48be-a846-576beeb343e4",
                     "parameterType": "ApplicationArgument",
-                    "usage": "InputPort"
-                },
-                {
-                    "name": "name",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false,
-                    "id": "f5d14fb4-84f4-4bac-8a66-9d45ec8f073f",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "OutputPort"
+                    "usage": "InputOutput"
                 }
             ],
             "inputAppFields": [],
@@ -1912,7 +1852,7 @@
         },
         {
             "from": -8,
-            "fromPort": "f5d14fb4-84f4-4bac-8a66-9d45ec8f073f",
+            "fromPort": "c29d0801-68c3-48be-a846-576beeb343e4",
             "to": -7,
             "toPort": "93ac8534-a612-47c5-8ddf-a0312874dcba",
             "dataType": "String",
