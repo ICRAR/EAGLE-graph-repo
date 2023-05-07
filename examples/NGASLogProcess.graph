@@ -1,12 +1,14 @@
 {
     "modelData": {
+        "filePath": "examples/NGASLogProcess.graph",
         "fileType": "Graph",
+        "shortDescription": "",
+        "detailedDescription": "",
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "filePath": "examples/NGASLogProcess.graph",
-        "eagleVersion": "v5.0.0",
-        "eagleCommitHash": "d9ee950e000d320cea831a3d5450ac219364941d",
+        "eagleVersion": "v5.1.1:eagle-1022",
+        "eagleCommitHash": "7bad1fcaf3730bd793baa32683a32360025cb31d",
         "schemaVersion": "OJS",
         "readonly": true,
         "repositoryUrl": "",
@@ -20,13 +22,13 @@
     },
     "nodeDataArray": [
         {
-            "category": "PythonApp",
+            "category": "Component",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -2,
-            "text": "LogFileList",
+            "name": "LogFileList",
             "description": "Query NGAS to retrieve the list of log files",
             "x": 645.5153968929754,
             "y": -280.5158313590726,
@@ -35,28 +37,13 @@
             "collapsed": true,
             "flipPorts": false,
             "subject": null,
-            "expanded": false,
+            "expanded": true,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
-            "inputPorts": [],
-            "outputPorts": [
-                {
-                    "Id": "37731837-9b1e-40a7-af15-4519afc66ef7",
-                    "IdText": "fileList",
-                    "text": "File List",
-                    "event": false,
-                    "type": "String",
-                    "description": "List of log file IDs",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -66,10 +53,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "96dc1c97-4878-4ded-b53e-b6eb5e3f90c6",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -79,12 +68,14 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "a52516f2-73a2-42c4-ab7a-cd103f5a0973",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "URL",
                     "name": "url",
-                    "value": "http://ngas.ddns.net:7777/QUERY?query=files_like&like=ngas.ddns%&format=pickle",
+                    "value": "http://ngas.ddns.net:7777/QUERY?query=files_like&like=Hello%&format=pickle",
                     "defaultValue": "",
                     "description": "Get list of log files in pickle format from NGAS",
                     "readonly": false,
@@ -92,10 +83,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "c8975021-1712-45e1-b502-eb57cff33db0",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Application Class",
                     "name": "appclass",
                     "value": "dlg.apps.simple.UrlRetrieveApp",
                     "defaultValue": "",
@@ -105,10 +98,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "19208e4e-355e-4996-b5eb-359d5617901b",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
                     "defaultValue": "0",
@@ -118,10 +113,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "44689aeb-4b56-4005-b7a0-62c7bebca594",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
                     "defaultValue": "0",
@@ -131,10 +128,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "b9a9cf05-74c2-47de-bdf0-f010e09fe9c0",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
                     "name": "group_start",
                     "value": false,
                     "defaultValue": "false",
@@ -144,10 +143,27 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "63bc9315-53f5-49e7-b03e-191addee74f1",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "fileList",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "List of log file IDs",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "37731837-9b1e-40a7-af15-4519afc66ef7",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -166,7 +182,7 @@
             "color": "rgb(211 165 0)",
             "drawOrderHint": 0,
             "key": -4,
-            "text": "ListScatter",
+            "name": "ListScatter",
             "description": "Split list into 'number of copies' parts and forward the parts to the internal graph nodes.",
             "x": 941.554487044541,
             "y": -315.76148461444575,
@@ -180,33 +196,8 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
-            "inputPorts": [
-                {
-                    "Id": "9ed37560-e3e3-4752-a60c-073e5cde5855",
-                    "IdText": "fileList",
-                    "text": "File List",
-                    "event": false,
-                    "type": "String",
-                    "description": "List of log file IDs",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [],
-            "inputLocalPorts": [
-                {
-                    "Id": "27f411cf-bec6-463d-ab57-010388bf52f9",
-                    "IdText": "rest_array",
-                    "text": "rest_array",
-                    "event": false,
-                    "type": "Object",
-                    "description": " List of elements",
-                    "keyAttribute": false
-                }
-            ],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -216,10 +207,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "eb3e4c9e-affe-417c-847d-41fe9bf52656",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -229,12 +222,14 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "5ad5c040-03cc-4b5d-8efa-7f42d9169302",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Number of copies",
                     "name": "num_of_copies",
-                    "value": 2,
+                    "value": 1,
                     "defaultValue": "0",
                     "description": "The number of outputs generated by this construct",
                     "readonly": false,
@@ -242,26 +237,14 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
-                },
-                {
-                    "text": "Scatter axis",
-                    "name": "scatter_axis",
-                    "value": "time",
-                    "defaultValue": "",
-                    "description": "The axis used to split the input into multiple outputs",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "533f8646-92a1-402c-ad14-16ddaeb0fa57",
+                    "parameterType": "ConstructParameter",
+                    "usage": "NoPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [
                 {
-                    "text": "Application Class",
                     "name": "appclass",
                     "value": "dlg.apps.simple.GenericScatterApp",
                     "defaultValue": "",
@@ -271,49 +254,57 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "555bce83-8e21-4cd3-ae21-9382d88fd0b6",
+                    "parameterType": "Unknown",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Estimated execution time",
                     "readonly": false,
                     "type": "Float",
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "dd21132b-029e-4281-9628-3ef352e762a5",
+                    "parameterType": "Unknown",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "Number of cores used",
                     "readonly": false,
                     "type": "Integer",
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "63b19085-60f0-4a7c-9b23-e0f75b3d49e4",
+                    "parameterType": "Unknown",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
                     "name": "group_start",
                     "value": false,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "Component is start of a group",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "d31820b6-fe6b-468f-806b-8a9908edf51a",
+                    "parameterType": "Unknown",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "File List",
                     "name": "fileList",
                     "value": "",
                     "defaultValue": "",
@@ -323,10 +314,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "9b5469af-c36c-4c9a-aa2d-4935b7683e7e",
+                    "parameterType": "Unknown",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "rest_array",
                     "name": "rest_array",
                     "value": "",
                     "defaultValue": "",
@@ -336,13 +329,47 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "53da94ce-970c-4599-b64c-3d2694a8e664",
+                    "parameterType": "Unknown",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "fileList",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "List of log file IDs",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "9ed37560-e3e3-4752-a60c-073e5cde5855",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "rest_array",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": " List of elements",
+                    "readonly": false,
+                    "type": "Object",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "27f411cf-bec6-463d-ab57-010388bf52f9",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
             "outputAppFields": [],
             "inputApplicationName": "GenericScatterApp",
             "inputApplicationType": "PythonApp",
             "inputApplicationKey": -3,
+            "inputApplicationDescription": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationKey": null,
@@ -355,7 +382,7 @@
             "color": "rgb(211 165 0)",
             "drawOrderHint": 0,
             "key": -5,
-            "text": "Loop",
+            "name": "Loop",
             "description": "Components inside a Loop will be repeatedly executed for a fixed number of times",
             "x": 1177.7120660832866,
             "y": -241.14312416650682,
@@ -370,13 +397,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -4,
-            "inputPorts": [],
-            "outputPorts": [],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -386,10 +408,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "a52d7842-1185-457b-a974-53c8556d41cc",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -399,12 +423,14 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "1c21e132-0a44-4e34-8073-96bbe06c3327",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Number loops",
                     "name": "num_of_iter",
-                    "value": 2,
+                    "value": 1,
                     "defaultValue": "0",
                     "description": "The number of iterations performed by this loop construct",
                     "readonly": false,
@@ -412,10 +438,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "69674fb1-d2e0-48a7-abbe-cf4d8183dae1",
+                    "parameterType": "ConstructParameter",
+                    "usage": "NoPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -434,7 +462,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -11,
-            "text": "URL",
+            "name": "URL",
             "description": "In-memory storage of intermediate data products",
             "x": 1265.2911840279837,
             "y": -181.4555836546413,
@@ -449,33 +477,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -5,
-            "inputPorts": [
-                {
-                    "Id": "429ecad0-3fbb-4815-ac9d-b0f788ca9a06",
-                    "IdText": "element",
-                    "text": "element",
-                    "event": false,
-                    "type": "Object",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "4e7f0195-0dbe-4dee-a4eb-02e661bbc616",
-                    "IdText": "urlPart",
-                    "text": "URL Part",
-                    "event": false,
-                    "type": "String",
-                    "description": " The port carrying the content read from the URL.",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -485,10 +488,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "36d2c01e-01fc-4b47-b4d1-f83129a0a569",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -498,10 +503,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "2a54732f-6463-483a-99d1-ff2406aa049d",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
                     "defaultValue": "0",
@@ -511,10 +518,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "27658ea1-fca6-465b-9e48-ae21bc2d6dfd",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": false,
                     "defaultValue": "false",
@@ -524,10 +533,42 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "6cf8e7c0-59e0-4c61-b7b9-d6f3c847e2ef",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "element",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "429ecad0-3fbb-4815-ac9d-b0f788ca9a06",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "urlPart",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": " The port carrying the content read from the URL.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "4e7f0195-0dbe-4dee-a4eb-02e661bbc616",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -540,13 +581,13 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "PythonApp",
+            "category": "Component",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -6,
-            "text": "AdvUrlRetrieve",
+            "name": "AdvUrlRetrieve",
             "description": "An APP that retrieves the content of a URL and writes it to all outputs. The URL can be specified either completely or partially through the inputs. In that case the urlTempl parameter can use placeholders to construct the final URL.",
             "x": 1376.3457408757947,
             "y": -175.69721289896927,
@@ -561,33 +602,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -5,
-            "inputPorts": [
-                {
-                    "Id": "18dc6133-930a-4e52-ba6f-1ee1041a41ad",
-                    "IdText": "urlPart",
-                    "text": "URL Part",
-                    "event": false,
-                    "type": "String",
-                    "description": " The port carrying the content read from the URL.",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "feb4d729-8f92-4f5d-be47-fac80cf653dc",
-                    "IdText": "content",
-                    "text": "content",
-                    "event": false,
-                    "type": "String",
-                    "description": " The port carrying the content read from the URL.",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -597,10 +613,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "39921010-030d-44bb-9a72-6b787ee04b20",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -610,10 +628,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "3b0a0d55-9c15-436e-9d9b-799bbd7726e5",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "URL Template",
                     "name": "urlTempl",
                     "value": "http://ngas.ddns.net:7777/RETRIEVE?file_id=%i0",
                     "defaultValue": "",
@@ -623,10 +643,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "ecc38f0d-96b5-47d2-a13b-72885a9918d4",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Application Class",
                     "name": "appclass",
                     "value": "dlg_example_cmpts.apps.AdvUrlRetrieve",
                     "defaultValue": "",
@@ -636,10 +658,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "bdd836cf-688f-4dd3-9072-29845144a35d",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
                     "defaultValue": "0",
@@ -649,10 +673,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "d6d7f397-4124-4de7-9fed-068859e0ef53",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
                     "defaultValue": "0",
@@ -662,10 +688,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "66a289c2-e1fa-4955-8da1-974e230fe819",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
                     "name": "group_start",
                     "value": false,
                     "defaultValue": "false",
@@ -675,10 +703,42 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "320cfd26-5120-4f34-84cb-a6b00e88054f",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "urlPart",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": " The port carrying the content read from the URL.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "18dc6133-930a-4e52-ba6f-1ee1041a41ad",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "content",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": " The port carrying the content read from the URL.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "feb4d729-8f92-4f5d-be47-fac80cf653dc",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -691,13 +751,13 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "PythonApp",
+            "category": "Component",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -9,
-            "text": "PickOne",
+            "name": "PickOne",
             "description": "App that picks the first element of an input list, passes that to all outputs, except the first one. The first output is used to pass the remaining array on. This app is useful for a loop.",
             "x": 1154.1801564819605,
             "y": -148.31247976762526,
@@ -712,42 +772,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -5,
-            "inputPorts": [
-                {
-                    "Id": "35c86436-efa9-4312-967a-67b75cc3915a",
-                    "IdText": "column",
-                    "text": "column",
-                    "event": false,
-                    "type": "Object",
-                    "description": " Port carrying the first element of input array the type is dependent on the list element type.",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "eba04e9d-a70a-4e4a-9a7a-1967eadecf83",
-                    "IdText": "element",
-                    "text": "element",
-                    "event": false,
-                    "type": "Object",
-                    "description": " Port carrying the first element of input array the type is dependent on the list element type.",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "af94a5fa-8ed1-487b-8168-7d3a46544f47",
-                    "IdText": "rest_array",
-                    "text": "rest_array",
-                    "event": false,
-                    "type": "Object",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -757,10 +783,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "4866f482-b42c-405e-8e7a-f1dda6056f7b",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -770,10 +798,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "3d13695d-090f-4cc4-80a5-8831b757d906",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
                     "defaultValue": "0",
@@ -783,10 +813,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "876e647d-fadf-4a49-99e0-8529bd9d7cde",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
                     "defaultValue": "0",
@@ -796,10 +828,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "0269666c-5a15-4cef-8ba0-7bf217191cd2",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
                     "name": "group_start",
                     "value": true,
                     "defaultValue": "false",
@@ -809,10 +843,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "239361c7-e897-4350-8591-807dcbe1487e",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Appclass",
                     "name": "appclass",
                     "value": "dlg_example_cmpts.apps.PickOne",
                     "defaultValue": "",
@@ -822,10 +858,72 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "4a96f171-a524-4f8c-bc02-a9b52b8601db",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "column",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": " Port carrying the first element of input array the type is dependent on the list element type.",
+                    "readonly": false,
+                    "type": "Object",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "35c86436-efa9-4312-967a-67b75cc3915a",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "element",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": " Port carrying the first element of input array the type is dependent on the list element type.",
+                    "readonly": false,
+                    "type": "Object",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "eba04e9d-a70a-4e4a-9a7a-1967eadecf83",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
+                },
+                {
+                    "name": "rest_array",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "af94a5fa-8ed1-487b-8168-7d3a46544f47",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
+                },
+                {
+                    "name": "Group start",
+                    "value": true,
+                    "defaultValue": "true",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "2c2e3377-77a8-4cdf-8389-919c1d4b5a59",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -838,13 +936,13 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "PythonApp",
+            "category": "Component",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -13,
-            "text": "ExtractColumn",
+            "name": "ExtractColumn",
             "description": "App that extracts one column of an table-like ndarray. The array is assumed to be row major, i.e. the second index refers to columns. The column is # selected by index counting from 0. If the array is 1-D the result is a 1 element array. The component is passing whatever type is in the selected column.",
             "x": 975.8250828471628,
             "y": -154.30773470239407,
@@ -859,33 +957,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -4,
-            "inputPorts": [
-                {
-                    "Id": "f8190e36-b01a-41a5-b6ad-4ef0081311d7",
-                    "IdText": "table_array",
-                    "text": "table_array",
-                    "event": false,
-                    "type": "Object",
-                    "description": " List of elements",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "ae586837-5850-4d35-b886-69d01b41c24f",
-                    "IdText": "column",
-                    "text": "column",
-                    "event": false,
-                    "type": "Object",
-                    "description": " Port carrying the first element of input array the type is dependent on the list element type.",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -895,10 +968,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "38748e66-1dcb-41bb-8059-41f1e5257e67",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -908,10 +983,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "cb381574-7429-466f-b708-8e3e43e61792",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "index",
                     "name": "index",
                     "value": 2,
                     "defaultValue": "0",
@@ -921,10 +998,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "fb0b0dce-0a39-4a08-9363-562416f296bf",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
                     "defaultValue": "0",
@@ -934,10 +1013,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "9bebb3ca-5a7c-4d36-9b43-4634cebdab93",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
                     "defaultValue": "0",
@@ -947,10 +1028,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "e02cbba4-a490-4b2c-a7a0-35d3ba035aee",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
                     "name": "group_start",
                     "value": false,
                     "defaultValue": "false",
@@ -960,10 +1043,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "a7d180b7-355d-4811-8bc1-984b661eb6a6",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Appclass",
                     "name": "appclass",
                     "value": "dlg_example_cmpts.apps.ExtractColumn",
                     "defaultValue": "",
@@ -973,10 +1058,42 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "50238366-68ad-4295-87df-eabcc0ddb172",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "table_array",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": " List of elements",
+                    "readonly": false,
+                    "type": "Object",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "f8190e36-b01a-41a5-b6ad-4ef0081311d7",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "column",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": " Port carrying the first element of input array the type is dependent on the list element type.",
+                    "readonly": false,
+                    "type": "Object",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "ae586837-5850-4d35-b886-69d01b41c24f",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -995,7 +1112,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -15,
-            "text": "rest_array",
+            "name": "rest_array",
             "description": "In-memory storage of intermediate data products",
             "x": 1257.6913802193533,
             "y": -82.79425647201887,
@@ -1010,33 +1127,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -5,
-            "inputPorts": [
-                {
-                    "Id": "66420633-a222-4227-bf8b-cc9c2caa50f3",
-                    "IdText": "rest_array",
-                    "text": "rest_array",
-                    "event": false,
-                    "type": "Object",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "9dfb2ce5-8bf2-4c5f-9330-87caaef8d888",
-                    "IdText": "column",
-                    "text": "column",
-                    "event": false,
-                    "type": "Object",
-                    "description": " List of elements",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -1046,10 +1138,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "8f3bafac-02d2-4935-8093-acd18b93b343",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -1059,10 +1153,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "b7f13c02-1cf3-4305-aaac-009a5f22c4ec",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
                     "defaultValue": "0",
@@ -1072,10 +1168,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "0e82b656-0d50-428b-a393-c6f0721f507f",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": true,
                     "defaultValue": "false",
@@ -1085,10 +1183,57 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "77aeb8d3-d1ff-4de9-9be5-284681435e8b",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "rest_array",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "66420633-a222-4227-bf8b-cc9c2caa50f3",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "column",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": " List of elements",
+                    "readonly": false,
+                    "type": "Object",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "9dfb2ce5-8bf2-4c5f-9330-87caaef8d888",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
+                },
+                {
+                    "name": "Group end",
+                    "value": true,
+                    "defaultValue": "true",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "cbe9c216-adff-4a71-a433-f6ccc92e70e8",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -1107,7 +1252,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -7,
-            "text": "content",
+            "name": "content",
             "description": "A standard file on a filesystem mounted to the deployment machine",
             "x": 1381.6830812253356,
             "y": -86.66492260335053,
@@ -1122,23 +1267,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -5,
-            "inputPorts": [
-                {
-                    "Id": "3a128168-0cec-48d6-b5ea-5c4b1cfa5108",
-                    "IdText": "content",
-                    "text": "Content",
-                    "event": false,
-                    "type": "String",
-                    "description": " The port carrying the content read from the URL.",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -1148,10 +1278,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "b74875c9-b825-41ab-ad61-b294275f55fe",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -1161,10 +1293,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "39deac1f-9b91-4b23-a0dd-bbe7f82c0860",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
                     "defaultValue": "0",
@@ -1174,10 +1308,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "a547f7f6-2db8-451f-9555-b8215db2f7a5",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": false,
                     "defaultValue": "false",
@@ -1187,10 +1323,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "c949bc8c-b1a9-481e-bb90-456b7012d3b9",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": true,
                     "defaultValue": "false",
@@ -1200,10 +1338,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "b60046de-743a-4224-bf80-dc36cd74aeeb",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "File path",
                     "name": "filepath",
                     "value": "",
                     "defaultValue": "",
@@ -1213,10 +1353,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "29e260ad-776e-41b9-9ec8-add89941e693",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Directory name",
                     "name": "dirname",
                     "value": "",
                     "defaultValue": "",
@@ -1226,10 +1368,27 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "edcec522-2eef-41e3-a6af-5dc15a713b56",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "content",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": " The port carrying the content read from the URL.",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "3a128168-0cec-48d6-b5ea-5c4b1cfa5108",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -1248,7 +1407,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -1,
-            "text": "File List",
+            "name": "File List",
             "description": "A standard file on a filesystem mounted to the deployment machine",
             "x": 759.0349419687582,
             "y": -279.6386579867592,
@@ -1262,33 +1421,8 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
-            "inputPorts": [
-                {
-                    "Id": "a3a01f11-c3a8-443b-a338-209a9a5e40f8",
-                    "IdText": "fileList",
-                    "text": "File List",
-                    "event": false,
-                    "type": "String",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "6dcac898-32a8-40d8-9e98-8d597ac3d3da",
-                    "IdText": "fileList",
-                    "text": "File List",
-                    "event": false,
-                    "type": "String",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -1298,10 +1432,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "33b3cd47-2b81-48d5-8c4e-0bffa355fba1",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -1311,10 +1447,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "55e89ba6-0932-4818-a90a-9cd267c24d4c",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
                     "defaultValue": "0",
@@ -1324,10 +1462,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "6f8648f2-0949-4eb5-bf5a-262a82d48a2d",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": false,
                     "defaultValue": "false",
@@ -1337,10 +1477,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "0208e6ed-d1a6-4926-8c21-c710336c37cd",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": true,
                     "defaultValue": "false",
@@ -1350,10 +1492,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "b6aaa49e-d99e-41e8-b5ed-a185ac357b5b",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "File Path",
                     "name": "filepath",
                     "value": "",
                     "defaultValue": "",
@@ -1363,10 +1507,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "427fa5fc-ffaa-463f-9db5-369e2f184536",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Directory name",
                     "name": "dirname",
                     "value": "",
                     "defaultValue": "",
@@ -1376,10 +1522,27 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "ce6d3dd3-79e5-4aac-acab-1230c9ba7c57",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "fileList",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "a3a01f11-c3a8-443b-a338-209a9a5e40f8",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputOutput"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -1392,13 +1555,13 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "Memory",
+            "category": "File",
             "categoryType": "Data",
             "isGroup": false,
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -8,
-            "text": "rest_array",
+            "name": "rest_array",
             "description": "In-memory storage of intermediate data products",
             "x": 901.6897849458519,
             "y": -201.03460965841992,
@@ -1413,33 +1576,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -4,
-            "inputPorts": [
-                {
-                    "Id": "4b45c2c6-8882-49c6-87aa-9dd9d20ff58b",
-                    "IdText": "rest_array",
-                    "text": "rest_array",
-                    "event": false,
-                    "type": "Object",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "83803b11-c1a7-4cb8-8693-baaa0986ce5e",
-                    "IdText": "table_array",
-                    "text": "table_array",
-                    "event": false,
-                    "type": "Object",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -1449,10 +1587,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "ca959db6-7268-4546-87e7-2614c60649dc",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -1462,10 +1602,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "9e442863-87a2-4e3f-af1b-b06cfd3b1900",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
                     "defaultValue": "0",
@@ -1475,10 +1617,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "9cef147c-0c64-4f13-b0aa-4de724d360cd",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": false,
                     "defaultValue": "false",
@@ -1488,10 +1632,42 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "3c2eb2ab-f8e2-4d78-8886-795fad425bf8",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "rest_array",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "4b45c2c6-8882-49c6-87aa-9dd9d20ff58b",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "table_array",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "83803b11-c1a7-4cb8-8693-baaa0986ce5e",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -1510,7 +1686,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -10,
-            "text": "column",
+            "name": "column",
             "description": "In-memory storage of intermediate data products",
             "x": 1046.0026196645617,
             "y": -154.31010723500967,
@@ -1519,39 +1695,14 @@
             "collapsed": true,
             "flipPorts": false,
             "subject": null,
-            "expanded": false,
+            "expanded": true,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -4,
-            "inputPorts": [
-                {
-                    "Id": "ef43f482-8491-4629-936c-2bbc42f73fc6",
-                    "IdText": "column",
-                    "text": "column",
-                    "event": false,
-                    "type": "Object",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "fc62d317-eb82-4ca4-b4bc-64ad625af8fa",
-                    "IdText": "column",
-                    "text": "column",
-                    "event": false,
-                    "type": "Object",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -1561,10 +1712,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "a1c91c92-8f90-4d97-a909-3cb7b5eeb331",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -1574,10 +1727,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "c5a924ad-ae99-40ee-8c2d-2dd6f12d6090",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
                     "defaultValue": "5",
@@ -1587,10 +1742,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "81bee0b7-6166-4e36-99d2-5c5feb80d206",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": false,
                     "defaultValue": "False",
@@ -1600,10 +1757,27 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "96c4c493-824d-4411-b79a-b77435b134bd",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "column",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "ef43f482-8491-4629-936c-2bbc42f73fc6",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputOutput"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -1664,7 +1838,7 @@
         },
         {
             "from": -1,
-            "fromPort": "6dcac898-32a8-40d8-9e98-8d597ac3d3da",
+            "fromPort": "a3a01f11-c3a8-443b-a338-209a9a5e40f8",
             "to": -4,
             "toPort": "9ed37560-e3e3-4752-a60c-073e5cde5855",
             "dataType": "String",
@@ -1700,7 +1874,7 @@
         },
         {
             "from": -10,
-            "fromPort": "fc62d317-eb82-4ca4-b4bc-64ad625af8fa",
+            "fromPort": "ef43f482-8491-4629-936c-2bbc42f73fc6",
             "to": -9,
             "toPort": "35c86436-efa9-4312-967a-67b75cc3915a",
             "dataType": "Object",
