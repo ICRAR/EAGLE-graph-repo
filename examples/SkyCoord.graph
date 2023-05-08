@@ -30,7 +30,7 @@
             "key": -1,
             "name": "SkyCoord",
             "description": "An application that wraps a simple python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output. \nUsers indicate the function to be wrapped via the ``func_name`` parameter. In this case func_name needs to specify a funtion in the standard form\n``module.function``\nand the module needs to be accessible on the PYTHONPATH of the DALiuGE engine. Note that the engine is expanding the standard PYTHONPATH with DLG_ROOT/code. That directory is always available, even if the engine is running in a docker container.\nOtherwise, users can also *send* over the python code using the ``func_code`` parameter. The code needs to be base64-encoded and produced with the marshal module of the same Python version used to run DALiuGE.\nBoth inputs and outputs are (de-)serialized using the pickle protocol if the value of the respective boolean component parameter is set to True. This is also applied to func_defaults and func_arg_mappings.\nIn addition to the input mapping the implementation also allows to set defaults both in the function itself and in a logical graph. If set in the logical graph using the func_defaults parameter, the defaults need to be specified as a dictionary of the form\n``{\"kwargs\":{\"kw1_name\":kw1_value, \"kw2_name\":kw2_value}, \"args\":[arg1, arg2]}``\nThe positional args will be used in order of appearance.",
-            "x": 1765.4705115727536,
+            "x": 1766.4705115727536,
             "y": 675.9572262206588,
             "width": 200,
             "height": 72,
@@ -255,7 +255,7 @@
                 },
                 {
                     "name": "unit",
-                    "value": "('hour','deg')",
+                    "value": "hour,deg",
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
@@ -295,7 +295,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "b5988b4f-658f-4b3b-9d70-d1948a772508",
-                    "parameterType": "ApplicationArgument",
+                    "parameterType": "ComponentParameter",
                     "usage": "OutputPort"
                 }
             ],
