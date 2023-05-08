@@ -1,12 +1,14 @@
 {
     "modelData": {
+        "filePath": "examples/SkyCoord.graph",
         "fileType": "Graph",
+        "shortDescription": "",
+        "detailedDescription": "",
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "filePath": "examples/SkyCoord.graph",
-        "eagleVersion": "v5.0.2",
-        "eagleCommitHash": "03e501c70edc704739c7dd9c73aae44780502418",
+        "eagleVersion": "v5.1.1:eagle-1022",
+        "eagleCommitHash": "7bad1fcaf3730bd793baa32683a32360025cb31d",
         "schemaVersion": "OJS",
         "readonly": true,
         "repositoryUrl": "",
@@ -20,13 +22,13 @@
     },
     "nodeDataArray": [
         {
-            "category": "PythonApp",
+            "category": "Component",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -1,
-            "text": "SkyCoord",
+            "name": "SkyCoord",
             "description": "An application that wraps a simple python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output. \nUsers indicate the function to be wrapped via the ``func_name`` parameter. In this case func_name needs to specify a funtion in the standard form\n``module.function``\nand the module needs to be accessible on the PYTHONPATH of the DALiuGE engine. Note that the engine is expanding the standard PYTHONPATH with DLG_ROOT/code. That directory is always available, even if the engine is running in a docker container.\nOtherwise, users can also *send* over the python code using the ``func_code`` parameter. The code needs to be base64-encoded and produced with the marshal module of the same Python version used to run DALiuGE.\nBoth inputs and outputs are (de-)serialized using the pickle protocol if the value of the respective boolean component parameter is set to True. This is also applied to func_defaults and func_arg_mappings.\nIn addition to the input mapping the implementation also allows to set defaults both in the function itself and in a logical graph. If set in the logical graph using the func_defaults parameter, the defaults need to be specified as a dictionary of the form\n``{\"kwargs\":{\"kw1_name\":kw1_value, \"kw2_name\":kw2_value}, \"args\":[arg1, arg2]}``\nThe positional args will be used in order of appearance.",
             "x": 1765.4705115727536,
             "y": 675.9572262206588,
@@ -35,28 +37,13 @@
             "collapsed": true,
             "flipPorts": false,
             "subject": null,
-            "expanded": false,
+            "expanded": true,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
-            "inputPorts": [],
-            "outputPorts": [
-                {
-                    "Id": "b5988b4f-658f-4b3b-9d70-d1948a772508",
-                    "IdText": "data",
-                    "text": "Data",
-                    "event": false,
-                    "type": "String",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -66,10 +53,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "be57a10c-d806-4deb-9f1b-f609b0125f47",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -79,10 +68,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "bda9943b-4780-44e7-ac0d-db49c4da75b9",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Application Class",
                     "name": "appclass",
                     "value": "dlg.apps.pyfunc.PyFuncApp",
                     "defaultValue": "",
@@ -92,10 +83,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "fbe19938-e614-403c-8af2-c7f9a01db65c",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Execution Time",
                     "name": "execution_time",
                     "value": 5,
                     "defaultValue": "0",
@@ -105,10 +98,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "48218244-d5fc-462a-9e0d-6e417f8e9815",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "No. of CPUs",
                     "name": "num_cpus",
                     "value": 1,
                     "defaultValue": "0",
@@ -118,10 +113,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "b9df66c7-3543-4534-9447-47109cbc392c",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
                     "name": "group_start",
                     "value": false,
                     "defaultValue": "false",
@@ -131,10 +128,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "aa84f260-ac08-4884-be5b-11ab8e242061",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Input error rate (%)",
                     "name": "input_error_threshold",
                     "value": 0,
                     "defaultValue": "0",
@@ -144,10 +143,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "be16a0fb-595e-4c30-93db-2919a766a4ae",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Number of tries",
                     "name": "n_tries",
                     "value": 1,
                     "defaultValue": "0",
@@ -157,12 +158,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
-                }
-            ],
-            "applicationArgs": [
+                    "keyAttribute": false,
+                    "id": "0f53673f-4d78-4616-aa56-775633c86c75",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
                 {
-                    "text": "Function Name",
                     "name": "func_name",
                     "value": "astropy.coordinates.SkyCoord",
                     "defaultValue": "",
@@ -172,10 +173,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "c79eddf1-4ce5-4192-89c1-bef237e6beb2",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Function Code",
                     "name": "func_code",
                     "value": "",
                     "defaultValue": "",
@@ -185,10 +188,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "0aab3d27-76d6-4ed1-a36f-5b7d727df04e",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Pickle",
                     "name": "pickle",
                     "value": true,
                     "defaultValue": "false",
@@ -198,10 +203,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "4785acde-2ce6-449a-8955-5cee1983c27e",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Function Defaults",
                     "name": "func_defaults",
                     "value": "",
                     "defaultValue": "",
@@ -211,10 +218,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "2e804d54-1ba7-4482-b825-20fc94411d68",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Function Arguments Mapping",
                     "name": "func_arg_mapping",
                     "value": "",
                     "defaultValue": "",
@@ -224,10 +233,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "71c60a82-fd71-4c29-acb4-09ee4e7f661d",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "coord",
                     "name": "coord",
                     "value": "[\"02:03:00 -30:40:50\"]",
                     "defaultValue": "{}",
@@ -237,10 +248,12 @@
                     "precious": false,
                     "options": [],
                     "positional": true,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "279c3c9f-0898-43d5-81d7-5eadb2aa4b5f",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "unit",
                     "name": "unit",
                     "value": "('hour','deg')",
                     "defaultValue": "",
@@ -250,10 +263,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "f03b9582-f0ff-4ce9-9a16-a4b8144929e5",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "frame",
                     "name": "frame",
                     "value": "icrs",
                     "defaultValue": "",
@@ -263,7 +278,25 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "d3cff35a-d453-4e11-870f-0fa94b8af4ac",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "data",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "b5988b4f-658f-4b3b-9d70-d1948a772508",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
             "inputAppFields": [],
@@ -284,7 +317,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -2,
-            "text": "coord",
+            "name": "coord",
             "description": "A standard file on a filesystem mounted to the deployment machine \nIn some cases drops are created **outside** the context of a session, most notably during unit tests. In these cases the base directory is a fixed location under ``/tmp``.\nThe following table summarizes the calculation of the final path used by the ``FileDrop`` class depending on its parameters:\n============ ===================== ===================== ========== . filepath ------------ ------------------------------------------------------ dirname empty relative absolute ============ ===================== ===================== ========== **empty** /``$B``/``$u`` /``$B``/``$f`` /``$f`` **relative** /``$B``/``$d``/``$u`` /``$B``/``$d``/``$f`` **ERROR** **absolute** /``$d``/``$u`` /``$d``/``$f`` **ERROR** ============ ===================== ===================== ==========\nIn the table, ``$f`` is the value of ``filepath``, ``$d`` is the value of ``dirname``, ``$u`` is the drop's UID and ``$B`` is the base directory for this drop's session, namely ``/the/cwd/$session_id``.",
             "x": 1946.2674591535,
             "y": 686.0776802165702,
@@ -293,28 +326,13 @@
             "collapsed": true,
             "flipPorts": false,
             "subject": null,
-            "expanded": false,
+            "expanded": true,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
-            "inputPorts": [
-                {
-                    "Id": "95a97547-63db-4826-bda6-52f4134961cf",
-                    "IdText": "data",
-                    "text": "Data",
-                    "event": false,
-                    "type": "String",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -324,10 +342,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "92dcdfda-997f-4c72-bf6a-8325f28d138b",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -337,10 +357,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "834e06ee-79fe-45a5-91d2-cdc2504ab79c",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
                     "defaultValue": "0",
@@ -350,10 +372,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "57aecab6-77c2-424e-b756-50f569520866",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": false,
                     "defaultValue": "false",
@@ -363,12 +387,14 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "df846442-7843-4aa3-88a3-7182d73d5d6d",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Check file path exists",
                     "name": "check_filepath_exists",
-                    "value": true,
+                    "value": false,
                     "defaultValue": "false",
                     "description": "Perform a check to make sure the file path exists before proceeding with the application",
                     "readonly": false,
@@ -376,10 +402,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "465d1867-530e-4ba7-b30e-383e67b1b3cd",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "File Path",
                     "name": "filepath",
                     "value": "",
                     "defaultValue": "",
@@ -389,10 +417,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "78e157f4-5913-4bae-a3dd-e209a09c8856",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Directory name",
                     "name": "dirname",
                     "value": "",
                     "defaultValue": "",
@@ -402,10 +432,27 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "28d87d0a-1ae4-4883-a943-72de86893e0d",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "data",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "95a97547-63db-4826-bda6-52f4134961cf",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
