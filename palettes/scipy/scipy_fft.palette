@@ -17,13 +17,13 @@
         "signature": "51a6214de9509976d7cf5ef292dc02272a10744bd8a780d08fb75a13f249fbfe",
         "lastModifiedName": "wici",
         "lastModifiedEmail": "",
-        "lastModifiedDatetime": 1694517742.831381
+        "lastModifiedDatetime": 1694535532.462615
     },
     "nodeDataArray": [
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.fftfreq",
+            "name": "scipy.fft.fftfreq",
             "description": "Return the Discrete Fourier Transform sample frequencies.\n    \n    The returned float array `f` contains the frequency bin centers in cycles\n    per unit of the sample spacing (with zero at the start).  For instance, if\n    the sample spacing is in seconds, then the frequency unit is cycles/second.\n    \n    Given a window length `n` and a sample spacing `d`::\n    \n      f = [0, 1, ...,   n/2-1,     -n/2, ..., -1] / (d*n)   if n is even\n      f = [0, 1, ..., (n-1)/2, -(n-1)/2, ..., -1] / (d*n)   if n is odd",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -166,7 +166,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.fhtoffset",
+            "name": "scipy.fft.fhtoffset",
             "description": "Return optimal offset for a fast Hankel transform.\n    \n    Returns an offset close to `initial` that fulfils the low-ringing\n    condition of [1]_ for the fast Hankel transform `fht` with logarithmic\n    spacing `dln`, order `mu` and bias `bias`.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -335,7 +335,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.get_workers",
+            "name": "scipy.fft.get_workers",
             "description": "Returns the default number of workers within the current context\n    \n    Examples\n    --------\n    >>> from scipy import fft\n    >>> fft.get_workers()\n    1\n    >>> with fft.set_workers(4):\n    ...     fft.get_workers()\n    4",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -452,7 +452,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.register_backend",
+            "name": "scipy.fft.register_backend",
             "description": "Register a backend for permanent use.\n    \n    Registered backends have the lowest priority and will be tried after the\n    global backend.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -582,7 +582,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.rfftfreq",
+            "name": "scipy.fft.rfftfreq",
             "description": "Return the Discrete Fourier Transform sample frequencies\n    (for usage with rfft, irfft).\n    \n    The returned float array `f` contains the frequency bin centers in cycles\n    per unit of the sample spacing (with zero at the start).  For instance, if\n    the sample spacing is in seconds, then the frequency unit is cycles/second.\n    \n    Given a window length `n` and a sample spacing `d`::\n    \n      f = [0, 1, ...,     n/2-1,     n/2] / (d*n)   if n is even\n      f = [0, 1, ..., (n-1)/2-1, (n-1)/2] / (d*n)   if n is odd\n    \n    Unlike `fftfreq` (but like `scipy.fftpack.rfftfreq`)\n    the Nyquist frequency component is considered to be positive.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -725,7 +725,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.set_backend",
+            "name": "scipy.fft.set_backend",
             "description": "Context manager to set the backend within a fixed scope.\n    \n    Upon entering the ``with`` statement, the given backend will be added to\n    the list of available backends with the highest priority. Upon exit, the\n    backend is reset to the state before entering the scope.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -881,7 +881,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.set_global_backend",
+            "name": "scipy.fft.set_global_backend",
             "description": "Sets the global fft backend\n    \n    This utility method replaces the default backend for permanent use. It\n    will be tried in the list of backends automatically, unless the\n    ``only`` flag is set on a backend. This will be the first tried\n    backend outside the :obj:`set_backend` context manager.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -1050,7 +1050,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.set_workers",
+            "name": "scipy.fft.set_workers",
             "description": "Context manager for the default number of workers used in `scipy.fft`",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -1180,7 +1180,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.skip_backend",
+            "name": "scipy.fft.skip_backend",
             "description": "Context manager to skip a backend within a fixed scope.\n    \n    Within the context of a ``with`` statement, the given backend will not be\n    called. This covers backends registered both locally and globally. Upon\n    exit, the backend will again be considered.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",

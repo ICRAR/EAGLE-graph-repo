@@ -17,13 +17,13 @@
         "signature": "9c803af65a93b4a446f405366e435bd2afc95b1dc1de52165403d747541d3f9c",
         "lastModifiedName": "wici",
         "lastModifiedEmail": "",
-        "lastModifiedDatetime": 1694517742.925049
+        "lastModifiedDatetime": 1694535532.580587
     },
     "nodeDataArray": [
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.cc_diff",
+            "name": "scipy.fftpack.cc_diff",
             "description": "Return (a,b)-cosh/cosh pseudo-derivative of a periodic sequence.\n    \n    If x_j and y_j are Fourier coefficients of periodic functions x\n    and y, respectively, then::\n    \n      y_j = cosh(j*a*2*pi/period)/cosh(j*b*2*pi/period) * x_j",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -205,7 +205,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.cs_diff",
+            "name": "scipy.fftpack.cs_diff",
             "description": "Return (a,b)-cosh/sinh pseudo-derivative of a periodic sequence.\n    \n    If ``x_j`` and ``y_j`` are Fourier coefficients of periodic functions x\n    and y, respectively, then::\n    \n      y_j = -sqrt(-1)*cosh(j*a*2*pi/period)/sinh(j*b*2*pi/period) * x_j\n      y_0 = 0",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -387,7 +387,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.dct",
+            "name": "scipy.fftpack.dct",
             "description": "Return the Discrete Cosine Transform of arbitrary type sequence x.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -582,7 +582,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.dctn",
+            "name": "scipy.fftpack.dctn",
             "description": "Return multidimensional Discrete Cosine Transform along the specified axes.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -777,7 +777,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.diff",
+            "name": "scipy.fftpack.diff",
             "description": "Return kth derivative (or integral) of a periodic sequence x.\n    \n    If x_j and y_j are Fourier coefficients of periodic functions x\n    and y, respectively, then::\n    \n      y_j = pow(sqrt(-1)*j*2*pi/period, order) * x_j\n      y_0 = 0 if order is not 0.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -946,7 +946,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.dst",
+            "name": "scipy.fftpack.dst",
             "description": "Return the Discrete Sine Transform of arbitrary type sequence x.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -1141,7 +1141,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.dstn",
+            "name": "scipy.fftpack.dstn",
             "description": "Return multidimensional Discrete Sine Transform along the specified axes.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -1336,7 +1336,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.fft",
+            "name": "scipy.fftpack.fft",
             "description": "Return discrete Fourier transform of real or complex sequence.\n    \n    The returned complex array contains ``y(0), y(1),..., y(n-1)``, where\n    \n    ``y(j) = (x * exp(-2*pi*sqrt(-1)*j*np.arange(n)/n)).sum()``.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -1505,7 +1505,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.fft2",
+            "name": "scipy.fftpack.fft2",
             "description": "2-D discrete Fourier transform.\n    \n    Return the 2-D discrete Fourier transform of the 2-D argument\n    `x`.\n    \n    See Also\n    --------\n    fftn : for detailed information.\n    \n    Examples\n    --------\n    >>> import numpy as np\n    >>> from scipy.fftpack import fft2, ifft2\n    >>> y = np.mgrid[:5, :5][0]\n    >>> y\n    array([[0, 0, 0, 0, 0],\n           [1, 1, 1, 1, 1],\n           [2, 2, 2, 2, 2],\n           [3, 3, 3, 3, 3],\n           [4, 4, 4, 4, 4]])\n    >>> np.allclose(y, ifft2(fft2(y)))\n    True",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -1686,7 +1686,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.fftn",
+            "name": "scipy.fftpack.fftn",
             "description": "Return multidimensional discrete Fourier transform.\n    \n    The returned array contains::\n    \n      y[j_1,..,j_d] = sum[k_1=0..n_1-1, ..., k_d=0..n_d-1]\n         x[k_1,..,k_d] * prod[i=1..d] exp(-sqrt(-1)*2*pi/n_i * j_i * k_i)\n    \n    where d = len(x.shape) and n = x.shape.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -1855,7 +1855,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.hilbert",
+            "name": "scipy.fftpack.hilbert",
             "description": "Return Hilbert transform of a periodic sequence x.\n    \n    If x_j and y_j are Fourier coefficients of periodic functions x\n    and y, respectively, then::\n    \n      y_j = sqrt(-1)*sign(j) * x_j\n      y_0 = 0",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -1998,7 +1998,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.idct",
+            "name": "scipy.fftpack.idct",
             "description": "Return the Inverse Discrete Cosine Transform of an arbitrary type sequence.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -2193,7 +2193,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.idctn",
+            "name": "scipy.fftpack.idctn",
             "description": "Return multidimensional Discrete Cosine Transform along the specified axes.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -2388,7 +2388,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.idst",
+            "name": "scipy.fftpack.idst",
             "description": "Return the Inverse Discrete Sine Transform of an arbitrary type sequence.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -2583,7 +2583,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.idstn",
+            "name": "scipy.fftpack.idstn",
             "description": "Return multidimensional Discrete Sine Transform along the specified axes.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -2778,7 +2778,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.ifft",
+            "name": "scipy.fftpack.ifft",
             "description": "Return discrete inverse Fourier transform of real or complex sequence.\n    \n    The returned complex array contains ``y(0), y(1),..., y(n-1)``, where\n    \n    ``y(j) = (x * exp(2*pi*sqrt(-1)*j*np.arange(n)/n)).mean()``.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -2947,7 +2947,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.ifft2",
+            "name": "scipy.fftpack.ifft2",
             "description": "2-D discrete inverse Fourier transform of real or complex sequence.\n    \n    Return inverse 2-D discrete Fourier transform of\n    arbitrary type sequence x.\n    \n    See `ifft` for more information.\n    \n    See Also\n    --------\n    fft2, ifft\n    \n    Examples\n    --------\n    >>> import numpy as np\n    >>> from scipy.fftpack import fft2, ifft2\n    >>> y = np.mgrid[:5, :5][0]\n    >>> y\n    array([[0, 0, 0, 0, 0],\n           [1, 1, 1, 1, 1],\n           [2, 2, 2, 2, 2],\n           [3, 3, 3, 3, 3],\n           [4, 4, 4, 4, 4]])\n    >>> np.allclose(y, fft2(ifft2(y)))\n    True",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -3128,7 +3128,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.ifftn",
+            "name": "scipy.fftpack.ifftn",
             "description": "Return inverse multidimensional discrete Fourier transform.\n    \n    The sequence can be of an arbitrary type.\n    \n    The returned array contains::\n    \n      y[j_1,..,j_d] = 1/p * sum[k_1=0..n_1-1, ..., k_d=0..n_d-1]\n         x[k_1,..,k_d] * prod[i=1..d] exp(sqrt(-1)*2*pi/n_i * j_i * k_i)\n    \n    where ``d = len(x.shape)``, ``n = x.shape``, and ``p = prod[i=1..d] n_i``.\n    \n    For description of parameters see `fftn`.\n    \n    See Also\n    --------\n    fftn : for detailed information.\n    \n    Examples\n    --------\n    >>> from scipy.fftpack import fftn, ifftn\n    >>> import numpy as np\n    >>> y = (-np.arange(16), 8 - np.arange(16), np.arange(16))\n    >>> np.allclose(y, ifftn(fftn(y)))\n    True",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -3297,7 +3297,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.ihilbert",
+            "name": "scipy.fftpack.ihilbert",
             "description": "Return inverse Hilbert transform of a periodic sequence x.\n    \n    If ``x_j`` and ``y_j`` are Fourier coefficients of periodic functions x\n    and y, respectively, then::\n    \n      y_j = -sqrt(-1)*sign(j) * x_j\n      y_0 = 0",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -3427,7 +3427,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.irfft",
+            "name": "scipy.fftpack.irfft",
             "description": "Return inverse discrete Fourier transform of real sequence x.\n    \n    The contents of `x` are interpreted as the output of the `rfft`\n    function.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -3596,7 +3596,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.itilbert",
+            "name": "scipy.fftpack.itilbert",
             "description": "Return inverse h-Tilbert transform of a periodic sequence x.\n    \n    If ``x_j`` and ``y_j`` are Fourier coefficients of periodic functions x\n    and y, respectively, then::\n    \n      y_j = -sqrt(-1)*tanh(j*h*2*pi/period) * x_j\n      y_0 = 0\n    \n    For more details, see `tilbert`.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -3765,7 +3765,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.next_fast_len",
+            "name": "scipy.fftpack.next_fast_len",
             "description": "Find the next fast size of input data to `fft`, for zero-padding, etc.\n    \n    SciPy's FFTPACK has efficient functions for radix {2, 3, 4, 5}, so this\n    returns the next composite of the prime factors 2, 3, and 5 which is\n    greater than or equal to `target`. (These are also known as 5-smooth\n    numbers, regular numbers, or Hamming numbers.)",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -3895,7 +3895,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.rfft",
+            "name": "scipy.fftpack.rfft",
             "description": "Discrete Fourier transform of a real sequence.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -4064,7 +4064,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.sc_diff",
+            "name": "scipy.fftpack.sc_diff",
             "description": "Return (a,b)-sinh/cosh pseudo-derivative of a periodic sequence x.\n    \n    If x_j and y_j are Fourier coefficients of periodic functions x\n    and y, respectively, then::\n    \n      y_j = sqrt(-1)*sinh(j*a*2*pi/period)/cosh(j*b*2*pi/period) * x_j\n      y_0 = 0",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -4246,7 +4246,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.shift",
+            "name": "scipy.fftpack.shift",
             "description": "Shift periodic sequence x by a: y(u) = x(u+a).\n    \n    If x_j and y_j are Fourier coefficients of periodic functions x\n    and y, respectively, then::\n    \n          y_j = exp(j*a*2*pi/period*sqrt(-1)) * x_f",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -4415,7 +4415,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.ss_diff",
+            "name": "scipy.fftpack.ss_diff",
             "description": "Return (a,b)-sinh/sinh pseudo-derivative of a periodic sequence x.\n    \n    If x_j and y_j are Fourier coefficients of periodic functions x\n    and y, respectively, then::\n    \n      y_j = sinh(j*a*2*pi/period)/sinh(j*b*2*pi/period) * x_j\n      y_0 = a/b * x_0",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -4597,7 +4597,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.tilbert",
+            "name": "scipy.fftpack.tilbert",
             "description": "Return h-Tilbert transform of a periodic sequence x.\n    \n    If x_j and y_j are Fourier coefficients of periodic functions x\n    and y, respectively, then::\n    \n        y_j = sqrt(-1)*coth(j*h*2*pi/period) * x_j\n        y_0 = 0",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",

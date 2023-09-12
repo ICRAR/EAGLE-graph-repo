@@ -17,13 +17,13 @@
         "signature": "08a954c6bbf80536bdeb140b8b6268aeff0fe518a57115a4aac5598550fc5189",
         "lastModifiedName": "wici",
         "lastModifiedEmail": "",
-        "lastModifiedDatetime": 1694517742.718025
+        "lastModifiedDatetime": 1694535532.333016
     },
     "nodeDataArray": [
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.cdist",
+            "name": "scipy.cluster.vq.cdist",
             "description": "Compute distance between each pair of the two collections of inputs.\n    \n    See Notes for common calling conventions.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -205,7 +205,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.check_random_state",
+            "name": "scipy.cluster.vq.check_random_state",
             "description": "Turn `seed` into a `np.random.RandomState` instance.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -335,7 +335,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.kmeans",
+            "name": "scipy.cluster.vq.kmeans",
             "description": "Performs k-means on a set of observation vectors forming k clusters.\n    \n    The k-means algorithm adjusts the classification of the observations\n    into clusters and updates the cluster centroids until the position of\n    the centroids is stable over successive iterations. In this\n    implementation of the algorithm, the stability of the centroids is\n    determined by comparing the absolute value of the change in the average\n    Euclidean distance between the observations and their corresponding\n    centroids against a threshold. This yields\n    a code book mapping centroids to codes and vice versa.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -530,7 +530,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.kmeans2",
+            "name": "scipy.cluster.vq.kmeans2",
             "description": "Classify a set of observations into k clusters using the k-means algorithm.\n    \n    The algorithm attempts to minimize the Euclidean distance between\n    observations and centroids. Several initialization methods are\n    included.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -751,7 +751,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.py_vq",
+            "name": "scipy.cluster.vq.py_vq",
             "description": "Python version of vq algorithm.\n    \n    The algorithm computes the Euclidean distance between each\n    observation and every frame in the code_book.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -907,7 +907,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.rng_integers",
+            "name": "scipy.cluster.vq.rng_integers",
             "description": "Return random integers from low (inclusive) to high (exclusive), or if\n    endpoint=True, low (inclusive) to high (inclusive). Replaces\n    `RandomState.randint` (with endpoint=False) and\n    `RandomState.random_integers` (with endpoint=True).\n    \n    Return random integers from the \"discrete uniform\" distribution of the\n    specified dtype. If high is None (the default), then results are from\n    0 to low.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -1102,7 +1102,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.vq",
+            "name": "scipy.cluster.vq.vq",
             "description": "Assign codes from a code book to observations.\n    \n    Assigns a code from a code book to each observation. Each\n    observation vector in the 'M' by 'N' `obs` array is compared with the\n    centroids in the code book and assigned the code of the closest\n    centroid.\n    \n    The features in `obs` should have unit variance, which can be\n    achieved by passing them through the whiten function. The code\n    book can be created with the k-means algorithm or a different\n    encoding algorithm.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -1258,7 +1258,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.whiten",
+            "name": "scipy.cluster.vq.whiten",
             "description": "Normalize a group of observations on a per feature basis.\n    \n    Before running k-means, it is beneficial to rescale each feature\n    dimension of the observation set by its standard deviation (i.e. \"whiten\"\n    it - as in \"white noise\" where each frequency has equal power).\n    Each feature is divided by its standard deviation across all observations\n    to give it unit variance.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -1402,7 +1402,7 @@
             "category": "PythonApp",
             "key": -1,
             "name": "ClusterNode.__init__",
-            "description": "A tree node class for representing a cluster.\n    \n    Leaf nodes correspond to original observations, while non-leaf nodes\n    correspond to non-singleton clusters.\n    \n    The `to_tree` function converts a matrix returned by the linkage\n    function into an easy-to-use tree representation.\n    \n    All parameter names are also attributes.",
+            "description": "No description found\nA tree node class for representing a cluster.\n    \n    Leaf nodes correspond to original observations, while non-leaf nodes\n    correspond to non-singleton clusters.\n    \n    The `to_tree` function converts a matrix returned by the linkage\n    function into an easy-to-use tree representation.\n    \n    All parameter names are also attributes.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
@@ -2376,7 +2376,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.average",
+            "name": "scipy.cluster.hierarchy.average",
             "description": "Perform average/UPGMA linkage on a condensed distance matrix.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -2506,7 +2506,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.centroid",
+            "name": "scipy.cluster.hierarchy.centroid",
             "description": "Perform centroid/UPGMC linkage.\n    \n    See `linkage` for more information on the input matrix,\n    return structure, and algorithm.\n    \n    The following are common calling conventions:\n    \n    1. ``Z = centroid(y)``\n    \n       Performs centroid/UPGMC linkage on the condensed distance\n       matrix ``y``.\n    \n    2. ``Z = centroid(X)``\n    \n       Performs centroid/UPGMC linkage on the observation matrix ``X``\n       using Euclidean distance as the distance metric.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -2636,7 +2636,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.complete",
+            "name": "scipy.cluster.hierarchy.complete",
             "description": "Perform complete/max/farthest point linkage on a condensed distance matrix.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -2766,7 +2766,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.cophenet",
+            "name": "scipy.cluster.hierarchy.cophenet",
             "description": "Calculate the cophenetic distances between each observation in\n    the hierarchical clustering defined by the linkage ``Z``.\n    \n    Suppose ``p`` and ``q`` are original observations in\n    disjoint clusters ``s`` and ``t``, respectively and\n    ``s`` and ``t`` are joined by a direct parent cluster\n    ``u``. The cophenetic distance between observations\n    ``i`` and ``j`` is simply the distance between\n    clusters ``s`` and ``t``.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -2909,7 +2909,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.correspond",
+            "name": "scipy.cluster.hierarchy.correspond",
             "description": "Check for correspondence between linkage and condensed distance matrices.\n    \n    They must have the same number of original observations for\n    the check to succeed.\n    \n    This function is useful as a sanity check in algorithms that make\n    extensive use of linkage and distance matrices that must\n    correspond to the same set of original observations.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -3052,7 +3052,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.cut_tree",
+            "name": "scipy.cluster.hierarchy.cut_tree",
             "description": "Given a linkage matrix Z, return the cut tree.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -3208,7 +3208,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.dendrogram",
+            "name": "scipy.cluster.hierarchy.dendrogram",
             "description": "Plot the hierarchical clustering as a dendrogram.\n    \n    The dendrogram illustrates how each cluster is\n    composed by drawing a U-shaped link between a non-singleton\n    cluster and its children. The top of the U-link indicates a\n    cluster merge. The two legs of the U-link indicate which clusters\n    were merged. The length of the two legs of the U-link represents\n    the distance between the child clusters. It is also the\n    cophenetic distance between original observations in the two\n    children clusters.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -3572,7 +3572,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.fcluster",
+            "name": "scipy.cluster.hierarchy.fcluster",
             "description": "Form flat clusters from the hierarchical clustering defined by\n    the given linkage matrix.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -3767,7 +3767,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.fclusterdata",
+            "name": "scipy.cluster.hierarchy.fclusterdata",
             "description": "Cluster observation data using a given metric.\n    \n    Clusters the original observations in the n-by-m data\n    matrix X (n observations in m dimensions), using the euclidean\n    distance metric to calculate distances between original observations,\n    performs hierarchical clustering using the single linkage algorithm,\n    and forms flat clusters using the inconsistency method with `t` as the\n    cut-off threshold.\n    \n    A 1-D array ``T`` of length ``n`` is returned. ``T[i]`` is\n    the index of the flat cluster to which the original observation ``i``\n    belongs.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -3975,7 +3975,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.from_mlab_linkage",
+            "name": "scipy.cluster.hierarchy.from_mlab_linkage",
             "description": "Convert a linkage matrix generated by MATLAB(TM) to a new\n    linkage matrix compatible with this module.\n    \n    The conversion does two things:\n    \n     * the indices are converted from ``1..N`` to ``0..(N-1)`` form,\n       and\n    \n     * a fourth column ``Z[:,3]`` is added where ``Z[i,3]`` represents the\n       number of original observations (leaves) in the non-singleton\n       cluster ``i``.\n    \n    This function is useful when loading in linkages from legacy data\n    files generated by MATLAB.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -4105,7 +4105,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.inconsistent",
+            "name": "scipy.cluster.hierarchy.inconsistent",
             "description": "Calculate inconsistency statistics on a linkage matrix.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -4248,7 +4248,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.is_isomorphic",
+            "name": "scipy.cluster.hierarchy.is_isomorphic",
             "description": "Determine if two different cluster assignments are equivalent.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -4391,7 +4391,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.is_monotonic",
+            "name": "scipy.cluster.hierarchy.is_monotonic",
             "description": "Return True if the linkage passed is monotonic.\n    \n    The linkage is monotonic if for every cluster :math:`s` and :math:`t`\n    joined, the distance between them is no less than the distance\n    between any previously joined clusters.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -4521,7 +4521,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.is_valid_im",
+            "name": "scipy.cluster.hierarchy.is_valid_im",
             "description": "Return True if the inconsistency matrix passed is valid.\n    \n    It must be a :math:`n` by 4 array of doubles. The standard\n    deviations ``R[:,1]`` must be nonnegative. The link counts\n    ``R[:,2]`` must be positive and no greater than :math:`n-1`.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -4690,7 +4690,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.is_valid_linkage",
+            "name": "scipy.cluster.hierarchy.is_valid_linkage",
             "description": "Check the validity of a linkage matrix.\n    \n    A linkage matrix is valid if it is a 2-D array (type double)\n    with :math:`n` rows and 4 columns. The first two columns must contain\n    indices between 0 and :math:`2n-1`. For a given row ``i``, the following\n    two expressions have to hold:\n    \n    .. math::\n    \n        0 \\leq \\mathtt{Z[i,0]} \\leq i+n-1\n        0 \\leq Z[i,1] \\leq i+n-1\n    \n    I.e., a cluster cannot join another cluster unless the cluster being joined\n    has been generated.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -4859,7 +4859,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.leaders",
+            "name": "scipy.cluster.hierarchy.leaders",
             "description": "Return the root nodes in a hierarchical clustering.\n    \n    Returns the root nodes in a hierarchical clustering corresponding\n    to a cut defined by a flat cluster assignment vector ``T``. See\n    the ``fcluster`` function for more information on the format of ``T``.\n    \n    For each flat cluster :math:`j` of the :math:`k` flat clusters\n    represented in the n-sized flat cluster assignment vector ``T``,\n    this function finds the lowest cluster node :math:`i` in the linkage\n    tree Z, such that:\n    \n      * leaf descendants belong only to flat cluster j\n        (i.e., ``T[p]==j`` for all :math:`p` in :math:`S(i)`, where\n        :math:`S(i)` is the set of leaf ids of descendant leaf nodes\n        with cluster node :math:`i`)\n    \n      * there does not exist a leaf that is not a descendant with\n        :math:`i` that also belongs to cluster :math:`j`\n        (i.e., ``T[q]!=j`` for all :math:`q` not in :math:`S(i)`). If\n        this condition is violated, ``T`` is not a valid cluster\n        assignment vector, and an exception will be thrown.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -5002,7 +5002,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.leaves_list",
+            "name": "scipy.cluster.hierarchy.leaves_list",
             "description": "Return a list of leaf node ids.\n    \n    The return corresponds to the observation vector index as it appears\n    in the tree from left to right. Z is a linkage matrix.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -5132,7 +5132,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.linkage",
+            "name": "scipy.cluster.hierarchy.linkage",
             "description": "Perform hierarchical/agglomerative clustering.\n    \n    The input y may be either a 1-D condensed distance matrix\n    or a 2-D array of observation vectors.\n    \n    If y is a 1-D condensed distance matrix,\n    then y must be a :math:`\\binom{n}{2}` sized\n    vector, where n is the number of original observations paired\n    in the distance matrix. The behavior of this function is very\n    similar to the MATLAB linkage function.\n    \n    A :math:`(n-1)` by 4 matrix ``Z`` is returned. At the\n    :math:`i`-th iteration, clusters with indices ``Z[i, 0]`` and\n    ``Z[i, 1]`` are combined to form cluster :math:`n + i`. A\n    cluster with an index less than :math:`n` corresponds to one of\n    the :math:`n` original observations. The distance between\n    clusters ``Z[i, 0]`` and ``Z[i, 1]`` is given by ``Z[i, 2]``. The\n    fourth value ``Z[i, 3]`` represents the number of original\n    observations in the newly formed cluster.\n    \n    The following linkage methods are used to compute the distance\n    :math:`d(s, t)` between two clusters :math:`s` and\n    :math:`t`. The algorithm begins with a forest of clusters that\n    have yet to be used in the hierarchy being formed. When two\n    clusters :math:`s` and :math:`t` from this forest are combined\n    into a single cluster :math:`u`, :math:`s` and :math:`t` are\n    removed from the forest, and :math:`u` is added to the\n    forest. When only one cluster remains in the forest, the algorithm\n    stops, and this cluster becomes the root.\n    \n    A distance matrix is maintained at each iteration. The ``d[i,j]``\n    entry corresponds to the distance between cluster :math:`i` and\n    :math:`j` in the original forest.\n    \n    At each iteration, the algorithm must update the distance matrix\n    to reflect the distance of the newly formed cluster u with the\n    remaining clusters in the forest.\n    \n    Suppose there are :math:`|u|` original observations\n    :math:`u[0], \\ldots, u[|u|-1]` in cluster :math:`u` and\n    :math:`|v|` original objects :math:`v[0], \\ldots, v[|v|-1]` in\n    cluster :math:`v`. Recall, :math:`s` and :math:`t` are\n    combined to form cluster :math:`u`. Let :math:`v` be any\n    remaining cluster in the forest that is not :math:`u`.\n    \n    The following are methods for calculating the distance between the\n    newly formed cluster :math:`u` and each :math:`v`.\n    \n      * method='single' assigns\n    \n        .. math::\n           d(u,v) = \\min(dist(u[i],v[j]))\n    \n        for all points :math:`i` in cluster :math:`u` and\n        :math:`j` in cluster :math:`v`. This is also known as the\n        Nearest Point Algorithm.\n    \n      * method='complete' assigns\n    \n        .. math::\n           d(u, v) = \\max(dist(u[i],v[j]))\n    \n        for all points :math:`i` in cluster u and :math:`j` in\n        cluster :math:`v`. This is also known by the Farthest Point\n        Algorithm or Voor Hees Algorithm.\n    \n      * method='average' assigns\n    \n        .. math::\n           d(u,v) = \\sum_{ij} \\frac{d(u[i], v[j])}\n                                   {(|u|*|v|)}\n    \n        for all points :math:`i` and :math:`j` where :math:`|u|`\n        and :math:`|v|` are the cardinalities of clusters :math:`u`\n        and :math:`v`, respectively. This is also called the UPGMA\n        algorithm.\n    \n      * method='weighted' assigns\n    \n        .. math::\n           d(u,v) = (dist(s,v) + dist(t,v))/2\n    \n        where cluster u was formed with cluster s and t and v\n        is a remaining cluster in the forest (also called WPGMA).\n    \n      * method='centroid' assigns\n    \n        .. math::\n           dist(s,t) = ||c_s-c_t||_2\n    \n        where :math:`c_s` and :math:`c_t` are the centroids of\n        clusters :math:`s` and :math:`t`, respectively. When two\n        clusters :math:`s` and :math:`t` are combined into a new\n        cluster :math:`u`, the new centroid is computed over all the\n        original objects in clusters :math:`s` and :math:`t`. The\n        distance then becomes the Euclidean distance between the\n        centroid of :math:`u` and the centroid of a remaining cluster\n        :math:`v` in the forest. This is also known as the UPGMC\n        algorithm.\n    \n      * method='median' assigns :math:`d(s,t)` like the ``centroid``\n        method. When two clusters :math:`s` and :math:`t` are combined\n        into a new cluster :math:`u`, the average of centroids s and t\n        give the new centroid :math:`u`. This is also known as the\n        WPGMC algorithm.\n    \n      * method='ward' uses the Ward variance minimization algorithm.\n        The new entry :math:`d(u,v)` is computed as follows,\n    \n        .. math::\n    \n           d(u,v) = \\sqrt{\\frac{|v|+|s|}\n                               {T}d(v,s)^2\n                        + \\frac{|v|+|t|}\n                               {T}d(v,t)^2\n                        - \\frac{|v|}\n                               {T}d(s,t)^2}\n    \n        where :math:`u` is the newly joined cluster consisting of\n        clusters :math:`s` and :math:`t`, :math:`v` is an unused\n        cluster in the forest, :math:`T=|v|+|s|+|t|`, and\n        :math:`|*|` is the cardinality of its argument. This is also\n        known as the incremental algorithm.\n    \n    Warning: When the minimum distance pair in the forest is chosen, there\n    may be two or more pairs with the same minimum distance. This\n    implementation may choose a different minimum than the MATLAB\n    version.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -5301,7 +5301,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.maxRstat",
+            "name": "scipy.cluster.hierarchy.maxRstat",
             "description": "Return the maximum statistic for each non-singleton cluster and its\n    children.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -5457,7 +5457,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.maxdists",
+            "name": "scipy.cluster.hierarchy.maxdists",
             "description": "Return the maximum distance between any non-singleton cluster.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -5587,7 +5587,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.maxinconsts",
+            "name": "scipy.cluster.hierarchy.maxinconsts",
             "description": "Return the maximum inconsistency coefficient for each\n    non-singleton cluster and its children.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -5730,7 +5730,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.median",
+            "name": "scipy.cluster.hierarchy.median",
             "description": "Perform median/WPGMC linkage.\n    \n    See `linkage` for more information on the return structure\n    and algorithm.\n    \n     The following are common calling conventions:\n    \n     1. ``Z = median(y)``\n    \n        Performs median/WPGMC linkage on the condensed distance matrix\n        ``y``.  See ``linkage`` for more information on the return\n        structure and algorithm.\n    \n     2. ``Z = median(X)``\n    \n        Performs median/WPGMC linkage on the observation matrix ``X``\n        using Euclidean distance as the distance metric. See `linkage`\n        for more information on the return structure and algorithm.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -5860,7 +5860,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.num_obs_linkage",
+            "name": "scipy.cluster.hierarchy.num_obs_linkage",
             "description": "Return the number of original observations of the linkage matrix passed.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -5990,7 +5990,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.optimal_leaf_ordering",
+            "name": "scipy.cluster.hierarchy.optimal_leaf_ordering",
             "description": "Given a linkage matrix Z and distance, reorder the cut tree.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -6146,7 +6146,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.set_link_color_palette",
+            "name": "scipy.cluster.hierarchy.set_link_color_palette",
             "description": "Set list of matplotlib color codes for use by dendrogram.\n    \n    Note that this palette is global (i.e., setting it once changes the colors\n    for all subsequent calls to `dendrogram`) and that it affects only the\n    the colors below ``color_threshold``.\n    \n    Note that `dendrogram` also accepts a custom coloring function through its\n    ``link_color_func`` keyword, which is more flexible and non-global.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -6276,7 +6276,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.single",
+            "name": "scipy.cluster.hierarchy.single",
             "description": "Perform single/min/nearest linkage on the condensed distance matrix ``y``.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -6406,7 +6406,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.to_mlab_linkage",
+            "name": "scipy.cluster.hierarchy.to_mlab_linkage",
             "description": "Convert a linkage matrix to a MATLAB(TM) compatible one.\n    \n    Converts a linkage matrix ``Z`` generated by the linkage function\n    of this module to a MATLAB(TM) compatible one. The return linkage\n    matrix has the last column removed and the cluster indices are\n    converted to ``1..N`` indexing.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -6536,7 +6536,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.to_tree",
+            "name": "scipy.cluster.hierarchy.to_tree",
             "description": "Convert a linkage matrix into an easy-to-use tree object.\n    \n    The reference to the root `ClusterNode` object is returned (by default).\n    \n    Each `ClusterNode` object has a ``left``, ``right``, ``dist``, ``id``,\n    and ``count`` attribute. The left and right attributes point to\n    ClusterNode objects that were combined to generate the cluster.\n    If both are None then the `ClusterNode` object is a leaf node, its count\n    must be 1, and its distance is meaningless but set to 0.\n    \n    *Note: This function is provided for the convenience of the library\n    user. ClusterNodes are not used as input to any of the functions in this\n    library.*",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -6679,7 +6679,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.ward",
+            "name": "scipy.cluster.hierarchy.ward",
             "description": "Perform Ward's linkage on a condensed distance matrix.\n    \n    See `linkage` for more information on the return structure\n    and algorithm.\n    \n    The following are common calling conventions:\n    \n    1. ``Z = ward(y)``\n       Performs Ward's linkage on the condensed distance matrix ``y``.\n    \n    2. ``Z = ward(X)``\n       Performs Ward's linkage on the observation matrix ``X`` using\n       Euclidean distance as the distance metric.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -6809,7 +6809,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.weighted",
+            "name": "scipy.cluster.hierarchy.weighted",
             "description": "Perform weighted/WPGMA linkage on the condensed distance matrix.\n    \n    See `linkage` for more information on the return\n    structure and algorithm.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",

@@ -14,16 +14,16 @@
         "repositoryUrl": "scipy",
         "commitHash": "0.1",
         "downloadUrl": "",
-        "signature": "d7ef8f8a5b7679e3be637bd430b4bf9a1bdf2980ec84d18955291c23b2ab36dc",
+        "signature": "d64edc2e6960d8289ab73fb51ede66ba039f3935205ffb3d8bc91d07c8b27db5",
         "lastModifiedName": "wici",
         "lastModifiedEmail": "",
-        "lastModifiedDatetime": 1694517744.006328
+        "lastModifiedDatetime": 1694535534.383316
     },
     "nodeDataArray": [
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.bandwidth",
+            "name": "scipy.linalg.bandwidth",
             "description": "Return the lower and upper bandwidth of a 2D numeric array.\n    Parameters\n    ----------\n    a : ndarray\n        Input array of size (N, M)\n    Returns\n    -------\n    lu : tuple\n        2-tuple of ints indicating the lower and upper bandwith. A zero\n        denotes no sub- or super-diagonal on that side (triangular), and,\n        say for N rows (N-1) means that side is full. Same example applies\n        to the upper triangular part with (M-1).\n    Raises\n    ------\n    TypeError\n        If the dtype of the array is not supported, in particular, NumPy\n        float16, float128 and complex256 dtypes.\n    Notes\n    -----\n    This helper function simply runs over the array looking for the nonzero\n    entries whether there exists a banded structure in the array or not. Hence,\n    the performance depends on the density of nonzero entries and also\n    memory-layout. Fortran- or C- contiguous arrays are handled best and\n    otherwise suffers from extra random memory access cost.\n    The strategy is to look for only untested band elements in the upper\n    and lower triangular parts separately; depending on the memory layout\n    we scan row-wise or column-wise. Moreover, say we are scanning rows\n    and in the 6th row, 4th entry is nonzero then, on the succeeding rows\n    the horizontal search is done only up to that band entries since we know\n    that band is occupied. Therefore, a completely dense matrix scan cost is\n    in the the order of n.\n    Examples\n    --------\n    >>> import numpy as np\n    >>> from scipy.linalg import bandwidth\n    >>> A = np.array([[3., 0., 0., 0., 0.],\n    ...               [0., 4., 0., 0., 0.],\n    ...               [0., 0., 5., 1., 0.],\n    ...               [8., 0., 0., 6., 2.],\n    ...               [0., 9., 0., 0., 7.]])\n    >>> bandwidth(A)\n    (3, 1)\n    ",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -153,7 +153,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.block_diag",
+            "name": "scipy.linalg.block_diag",
             "description": "Create a block diagonal matrix from provided arrays.\n    \n    Given the inputs `A`, `B` and `C`, the output will have these\n    arrays arranged on the diagonal::\n    \n        [[A, 0, 0],\n         [0, B, 0],\n         [0, 0, C]]",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -283,7 +283,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.cdf2rdf",
+            "name": "scipy.linalg.cdf2rdf",
             "description": "Converts complex eigenvalues ``w`` and eigenvectors ``v`` to real\n    eigenvalues in a block diagonal form ``wr`` and the associated real\n    eigenvectors ``vr``, such that::\n    \n        vr @ wr = X @ vr\n    \n    continues to hold, where ``X`` is the original array for which ``w`` and\n    ``v`` are the eigenvalues and eigenvectors.\n    \n    .. versionadded:: 1.1.0",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -426,7 +426,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.cho_factor",
+            "name": "scipy.linalg.cho_factor",
             "description": "Compute the Cholesky decomposition of a matrix, to use in cho_solve\n    \n    Returns a matrix containing the Cholesky decomposition,\n    ``A = L L*`` or ``A = U* U`` of a Hermitian positive-definite matrix `a`.\n    The return value can be directly used as the first parameter to cho_solve.\n    \n    .. warning::\n        The returned matrix also contains random data in the entries not\n        used by the Cholesky decomposition. If you need to zero these\n        entries, use the function `cholesky` instead.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -595,7 +595,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.cho_solve",
+            "name": "scipy.linalg.cho_solve",
             "description": "Solve the linear equations A x = b, given the Cholesky factorization of A.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -764,7 +764,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.cho_solve_banded",
+            "name": "scipy.linalg.cho_solve_banded",
             "description": "Solve the linear equations ``A x = b``, given the Cholesky factorization of\n    the banded Hermitian ``A``.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -933,7 +933,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.cholesky",
+            "name": "scipy.linalg.cholesky",
             "description": "Compute the Cholesky decomposition of a matrix.\n    \n    Returns the Cholesky decomposition, :math:`A = L L^*` or\n    :math:`A = U^* U` of a Hermitian positive-definite matrix A.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -1102,7 +1102,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.cholesky_banded",
+            "name": "scipy.linalg.cholesky_banded",
             "description": "Cholesky decompose a banded Hermitian positive-definite matrix\n    \n    The matrix a is stored in ab either in lower-diagonal or upper-\n    diagonal ordered form::\n    \n        ab[u + i - j, j] == a[i,j]        (if upper form; i <= j)\n        ab[    i - j, j] == a[i,j]        (if lower form; i >= j)\n    \n    Example of ab (shape of a is (6,6), u=2)::\n    \n        upper form:\n        *   *   a02 a13 a24 a35\n        *   a01 a12 a23 a34 a45\n        a00 a11 a22 a33 a44 a55\n    \n        lower form:\n        a00 a11 a22 a33 a44 a55\n        a10 a21 a32 a43 a54 *\n        a20 a31 a42 a53 *   *",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -1271,7 +1271,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.circulant",
+            "name": "scipy.linalg.circulant",
             "description": "Construct a circulant matrix.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -1401,7 +1401,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.clarkson_woodruff_transform",
+            "name": "scipy.linalg.clarkson_woodruff_transform",
             "description": "Applies a Clarkson-Woodruff Transform/sketch to the input matrix.\n    \n    Given an input_matrix ``A`` of size ``(n, d)``, compute a matrix ``A'`` of\n    size (sketch_size, d) so that\n    \n    .. math:: \\|Ax\\| \\approx \\|A'x\\|\n    \n    with high probability via the Clarkson-Woodruff Transform, otherwise\n    known as the CountSketch matrix.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -1557,7 +1557,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.companion",
+            "name": "scipy.linalg.companion",
             "description": "Create a companion matrix.\n    \n    Create the companion matrix [1]_ associated with the polynomial whose\n    coefficients are given in `a`.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -1687,7 +1687,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.convolution_matrix",
+            "name": "scipy.linalg.convolution_matrix",
             "description": "Construct a convolution matrix.\n    \n    Constructs the Toeplitz matrix representing one-dimensional\n    convolution [1]_.  See the notes below for details.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -1843,7 +1843,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.coshm",
+            "name": "scipy.linalg.coshm",
             "description": "Compute the hyperbolic matrix cosine.\n    \n    This routine uses expm to compute the matrix exponentials.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -1973,7 +1973,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.cosm",
+            "name": "scipy.linalg.cosm",
             "description": "Compute the matrix cosine.\n    \n    This routine uses expm to compute the matrix exponentials.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -2103,7 +2103,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.cossin",
+            "name": "scipy.linalg.cossin",
             "description": "Compute the cosine-sine (CS) decomposition of an orthogonal/unitary matrix.\n    \n    X is an ``(m, m)`` orthogonal/unitary matrix, partitioned as the following\n    where upper left block has the shape of ``(p, q)``::\n    \n                                   \u250c                   \u2510\n                                   \u2502 I  0  0 \u2502 0  0  0 \u2502\n        \u250c           \u2510   \u250c         \u2510\u2502 0  C  0 \u2502 0 -S  0 \u2502\u250c         \u2510*\n        \u2502 X11 \u2502 X12 \u2502   \u2502 U1 \u2502    \u2502\u2502 0  0  0 \u2502 0  0 -I \u2502\u2502 V1 \u2502    \u2502\n        \u2502 \u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500 \u2502 = \u2502\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2502\u2502\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2502\u2502\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2502\n        \u2502 X21 \u2502 X22 \u2502   \u2502    \u2502 U2 \u2502\u2502 0  0  0 \u2502 I  0  0 \u2502\u2502    \u2502 V2 \u2502\n        \u2514           \u2518   \u2514         \u2518\u2502 0  S  0 \u2502 0  C  0 \u2502\u2514         \u2518\n                                   \u2502 0  0  I \u2502 0  0  0 \u2502\n                                   \u2514                   \u2518\n    \n    ``U1``, ``U2``, ``V1``, ``V2`` are square orthogonal/unitary matrices of\n    dimensions ``(p,p)``, ``(m-p,m-p)``, ``(q,q)``, and ``(m-q,m-q)``\n    respectively, and ``C`` and ``S`` are ``(r, r)`` nonnegative diagonal\n    matrices satisfying ``C^2 + S^2 = I`` where ``r = min(p, m-p, q, m-q)``.\n    \n    Moreover, the rank of the identity matrices are ``min(p, q) - r``,\n    ``min(p, m - q) - r``, ``min(m - p, q) - r``, and ``min(m - p, m - q) - r``\n    respectively.\n    \n    X can be supplied either by itself and block specifications p, q or its\n    subblocks in an iterable from which the shapes would be derived. See the\n    examples below.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -2311,7 +2311,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.det",
+            "name": "scipy.linalg.det",
             "description": "Compute the determinant of a matrix\n    \n    The determinant is a scalar that is a function of the associated square\n    matrix coefficients. The determinant value is zero for singular matrices.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -2467,7 +2467,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.dft",
+            "name": "scipy.linalg.dft",
             "description": "Discrete Fourier transform matrix.\n    \n    Create the matrix that computes the discrete Fourier transform of a\n    sequence [1]_. The nth primitive root of unity used to generate the\n    matrix is exp(-2*pi*i/n), where i = sqrt(-1).",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -2610,7 +2610,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.diagsvd",
+            "name": "scipy.linalg.diagsvd",
             "description": "Construct the sigma matrix in SVD from singular values and size M, N.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -2766,7 +2766,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.eig",
+            "name": "scipy.linalg.eig",
             "description": "Solve an ordinary or generalized eigenvalue problem of a square matrix.\n    \n    Find eigenvalues w and right or left eigenvectors of a general matrix::\n    \n        a   vr[:,i] = w[i]        b   vr[:,i]\n        a.H vl[:,i] = w[i].conj() b.H vl[:,i]\n    \n    where ``.H`` is the Hermitian conjugation.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -2987,7 +2987,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.eig_banded",
+            "name": "scipy.linalg.eig_banded",
             "description": "Solve real symmetric or complex Hermitian band matrix eigenvalue problem.\n    \n    Find eigenvalues w and optionally right eigenvectors v of a::\n    \n        a v[:,i] = w[i] v[:,i]\n        v.H v    = identity\n    \n    The matrix a is stored in a_band either in lower diagonal or upper\n    diagonal ordered form:\n    \n        a_band[u + i - j, j] == a[i,j]        (if upper form; i <= j)\n        a_band[    i - j, j] == a[i,j]        (if lower form; i >= j)\n    \n    where u is the number of bands above the diagonal.\n    \n    Example of a_band (shape of a is (6,6), u=2)::\n    \n        upper form:\n        *   *   a02 a13 a24 a35\n        *   a01 a12 a23 a34 a45\n        a00 a11 a22 a33 a44 a55\n    \n        lower form:\n        a00 a11 a22 a33 a44 a55\n        a10 a21 a32 a43 a54 *\n        a20 a31 a42 a53 *   *\n    \n    Cells marked with * are not used.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -3208,7 +3208,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.eigh",
+            "name": "scipy.linalg.eigh",
             "description": "Solve a standard or generalized eigenvalue problem for a complex\n    Hermitian or real symmetric matrix.\n    \n    Find eigenvalues array ``w`` and optionally eigenvectors array ``v`` of\n    array ``a``, where ``b`` is positive definite such that for every\n    eigenvalue \u03bb (i-th entry of w) and its eigenvector ``vi`` (i-th column of\n    ``v``) satisfies::\n    \n                      a @ vi = \u03bb * b @ vi\n        vi.conj().T @ a @ vi = \u03bb\n        vi.conj().T @ b @ vi = 1\n    \n    In the standard problem, ``b`` is assumed to be the identity matrix.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -3494,7 +3494,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.eigh_tridiagonal",
+            "name": "scipy.linalg.eigh_tridiagonal",
             "description": "Solve eigenvalue problem for a real symmetric tridiagonal matrix.\n    \n    Find eigenvalues `w` and optionally right eigenvectors `v` of ``a``::\n    \n        a v[:,i] = w[i] v[:,i]\n        v.H v    = identity\n    \n    For a real symmetric matrix ``a`` with diagonal elements `d` and\n    off-diagonal elements `e`.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -3715,7 +3715,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.eigvals",
+            "name": "scipy.linalg.eigvals",
             "description": "Compute eigenvalues from an ordinary or generalized eigenvalue problem.\n    \n    Find eigenvalues of a general matrix::\n    \n        a   vr[:,i] = w[i]        b   vr[:,i]",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -3897,7 +3897,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.eigvals_banded",
+            "name": "scipy.linalg.eigvals_banded",
             "description": "Solve real symmetric or complex Hermitian band matrix eigenvalue problem.\n    \n    Find eigenvalues w of a::\n    \n        a v[:,i] = w[i] v[:,i]\n        v.H v    = identity\n    \n    The matrix a is stored in a_band either in lower diagonal or upper\n    diagonal ordered form:\n    \n        a_band[u + i - j, j] == a[i,j]        (if upper form; i <= j)\n        a_band[    i - j, j] == a[i,j]        (if lower form; i >= j)\n    \n    where u is the number of bands above the diagonal.\n    \n    Example of a_band (shape of a is (6,6), u=2)::\n    \n        upper form:\n        *   *   a02 a13 a24 a35\n        *   a01 a12 a23 a34 a45\n        a00 a11 a22 a33 a44 a55\n    \n        lower form:\n        a00 a11 a22 a33 a44 a55\n        a10 a21 a32 a43 a54 *\n        a20 a31 a42 a53 *   *\n    \n    Cells marked with * are not used.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -4092,7 +4092,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.eigvalsh",
+            "name": "scipy.linalg.eigvalsh",
             "description": "Solves a standard or generalized eigenvalue problem for a complex\n    Hermitian or real symmetric matrix.\n    \n    Find eigenvalues array ``w`` of array ``a``, where ``b`` is positive\n    definite such that for every eigenvalue \u03bb (i-th entry of w) and its\n    eigenvector vi (i-th column of v) satisfies::\n    \n                      a @ vi = \u03bb * b @ vi\n        vi.conj().T @ a @ vi = \u03bb\n        vi.conj().T @ b @ vi = 1\n    \n    In the standard problem, b is assumed to be the identity matrix.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -4365,7 +4365,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.eigvalsh_tridiagonal",
+            "name": "scipy.linalg.eigvalsh_tridiagonal",
             "description": "Solve eigenvalue problem for a real symmetric tridiagonal matrix.\n    \n    Find eigenvalues `w` of ``a``::\n    \n        a v[:,i] = w[i] v[:,i]\n        v.H v    = identity\n    \n    For a real symmetric matrix ``a`` with diagonal elements `d` and\n    off-diagonal elements `e`.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -4573,7 +4573,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.expm",
+            "name": "scipy.linalg.expm",
             "description": "Compute the matrix exponential of an array.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -4703,7 +4703,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.expm_cond",
+            "name": "scipy.linalg.expm_cond",
             "description": "Relative condition number of the matrix exponential in the Frobenius norm.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -4846,7 +4846,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.expm_frechet",
+            "name": "scipy.linalg.expm_frechet",
             "description": "Frechet derivative of the matrix exponential of A in the direction E.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -5028,7 +5028,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.fiedler",
+            "name": "scipy.linalg.fiedler",
             "description": "Returns a symmetric Fiedler matrix\n    \n    Given an sequence of numbers `a`, Fiedler matrices have the structure\n    ``F[i, j] = np.abs(a[i] - a[j])``, and hence zero diagonals and nonnegative\n    entries. A Fiedler matrix has a dominant positive eigenvalue and other\n    eigenvalues are negative. Although not valid generally, for certain inputs,\n    the inverse and the determinant can be derived explicitly as given in [1]_.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -5158,7 +5158,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.fiedler_companion",
+            "name": "scipy.linalg.fiedler_companion",
             "description": "Returns a Fiedler companion matrix\n    \n    Given a polynomial coefficient array ``a``, this function forms a\n    pentadiagonal matrix with a special structure whose eigenvalues coincides\n    with the roots of ``a``.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -5288,7 +5288,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.find_best_blas_type",
+            "name": "scipy.linalg.find_best_blas_type",
             "description": "Find best-matching BLAS/LAPACK type.\n    \n    Arrays are used to determine the optimal prefix of BLAS routines.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -5431,7 +5431,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.fractional_matrix_power",
+            "name": "scipy.linalg.fractional_matrix_power",
             "description": "Compute the fractional power of a matrix.\n    \n    Proceeds according to the discussion in section (6) of [1]_.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -5574,7 +5574,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.funm",
+            "name": "scipy.linalg.funm",
             "description": "Evaluate a matrix function specified by a callable.\n    \n    Returns the value of matrix-valued function ``f`` at `A`. The\n    function ``f`` is an extension of the scalar-valued function `func`\n    to matrices.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -5730,7 +5730,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.get_blas_funcs",
+            "name": "scipy.linalg.get_blas_funcs",
             "description": "Return available BLAS function objects from names.\n    \n    Arrays are used to determine the optimal prefix of BLAS routines.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -5899,7 +5899,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.get_lapack_funcs",
+            "name": "scipy.linalg.get_lapack_funcs",
             "description": "Return available LAPACK function objects from names.\n    \n    Arrays are used to determine the optimal prefix of LAPACK routines.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -6068,7 +6068,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.hadamard",
+            "name": "scipy.linalg.hadamard",
             "description": "Construct an Hadamard matrix.\n    \n    Constructs an n-by-n Hadamard matrix, using Sylvester's\n    construction. `n` must be a power of 2.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -6211,7 +6211,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.hankel",
+            "name": "scipy.linalg.hankel",
             "description": "Construct a Hankel matrix.\n    \n    The Hankel matrix has constant anti-diagonals, with `c` as its\n    first column and `r` as its last row. If `r` is not given, then\n    `r = zeros_like(c)` is assumed.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -6354,7 +6354,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.helmert",
+            "name": "scipy.linalg.helmert",
             "description": "Create an Helmert matrix of order `n`.\n    \n    This has applications in statistics, compositional or simplicial analysis,\n    and in Aitchison geometry.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -6497,7 +6497,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.hessenberg",
+            "name": "scipy.linalg.hessenberg",
             "description": "Compute Hessenberg form of a matrix.\n    \n    The Hessenberg decomposition is::\n    \n        A = Q H Q^H\n    \n    where `Q` is unitary/orthogonal and `H` has only zero elements below\n    the first sub-diagonal.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -6666,7 +6666,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.inv",
+            "name": "scipy.linalg.inv",
             "description": "Compute the inverse of a matrix.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -6822,7 +6822,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.invhilbert",
+            "name": "scipy.linalg.invhilbert",
             "description": "Compute the inverse of the Hilbert matrix of order `n`.\n    \n    The entries in the inverse of a Hilbert matrix are integers. When `n`\n    is greater than 14, some entries in the inverse exceed the upper limit\n    of 64 bit integers. The `exact` argument provides two options for\n    dealing with these large integers.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -6965,7 +6965,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.invpascal",
+            "name": "scipy.linalg.invpascal",
             "description": "Returns the inverse of the n x n Pascal matrix.\n    \n    The Pascal matrix is a matrix containing the binomial coefficients as\n    its elements.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -7121,7 +7121,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.ishermitian",
+            "name": "scipy.linalg.ishermitian",
             "description": "Check if a square 2D array is Hermitian.\n    Parameters\n    ----------\n    a : ndarray\n        Input array of size (N, N)\n    atol : float, optional\n        Absolute error bound\n    rtol : float, optional\n        Relative error bound\n    Returns\n    -------\n    her : bool\n        Returns True if the array Hermitian.\n    Raises\n    ------\n    TypeError\n        If the dtype of the array is not supported, in particular, NumPy\n        float16, float128 and complex256 dtypes.\n    See Also\n    --------\n    issymmetric : Check if a square 2D array is symmetric\n    Notes\n    -----\n    For square empty arrays the result is returned True by convention.\n    `numpy.inf` will be treated as a number, that is to say ``[[1, inf],\n    [inf, 2]]`` will return ``True``. On the other hand `numpy.nan` is never\n    symmetric, say, ``[[1, nan], [nan, 2]]`` will return ``False``.\n    When ``atol`` and/or ``rtol`` are set to , then the comparison is performed\n    by `numpy.allclose` and the tolerance values are passed to it. Otherwise an\n    exact comparison against zero is performed by internal functions. Hence\n    performance can improve or degrade depending on the size and dtype of the\n    array. If one of ``atol`` or ``rtol`` given the other one is automatically\n    set to zero.\n    Examples\n    --------\n    >>> import numpy as np\n    >>> from scipy.linalg import ishermitian\n    >>> A = np.arange(9).reshape(3, 3)\n    >>> A = A + A.T\n    >>> ishermitian(A)\n    True\n    >>> A = np.array([[1., 2. + 3.j], [2. - 3.j, 4.]])\n    >>> ishermitian(A)\n    True\n    >>> Ac = np.array([[1. + 1.j, 3.j], [3.j, 2.]])\n    >>> ishermitian(Ac)  # not Hermitian but symmetric\n    False\n    >>> Af = np.array([[0, 1 + 1j], [1 - (1+1e-12)*1j, 0]])\n    >>> ishermitian(Af)\n    False\n    >>> ishermitian(Af, atol=5e-11) # almost hermitian with atol\n    True\n    ",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -7277,7 +7277,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.issymmetric",
+            "name": "scipy.linalg.issymmetric",
             "description": "Check if a square 2D array is symmetric.\n    Parameters\n    ----------\n    a : ndarray\n        Input array of size (N, N).\n    atol : float, optional\n        Absolute error bound\n    rtol : float, optional\n        Relative error bound\n    Returns\n    -------\n    sym : bool\n        Returns True if the array symmetric.\n    Raises\n    ------\n    TypeError\n        If the dtype of the array is not supported, in particular, NumPy\n        float16, float128 and complex256 dtypes for exact comparisons.\n    See Also\n    --------\n    ishermitian : Check if a square 2D array is Hermitian\n    Notes\n    -----\n    For square empty arrays the result is returned True by convention. Complex\n    valued arrays are tested for symmetricity and not for being Hermitian (see\n    examples)\n    The diagonal of the array is not scanned. Thus if there are infs, NaNs or\n    similar problematic entries on the diagonal, they will be ignored. However,\n    `numpy.inf` will be treated as a number, that is to say ``[[1, inf],\n    [inf, 2]]`` will return ``True``. On the other hand `numpy.nan` is never\n    symmetric, say, ``[[1, nan], [nan, 2]]`` will return ``False``.\n    When ``atol`` and/or ``rtol`` are set to , then the comparison is performed\n    by `numpy.allclose` and the tolerance values are passed to it. Otherwise an\n    exact comparison against zero is performed by internal functions. Hence\n    performance can improve or degrade depending on the size and dtype of the\n    array. If one of ``atol`` or ``rtol`` given the other one is automatically\n    set to zero.\n    Examples\n    --------\n    >>> import numpy as np\n    >>> from scipy.linalg import issymmetric\n    >>> A = np.arange(9).reshape(3, 3)\n    >>> A = A + A.T\n    >>> issymmetric(A)\n    True\n    >>> Ac = np.array([[1. + 1.j, 3.j], [3.j, 2.]])\n    >>> issymmetric(Ac)  # not Hermitian but symmetric\n    True\n    ",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -7433,7 +7433,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.khatri_rao",
+            "name": "scipy.linalg.khatri_rao",
             "description": "Khatri-rao product\n    \n    A column-wise Kronecker product of two matrices",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -7576,7 +7576,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.kron",
+            "name": "scipy.linalg.kron",
             "description": "Kronecker product.\n    \n    The result is the block matrix::\n    \n        a[0,0]*b    a[0,1]*b  ... a[0,-1]*b\n        a[1,0]*b    a[1,1]*b  ... a[1,-1]*b\n        ...\n        a[-1,0]*b   a[-1,1]*b ... a[-1,-1]*b",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -7719,7 +7719,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.ldl",
+            "name": "scipy.linalg.ldl",
             "description": "Computes the LDLt or Bunch-Kaufman factorization of a symmetric/\n    hermitian matrix.\n    \n    This function returns a block diagonal matrix D consisting blocks of size\n    at most 2x2 and also a possibly permuted unit lower triangular matrix\n    ``L`` such that the factorization ``A = L D L^H`` or ``A = L D L^T``\n    holds. If `lower` is False then (again possibly permuted) upper\n    triangular matrices are returned as outer factors.\n    \n    The permutation array can be used to triangularize the outer factors\n    simply by a row shuffle, i.e., ``lu[perm, :]`` is an upper/lower\n    triangular matrix. This is also equivalent to multiplication with a\n    permutation matrix ``P.dot(lu)``, where ``P`` is a column-permuted\n    identity matrix ``I[:, perm]``.\n    \n    Depending on the value of the boolean `lower`, only upper or lower\n    triangular part of the input array is referenced. Hence, a triangular\n    matrix on entry would give the same result as if the full matrix is\n    supplied.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -7901,7 +7901,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.leslie",
+            "name": "scipy.linalg.leslie",
             "description": "Create a Leslie matrix.\n    \n    Given the length n array of fecundity coefficients `f` and the length\n    n-1 array of survival coefficients `s`, return the associated Leslie\n    matrix.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -8044,7 +8044,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.logm",
+            "name": "scipy.linalg.logm",
             "description": "Compute matrix logarithm.\n    \n    The matrix logarithm is the inverse of\n    expm: expm(logm(`A`)) == `A`",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -8187,7 +8187,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.lstsq",
+            "name": "scipy.linalg.lstsq",
             "description": "Compute least-squares solution to equation Ax = b.\n    \n    Compute a vector x such that the 2-norm ``|b - A x|`` is minimized.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -8395,7 +8395,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.lu",
+            "name": "scipy.linalg.lu",
             "description": "Compute LU decomposition of a matrix with partial pivoting.\n    \n    The decomposition satisfies::\n    \n        A = P @ L @ U\n    \n    where ``P`` is a permutation matrix, ``L`` lower triangular with unit\n    diagonal elements, and ``U`` upper triangular. If `permute_l` is set to\n    ``True`` then ``L`` is returned already permuted and hence satisfying\n    ``A = L @ U``.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -8577,7 +8577,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.lu_factor",
+            "name": "scipy.linalg.lu_factor",
             "description": "Compute pivoted LU decomposition of a matrix.\n    \n    The decomposition is::\n    \n        A = P L U\n    \n    where P is a permutation matrix, L lower triangular with unit\n    diagonal elements, and U upper triangular.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -8733,7 +8733,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.lu_solve",
+            "name": "scipy.linalg.lu_solve",
             "description": "Solve an equation system, a x = b, given the LU factorization of a",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -8915,7 +8915,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.matmul_toeplitz",
+            "name": "scipy.linalg.matmul_toeplitz",
             "description": "Efficient Toeplitz Matrix-Matrix Multiplication using FFT\n    \n    This function returns the matrix multiplication between a Toeplitz\n    matrix and a dense matrix.\n    \n    The Toeplitz matrix has constant diagonals, with c as its first column\n    and r as its first row. If r is not given, ``r == conjugate(c)`` is\n    assumed.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -9084,7 +9084,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.matrix_balance",
+            "name": "scipy.linalg.matrix_balance",
             "description": "Compute a diagonal similarity transformation for row/column balancing.\n    \n    The balancing tries to equalize the row and column 1-norms by applying\n    a similarity transformation such that the magnitude variation of the\n    matrix entries is reflected to the scaling matrices.\n    \n    Moreover, if enabled, the matrix is first permuted to isolate the upper\n    triangular parts of the matrix and, again if scaling is also enabled,\n    only the remaining subblocks are subjected to scaling.\n    \n    The balanced matrix satisfies the following equality\n    \n    .. math::\n    \n                        B = T^{-1} A T\n    \n    The scaling coefficients are approximated to the nearest power of 2\n    to avoid round-off errors.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -9266,7 +9266,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.norm",
+            "name": "scipy.linalg.norm",
             "description": "Matrix or vector norm.\n    \n    This function is able to return one of eight different matrix norms,\n    or one of an infinite number of vector norms (described below), depending\n    on the value of the ``ord`` parameter. For tensors with rank different from\n    1 or 2, only `ord=None` is supported.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -9448,7 +9448,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.null_space",
+            "name": "scipy.linalg.null_space",
             "description": "Construct an orthonormal basis for the null space of A using SVD",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -9591,7 +9591,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.ordqz",
+            "name": "scipy.linalg.ordqz",
             "description": "QZ decomposition for a pair of matrices with reordering.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -9799,7 +9799,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.orth",
+            "name": "scipy.linalg.orth",
             "description": "Construct an orthonormal basis for the range of A using SVD",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -9942,7 +9942,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.orthogonal_procrustes",
+            "name": "scipy.linalg.orthogonal_procrustes",
             "description": "Compute the matrix solution of the orthogonal Procrustes problem.\n    \n    Given matrices A and B of equal shape, find an orthogonal matrix R\n    that most closely maps A to B using the algorithm given in [1]_.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -10098,7 +10098,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.pascal",
+            "name": "scipy.linalg.pascal",
             "description": "Returns the n x n Pascal matrix.\n    \n    The Pascal matrix is a matrix containing the binomial coefficients as\n    its elements.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -10254,7 +10254,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.pinv",
+            "name": "scipy.linalg.pinv",
             "description": "Compute the (Moore-Penrose) pseudo-inverse of a matrix.\n    \n    Calculate a generalized inverse of a matrix using its\n    singular-value decomposition ``U @ S @ V`` in the economy mode and picking\n    up only the columns/rows that are associated with significant singular\n    values.\n    \n    If ``s`` is the maximum singular value of ``a``, then the\n    significance cut-off value is determined by ``atol + rtol * s``. Any\n    singular value below this value is assumed insignificant.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -10462,7 +10462,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.pinvh",
+            "name": "scipy.linalg.pinvh",
             "description": "Compute the (Moore-Penrose) pseudo-inverse of a Hermitian matrix.\n    \n    Calculate a generalized inverse of a complex Hermitian/real symmetric\n    matrix using its eigenvalue decomposition and including all eigenvalues\n    with 'large' absolute value.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -10657,7 +10657,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.polar",
+            "name": "scipy.linalg.polar",
             "description": "Compute the polar decomposition.\n    \n    Returns the factors of the polar decomposition [1]_ `u` and `p` such\n    that ``a = up`` (if `side` is \"right\") or ``a = pu`` (if `side` is\n    \"left\"), where `p` is positive semidefinite. Depending on the shape\n    of `a`, either the rows or columns of `u` are orthonormal. When `a`\n    is a square array, `u` is a square unitary array. When `a` is not\n    square, the \"canonical polar decomposition\" [2]_ is computed.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -10800,7 +10800,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.qr",
+            "name": "scipy.linalg.qr",
             "description": "Compute QR decomposition of a matrix.\n    \n    Calculate the decomposition ``A = Q R`` where Q is unitary/orthogonal\n    and R upper triangular.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -10995,7 +10995,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.qr_delete",
+            "name": "scipy.linalg.qr_delete",
             "description": "\nQR downdate on row or column deletions\nIf ``A = Q R`` is the QR factorization of ``A``, return the QR\nfactorization of ``A`` where ``p`` rows or columns have been removed\nstarting at row or column ``k``.\nParameters\n----------\nQ : (M, M) or (M, N) array_like\n    Unitary/orthogonal matrix from QR decomposition.\nR : (M, N) or (N, N) array_like\n    Upper triangular matrix from QR decomposition.\nk : int\n    Index of the first row or column to delete.\np : int, optional\n    Number of rows or columns to delete, defaults to 1.\nwhich: {'row', 'col'}, optional\n    Determines if rows or columns will be deleted, defaults to 'row'\noverwrite_qr : bool, optional\n    If True, consume Q and R, overwriting their contents with their\n    downdated versions, and returning approriately sized views.\n    Defaults to False.\ncheck_finite : bool, optional\n    Whether to check that the input matrix contains only finite numbers.\n    Disabling may give a performance gain, but may result in problems\n    (crashes, non-termination) if the inputs do contain infinities or NaNs.\n    Default is True.\nReturns\n-------\nQ1 : ndarray\n    Updated unitary/orthogonal factor\nR1 : ndarray\n    Updated upper triangular factor\nSee Also\n--------\nqr, qr_multiply, qr_insert, qr_update\nNotes\n-----\nThis routine does not guarantee that the diagonal entries of ``R1`` are\npositive.\n.. versionadded:: 0.16.0\nReferences\n----------\n.. [1] Golub, G. H. & Van Loan, C. F. Matrix Computations, 3rd Ed.\n       (Johns Hopkins University Press, 1996).\n.. [2] Daniel, J. W., Gragg, W. B., Kaufman, L. & Stewart, G. W.\n       Reorthogonalization and stable algorithms for updating the\n       Gram-Schmidt QR factorization. Math. Comput. 30, 772-795 (1976).\n.. [3] Reichel, L. & Gragg, W. B. Algorithm 686: FORTRAN Subroutines for\n       Updating the QR Decomposition. ACM Trans. Math. Softw. 16, 369-377\n       (1990).\nExamples\n--------\n>>> import numpy as np\n>>> from scipy import linalg\n>>> a = np.array([[  3.,  -2.,  -2.],\n...               [  6.,  -9.,  -3.],\n...               [ -3.,  10.,   1.],\n...               [  6.,  -7.,   4.],\n...               [  7.,   8.,  -6.]])\n>>> q, r = linalg.qr(a)\nGiven this QR decomposition, update q and r when 2 rows are removed.\n>>> q1, r1 = linalg.qr_delete(q, r, 2, 2, 'row', False)\n>>> q1\narray([[ 0.30942637,  0.15347579,  0.93845645],  # may vary (signs)\n       [ 0.61885275,  0.71680171, -0.32127338],\n       [ 0.72199487, -0.68017681, -0.12681844]])\n>>> r1\narray([[  9.69535971,  -0.4125685 ,  -6.80738023],  # may vary (signs)\n       [  0.        , -12.19958144,   1.62370412],\n       [  0.        ,   0.        ,  -0.15218213]])\nThe update is equivalent, but faster than the following.\n>>> a1 = np.delete(a, slice(2,4), 0)\n>>> a1\narray([[ 3., -2., -2.],\n       [ 6., -9., -3.],\n       [ 7.,  8., -6.]])\n>>> q_direct, r_direct = linalg.qr(a1)\nCheck that we have equivalent results:\n>>> np.dot(q1, r1)\narray([[ 3., -2., -2.],\n       [ 6., -9., -3.],\n       [ 7.,  8., -6.]])\n>>> np.allclose(np.dot(q1, r1), a1)\nTrue\nAnd the updated Q is still unitary:\n>>> np.allclose(np.dot(q1.T, q1), np.eye(3))\nTrue",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -11216,7 +11216,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.qr_insert",
+            "name": "scipy.linalg.qr_insert",
             "description": "\nQR update on row or column insertions\nIf ``A = Q R`` is the QR factorization of ``A``, return the QR\nfactorization of ``A`` where rows or columns have been inserted starting\nat row or column ``k``.\nParameters\n----------\nQ : (M, M) array_like\n    Unitary/orthogonal matrix from the QR decomposition of A.\nR : (M, N) array_like\n    Upper triangular matrix from the QR decomposition of A.\nu : (N,), (p, N), (M,), or (M, p) array_like\n    Rows or columns to insert\nk : int\n    Index before which `u` is to be inserted.\nwhich: {'row', 'col'}, optional\n    Determines if rows or columns will be inserted, defaults to 'row'\nrcond : float\n    Lower bound on the reciprocal condition number of ``Q`` augmented with\n    ``u/||u||`` Only used when updating economic mode (thin, (M,N) (N,N))\n    decompositions.  If None, machine precision is used.  Defaults to\n    None.\noverwrite_qru : bool, optional\n    If True, consume Q, R, and u, if possible, while performing the update,\n    otherwise make copies as necessary. Defaults to False.\ncheck_finite : bool, optional\n    Whether to check that the input matrices contain only finite numbers.\n    Disabling may give a performance gain, but may result in problems\n    (crashes, non-termination) if the inputs do contain infinities or NaNs.\n    Default is True.\nReturns\n-------\nQ1 : ndarray\n    Updated unitary/orthogonal factor\nR1 : ndarray\n    Updated upper triangular factor\nRaises\n------\nLinAlgError :\n    If updating a (M,N) (N,N) factorization and the reciprocal condition\n    number of Q augmented with u/||u|| is smaller than rcond.\nSee Also\n--------\nqr, qr_multiply, qr_delete, qr_update\nNotes\n-----\nThis routine does not guarantee that the diagonal entries of ``R1`` are\npositive.\n.. versionadded:: 0.16.0\nReferences\n----------\n.. [1] Golub, G. H. & Van Loan, C. F. Matrix Computations, 3rd Ed.\n       (Johns Hopkins University Press, 1996).\n.. [2] Daniel, J. W., Gragg, W. B., Kaufman, L. & Stewart, G. W.\n       Reorthogonalization and stable algorithms for updating the\n       Gram-Schmidt QR factorization. Math. Comput. 30, 772-795 (1976).\n.. [3] Reichel, L. & Gragg, W. B. Algorithm 686: FORTRAN Subroutines for\n       Updating the QR Decomposition. ACM Trans. Math. Softw. 16, 369-377\n       (1990).\nExamples\n--------\n>>> import numpy as np\n>>> from scipy import linalg\n>>> a = np.array([[  3.,  -2.,  -2.],\n...               [  6.,  -7.,   4.],\n...               [  7.,   8.,  -6.]])\n>>> q, r = linalg.qr(a)\nGiven this QR decomposition, update q and r when 2 rows are inserted.\n>>> u = np.array([[  6.,  -9.,  -3.],\n...               [ -3.,  10.,   1.]])\n>>> q1, r1 = linalg.qr_insert(q, r, u, 2, 'row')\n>>> q1\narray([[-0.25445668,  0.02246245,  0.18146236, -0.72798806,  0.60979671],  # may vary (signs)\n       [-0.50891336,  0.23226178, -0.82836478, -0.02837033, -0.00828114],\n       [-0.50891336,  0.35715302,  0.38937158,  0.58110733,  0.35235345],\n       [ 0.25445668, -0.52202743, -0.32165498,  0.36263239,  0.65404509],\n       [-0.59373225, -0.73856549,  0.16065817, -0.0063658 , -0.27595554]])\n>>> r1\narray([[-11.78982612,   6.44623587,   3.81685018],  # may vary (signs)\n       [  0.        , -16.01393278,   3.72202865],\n       [  0.        ,   0.        ,  -6.13010256],\n       [  0.        ,   0.        ,   0.        ],\n       [  0.        ,   0.        ,   0.        ]])\nThe update is equivalent, but faster than the following.\n>>> a1 = np.insert(a, 2, u, 0)\n>>> a1\narray([[  3.,  -2.,  -2.],\n       [  6.,  -7.,   4.],\n       [  6.,  -9.,  -3.],\n       [ -3.,  10.,   1.],\n       [  7.,   8.,  -6.]])\n>>> q_direct, r_direct = linalg.qr(a1)\nCheck that we have equivalent results:\n>>> np.dot(q1, r1)\narray([[  3.,  -2.,  -2.],\n       [  6.,  -7.,   4.],\n       [  6.,  -9.,  -3.],\n       [ -3.,  10.,   1.],\n       [  7.,   8.,  -6.]])\n>>> np.allclose(np.dot(q1, r1), a1)\nTrue\nAnd the updated Q is still unitary:\n>>> np.allclose(np.dot(q1.T, q1), np.eye(5))\nTrue",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -11437,7 +11437,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.qr_multiply",
+            "name": "scipy.linalg.qr_multiply",
             "description": "Calculate the QR decomposition and multiply Q with a matrix.\n    \n    Calculate the decomposition ``A = Q R`` where Q is unitary/orthogonal\n    and R upper triangular. Multiply Q with a vector or a matrix c.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -11645,7 +11645,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.qr_update",
+            "name": "scipy.linalg.qr_update",
             "description": "\nRank-k QR update\nIf ``A = Q R`` is the QR factorization of ``A``, return the QR\nfactorization of ``A + u v**T`` for real ``A`` or ``A + u v**H``\nfor complex ``A``.\nParameters\n----------\nQ : (M, M) or (M, N) array_like\n    Unitary/orthogonal matrix from the qr decomposition of A.\nR : (M, N) or (N, N) array_like\n    Upper triangular matrix from the qr decomposition of A.\nu : (M,) or (M, k) array_like\n    Left update vector\nv : (N,) or (N, k) array_like\n    Right update vector\noverwrite_qruv : bool, optional\n    If True, consume Q, R, u, and v, if possible, while performing the\n    update, otherwise make copies as necessary. Defaults to False.\ncheck_finite : bool, optional\n    Whether to check that the input matrix contains only finite numbers.\n    Disabling may give a performance gain, but may result in problems\n    (crashes, non-termination) if the inputs do contain infinities or NaNs.\n    Default is True.\nReturns\n-------\nQ1 : ndarray\n    Updated unitary/orthogonal factor\nR1 : ndarray\n    Updated upper triangular factor\nSee Also\n--------\nqr, qr_multiply, qr_delete, qr_insert\nNotes\n-----\nThis routine does not guarantee that the diagonal entries of `R1` are\nreal or positive.\n.. versionadded:: 0.16.0\nReferences\n----------\n.. [1] Golub, G. H. & Van Loan, C. F. Matrix Computations, 3rd Ed.\n       (Johns Hopkins University Press, 1996).\n.. [2] Daniel, J. W., Gragg, W. B., Kaufman, L. & Stewart, G. W.\n       Reorthogonalization and stable algorithms for updating the\n       Gram-Schmidt QR factorization. Math. Comput. 30, 772-795 (1976).\n.. [3] Reichel, L. & Gragg, W. B. Algorithm 686: FORTRAN Subroutines for\n       Updating the QR Decomposition. ACM Trans. Math. Softw. 16, 369-377\n       (1990).\nExamples\n--------\n>>> import numpy as np\n>>> from scipy import linalg\n>>> a = np.array([[  3.,  -2.,  -2.],\n...               [  6.,  -9.,  -3.],\n...               [ -3.,  10.,   1.],\n...               [  6.,  -7.,   4.],\n...               [  7.,   8.,  -6.]])\n>>> q, r = linalg.qr(a)\nGiven this q, r decomposition, perform a rank 1 update.\n>>> u = np.array([7., -2., 4., 3., 5.])\n>>> v = np.array([1., 3., -5.])\n>>> q_up, r_up = linalg.qr_update(q, r, u, v, False)\n>>> q_up\narray([[ 0.54073807,  0.18645997,  0.81707661, -0.02136616,  0.06902409],  # may vary (signs)\n       [ 0.21629523, -0.63257324,  0.06567893,  0.34125904, -0.65749222],\n       [ 0.05407381,  0.64757787, -0.12781284, -0.20031219, -0.72198188],\n       [ 0.48666426, -0.30466718, -0.27487277, -0.77079214,  0.0256951 ],\n       [ 0.64888568,  0.23001   , -0.4859845 ,  0.49883891,  0.20253783]])\n>>> r_up\narray([[ 18.49324201,  24.11691794, -44.98940746],  # may vary (signs)\n       [  0.        ,  31.95894662, -27.40998201],\n       [  0.        ,   0.        ,  -9.25451794],\n       [  0.        ,   0.        ,   0.        ],\n       [  0.        ,   0.        ,   0.        ]])\nThe update is equivalent, but faster than the following.\n>>> a_up = a + np.outer(u, v)\n>>> q_direct, r_direct = linalg.qr(a_up)\nCheck that we have equivalent results:\n>>> np.allclose(np.dot(q_up, r_up), a_up)\nTrue\nAnd the updated Q is still unitary:\n>>> np.allclose(np.dot(q_up.T, q_up), np.eye(5))\nTrue\nUpdating economic (reduced, thin) decompositions is also possible:\n>>> qe, re = linalg.qr(a, mode='economic')\n>>> qe_up, re_up = linalg.qr_update(qe, re, u, v, False)\n>>> qe_up\narray([[ 0.54073807,  0.18645997,  0.81707661],  # may vary (signs)\n       [ 0.21629523, -0.63257324,  0.06567893],\n       [ 0.05407381,  0.64757787, -0.12781284],\n       [ 0.48666426, -0.30466718, -0.27487277],\n       [ 0.64888568,  0.23001   , -0.4859845 ]])\n>>> re_up\narray([[ 18.49324201,  24.11691794, -44.98940746],  # may vary (signs)\n       [  0.        ,  31.95894662, -27.40998201],\n       [  0.        ,   0.        ,  -9.25451794]])\n>>> np.allclose(np.dot(qe_up, re_up), a_up)\nTrue\n>>> np.allclose(np.dot(qe_up.T, qe_up), np.eye(3))\nTrue\nSimilarly to the above, perform a rank 2 update.\n>>> u2 = np.array([[ 7., -1,],\n...                [-2.,  4.],\n...                [ 4.,  2.],\n...                [ 3., -6.],\n...                [ 5.,  3.]])\n>>> v2 = np.array([[ 1., 2.],\n...                [ 3., 4.],\n...                [-5., 2]])\n>>> q_up2, r_up2 = linalg.qr_update(q, r, u2, v2, False)\n>>> q_up2\narray([[-0.33626508, -0.03477253,  0.61956287, -0.64352987, -0.29618884],  # may vary (signs)\n       [-0.50439762,  0.58319694, -0.43010077, -0.33395279,  0.33008064],\n       [-0.21016568, -0.63123106,  0.0582249 , -0.13675572,  0.73163206],\n       [ 0.12609941,  0.49694436,  0.64590024,  0.31191919,  0.47187344],\n       [-0.75659643, -0.11517748,  0.10284903,  0.5986227 , -0.21299983]])\n>>> r_up2\narray([[-23.79075451, -41.1084062 ,  24.71548348],  # may vary (signs)\n       [  0.        , -33.83931057,  11.02226551],\n       [  0.        ,   0.        ,  48.91476811],\n       [  0.        ,   0.        ,   0.        ],\n       [  0.        ,   0.        ,   0.        ]])\nThis update is also a valid qr decomposition of ``A + U V**T``.\n>>> a_up2 = a + np.dot(u2, v2.T)\n>>> np.allclose(a_up2, np.dot(q_up2, r_up2))\nTrue\n>>> np.allclose(np.dot(q_up2.T, q_up2), np.eye(5))\nTrue",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -11840,7 +11840,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.qz",
+            "name": "scipy.linalg.qz",
             "description": "QZ decomposition for generalized eigenvalues of a pair of matrices.\n    \n    The QZ, or generalized Schur, decomposition for a pair of n-by-n\n    matrices (A,B) is::\n    \n        (A,B) = (Q @ AA @ Z*, Q @ BB @ Z*)\n    \n    where AA, BB is in generalized Schur form if BB is upper-triangular\n    with non-negative diagonal and AA is upper-triangular, or for real QZ\n    decomposition (``output='real'``) block upper triangular with 1x1\n    and 2x2 blocks. In this case, the 1x1 blocks correspond to real\n    generalized eigenvalues and 2x2 blocks are 'standardized' by making\n    the corresponding elements of BB have the form::\n    \n        [ a 0 ]\n        [ 0 b ]\n    \n    and the pair of corresponding 2x2 blocks in AA and BB will have a complex\n    conjugate pair of generalized eigenvalues. If (``output='complex'``) or\n    A and B are complex matrices, Z' denotes the conjugate-transpose of Z.\n    Q and Z are unitary matrices.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -12061,7 +12061,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.rq",
+            "name": "scipy.linalg.rq",
             "description": "Compute RQ decomposition of a matrix.\n    \n    Calculate the decomposition ``A = R Q`` where Q is unitary/orthogonal\n    and R upper triangular.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -12243,7 +12243,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.rsf2csf",
+            "name": "scipy.linalg.rsf2csf",
             "description": "Convert real Schur form to complex Schur form.\n    \n    Convert a quasi-diagonal real-valued Schur form to the upper-triangular\n    complex-valued Schur form.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -12399,7 +12399,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.schur",
+            "name": "scipy.linalg.schur",
             "description": "Compute Schur decomposition of a matrix.\n    \n    The Schur decomposition is::\n    \n        A = Z T Z^H\n    \n    where Z is unitary and T is either upper-triangular, or for real\n    Schur decomposition (output='real'), quasi-upper triangular. In\n    the quasi-triangular form, 2x2 blocks describing complex-valued\n    eigenvalue pairs may extrude from the diagonal.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -12594,7 +12594,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.signm",
+            "name": "scipy.linalg.signm",
             "description": "Matrix sign function.\n    \n    Extension of the scalar sign(x) to matrices.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -12737,7 +12737,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.sinhm",
+            "name": "scipy.linalg.sinhm",
             "description": "Compute the hyperbolic matrix sine.\n    \n    This routine uses expm to compute the matrix exponentials.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -12867,7 +12867,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.sinm",
+            "name": "scipy.linalg.sinm",
             "description": "Compute the matrix sine.\n    \n    This routine uses expm to compute the matrix exponentials.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -12997,228 +12997,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.solve",
-            "description": "Solves the linear equation set ``a @ x == b`` for the unknown ``x``\n    for square `a` matrix.\n    \n    If the data matrix is known to be a particular type then supplying the\n    corresponding string to ``assume_a`` key chooses the dedicated solver.\n    The available options are\n    \n    ===================  ========\n     generic matrix       'gen'\n     symmetric            'sym'\n     hermitian            'her'\n     positive definite    'pos'\n    ===================  ========\n    \n    If omitted, ``'gen'`` is the default structure.\n    \n    The datatype of the arrays define which solver is called regardless\n    of the values. In other words, even when the complex array entries have\n    precisely zero imaginary parts, the complex solver will be called based\n    on the data type of the array.",
-            "repositoryUrl": "dlg_paletteGen.generated",
-            "commitHash": "0.1",
-            "paletteDownloadUrl": "",
-            "dataHash": "09fa97dd783dc109052f89df8c9f3785e9a2282d9045a7fe081da814d4cfdbb8",
-            "fields": [
-                {
-                    "name": "a",
-                    "value": null,
-                    "defaultValue": null,
-                    "description": "(N, N) array_like     Square input data ",
-                    "type": "Object",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": null,
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "b",
-                    "value": null,
-                    "defaultValue": null,
-                    "description": "(N, NRHS) array_like     Input data for the right hand side. ",
-                    "type": "Object",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": null,
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "lower",
-                    "value": null,
-                    "defaultValue": null,
-                    "description": "bool, default: False     Ignored if ``assume_a == 'gen'`` (the default). If True, the     calculation uses only the data in the lower triangle of `a`;     entries above the diagonal are ignored. If False (default), the     calculation uses only the data in the upper triangle of `a`; entries     below the diagonal are ignored. ",
-                    "type": "Object",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": null,
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "overwrite_a",
-                    "value": null,
-                    "defaultValue": null,
-                    "description": "bool, default: False     Allow overwriting data in `a` (may enhance performance). ",
-                    "type": "Object",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": null,
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "overwrite_b",
-                    "value": null,
-                    "defaultValue": null,
-                    "description": "bool, default: False     Allow overwriting data in `b` (may enhance performance). ",
-                    "type": "Object",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": null,
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "check_finite",
-                    "value": null,
-                    "defaultValue": null,
-                    "description": "bool, default: True     Whether to check that the input matrices contain only finite numbers.     Disabling may give a performance gain, but may result in problems     (crashes, non-termination) if the inputs do contain infinities or NaNs. ",
-                    "type": "Object",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": null,
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "assume_a",
-                    "value": "gen",
-                    "defaultValue": "gen",
-                    "description": "str, {'gen', 'sym', 'her', 'pos'}     Valid entries are explained above. ",
-                    "type": "Object",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": null,
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "transposed",
-                    "value": "gen",
-                    "defaultValue": "gen",
-                    "description": "bool, default: False     If True, solve ``a.T @ x == b``. Raises `NotImplementedError`     for complex `a`. ",
-                    "type": "Object",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": null,
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "group_start",
-                    "value": "false",
-                    "defaultValue": "dummy",
-                    "description": "Is this node the start of a group?",
-                    "type": "Boolean",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": null,
-                    "precious": false,
-                    "positional": false,
-                    "default_value": "false"
-                },
-                {
-                    "name": "execution_time",
-                    "value": 2,
-                    "defaultValue": 2,
-                    "description": "Estimate of execution time (in seconds) for this application.",
-                    "type": "Integer",
-                    "parameterType": "ConstraintParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": null,
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "num_cpus",
-                    "value": 1,
-                    "defaultValue": "dummy",
-                    "description": "Number of cores used.",
-                    "type": "Integer",
-                    "parameterType": "ConstraintParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": null,
-                    "precious": false,
-                    "positional": false,
-                    "default_value": 1
-                },
-                {
-                    "name": "func_name",
-                    "value": "scipy.linalg._basic.solve",
-                    "defaultValue": "scipy.linalg._basic.solve",
-                    "description": "Complete import path of function",
-                    "type": "String",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": true,
-                    "options": null,
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "dropclass",
-                    "value": "dlg.apps.pyfunc.PyFuncApp",
-                    "defaultValue": "dlg.apps.pyfunc.PyFuncApp",
-                    "description": "The python class that implements this application",
-                    "type": "String",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": true,
-                    "options": null,
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                }
-            ]
-        },
-        {
-            "category": "PythonApp",
-            "key": -1,
-            "name": "scipy.solve_banded",
+            "name": "scipy.linalg.solve_banded",
             "description": "Solve the equation a x = b for x, assuming a is banded matrix.\n    \n    The matrix a is stored in `ab` using the matrix diagonal ordered form::\n    \n        ab[u + i - j, j] == a[i,j]\n    \n    Example of `ab` (shape of a is (6,6), `u` =1, `l` =2)::\n    \n        *    a01  a12  a23  a34  a45\n        a00  a11  a22  a33  a44  a55\n        a10  a21  a32  a43  a54   *\n        a20  a31  a42  a53   *    *",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -13413,7 +13192,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.solve_circulant",
+            "name": "scipy.linalg.solve_circulant",
             "description": "Solve C x = b for x, where C is a circulant matrix.\n    \n    `C` is the circulant matrix associated with the vector `c`.\n    \n    The system is solved by doing division in Fourier space. The\n    calculation is::\n    \n        x = ifft(fft(b) / fft(c))\n    \n    where `fft` and `ifft` are the fast Fourier transform and its inverse,\n    respectively. For a large vector `c`, this is *much* faster than\n    solving the system with the full circulant matrix.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -13621,7 +13400,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.solve_continuous_are",
+            "name": "scipy.linalg.solve_continuous_are",
             "description": "Solves the continuous-time algebraic Riccati equation (CARE).\n    \n    The CARE is defined as\n    \n    .. math::\n    \n          X A + A^H X - X B R^{-1} B^H X + Q = 0\n    \n    The limitations for a solution to exist are :\n    \n        * All eigenvalues of :math:`A` on the right half plane, should be\n          controllable.\n    \n        * The associated hamiltonian pencil (See Notes), should have\n          eigenvalues sufficiently away from the imaginary axis.\n    \n    Moreover, if ``e`` or ``s`` is not precisely ``None``, then the\n    generalized version of CARE\n    \n    .. math::\n    \n          E^HXA + A^HXE - (E^HXB + S) R^{-1} (B^HXE + S^H) + Q = 0\n    \n    is solved. When omitted, ``e`` is assumed to be the identity and ``s``\n    is assumed to be the zero matrix with sizes compatible with ``a`` and\n    ``b``, respectively.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -13829,7 +13608,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.solve_continuous_lyapunov",
+            "name": "scipy.linalg.solve_continuous_lyapunov",
             "description": "Solves the continuous Lyapunov equation :math:`AX + XA^H = Q`.\n    \n    Uses the Bartels-Stewart algorithm to find :math:`X`.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -13972,7 +13751,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.solve_discrete_are",
+            "name": "scipy.linalg.solve_discrete_are",
             "description": "Solves the discrete-time algebraic Riccati equation (DARE).\n    \n    The DARE is defined as\n    \n    .. math::\n    \n          A^HXA - X - (A^HXB) (R + B^HXB)^{-1} (B^HXA) + Q = 0\n    \n    The limitations for a solution to exist are :\n    \n        * All eigenvalues of :math:`A` outside the unit disc, should be\n          controllable.\n    \n        * The associated symplectic pencil (See Notes), should have\n          eigenvalues sufficiently away from the unit circle.\n    \n    Moreover, if ``e`` and ``s`` are not both precisely ``None``, then the\n    generalized version of DARE\n    \n    .. math::\n    \n          A^HXA - E^HXE - (A^HXB+S) (R+B^HXB)^{-1} (B^HXA+S^H) + Q = 0\n    \n    is solved. When omitted, ``e`` is assumed to be the identity and ``s``\n    is assumed to be the zero matrix.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -14180,7 +13959,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.solve_discrete_lyapunov",
+            "name": "scipy.linalg.solve_discrete_lyapunov",
             "description": "Solves the discrete Lyapunov equation :math:`AXA^H - X + Q = 0`.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -14336,7 +14115,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.solve_sylvester",
+            "name": "scipy.linalg.solve_sylvester",
             "description": "Computes a solution (X) to the Sylvester equation :math:`AX + XB = Q`.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -14492,7 +14271,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.solve_toeplitz",
+            "name": "scipy.linalg.solve_toeplitz",
             "description": "Solve a Toeplitz system using Levinson Recursion\n    \n    The Toeplitz matrix has constant diagonals, with c as its first column\n    and r as its first row. If r is not given, ``r == conjugate(c)`` is\n    assumed.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -14648,7 +14427,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.solve_triangular",
+            "name": "scipy.linalg.solve_triangular",
             "description": "Solve the equation `a x = b` for `x`, assuming a is a triangular matrix.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -14856,7 +14635,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.solveh_banded",
+            "name": "scipy.linalg.solveh_banded",
             "description": "Solve equation a x = b. a is Hermitian positive-definite banded matrix.\n    \n    Uses Thomas' Algorithm, which is more efficient than standard LU\n    factorization, but should only be used for Hermitian positive-definite\n    matrices.\n    \n    The matrix ``a`` is stored in `ab` either in lower diagonal or upper\n    diagonal ordered form:\n    \n        ab[u + i - j, j] == a[i,j]        (if upper form; i <= j)\n        ab[    i - j, j] == a[i,j]        (if lower form; i >= j)\n    \n    Example of `ab` (shape of ``a`` is (6, 6), number of upper diagonals,\n    ``u`` =2)::\n    \n        upper form:\n        *   *   a02 a13 a24 a35\n        *   a01 a12 a23 a34 a45\n        a00 a11 a22 a33 a44 a55\n    \n        lower form:\n        a00 a11 a22 a33 a44 a55\n        a10 a21 a32 a43 a54 *\n        a20 a31 a42 a53 *   *\n    \n    Cells marked with * are not used.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -15051,7 +14830,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.sqrtm",
+            "name": "scipy.linalg.sqrtm",
             "description": "Matrix square root.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -15207,7 +14986,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.subspace_angles",
+            "name": "scipy.linalg.subspace_angles",
             "description": "Compute the subspace angles between two matrices.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -15350,7 +15129,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.svd",
+            "name": "scipy.linalg.svd",
             "description": "Singular Value Decomposition.\n    \n    Factorizes the matrix `a` into two unitary matrices ``U`` and ``Vh``, and\n    a 1-D array ``s`` of singular values (real, non-negative) such that\n    ``a == U @ S @ Vh``, where ``S`` is a suitably shaped matrix of zeros with\n    main diagonal ``s``.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -15545,7 +15324,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.svdvals",
+            "name": "scipy.linalg.svdvals",
             "description": "Compute singular values of a matrix.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -15701,7 +15480,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.tanhm",
+            "name": "scipy.linalg.tanhm",
             "description": "Compute the hyperbolic matrix tangent.\n    \n    This routine uses expm to compute the matrix exponentials.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -15831,7 +15610,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.tanm",
+            "name": "scipy.linalg.tanm",
             "description": "Compute the matrix tangent.\n    \n    This routine uses expm to compute the matrix exponentials.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -15961,7 +15740,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.toeplitz",
+            "name": "scipy.linalg.toeplitz",
             "description": "Construct a Toeplitz matrix.\n    \n    The Toeplitz matrix has constant diagonals, with c as its first column\n    and r as its first row. If r is not given, ``r == conjugate(c)`` is\n    assumed.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -16104,7 +15883,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.tri",
+            "name": "scipy.linalg.tri",
             "description": ".. deprecated:: 1.11.0\n        `tri` is deprecated in favour of `numpy.tri` and will be removed in\n        SciPy 1.13.0.    \n    \n    Construct (N, M) matrix filled with ones at and below the kth diagonal.\n    \n    The matrix has A[i,j] == 1 for j <= i + k",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -16273,7 +16052,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.tril",
+            "name": "scipy.linalg.tril",
             "description": ".. deprecated:: 1.11.0\n        `tril` is deprecated in favour of `numpy.tril` and will be removed in\n        SciPy 1.13.0.\n    \n    Make a copy of a matrix with elements above the kth diagonal zeroed.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -16416,7 +16195,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.triu",
+            "name": "scipy.linalg.triu",
             "description": ".. deprecated:: 1.11.0\n        `tril` is deprecated in favour of `numpy.triu` and will be removed in\n        SciPy 1.13.0.\n    \n    Make a copy of a matrix with elements below the kth diagonal zeroed.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -16559,7 +16338,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.eye",
+            "name": "scipy.linalg.decomp.eye",
             "description": "Return a 2-D array with ones on the diagonal and zeros elsewhere.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -16754,7 +16533,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.asarray_chkfinite",
+            "name": "scipy.linalg.decomp_cholesky.asarray_chkfinite",
             "description": "Convert the input to an array, checking for NaNs or Infs.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -16910,7 +16689,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.safecall",
+            "name": "scipy.linalg.decomp_qr.safecall",
             "description": "Call a LAPACK routine, determining lwork automatically and handling\n    error return values",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -17079,7 +16858,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.get_flinalg_funcs",
+            "name": "scipy.linalg.flinalg.get_flinalg_funcs",
             "description": "Return optimal available _flinalg function objects with\n    names. Arrays are used to determine optimal prefix.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -17235,7 +17014,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.has_column_major_storage",
+            "name": "scipy.linalg.flinalg.has_column_major_storage",
             "description": "No description found",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -17365,7 +17144,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.as_strided",
+            "name": "scipy.linalg.special_matrices.as_strided",
             "description": "Create a view into the array with the given shape and strides.\n    \n    .. warning:: This function has to be used with extreme care, see notes.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",

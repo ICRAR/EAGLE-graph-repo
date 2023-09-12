@@ -17,13 +17,13 @@
         "signature": "bcbe2ab4f7e3e4e89ae1a6c870dee88b85615e3fd559e175c9926f4eba55e36d",
         "lastModifiedName": "wici",
         "lastModifiedEmail": "",
-        "lastModifiedDatetime": 1694517742.804527
+        "lastModifiedDatetime": 1694535532.430823
     },
     "nodeDataArray": [
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.ascent",
+            "name": "scipy.datasets.ascent",
             "description": "Get an 8-bit grayscale bit-depth, 512 x 512 derived image for easy\n    use in demos.\n    \n    The image is derived from accent-to-the-top.jpg at\n    http://www.public-domain-image.com/people-public-domain-images-pictures/",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -140,7 +140,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.clear_cache",
+            "name": "scipy.datasets.clear_cache",
             "description": "Cleans the scipy datasets cache directory.\n    \n    If a scipy.datasets method or a list/tuple of the same is\n    provided, then clear_cache removes all the data files\n    associated to the passed dataset method callable(s).\n    \n    By default, it removes all the cached data files.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -270,7 +270,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.download_all",
+            "name": "scipy.datasets.download_all",
             "description": "Utility method to download all the dataset files\n    for `scipy.datasets` module.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -400,7 +400,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.electrocardiogram",
+            "name": "scipy.datasets.electrocardiogram",
             "description": "Load an electrocardiogram as an example for a 1-D signal.\n    \n    The returned signal is a 5 minute long electrocardiogram (ECG), a medical\n    recording of the heart's electrical activity, sampled at 360 Hz.\n    \n    Returns\n    -------\n    ecg : ndarray\n        The electrocardiogram in millivolt (mV) sampled at 360 Hz.\n    \n    Notes\n    -----\n    The provided signal is an excerpt (19:35 to 24:35) from the `record 208`_\n    (lead MLII) provided by the MIT-BIH Arrhythmia Database [1]_ on\n    PhysioNet [2]_. The excerpt includes noise induced artifacts, typical\n    heartbeats as well as pathological changes.\n    \n    .. _record 208: https://physionet.org/physiobank/database/html/mitdbdir/records.htm#208\n    \n    .. versionadded:: 1.1.0\n    \n    References\n    ----------\n    .. [1] Moody GB, Mark RG. The impact of the MIT-BIH Arrhythmia Database.\n           IEEE Eng in Med and Biol 20(3):45-50 (May-June 2001).\n           (PMID: 11446209); :doi:`10.13026/C2F305`\n    .. [2] Goldberger AL, Amaral LAN, Glass L, Hausdorff JM, Ivanov PCh,\n           Mark RG, Mietus JE, Moody GB, Peng C-K, Stanley HE. PhysioBank,\n           PhysioToolkit, and PhysioNet: Components of a New Research Resource\n           for Complex Physiologic Signals. Circulation 101(23):e215-e220;\n           :doi:`10.1161/01.CIR.101.23.e215`\n    \n    Examples\n    --------\n    >>> from scipy.datasets import electrocardiogram\n    >>> ecg = electrocardiogram()\n    >>> ecg\n    array([-0.245, -0.215, -0.185, ..., -0.405, -0.395, -0.385])\n    >>> ecg.shape, ecg.mean(), ecg.std()\n    ((108000,), -0.16510875, 0.5992473991177294)\n    \n    As stated the signal features several areas with a different morphology.\n    E.g., the first few seconds show the electrical activity of a heart in\n    normal sinus rhythm as seen below.\n    \n    >>> import numpy as np\n    >>> import matplotlib.pyplot as plt\n    >>> fs = 360\n    >>> time = np.arange(ecg.size) / fs\n    >>> plt.plot(time, ecg)\n    >>> plt.xlabel(\"time in s\")\n    >>> plt.ylabel(\"ECG in mV\")\n    >>> plt.xlim(9, 10.2)\n    >>> plt.ylim(-1, 1.5)\n    >>> plt.show()\n    \n    After second 16, however, the first premature ventricular contractions,\n    also called extrasystoles, appear. These have a different morphology\n    compared to typical heartbeats. The difference can easily be observed\n    in the following plot.\n    \n    >>> plt.plot(time, ecg)\n    >>> plt.xlabel(\"time in s\")\n    >>> plt.ylabel(\"ECG in mV\")\n    >>> plt.xlim(46.5, 50)\n    >>> plt.ylim(-2, 1.5)\n    >>> plt.show()\n    \n    At several points large artifacts disturb the recording, e.g.:\n    \n    >>> plt.plot(time, ecg)\n    >>> plt.xlabel(\"time in s\")\n    >>> plt.ylabel(\"ECG in mV\")\n    >>> plt.xlim(207, 215)\n    >>> plt.ylim(-2, 3.5)\n    >>> plt.show()\n    \n    Finally, examining the power spectrum reveals that most of the biosignal is\n    made up of lower frequencies. At 60 Hz the noise induced by the mains\n    electricity can be clearly observed.\n    \n    >>> from scipy.signal import welch\n    >>> f, Pxx = welch(ecg, fs=fs, nperseg=2048, scaling=\"spectrum\")\n    >>> plt.semilogy(f, Pxx)\n    >>> plt.xlabel(\"Frequency in Hz\")\n    >>> plt.ylabel(\"Power spectrum of the ECG in mV**2\")\n    >>> plt.xlim(f[[0, -1]])\n    >>> plt.show()",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
@@ -517,7 +517,7 @@
         {
             "category": "PythonApp",
             "key": -1,
-            "name": "scipy.face",
+            "name": "scipy.datasets.face",
             "description": "Get a 1024 x 768, color image of a raccoon face.\n    \n    raccoon-procyon-lotor.jpg at http://www.public-domain-image.com",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
