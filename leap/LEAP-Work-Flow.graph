@@ -1,12 +1,14 @@
 {
     "modelData": {
+        "filePath": "leap/LEAP-Work-Flow.graph",
         "fileType": "Graph",
+        "shortDescription": "",
+        "detailedDescription": "",
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "filePath": "leap/LEAP-Work-Flow.graph",
-        "eagleVersion": "v5.0.2",
-        "eagleCommitHash": "5d9153e898ae56bd7efb8d62694c7187836b9d79",
+        "eagleVersion": "v6.2.0",
+        "eagleCommitHash": "0b90b849c9282013511cf76403e7d8386f76c304",
         "schemaVersion": "OJS",
         "readonly": true,
         "repositoryUrl": "",
@@ -26,7 +28,7 @@
             "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -5,
-            "text": "Average in Freq & Time",
+            "name": "Average in Freq & Time",
             "description": "",
             "x": 1519.1884092469006,
             "y": 674.9337193759862,
@@ -41,60 +43,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -11,
-            "inputPorts": [
-                {
-                    "Id": "9c948e6d-d1ff-4977-af1f-ceb995995d72",
-                    "IdText": "data",
-                    "text": "data",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "cebdda02-d7d9-46a6-8743-75cd4991190a",
-                    "IdText": "rotData",
-                    "text": "rotData",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "470cd8a0-f4f2-4a54-b9ae-ded9412ae8e5",
-                    "IdText": "config",
-                    "text": "config",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "9da2dcd9-e63c-4697-aff2-ff894e148ef7",
-                    "IdText": "data",
-                    "text": "data",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "91ca8201-2f3e-409f-b502-e75b3215ccf4",
-                    "IdText": "avgRotData",
-                    "text": "avgRotData",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -104,10 +54,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "f81d9c7e-71a4-4d7f-9618-910e406d060a",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Execution time",
                     "name": "execution_time",
                     "value": "5",
                     "defaultValue": "",
@@ -117,10 +69,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "7e8da959-1723-4026-aafe-ce02bef6b466",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": "1",
                     "defaultValue": "",
@@ -130,10 +84,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "1f9c1dc7-e751-4c99-b3b8-2c1c42a24803",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
                     "name": "group_start",
                     "value": "0",
                     "defaultValue": "",
@@ -143,10 +99,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "c8967ba0-52a7-42e0-8a44-ca18d455268c",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Appclass",
                     "name": "appclass",
                     "value": "dlg.apps.simple.SleepApp",
                     "defaultValue": "",
@@ -156,10 +114,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "a75c2c10-3475-4f21-9b91-ee9411899782",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Arg01",
                     "name": "Arg01",
                     "value": "sleepTime=5.",
                     "defaultValue": "",
@@ -169,10 +129,72 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "d608ad41-2b41-4dbc-9a3f-ff52829504e4",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "data",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "9c948e6d-d1ff-4977-af1f-ceb995995d72",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputOutput"
+                },
+                {
+                    "name": "rotData",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "cebdda02-d7d9-46a6-8743-75cd4991190a",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "config",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "470cd8a0-f4f2-4a54-b9ae-ded9412ae8e5",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "avgRotData",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "91ca8201-2f3e-409f-b502-e75b3215ccf4",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -191,7 +213,7 @@
             "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -22,
-            "text": "Apply Inversion",
+            "name": "Apply Inversion",
             "description": "",
             "x": 1566.054678035062,
             "y": 877.9948281758873,
@@ -206,51 +228,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -11,
-            "inputPorts": [
-                {
-                    "Id": "eaf15822-b00c-4c95-9613-654744a2418f",
-                    "IdText": "avgRotData",
-                    "text": "avgRotData",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "c63e8a44-8574-4e5a-b55c-3da6f4da355b",
-                    "IdText": "CalMatrix",
-                    "text": "CalMatrix",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "6e5abdf3-7d4f-459c-89b2-73c8a40503a3",
-                    "IdText": "config",
-                    "text": "config",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "f8569f0c-64f8-4164-a583-f873baafddc6",
-                    "IdText": "solution",
-                    "text": "solution",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -260,10 +239,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "aa6ea0c3-f366-4cd6-a11f-96ac7dff1e2e",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Execution time",
                     "name": "execution_time",
                     "value": "5",
                     "defaultValue": "",
@@ -273,10 +254,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "8bd75904-aea2-4108-8050-d58ad0b16521",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": "1",
                     "defaultValue": "",
@@ -286,10 +269,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "94383d9c-3eeb-4288-b87d-fb8ce75b4bf9",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
                     "name": "group_start",
                     "value": "0",
                     "defaultValue": "",
@@ -299,10 +284,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "ddffc71b-35fe-442f-92d2-6aad17f0ffb7",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Appclass",
                     "name": "appclass",
                     "value": "dlg.apps.simple.SleepApp",
                     "defaultValue": "",
@@ -312,10 +299,72 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "88089b1b-a3ab-4abb-8859-f11033ab4f5e",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "avgRotData",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "eaf15822-b00c-4c95-9613-654744a2418f",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "CalMatrix",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "c63e8a44-8574-4e5a-b55c-3da6f4da355b",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "config",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "6e5abdf3-7d4f-459c-89b2-73c8a40503a3",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "solution",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "f8569f0c-64f8-4164-a583-f873baafddc6",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -334,7 +383,7 @@
             "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -2,
-            "text": "Calculate Cal Matrix",
+            "name": "Calculate Cal Matrix",
             "description": "",
             "x": 1258.8820471322153,
             "y": 879.0224534244066,
@@ -349,60 +398,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -11,
-            "inputPorts": [
-                {
-                    "Id": "e97d380d-279a-4b3d-8fd5-f76dbf18c03c",
-                    "IdText": "AntennaPos",
-                    "text": "AntennaPos",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "c254e6ee-7ea4-4e6f-8c06-69474219f0cd",
-                    "IdText": "UVW",
-                    "text": "UVW",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "831f0aa3-812f-4fd2-acf5-6f0cabb28701",
-                    "IdText": "Flags",
-                    "text": "Flags",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "5ca0181f-221e-40fa-af5f-93cb5d2a3252",
-                    "IdText": "config",
-                    "text": "config",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "4485bf54-1c87-43e9-9bae-7a0722e9cd49",
-                    "IdText": "CalMatrix",
-                    "text": "CalMatrix",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -412,10 +409,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "b2e0a53d-33eb-4580-ac61-97c340633224",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Execution time",
                     "name": "execution_time",
                     "value": "5",
                     "defaultValue": "",
@@ -425,10 +424,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "657943ef-1ab2-48a0-af31-9480ed3ff9aa",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": "1",
                     "defaultValue": "",
@@ -438,10 +439,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "9acdfb28-b513-4f0c-9b1c-fe6433708558",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
                     "name": "group_start",
                     "value": "0",
                     "defaultValue": "",
@@ -451,10 +454,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "cf41d6cc-f8d8-4e7b-a699-3280d19fc892",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Appclass",
                     "name": "appclass",
                     "value": "dlg.apps.simple.SleepApp",
                     "defaultValue": "",
@@ -464,10 +469,87 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "7314055b-c622-433c-a068-f9c24a37201b",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "AntennaPos",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "e97d380d-279a-4b3d-8fd5-f76dbf18c03c",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "UVW",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "c254e6ee-7ea4-4e6f-8c06-69474219f0cd",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "Flags",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "831f0aa3-812f-4fd2-acf5-6f0cabb28701",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "config",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "5ca0181f-221e-40fa-af5f-93cb5d2a3252",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "CalMatrix",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "4485bf54-1c87-43e9-9bae-7a0722e9cd49",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -486,7 +568,7 @@
             "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -1,
-            "text": "Phase Rotate Data",
+            "name": "Phase Rotate Data",
             "description": "",
             "x": 1401.6239593094504,
             "y": 563.6580202794787,
@@ -501,51 +583,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -11,
-            "inputPorts": [
-                {
-                    "Id": "eddc4f4c-224f-458c-9d41-028296987192",
-                    "IdText": "data",
-                    "text": "data",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "04340f43-6818-484b-a810-cdd2f08a5307",
-                    "IdText": "rotMatrix",
-                    "text": "rotMatrix",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "d3817029-0a8d-44e6-8ec1-5c7fee72e544",
-                    "IdText": "config",
-                    "text": "config",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "8d6086d8-fc60-4f35-afec-584191c7a4b3",
-                    "IdText": "rotData",
-                    "text": "rotData",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -555,10 +594,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "670acc96-b062-46af-8385-e24c82c5489c",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Execution time",
                     "name": "execution_time",
                     "value": "5",
                     "defaultValue": "",
@@ -568,10 +609,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "cd58a0c9-9435-401d-8ec4-01478ccb87ba",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": "1",
                     "defaultValue": "",
@@ -581,10 +624,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "a6284573-daf6-4988-9e37-ed52d0c9e2a0",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
                     "name": "group_start",
                     "value": "0",
                     "defaultValue": "",
@@ -594,10 +639,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "37d5fcef-6db4-4bf3-bd76-5cd2369e3ac2",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Appclass",
                     "name": "appclass",
                     "value": "dlg.apps.simple.SleepApp",
                     "defaultValue": "",
@@ -607,10 +654,72 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "d7501118-420c-4c4b-bb47-27e8a4906586",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "data",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "eddc4f4c-224f-458c-9d41-028296987192",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "rotMatrix",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "04340f43-6818-484b-a810-cdd2f08a5307",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "config",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "d3817029-0a8d-44e6-8ec1-5c7fee72e544",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "rotData",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "8d6086d8-fc60-4f35-afec-584191c7a4b3",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -629,7 +738,7 @@
             "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -3,
-            "text": "Calc DD Rotation",
+            "name": "Calc DD Rotation",
             "description": "",
             "x": 1205.344938666643,
             "y": 547.161625581425,
@@ -644,51 +753,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -11,
-            "inputPorts": [
-                {
-                    "Id": "39776bd9-fd8c-4c59-a834-39d669269dfb",
-                    "IdText": "UVW",
-                    "text": "UVW",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "331d589e-11dd-4537-a961-3e550264c871",
-                    "IdText": "direction",
-                    "text": "direction",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "0f026588-2c4a-42b2-92a5-36b154c36656",
-                    "IdText": "config",
-                    "text": "config",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "a84efb32-752b-4372-a0da-9c95e4338c62",
-                    "IdText": "rotMatrix",
-                    "text": "rotMatrix",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -698,10 +764,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "59afc9bc-e002-4da0-a31a-63a872e53707",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Execution time",
                     "name": "execution_time",
                     "value": "5",
                     "defaultValue": "",
@@ -711,10 +779,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "652562f7-b970-4e02-9812-42af4431d4d5",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": "1",
                     "defaultValue": "",
@@ -724,10 +794,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "5e67f4e6-bc00-49a9-9ab4-7302279921db",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
                     "name": "group_start",
                     "value": "0",
                     "defaultValue": "",
@@ -737,10 +809,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "1ec79c5f-3298-45eb-b2f3-9f7ca8946451",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Appclass",
                     "name": "appclass",
                     "value": "dlg.apps.simple.SleepApp",
                     "defaultValue": "",
@@ -750,10 +824,72 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "e7850fe3-d68f-4391-842f-f96bd0d13406",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "UVW",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "39776bd9-fd8c-4c59-a834-39d669269dfb",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "direction",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "331d589e-11dd-4537-a961-3e550264c871",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "config",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "0f026588-2c4a-42b2-92a5-36b154c36656",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "rotMatrix",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "a84efb32-752b-4372-a0da-9c95e4338c62",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -772,7 +908,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -9,
-            "text": "CalMatrix",
+            "name": "CalMatrix",
             "description": "",
             "x": 1409.7117723281815,
             "y": 918.5660196738045,
@@ -787,33 +923,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -11,
-            "inputPorts": [
-                {
-                    "Id": "a714ac02-0a56-41a1-b8ac-222e2ca4a948",
-                    "IdText": "CalMatrix",
-                    "text": "CalMatrix",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "7d8e94d1-e38e-4884-b6fe-d7fd0fa06d83",
-                    "IdText": "CalMatrix",
-                    "text": "CalMatrix",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -823,10 +934,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "1b3dcf30-89da-4f0e-8be5-ae1a83a7e4b2",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": "5",
                     "defaultValue": "",
@@ -836,10 +949,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "6c267264-5a9c-4892-87ca-9dccb55aeacc",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": "0",
                     "defaultValue": "",
@@ -849,10 +964,27 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "6244134d-d0c8-4ec0-b946-217e9287fc93",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "CalMatrix",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "a714ac02-0a56-41a1-b8ac-222e2ca4a948",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputOutput"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -871,7 +1003,7 @@
             "color": "rgb(211 165 0)",
             "drawOrderHint": 0,
             "key": -11,
-            "text": "Direction Processing",
+            "name": "Direction Processing",
             "description": "",
             "x": 1085.7478283878133,
             "y": 434.0334154711405,
@@ -885,51 +1017,8 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
-            "inputPorts": [
-                {
-                    "Id": "11fe5abb-9066-4655-ac05-190a152f75be",
-                    "IdText": "directionList",
-                    "text": "directionList",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "f35b413e-aeae-4156-837d-302d083ff78c",
-                    "IdText": "config",
-                    "text": "config",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [],
-            "inputLocalPorts": [
-                {
-                    "Id": "754a0eaa-8160-449d-ab2c-3d361e847452",
-                    "IdText": "config",
-                    "text": "config",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "64744089-d133-4075-b743-25a2e039f830",
-                    "IdText": "direction",
-                    "text": "direction",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -939,10 +1028,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "bc2a372e-8afa-47fb-b375-d0eb814ecbbf",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Number of copies",
                     "name": "num_of_copies",
                     "value": "10",
                     "defaultValue": "",
@@ -952,10 +1043,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "bc71b772-109d-4d43-8deb-568a0c7ed97d",
+                    "parameterType": "ConstructParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Scatter axis",
                     "name": "scatter_axis",
                     "value": "duplication",
                     "defaultValue": "",
@@ -965,13 +1058,14 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "c80f1983-2475-45b2-8c69-e4dd948994e8",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [
                 {
-                    "text": "Execution time",
                     "name": "execution_time",
                     "value": "5",
                     "defaultValue": "",
@@ -981,10 +1075,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "ead8aded-966c-496a-8081-fb014aa519ab",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": "1",
                     "defaultValue": "",
@@ -994,10 +1090,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "380660a0-ee6f-45cd-a32a-e8a75aa0af1b",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
                     "name": "group_start",
                     "value": "0",
                     "defaultValue": "",
@@ -1007,10 +1105,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "e476055f-491c-4ad1-8a5d-8acfafe94e48",
+                    "parameterType": "Unknown",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Appclass",
                     "name": "appclass",
                     "value": "dlg.apps.simple.SleepApp",
                     "defaultValue": "",
@@ -1020,10 +1120,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "274200a7-2a01-4269-be37-bce29c49bf8e",
+                    "parameterType": "Unknown",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "directionList",
                     "name": "directionList",
                     "value": "",
                     "defaultValue": "",
@@ -1033,10 +1135,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "c870d710-93bc-41f2-a71e-def16d2652c5",
+                    "parameterType": "Unknown",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "config",
                     "name": "config",
                     "value": "",
                     "defaultValue": "",
@@ -1046,23 +1150,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "98060ab9-6f20-4b12-8b9f-24579805edb9",
+                    "parameterType": "Unknown",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "config",
-                    "name": "config",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Object.undefined",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false
-                },
-                {
-                    "text": "direction",
                     "name": "direction",
                     "value": "",
                     "defaultValue": "",
@@ -1072,13 +1165,62 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "86caa638-a3cb-42ed-8e92-bbc9718ee36b",
+                    "parameterType": "Unknown",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "config",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "f35b413e-aeae-4156-837d-302d083ff78c",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputOutput"
+                },
+                {
+                    "name": "direction",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "64744089-d133-4075-b743-25a2e039f830",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
+                },
+                {
+                    "name": "directionList",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "f3608d1b-397f-4408-b847-36d439433301",
+                    "parameterType": "ComponentParameter",
+                    "usage": "InputPort"
                 }
             ],
             "outputAppFields": [],
             "inputApplicationName": "Distribute Config",
             "inputApplicationType": "PythonApp",
             "inputApplicationKey": -7,
+            "inputApplicationDescription": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationKey": null,
@@ -1091,7 +1233,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -10,
-            "text": "avgRotData",
+            "name": "avgRotData",
             "description": "",
             "x": 1540.8493168294522,
             "y": 779.2055210029465,
@@ -1106,33 +1248,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -11,
-            "inputPorts": [
-                {
-                    "Id": "3e96d790-ea6e-4935-96dc-33dcd4ccfc09",
-                    "IdText": "avgRotData",
-                    "text": "avgRotData",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "b5fd314f-344b-4772-a335-8d26dcc6984c",
-                    "IdText": "avgRotData",
-                    "text": "avgRotData",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -1142,10 +1259,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "c105d5e6-b5ee-44c4-bfe5-56388c4db6a4",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": "5",
                     "defaultValue": "",
@@ -1155,10 +1274,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "0f87731d-eb14-48aa-833d-449808179bd5",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": "0",
                     "defaultValue": "",
@@ -1168,10 +1289,27 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "8133e413-1723-4c67-8cdd-2418ee8d7f39",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "avgRotData",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "3e96d790-ea6e-4935-96dc-33dcd4ccfc09",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputOutput"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -1190,7 +1328,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -12,
-            "text": "rotData",
+            "name": "rotData",
             "description": "",
             "x": 1474.7317197535497,
             "y": 592.3321554599199,
@@ -1205,33 +1343,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -11,
-            "inputPorts": [
-                {
-                    "Id": "33aabd28-de7a-4479-892a-c9a83c9518d2",
-                    "IdText": "rotData",
-                    "text": "rotData",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "e3272683-f0ea-4373-aea2-f30cd039a9e4",
-                    "IdText": "rotData",
-                    "text": "rotData",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -1241,10 +1354,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "b54a8ff6-957e-47ef-b6fd-53c55eb748ae",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": "5",
                     "defaultValue": "",
@@ -1254,10 +1369,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "4c9bd797-b859-4adf-8d4c-e5640a6b4f97",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": "0",
                     "defaultValue": "",
@@ -1267,10 +1384,27 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "40010e68-370a-4a69-a32f-bbd71f9f7be8",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "rotData",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "33aabd28-de7a-4479-892a-c9a83c9518d2",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputOutput"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -1289,7 +1423,7 @@
             "color": "rgb(211 165 0)",
             "drawOrderHint": 0,
             "key": -13,
-            "text": "CalTableWriter",
+            "name": "CalTableWriter",
             "description": "",
             "x": 1847.1219544988016,
             "y": 610.5847107102229,
@@ -1303,33 +1437,8 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
-            "inputPorts": [
-                {
-                    "Id": "ae59fdcd-0049-46ff-9e50-57b08d3b2486",
-                    "IdText": "solution",
-                    "text": "solution",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [],
-            "inputLocalPorts": [
-                {
-                    "Id": "1ae4b048-364f-46d3-9aa2-6f164dd16787",
-                    "IdText": "event",
-                    "text": "event",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -1339,10 +1448,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "7a910846-967f-46b1-b72f-a10fd2c10a35",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Number of inputs",
                     "name": "num_of_inputs",
                     "value": "10",
                     "defaultValue": "",
@@ -1352,10 +1463,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "977c088e-a54b-4ffd-9e7a-8be324c0bfd3",
+                    "parameterType": "ConstructParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "gather_axis",
                     "name": "gather_axis",
                     "value": "duplication",
                     "defaultValue": "",
@@ -1365,13 +1478,14 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "de51e5d6-d54f-4053-9bdf-04cc09f5d896",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [
                 {
-                    "text": "Execution time",
                     "name": "execution_time",
                     "value": "5",
                     "defaultValue": "",
@@ -1381,10 +1495,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "6924f868-7870-4cc7-8de0-00971045a3c7",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": "1",
                     "defaultValue": "",
@@ -1394,10 +1510,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "29f4edf8-063a-4494-aebc-9a602f1c708b",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
                     "name": "group_start",
                     "value": "0",
                     "defaultValue": "",
@@ -1407,10 +1525,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "166a93ab-484b-47e3-ae05-5fce42f554d6",
+                    "parameterType": "Unknown",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Appclass",
                     "name": "appclass",
                     "value": "dlg.apps.simple.SleepApp",
                     "defaultValue": "",
@@ -1420,10 +1540,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "bd17677b-1f12-4c04-897b-f4fa67b68c57",
+                    "parameterType": "Unknown",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "solution",
                     "name": "solution",
                     "value": "",
                     "defaultValue": "",
@@ -1433,10 +1555,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "eb0f87d2-6caf-4162-82c4-c98dc185d17c",
+                    "parameterType": "Unknown",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "event",
                     "name": "event",
                     "value": "",
                     "defaultValue": "",
@@ -1446,10 +1570,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "1a2e3f1e-ce2b-4fe8-a123-28e8ebb2150f",
+                    "parameterType": "Unknown",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "solution",
                     "name": "solution",
                     "value": "",
                     "defaultValue": "",
@@ -1459,10 +1585,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "ae59fdcd-0049-46ff-9e50-57b08d3b2486",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
                 },
                 {
-                    "text": "event",
                     "name": "event",
                     "value": "",
                     "defaultValue": "",
@@ -1472,91 +1600,17 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
-                },
-                {
-                    "text": "solution",
-                    "name": "solution",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Object.undefined",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false
-                },
-                {
-                    "text": "event",
-                    "name": "event",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Object.undefined",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false
-                },
-                {
-                    "text": "solution",
-                    "name": "solution",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Object.undefined",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false
-                },
-                {
-                    "text": "event",
-                    "name": "event",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Object.undefined",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false
-                },
-                {
-                    "text": "solution",
-                    "name": "solution",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Object.undefined",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false
-                },
-                {
-                    "text": "event",
-                    "name": "event",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Object.undefined",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "1ae4b048-364f-46d3-9aa2-6f164dd16787",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
             "outputAppFields": [],
             "inputApplicationName": "sleep",
             "inputApplicationType": "PythonApp",
             "inputApplicationKey": -15,
+            "inputApplicationDescription": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationKey": null,
@@ -1569,7 +1623,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -14,
-            "text": "solution",
+            "name": "solution",
             "description": "",
             "x": 1658.8720519015817,
             "y": 647.9980862666234,
@@ -1584,33 +1638,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -11,
-            "inputPorts": [
-                {
-                    "Id": "f648601e-8757-400e-8ebb-6f01ae6a6c5e",
-                    "IdText": "solution",
-                    "text": "solution",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "781e88be-c2f1-418d-9266-99e878fdc5b0",
-                    "IdText": "solution",
-                    "text": "solution",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -1620,10 +1649,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "2dc366f5-7100-43c8-8c7f-0facbc4293c7",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": "5",
                     "defaultValue": "",
@@ -1633,10 +1664,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "a49896a8-4348-4652-aa6f-6d073d5929f9",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": "0",
                     "defaultValue": "",
@@ -1646,10 +1679,27 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "b7886f12-add1-4daa-877d-a6d77fab7043",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "solution",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "f648601e-8757-400e-8ebb-6f01ae6a6c5e",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputOutput"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -1668,7 +1718,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -16,
-            "text": "CalTable",
+            "name": "CalTable",
             "description": "",
             "x": 1847.8131736768014,
             "y": 709.8420703890777,
@@ -1677,39 +1727,14 @@
             "collapsed": true,
             "flipPorts": false,
             "subject": null,
-            "expanded": false,
+            "expanded": true,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -13,
-            "inputPorts": [
-                {
-                    "Id": "07410f05-fc78-4641-b43c-05a46c93ce0a",
-                    "IdText": "solution",
-                    "text": "solution",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "c82f79e8-0611-4ac2-bd2c-f7bb0b31e449",
-                    "IdText": "solution",
-                    "text": "solution",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -1719,10 +1744,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "37e03e33-edea-49e5-8277-d3464d2a3942",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": "5",
                     "defaultValue": "",
@@ -1732,10 +1759,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "704b3d74-470c-4c61-960d-09ea97bdbcca",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": "0",
                     "defaultValue": "",
@@ -1745,10 +1774,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "b2f742c9-8e0e-4879-8b5c-c22c5c4f247d",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": "1",
                     "defaultValue": "",
@@ -1758,10 +1789,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "3b748609-ffee-466c-98ba-649ca60c8727",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "File path",
                     "name": "filepath",
                     "value": "",
                     "defaultValue": "",
@@ -1771,10 +1804,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "471c493e-5c1c-48fe-8d4c-fb7c83f31e32",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Directory name",
                     "name": "dirname",
                     "value": "",
                     "defaultValue": "",
@@ -1784,10 +1819,27 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "fe51f944-bf32-4d03-9110-feeadb087026",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "solution",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "07410f05-fc78-4641-b43c-05a46c93ce0a",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputOutput"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -1806,10 +1858,10 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -4,
-            "text": "MeasurementSet",
+            "name": "MeasurementSet",
             "description": "",
-            "x": 657.7294223263624,
-            "y": 589.9740974592637,
+            "x": 831.0053714821762,
+            "y": 786.0909671856172,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -1820,78 +1872,8 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
-            "inputPorts": [
-                {
-                    "Id": "dc029de3-2339-4921-9fea-3a46e7661604",
-                    "IdText": "data",
-                    "text": "data",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "b288225e-3245-4931-ad6f-e6505aace88b",
-                    "IdText": "data",
-                    "text": "data",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "dd139ead-27a5-4840-aec0-526dece195dd",
-                    "IdText": "AntennaPos",
-                    "text": "AntennaPos",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "5c1c3ba6-c319-4fb3-a9af-68e1136184c5",
-                    "IdText": "UVW",
-                    "text": "UVW",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "3e00dce6-bb0f-46c7-9067-cbc075448a72",
-                    "IdText": "PhaseCentre",
-                    "text": "PhaseCentre",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "425fe54c-c1ba-46c3-abb4-081687cd69dc",
-                    "IdText": "FoV",
-                    "text": "FoV",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "0ba3b9ca-eebd-47ec-8509-57a4cc2929bd",
-                    "IdText": "Flags",
-                    "text": "Flags",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -1901,10 +1883,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "a93f21e0-f664-47db-a974-a6a47174deb7",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": "5",
                     "defaultValue": "",
@@ -1914,10 +1898,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "a6af6eb9-30d0-435a-9794-fc70e1d07531",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": "0",
                     "defaultValue": "",
@@ -1927,10 +1913,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "89593c0c-dbf0-40e3-a15e-82b645acb4a3",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": false,
                     "defaultValue": "false",
@@ -1940,10 +1928,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "b55112c6-60fa-409c-96db-b74fb5b7265d",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "File path",
                     "name": "filepath",
                     "value": "",
                     "defaultValue": "",
@@ -1953,10 +1943,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "94d256f6-5314-4442-8359-b7b3a8aa2ab9",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Directory name",
                     "name": "dirname",
                     "value": "",
                     "defaultValue": "",
@@ -1966,10 +1958,102 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "43fb47f5-0cea-41bd-93b5-0db5fbc7ca78",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "data",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "dc029de3-2339-4921-9fea-3a46e7661604",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputOutput"
+                },
+                {
+                    "name": "AntennaPos",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "dd139ead-27a5-4840-aec0-526dece195dd",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
+                },
+                {
+                    "name": "UVW",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "5c1c3ba6-c319-4fb3-a9af-68e1136184c5",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
+                },
+                {
+                    "name": "PhaseCentre",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "3e00dce6-bb0f-46c7-9067-cbc075448a72",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
+                },
+                {
+                    "name": "FoV",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "425fe54c-c1ba-46c3-abb4-081687cd69dc",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
+                },
+                {
+                    "name": "Flags",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "0ba3b9ca-eebd-47ec-8509-57a4cc2929bd",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -1988,7 +2072,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -6,
-            "text": "rotMatrix",
+            "name": "rotMatrix",
             "description": "",
             "x": 1298.6067871764162,
             "y": 546.8094896595962,
@@ -2003,33 +2087,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -11,
-            "inputPorts": [
-                {
-                    "Id": "bd1b20f0-27ef-4353-95f5-a8069f20b8c0",
-                    "IdText": "rotMatrix",
-                    "text": "rotMatrix",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "cea2a966-0799-4c33-8b14-09ce9f9533d2",
-                    "IdText": "rotMatrix",
-                    "text": "rotMatrix",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -2039,10 +2098,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "fb77f6d8-376d-424b-813e-a1197143fa16",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": "5",
                     "defaultValue": "",
@@ -2052,10 +2113,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "8ee1ae90-3f61-415b-93f8-e43f8d69e915",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": "0",
                     "defaultValue": "",
@@ -2065,10 +2128,27 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "b7392a52-851c-40fa-90d7-11b6668c45dc",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "rotMatrix",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "bd1b20f0-27ef-4353-95f5-a8069f20b8c0",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputOutput"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -2087,7 +2167,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -8,
-            "text": "direction",
+            "name": "direction",
             "description": "",
             "x": 1100.5798170068456,
             "y": 537.8503409208399,
@@ -2102,33 +2182,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -11,
-            "inputPorts": [
-                {
-                    "Id": "06edb2f4-d725-40a9-a05f-cf26ed9f30ae",
-                    "IdText": "direction",
-                    "text": "direction",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "32b4dfc9-cf8f-40a4-8f40-74d0a1e4dea6",
-                    "IdText": "direction",
-                    "text": "direction",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -2138,10 +2193,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "2bb5bd1b-6eb1-48f4-8ba0-ded3b6f57816",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": "5",
                     "defaultValue": "",
@@ -2151,10 +2208,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "aa175394-b6d3-4fe4-b72d-81cae57ee81b",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": "0",
                     "defaultValue": "",
@@ -2164,10 +2223,27 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "b8a36dc8-8f2f-442c-aee3-4ec67ce178a8",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "direction",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "06edb2f4-d725-40a9-a05f-cf26ed9f30ae",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputOutput"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -2186,10 +2262,10 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -18,
-            "text": "Config",
+            "name": "Config",
             "description": "",
-            "x": 870.1935125713597,
-            "y": 519.4743724764518,
+            "x": 920.6010614166877,
+            "y": 421.8097465886291,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -2200,23 +2276,8 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
-            "inputPorts": [],
-            "outputPorts": [
-                {
-                    "Id": "456a2ee8-e6b7-48dd-9727-b506b354067d",
-                    "IdText": "config",
-                    "text": "config",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -2226,10 +2287,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "86c69f34-6763-4f87-a20c-91b723ab4b01",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": "5",
                     "defaultValue": "",
@@ -2239,10 +2302,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "4ee8f659-e89b-4447-a4ee-bd054089f550",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": "0",
                     "defaultValue": "",
@@ -2252,10 +2317,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "fd83dc4d-76ba-43b8-a13a-e529cc0c4454",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": false,
                     "defaultValue": "false",
@@ -2265,10 +2332,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "0452b74d-323e-4ac2-af6e-00556a0fe6ba",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "File path",
                     "name": "filepath",
                     "value": "",
                     "defaultValue": "",
@@ -2278,10 +2347,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "ccedcd39-82f3-4318-8d0d-82c405def5f2",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Directory name",
                     "name": "dirname",
                     "value": "",
                     "defaultValue": "",
@@ -2291,10 +2362,27 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "282a4a3b-46d1-48b2-8179-90c68ca03e6d",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "config",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "456a2ee8-e6b7-48dd-9727-b506b354067d",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -2313,7 +2401,7 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -19,
-            "text": "config",
+            "name": "config",
             "description": "",
             "x": 1212.0361537402018,
             "y": 708.2210094448186,
@@ -2328,33 +2416,8 @@
             "paletteDownloadUrl": "",
             "dataHash": "",
             "group": -11,
-            "inputPorts": [
-                {
-                    "Id": "3073ce02-68ec-4a42-8e96-3c33c0c0d02d",
-                    "IdText": "config",
-                    "text": "config",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "83ec6fd0-6db4-47a7-a970-69d9bb1e6695",
-                    "IdText": "config",
-                    "text": "config",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -2364,10 +2427,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "d52b6c99-5009-4f7d-bdda-fa3c69073f3a",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": "5",
                     "defaultValue": "",
@@ -2377,10 +2442,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "7a1aae22-8c9c-4ca7-83d2-041658fb8f9d",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": "0",
                     "defaultValue": "",
@@ -2390,10 +2457,27 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "d3c36af0-3fd3-447d-901d-a241475d40e1",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "config",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "3073ce02-68ec-4a42-8e96-3c33c0c0d02d",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputOutput"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -2412,10 +2496,10 @@
             "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -23,
-            "text": "Get Cal Sources",
+            "name": "Get Cal Sources",
             "description": "",
-            "x": 757.8434331125881,
-            "y": 474.7292635460791,
+            "x": 854.7204410497025,
+            "y": 603.1109895115233,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -2426,51 +2510,8 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
-            "inputPorts": [
-                {
-                    "Id": "a214c4c4-0e76-4389-83ee-35dff9105f17",
-                    "IdText": "PhaseCentre",
-                    "text": "PhaseCentre",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "01ee558b-eb65-4e00-997e-b279d0d1d552",
-                    "IdText": "FoV",
-                    "text": "FoV",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "27f51df6-9f0b-4eed-aa38-e4b9e60bea1f",
-                    "IdText": "query",
-                    "text": "query",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                },
-                {
-                    "Id": "dcef2b6a-514b-49eb-aa40-8c72b8ba404c",
-                    "IdText": "directionList",
-                    "text": "directionList",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -2480,10 +2521,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "60c3e3c0-590b-4b0c-a38c-3de48d2f3d60",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Execution time",
                     "name": "execution_time",
                     "value": "5",
                     "defaultValue": "",
@@ -2493,10 +2536,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "59753feb-9bb1-4134-ae31-55333d052bb7",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": "1",
                     "defaultValue": "",
@@ -2506,10 +2551,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "703dcf22-81b4-4cfa-8623-d7e56177df8f",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
                     "name": "group_start",
                     "value": "0",
                     "defaultValue": "",
@@ -2519,10 +2566,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "effe024a-d71f-4f7b-bb50-1be59b2299e3",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Appclass",
                     "name": "appclass",
                     "value": "dlg.apps.simple.SleepApp",
                     "defaultValue": "",
@@ -2532,10 +2581,72 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "e472ec23-86e5-40b4-a8ab-d2977883217d",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "PhaseCentre",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "a214c4c4-0e76-4389-83ee-35dff9105f17",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "FoV",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "01ee558b-eb65-4e00-997e-b279d0d1d552",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "query",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "27f51df6-9f0b-4eed-aa38-e4b9e60bea1f",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
+                },
+                {
+                    "name": "directionList",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "dcef2b6a-514b-49eb-aa40-8c72b8ba404c",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -2554,10 +2665,10 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -25,
-            "text": "directionList",
+            "name": "directionList",
             "description": "",
-            "x": 874.2278273282933,
-            "y": 433.22477206966386,
+            "x": 927.7858479764542,
+            "y": 503.32276968269747,
             "width": 200,
             "height": 72,
             "collapsed": true,
@@ -2568,33 +2679,8 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
-            "inputPorts": [
-                {
-                    "Id": "75606cc4-c15c-471c-833a-353b52c80722",
-                    "IdText": "directionList",
-                    "text": "directionList",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "outputPorts": [
-                {
-                    "Id": "ba598fa0-eb57-41b6-b481-c36115d476bc",
-                    "IdText": "directionList",
-                    "text": "directionList",
-                    "event": false,
-                    "type": "Object.undefined",
-                    "description": "",
-                    "keyAttribute": false
-                }
-            ],
-            "inputLocalPorts": [],
-            "outputLocalPorts": [],
             "fields": [
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -2604,10 +2690,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "f33cab74-41ff-4476-8e1b-8609ed7e6baf",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": "5",
                     "defaultValue": "",
@@ -2617,10 +2705,12 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "4fb08788-bb26-4ba0-9020-911df4bad90b",
+                    "parameterType": "ConstraintParameter",
+                    "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": "0",
                     "defaultValue": "",
@@ -2630,10 +2720,27 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "keyAttribute": false
+                    "keyAttribute": false,
+                    "id": "7d11dcd0-b047-4130-a1b4-5de8f849f5c7",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "directionList",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.undefined",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "75606cc4-c15c-471c-833a-353b52c80722",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputOutput"
                 }
             ],
-            "applicationArgs": [],
             "inputAppFields": [],
             "outputAppFields": [],
             "inputApplicationName": "",
@@ -2667,7 +2774,7 @@
         },
         {
             "from": -10,
-            "fromPort": "b5fd314f-344b-4772-a335-8d26dcc6984c",
+            "fromPort": "3e96d790-ea6e-4935-96dc-33dcd4ccfc09",
             "to": -22,
             "toPort": "eaf15822-b00c-4c95-9613-654744a2418f",
             "dataType": "Object.undefined",
@@ -2676,7 +2783,7 @@
         },
         {
             "from": -12,
-            "fromPort": "e3272683-f0ea-4373-aea2-f30cd039a9e4",
+            "fromPort": "33aabd28-de7a-4479-892a-c9a83c9518d2",
             "to": -5,
             "toPort": "cebdda02-d7d9-46a6-8743-75cd4991190a",
             "dataType": "Object.undefined",
@@ -2694,7 +2801,7 @@
         },
         {
             "from": -9,
-            "fromPort": "7d8e94d1-e38e-4884-b6fe-d7fd0fa06d83",
+            "fromPort": "a714ac02-0a56-41a1-b8ac-222e2ca4a948",
             "to": -22,
             "toPort": "c63e8a44-8574-4e5a-b55c-3da6f4da355b",
             "dataType": "Object.undefined",
@@ -2739,7 +2846,7 @@
         },
         {
             "from": -8,
-            "fromPort": "32b4dfc9-cf8f-40a4-8f40-74d0a1e4dea6",
+            "fromPort": "06edb2f4-d725-40a9-a05f-cf26ed9f30ae",
             "to": -3,
             "toPort": "331d589e-11dd-4537-a961-3e550264c871",
             "dataType": "Object.undefined",
@@ -2748,7 +2855,7 @@
         },
         {
             "from": -19,
-            "fromPort": "83ec6fd0-6db4-47a7-a970-69d9bb1e6695",
+            "fromPort": "3073ce02-68ec-4a42-8e96-3c33c0c0d02d",
             "to": -3,
             "toPort": "0f026588-2c4a-42b2-92a5-36b154c36656",
             "dataType": "Object.undefined",
@@ -2757,7 +2864,7 @@
         },
         {
             "from": -19,
-            "fromPort": "83ec6fd0-6db4-47a7-a970-69d9bb1e6695",
+            "fromPort": "3073ce02-68ec-4a42-8e96-3c33c0c0d02d",
             "to": -5,
             "toPort": "470cd8a0-f4f2-4a54-b9ae-ded9412ae8e5",
             "dataType": "Object.undefined",
@@ -2766,7 +2873,7 @@
         },
         {
             "from": -19,
-            "fromPort": "83ec6fd0-6db4-47a7-a970-69d9bb1e6695",
+            "fromPort": "3073ce02-68ec-4a42-8e96-3c33c0c0d02d",
             "to": -22,
             "toPort": "6e5abdf3-7d4f-459c-89b2-73c8a40503a3",
             "dataType": "Object.undefined",
@@ -2793,7 +2900,7 @@
         },
         {
             "from": -4,
-            "fromPort": "b288225e-3245-4931-ad6f-e6505aace88b",
+            "fromPort": "dc029de3-2339-4921-9fea-3a46e7661604",
             "to": -1,
             "toPort": "eddc4f4c-224f-458c-9d41-028296987192",
             "dataType": "Object.undefined",
@@ -2802,7 +2909,7 @@
         },
         {
             "from": -6,
-            "fromPort": "cea2a966-0799-4c33-8b14-09ce9f9533d2",
+            "fromPort": "bd1b20f0-27ef-4353-95f5-a8069f20b8c0",
             "to": -1,
             "toPort": "04340f43-6818-484b-a810-cdd2f08a5307",
             "dataType": "Object.undefined",
@@ -2811,7 +2918,7 @@
         },
         {
             "from": -19,
-            "fromPort": "83ec6fd0-6db4-47a7-a970-69d9bb1e6695",
+            "fromPort": "3073ce02-68ec-4a42-8e96-3c33c0c0d02d",
             "to": -1,
             "toPort": "d3817029-0a8d-44e6-8ec1-5c7fee72e544",
             "dataType": "Object.undefined",
@@ -2847,7 +2954,7 @@
         },
         {
             "from": -19,
-            "fromPort": "83ec6fd0-6db4-47a7-a970-69d9bb1e6695",
+            "fromPort": "3073ce02-68ec-4a42-8e96-3c33c0c0d02d",
             "to": -2,
             "toPort": "5ca0181f-221e-40fa-af5f-93cb5d2a3252",
             "dataType": "Object.undefined",
@@ -2864,17 +2971,8 @@
             "closesLoop": false
         },
         {
-            "from": -25,
-            "fromPort": "ba598fa0-eb57-41b6-b481-c36115d476bc",
-            "to": -11,
-            "toPort": "11fe5abb-9066-4655-ac05-190a152f75be",
-            "dataType": "Object.undefined",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
             "from": -14,
-            "fromPort": "781e88be-c2f1-418d-9266-99e878fdc5b0",
+            "fromPort": "f648601e-8757-400e-8ebb-6f01ae6a6c5e",
             "to": -13,
             "toPort": "ae59fdcd-0049-46ff-9e50-57b08d3b2486",
             "dataType": "Object.undefined",
@@ -2883,7 +2981,7 @@
         },
         {
             "from": -11,
-            "fromPort": "754a0eaa-8160-449d-ab2c-3d361e847452",
+            "fromPort": "f35b413e-aeae-4156-837d-302d083ff78c",
             "to": -19,
             "toPort": "3073ce02-68ec-4a42-8e96-3c33c0c0d02d",
             "dataType": "Object.undefined",
@@ -2904,6 +3002,15 @@
             "fromPort": "1ae4b048-364f-46d3-9aa2-6f164dd16787",
             "to": -16,
             "toPort": "07410f05-fc78-4641-b43c-05a46c93ce0a",
+            "dataType": "Object.undefined",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -25,
+            "fromPort": "75606cc4-c15c-471c-833a-353b52c80722",
+            "to": -11,
+            "toPort": "f3608d1b-397f-4408-b847-36d439433301",
             "dataType": "Object.undefined",
             "loop_aware": "0",
             "closesLoop": false
