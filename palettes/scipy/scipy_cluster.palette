@@ -11,13 +11,13 @@
         "eagleCommitHash": "",
         "schemaVersion": "AppRef",
         "readonly": true,
-        "repositoryUrl": "tmp",
+        "repositoryUrl": "scipy",
         "commitHash": "0.1",
         "downloadUrl": "",
-        "signature": "d0e546eaf0b056b7bc0cba80875b9027257110982c05cebd71e65cb524839379",
+        "signature": "ce6080fc2d1866961f8a9199f000717a872b4a871099d9d438c4e9cdad632586",
         "lastModifiedName": "wici",
         "lastModifiedEmail": "",
-        "lastModifiedDatetime": 1695133104.444388,
+        "lastModifiedDatetime": 1695173656.677802,
         "numLGNodes": 45
     },
     "nodeDataArray": [
@@ -29,8 +29,34 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "ce2b2a2ae395e0ce6162b5c65e8abd6fc6cd5bc0706e2c19dd28088f2e55e27a",
+            "dataHash": "2bd66a8e6904d88f26b35309cc48ac299d82043054e756a399f373eaddd9ecdc",
             "fields": [
+                {
+                    "name": "XA",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "array_like     An :math:`m_A` by :math:`n` array of :math:`m_A`     original observations in an :math:`n`-dimensional space.     Inputs are converted to float type. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "XB",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "array_like     An :math:`m_B` by :math:`n` array of :math:`m_B`     original observations in an :math:`n`-dimensional space.     Inputs are converted to float type. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "metric",
                     "value": "euclidean",
@@ -50,6 +76,19 @@
                     "defaultValue": null,
                     "description": "ndarray     The output array     If not None, the distance matrix Y is stored in this array. ",
                     "type": "ndarray",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "kwargs",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "dict, optional     Extra arguments to `metric`: refer to each metric documentation for a     list of all possible arguments.      Some possible arguments:      ",
+                    "type": "None",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
@@ -172,8 +211,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "54cdcba3f3bd13a64a2904c27fe466ceee37e4719bbda2113aaf8f7441faf2ca",
+            "dataHash": "e0f56fdd065c620c5a4edcae66da56f5b9a79e85fc113deb70eb04f038f1b596",
             "fields": [
+                {
+                    "name": "seed",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "{None, int, `numpy.random.Generator`,         `numpy.random.RandomState`}, optional      If `seed` is None (or `np.random`), the `numpy.random.RandomState`     singleton is used.     If `seed` is an int, a new ``RandomState`` instance is used,     seeded with `seed`.     If `seed` is already a ``Generator`` or ``RandomState`` instance then     that instance is used. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -289,8 +341,34 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "3bc774b7aa9783c7bb3f6df4c6932dd4b1bc3dab86cb5d8925e49d9a5091415f",
+            "dataHash": "0a9e25ee2b65d50c46a1d22272ffa1759dec002392b8b678cbd5818b625e319d",
             "fields": [
+                {
+                    "name": "obs",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray    Each row of the M by N array is an observation vector. The    columns are the features seen during each observation.    The features must be whitened first with the `whiten` function.  ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "k_or_guess",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "int or ndarray    The number of centroids to generate. A code is assigned to    each centroid, which is also the row index of the centroid    in the code_book matrix generated.     The initial k centroids are chosen by randomly selecting    observations from the observation matrix. Alternatively,    passing a k by N array specifies the initial k centroids.  ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "iter",
                     "value": 20,
@@ -458,8 +536,34 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "79bb4f001b61593d0c07f1a9925fed902747f30ade12491c6833c56e3a145488",
+            "dataHash": "429ab5dcd377491b2f6dc42ce33a42e90865f871485e0e008af01b7de3ae6e4c",
             "fields": [
+                {
+                    "name": "data",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     A 'M' by 'N' array of 'M' observations in 'N' dimensions or a length     'M' array of 'M' 1-D observations. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "k",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "int or ndarray     The number of clusters to form as well as the number of     centroids to generate. If `minit` initialization string is     'matrix', or if a ndarray is given instead, it is     interpreted as initial cluster to use instead. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "iter",
                     "value": 10,
@@ -653,8 +757,34 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "6d6c79b598fa8327956f3255b6a282f43a299099ccffafc8637d1b53defa9c2d",
+            "dataHash": "2f1f0a274e18732dc1e676e4946b0f8c045fb65afcff99f86fd1f5a95bc12f1c",
             "fields": [
+                {
+                    "name": "obs",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     Expects a rank 2 array. Each row is one observation. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "code_book",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     Code book to use. Same format than obs. Should have same number of     features (e.g., columns) than obs. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "check_finite",
                     "value": true,
@@ -783,8 +913,34 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "629fe3c8dd46f077583c3956ef7130f01854a37095ed99767a7211ee7c762982",
+            "dataHash": "ad85edce07c49a83ac9b40cbde7aa2802c8bfdef81bff0a46f8cfeaa1f3d8dec",
             "fields": [
+                {
+                    "name": "gen",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "{None, np.random.RandomState, np.random.Generator}     Random number generator. If None, then the np.random.RandomState     singleton is used. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "low",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "int or array-like of ints     Lowest (signed) integers to be drawn from the distribution (unless     high=None, in which case this parameter is 0 and this value is used     for high). ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "high",
                     "value": null,
@@ -952,8 +1108,34 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "ffab741ac0dc40baa4fd43512353b10660d62dffe0ff28d128d2376d63979ce4",
+            "dataHash": "98a36fa40b176fde8a26bb8ff04dca07f46b78b0f938318ae8d7a4e78cd63acd",
             "fields": [
+                {
+                    "name": "obs",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     Each row of the 'M' x 'N' array is an observation. The columns are     the \"features\" seen during each observation. The features must be     whitened first using the whiten function or something equivalent. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "code_book",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The code book is usually generated using the k-means algorithm.     Each row of the array holds a different code, and the columns are     the features of the code.       >>> #              f0    f1    f2   f3      >>> code_book = [      ...             [  1.,   2.,   3.,   4.],  #c0      ...             [  1.,   2.,   3.,   4.],  #c1      ...             [  1.,   2.,   3.,   4.]]  #c2  ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "check_finite",
                     "value": true,
@@ -1082,8 +1264,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "2ae9edb9fd28b8352e50cbb8f82213a7c99ee3df743c91c560870ea16cb9beb6",
+            "dataHash": "c4b45e058a3a9f6952f4508f191d1ff108c0fff2c3bd0d0171a955151eeff253",
             "fields": [
+                {
+                    "name": "obs",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     Each row of the array is an observation.  The     columns are the features seen during each observation.      >>> #         f0    f1    f2     >>> obs = [[  1.,   1.,   1.],  #o0     ...        [  2.,   2.,   2.],  #o1     ...        [  3.,   3.,   3.],  #o2     ...        [  4.,   4.,   4.]]  #o3  ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "check_finite",
                     "value": true,
@@ -1212,8 +1407,34 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "0bde23bbb1e70283aac9000d520629f5f3b25a2178dbd80050732f16cbef6b7e",
+            "dataHash": "bae0175b3a26f87c11993ad50ab6a7c4edf4989a50c7c2bd5a07886723a16b86",
             "fields": [
+                {
+                    "name": "self",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "Reference to object",
+                    "type": "scipy.cluster.hierarchy.ClusterNode",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "id",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "int     The node id. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "left",
                     "value": null,
@@ -1381,8 +1602,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "a0031483ae410fa657b81386d3b6200872d7b01061ee6012bd5c2949fca7f5cb",
+            "dataHash": "49b52b5717096fe2cef67387c1e80ccfb670952cae70a68014dae554d7fff4e9",
             "fields": [
+                {
+                    "name": "self",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "Reference to object",
+                    "type": "scipy.cluster.hierarchy.ClusterNode",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -1498,8 +1732,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "3c2f42a4f6f3aa9f20719740c769d20a270a554749c49e481ae9c3d9ba9d194d",
+            "dataHash": "ac7ae01a6705fdfe428d6f5736fd0ca788500bd4dab99da2828d1fa0638d9f06",
             "fields": [
+                {
+                    "name": "self",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "Reference to object",
+                    "type": "scipy.cluster.hierarchy.ClusterNode",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -1615,8 +1862,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "52182c3745af1480cf589ef4a7f12aa02f72329e78ccb8eec8fe825639b15133",
+            "dataHash": "945f3621d6da07209b9c3c9a5f80288883b17a422840adddc87652cf0f2e7556",
             "fields": [
+                {
+                    "name": "self",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "Reference to object",
+                    "type": "scipy.cluster.hierarchy.ClusterNode",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -1732,8 +1992,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "88d4037ead73873c63785917daf99d311e36594505de1b63c0fd20a4e6f2831d",
+            "dataHash": "b8963b536f379a416039f1dd6788fffc5a0a0909b0a24b0bcecdd5af554876f3",
             "fields": [
+                {
+                    "name": "self",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "Reference to object",
+                    "type": "scipy.cluster.hierarchy.ClusterNode",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -1849,8 +2122,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "f59dfa43eabf649e8b41edae12926f0b702ee002470ce50a0f59e984eea70a47",
+            "dataHash": "65976c783c76b634a57a2fd5875c064f3a6843aa4d6eba4b7934c333a3207f63",
             "fields": [
+                {
+                    "name": "self",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "Reference to object",
+                    "type": "scipy.cluster.hierarchy.ClusterNode",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -1966,8 +2252,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "b0750a775c50daa74ecb9a997f14b091309c728bf23bcebb552ac48f31e08730",
+            "dataHash": "99308928640856c8997fb1b98c9a6c64cc6b28f22fbc71907b91f97bd13365cc",
             "fields": [
+                {
+                    "name": "self",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "Reference to object",
+                    "type": "scipy.cluster.hierarchy.ClusterNode",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "func",
                     "value": "function",
@@ -2096,8 +2395,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "d55db08d526d027f37157609d69ad0ac2e218fe05cde592687baa31f5c9d4b4c",
+            "dataHash": "b81b93f2ee66157d56a9400d3753dd4a15b07f0dab87dc0fb6e8271ab6aa4c70",
             "fields": [
+                {
+                    "name": "y",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The upper triangular of the distance matrix. The result of     ``pdist`` is returned in this form. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -2213,8 +2525,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "212cda11e4bc4638b14cfce142e1a13aa9fc1c15038989681528495495a34be3",
+            "dataHash": "b92bcc6f4691332c0c287aecfd9d5c04feedc837348e1b3139c6e1829e78fd10",
             "fields": [
+                {
+                    "name": "y",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     A condensed distance matrix. A condensed     distance matrix is a flat array containing the upper     triangular of the distance matrix. This is the form that     ``pdist`` returns. Alternatively, a collection of     m observation vectors in n dimensions may be passed as     an m by n array. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -2330,8 +2655,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "00c41dddcfaf531892999de507f03c7a6919062f504e92966619f37373adc0ba",
+            "dataHash": "6c0bb2ea502fecd4d0207c677c00205fcd063e585ab9dc359adb022ffd02eb9b",
             "fields": [
+                {
+                    "name": "y",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The upper triangular of the distance matrix. The result of     ``pdist`` is returned in this form. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -2447,8 +2785,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "581453cc20a1a47ef0f9c18c040ba7a6d0d19fc8bcbd90b4455e3798980712a7",
+            "dataHash": "3531ddb430aec57c23e16f4da8d385b4ebc900d2c357af6141ce9ff2308d7eee",
             "fields": [
+                {
+                    "name": "Z",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The hierarchical clustering encoded as an array     (see `linkage` function). ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "Y",
                     "value": null,
@@ -2577,8 +2928,34 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "7ff374dc7dea40c41fed50a235f3c0056e0e8e60c580cd1bd9542e2da9dc1d79",
+            "dataHash": "54a7c123d5696e4d4201b2b0289bd736b597c6631a375fa48197f75f231fe9bf",
             "fields": [
+                {
+                    "name": "Z",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "array_like     The linkage matrix to check for correspondence. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "Y",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "array_like     The condensed distance matrix to check for correspondence. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -2694,8 +3071,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "f3de7b97b599f020b781b9b908d9205d9c2e940cd541705efc6ce9910d925a8b",
+            "dataHash": "c5ce8f8be5eb3e3fd25cd805fa0add669c99f61dbb706333a2395baf0f896990",
             "fields": [
+                {
+                    "name": "Z",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "scipy.cluster.linkage array     The linkage matrix. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "n_clusters",
                     "value": null,
@@ -2837,8 +3227,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "5cef205736d6138f547bbf6a1a479c90aaeee13f993bc401989a986223ac3249",
+            "dataHash": "1cedb3dcf400921ac69dbcb8c6e386bcac3f79bd090a8acef35710eb3c851992",
             "fields": [
+                {
+                    "name": "Z",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The linkage matrix encoding the hierarchical clustering to     render as a dendrogram. See the ``linkage`` function for more     information on the format of ``Z``. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "p",
                     "value": 30,
@@ -3188,8 +3591,34 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "b4cbbde7cbf97d2e75439b8217c5693ac777a7ee3ed55eecb95822b1e2d0cf1d",
+            "dataHash": "bda5e54e66e29acf30aecbd840d5ade45c7bf97a0d9669f91bccaad090a80c44",
             "fields": [
+                {
+                    "name": "Z",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The hierarchical clustering encoded with the matrix returned     by the `linkage` function. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "t",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "scalar     For criteria 'inconsistent', 'distance' or 'monocrit',      this is the threshold to apply when forming flat clusters.     For 'maxclust' or 'maxclust_monocrit' criteria,      this would be max number of clusters requested. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "criterion",
                     "value": "inconsistent",
@@ -3357,8 +3786,34 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "51acbbb4945deea6658fb75edf130819068672a738838a6e74836e8e34ae1730",
+            "dataHash": "f5d3b50d2653b9e11d75df46b7c78b007add957b4d3c476fbb59c43091a41b95",
             "fields": [
+                {
+                    "name": "X",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "(N, M) ndarray     N by M data matrix with N observations in M dimensions. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "t",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "scalar     For criteria 'inconsistent', 'distance' or 'monocrit',      this is the threshold to apply when forming flat clusters.     For 'maxclust' or 'maxclust_monocrit' criteria,      this would be max number of clusters requested. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "criterion",
                     "value": "inconsistent",
@@ -3539,8 +3994,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "6f48e45764d6960b19ddc7b54cdbb17e54b6392282bc93ea47c88542d5ef2c65",
+            "dataHash": "7adbe73f96703888440cdfb1cf6ec0945a208ca0a5283e56bd0a3e37ff346322",
             "fields": [
+                {
+                    "name": "Z",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     A linkage matrix generated by MATLAB(TM). ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -3656,8 +4124,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "65833017a1be2524d7d71f2909cf3666d05bae440e2a1a65b764b7387d9f928f",
+            "dataHash": "a0c6db77ac70413c473b1aa7d44400777f7911b3cc182f54d8518cffea3f0e1d",
             "fields": [
+                {
+                    "name": "Z",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The :math:`(n-1)` by 4 matrix encoding the linkage (hierarchical     clustering).  See `linkage` documentation for more information on its     form. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "d",
                     "value": 2,
@@ -3786,8 +4267,34 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "bf7bde6f7c32b6cfb9995155333f98947a8d00b62db59c7ff2d2b49b09865171",
+            "dataHash": "9f48013c881a0a70e8aff95f9f72d0a2be3baa0d499f81f7494be5af105da1cf",
             "fields": [
+                {
+                    "name": "T1",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "array_like     An assignment of singleton cluster ids to flat cluster ids. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "T2",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "array_like     An assignment of singleton cluster ids to flat cluster ids. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -3903,8 +4410,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "52a369a4991956cefc4baeb4367a86d80bd52869a0c79bbef8383f65c6864661",
+            "dataHash": "10a290e807e9e61628f314b8aaadcbcfb3ea171e320f5ef7254d2a7b5bce27c2",
             "fields": [
+                {
+                    "name": "Z",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The linkage matrix to check for monotonicity. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -4020,8 +4540,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "ddf0668b6b366b381eae94a83d534760d817e3a530b6641b840c3ceb16ce576b",
+            "dataHash": "e37ca51d3752043c4a684494dfb0c2cd2cc83359686310575d00f2e649ac77dd",
             "fields": [
+                {
+                    "name": "R",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The inconsistency matrix to check for validity. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "warning",
                     "value": false,
@@ -4176,8 +4709,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "1fefb665f81903caceecf83947bdfafd814a6ec6bc331fbc30b56c8c2bb7a057",
+            "dataHash": "76aee1b80d0f41fa060ce2c4806f1a3967730f57be871de5e134d43de1a7569e",
             "fields": [
+                {
+                    "name": "Z",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "array_like     Linkage matrix. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "warning",
                     "value": false,
@@ -4332,8 +4878,34 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "b426840a4263c001a4f962a8ff673bdafa3ccac2ac80a40543522ebcf743d0de",
+            "dataHash": "e0050939588133a8159e6e7f218b66bfdf2c5dd39c8b72377d3c89e007b4d1e9",
             "fields": [
+                {
+                    "name": "Z",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The hierarchical clustering encoded as a matrix. See     `linkage` for more information. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "T",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The flat cluster assignment vector. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -4449,8 +5021,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "91bc1fb012c0985c3e7cb2e09d6f0968e4889dc01ec21900615c9ad482166366",
+            "dataHash": "05f87538694c798b7b7e7ab2d762500c86c7159f8f2916fbf0441fb37e8633a5",
             "fields": [
+                {
+                    "name": "Z",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The hierarchical clustering encoded as a matrix.  `Z` is     a linkage matrix.  See `linkage` for more information. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -4566,8 +5151,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "415e1c952c6491cd0be5e963032b01de306675de12dfc3a65af248a9b8289b22",
+            "dataHash": "f18ee07fe7d904dafe67ac883c47d87d4e115dafc51eb099c06fdd491ecb7e36",
             "fields": [
+                {
+                    "name": "y",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     A condensed distance matrix. A condensed distance matrix     is a flat array containing the upper triangular of the distance matrix.     This is the form that ``pdist`` returns. Alternatively, a collection of     :math:`m` observation vectors in :math:`n` dimensions may be passed as     an :math:`m` by :math:`n` array. All elements of the condensed distance     matrix must be finite, i.e., no NaNs or infs. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "method",
                     "value": "single",
@@ -4722,8 +5320,47 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "2e9f86d01bb328aaf53ba9cd55a5a4e1d96b993261289a3686df2510d19cdde6",
+            "dataHash": "98e62eec92d9e264b8e609b5e06c57c2bd04f4a4774012f4a6a701a3fa5dfa43",
             "fields": [
+                {
+                    "name": "Z",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "array_like     The hierarchical clustering encoded as a matrix. See `linkage` for more     information. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "R",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "array_like     The inconsistency matrix. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "i",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "int     The column of `R` to use as the statistic. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -4839,8 +5476,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "856e1918b30da81d63873d7cf8d71d57f2aa1a1890046711e37deb275ab77890",
+            "dataHash": "033877db222240534f0d3306f54e77b7075d84138aaf4a04d834523761dd1a55",
             "fields": [
+                {
+                    "name": "Z",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The hierarchical clustering encoded as a matrix. See     ``linkage`` for more information. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -4956,8 +5606,34 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "479d94cfef4511b1f256543fcca84a39daa087c0ca941bd5aadfe5568cfa8683",
+            "dataHash": "d192261d390424fb6e1e45718c51f98759d1454d2f95e97f720768693eda892e",
             "fields": [
+                {
+                    "name": "Z",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The hierarchical clustering encoded as a matrix. See     `linkage` for more information. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "R",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The inconsistency matrix. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -5073,8 +5749,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "4828e6f40d38b2fd19c0aa42c88edf22c8255d36224a23d1ebcc60ae79876fe8",
+            "dataHash": "e1b9092f4d369056b12dab220e6be44f257b45bc052d61d331c48d9aeacd82c2",
             "fields": [
+                {
+                    "name": "y",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     A condensed distance matrix. A condensed     distance matrix is a flat array containing the upper     triangular of the distance matrix. This is the form that     ``pdist`` returns.  Alternatively, a collection of     m observation vectors in n dimensions may be passed as     an m by n array. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -5190,8 +5879,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "dd5937024e16f767e75487a28a67cef70cb09fb16a6a41bb5c52f1ed21ddb112",
+            "dataHash": "81189d858d2efd7acdfa8842f20a465bdb61d66e5c757ff3d47976d223533626",
             "fields": [
+                {
+                    "name": "Z",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The linkage matrix on which to perform the operation. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -5307,8 +6009,34 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "d57ed9aca6332e0f28c3f89a461420b8d2119f43e8819014a5bc457abdabfe22",
+            "dataHash": "a74388d593a5f6a9785a2c076e5c9ec9c27e80d53b96037774e82f5d5dad74ab",
             "fields": [
+                {
+                    "name": "Z",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The hierarchical clustering encoded as a linkage matrix. See     `linkage` for more information on the return structure and     algorithm. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "y",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The condensed distance matrix from which Z was generated.     Alternatively, a collection of m observation vectors in n     dimensions may be passed as an m by n array. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "metric",
                     "value": "euclidean",
@@ -5437,8 +6165,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "1427bdc1363f61344969c42c4b28346ba35a1119096933f7cc39738736b8de6e",
+            "dataHash": "2032170a2e159c6fee3eb02bca9b981c152f6ba9f6314c562387cb81f4b2a32e",
             "fields": [
+                {
+                    "name": "palette",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "list of str or None     A list of matplotlib color codes.  The order of the color codes is the     order in which the colors are cycled through when color thresholding in     the dendrogram.      If ``None``, resets the palette to its default (which are matplotlib     default colors C1 to C9). ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -5554,8 +6295,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "62ffdf247dd2a79923933d0f898f700c1d35c2f40b1b0c20163786cd0845a967",
+            "dataHash": "4d886797c8c2675c2852e72c296bd99804597087b8740e6ce3158940d58c68d9",
             "fields": [
+                {
+                    "name": "y",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The upper triangular of the distance matrix. The result of     ``pdist`` is returned in this form. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -5671,8 +6425,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "988efb3557de90df3eaddb1d8e2cfc3bec60e88ea73ef98a1170c0bacf69cba2",
+            "dataHash": "990085d3d26e2ea97cbd787078ba8c38146241ea0e2620798fa9ee7dea84e6ad",
             "fields": [
+                {
+                    "name": "Z",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     A linkage matrix generated by ``scipy.cluster.hierarchy``. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -5788,8 +6555,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "1974b6b30e7ab33c428551e3f6b42c335ff1bf5f7dd5111cad283c548b59aa1f",
+            "dataHash": "47368c8dd4a2ede35e778a38b7e8245570e22c503fb3c7f6add0b5f8e2d9b8a3",
             "fields": [
+                {
+                    "name": "Z",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The linkage matrix in proper form (see the `linkage`     function documentation). ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "rd",
                     "value": false,
@@ -5918,8 +6698,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "88e6992932b30ec94c8cc8f385c9d96548c83fdc32f76c56576790514dfd9203",
+            "dataHash": "9c23fa06c253400a02861af0f9f8e25fa5655b020e128262ba67778f95356e56",
             "fields": [
+                {
+                    "name": "y",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     A condensed distance matrix. A condensed     distance matrix is a flat array containing the upper     triangular of the distance matrix. This is the form that     ``pdist`` returns.  Alternatively, a collection of     m observation vectors in n dimensions may be passed as     an m by n array. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -6035,8 +6828,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "24fdd87737d4e489e00bc821a94ad04668a4937471e20d9c6a9692e0b01371c9",
+            "dataHash": "a4077d64631900a852b18fa07543f68e3e8b90163a81bf2713793c4b49d2a057",
             "fields": [
+                {
+                    "name": "y",
+                    "value": null,
+                    "defaultValue": null,
+                    "description": "ndarray     The upper triangular of the distance matrix. The result of     ``pdist`` is returned in this form. ",
+                    "type": "None",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
