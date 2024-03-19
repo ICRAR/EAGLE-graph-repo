@@ -529,7 +529,7 @@
             "fields": [
                 {
                     "name": "image",
-                    "value": "icrar/yanda_imager:0.3.1",
+                    "value": "csirocass/yandasoft:dev-openmpi2",
                     "defaultValue": "",
                     "description": "The name of the docker image to be used for this application",
                     "readonly": false,
@@ -574,7 +574,7 @@
                 },
                 {
                     "name": "command",
-                    "value": "imager %i0",
+                    "value": "cd $DLG_ROOT/testdata/yanda && mpirun --allow-run-as-root -n 4  /usr/local/bin/cimager -c %i0",
                     "defaultValue": "",
                     "description": "The command line to run within the docker instance. The specified command will be executed in a bash shell. That means that images will need a bash shell.",
                     "readonly": false,
