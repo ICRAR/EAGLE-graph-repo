@@ -7,8 +7,8 @@
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "eagleVersion": "v5.1.0:eagle-1022",
-        "eagleCommitHash": "7418fc2f9b5e98fa470978a45da299c1a84fe807",
+        "eagleVersion": "v6.2.8",
+        "eagleCommitHash": "80717598c275f0e9b15a46e15e79383e0434e85f",
         "schemaVersion": "OJS",
         "readonly": true,
         "repositoryUrl": "",
@@ -30,12 +30,10 @@
             "key": -1,
             "name": "File",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "x": 645.4227335895059,
-            "y": 791.8520251122095,
-            "width": 200,
-            "height": 72,
+            "x": 657.9227335895059,
+            "y": 804.3520251122095,
+            "radius": 25,
             "collapsed": false,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
@@ -130,7 +128,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "8b0f89db-685a-4807-ad14-26e8a9cb552e",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
@@ -161,22 +159,22 @@
                     "keyAttribute": false,
                     "id": "c3fd39bd-b85e-4a5a-8b12-014bf9be2542",
                     "parameterType": "ApplicationArgument",
-                    "usage": "InputPort"
+                    "usage": "InputOutput"
                 },
                 {
-                    "name": "dummy",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Dummy output port",
-                    "readonly": false,
-                    "type": "Object",
+                    "name": "dropclass",
+                    "value": "dlg.data.drops.file.FileDROP",
+                    "defaultValue": "dlg.data.drops.file.FileDROP",
+                    "description": "",
+                    "readonly": true,
+                    "type": "String",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "a14d3e78-2e98-4a85-b3ca-98407945b243",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "OutputPort"
+                    "id": "dac65707-8873-4937-bb64-69390b48f349",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 }
             ],
             "inputAppFields": [],
@@ -191,7 +189,7 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "Component",
+            "category": "PythonApp",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
@@ -199,12 +197,10 @@
             "key": -2,
             "name": "PyFuncApp",
             "description": "An application that wraps a simple python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output.",
-            "x": 929.4227335895059,
-            "y": 730.8520251122095,
-            "width": 200,
-            "height": 72,
+            "x": 941.9227335895059,
+            "y": 743.3520251122095,
+            "radius": 25,
             "collapsed": false,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
@@ -213,7 +209,7 @@
             "dataHash": "dd4f9b3e8d02e105482a5d56cefe45e2173cda709b9b160eafc96b06c693364d",
             "fields": [
                 {
-                    "name": "appclass",
+                    "name": "dropclass",
                     "value": "dlg.apps.pyfunc.PyFuncApp",
                     "defaultValue": "dlg.apps.pyfunc.PyFuncApp",
                     "description": "Application class",
@@ -239,7 +235,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "00521132-192c-44c7-b974-391bbf0dee00",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
@@ -254,7 +250,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "0b2b5add-9751-46bf-997f-711fe7a3b345",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
@@ -429,7 +425,7 @@
     "linkDataArray": [
         {
             "from": -1,
-            "fromPort": "a14d3e78-2e98-4a85-b3ca-98407945b243",
+            "fromPort": "c3fd39bd-b85e-4a5a-8b12-014bf9be2542",
             "to": -2,
             "toPort": "594340db-0508-4058-9e8b-cd279aed5c75",
             "dataType": "Object",
