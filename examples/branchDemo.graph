@@ -1,12 +1,14 @@
 {
     "modelData": {
+        "filePath": "examples/branchDemo.graph",
         "fileType": "Graph",
+        "shortDescription": "",
+        "detailedDescription": "",
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "filePath": "examples/branchDemo.graph",
-        "eagleVersion": "v5.0.2",
-        "eagleCommitHash": "5d9153e898ae56bd7efb8d62694c7187836b9d79",
+        "eagleVersion": "v6.2.8",
+        "eagleCommitHash": "80717598c275f0e9b15a46e15e79383e0434e85f",
         "schemaVersion": "OJS",
         "readonly": true,
         "repositoryUrl": "",
@@ -23,17 +25,15 @@
             "category": "Branch",
             "categoryType": "Control",
             "isGroup": false,
-            "color": "rgb(88 167 94)",
+            "color": "rgb(46 161 55)",
             "drawOrderHint": 0,
             "key": -2,
-            "text": "mean < 0.5",
+            "name": "mean < 0.5",
             "description": "A conditional branch to control flow.",
-            "x": 708,
-            "y": 360,
-            "width": 200,
-            "height": 72,
+            "x": 730,
+            "y": 382,
+            "radius": 44,
             "collapsed": false,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "",
@@ -42,7 +42,6 @@
             "dataHash": "",
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -58,7 +57,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -74,7 +72,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
                     "defaultValue": "0",
@@ -90,7 +87,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
                     "defaultValue": "0",
@@ -106,7 +102,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
                     "name": "group_start",
                     "value": false,
                     "defaultValue": "false",
@@ -122,8 +117,7 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Appclass",
-                    "name": "appclass",
+                    "name": "dropclass",
                     "value": "dlg_example_cmpts.apps.MyBranch",
                     "defaultValue": "",
                     "description": "The python class that implements this branch construct",
@@ -138,7 +132,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Array",
                     "name": "array",
                     "value": "",
                     "defaultValue": "",
@@ -154,8 +147,7 @@
                     "usage": "InputPort"
                 },
                 {
-                    "text": "Y",
-                    "name": "Y",
+                    "name": "yes",
                     "value": "",
                     "defaultValue": "",
                     "description": "Port carrying the mean value of the array if mean < 0.5",
@@ -166,12 +158,11 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "aaa06365-563e-4d9a-95ec-99effbcd4b5a",
-                    "parameterType": "ApplicationArgument",
+                    "parameterType": "ComponentParameter",
                     "usage": "OutputPort"
                 },
                 {
-                    "text": "N",
-                    "name": "N",
+                    "name": "no",
                     "value": "",
                     "defaultValue": "",
                     "description": "Port carrying the mean value of the array if mean >= 0.5",
@@ -182,7 +173,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "9936b611-99c7-469d-901f-1dd060faf239",
-                    "parameterType": "ApplicationArgument",
+                    "parameterType": "ComponentParameter",
                     "usage": "OutputPort"
                 }
             ],
@@ -204,14 +195,12 @@
             "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -9,
-            "text": "RandomArrayApp",
+            "name": "RandomArrayApp",
             "description": "A testing APP that does not take any input and produces a random array of type int64, if integer is set to True, else of type float64. size indicates the number of elements ranging between the values low and high. The resulting array will be send to all connected output apps. \ninteger: bool [True], generate integer array low: float, lower boundary (will be converted to int for integer arrays) high: float, upper boundary (will be converted to int for integer arrays) size: int, number of array elements",
-            "x": 372.92233798875964,
-            "y": 255.49267696337097,
-            "width": 200,
-            "height": 72,
+            "x": 385.42233798875964,
+            "y": 267.99267696337097,
+            "radius": 25,
             "collapsed": true,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "",
@@ -220,7 +209,6 @@
             "dataHash": "",
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -236,7 +224,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -252,7 +239,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Size",
                     "name": "size",
                     "value": 100,
                     "defaultValue": "0",
@@ -268,7 +254,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Integer",
                     "name": "integer",
                     "value": false,
                     "defaultValue": "false",
@@ -284,7 +269,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Low",
                     "name": "low",
                     "value": "0",
                     "defaultValue": "",
@@ -300,7 +284,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "High",
                     "name": "high",
                     "value": "1",
                     "defaultValue": "",
@@ -316,8 +299,7 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Application class",
-                    "name": "appclass",
+                    "name": "dropclass",
                     "value": "dlg.apps.simple.RandomArrayApp",
                     "defaultValue": "",
                     "description": "Application class",
@@ -332,7 +314,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Execution time",
                     "name": "execution_time",
                     "value": 5,
                     "defaultValue": "0",
@@ -344,11 +325,10 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "b6ac48be-a238-4f83-bbcc-6589b6cfa0ad",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Num CPUs",
                     "name": "num_cpus",
                     "value": 1,
                     "defaultValue": "0",
@@ -360,11 +340,10 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "34fb66ae-cfde-47dc-ab0d-2cbc26cfe39d",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
                     "name": "group_start",
                     "value": false,
                     "defaultValue": "false",
@@ -380,7 +359,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Array",
                     "name": "array",
                     "value": "",
                     "defaultValue": "",
@@ -414,14 +392,12 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -5,
-            "text": "Memory",
+            "name": "Memory",
             "description": "In-memory storage of intermediate data products",
-            "x": 575.3166684521676,
-            "y": 303.1026132077936,
-            "width": 200,
-            "height": 72,
+            "x": 587.8166684521676,
+            "y": 315.6026132077936,
+            "radius": 25,
             "collapsed": true,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "",
@@ -430,7 +406,6 @@
             "dataHash": "",
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -446,7 +421,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -462,7 +436,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
                     "defaultValue": "0",
@@ -474,11 +447,10 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "92dfa661-2535-4299-a5c6-07b3b47c4bda",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": false,
                     "defaultValue": "false",
@@ -494,7 +466,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Array",
                     "name": "array",
                     "value": "",
                     "defaultValue": "",
@@ -507,23 +478,22 @@
                     "keyAttribute": false,
                     "id": "d79a8293-20ea-4c96-9722-b77fa773e844",
                     "parameterType": "ApplicationArgument",
-                    "usage": "InputPort"
+                    "usage": "InputOutput"
                 },
                 {
-                    "text": "Array",
-                    "name": "array",
-                    "value": "",
+                    "name": "dropclass",
+                    "value": "dlg.data.drops.memory.InMemoryDROP",
                     "defaultValue": "",
-                    "description": " Port carrying the averaged array",
+                    "description": "",
                     "readonly": false,
-                    "type": "Object.Array",
+                    "type": "String",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "dbadf028-89cb-45ae-8c48-86f9c8b23be1",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "OutputPort"
+                    "id": "9daf1a65-1ede-4056-8154-aaf8ecbe6018",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 }
             ],
             "inputAppFields": [],
@@ -544,14 +514,12 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -3,
-            "text": "Mean < 0.5",
+            "name": "Mean < 0.5",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "x": 919.2948519078232,
-            "y": 497.71467696337095,
-            "width": 200,
-            "height": 72,
+            "x": 931.7948519078232,
+            "y": 510.21467696337095,
+            "radius": 25,
             "collapsed": true,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "",
@@ -560,7 +528,6 @@
             "dataHash": "",
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -576,7 +543,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -592,7 +558,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
                     "defaultValue": "0",
@@ -604,11 +569,10 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "74587a9a-fb11-479d-a857-28b2dc3064dd",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": false,
                     "defaultValue": "false",
@@ -624,7 +588,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": false,
                     "defaultValue": "false",
@@ -640,7 +603,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "File path",
                     "name": "filepath",
                     "value": "",
                     "defaultValue": "",
@@ -656,7 +618,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Directory name",
                     "name": "dirname",
                     "value": "",
                     "defaultValue": "",
@@ -672,7 +633,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Y",
                     "name": "Y",
                     "value": "",
                     "defaultValue": "",
@@ -686,6 +646,21 @@
                     "id": "39798450-9576-4c77-b9f8-faf149cb493d",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
+                },
+                {
+                    "name": "dropclass",
+                    "value": "dlg.data.drops.file.FileDROP",
+                    "defaultValue": "dlg.data.drops.file.FileDROP",
+                    "description": "",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "86be8ebc-1649-4b7f-968c-3ef94434004a",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 }
             ],
             "inputAppFields": [],
@@ -706,14 +681,12 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -4,
-            "text": "Mean >= 0.5",
+            "name": "Mean >= 0.5",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "x": 961.2948519078232,
-            "y": 389.71467696337095,
-            "width": 200,
-            "height": 72,
+            "x": 973.7948519078232,
+            "y": 402.21467696337095,
+            "radius": 25,
             "collapsed": true,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "",
@@ -722,7 +695,6 @@
             "dataHash": "",
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -738,7 +710,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -754,7 +725,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
                     "defaultValue": "0",
@@ -766,11 +736,10 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "d8fde1e3-2fff-40b4-b91b-7f9cd7afea79",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": false,
                     "defaultValue": "false",
@@ -786,7 +755,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": false,
                     "defaultValue": "false",
@@ -802,7 +770,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "File path",
                     "name": "filepath",
                     "value": "",
                     "defaultValue": "",
@@ -818,7 +785,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Directory name",
                     "name": "dirname",
                     "value": "",
                     "defaultValue": "",
@@ -834,7 +800,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "N",
                     "name": "N",
                     "value": "",
                     "defaultValue": "",
@@ -848,6 +813,21 @@
                     "id": "ae868cbe-bafd-424e-8295-0cf1bba85fd2",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
+                },
+                {
+                    "name": "dropclass",
+                    "value": "dlg.data.drops.file.FileDROP",
+                    "defaultValue": "dlg.data.drops.file.FileDROP",
+                    "description": "",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "5bce7d43-d674-4e27-92f3-e23b3ac7f918",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 }
             ],
             "inputAppFields": [],
@@ -874,7 +854,7 @@
         },
         {
             "from": -5,
-            "fromPort": "dbadf028-89cb-45ae-8c48-86f9c8b23be1",
+            "fromPort": "d79a8293-20ea-4c96-9722-b77fa773e844",
             "to": -2,
             "toPort": "ba9ffc7a-9ef2-4ef4-860f-c167a9f2fb55",
             "dataType": "Object.Array",
