@@ -29,7 +29,7 @@
             "description": "The complete set of cImager parameters.",
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "671d6e3",
-            "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/59d4a9f82b6206b29ed9de657373a3a9ecc08824/palettes/YANDAsoft/YANDAParsets.palette",
+            "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/26ec606d4a2358e93f3cc77249d0eb95dff48b04/palettes/YANDAsoft/YANDAParsets.palette",
             "dataHash": "7175f1d4ab71115f928b888dc3914dbc17b59de46a476b69a2fa077721597b4c",
             "fields": [
                 {
@@ -44,6 +44,39 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "parameter2",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "Cimager.Images.Names",
+                    "value": "",
+                    "defaultValue": "None",
+                    "description": "List of image names which this imager will produce. If more than one image is given, a superposition is assumed (i.e. visibilities are fitted with a combined effect of two images; two measurement equations are simply added). Parameters of each image defined in this list must be given in the same parset usingImageName.somethingkeywords (with usual prefix). Note, all image names must start with wordimage(this is how parameters representing images are distinguished from other type of free parameters in ASKAPsoft), otherwise an exception is thrown. Example of valid names are:image.10uJy,image,imagecena",
+                    "readonly": false,
+                    "type": "Array",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "f0600c5b-1297-42e3-a47d-5cfb866a796c",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "Cimager.imagetype",
+                    "value": "fits",
+                    "defaultValue": "fits",
+                    "description": "Type of the image handler (determines the format of the images, both which are written to or read from the disk). Either \u201cfits\u201d or \u201ccasa\u201d can be requested.",
+                    "readonly": false,
+                    "type": "Select",
+                    "precious": false,
+                    "options": [
+                        "casa",
+                        "fits"
+                    ],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "8ae07072-baa9-4e54-a620-3c2df664fef5",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort"
                 },
@@ -547,39 +580,6 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "parameter35",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort"
-                },
-                {
-                    "name": "Cimager.Images.Names",
-                    "value": "",
-                    "defaultValue": "None",
-                    "description": "List of image names which this imager will produce. If more than one image is given, a superposition is assumed (i.e. visibilities are fitted with a combined effect of two images; two measurement equations are simply added). Parameters of each image defined in this list must be given in the same parset usingImageName.somethingkeywords (with usual prefix). Note, all image names must start with wordimage(this is how parameters representing images are distinguished from other type of free parameters in ASKAPsoft), otherwise an exception is thrown. Example of valid names are:image.10uJy,image,imagecena",
-                    "readonly": false,
-                    "type": "Array",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false,
-                    "id": "parameter36",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort"
-                },
-                {
-                    "name": "Cimager.imagetype",
-                    "value": "fits",
-                    "defaultValue": "fits",
-                    "description": "Type of the image handler (determines the format of the images, both which are written to or read from the disk). Either \u201cfits\u201d or \u201ccasa\u201d can be requested.",
-                    "readonly": false,
-                    "type": "Select",
-                    "precious": false,
-                    "options": [
-                        "casa",
-                        "fits"
-                    ],
-                    "positional": false,
-                    "keyAttribute": false,
-                    "id": "fdd1bfce-7e0b-4892-b303-e0e3fc7c9919",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort"
                 },
@@ -3100,7 +3100,7 @@
             "description": "Parameterset for YANDA cSimulator",
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "b11f970",
-            "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/59d4a9f82b6206b29ed9de657373a3a9ecc08824/palettes/YANDAsoft/YANDAParsets.palette",
+            "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/26ec606d4a2358e93f3cc77249d0eb95dff48b04/palettes/YANDAsoft/YANDAParsets.palette",
             "dataHash": "057c6a8ea53a5d04ce07c2e26ef25cfca59504053407289c5309f81cc44556fc",
             "fields": [
                 {
@@ -3625,7 +3625,7 @@
             "description": "Complete set of parameters for ASKAPSoft/YANDASoft imcontsub.",
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "b11f970",
-            "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/59d4a9f82b6206b29ed9de657373a3a9ecc08824/palettes/YANDAsoft/YANDAParsets.palette",
+            "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/26ec606d4a2358e93f3cc77249d0eb95dff48b04/palettes/YANDAsoft/YANDAParsets.palette",
             "dataHash": "057c6a8ea53a5d04ce07c2e26ef25cfca59504053407289c5309f81cc44556fc",
             "fields": [
                 {
@@ -3831,7 +3831,7 @@
             "description": "Complete set of linmos parameters for ASKAPsoft/YANDAsoft.",
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "671d6e3",
-            "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/59d4a9f82b6206b29ed9de657373a3a9ecc08824/palettes/YANDAsoft/YANDAParsets.palette",
+            "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/26ec606d4a2358e93f3cc77249d0eb95dff48b04/palettes/YANDAsoft/YANDAParsets.palette",
             "dataHash": "7175f1d4ab71115f928b888dc3914dbc17b59de46a476b69a2fa077721597b4c",
             "fields": [
                 {
