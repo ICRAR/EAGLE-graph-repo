@@ -1,12 +1,14 @@
 {
     "modelData": {
+        "filePath": "examples/HelloWorld-simple.graph",
         "fileType": "Graph",
+        "shortDescription": "",
+        "detailedDescription": "",
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "filePath": "examples/HelloWorld-simple.graph",
-        "eagleVersion": "v5.0.2",
-        "eagleCommitHash": "5d9153e898ae56bd7efb8d62694c7187836b9d79",
+        "eagleVersion": "v6.2.8",
+        "eagleCommitHash": "80717598c275f0e9b15a46e15e79383e0434e85f",
         "schemaVersion": "OJS",
         "readonly": true,
         "repositoryUrl": "",
@@ -26,14 +28,12 @@
             "color": "#0059a5",
             "drawOrderHint": 0,
             "key": -3,
-            "text": "HelloWorldApp",
+            "name": "HelloWorldApp",
             "description": "A simple APP that implements the standard Hello World in DALiuGE. It allows to change 'World' with some other string and it also permits to connect the single output port to multiple sinks, which will all receive the same message. App does not require any input.",
-            "x": 476.1365106949407,
-            "y": -79.77391148594653,
-            "width": 200,
-            "height": 72,
+            "x": 488.6365106949407,
+            "y": -67.27391148594653,
+            "radius": 25,
             "collapsed": true,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "",
@@ -42,8 +42,7 @@
             "dataHash": "",
             "fields": [
                 {
-                    "text": "Application Class",
-                    "name": "appclass",
+                    "name": "dropclass",
                     "value": "dlg.apps.simple.HelloWorldApp",
                     "defaultValue": "",
                     "description": "Application class",
@@ -58,7 +57,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Execution Time",
                     "name": "execution_time",
                     "value": 5,
                     "defaultValue": "0",
@@ -70,11 +68,10 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "b635036b-3447-4aa5-a6a9-2c2fbf02b7e2",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
-                    "text": "No. of CPUs",
                     "name": "num_cpus",
                     "value": 1,
                     "defaultValue": "0",
@@ -86,11 +83,10 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "3485da1b-790c-4b72-b41a-53bb9012f752",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Group start",
                     "name": "group_start",
                     "value": false,
                     "defaultValue": "false",
@@ -106,7 +102,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Greet",
                     "name": "greet",
                     "value": "World",
                     "defaultValue": "",
@@ -122,7 +117,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Hello",
                     "name": "hello",
                     "value": "",
                     "defaultValue": "",
@@ -156,14 +150,12 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -5,
-            "text": "File",
+            "name": "File",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "x": 559.3914134388866,
-            "y": -79.72435936694674,
-            "width": 200,
-            "height": 72,
+            "x": 571.8914134388866,
+            "y": -67.22435936694674,
+            "radius": 25,
             "collapsed": true,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "",
@@ -172,7 +164,6 @@
             "dataHash": "",
             "fields": [
                 {
-                    "text": "Persist",
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -188,7 +179,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Streaming",
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -204,7 +194,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Data volume",
                     "name": "data_volume",
                     "value": 5,
                     "defaultValue": "0",
@@ -216,11 +205,10 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "e4a04926-fd7e-484b-b420-89f57bfce416",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Group end",
                     "name": "group_end",
                     "value": false,
                     "defaultValue": "false",
@@ -236,7 +224,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "Check file path exists",
                     "name": "check_filepath_exists",
                     "value": false,
                     "defaultValue": "false",
@@ -252,7 +239,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "File Path",
                     "name": "filepath",
                     "value": "",
                     "defaultValue": "",
@@ -268,7 +254,6 @@
                     "usage": "NoPort"
                 },
                 {
-                    "text": "dummy",
                     "name": "dummy",
                     "value": "",
                     "defaultValue": "",
@@ -284,7 +269,6 @@
                     "usage": "InputPort"
                 },
                 {
-                    "text": "output",
                     "name": "input",
                     "value": "",
                     "defaultValue": "",
@@ -298,6 +282,21 @@
                     "id": "006abdec-e3ec-4b54-87b8-5320db46ca02",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort"
+                },
+                {
+                    "name": "dropclass",
+                    "value": "dlg.data.drops.file.FileDROP",
+                    "defaultValue": "dlg.data.drops.file.FileDROP",
+                    "description": "",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "efdcde1a-2f9b-4105-b36b-beff506249f4",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 }
             ],
             "inputAppFields": [],
