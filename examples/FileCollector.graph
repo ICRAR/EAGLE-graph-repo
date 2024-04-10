@@ -7,8 +7,8 @@
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "eagleVersion": "v5.1.1:eagle-1022",
-        "eagleCommitHash": "7bad1fcaf3730bd793baa32683a32360025cb31d",
+        "eagleVersion": "v6.2.8",
+        "eagleCommitHash": "80717598c275f0e9b15a46e15e79383e0434e85f",
         "schemaVersion": "OJS",
         "readonly": true,
         "repositoryUrl": "",
@@ -30,12 +30,10 @@
             "key": -5,
             "name": "array",
             "description": "In-memory storage of intermediate data products",
-            "x": 733.3293254308712,
-            "y": 74.98570934253135,
-            "width": 200,
-            "height": 72,
+            "x": 745.8293254308712,
+            "y": 87.48570934253135,
+            "radius": 25,
             "collapsed": true,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "",
@@ -74,7 +72,7 @@
                     "usage": "NoPort"
                 },
                 {
-                    "name": "Data volume",
+                    "name": "data_volume",
                     "value": 5,
                     "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
@@ -85,7 +83,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "1d22196d-45e8-4740-b1c4-1c5f7f30177e",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
@@ -132,6 +130,21 @@
                     "id": "9d2e1b95-c1d6-4190-842a-9e2f0d078336",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort"
+                },
+                {
+                    "name": "dropclass",
+                    "value": "dlg.data.drops.memory.InMemoryDROP",
+                    "defaultValue": "dlg.drop.data.memory.InMemoryDROP",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "42916e8b-c2d6-4b99-94d8-a3423894791f",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 }
             ],
             "inputAppFields": [],
@@ -149,17 +162,15 @@
             "category": "Loop",
             "categoryType": "Construct",
             "isGroup": true,
-            "color": "rgb(211 165 0)",
+            "color": "rgb(227 189 100)",
             "drawOrderHint": 0,
             "key": -2,
             "name": "Loop",
             "description": "Components inside a Loop will be repeatedly executed for a fixed number of times",
-            "x": 912.0548218778066,
-            "y": -33.08759479074922,
-            "width": 503.4608565246413,
-            "height": 383.8306256725438,
+            "x": 1090.3320710419619,
+            "y": 148.22326194936156,
+            "radius": 267.169202805053,
             "collapsed": false,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "",
@@ -233,12 +244,10 @@
             "key": -4,
             "name": "content",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "x": 1227.0703443994296,
-            "y": 227.06745692625432,
-            "width": 200,
-            "height": 72,
+            "x": 1239.5703443994296,
+            "y": 239.56745692625432,
+            "radius": 25,
             "collapsed": true,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "",
@@ -278,7 +287,7 @@
                     "usage": "NoPort"
                 },
                 {
-                    "name": "Data volume",
+                    "name": "data_volume",
                     "value": 5,
                     "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
@@ -289,7 +298,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "84657a4e-3121-4814-b9e3-e7b4f36b25c8",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
@@ -351,6 +360,21 @@
                     "id": "2bc074ad-386d-40a6-a997-69668774646e",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
+                },
+                {
+                    "name": "dropclass",
+                    "value": "dlg.data.drops.file.FileDROP",
+                    "defaultValue": "dlg.data.drops.file.FileDROP",
+                    "description": "",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "cffaba93-b9e5-4095-a85b-e94d0ac37c77",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 }
             ],
             "inputAppFields": [],
@@ -373,12 +397,10 @@
             "key": -6,
             "name": "rest_array",
             "description": "In-memory storage of the rest of the input array. NOTE: the name rest_array is important here, else the PickOne application does not know which output to use to write to remaining vector to.",
-            "x": 1005.3314409180925,
-            "y": 45.379066972468834,
-            "width": 200,
-            "height": 72,
+            "x": 1017.8314409180925,
+            "y": 57.879066972468834,
+            "radius": 25,
             "collapsed": true,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "",
@@ -418,7 +440,7 @@
                     "usage": "NoPort"
                 },
                 {
-                    "name": "Data volume",
+                    "name": "data_volume",
                     "value": 5,
                     "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
@@ -429,7 +451,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "16050cc6-c4bf-4321-91e8-5a545575158b",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
@@ -476,6 +498,21 @@
                     "id": "46ebbd1a-a092-442a-b096-ad025df480b9",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort"
+                },
+                {
+                    "name": "dropclass",
+                    "value": "dlg.data.drops.memory.InMemoryDROP",
+                    "defaultValue": "dlg.data.drops.memory.InMemoryDROP",
+                    "description": "",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "02ae423e-d5fe-468a-98ac-34b9c2e0a458",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 }
             ],
             "inputAppFields": [],
@@ -490,7 +527,7 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "Component",
+            "category": "PythonApp",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
@@ -498,12 +535,10 @@
             "key": -7,
             "name": "AdvUrlRetrieve",
             "description": "A BarrierAppDROP that copies the content of its single input onto its single output via SSH's scp protocol. \nDepending on the physical location of each DROP (this application, and its input and outputs) this application will copy data FROM another host or TO other host. This application's node must thus coincide with one of the two I/O DROPs.",
-            "x": 1085.161861048961,
-            "y": 222.64054039930227,
-            "width": 200,
-            "height": 72,
+            "x": 1097.661861048961,
+            "y": 235.14054039930227,
+            "radius": 25,
             "collapsed": true,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "",
@@ -543,7 +578,7 @@
                     "usage": "NoPort"
                 },
                 {
-                    "name": "Application Class",
+                    "name": "dropclass",
                     "value": "dlg_example_cmpts.apps.AdvUrlRetrieve",
                     "defaultValue": "",
                     "description": "Application class",
@@ -603,7 +638,7 @@
                     "usage": "NoPort"
                 },
                 {
-                    "name": "Execution time",
+                    "name": "execution_time",
                     "value": 5,
                     "defaultValue": "0",
                     "description": "Estimated execution time",
@@ -614,11 +649,11 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "95c3f133-0118-4f59-ad4b-905d99df1881",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
-                    "name": "Num CPUs",
+                    "name": "num_cpus",
                     "value": 1,
                     "defaultValue": "0",
                     "description": "Number of cores used",
@@ -629,7 +664,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "8a483fdb-e2bf-4541-9846-32301ade8534",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
@@ -705,7 +740,7 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "Component",
+            "category": "PythonApp",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
@@ -713,12 +748,10 @@
             "key": -1,
             "name": "FileGlob",
             "description": "A python app collecting the files in a directory",
-            "x": 578.3339614135696,
-            "y": 72.70431075037143,
-            "width": 200,
-            "height": 72,
+            "x": 590.8339614135696,
+            "y": 85.20431075037143,
+            "radius": 25,
             "collapsed": true,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "",
@@ -757,7 +790,7 @@
                     "usage": "NoPort"
                 },
                 {
-                    "name": "Execution time",
+                    "name": "execution_time",
                     "value": 5,
                     "defaultValue": "0",
                     "description": "Estimate of execution time (in seconds) for this application.",
@@ -768,11 +801,11 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "48fcedcc-4963-4f4d-b50b-817d480fc1c6",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
-                    "name": "Num CPUs",
+                    "name": "num_cpus",
                     "value": 1,
                     "defaultValue": "0",
                     "description": "Number of CPUs used for this application.",
@@ -783,7 +816,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "01081f52-7ff0-4524-9843-df27c8a0ee22",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
@@ -802,7 +835,7 @@
                     "usage": "NoPort"
                 },
                 {
-                    "name": "appclass",
+                    "name": "dropclass",
                     "value": "dlg_example_cmpts.apps.FileGlob",
                     "defaultValue": "",
                     "description": "The python class that implements this application",
@@ -882,12 +915,10 @@
             "key": -8,
             "name": "element",
             "description": "In-memory storage of intermediate data products",
-            "x": 929.8629912896538,
-            "y": 216.9971350378703,
-            "width": 200,
-            "height": 72,
+            "x": 942.3629912896538,
+            "y": 229.4971350378703,
+            "radius": 25,
             "collapsed": true,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "",
@@ -927,7 +958,7 @@
                     "usage": "NoPort"
                 },
                 {
-                    "name": "Data volume",
+                    "name": "data_volume",
                     "value": 5,
                     "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
@@ -938,7 +969,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "a49ba28f-555d-4749-b442-31ed1db239ed",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
@@ -970,6 +1001,21 @@
                     "id": "42d57bd6-561a-43e1-8a33-0d4b7d05e914",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputOutput"
+                },
+                {
+                    "name": "dropclass",
+                    "value": "dlg.data.drops.memory.InMemoryDROP",
+                    "defaultValue": "dlg.data.drops.memory.InMemoryDROP",
+                    "description": "",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "aca2d0ad-4339-462a-975f-5493e57a0865",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 }
             ],
             "inputAppFields": [],
@@ -987,17 +1033,15 @@
             "category": "Branch",
             "categoryType": "Control",
             "isGroup": false,
-            "color": "rgb(88 167 94)",
+            "color": "rgb(46 161 55)",
             "drawOrderHint": 0,
             "key": -10,
             "name": "len(array) > 0",
             "description": "A conditional branch to control flow.",
-            "x": 1121.3787831826119,
-            "y": 57.101890090759696,
-            "width": 200,
-            "height": 72,
+            "x": 1143.3787831826119,
+            "y": 79.1018900907597,
+            "radius": 44,
             "collapsed": false,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "",
@@ -1082,7 +1126,7 @@
                     "usage": "NoPort"
                 },
                 {
-                    "name": "appclass",
+                    "name": "dropclass",
                     "value": "dlg_example_cmpts.apps.LengthCheck",
                     "defaultValue": "",
                     "description": "The python class that implements this branch construct",
@@ -1112,7 +1156,7 @@
                     "usage": "InputPort"
                 },
                 {
-                    "name": "Y",
+                    "name": "yes",
                     "value": "",
                     "defaultValue": "",
                     "description": "",
@@ -1123,11 +1167,11 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "b253bbb7-9c69-43c1-a1d7-e3612a7ec5dd",
-                    "parameterType": "ApplicationArgument",
+                    "parameterType": "ComponentParameter",
                     "usage": "OutputPort"
                 },
                 {
-                    "name": "N",
+                    "name": "no",
                     "value": "",
                     "defaultValue": "",
                     "description": "",
@@ -1138,7 +1182,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "1f7d5b9a-47ad-4d26-8487-3787a6a5f733",
-                    "parameterType": "ApplicationArgument",
+                    "parameterType": "ComponentParameter",
                     "usage": "OutputPort"
                 }
             ],
@@ -1162,12 +1206,10 @@
             "key": -9,
             "name": "rest_array",
             "description": "In-memory storage of the rest of the input array. NOTE: the name rest_array is important here, else the PickOne application does not know which output to use to write to remaining vector to.",
-            "x": 1220.3314409180925,
-            "y": 145.37906697246882,
-            "width": 200,
-            "height": 72,
+            "x": 1232.8314409180925,
+            "y": 157.87906697246882,
+            "radius": 25,
             "collapsed": true,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "",
@@ -1207,7 +1249,7 @@
                     "usage": "NoPort"
                 },
                 {
-                    "name": "Data volume",
+                    "name": "data_volume",
                     "value": 5,
                     "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
@@ -1218,7 +1260,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "eb19c5ab-2e0e-4cb2-a2ea-1edfab217572",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
@@ -1265,6 +1307,36 @@
                     "id": "83f9b178-e09f-4f84-a717-16e7c23c7b57",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort"
+                },
+                {
+                    "name": "group_end",
+                    "value": true,
+                    "defaultValue": "true",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "6a924e96-464a-4e27-be42-4c0e96847d30",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "dropclass",
+                    "value": "dlg.data.drops.memory.InMemoryDROP",
+                    "defaultValue": "dlg.data.drops.memory.InMemoryDROP",
+                    "description": "",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "0e42a2bd-f884-4435-aa27-4d3c291c346c",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 }
             ],
             "inputAppFields": [],
@@ -1287,12 +1359,10 @@
             "key": -11,
             "name": "rest_array",
             "description": "In-memory storage of the rest of the input array. NOTE: the name rest_array is important here, else the PickOne application does not know which output to use to write to remaining vector to.",
-            "x": 1269.3314409180925,
-            "y": 44.37906697246882,
-            "width": 200,
-            "height": 72,
+            "x": 1281.8314409180925,
+            "y": 56.87906697246882,
+            "radius": 25,
             "collapsed": true,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "",
@@ -1332,7 +1402,7 @@
                     "usage": "NoPort"
                 },
                 {
-                    "name": "Data volume",
+                    "name": "data_volume",
                     "value": 5,
                     "defaultValue": "0",
                     "description": "Estimated size of the data contained in this node",
@@ -1343,7 +1413,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "a8418832-0357-426f-9b2f-4fca55ff8f97",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
@@ -1390,6 +1460,21 @@
                     "id": "11bf70fe-981d-4a29-a4c9-779a95d99a9e",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort"
+                },
+                {
+                    "name": "dropclass",
+                    "value": "dlg.data.drops.memory.InMemoryDROP",
+                    "defaultValue": "dlg.data.drops.memory.InMemoryDROP",
+                    "description": "",
+                    "readonly": true,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "7e419be6-f990-43d3-994b-f14086afa077",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 }
             ],
             "inputAppFields": [],
@@ -1404,7 +1489,7 @@
             "outputApplicationDescription": ""
         },
         {
-            "category": "Component",
+            "category": "PythonApp",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
@@ -1412,12 +1497,10 @@
             "key": -12,
             "name": "PickOne",
             "description": "App that picks the first element of an input list, passes that to all outputs, except the first one. The first output is used to pass the remaining array on. This app is useful for a loop.",
-            "x": 886.332701165831,
-            "y": 47.327718045522715,
-            "width": 200,
-            "height": 72,
+            "x": 899.3300856182898,
+            "y": 59.827718045522715,
+            "radius": 25,
             "collapsed": true,
-            "flipPorts": false,
             "subject": null,
             "expanded": true,
             "repositoryUrl": "",
@@ -1468,7 +1551,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "fbda90ee-c2e6-49d1-8ad7-67e5f040ad3a",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
@@ -1483,11 +1566,11 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "422de902-ab21-4e34-ac81-53c4ff8b2e0a",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
                 {
-                    "name": "appclass",
+                    "name": "dropclass",
                     "value": "dlg.apps.simple.PickOne",
                     "defaultValue": "",
                     "description": "The python class that implements this application",
@@ -1543,6 +1626,21 @@
                     "positional": false,
                     "keyAttribute": false,
                     "id": "2006b2d8-1f93-4626-bc9e-dab100ca36cc",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "group_start",
+                    "value": true,
+                    "defaultValue": "true",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "id": "d4746ad4-5c0d-42f2-9b28-b64297bf90f3",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 }
