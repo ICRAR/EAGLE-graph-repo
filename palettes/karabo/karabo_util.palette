@@ -14,10 +14,10 @@
         "repositoryUrl": "workspace",
         "commitHash": "0.1",
         "downloadUrl": "",
-        "signature": "d2060ca6b831fda08862657cac346ed02e1d6a43cabc4068350f78f4410f73f5",
+        "signature": "b34fca22305ceabdcc22685891d8bef4fdb4eb4da2a97343a0d0d9c2f2a98b53",
         "lastModifiedName": "wici",
         "lastModifiedEmail": "",
-        "lastModifiedDatetime": 1715304586.121728,
+        "lastModifiedDatetime": 1716888287.010521,
         "numLGNodes": 57
     },
     "nodeDataArray": [
@@ -25,17 +25,17 @@
             "category": "PythonMemberFunction",
             "key": -1,
             "name": "DaskHandler.__init__",
-            "description": "\nPublic & dev API for dask associated functionality.\n    \n    This is the public dask-api for Karabo, where you don't have to worry which\n    dask-handler of this module to use. You can do almost everything through this\n    class. The only exception is, if you want to adjust the default settings on\n    a slurm-system (customization through `DaskHandlerSlurm`).\n    \n    Attributes\n    ----------\n    dask_client:\n        The Dask client object. If None, a new client will be created.\n    memory_limit:\n        The memory_limit per worker in GB. If None, the memory limit will\n        be set to the maximum available memory on the node (see documentation)\n        in dask for `memory_limit`.\n    n_threads_per_worker:\n        The number of threads to use per worker. Standard is None, which\n        means that the number of threads will be equal to the number of\n        cores.\n    use_dask:\n        Whether to use Dask or not. If None, then Karabo will decide whether\n        to use dask or not for certain tasks.\n    use_processes:\n        Use processes instead of threads?\n        Threads:\n            - Fast to initiate.\n            - No need to transfer data to them.\n            - Limited by the GIL, which allows one thread to read the code at once.\n        Processes:\n            - Take time to set up.\n            - Slow to transfer data to.\n            - Each have their own GIL and so don't need to take turns reading the code.",
+            "description": "",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "51157a70d3b65bb9707ade38199e43bf158f8ddd8143ebe0d778c90c0a7653e1",
+            "dataHash": "18cdf3ec31ddd8904047d901800d6955b6da0f3cd7db174073db7be5aec4905b",
             "fields": [
                 {
                     "name": "self",
                     "value": null,
                     "defaultValue": null,
-                    "description": "DaskHandler Object",
+                    "description": "",
                     "type": "karabo.util.dask.DaskHandler",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort",
@@ -49,7 +49,7 @@
                     "value": null,
                     "defaultValue": null,
                     "description": "",
-                    "type": "UNSPECIFIED",
+                    "type": "None",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
@@ -62,10 +62,23 @@
                     "value": null,
                     "defaultValue": null,
                     "description": "",
-                    "type": "UNSPECIFIED",
+                    "type": "None",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "object",
+                    "defaultValue": "object",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -185,8 +198,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "24897cdc18952d7bafa81cd4e83870d617b9034a7e1f06f65b158e7f6804ecca",
+            "dataHash": "de2f6ef65135b98b196118d9f9c697c491e5770369ce5c1447cc49e86e0ead4c",
             "fields": [
+                {
+                    "name": "base_name",
+                    "value": "DaskHandler",
+                    "defaultValue": "DaskHandler",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -302,7 +328,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "d16c7a830cb1537aa0b52292be6b201073fea723b57bfebbfa24b892c1e4918a",
+            "dataHash": "00d08d960a8c7d095673f987f5d97db24b5906bfc721ddc0b24201f4ba6df8a9",
             "fields": [
                 {
                     "name": "iterate_function",
@@ -352,6 +378,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "DaskHandler",
+                    "defaultValue": "DaskHandler",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -471,8 +510,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "66b90849b7d1534ca3d130d8be357f70c06ebbfcd6604c910045b2a815754f5e",
+            "dataHash": "61c4a0dd962daa3c2ef26bbbbd546f951293f26e88f4f312bd3f8876f4ab0c45",
             "fields": [
+                {
+                    "name": "base_name",
+                    "value": "DaskHandler",
+                    "defaultValue": "DaskHandler",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -588,7 +640,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "15a40e5f3b061cf184a15db2f0d3a57bca1fe1340f5cb54487d906619d64b1a6",
+            "dataHash": "3cc3648a40bb933cc202fa7e25c4a34c12bcb359b496cedb6c51851f0bc5af50",
             "fields": [
                 {
                     "name": "override",
@@ -599,6 +651,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "DaskHandler",
+                    "defaultValue": "DaskHandler",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -714,17 +779,17 @@
             "category": "PythonMemberFunction",
             "key": -1,
             "name": "DaskHandlerBasic.__init__",
-            "description": "\nBase-class for dask-handler functionality.\n    \n    Attributes\n    ----------\n    dask_client:\n        The Dask client object. If None, a new client will be created.\n    memory_limit:\n        The memory_limit per worker in GB. If None, the memory limit will\n        be set to the maximum available memory on the node (see documentation)\n        in dask for `memory_limit`.\n    n_threads_per_worker:\n        The number of threads to use per worker. Standard is None, which\n        means that the number of threads will be equal to the number of\n        cores.\n    use_dask:\n        Whether to use Dask or not. If None, then Karabo will decide whether\n        to use dask or not for certain tasks.\n    use_processes:\n        Use processes instead of threads?\n        Threads:\n            - Fast to initiate.\n            - No need to transfer data to them.\n            - Limited by the GIL, which allows one thread to read the code at once.\n        Processes:\n            - Take time to set up.\n            - Slow to transfer data to.\n            - Each have their own GIL and so don't need to take turns reading the code.",
+            "description": "",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "3d9bf61c1031dc94e26a564b3665ef464120b12d98b7d831cffcc8180560d859",
+            "dataHash": "001b8afc798b8818d1118ff5db1ea9ea7e2079105b2aef27f2f5aadfa4bd00ca",
             "fields": [
                 {
                     "name": "self",
                     "value": null,
                     "defaultValue": null,
-                    "description": "DaskHandlerBasic Object",
+                    "description": "",
                     "type": "karabo.util.dask.DaskHandlerBasic",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort",
@@ -738,7 +803,7 @@
                     "value": null,
                     "defaultValue": null,
                     "description": "",
-                    "type": "UNSPECIFIED",
+                    "type": "None",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
@@ -751,10 +816,23 @@
                     "value": null,
                     "defaultValue": null,
                     "description": "",
-                    "type": "UNSPECIFIED",
+                    "type": "None",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "object",
+                    "defaultValue": "object",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -874,8 +952,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "3119c852ee4f533228992d78170164565ac7898048795f1e9dc4475ec0579099",
+            "dataHash": "a5b2aefdc73a40d3aa6edf90183258098e23fc988cec1b7ae5c3575855c0ff1d",
             "fields": [
+                {
+                    "name": "base_name",
+                    "value": "DaskHandlerBasic",
+                    "defaultValue": "DaskHandlerBasic",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -991,7 +1082,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "82c09a81d100d3c18df636db2880738357920f21563d58f4c763266839b43af9",
+            "dataHash": "99b0f8b71ffb739660e4941cddb5bb38ac1d1538215f474746d23d8d6fb68e55",
             "fields": [
                 {
                     "name": "iterate_function",
@@ -1041,6 +1132,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "DaskHandlerBasic",
+                    "defaultValue": "DaskHandlerBasic",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -1160,8 +1264,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "7e442c547c2a4abc2dbd2f917f77a8511e1b08835ccb68abce371a28f6e58bde",
+            "dataHash": "e7107bbaba8084903ccaebfbc00375d0685767905cfd646e8e5678311b55eec4",
             "fields": [
+                {
+                    "name": "base_name",
+                    "value": "DaskHandlerBasic",
+                    "defaultValue": "DaskHandlerBasic",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -1277,7 +1394,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "97644d8d60e3f1b7af850766cc8e46f34fc0c330a1b21d5c107d6f9f72228365",
+            "dataHash": "9c717841628fc31165dc549b431817a30777711c0db8a53bd8c6cde7f5e2b39f",
             "fields": [
                 {
                     "name": "override",
@@ -1288,6 +1405,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "DaskHandlerBasic",
+                    "defaultValue": "DaskHandlerBasic",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -1403,17 +1533,17 @@
             "category": "PythonMemberFunction",
             "key": -1,
             "name": "DaskHandlerSlurm.__init__",
-            "description": "\nDask-handler for slurm-based jobs.\n    \n    Attributes\n    ----------\n    use_workers_or_nannies:\n        Whether to use workers or nannies (default).\n        This could lead to more processing (see documentation for dask usage\n        in Karabo).\n    n_workers_scheduler_node : int\n        The number of workers to start on the scheduler node.\n    timeout: int\n        Timeout in seconds for the dask-scheduler to wait for all the\n        workers to connect.",
+            "description": "",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "e876a25d80459a59ae928e2745cdd16db6dd7ec24b11ed39fd15bbe022b10903",
+            "dataHash": "b2e3fc2b200622fa791c6e408638ed38879404f83eecf198e97d4d6dd32bd702",
             "fields": [
                 {
                     "name": "self",
                     "value": null,
                     "defaultValue": null,
-                    "description": "DaskHandlerSlurm Object",
+                    "description": "",
                     "type": "karabo.util.dask.DaskHandlerSlurm",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort",
@@ -1427,7 +1557,7 @@
                     "value": null,
                     "defaultValue": null,
                     "description": "",
-                    "type": "UNSPECIFIED",
+                    "type": "None",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
@@ -1440,10 +1570,23 @@
                     "value": null,
                     "defaultValue": null,
                     "description": "",
-                    "type": "UNSPECIFIED",
+                    "type": "None",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "object",
+                    "defaultValue": "object",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -1563,8 +1706,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "fe7157de143416a62fbef7284f5c7ddb6e202fe1554ca18e8d0f81aa3f5e8049",
+            "dataHash": "73a94700f0e7d37631650ee6cff90775f4d8c7b50bcd628a3ce1e118f0d668b8",
             "fields": [
+                {
+                    "name": "base_name",
+                    "value": "DaskHandlerSlurm",
+                    "defaultValue": "DaskHandlerSlurm",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -1680,8 +1836,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "214f907b67df5b0e7803c88e35a254b0427e2c9a40e9e69af42e17a758c7c7ad",
+            "dataHash": "1ed26fc06127688e94e1563694db1aed9f2a7eff7fd732fc6f96acd054235d5d",
             "fields": [
+                {
+                    "name": "base_name",
+                    "value": "DaskHandlerSlurm",
+                    "defaultValue": "DaskHandlerSlurm",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -1797,8 +1966,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "e38f87c0fb3efe71d4d2efb8b39e126f7b15b40fe626a31c3c0c4378a4872710",
+            "dataHash": "b79fb394f9cd0025667788ae96b13fed8ec21fa7dcae1bab2a63b39138433b75",
             "fields": [
+                {
+                    "name": "base_name",
+                    "value": "DaskHandlerSlurm",
+                    "defaultValue": "DaskHandlerSlurm",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -1914,8 +2096,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "63eb1f43faebc8ce4dc0a58e7f2d243449210555c48a76dae2e20e782b12183d",
+            "dataHash": "6b76a20aebb3697927b664d6bd21092f380f2a754b7db158f979d602a0c97549",
             "fields": [
+                {
+                    "name": "base_name",
+                    "value": "DaskHandlerSlurm",
+                    "defaultValue": "DaskHandlerSlurm",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -2031,8 +2226,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "8e2ab7bc554fc4940c53f3eb2be0a26de6efc5e30cef0b2f89506ed223d96935",
+            "dataHash": "b54277ae48846689c4e445d8f6243b7b77a517cd872ddf9d21a8894cb88affae",
             "fields": [
+                {
+                    "name": "base_name",
+                    "value": "DaskHandlerSlurm",
+                    "defaultValue": "DaskHandlerSlurm",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -2148,8 +2356,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "078259e026284e6f3e3fe22a4d9ba4622d4c0da92a8269b24320c1bd1c6fb183",
+            "dataHash": "ea928cef03499251ed382688898114dc47d1f248fc97248d564ca594825e2dcd",
             "fields": [
+                {
+                    "name": "base_name",
+                    "value": "DaskHandlerSlurm",
+                    "defaultValue": "DaskHandlerSlurm",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -2265,7 +2486,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "a11403b9f890573399504d00bb209042e8d3d83df146fad8f51b456a0e3c5a22",
+            "dataHash": "129eca7fecc14d112c6efef8dc8405d0f4d986d0344289dd806309036e19f169",
             "fields": [
                 {
                     "name": "override",
@@ -2276,6 +2497,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "DaskHandlerSlurm",
+                    "defaultValue": "DaskHandlerSlurm",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -2395,7 +2629,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "eaa53ce018d4bffdbc7a70c4b8375eca9d077ad15f64eb72ea8364107306962a",
+            "dataHash": "b1ba2ce2388b5fc352bb8aa58a3d003016268e9616b59ddd89fde82b113dad20",
             "fields": [
                 {
                     "name": "string",
@@ -2406,6 +2640,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "extract_chars_from_string",
+                    "defaultValue": "extract_chars_from_string",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -2525,7 +2772,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "19098c69ace45ae62f7f29a1cbd860c762dc885ee2582afc97eae0f72e6cfd83",
+            "dataHash": "4dfe70392d806fa5df135f53709ca705234d05e8563d8c140b64073b6417afb5",
             "fields": [
                 {
                     "name": "string",
@@ -2536,6 +2783,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "extract_digit_from_string",
+                    "defaultValue": "extract_digit_from_string",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -2655,14 +2915,14 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "da80b77bf64e30143f8bbdf5f0419c22b61f3b24106efd6d2f8c487df785841f",
+            "dataHash": "85523a04e5fa39e860562665c8315a62cafdc12af865db6bd0775a2d9d679494",
             "fields": [
                 {
                     "name": "interface",
                     "value": null,
                     "defaultValue": null,
                     "description": "str     Network interface like 'eth0' or 'ib0' ",
-                    "type": "UNSPECIFIED",
+                    "type": "String",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
@@ -2753,7 +3013,7 @@
                     "value": null,
                     "defaultValue": null,
                     "description": "str     Protocol like 'inproc' or 'tcp' ",
-                    "type": "UNSPECIFIED",
+                    "type": "String",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
@@ -2779,7 +3039,7 @@
                     "value": null,
                     "defaultValue": null,
                     "description": "dict     Options to pass to workers ",
-                    "type": "UNSPECIFIED",
+                    "type": "dict",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
@@ -2792,9 +3052,9 @@
                     "value": null,
                     "defaultValue": null,
                     "description": "mpi4py.MPI.Intracomm     Optional MPI communicator to use instead of COMM_WORLD ",
-                    "type": "UNSPECIFIED",
+                    "type": "mpi4py.MPI.Intracomm",
                     "parameterType": "ApplicationArgument",
-                    "usage": "NoPort",
+                    "usage": "InputPort",
                     "readonly": false,
                     "options": null,
                     "precious": false,
@@ -2809,6 +3069,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "initialize",
+                    "defaultValue": "initialize",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -2928,7 +3201,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "5d2ce28f5eccf37f115018339bc5d128db075e879793d2473fce9595ea12db17",
+            "dataHash": "73f5cafa9765060e27e5a88fcfb40c76eacf6444a388e59e3a002c0d788a7063",
             "fields": [
                 {
                     "name": "x",
@@ -2991,6 +3264,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "Gauss",
+                    "defaultValue": "Gauss",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -3110,7 +3396,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "4d27d2fc25fffaba83d3d9e40c0d5bb2aca0eb8c6dfe9ff0ce6f81831713c114",
+            "dataHash": "95e1ee6f10ce5abb39acaafedbb7e594582c206b7518ff20b44861ae4811dc34",
             "fields": [
                 {
                     "name": "x",
@@ -3186,6 +3472,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "Voigt",
+                    "defaultValue": "Voigt",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -3305,7 +3604,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "b78e30dcaae51d8ecbc6c1846c6036ea3d6416fc1fc625b085f11474dd325d70",
+            "dataHash": "fdfca68438146c9957214f21c9e5ddde1e15c7a5c5a42de4ce5688d2c5ffd9ae",
             "fields": [
                 {
                     "name": "max_chunk_memory_size",
@@ -3329,6 +3628,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "calculate_chunk_size_from_max_chunk_size_in_memory",
+                    "defaultValue": "calculate_chunk_size_from_max_chunk_size_in_memory",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -3448,7 +3760,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "07f2ede396d74651747f6bf9700b5d54deecac06808b1cdf57ff9deff3a6a523",
+            "dataHash": "71c6b14d047dbdd9e95709b340ce4e8b95d6fe53a37c307142dc7cca205291de",
             "fields": [
                 {
                     "name": "max_chunk_size_in_memory",
@@ -3472,6 +3784,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "calculate_required_number_of_chunks",
+                    "defaultValue": "calculate_required_number_of_chunks",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -3591,7 +3916,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "cd66d1787a2fd24d2c06e0c5512c10c5404e6e8dc391b7b4b1419621b4e90fa5",
+            "dataHash": "6192559bf42bb5ba96ba3132b58c7d195ddc7886ccfd896f248f7c011b1ded04",
             "fields": [
                 {
                     "name": "self",
@@ -3602,6 +3927,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "full_getter",
+                    "defaultValue": "full_getter",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -3721,7 +4059,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "a98d850cca3e6f8ee52a13329d6cd71249ed92f1941c112be30c7d8e179950e1",
+            "dataHash": "a11fc40bc8ebcb32bfe33f561d7df80f815a06a7569ade0a5fbd34049a7e0a10",
             "fields": [
                 {
                     "name": "self",
@@ -3745,6 +4083,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "full_setter",
+                    "defaultValue": "full_setter",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -3864,7 +4215,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "6dd8ff65a05f1d46b7831b0912ba88cfb78a17014a7342942d7ce90c94b85dd0",
+            "dataHash": "f36d22af3d6ecfa872d9921214d2411e89be999bbb360e38055a53d82393c346",
             "fields": [
                 {
                     "name": "ra",
@@ -3914,6 +4265,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "get_spectral_sky_data",
+                    "defaultValue": "get_spectral_sky_data",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -4033,7 +4397,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "45cc691ec0e39512e88c06690ff970583450d1d8330127e64097cea308a655c6",
+            "dataHash": "d1c658f0fbffe22a7f8be4a2276f214e1155b35d871c6a794fb83a92b28bcd92",
             "fields": [
                 {
                     "name": "msg",
@@ -4057,6 +4421,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "input_wrapper",
+                    "defaultValue": "input_wrapper",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -4176,7 +4553,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "c626a22144d3ac713e3ecfc90a48d16bb22bd52b936d7b1cf430e232273ade6e",
+            "dataHash": "8a2faa96bc11e5051527de1cae50b27fb01024a9041ce5b0fd7af763c8268d7b",
             "fields": [
                 {
                     "name": "size_str",
@@ -4187,6 +4564,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "parse_size",
+                    "defaultValue": "parse_size",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -4306,7 +4696,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "597fd51d47a01e312334b852a8f0a565512291e67134d7c24b68f52b7cd93458",
+            "dataHash": "e1a2daab1ed8cb2dfaaf904bdc3a2a125cbd767b4825784ce6761e4763d788b5",
             "fields": [
                 {
                     "name": "npoints",
@@ -4343,6 +4733,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "resample_spectral_lines",
+                    "defaultValue": "resample_spectral_lines",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -4458,21 +4861,34 @@
             "category": "PythonMemberFunction",
             "key": -1,
             "name": "FileHandler.__init__",
-            "description": "Creates `FileHandler` instance.\nUtility file-handler for unspecified directories.\n    \n    Provides chache-management functionality.\n    `FileHandler.root_stm` (short-term-memory-dir) and `FileHandler.root_ltm`\n    (long-term-memory-dir) are static root-directories where each according cache-dir\n    is located. In case someone wants to extract something specific from the cache,\n    the path is usually printed blue & bold in stdout.\n    \n    Honors 'TMPDIR' & 'TMP' and 'SCRATCH' env-var(s) for STM-disk-cache where\n    'TMPDIR' = 'TMP' > 'SCRATCH' > /tmp\n    Honors 'XDG_CACHE_HOME' env-var(s) for LTM-disk-cache where\n    'XDG_CACHE_HOME' > $HOME/.cache > /tmp\n    Note: Setting env-vars has only an effect if they're set before importing Karabo.\n    Run-time adjustments must be done directly on `root_stm` and `root_ltm`!\n    \n    The root STM and LTM must be unique per user (seeded rnd chars+digits) to\n    avoid conflicting dir-names on any computer with any root-directory.\n    \n    \n    LTM-root\n    \u2514\u2500\u2500 karabo-LTM-<user>-<10 rnd chars+digits>\n        \u251c\u2500\u2500 <prefix><10 rnd chars+digits>\n        |    \u251c\u2500\u2500 <sbudir>\n        |    \u2514\u2500\u2500 <file>\n        \u2514\u2500\u2500 <prefix><10 rnd chars+digits>\n             \u251c\u2500\u2500 <sbudir>\n             \u2514\u2500\u2500 <file>\n    \n    STM-root\n    \u2514\u2500\u2500 karabo-STM-<user>-<10 rnd chars+digits>\n        \u251c\u2500\u2500 <prefix><10 rnd chars+digits>\n        |    \u251c\u2500\u2500 <sbudir>\n        |    \u2514\u2500\u2500 <file>\n        \u2514\u2500\u2500 <prefix><10 rnd chars+digits>\n             \u251c\u2500\u2500 <sbudir>\n             \u2514\u2500\u2500 <file>\n    \n    FileHanlder can be used the same way as `tempfile.TemporaryDirectory` using `with`.",
+            "description": "Creates `FileHandler` instance.",
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "ed854653b9880c95839ae97c4ad787f34dbca49117411da5007b55b874501aee",
+            "dataHash": "00f0ac27e82102b0d5e6d7def92c43fa29bc8525a0e15aa74ee78815314261a3",
             "fields": [
                 {
                     "name": "self",
                     "value": null,
                     "defaultValue": null,
-                    "description": "FileHandler Object",
+                    "description": "Reference to FileHandler.__init__ object",
                     "type": "karabo.util.file_handler.FileHandler",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "FileHandler",
+                    "defaultValue": "FileHandler",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -4592,7 +5008,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "a0564f79c463be0698b6ccaacf5acae69f180d320b736757dce2065a06f99b08",
+            "dataHash": "85b165236fb7e15aa9e8e33d0ee72bd6ecc424f8db6a3a87a56648a03e8522d5",
             "fields": [
                 {
                     "name": "term",
@@ -4603,6 +5019,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "FileHandler",
+                    "defaultValue": "FileHandler",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -4722,17 +5151,30 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "d18551a89339218490c90dd7fc8a0cc2683629117647ddd703b8c00c88fe7ad1",
+            "dataHash": "b3814c8d27d8e6a572775b340274fac4c47d4645515ed0573b740bcad2fbbf90",
             "fields": [
                 {
                     "name": "self",
                     "value": null,
                     "defaultValue": null,
-                    "description": "FileHandler.clean_instance Object",
+                    "description": "Reference to FileHandler.clean_instance object",
                     "type": "karabo.util.file_handler.FileHandler",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "FileHandler",
+                    "defaultValue": "FileHandler",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -4852,7 +5294,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "80bb3d2b346319b772df3cb8b411cdd5cc97a0bbb1bcfc98f303bb442ec03f87",
+            "dataHash": "a63d5654bfb6a8abd6864a03a157b079f54890eea9b2d259a0a1ef7851b72a73",
             "fields": [
                 {
                     "name": "dir_path",
@@ -4863,6 +5305,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "FileHandler",
+                    "defaultValue": "FileHandler",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -4982,13 +5437,13 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "4c122d56e46119e12d16e48e7195f9c2773e136fda132851616a2b84f9e0294c",
+            "dataHash": "ad499e225722e42a00274701f904673c8bcce37a83b92aaa7443dfaa9f97aca2",
             "fields": [
                 {
                     "name": "self",
                     "value": null,
                     "defaultValue": null,
-                    "description": "FileHandler.get_tmp_dir Object",
+                    "description": "Reference to FileHandler.get_tmp_dir object",
                     "type": "karabo.util.file_handler.FileHandler",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
@@ -5071,6 +5526,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "FileHandler",
+                    "defaultValue": "FileHandler",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -5190,7 +5658,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "b9c14f8a8f852d0699f7c97d1d4bfd664da91240e6f25bded2963d5a8987285e",
+            "dataHash": "4cb1070bd60ba9ee2ad6136ee5e06708b33177d5027ef8cf939abf1a06bdb1a4",
             "fields": [
                 {
                     "name": "dirname",
@@ -5201,6 +5669,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "FileHandler",
+                    "defaultValue": "FileHandler",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -5320,8 +5801,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "944719e4b3aebd0629ab790834b91acd103fd5dd6558b8e89bbf274b8effdc70",
+            "dataHash": "12244222dab567efc953e16df5fee54296f3e4f64e2d5c19628c6bdcfffcfccd",
             "fields": [
+                {
+                    "name": "base_name",
+                    "value": "FileHandler",
+                    "defaultValue": "FileHandler",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -5437,7 +5931,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "5e276dee845e7aa2b52c1bafcd6ec27df6a836442edd520a0cda398cc1b55181",
+            "dataHash": "c7d4c2d00df6e68fd80650da8a7e2604b9b1304672b6e46eba751ce494059b75",
             "fields": [
                 {
                     "name": "term",
@@ -5448,6 +5942,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "FileHandler",
+                    "defaultValue": "FileHandler",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -5567,8 +6074,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "2b29d7790a7382229741ff8a06a0f305d7f2f40552f0f0a01cfed4e7197bf596",
+            "dataHash": "a185d43c90f76ad82469c1b53b9a0ec06d5c1e74cc2ba9f3bb7cb14ba5f38d2e",
             "fields": [
+                {
+                    "name": "base_name",
+                    "value": "FileHandler",
+                    "defaultValue": "FileHandler",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -5684,17 +6204,30 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "f4b1621149f7cb00c006f927b52eb3826382d4803299f2af89c1dd5841661c69",
+            "dataHash": "5df774a567972ffe09d60536088a329f14dff3f9941aaa69a0ef5ffa3fbdf611",
             "fields": [
                 {
                     "name": "x",
                     "value": null,
                     "defaultValue": null,
                     "description": "",
-                    "type": "UNSPECIFIED",
+                    "type": "None",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "copy",
+                    "defaultValue": "copy",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -5814,8 +6347,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "279f5b8ee340b0daaa1da9930147ce2816b836e828b2319e80e5aeed6406553a",
+            "dataHash": "fb33b9a575ed3d1d7cbe2b3d552baff9df8b452d94a21255435f72f70db0c3c6",
             "fields": [
+                {
+                    "name": "base_name",
+                    "value": "get_gpu_memory",
+                    "defaultValue": "get_gpu_memory",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -5931,7 +6477,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "54bee51f2b7603c79491977023d27a4b25f3508b6d5f125d9ed96b0fd2d23c58",
+            "dataHash": "380df335f99fed61bbcfdff6de6e457c01465023aa66100082148e902d5141b9",
             "fields": [
                 {
                     "name": "hdffile",
@@ -5942,6 +6488,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "get_vis_from_hdf5",
+                    "defaultValue": "get_vis_from_hdf5",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -6061,7 +6620,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "a973fd3b75b780ff96a36919909bfd6ee1d4a415c6b639cecdb3bc4c012fd424",
+            "dataHash": "50e294572ef5fb078315b0baa1b508105d6584694b78ce85cca9ba9fe16b00e3",
             "fields": [
                 {
                     "name": "g",
@@ -6085,6 +6644,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "h5_diter",
+                    "defaultValue": "h5_diter",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -6204,7 +6776,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "69f1f34663bbe208380d0d74ba5290833bcae684c71cae89c2a419901ed0ca08",
+            "dataHash": "96c5320c1777adbac5c53e6d6051284a4d02458301c0b8ec6e6b5f1ee9d1b44a",
             "fields": [
                 {
                     "name": "hdffile",
@@ -6215,6 +6787,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "print_hd5_object_and_keys",
+                    "defaultValue": "print_hd5_object_and_keys",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -6334,8 +6919,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "2935b1b2858fdd370d193f0931e2e96f13969dc090e5223d5961e1b9d85c4970",
+            "dataHash": "088bbd4e522f84f816c34cfcf12bcf2ebeeac8c8eb92b34d192cee1b042ec9f8",
             "fields": [
+                {
+                    "name": "base_name",
+                    "value": "get_ipython",
+                    "defaultValue": "get_ipython",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -6451,8 +7049,21 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "7c892f6204690f378f6094e47e97d2b1b80fff5b01e946e5b4eb203ed723b0b3",
+            "dataHash": "146b4652d44cdd0699f0fe6eec210d4b9ff398ff8d533faa14dd1e5f6a166658",
             "fields": [
+                {
+                    "name": "base_name",
+                    "value": "isNotebook",
+                    "defaultValue": "isNotebook",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "group_start",
                     "value": "false",
@@ -6568,7 +7179,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "8f170329b428ea197b1e0a690bcbac410f07b0fa5f518f51b9af547650804789",
+            "dataHash": "a679fab11d1c6da8bee2031c77a06ca05f05687622da1bf412bd4527785e4a5d",
             "fields": [
                 {
                     "name": "x",
@@ -6605,6 +7216,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "cartesian_to_ll",
+                    "defaultValue": "cartesian_to_ll",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -6724,20 +7348,33 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "aa28697095a9c340e6ff0b2c7dd262541f4859f17b1047293e7f135bb0795e80",
+            "dataHash": "3df0516ba5fc543a175e385e03397434817108e35e4757141293a530fb640a68",
             "fields": [
                 {
                     "name": "x",
                     "value": null,
                     "defaultValue": null,
                     "description": "",
-                    "type": "UNSPECIFIED",
+                    "type": "None",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
                     "options": null,
                     "precious": false,
                     "positional": true
+                },
+                {
+                    "name": "base_name",
+                    "value": "ceil",
+                    "defaultValue": "ceil",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
                 },
                 {
                     "name": "group_start",
@@ -6854,20 +7491,33 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "00034374207084521cee463f8409a8f1a0b91e2ed802cf9b28810215c0ec32f2",
+            "dataHash": "c3e7d2629c93aa1f0a2d2c942ecc85d78359c713ac7e8633d4c8a7083a2e2624",
             "fields": [
                 {
                     "name": "x",
                     "value": null,
                     "defaultValue": null,
                     "description": "",
-                    "type": "UNSPECIFIED",
+                    "type": "None",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
                     "options": null,
                     "precious": false,
                     "positional": true
+                },
+                {
+                    "name": "base_name",
+                    "value": "cos",
+                    "defaultValue": "cos",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
                 },
                 {
                     "name": "group_start",
@@ -6984,20 +7634,33 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "0f694d97df0122ceb47d6e481a9202a009ea099c34afd2b8870656284435f4ae",
+            "dataHash": "355541ce21f46f0607679f2e77252a6fcca7aa2b2a571297dea4f6be5334074b",
             "fields": [
                 {
                     "name": "x",
                     "value": null,
                     "defaultValue": null,
                     "description": "",
-                    "type": "UNSPECIFIED",
+                    "type": "None",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
                     "options": null,
                     "precious": false,
                     "positional": true
+                },
+                {
+                    "name": "base_name",
+                    "value": "floor",
+                    "defaultValue": "floor",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
                 },
                 {
                     "name": "group_start",
@@ -7114,7 +7777,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "ad7e9f0e100d22e7f56f699ea92f901fb1147b44ddbc692078eca4d076801e34",
+            "dataHash": "1b576673360c2b5f691db1a27259eff353f69275ff752d9e6b7c42e6a0eec195",
             "fields": [
                 {
                     "name": "width",
@@ -7177,6 +7840,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "poisson_disc_samples",
+                    "defaultValue": "poisson_disc_samples",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -7296,20 +7972,33 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "36ea623f288a68d930b93e63646f700672db2aa6f802cc58087bd8c83d305ee3",
+            "dataHash": "ff1877a394d010113d348afdb29234d4ef4cb84c6e1f81f3d35c429ab694b997",
             "fields": [
                 {
                     "name": "x",
                     "value": null,
                     "defaultValue": null,
                     "description": "",
-                    "type": "UNSPECIFIED",
+                    "type": "None",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
                     "options": null,
                     "precious": false,
                     "positional": true
+                },
+                {
+                    "name": "base_name",
+                    "value": "sin",
+                    "defaultValue": "sin",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
                 },
                 {
                     "name": "group_start",
@@ -7426,20 +8115,33 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "6ececb2cd0a1f02de7cb7851f84b63919854227ba0c34e9edcbf7ec3d1f9f46d",
+            "dataHash": "c271536c256bc9470c90a32625ac4c7ade9a65a23646016345a7d42aa6f1aeff",
             "fields": [
                 {
                     "name": "x",
                     "value": null,
                     "defaultValue": null,
                     "description": "",
-                    "type": "UNSPECIFIED",
+                    "type": "None",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
                     "options": null,
                     "precious": false,
                     "positional": true
+                },
+                {
+                    "name": "base_name",
+                    "value": "sqrt",
+                    "defaultValue": "sqrt",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
                 },
                 {
                     "name": "group_start",
@@ -7556,7 +8258,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "e6f789e1070c9ce7355b34cc9b18b99654d8173426f41ad4d512f461ffdd55ad",
+            "dataHash": "0a51bbd7f2437938355714e3f52b0ca989e0f17d66a964450b556d0d83811906",
             "fields": [
                 {
                     "name": "self",
@@ -7576,7 +8278,7 @@
                     "value": null,
                     "defaultValue": null,
                     "description": "",
-                    "type": "UNSPECIFIED",
+                    "type": "None",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
@@ -7589,10 +8291,23 @@
                     "value": null,
                     "defaultValue": null,
                     "description": "",
-                    "type": "UNSPECIFIED",
+                    "type": "None",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "object",
+                    "defaultValue": "object",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -7712,14 +8427,14 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "9c29035fa38f8a9cca3fef5284b214fb317843a5b05d30970f2d9ce742f6053a",
+            "dataHash": "7c44bd93de8d7c3807ae09d3126db7341a3fe797ada319a75a3dca11ffe85c0d",
             "fields": [
                 {
                     "name": "name",
                     "value": null,
                     "defaultValue": null,
                     "description": "",
-                    "type": "UNSPECIFIED",
+                    "type": "None",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
@@ -7745,7 +8460,7 @@
                     "value": null,
                     "defaultValue": null,
                     "description": "",
-                    "type": "UNSPECIFIED",
+                    "type": "None",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
@@ -7762,6 +8477,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "get_path",
+                    "defaultValue": "get_path",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
@@ -7881,7 +8609,7 @@
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
-            "dataHash": "763c92f2e36b4d6d0b3ca7313040600b1b527915fcf57b0b174572c59cca211b",
+            "dataHash": "da3c89e492faca25ede1179348be78d0c6e29b02a4da616f5added53f144689c",
             "fields": [
                 {
                     "name": "directory",
@@ -7931,6 +8659,19 @@
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort",
                     "readonly": false,
+                    "options": null,
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "create_MALS_survey_as_fits",
+                    "defaultValue": "create_MALS_survey_as_fits",
+                    "description": "The base class for this member function",
+                    "type": "String",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": true,
                     "options": null,
                     "precious": false,
                     "positional": false
