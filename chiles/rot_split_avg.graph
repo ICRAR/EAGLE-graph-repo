@@ -31,9 +31,9 @@
             "key": -4,
             "name": "Scatter",
             "description": "A construction that splits the inputs into multiple parallel processing inputs",
-            "x": 80.16454072231913,
-            "y": -475.65850303239046,
-            "radius": 164.06004450410654,
+            "x": 72.67251835051252,
+            "y": -468.1664806605838,
+            "radius": 171.79746533331775,
             "collapsed": false,
             "subject": null,
             "expanded": true,
@@ -44,7 +44,7 @@
             "fields": [
                 {
                     "name": "num_of_copies",
-                    "value": 17,
+                    "value": 2,
                     "defaultValue": "1",
                     "description": "How many parallel runs",
                     "readonly": false,
@@ -208,8 +208,8 @@
             "key": -11,
             "name": "MS Name",
             "description": "In-memory storage of intermediate data products",
-            "x": 94.0683951552702,
-            "y": -478.57349491136915,
+            "x": 88.61965161213811,
+            "y": -477.8924019684777,
             "radius": 25,
             "collapsed": true,
             "subject": null,
@@ -481,8 +481,8 @@
             "key": -10,
             "name": "MS Name Array",
             "description": "In-memory storage of intermediate data products",
-            "x": 7.076167419510938,
-            "y": -521.1511131223434,
+            "x": 9.119446248185474,
+            "y": -503.4426966071648,
             "radius": 25,
             "collapsed": true,
             "subject": null,
@@ -588,6 +588,22 @@
                     "id": "5e513c78-dad5-41a2-8e32-2f2bd6cf190f",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
+                },
+                {
+                    "name": "group_start",
+                    "value": true,
+                    "defaultValue": "false",
+                    "description": "Is this node the start of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "encoding": "pickle",
+                    "id": "0b88aaf1-6d91-45ed-b88c-29b4f95d0f9e",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 }
             ],
             "inputAppFields": [],
@@ -610,8 +626,8 @@
             "key": -21,
             "name": "PickOne",
             "description": "App that picks the first element of an input list, passes that to all outputs, except the first one. The first output is used to pass the remaining array on. This app is useful for a loop.",
-            "x": 6.17068897883795,
-            "y": -416.2062511501661,
+            "x": 6.851781921729476,
+            "y": -393.7301840347466,
             "radius": 25,
             "collapsed": true,
             "subject": null,
@@ -717,6 +733,22 @@
                     "id": "7d0a17bd-476e-44f5-a369-be720ad93baa",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort"
+                },
+                {
+                    "name": "group_end",
+                    "value": true,
+                    "defaultValue": "false",
+                    "description": "Is this node the end of a group?",
+                    "readonly": false,
+                    "type": "Boolean",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "encoding": "pickle",
+                    "id": "2f73bb59-ca86-4996-8b6c-254305d7df54",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
                 }
             ],
             "inputAppFields": [],
@@ -1134,22 +1166,6 @@
             "closesLoop": false
         },
         {
-            "from": -21,
-            "fromPort": "9e93766f-c380-4ffb-8b08-366f10f41c00",
-            "to": -10,
-            "toPort": "8e6d098e-4fe2-4084-a4f8-50c5dc05792e",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
-            "from": -10,
-            "fromPort": "8e6d098e-4fe2-4084-a4f8-50c5dc05792e",
-            "to": -21,
-            "toPort": "9e93766f-c380-4ffb-8b08-366f10f41c00",
-            "loop_aware": "0",
-            "closesLoop": true
-        },
-        {
             "from": -19,
             "fromPort": "d9292dcc-2d8f-4cd7-a7ff-035113fbae52",
             "to": -3,
@@ -1172,6 +1188,22 @@
             "toPort": "8e6d098e-4fe2-4084-a4f8-50c5dc05792e",
             "loop_aware": "0",
             "closesLoop": false
+        },
+        {
+            "from": -10,
+            "fromPort": "8e6d098e-4fe2-4084-a4f8-50c5dc05792e",
+            "to": -21,
+            "toPort": "9e93766f-c380-4ffb-8b08-366f10f41c00",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -21,
+            "fromPort": "9e93766f-c380-4ffb-8b08-366f10f41c00",
+            "to": -10,
+            "toPort": "8e6d098e-4fe2-4084-a4f8-50c5dc05792e",
+            "loop_aware": "0",
+            "closesLoop": true
         }
     ]
 }
