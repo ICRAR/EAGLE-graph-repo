@@ -44,7 +44,7 @@
             "fields": [
                 {
                     "name": "func_name",
-                    "value": "pi_bbp.decimal_sum",
+                    "value": "decimal_sum",
                     "defaultValue": "",
                     "description": "Python function name",
                     "readonly": false,
@@ -60,7 +60,7 @@
                 },
                 {
                     "name": "func_code",
-                    "value": "",
+                    "value": "from decimal import getcontext\ndef decimal_sum(array, precision, output):\n    getcontext().prec = precision\n    dsum = sum(array)\n    if output:\n         print(f\"{dsum:.{precision}}\")\n    return dsum\n",
                     "defaultValue": "",
                     "description": "Python function code, e.g. 'def function_name(args): return args'",
                     "readonly": false,
@@ -800,7 +800,7 @@
             "key": -5,
             "name": "pi_k",
             "description": "An implementation of the Bailey-Borwein-Plouffe function to calculate n\\_digits of PI starting at start\\_digit.",
-            "x": 587.4261426205138,
+            "x": 588.5039246647431,
             "y": 253.23481417876658,
             "radius": 25,
             "collapsed": false,
@@ -942,7 +942,7 @@
                 },
                 {
                     "name": "func_name",
-                    "value": "pi_bbp.pi_k",
+                    "value": "pi_k",
                     "defaultValue": "dlg_example_funcs.pi_bbp.pi_k",
                     "description": "Complete import path of function",
                     "readonly": true,
@@ -953,6 +953,22 @@
                     "keyAttribute": false,
                     "encoding": "pickle",
                     "id": "858191b7-761e-4ba6-9c11-36e225992d8c",
+                    "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "func_code",
+                    "value": "from decimal import Decimal, getcontext \ndef pi_k(start_digit: int = 0, n_digits: int = 16, precision: int = 32) -> Decimal:\n    \"\"\"\n    An implementation of the Bailey-Borwein-Plouffe function to\n    calculate _n\\_digits_ of PI starting at _start\\_digit_.\n\n    Parameters:\n    -----------\n    start_digit: int, first digit to calculate (default=0)\n    n_digits: int, number of digits to calculate (default=16)\n    precision: int, number of significant digits, if not provided defaults to\n    start\\_digit + n\\_digits\n\n    Returns:\n    --------\n    Decimal of n\\_digits significant digits of PI\n\n    \"\"\"\n    if start_digit < 0 or n_digits < 1:\n        raise ValueError(\"Invalid value of start_digit or n_digits provided!\")\n    getcontext().prec = precision\n    pi_digits = sum(\n        1\n        / Decimal(16) ** k\n        * (\n            Decimal(4) / (8 * k + 1)\n            - Decimal(2) / (8 * k + 4)\n            - Decimal(1) / (8 * k + 5)\n            - Decimal(1) / (8 * k + 6)\n        )\n        for k in range(start_digit, start_digit + n_digits, 1)\n    )\n\n    return pi_digits\n",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "encoding": "pickle",
+                    "id": "da4f9acb-631a-4f89-9907-862a5f047752",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1868,7 +1884,7 @@
             "fields": [
                 {
                     "name": "func_name",
-                    "value": "pi_bbp.generate_start_digits",
+                    "value": "generate_start_digits",
                     "defaultValue": "",
                     "description": "Python function name",
                     "readonly": false,
@@ -1884,7 +1900,7 @@
                 },
                 {
                     "name": "func_code",
-                    "value": "",
+                    "value": "def generate_start_digits(precision: int = 10000, n_split: int = 10) -> range:  return range(0, precision, int(precision / n_split))",
                     "defaultValue": "",
                     "description": "Python function code, e.g. 'def function_name(args): return args'",
                     "readonly": false,
