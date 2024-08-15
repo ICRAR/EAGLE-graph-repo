@@ -3,7 +3,7 @@
         "filePath": "examples/parallelPi.graph",
         "fileType": "Graph",
         "shortDescription": "Parallel calculation of digits of PI",
-        "detailedDescription": "An implementation of the generation of an arbitrary number of digits of PI. It is using a distributed version of the Bailey\u2013Borwein\u2013Plouffe formula. By using DALiuGE as a distribution mechanism, this allows a generation of PI across many compute nodes. The default setting generates 100,000 digits across 10 processes.",
+        "detailedDescription": "An implementation of the generation of an arbitrary number of digits of PI. It is using a distributed version of the Bailey\u2013Borwein\u2013Plouffe formula. By using DALiuGE as a distribution mechanism, this allows a generation of PI across many compute nodes. The default setting generates 10,000 digits across 10 processes.",
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
@@ -31,8 +31,8 @@
             "key": -1,
             "name": "decimal_sum",
             "description": "Sum the value\\_array and print result to stdout using the given precision.",
-            "x": 978.6745921615263,
-            "y": 249.8843581208671,
+            "x": 953.255664314438,
+            "y": 249.8843581208672,
             "radius": 25,
             "collapsed": false,
             "subject": null,
@@ -41,6 +41,7 @@
             "commitHash": "10110da",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master-template.palette",
             "dataHash": "8ebeeb4296265146339c8269192c3039c213a4153e96a4a91b037904864403af",
+            "group": -8,
             "fields": [
                 {
                     "name": "func_name",
@@ -60,7 +61,7 @@
                 },
                 {
                     "name": "func_code",
-                    "value": "from decimal import getcontext\ndef decimal_sum(array, precision, output):\n    getcontext().prec = precision\n    dsum = sum(array)\n    if output:\n         print(f\"{dsum:.{precision}}\")\n    return dsum\n",
+                    "value": "from decimal import getcontext\ndef decimal_sum(array, precision, output):\n    getcontext().prec = precision\n    dsum = sum(array)\n    if output:\n         print(f\"Number of parts: {len(array)}\")\n         print(f\"{dsum:.{precision}}\")\n    return dsum\n",
                     "defaultValue": "",
                     "description": "Python function code, e.g. 'def function_name(args): return args'",
                     "readonly": false,
@@ -80,7 +81,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Object.array",
+                    "type": "Object.Decimal",
                     "precious": false,
                     "options": [],
                     "positional": false,
@@ -108,8 +109,8 @@
                 },
                 {
                     "name": "output",
-                    "value": false,
-                    "defaultValue": "",
+                    "value": true,
+                    "defaultValue": "false",
                     "description": "",
                     "readonly": false,
                     "type": "Boolean",
@@ -317,8 +318,8 @@
             "key": -2,
             "name": "value_array",
             "description": "All the partial values of PI gathered into a single array. to prepare for the summation.",
-            "x": 841.2846990146023,
-            "y": 249.88135686891889,
+            "x": 886.312514058009,
+            "y": 246.9763365435373,
             "radius": 25,
             "collapsed": true,
             "subject": null,
@@ -329,6 +330,22 @@
             "dataHash": "66c8e8c44691e00847d02d2707d65fbc9f5252f260afcfa1bc3bf61abb764a83",
             "group": -8,
             "fields": [
+                {
+                    "name": "value_list",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.Decimal",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "encoding": "pickle",
+                    "id": "b322b116-7153-48e1-a4ac-39e6a7d21da8",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputOutput"
+                },
                 {
                     "name": "pydata",
                     "value": "None",
@@ -341,7 +358,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "40193928-f670-46eb-97bc-97ebd3feec9f",
+                    "id": "3857a5be-b6bc-4a56-926c-cc79ec387d8b",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort"
                 },
@@ -357,7 +374,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "2bb9f8cb-aca2-49cc-b1a5-5ad51f6a85f8",
+                    "id": "37624330-bb2f-4857-ae79-0df089af2cce",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -373,7 +390,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "d9a99a79-a9a3-498a-9d15-2dc3aabb833f",
+                    "id": "57beedb4-c307-4cb8-8b6d-6df2c6078bbb",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -389,7 +406,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "0a169eea-4963-4aad-a59a-7616e50814b5",
+                    "id": "46c8d2ec-bfa4-4694-97ae-18eaed5a46cb",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -405,7 +422,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "cdd70d50-02ae-46a7-9309-b4beccd0d9e1",
+                    "id": "71f6fc9c-bf2e-41d7-94af-b67ad8b286f4",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -421,7 +438,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "7251f74f-8905-4e38-ab94-25800146426b",
+                    "id": "15d4d89b-a65c-4052-a376-369e5f8fd852",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -437,25 +454,9 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "33442d6e-38e8-45e1-9786-9342a7756077",
+                    "id": "2469083a-5950-4daa-aa5f-263829077277",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
-                },
-                {
-                    "name": "value_list",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Object.array",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false,
-                    "encoding": "pickle",
-                    "id": "b322b116-7153-48e1-a4ac-39e6a7d21da8",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "InputOutput"
                 }
             ],
             "inputAppFields": [],
@@ -477,7 +478,7 @@
             "drawOrderHint": 0,
             "key": -3,
             "name": "start_digit",
-            "description": "In-memory storage of intermediate data products",
+            "description": "One element of the start\\_digits array for every scatter branch.",
             "x": 507.5678195441009,
             "y": 255.3889096479242,
             "radius": 25,
@@ -652,6 +653,22 @@
             "group": -10,
             "fields": [
                 {
+                    "name": "pi_k",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.Decimal",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "encoding": "pickle",
+                    "id": "2e99ac90-c7d1-45b5-a230-b9927b3e8869",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "InputOutput"
+                },
+                {
                     "name": "pydata",
                     "value": "None",
                     "defaultValue": "None",
@@ -663,7 +680,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "26ac31f4-cc4b-46e6-8697-830efea09ca2",
+                    "id": "3857a5be-b6bc-4a56-926c-cc79ec387d8b",
                     "parameterType": "ApplicationArgument",
                     "usage": "NoPort"
                 },
@@ -679,7 +696,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "c075ea13-5f20-43d3-8456-1a0b4dcb4467",
+                    "id": "37624330-bb2f-4857-ae79-0df089af2cce",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -695,7 +712,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "7146a62e-98eb-47a5-8611-7ae35d460939",
+                    "id": "57beedb4-c307-4cb8-8b6d-6df2c6078bbb",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -711,7 +728,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "7e446766-2a49-47e2-ad90-0718432c6add",
+                    "id": "46c8d2ec-bfa4-4694-97ae-18eaed5a46cb",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -727,7 +744,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "f56db2bb-21b8-4f48-8876-9ae3040fe220",
+                    "id": "71f6fc9c-bf2e-41d7-94af-b67ad8b286f4",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -743,7 +760,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "9472fd0f-d269-4e5e-b236-2bb627d5e5be",
+                    "id": "15d4d89b-a65c-4052-a376-369e5f8fd852",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -759,25 +776,9 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "42f91991-b24b-4952-9eef-9b2d0d3f9d05",
+                    "id": "2469083a-5950-4daa-aa5f-263829077277",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
-                },
-                {
-                    "name": "pi_k",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Object.Decimal",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false,
-                    "encoding": "pickle",
-                    "id": "2e99ac90-c7d1-45b5-a230-b9927b3e8869",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "InputOutput"
                 }
             ],
             "inputAppFields": [],
@@ -847,7 +848,7 @@
                 {
                     "name": "precision",
                     "value": 10000,
-                    "defaultValue": "",
+                    "defaultValue": "0",
                     "description": "",
                     "readonly": false,
                     "type": "Integer",
@@ -1051,10 +1052,10 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "key": -7,
-            "name": "PI",
+            "name": "PI_10000.pickle",
             "description": "The resulting value of PI saved to a file.",
-            "x": 1081.6216872643438,
-            "y": 247.489178470608,
+            "x": 1030.783831570175,
+            "y": 251.84670895867993,
             "radius": 25,
             "collapsed": false,
             "subject": null,
@@ -1063,10 +1064,11 @@
             "commitHash": "10110da",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master.palette",
             "dataHash": "fb6b9cc58716743665932ec7d3eba94334ea8ab892708fdb4658751a1878ed22",
+            "group": -8,
             "fields": [
                 {
                     "name": "filepath",
-                    "value": "",
+                    "value": "PI_10000.pickle",
                     "defaultValue": "",
                     "description": "File path for this file. In many cases this does not need to be specified. If it has a \\/ at the end it will be treated as a directory name and the filename will be generated. If it does not have a \\/, the last part will be treated as a filename. If filepath does not start with \\/ (relative path) then the session directory will be prepended to make the path absolute.\"",
                     "readonly": false,
@@ -1229,9 +1231,9 @@
             "key": -8,
             "name": "Gather results",
             "description": "A default Gather construct for the GenericNpyGatherApp component.",
-            "x": 835.2998226193773,
-            "y": 251.887806967679,
-            "radius": 61.31225692323561,
+            "x": 952.9531457973151,
+            "y": 248.98278664229792,
+            "radius": 132.8833595764071,
             "collapsed": false,
             "subject": null,
             "expanded": true,
@@ -1275,28 +1277,12 @@
                     "usage": "NoPort"
                 },
                 {
-                    "name": "input",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Object",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false,
-                    "encoding": "pickle",
-                    "id": "b4202de7-0319-4f8e-834d-f7a821a50d1d",
-                    "parameterType": "ComponentParameter",
-                    "usage": "InputPort"
-                },
-                {
                     "name": "value_array",
-                    "value": "[]",
+                    "value": "",
                     "defaultValue": "[]",
                     "description": "",
                     "readonly": false,
-                    "type": "Object.array",
+                    "type": "Object.Decimal",
                     "precious": false,
                     "options": [],
                     "positional": false,
@@ -1304,7 +1290,7 @@
                     "encoding": "pickle",
                     "id": "0b50a151-bd30-4772-a040-589afe686ed6",
                     "parameterType": "ApplicationArgument",
-                    "usage": "OutputPort"
+                    "usage": "InputOutput"
                 },
                 {
                     "name": "base_name",
@@ -1518,7 +1504,7 @@
                 {
                     "name": "element",
                     "value": true,
-                    "defaultValue": "",
+                    "defaultValue": "false",
                     "description": "",
                     "readonly": false,
                     "type": "Boolean",
@@ -1550,7 +1536,7 @@
             "drawOrderHint": 0,
             "key": -12,
             "name": "start_digits",
-            "description": "In-memory storage of intermediate data products",
+            "description": "The array of start\\_digits",
             "x": 330.94759523561453,
             "y": 257.3722806677984,
             "radius": 25,
@@ -1562,22 +1548,6 @@
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master.palette",
             "dataHash": "66c8e8c44691e00847d02d2707d65fbc9f5252f260afcfa1bc3bf61abb764a83",
             "fields": [
-                {
-                    "name": "pydata",
-                    "value": "",
-                    "defaultValue": "None",
-                    "description": "Array of starting digits",
-                    "readonly": false,
-                    "type": "Json",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "keyAttribute": false,
-                    "encoding": "pickle",
-                    "id": "2983bd3e-8427-4324-871e-3d2e1f3a1c8b",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort"
-                },
                 {
                     "name": "dummy",
                     "value": "",
@@ -1595,6 +1565,22 @@
                     "usage": "InputOutput"
                 },
                 {
+                    "name": "pydata",
+                    "value": "None",
+                    "defaultValue": "None",
+                    "description": "Data to be loaded into memory",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "keyAttribute": false,
+                    "encoding": "pickle",
+                    "id": "3857a5be-b6bc-4a56-926c-cc79ec387d8b",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort"
+                },
+                {
                     "name": "persist",
                     "value": false,
                     "defaultValue": "False",
@@ -1606,7 +1592,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "495fde2b-a483-4289-a1dc-7cfba59f3a01",
+                    "id": "37624330-bb2f-4857-ae79-0df089af2cce",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1622,7 +1608,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "0765d1af-bbd3-409f-ad60-6e88ee7db56d",
+                    "id": "57beedb4-c307-4cb8-8b6d-6df2c6078bbb",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1638,7 +1624,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "9d3e80ca-56a6-47c3-aa90-b279e9aa5ff7",
+                    "id": "46c8d2ec-bfa4-4694-97ae-18eaed5a46cb",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1654,7 +1640,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "297b5a0b-ebb3-403a-8f9b-2d1ae34f566b",
+                    "id": "71f6fc9c-bf2e-41d7-94af-b67ad8b286f4",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1670,7 +1656,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "ce9c5434-3b64-4be8-afc9-6b7c1a25ec91",
+                    "id": "15d4d89b-a65c-4052-a376-369e5f8fd852",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1686,7 +1672,7 @@
                     "positional": false,
                     "keyAttribute": false,
                     "encoding": "pickle",
-                    "id": "f7c66ad0-2eb1-42a8-a0f0-50fbdaeb7bad",
+                    "id": "2469083a-5950-4daa-aa5f-263829077277",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 }
@@ -1900,7 +1886,7 @@
                 },
                 {
                     "name": "func_code",
-                    "value": "def generate_start_digits(precision: int = 10000, n_split: int = 10) -> range:  return range(0, precision, int(precision / n_split))",
+                    "value": "def generate_start_digits(precision: int = 10000, n_split: int = 10) -> range:  return list(range(0, precision, int(precision / n_split)))",
                     "defaultValue": "",
                     "description": "Python function code, e.g. 'def function_name(args): return args'",
                     "readonly": false,
@@ -1952,7 +1938,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Object",
+                    "type": "Object.array",
                     "precious": false,
                     "options": [],
                     "positional": false,
@@ -2159,14 +2145,6 @@
             "closesLoop": false
         },
         {
-            "from": -4,
-            "fromPort": "2e99ac90-c7d1-45b5-a230-b9927b3e8869",
-            "to": -8,
-            "toPort": "b4202de7-0319-4f8e-834d-f7a821a50d1d",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
             "from": -8,
             "fromPort": "0b50a151-bd30-4772-a040-589afe686ed6",
             "to": -2,
@@ -2227,6 +2205,14 @@
             "fromPort": "146849cb-241c-4bba-8c84-f9ac36bd3354",
             "to": -12,
             "toPort": "cf26d5f2-6560-4e57-9f6c-21d11cad49cd",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": -4,
+            "fromPort": "2e99ac90-c7d1-45b5-a230-b9927b3e8869",
+            "to": -8,
+            "toPort": "0b50a151-bd30-4772-a040-589afe686ed6",
             "loop_aware": "0",
             "closesLoop": false
         }
