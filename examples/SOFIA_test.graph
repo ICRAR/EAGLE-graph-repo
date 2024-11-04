@@ -32,7 +32,7 @@
             "id": "61175afe-9a22-4388-8b96-a7af6c1f8a84",
             "name": "sofia",
             "description": "SoFiA, the Source Finding Application, is a new HI source finding pipeline intended to detect and parameterise galaxies in HI data cubes. While the software is still under development, several stable versions of SoFiA have already been released. This wiki contains user documentation and technical information on SoFiA and its individual modules.",
-            "x": 1592.7001862194622,
+            "x": 1593.0053014625878,
             "y": 355.49225057466987,
             "radius": 25,
             "collapsed": true,
@@ -47,7 +47,7 @@
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
-                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "description": "Specifies whether this data component contains data that should not be deleted after executions",
                     "readonly": false,
                     "type": "Boolean",
                     "precious": false,
@@ -105,7 +105,7 @@
                 },
                 {
                     "name": "command",
-                    "value": "",
+                    "value": " sofia",
                     "defaultValue": "",
                     "description": "Command to execute inside container",
                     "readonly": false,
@@ -2172,23 +2172,6 @@
                     "id": "ef76885c-3d74-4fda-99ae-72aaba695c78",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
-                },
-                {
-                    "name": "input_parser",
-                    "value": "path",
-                    "defaultValue": "path",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Select",
-                    "precious": false,
-                    "options": [
-                        "path"
-                    ],
-                    "positional": false,
-                    "encoding": "pickle",
-                    "id": "bfee1c49-c07c-4862-b945-3aefbfdead62",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
                 }
             ],
             "inputAppFields": [],
@@ -3274,7 +3257,7 @@
             "name": "unpack",
             "description": "An application component able to run an arbitrary command within the Bash Shell",
             "x": 1221.4520365042426,
-            "y": 323.57215236591213,
+            "y": 323.87726760903763,
             "radius": 25,
             "collapsed": true,
             "subject": null,
@@ -3286,7 +3269,7 @@
             "fields": [
                 {
                     "name": "command",
-                    "value": "tar -x",
+                    "value": "tar",
                     "defaultValue": "",
                     "description": "The command to be executed",
                     "readonly": false,
@@ -3297,6 +3280,21 @@
                     "encoding": "pickle",
                     "id": "a940253b-880e-40d4-a433-9dc01300a03e",
                     "parameterType": "ComponentParameter",
+                    "usage": "NoPort"
+                },
+                {
+                    "name": "x",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": true,
+                    "options": [],
+                    "positional": false,
+                    "encoding": "pickle",
+                    "id": "86a46eee-ac51-454a-a7d9-d5117fc53c8c",
+                    "parameterType": "ApplicationArgument",
                     "usage": "NoPort"
                 },
                 {
@@ -3313,21 +3311,6 @@
                     "id": "c64e8be3-c84e-499a-8a26-9866cacb6102",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
-                },
-                {
-                    "name": "strip-components",
-                    "value": "3",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "encoding": "pickle",
-                    "id": "a89a6f16-431f-45a8-b46f-14fa1eb70335",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort"
                 },
                 {
                     "name": "input_redirection",
@@ -3428,7 +3411,7 @@
                 },
                 {
                     "name": "output_parser",
-                    "value": "pickle",
+                    "value": "path",
                     "defaultValue": "pickle",
                     "description": "Output port parsing technique",
                     "readonly": false,
