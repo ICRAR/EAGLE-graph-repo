@@ -17,13 +17,13 @@
         "signature": "f971bc7696783a599108fc8cf7e255829b831c585cb391cad39e10e15e6c9ac9",
         "lastModifiedName": "wici",
         "lastModifiedEmail": "",
-        "lastModifiedDatetime": 1732800356.38715,
+        "lastModifiedDatetime": 1733113205.563546,
         "numLGNodes": 43
     },
     "nodeDataArray": [
         {
             "category": "PythonApp",
-            "id": "nmrxh53z",
+            "id": "y79ozj97",
             "name": "RIC_dev",
             "description": "Calculate the Radial (R), In-track (I) and Cross-track (C) deviations\n    between two circular orbits given their orbit parameters at many time steps.\n    \n    Parameters\n    ----------\n    times: array (n_time,)\n        Times at which to evaluate the RIC deviations.\n    true_orb_params: ndarray (4,)\n        Orbit parameters (elevation, inclination, lon_asc_node, periapsis) of\n        the object of most interest. The more accurate measurement when\n        comparing the same object.\n    est_orb_params: array (elevation, inclination, lon_asc_node, periapsis)\n        Estimated orbit parameters.\n    \n    Returns\n    -------\n    RIC: ndarray (n_time, 3)\n        Radial, In-track and Cross-track coordinates, in metres, of the orbiting\n        body relative to the orbit defined by 'true_orbit_params'.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -192,7 +192,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "h_hhjln8",
+            "id": "kzgjinrd",
             "name": "R_uvw",
             "description": "Calculate the rotation matrices at each time step to transform from an Earth\n    centric reference frame (ECI) to a satellite centric frame given the\n    parameters of its (circular) orbit.\n    \n    Parameters\n    ----------\n    times: ndarray (n_time,)\n        Times at which to evaluate the rotation matrices.\n    elevation: float\n        Elevation/Altitude of the orbit in metres.\n    inclination: float\n        Inclination angle of the orbit relative to the equatorial plane.\n    lon_asc_node: float\n        Longitude of the ascending node of the orbit. This is the longitude of\n        when the orbit crosses the equator from the south to the north.\n    periapsis: float\n        Perisapsis of the orbit. This is the angular starting point of the orbit\n        at t = 0.\n    \n    Returns\n    -------\n    R: ndarray (3, 3)\n        The rotation matrix to orient to a satellite centric (RIC) frame defined\n        by the Radial, In-track, Cross-track components.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -387,7 +387,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "8u90s7nm",
+            "id": "_gk6aq_v",
             "name": "Rotx",
             "description": "Define a rotation matrix about the 'x-axis' by an angle theta, in degrees.\n    \n    Parameters\n    ----------\n    theta: float\n        Rotation angle in degrees.\n    \n    Returns\n    -------\n    R: ndarray (3, 3)\n        Rotation matrix.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -530,7 +530,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "l6ewni31",
+            "id": "h2vibzsu",
             "name": "Rotz",
             "description": "Define a rotation matrix about the 'z-axis' by an angle theta, in degrees.\n    \n    Parameters\n    ----------\n    theta: float\n        Rotation angle in degrees.\n    \n    Returns\n    -------\n    R: ndarray (3, 3)\n        Rotation matrix.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -673,7 +673,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "lwgvz416",
+            "id": "wvllewsi",
             "name": "alt_az_of_source",
             "description": "Calculate the altitude and azimuth of a given source direction over time.\n    Taken from https://astronomy.stackexchange.com/questions/14492/need-simple-equation-for-rise-transit-and-set-time\n    \n    Parameters\n    ----------\n    lst : Array (n_time,)\n        Local sidereal angle in degrees.\n    lat : float\n        Latitude of the observer in degrees.\n    ra : float\n        Right ascension of the source in degrees.\n    dec : float\n        DEclination of the source in degrees.\n    \n    Returns\n    -------\n    Array (n_time, 2)\n        Altitude and azimuth of the source in degrees relative to the observer.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -855,7 +855,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "ifl7hu5u",
+            "id": "autkd_e_",
             "name": "calculate_fringe_frequency",
             "description": "Calculate the fringe frequency of an RFI source.\n    \n    Parameters\n    ----------\n    times_mjd : Array (n_time,)\n        Times are which the RFI and antenna positions are given in Modified Julian Date.\n    freq : float\n        Observational frequency in Hz.\n    rfi_xyz : Array (n_time, 3)\n        Position of the RFI source in the ECI frame in metres.\n    ants_itrf : Array (n_ant, 3)\n        Antenna positions in the ITRF (ECEF) frame in metres.\n    ants_u : Array (n_time, n_ant)\n        U component of the antennas in UVW frame in metres.\n    dec : float\n        Phase centre declination in degrees.\n    \n    Returns\n    -------\n    Array (n_time, n_bl)\n        Fringe frequencies on each baseline.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -1063,7 +1063,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "nrerk6ic",
+            "id": "xc66ezu9",
             "name": "calculate_sat_corr_time",
             "description": "Calculate the expected correlation time for a Gaussian process model of the RFI signal due to a satellite moving through the sidelobes of the primary beam.\n    \n    Parameters\n    ----------\n    rfi_xyz : Array (n_time, 3)\n        Position of the RFI source over time in metres\n    ants_xyz : Array (n_time, n_ant, 3)\n        Positions of the antennas over time in metres.\n    orbit_el : float\n        Orbit elevation in metres.\n    lat : float\n        Latitude of the antennas in degrees.\n    dish_d : float\n        Dish diameter in metres. The primary beam is modelled by an Airy disk based on this.\n    freqs : Array (n_freq,)\n        Observational frequencies in Hz.\n    \n    Returns\n    -------\n    float\n        Expected minimum correlation time in seconds.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -1271,7 +1271,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "zf31v9ez",
+            "id": "gbdxvy08",
             "name": "days_to_secs",
             "description": "",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -1414,7 +1414,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "3i2g3m1t",
+            "id": "dwtpwptu",
             "name": "earth_radius",
             "description": "Calculate the earth radius according to the ellipsoidal model at a given latitude.\n    \n    Parameters\n    ----------\n    lat : float\n        Latitude of the location in degrees.\n    \n    Returns\n    -------\n    float\n        Earth radius in metres at the given latitude.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -1557,7 +1557,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "ijcym3ec",
+            "id": "f4efou9q",
             "name": "enu_to_itrf",
             "description": "Calculate ITRF coordinates from ENU coordinates of antennas given the\n    latitude and longitude of the antenna array centre.\n    \n    Paramters\n    ---------\n    enu: Array (n_ant, 3)\n        The East, North, Up coordinates of each antenna.\n    lat: float\n        The latitude of the observer/telescope.\n    lon: float\n        The longitude of the observer/telescope.\n    el: float\n        The elevation of the observer/telescope.\n    \n    Returns\n    -------\n    itrf: Array (n_ant, 3)\n        The ITRF coordinates of the antennas.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -1739,7 +1739,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "k9m1x_jl",
+            "id": "5revio4n",
             "name": "enu_to_xyz_local",
             "description": "https://web.njit.edu/~gary/728/Lecture6.html",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -1895,7 +1895,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "oy0346t6",
+            "id": "2mciakxy",
             "name": "gmsa_from_jd",
             "description": "Get the Greenwich Mean Sidereal Angle in degrees from the Julian Day (UT1).\n    Calculated using https://aa.usno.navy.mil/faq/GAST\n    \n    Parameters\n    ----------\n    jd : float\n        Julian Day (UT1).\n    \n    Returns\n    -------\n    float\n        Greenwich Mean Sidereal Angle in degrees.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -2038,7 +2038,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "llvgh2w1",
+            "id": "erdw5s4d",
             "name": "itrf_to_geo",
             "description": "Convert ITRF coordinates to geodetic coordinates.\n    \n    Parameters\n    ----------\n    itrf : Array (n_ant, 3)\n        ITRF coordinates.\n    \n    Returns\n    -------\n    Array (n_ant, 3)\n        Geodetic coordinates (latitude, longitude, elevation)",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -2181,7 +2181,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "kmco7qtt",
+            "id": "fk8hsrgy",
             "name": "itrf_to_uvw",
             "description": "Calculate uvw coordinates from ITRF/ECEF coordinates,\n    source hour angle and declination. Use the Greenwich hour\n    angle when using true ITRF coordinates such as those produced\n    with 'enu_to_itrf' or provided in an MS file. Use local hour angle when using local 'xyz'\n    coordinates as defined in most radio interferometry textbooks\n    or those produced with 'enu_to_xyz_local'.\n    \n    Parameters\n    ----------\n    ITRF: Array (n_ant, 3)\n        Antenna positions in the ITRF frame in units of metres.\n    h0: Array (n_time,)\n        The hour angle of the target in decimal degrees.\n    dec: float\n        The declination of the target in decimal degrees.\n    \n    Returns\n    -------\n    uvw: Array (n_time, n_ant, 3)\n        The uvw coordinates of the antennas for a given observer\n        location, time and target (ra,dec).",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -2350,7 +2350,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "cxbazxf3",
+            "id": "mz756rj1",
             "name": "itrf_to_xyz",
             "description": "Transform coordinates from the ITRF (ECEF) frame to an ECI frame that aligns with the celestial sphere.\n    \n    Parameters\n    ----------\n    itrf : Array (n_ant, 3)\n        ITRF coordinates in metres.\n    gsa : Array (n_time,)\n        Greenwich sidereal angle in degrees.\n    \n    Returns\n    -------\n    Array (n_time, n_ant, 3)\n        ECI coordinates in metres.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -2506,7 +2506,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "3uuaaqpb",
+            "id": "3tros6ou",
             "name": "jacrev",
             "description": "Jacobian of ``fun`` evaluated row-by-row using reverse-mode AD.\n    \n    Args:\n      fun: Function whose Jacobian is to be computed.\n      argnums: Optional, integer or sequence of integers. Specifies which\n        positional argument(s) to differentiate with respect to (default ``0``).\n      has_aux: Optional, bool. Indicates whether ``fun`` returns a pair where the\n        first element is considered the output of the mathematical function to be\n        differentiated and the second element is auxiliary data. Default False.\n      holomorphic: Optional, bool. Indicates whether ``fun`` is promised to be\n        holomorphic. Default False.\n      allow_int: Optional, bool. Whether to allow differentiating with\n        respect to integer valued inputs. The gradient of an integer input will\n        have a trivial vector-space dtype (float0). Default False.\n    \n    Returns:\n      A function with the same arguments as ``fun``, that evaluates the Jacobian of\n      ``fun`` using reverse-mode automatic differentiation. If ``has_aux`` is True\n      then a pair of (jacobian, auxiliary_data) is returned.\n    \n    >>> import jax\n    >>> import jax.numpy as jnp\n    >>>\n    >>> def f(x):\n    ...   return jnp.asarray(\n    ...     [x[0], 5*x[2], 4*x[1]**2 - 2*x[2], x[2] * jnp.sin(x[0])])\n    ...\n    >>> print(jax.jacrev(f)(jnp.array([1., 2., 3.])))\n    [[ 1.       0.       0.     ]\n     [ 0.       0.       5.     ]\n     [ 0.      16.      -2.     ]\n     [ 1.6209   0.       0.84147]]",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -2701,7 +2701,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "f3v0gewz",
+            "id": "zfadiwqb",
             "name": "jd_from_gmst",
             "description": "Get the Julian Date (UT1) from the Greenwich Mean Sidereal Time in seconds.\n    \n    Parameters\n    ----------\n    gmst : float\n        Greenwich Mean Sidereal Time in seconds.\n    \n    Returns\n    -------\n    float\n        Julian Date (UT1).",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -2844,7 +2844,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "bbkusrlq",
+            "id": "dqpb47b2",
             "name": "jd_to_mjd",
             "description": "",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -2987,7 +2987,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "se__a1vl",
+            "id": "12txvcwo",
             "name": "jit",
             "description": "Sets up ``fun`` for just-in-time compilation with XLA.\n    \n    Args:\n      fun: Function to be jitted. ``fun`` should be a pure function.\n    \n        The arguments and return value of ``fun`` should be arrays, scalar, or\n        (nested) standard Python containers (tuple/list/dict) thereof. Positional\n        arguments indicated by ``static_argnums`` can be any hashable type. Static\n        arguments are included as part of a compilation cache key, which is why\n        hash and equality operators must be defined. JAX keeps a weak reference to\n        ``fun`` for use as a compilation cache key, so the object ``fun`` must be\n        weakly-referenceable.\n      in_shardings: optional, a :py:class:`Sharding` or pytree with\n        :py:class:`Sharding` leaves and structure that is a tree prefix of the\n        positional arguments tuple to ``fun``. If provided, the positional\n        arguments passed to ``fun`` must have shardings that are compatible with\n        ``in_shardings`` or an error is raised, and the compiled computation has\n        input shardings corresponding to ``in_shardings``. If not provided, the\n        compiled computation's input shardings are inferred from argument\n        shardings.\n      out_shardings: optional, a :py:class:`Sharding` or pytree with\n        :py:class:`Sharding` leaves and structure that is a tree prefix of the\n        output of ``fun``. If provided, it has the same effect as applying\n        corresponding :py:func:`jax.lax.with_sharding_constraint`s to the output\n        of ``fun``.\n      static_argnums: optional, an int or collection of ints that specify which\n        positional arguments to treat as static (trace- and compile-time\n        constant).\n    \n        Static arguments should be hashable, meaning both ``__hash__`` and\n        ``__eq__`` are implemented, and immutable. Otherwise they can be arbitrary\n        Python objects. Calling the jitted function with different values for\n        these constants will trigger recompilation. Arguments that are not\n        array-like or containers thereof must be marked as static.\n    \n        If neither ``static_argnums`` nor ``static_argnames`` is provided, no\n        arguments are treated as static. If ``static_argnums`` is not provided but\n        ``static_argnames`` is, or vice versa, JAX uses\n        :code:`inspect.signature(fun)` to find any positional arguments that\n        correspond to ``static_argnames``\n        (or vice versa). If both ``static_argnums`` and ``static_argnames`` are\n        provided, ``inspect.signature`` is not used, and only actual\n        parameters listed in either ``static_argnums`` or ``static_argnames`` will\n        be treated as static.\n      static_argnames: optional, a string or collection of strings specifying\n        which named arguments to treat as static (compile-time constant). See the\n        comment on ``static_argnums`` for details. If not\n        provided but ``static_argnums`` is set, the default is based on calling\n        ``inspect.signature(fun)`` to find corresponding named arguments.\n      donate_argnums: optional, collection of integers to specify which positional\n        argument buffers can be overwritten by the computation and marked deleted\n        in the caller. It is safe to donate argument buffers if you no longer need\n        them once the computation has started. In some cases XLA can make use of\n        donated buffers to reduce the amount of memory needed to perform a\n        computation, for example recycling one of your input buffers to store a\n        result. You should not reuse buffers that you donate to a computation; JAX\n        will raise an error if you try to. By default, no argument buffers are\n        donated.\n    \n        If neither ``donate_argnums`` nor ``donate_argnames`` is provided, no\n        arguments are donated. If ``donate_argnums`` is not provided but\n        ``donate_argnames`` is, or vice versa, JAX uses\n        :code:`inspect.signature(fun)` to find any positional arguments that\n        correspond to ``donate_argnames``\n        (or vice versa). If both ``donate_argnums`` and ``donate_argnames`` are\n        provided, ``inspect.signature`` is not used, and only actual\n        parameters listed in either ``donate_argnums`` or ``donate_argnames`` will\n        be donated.\n    \n        For more details on buffer donation see the\n        `FAQ <https://jax.readthedocs.io/en/latest/faq.html#buffer-donation>`_.\n      donate_argnames: optional, a string or collection of strings specifying\n        which named arguments are donated to the computation. See the\n        comment on ``donate_argnums`` for details. If not\n        provided but ``donate_argnums`` is set, the default is based on calling\n        ``inspect.signature(fun)`` to find corresponding named arguments.\n      keep_unused: optional boolean. If `False` (the default), arguments that JAX\n        determines to be unused by `fun` *may* be dropped from resulting compiled\n        XLA executables. Such arguments will not be transferred to the device nor\n        provided to the underlying executable. If `True`, unused arguments will\n        not be pruned.\n      device: This is an experimental feature and the API is likely to change.\n        Optional, the Device the jitted function will run on. (Available devices\n        can be retrieved via :py:func:`jax.devices`.) The default is inherited\n        from XLA's DeviceAssignment logic and is usually to use\n        ``jax.devices()[0]``.\n      backend: This is an experimental feature and the API is likely to change.\n        Optional, a string representing the XLA backend: ``'cpu'``, ``'gpu'``, or\n        ``'tpu'``.\n      inline: Optional boolean. Specify whether this function should be inlined\n        into enclosing jaxprs. Default False.\n    \n    Returns:\n      A wrapped version of ``fun``, set up for just-in-time compilation.\n    \n    Examples:\n      In the following example, ``selu`` can be compiled into a single fused kernel\n      by XLA:\n    \n      >>> import jax\n      >>>\n      >>> @jax.jit\n      ... def selu(x, alpha=1.67, lmbda=1.05):\n      ...   return lmbda * jax.numpy.where(x > 0, x, alpha * jax.numpy.exp(x) - alpha)\n      >>>\n      >>> key = jax.random.key(0)\n      >>> x = jax.random.normal(key, (10,))\n      >>> print(selu(x))  # doctest: +SKIP\n      [-0.54485  0.27744 -0.29255 -0.91421 -0.62452 -0.24748\n      -0.85743 -0.78232  0.76827  0.59566 ]\n    \n      To pass arguments such as ``static_argnames`` when decorating a function, a\n      common pattern is to use :func:`functools.partial`:\n    \n      >>> from functools import partial\n      >>>\n      >>> @partial(jax.jit, static_argnames=['n'])\n      ... def g(x, n):\n      ...   for i in range(n):\n      ...     x = x ** 2\n      ...   return x\n      >>>\n      >>> g(jnp.arange(4), 3)\n      Array([   0,    1,  256, 6561], dtype=int32)",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -3273,7 +3273,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "zx8rz759",
+            "id": "e69d8cdx",
             "name": "jit_with_doc",
             "description": "Sets up ``fun`` for just-in-time compilation with XLA.\n    \n    Args:\n      fun: Function to be jitted. ``fun`` should be a pure function.\n    \n        The arguments and return value of ``fun`` should be arrays, scalar, or\n        (nested) standard Python containers (tuple/list/dict) thereof. Positional\n        arguments indicated by ``static_argnums`` can be any hashable type. Static\n        arguments are included as part of a compilation cache key, which is why\n        hash and equality operators must be defined. JAX keeps a weak reference to\n        ``fun`` for use as a compilation cache key, so the object ``fun`` must be\n        weakly-referenceable.\n      in_shardings: optional, a :py:class:`Sharding` or pytree with\n        :py:class:`Sharding` leaves and structure that is a tree prefix of the\n        positional arguments tuple to ``fun``. If provided, the positional\n        arguments passed to ``fun`` must have shardings that are compatible with\n        ``in_shardings`` or an error is raised, and the compiled computation has\n        input shardings corresponding to ``in_shardings``. If not provided, the\n        compiled computation's input shardings are inferred from argument\n        shardings.\n      out_shardings: optional, a :py:class:`Sharding` or pytree with\n        :py:class:`Sharding` leaves and structure that is a tree prefix of the\n        output of ``fun``. If provided, it has the same effect as applying\n        corresponding :py:func:`jax.lax.with_sharding_constraint`s to the output\n        of ``fun``.\n      static_argnums: optional, an int or collection of ints that specify which\n        positional arguments to treat as static (trace- and compile-time\n        constant).\n    \n        Static arguments should be hashable, meaning both ``__hash__`` and\n        ``__eq__`` are implemented, and immutable. Otherwise they can be arbitrary\n        Python objects. Calling the jitted function with different values for\n        these constants will trigger recompilation. Arguments that are not\n        array-like or containers thereof must be marked as static.\n    \n        If neither ``static_argnums`` nor ``static_argnames`` is provided, no\n        arguments are treated as static. If ``static_argnums`` is not provided but\n        ``static_argnames`` is, or vice versa, JAX uses\n        :code:`inspect.signature(fun)` to find any positional arguments that\n        correspond to ``static_argnames``\n        (or vice versa). If both ``static_argnums`` and ``static_argnames`` are\n        provided, ``inspect.signature`` is not used, and only actual\n        parameters listed in either ``static_argnums`` or ``static_argnames`` will\n        be treated as static.\n      static_argnames: optional, a string or collection of strings specifying\n        which named arguments to treat as static (compile-time constant). See the\n        comment on ``static_argnums`` for details. If not\n        provided but ``static_argnums`` is set, the default is based on calling\n        ``inspect.signature(fun)`` to find corresponding named arguments.\n      donate_argnums: optional, collection of integers to specify which positional\n        argument buffers can be overwritten by the computation and marked deleted\n        in the caller. It is safe to donate argument buffers if you no longer need\n        them once the computation has started. In some cases XLA can make use of\n        donated buffers to reduce the amount of memory needed to perform a\n        computation, for example recycling one of your input buffers to store a\n        result. You should not reuse buffers that you donate to a computation; JAX\n        will raise an error if you try to. By default, no argument buffers are\n        donated.\n    \n        If neither ``donate_argnums`` nor ``donate_argnames`` is provided, no\n        arguments are donated. If ``donate_argnums`` is not provided but\n        ``donate_argnames`` is, or vice versa, JAX uses\n        :code:`inspect.signature(fun)` to find any positional arguments that\n        correspond to ``donate_argnames``\n        (or vice versa). If both ``donate_argnums`` and ``donate_argnames`` are\n        provided, ``inspect.signature`` is not used, and only actual\n        parameters listed in either ``donate_argnums`` or ``donate_argnames`` will\n        be donated.\n    \n        For more details on buffer donation see the\n        `FAQ <https://jax.readthedocs.io/en/latest/faq.html#buffer-donation>`_.\n      donate_argnames: optional, a string or collection of strings specifying\n        which named arguments are donated to the computation. See the\n        comment on ``donate_argnums`` for details. If not\n        provided but ``donate_argnums`` is set, the default is based on calling\n        ``inspect.signature(fun)`` to find corresponding named arguments.\n      keep_unused: optional boolean. If `False` (the default), arguments that JAX\n        determines to be unused by `fun` *may* be dropped from resulting compiled\n        XLA executables. Such arguments will not be transferred to the device nor\n        provided to the underlying executable. If `True`, unused arguments will\n        not be pruned.\n      device: This is an experimental feature and the API is likely to change.\n        Optional, the Device the jitted function will run on. (Available devices\n        can be retrieved via :py:func:`jax.devices`.) The default is inherited\n        from XLA's DeviceAssignment logic and is usually to use\n        ``jax.devices()[0]``.\n      backend: This is an experimental feature and the API is likely to change.\n        Optional, a string representing the XLA backend: ``'cpu'``, ``'gpu'``, or\n        ``'tpu'``.\n      inline: Optional boolean. Specify whether this function should be inlined\n        into enclosing jaxprs. Default False.\n    \n    Returns:\n      A wrapped version of ``fun``, set up for just-in-time compilation.\n    \n    Examples:\n      In the following example, ``selu`` can be compiled into a single fused kernel\n      by XLA:\n    \n      >>> import jax\n      >>>\n      >>> @jax.jit\n      ... def selu(x, alpha=1.67, lmbda=1.05):\n      ...   return lmbda * jax.numpy.where(x > 0, x, alpha * jax.numpy.exp(x) - alpha)\n      >>>\n      >>> key = jax.random.key(0)\n      >>> x = jax.random.normal(key, (10,))\n      >>> print(selu(x))  # doctest: +SKIP\n      [-0.54485  0.27744 -0.29255 -0.91421 -0.62452 -0.24748\n      -0.85743 -0.78232  0.76827  0.59566 ]\n    \n      To pass arguments such as ``static_argnames`` when decorating a function, a\n      common pattern is to use :func:`functools.partial`:\n    \n      >>> from functools import partial\n      >>>\n      >>> @partial(jax.jit, static_argnames=['n'])\n      ... def g(x, n):\n      ...   for i in range(n):\n      ...     x = x ** 2\n      ...   return x\n      >>>\n      >>> g(jnp.arange(4), 3)\n      Array([   0,    1,  256, 6561], dtype=int32)",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -3416,7 +3416,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "ua2798s3",
+            "id": "kxmh29zh",
             "name": "lst_deg2sec",
             "description": "Convert a sidereal time in degrees to seconds.\n    \n    Parameters\n    ----------\n    lst : Array\n        Sidereal time in degrees to convert.\n    \n    Returns\n    -------\n    Array\n        Sidereal time in seconds.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -3559,7 +3559,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "lr2xwxkr",
+            "id": "iq8gbclx",
             "name": "lst_sec2deg",
             "description": "Convert a sidereal time from seconds to degrees.\n    \n    Parameters\n    ----------\n    lst : Array\n        Sidereal time in seconds to convert.\n    \n    Returns\n    -------\n    Array\n        Sidereal time in degrees.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -3702,7 +3702,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "skjgvmri",
+            "id": "vh7hrigp",
             "name": "mjd_to_jd",
             "description": "",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -3845,7 +3845,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "qmevtp7t",
+            "id": "sl_dc_5o",
             "name": "orbit",
             "description": "Calculate orbital path of a satellite in perfect circular orbit.\n    \n    Parameters\n    ----------\n    times: ndarray (n_time,)\n        Times at which to evaluate the positions.\n    elevation: float\n        Elevation/Altitude of the orbit in metres.\n    inclination: float\n        Inclination angle of the orbit relative to the equatorial plane.\n    lon_asc_node: float\n        Longitude of the ascending node of the orbit. This is the longitude of\n        when the orbit crosses the equator from the south to the north.\n    periapsis: float\n        Perisapsis of the orbit. This is the angular starting point of the\n        orbit at t = 0.\n    \n    Returns\n    -------\n    positions: ndarray (n_time, 3)\n         The position vector of the orbiting object at each specified time.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -4040,7 +4040,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "_ccg7iqw",
+            "id": "4qbilljf",
             "name": "orbit_fisher",
             "description": "Calculate the inverse covariance (Fisher) matrix in orbital elements\n    induced by errors in the RIC frame of an orbiting object. This is\n    essentially linear uncertainty propagation assuming Gaussian errors.\n    \n    Parameters\n    ----------\n    times: ndarray (n_time,)\n        Times at which the RIC covariance/standard deviations is defined.\n    orbit_params: ndarray (4,)\n        Orbit parameters (elevation, inclination, lon_asc_node, periapsis) for\n        the orbit defining the origin of the RIC frame.\n    RIC_std: ndarray (3,)\n        The standard deviation in the Radial, In-track and Cross-track\n        directions.\n    \n    Returns\n    -------\n    fisher: ndarray (4, 4)\n        The inverse covariance (Fisher) matrix for the orbit parameters induced\n        by the orbit uncertainties in the RIC frame.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -4209,7 +4209,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "x0fs_jcr",
+            "id": "4eiiesc_",
             "name": "orbit_velocity",
             "description": "Calculate the velocity of a circular orbit at specific times.\n    \n    Parameters\n    ----------\n    times: ndarray (n_time,)\n        Times at which to evaluate the rotation matrices.\n    elevation: float\n        Elevation/Altitude of the orbit in metres.\n    inclination: float\n        Inclination angle of the orbit relative to the equatorial plane.\n    lon_asc_node: float\n        Longitude of the ascending node of the orbit. This is the longitude of\n        when the orbit crosses the equator from the south to the north.\n    periapsis: float\n        Perisapsis of the orbit. This is the angular starting point of the orbit\n        at t = 0.\n    \n    Returns\n    -------\n    velocity: ndarray (n_time, 3)\n        The velocity vector at the specified times.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -4404,7 +4404,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "evzezuw1",
+            "id": "j8f5hsig",
             "name": "rise_and_set_of_source",
             "description": "",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -4573,7 +4573,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "19akst98",
+            "id": "3o9s3wul",
             "name": "secs_to_days",
             "description": "",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -4716,7 +4716,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "clgu9bp9",
+            "id": "wlc9kzsa",
             "name": "time_above_horizon",
             "description": "The number of degrees an object is above the horizon in a given day.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -4872,7 +4872,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "kobf7du1",
+            "id": "3zpavo69",
             "name": "transit_altitude",
             "description": "Calculate the altitude of a source at transit given an observer's latitude.\n    \n    Parameters\n    ----------\n    lat : float\n        Latitude of the observer in degrees.\n    dec : float\n        Declination of the source in degrees.\n    \n    Returns\n    -------\n    float\n        Altitude of the source at transit in degrees.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -5028,7 +5028,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "r_e9nctu",
+            "id": "qtbg041j",
             "name": "vmap",
             "description": "Vectorizing map. Creates a function which maps ``fun`` over argument axes.\n    \n    Args:\n      fun: Function to be mapped over additional axes.\n      in_axes: An integer, None, or sequence of values specifying which input\n        array axes to map over.\n    \n        If each positional argument to ``fun`` is an array, then ``in_axes`` can\n        be an integer, a None, or a tuple of integers and Nones with length equal\n        to the number of positional arguments to ``fun``. An integer or ``None``\n        indicates which array axis to map over for all arguments (with ``None``\n        indicating not to map any axis), and a tuple indicates which axis to map\n        for each corresponding positional argument. Axis integers must be in the\n        range ``[-ndim, ndim)`` for each array, where ``ndim`` is the number of\n        dimensions (axes) of the corresponding input array.\n    \n        If the positional arguments to ``fun`` are container (pytree) types, ``in_axes``\n        must be a sequence with length equal to the number of positional arguments to\n        ``fun``, and for each argument the corresponding element of ``in_axes`` can\n        be a container with a matching pytree structure specifying the mapping of its\n        container elements. In other words, ``in_axes`` must be a container tree prefix\n        of the positional argument tuple passed to ``fun``. See this link for more detail:\n        https://jax.readthedocs.io/en/latest/pytrees.html#applying-optional-parameters-to-pytrees\n    \n        Either ``axis_size`` must be provided explicitly, or at least one\n        positional argument must have ``in_axes`` not None. The sizes of the\n        mapped input axes for all mapped positional arguments must all be equal.\n    \n        Arguments passed as keywords are always mapped over their leading axis\n        (i.e. axis index 0).\n    \n        See below for examples.\n    \n      out_axes: An integer, None, or (nested) standard Python container\n        (tuple/list/dict) thereof indicating where the mapped axis should appear\n        in the output. All outputs with a mapped axis must have a non-None\n        ``out_axes`` specification. Axis integers must be in the range ``[-ndim,\n        ndim)`` for each output array, where ``ndim`` is the number of dimensions\n        (axes) of the array returned by the :func:`vmap`-ed function, which is one\n        more than the number of dimensions (axes) of the corresponding array\n        returned by ``fun``.\n      axis_name: Optional, a hashable Python object used to identify the mapped\n        axis so that parallel collectives can be applied.\n      axis_size: Optional, an integer indicating the size of the axis to be\n        mapped. If not provided, the mapped axis size is inferred from arguments.\n    \n    Returns:\n      Batched/vectorized version of ``fun`` with arguments that correspond to\n      those of ``fun``, but with extra array axes at positions indicated by\n      ``in_axes``, and a return value that corresponds to that of ``fun``, but\n      with extra array axes at positions indicated by ``out_axes``.\n    \n    For example, we can implement a matrix-matrix product using a vector dot\n    product:\n    \n    >>> import jax.numpy as jnp\n    >>>\n    >>> vv = lambda x, y: jnp.vdot(x, y)  #  ([a], [a]) -> []\n    >>> mv = vmap(vv, (0, None), 0)      #  ([b,a], [a]) -> [b]      (b is the mapped axis)\n    >>> mm = vmap(mv, (None, 1), 1)      #  ([b,a], [a,c]) -> [b,c]  (c is the mapped axis)\n    \n    Here we use ``[a,b]`` to indicate an array with shape (a,b). Here are some\n    variants:\n    \n    >>> mv1 = vmap(vv, (0, 0), 0)   #  ([b,a], [b,a]) -> [b]        (b is the mapped axis)\n    >>> mv2 = vmap(vv, (0, 1), 0)   #  ([b,a], [a,b]) -> [b]        (b is the mapped axis)\n    >>> mm2 = vmap(mv2, (1, 1), 0)  #  ([b,c,a], [a,c,b]) -> [c,b]  (c is the mapped axis)\n    \n    Here's an example of using container types in ``in_axes`` to specify which\n    axes of the container elements to map over:\n    \n    >>> A, B, C, D = 2, 3, 4, 5\n    >>> x = jnp.ones((A, B))\n    >>> y = jnp.ones((B, C))\n    >>> z = jnp.ones((C, D))\n    >>> def foo(tree_arg):\n    ...   x, (y, z) = tree_arg\n    ...   return jnp.dot(x, jnp.dot(y, z))\n    >>> tree = (x, (y, z))\n    >>> print(foo(tree))\n    [[12. 12. 12. 12. 12.]\n     [12. 12. 12. 12. 12.]]\n    >>> from jax import vmap\n    >>> K = 6  # batch size\n    >>> x = jnp.ones((K, A, B))  # batch axis in different locations\n    >>> y = jnp.ones((B, K, C))\n    >>> z = jnp.ones((C, D, K))\n    >>> tree = (x, (y, z))\n    >>> vfoo = vmap(foo, in_axes=((0, (1, 2)),))\n    >>> print(vfoo(tree).shape)\n    (6, 2, 5)\n    \n    Here's another example using container types in ``in_axes``, this time a\n    dictionary, to specify the elements of the container to map over:\n    \n    >>> dct = {'a': 0., 'b': jnp.arange(5.)}\n    >>> x = 1.\n    >>> def foo(dct, x):\n    ...  return dct['a'] + dct['b'] + x\n    >>> out = vmap(foo, in_axes=({'a': None, 'b': 0}, None))(dct, x)\n    >>> print(out)\n    [1. 2. 3. 4. 5.]\n    \n    The results of a vectorized function can be mapped or unmapped. For example,\n    the function below returns a pair with the first element mapped and the second\n    unmapped. Only for unmapped results we can specify ``out_axes`` to be ``None``\n    (to keep it unmapped).\n    \n    >>> print(vmap(lambda x, y: (x + y, y * 2.), in_axes=(0, None), out_axes=(0, None))(jnp.arange(2.), 4.))\n    (Array([4., 5.], dtype=float32), 8.0)\n    \n    If the ``out_axes`` is specified for an unmapped result, the result is\n    broadcast across the mapped axis:\n    \n    >>> print(vmap(lambda x, y: (x + y, y * 2.), in_axes=(0, None), out_axes=0)(jnp.arange(2.), 4.))\n    (Array([4., 5.], dtype=float32), Array([8., 8.], dtype=float32, weak_type=True))\n    \n    If the ``out_axes`` is specified for a mapped result, the result is transposed\n    accordingly.\n    \n    Finally, here's an example using ``axis_name`` together with collectives:\n    \n    >>> xs = jnp.arange(3. * 4.).reshape(3, 4)\n    >>> print(vmap(lambda x: lax.psum(x, 'i'), axis_name='i')(xs))\n    [[12. 15. 18. 21.]\n     [12. 15. 18. 21.]\n     [12. 15. 18. 21.]]\n    \n    See the :py:func:`jax.pmap` docstring for more examples involving collectives.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -5236,7 +5236,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "iol0_8_k",
+            "id": "kdghjkl6",
             "name": "xyz_to_itrf",
             "description": "Transform coordinates from the ECI frame to the ITRF (ECEF) frame that is fixed with the Earth.\n    \n    Parameters\n    ----------\n    xyz : Array (n_time, 3)\n        ECI coordinates in metres.\n    gsa : Array (n_time,)\n        Greenwich sidereal time in degrees.\n    \n    Returns\n    -------\n    Array (n_time, 3)\n        ITRF (ECEF) coordinates in metres.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -5392,7 +5392,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "yukyc5gg",
+            "id": "zqpu443v",
             "name": "amp_to_intensity",
             "description": "Calculate intensity on a baseline ffrom the amplitudes at each antenna.\n    \n    Args:\n        amps (jnp.ndarray): Amplitudes at the antennas. (n_src, n_time, n_int, n_ant, n_freq)\n        a1 (jnp.ndarray): Antenna 1 indexes, between 0 and n_ant-1. (n_bl,)\n        a2 (jnp.ndarray): Antenna 2 indexes, between 0 and n_ant-1. (n_bl,)\n    \n    Returns:\n        jnp.ndarray: Intensity on baselines.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -5561,7 +5561,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "r2sfagac",
+            "id": "w1dpz6rk",
             "name": "db_to_lin",
             "description": "Convert deciBels to linear units.\n    \n    Parameters\n    ----------\n    dB: float, ndarray\n        deciBel value to convert.\n    \n    Returns\n    -------\n    lin: float, ndarray",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -5704,7 +5704,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "cz28u_x7",
+            "id": "e4lqfd4x",
             "name": "exp_uv",
             "description": "",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -5873,7 +5873,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "6ijb9qbo",
+            "id": "8b3pzrao",
             "name": "gauss",
             "description": "",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -6042,7 +6042,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "1k0s0n45",
+            "id": "km8hyyho",
             "name": "gauss_lm",
             "description": "",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -6237,7 +6237,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "vti54mc1",
+            "id": "jqpjv752",
             "name": "gauss_uv",
             "description": "",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -6432,7 +6432,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "01k7su5o",
+            "id": "4iw4aoz4",
             "name": "jv",
             "description": "\njv(v, z, out=None)\n\nBessel function of the first kind of real order and complex argument.\n\nParameters\n----------\nv : array_like\n    Order (float).\nz : array_like\n    Argument (float or complex).\nout : ndarray, optional\n    Optional output array for the function values\n\nReturns\n-------\nJ : scalar or ndarray\n    Value of the Bessel function, :math:`J_v(z)`.\n\nSee Also\n--------\njve : :math:`J_v` with leading exponential behavior stripped off.\nspherical_jn : spherical Bessel functions.\nj0 : faster version of this function for order 0.\nj1 : faster version of this function for order 1.\n\nNotes\n-----\nFor positive `v` values, the computation is carried out using the AMOS\n[1]_ `zbesj` routine, which exploits the connection to the modified\nBessel function :math:`I_v`,\n\n.. math::\n    J_v(z) = \\exp(v\\pi\\imath/2) I_v(-\\imath z)\\qquad (\\Im z > 0)\n\n    J_v(z) = \\exp(-v\\pi\\imath/2) I_v(\\imath z)\\qquad (\\Im z < 0)\n\nFor negative `v` values the formula,\n\n.. math:: J_{-v}(z) = J_v(z) \\cos(\\pi v) - Y_v(z) \\sin(\\pi v)\n\nis used, where :math:`Y_v(z)` is the Bessel function of the second\nkind, computed using the AMOS routine `zbesy`.  Note that the second\nterm is exactly zero for integer `v`; to improve accuracy the second\nterm is explicitly omitted for `v` values such that `v = floor(v)`.\n\nNot to be confused with the spherical Bessel functions (see `spherical_jn`).\n\nReferences\n----------\n.. [1] Donald E. Amos, \"AMOS, A Portable Package for Bessel Functions\n       of a Complex Argument and Nonnegative Order\",\n       http://netlib.org/amos/\n\nExamples\n--------\nEvaluate the function of order 0 at one point.\n\n>>> from scipy.special import jv\n>>> jv(0, 1.)\n0.7651976865579666\n\nEvaluate the function at one point for different orders.\n\n>>> jv(0, 1.), jv(1, 1.), jv(1.5, 1.)\n(0.7651976865579666, 0.44005058574493355, 0.24029783912342725)\n\nThe evaluation for different orders can be carried out in one call by\nproviding a list or NumPy array as argument for the `v` parameter:\n\n>>> jv([0, 1, 1.5], 1.)\narray([0.76519769, 0.44005059, 0.24029784])\n\nEvaluate the function at several points for order 0 by providing an\narray for `z`.\n\n>>> import numpy as np\n>>> points = np.array([-2., 0., 3.])\n>>> jv(0, points)\narray([ 0.22389078,  1.        , -0.26005195])\n\nIf `z` is an array, the order parameter `v` must be broadcastable to\nthe correct shape if different orders shall be computed in one call.\nTo calculate the orders 0 and 1 for an 1D array:\n\n>>> orders = np.array([[0], [1]])\n>>> orders.shape\n(2, 1)\n\n>>> jv(orders, points)\narray([[ 0.22389078,  1.        , -0.26005195],\n       [-0.57672481,  0.        ,  0.33905896]])\n\nPlot the functions of order 0 to 3 from -10 to 10.\n\n>>> import matplotlib.pyplot as plt\n>>> fig, ax = plt.subplots()\n>>> x = np.linspace(-10., 10., 1000)\n>>> for i in range(4):\n...     ax.plot(x, jv(i, x), label=f'$J_{i!r}$')\n>>> ax.legend()\n>>> plt.show()",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -6692,7 +6692,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "87s_ixdd",
+            "id": "kcsbx8rj",
             "name": "minus_two_pi_over_lamda",
             "description": "Calculate -2pi/lambda for each frequency.\n    \n    Args:\n        freqs (jnp.ndarray): Frequencies in Hz. (n_freq,)\n    \n    Returns:\n        jnp.ndarray: -2pi/lambda for each frequency. (n_freq,)",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -6835,7 +6835,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "2ycddwyi",
+            "id": "c_gtvdmz",
             "name": "phase_from_distances",
             "description": "Calculate phase differences between antennas from distances.\n    \n    Args:\n        distances (jnp.ndarray): Distances to antennas. (n_src, n_time, n_int, n_ant)\n        a1 (jnp.ndarray): Antenna 1 indexes, between 0 and n_ant-1. (n_bl,)\n        a2 (jnp.ndarray): Antenna 2 indexes, between 0 and n_ant-1. (n_bl,)\n        freqs (jnp.ndarray): Frequencies in Hz. (n_freq,)\n    \n    Returns:\n        jnp.ndarray: Phases on baselines.",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -7017,7 +7017,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "c7guptrx",
+            "id": "_l1scyb0",
             "name": "scan",
             "description": "Scan a function over leading array axes while carrying along state.\n    \n    The `Haskell-like type signature`_ in brief is\n    \n    .. code-block:: haskell\n    \n      scan :: (c -> a -> (c, b)) -> c -> [a] -> (c, [b])\n    \n    where for any array type specifier ``t``, ``[t]`` represents the type with an additional\n    leading axis, and if ``t`` is a pytree (container) type with array leaves then ``[t]``\n    represents the type with the same pytree structure and corresponding leaves\n    each with an additional leading axis.\n    \n    When the type of ``xs`` (denoted `a` above) is an array type or None, and the type\n    of ``ys`` (denoted `b` above) is an array type, the semantics of :func:`~scan` are\n    given roughly by this Python implementation::\n    \n      def scan(f, init, xs, length=None):\n        if xs is None:\n          xs = [None] * length\n        carry = init\n        ys = []\n        for x in xs:\n          carry, y = f(carry, x)\n          ys.append(y)\n        return carry, np.stack(ys)\n    \n    Unlike that Python version, both ``xs`` and ``ys`` may be arbitrary pytree\n    values, and so multiple arrays can be scanned over at once and produce multiple\n    output arrays. ``None`` is actually a special case of this, as it represents an\n    empty pytree.\n    \n    Also unlike that Python version, :func:`~scan` is a JAX primitive and is\n    lowered to a single WhileOp. That makes it useful for reducing\n    compilation times for JIT-compiled functions, since native Python\n    loop constructs in an :func:`~jax.jit` function are unrolled, leading to large\n    XLA computations.\n    \n    Finally, the loop-carried value ``carry`` must hold a fixed shape and dtype\n    across all iterations (and not just be consistent up to NumPy rank/shape\n    broadcasting and dtype promotion rules, for example). In other words, the type\n    ``c`` in the type signature above represents an array with a fixed shape and\n    dtype (or a nested tuple/list/dict container data structure with a fixed\n    structure and arrays with fixed shape and dtype at the leaves).\n    \n    .. note::\n      :py:func:`scan` compiles ``f``, so while it can be combined with\n      :py:func:`jit`, it's usually unnecessary.\n    \n    Args:\n      f: a Python function to be scanned of type ``c -> a -> (c, b)``, meaning\n        that ``f`` accepts two arguments where the first is a value of the loop\n        carry and the second is a slice of ``xs`` along its leading axis, and that\n        ``f`` returns a pair where the first element represents a new value for\n        the loop carry and the second represents a slice of the output.\n      init: an initial loop carry value of type ``c``, which can be a scalar,\n        array, or any pytree (nested Python tuple/list/dict) thereof, representing\n        the initial loop carry value. This value must have the same structure as\n        the first element of the pair returned by ``f``.\n      xs: the value of type ``[a]`` over which to scan along the leading axis,\n        where ``[a]`` can be an array or any pytree (nested Python\n        tuple/list/dict) thereof with consistent leading axis sizes.\n      length: optional integer specifying the number of loop iterations, which\n        must agree with the sizes of leading axes of the arrays in ``xs`` (but can\n        be used to perform scans where no input ``xs`` are needed).\n      reverse: optional boolean specifying whether to run the scan iteration\n        forward (the default) or in reverse, equivalent to reversing the leading\n        axes of the arrays in both ``xs`` and in ``ys``.\n      unroll: optional positive int or bool specifying, in the underlying\n        operation of the scan primitive, how many scan iterations to unroll within\n        a single iteration of a loop. If an integer is provided, it determines how\n        many unrolled loop iterations to run within a single rolled iteration of\n        the loop. If a boolean is provided, it will determine if the loop is\n        competely unrolled (i.e. `unroll=True`) or left completely unrolled (i.e.\n        `unroll=False`).\n      _split_transpose: experimental optional bool specifying whether to further\n        split the transpose into a scan (computing activation gradients), and a\n        map (computing gradients corresponding to the array arguments). Enabling\n        this may increase memory requirements, and so is an experimental feature\n        that may evolve or even be rolled back.\n    \n    Returns:\n      A pair of type ``(c, [b])`` where the first element represents the final\n      loop carry value and the second element represents the stacked outputs of\n      the second output of ``f`` when scanned over the leading axis of the inputs.\n    \n    .. _Haskell-like type signature: https://wiki.haskell.org/Type_signature",
             "repositoryUrl": "dlg_paletteGen.generated",
@@ -7238,7 +7238,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "whs6n9bi",
+            "id": "h19sv5_w",
             "name": "source_to_abc",
             "description": "Calculate the coefficients of the quadratic for a Gaussian source.",
             "repositoryUrl": "dlg_paletteGen.generated",
