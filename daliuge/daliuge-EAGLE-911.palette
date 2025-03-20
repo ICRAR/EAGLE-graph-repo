@@ -12,18 +12,18 @@
         "schemaVersion": "AppRef",
         "readonly": true,
         "repositoryUrl": "https://github.com/ICRAR/daliuge",
-        "commitHash": "8398e06",
+        "commitHash": "e1d49b7",
         "downloadUrl": "",
-        "signature": "c4919334231bcc64998ce37baefeb187c8d5ca86302bc6078452b6372ffa30ff",
+        "signature": "2b39865409e1764590969514cf8d135176a6045e833a1bbe2cb8bce909144d46",
         "lastModifiedName": "wici",
         "lastModifiedEmail": "",
-        "lastModifiedDatetime": 1742465784.62185,
-        "numLGNodes": 34
+        "lastModifiedDatetime": 1742474121.427125,
+        "numLGNodes": 35
     },
     "nodeDataArray": [
         {
             "category": "PythonApp",
-            "id": "h_r43yha",
+            "id": "9dkf1ys2",
             "text": "ArrayGatherApp",
             "description": "App appends all input daata to a list. This app can be used stand-alone without a gather construct.",
             "fields": [
@@ -120,13 +120,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "efc647f2f1b2930d219fab1b68e92fe0e8c3612d66cb7ce6f384d1e1a6ccda43"
         },
         {
             "category": "PythonApp",
-            "id": "n517hoqq",
+            "id": "ccsvklgx",
             "text": "AverageArrays",
             "description": "A testing APP that takes multiple numpy arrays on input and calculates the mean or the median, depending on the value provided in the method parameter. Users can add as many producers to the input array port as required and the resulting array will also be send to all connected output apps.",
             "fields": [
@@ -226,13 +226,155 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "99b9aa4a5d7cb72f0498a8c6072b70da802c4ad14f344717756234b8a8a2212e"
         },
         {
+            "category": "Branch",
+            "id": "hy001hl3",
+            "text": "Branch",
+            "description": "A branch application that copies the input to either the 'true' or the 'false' output depending on the result of the provided conditional function. The conditional function can be specified either in-line or as an external function and has to return a boolean value. The inputs of the application are passed on as arguments to the conditional function. The conditional function needs to return a boolean value, but the application will copy the input data to the true or false output, depending on the result of the conditional function.",
+            "fields": [
+                {
+                    "name": "func_name",
+                    "value": "condition",
+                    "defaultValue": "condition",
+                    "description": "Python conditional function name. This can also be a valid import path to an importable function.",
+                    "type": "String",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "func_code",
+                    "value": "condition(x): return (x > 0)",
+                    "defaultValue": "condition(x): return (x > 0)",
+                    "description": "Python function code for the branch condition. Modify as required. Note that func_name above needs to match the defined name here.",
+                    "type": "String",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "x",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Port carrying the input which is also used in the condition function. Note that the name of the parameter has to match the argument of the condition function.",
+                    "type": "Object",
+                    "fieldType": "ComponentParameter",
+                    "usage": "InputPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "true",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "If condition is true the input will be copied to this port",
+                    "type": "Object",
+                    "fieldType": "ComponentParameter",
+                    "usage": "OutputPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "false",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "If condition is false the input will be copied to this port",
+                    "type": "Object",
+                    "fieldType": "ComponentParameter",
+                    "usage": "OutputPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "dropclass",
+                    "value": "dlg.apps.simple.Branch",
+                    "defaultValue": "dlg.apps.simple.Branch",
+                    "description": "Application class",
+                    "type": "String",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "simple",
+                    "defaultValue": "simple",
+                    "description": "Base name of application class",
+                    "type": "String",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "execution_time",
+                    "value": "5",
+                    "defaultValue": "5",
+                    "description": "Estimated execution time",
+                    "type": "Float",
+                    "fieldType": "ConstraintParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "num_cpus",
+                    "value": "1",
+                    "defaultValue": "1",
+                    "description": "Number of cores used",
+                    "type": "Integer",
+                    "fieldType": "ConstraintParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "group_start",
+                    "value": "False",
+                    "defaultValue": "False",
+                    "description": "Is this node the start of a group?",
+                    "type": "Boolean",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                }
+            ],
+            "repositoryUrl": "https://github.com/ICRAR/daliuge",
+            "commitHash": "e1d49b7",
+            "paletteDownloadUrl": "",
+            "dataHash": "4120757e21723ed9fa2f89d7218d20e656ccb668eba3ff9b07d5f3baee3701ab"
+        },
+        {
             "category": "PythonApp",
-            "id": "g1192ds_",
+            "id": "w0gb7xbf",
             "text": "CopyApp",
             "description": "A simple APP that copies its inputs into its outputs. All inputs are copied into all outputs in the order they were declared in the graph. If an input is a container (e.g. a directory) it copies the content recursively.",
             "fields": [
@@ -342,13 +484,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "4876d4c68609b80cd76cc91f8932b91eec7394d11e14ac7004cef9323a6452fc"
         },
         {
             "category": "PythonApp",
-            "id": "ybxfy1mt",
+            "id": "kmztpyr8",
             "text": "CRCStreamApp",
             "description": "Calculate CRC in the streaming mode i.e. A \"streamingConsumer\" of its predecessor in the graph",
             "fields": [
@@ -498,13 +640,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "126ebc107253c8abd4da6d4d8fd605de4cec544575f1c12b665e888b878ace14"
         },
         {
             "category": "PythonApp",
-            "id": "s89ucd95",
+            "id": "q2n1k58i",
             "text": "DictGatherApp",
             "description": "App packs all data on input into a dictionary using the input drop's names as keys and the reading the dict values from the input drops. This app can be used stand-alone without a gather construct.",
             "fields": [
@@ -614,13 +756,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "c6cc3f97dcb9a29dcd2576498fdbd4b54b32907625e53257c0f94d72d9abb5ba"
         },
         {
             "category": "EnvironmentVariables",
-            "id": "2lhxaf8w",
+            "id": "uieww02t",
             "text": "EnvironmentVariables",
             "description": "A set of environment variables, wholly specified in EAGLE and accessible to all drops.",
             "fields": [
@@ -691,13 +833,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "7999ee43db1459ec58fe51dc1886e8dd3d3333d24286a91ec12a7b4eddd63c7d"
         },
         {
             "category": "File",
-            "id": "k5nb4zh3",
+            "id": "igd923sf",
             "text": "File",
             "description": "A standard file on a filesystem mounted to the deployment machine",
             "fields": [
@@ -820,13 +962,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "fb6b9cc58716743665932ec7d3eba94334ea8ab892708fdb4658751a1878ed22"
         },
         {
             "category": "PythonApp",
-            "id": "gi3by6mx",
+            "id": "t9s6tpfx",
             "text": "GenericGatherApp",
             "description": "App that reads all its inputs and simply writes them in concatenated to all its outputs. This can be used stand-alone or as part of a Gather. It does not do anything to the data, just passing it on.",
             "fields": [
@@ -936,7 +1078,7 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "e83b35338174f0a3f9c2c671a63b9add2c325ac341483804c17301e10a1ed127"
         },
@@ -963,7 +1105,7 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "e1a86bc05f1f395b174eee3ce75f2a5776e29ed72746c4dcd4f0f8910d38dd02",
-            "key": "s721czrw",
+            "key": "ol95vnhl",
             "text": "Gather/GenericGatherApp",
             "inputAppFields": [
                 {
@@ -977,7 +1119,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "37fa1b0a-d5a5-47bd-9e49-064116473685",
+                    "id": "cb218166-1778-4f3a-8bc6-de0aca79ed68",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -992,7 +1134,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "5ffb7406-6255-4ea8-9bed-5345489151c7",
+                    "id": "b378b443-5a85-47ce-a585-62ac119c8e5b",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1007,7 +1149,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "ebc65eb3-d997-4842-8083-36d914ff02b2",
+                    "id": "9955a981-68af-4bea-90e6-ca1d95da8f57",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1022,7 +1164,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "8c8d7d38-dfac-43bc-a616-9f590f257ec3",
+                    "id": "b0d93543-2a47-48fa-9867-bd1cad56f999",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1037,7 +1179,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "f7690930-e484-40ec-98ce-729742a789ca",
+                    "id": "2e4faffb-0814-403d-9078-6ba8d23350ed",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputOutput"
                 }
@@ -1054,7 +1196,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "gvy7b85c",
+            "id": "ys550grg",
             "text": "GenericNpyGatherApp",
             "description": "A BarrierAppDrop that combines one or more inputs using cumulative operations.",
             "fields": [
@@ -1199,7 +1341,7 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "e600692260d0a3bf3948ed9ad2d14e18588c3555e53c68ea775654b4e07ec5b9"
         },
@@ -1226,7 +1368,7 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "e1a86bc05f1f395b174eee3ce75f2a5776e29ed72746c4dcd4f0f8910d38dd02",
-            "key": "gugoiwr7",
+            "key": "csfgx0e6",
             "text": "Gather/GenericNpyGatherApp",
             "inputAppFields": [
                 {
@@ -1240,7 +1382,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "fff17786-0414-4e31-8f62-cec34c711b9c",
+                    "id": "7306591d-6e0e-490f-84f7-321509a69817",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1255,7 +1397,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "62d75be4-4539-4a28-b2de-57f0b3e30a8e",
+                    "id": "e66a3547-c440-4f91-8d46-c1217a12fe17",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1270,7 +1412,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "d8b16d35-f4ce-4a4c-b2a4-322eac5e0068",
+                    "id": "2550089d-e867-450f-ae22-6366520e111f",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1285,7 +1427,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "43f21966-f2db-47fb-85b1-b5522008dda8",
+                    "id": "5f7141a3-2e0f-40a6-93f8-fcf529ff3ccd",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1300,7 +1442,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "56525d08-a054-4bb8-8a2c-ef79feb9a4b0",
+                    "id": "c104a8a7-2ee0-45af-ba21-5543d9c8a729",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputOutput"
                 }
@@ -1317,7 +1459,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "g_jc31pw",
+            "id": "_dtpryha",
             "text": "GenericNpyScatterApp",
             "description": "An APP that splits about any axis on any npy format data drop into as many part./run s as the app has outputs, provided that the initially converted numpy array has enough elements. The return will be a numpy array of arrays, where the first axis is of length len(outputs). The modulo remainder of the length of the original array and the number of outputs will be distributed across the first len(outputs)-1 elements of the resulting array.",
             "fields": [
@@ -1440,7 +1582,7 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "66f8a5354278469f158ac7580701b2b3ec09dfc543f4794afd852e29b06a2b18"
         },
@@ -1467,7 +1609,7 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "c868ad4cf7149a40e25478337ff6a47c6d5998e8c740d6b0a791158d3550acc4",
-            "key": "aehpnzfj",
+            "key": "noof9vf1",
             "text": "Scatter/GenericNpyScatterApp",
             "inputAppFields": [
                 {
@@ -1481,7 +1623,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "9dcb68e8-5553-4ea3-a172-568c97591fd2",
+                    "id": "e477eb01-4683-40c2-9024-09c6b24e0033",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1496,7 +1638,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "b9185579-7e64-4337-9ffc-e40b0490b3cf",
+                    "id": "ce17dbcd-79e2-4e86-9ee9-e8c49c1cf0af",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1511,7 +1653,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "97e7076f-9537-4b0e-8abc-c7195870bdd9",
+                    "id": "81f8cdd7-9a6e-431d-a33a-eba5a64a313e",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1526,7 +1668,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "0bac7741-e63a-4e2f-8dca-c62f231b2dca",
+                    "id": "479049ab-84ec-486a-801b-312f41c10ac5",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1541,7 +1683,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "2e5d1d12-301e-40f1-b1bb-58901930f4bb",
+                    "id": "8abfcc7a-8475-4b4c-a127-edf65fa03d11",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
                 },
@@ -1556,7 +1698,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "7c5cc161-c2c3-4599-87ab-66c2cdf4f46f",
+                    "id": "36904d8f-77f6-437e-ad8c-4e74c29c2afc",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort"
                 }
@@ -1573,7 +1715,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "stypcr4a",
+            "id": "e21nk7h3",
             "text": "GenericScatterApp",
             "description": "An APP that splits about any object that can be converted to a numpy array into as many parts as the app has outputs, provided that the initially converted numpy array has enough elements. The return will be a numpy array of arrays, where the first axis is of length len(outputs). The modulo remainder of the length of the original array and the number of outputs will be distributed across the first len(outputs)-1 elements of the resulting array.",
             "fields": [
@@ -1709,7 +1851,7 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "bae595cf0d624a869a9f54141edfebfef8dee937c114e7b85fe1f1bb748be6e6"
         },
@@ -1736,7 +1878,7 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "c868ad4cf7149a40e25478337ff6a47c6d5998e8c740d6b0a791158d3550acc4",
-            "key": "hm4zsx34",
+            "key": "k4b2m0f0",
             "text": "Scatter/GenericScatterApp",
             "inputAppFields": [
                 {
@@ -1750,7 +1892,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "3d0b763e-2704-43f7-9ac2-3787434849f5",
+                    "id": "edbc8443-5fe5-4a5a-89fa-670d3e97b9c7",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1765,7 +1907,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "dddc4773-a2a9-414e-b0ac-68f179692736",
+                    "id": "09f36751-1256-479b-bd67-4dc247097287",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1780,7 +1922,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "42826c43-93fa-4485-ad6a-0d5ce65e753d",
+                    "id": "c327972b-1d65-422b-a7ba-e78b006fa3f8",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1795,7 +1937,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "954c4262-4cda-4053-aa27-f3a4c76b2652",
+                    "id": "96141d95-7163-474e-93e0-c29948582e33",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1810,7 +1952,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "480f5a79-1a21-4e0a-9424-ccf953b9dfd2",
+                    "id": "4752a660-b7e5-4db6-9362-db79db2f1614",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
                 },
@@ -1825,7 +1967,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "3e729138-2f1e-472e-a265-64e1dc7abe1e",
+                    "id": "46b1db6c-7da3-4629-906a-9307c1843e76",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort"
                 }
@@ -1842,7 +1984,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "ninjh5it",
+            "id": "iob607xz",
             "text": "HelloWorldApp",
             "description": "A simple APP that implements the standard Hello World in DALiuGE. It allows to change 'World' with some other string and it also permits to connect the single output port to multiple sinks, which will all receive the same message. App does not require any input.",
             "fields": [
@@ -1939,13 +2081,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "f3ae378e2b4fd12a725e65fd48ff62ac6aa64108f2b5b6284c57e5575b0abb39"
         },
         {
             "category": "Memory",
-            "id": "nhpzrey4",
+            "id": "qumpuiqa",
             "text": "Memory",
             "description": "In-memory storage of intermediate data products",
             "fields": [
@@ -2055,13 +2197,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "66c8e8c44691e00847d02d2707d65fbc9f5252f260afcfa1bc3bf61abb764a83"
         },
         {
             "category": "PythonApp",
-            "id": "9v_cf9b2",
+            "id": "9ay6ca6e",
             "text": "NgasArchivingApp",
             "description": "Takes an input and archives it in an NGAS server.",
             "fields": [
@@ -2276,13 +2418,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "ea885e91e3063466d59640304aedb768dfb75ad045cde310af3b599bf6df831e"
         },
         {
             "category": "NGAS",
-            "id": "nhlnhts3",
+            "id": "c6tzpxdq",
             "text": "NGAS",
             "description": "An archive on the Next Generation Archive System (NGAS).",
             "fields": [
@@ -2457,13 +2599,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "d7c4f310ee8caa3bbe9dd5198a60aab6da138bd1eda33e4052782a80969d33af"
         },
         {
             "category": "Memory",
-            "id": "sdho971x",
+            "id": "sgleeiwu",
             "text": "NULL",
             "description": "A Drop not storing any data (useful for just passing on events)",
             "fields": [
@@ -2534,13 +2676,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "67ee20b7d89457833f476ac0babd7f58ddfbb32ae42ede7b6fe097439660cdf9"
         },
         {
             "category": "ParameterSet",
-            "id": "3m0wik3k",
+            "id": "m_m_o3y_",
             "text": "ParameterSet",
             "description": "A set of parameters, which can be set and modified in EAGLE and thus is part of the graph. Multiple serialisation formats are available.",
             "fields": [
@@ -2670,13 +2812,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "94e6c8e6160cfef7b1b32807037c3da5a533576373204b2ca80e979b152a0668"
         },
         {
             "category": "PythonApp",
-            "id": "php6ah6k",
+            "id": "3wt54i_t",
             "text": "PickOne",
             "description": "App that picks the first element of an input list, passes that to all outputs, except the first one. The first output is used to pass the remaining array on. This app is useful for a loop.",
             "fields": [
@@ -2773,13 +2915,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "2e7e5752410f83ddf85ca2dfd5f701089751270b2e6affc1d3c5e18d3766f2ee"
         },
         {
             "category": "PythonMemberFunction",
-            "id": "tush5o3g",
+            "id": "yopfg5e2",
             "text": "PythonMemberFunction",
             "description": "A placeholder APP to aid construction of new class member function applications. This is mainly useful (and used) when starting a new workflow from scratch.",
             "fields": [
@@ -2955,13 +3097,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "8b1dbc790c6c68aebb96edd3d1a9f64fca85fa9951fb06446c47aeeaf913928c"
         },
         {
             "category": "PythonObject",
-            "id": "ejepnaw3",
+            "id": "sfd0z3yw",
             "text": "PythonObject",
             "description": "A Python object stored in memory",
             "fields": [
@@ -3032,13 +3174,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "be441304326420af479d6a6c5434965d16983703d2ceddaf5918ab662b3bd994"
         },
         {
             "category": "PythonApp",
-            "id": "lk1pcu7q",
+            "id": "96dklgsi",
             "text": "RandomArrayApp",
             "description": "A testing APP that does not take any input and produces a random array of type int64, if integer is set to True, else of type float64. size indicates the number of elements ranging between the values low and high. The resulting array will be send to all connected output apps.",
             "fields": [
@@ -3174,13 +3316,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "0c96ce64cf83a02ec34395524f118a831cce9963869ffd643b0bf9dcd3b872cc"
         },
         {
             "category": "RDBMS",
-            "id": "sxqk34l5",
+            "id": "hp39tuyq",
             "text": "RDBMS",
             "description": "A Drop allowing storage and retrieval from a SQL DB.",
             "fields": [
@@ -3316,13 +3458,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "4f9da82ba803836cfb232b0dbadf152c53681422c3bc6789891746e9265640c5"
         },
         {
             "category": "S3",
-            "id": "orisgtkf",
+            "id": "eotvy5aj",
             "text": "S3",
             "description": "An object available in a bucket on a S3 (Simple Storage Service) object storage platform",
             "fields": [
@@ -3471,13 +3613,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "5db135d59e62ef43331ad6354d3a6ea2dc64f3c2fd4fd4d16b1900fbbc9f6453"
         },
         {
             "category": "PythonApp",
-            "id": "6v4u3o6o",
+            "id": "xmdtfnvl",
             "text": "ScpApp",
             "description": "A BarrierAppDROP that copies the content of its single input onto its single output via SSH's scp protocol.",
             "fields": [
@@ -3666,13 +3808,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "7721ef6d549667193d42793f9e111e9f087d3e87704d406f1354ad9dd8a2371c"
         },
         {
             "category": "SharedMemory",
-            "id": "41e1k5jx",
+            "id": "zs1qfdqf",
             "text": "SharedMemory",
             "description": "Data stored in shared memory",
             "fields": [
@@ -3782,13 +3924,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "d7dedeab5dc372486d3d60aee09bfec1a72a844e695e960f56813f9a3237e1a2"
         },
         {
             "category": "PythonApp",
-            "id": "k4iws71s",
+            "id": "gxyq55v9",
             "text": "SleepAndCopyApp",
             "description": "Unknown",
             "fields": [
@@ -3872,13 +4014,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "a58c814e71837219c369408fc16b8359a74cda0341f8bd9651df2c63b9a214ee"
         },
         {
             "category": "PythonApp",
-            "id": "ccot_mom",
+            "id": "g0o1d99e",
             "text": "SleepApp",
             "description": "A simple APP that sleeps the specified amount of time (0 by default). This is mainly useful (and used) to test graph translation and structure without executing real algorithms. Very useful for debugging.",
             "fields": [
@@ -3962,13 +4104,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "5b298a795f5d55a6ce3aa57fb0c33faf34902d04fe83a6eb6c9e20fd62b88fdd"
         },
         {
             "category": "PythonApp",
-            "id": "xbhh3pyi",
+            "id": "2az1ldyo",
             "text": "SocketListenerApp",
             "description": "A BarrierAppDROP that listens on a socket for data. The server-side socket expects only one client, and assumes that the client will close the connection after all its data has been sent. This application expects no input DROPs, and therefore raises an exception whenever one is added. On the output side, one or more outputs can be specified with the restriction that they are not ContainerDROPs so data can be written into them through the framework.",
             "fields": [
@@ -4170,13 +4312,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "5bd9b2e6a8af85d56f573fd4872bfa8be9fc0e62faead8b503698f42b4126ec3"
         },
         {
             "category": "PythonApp",
-            "id": "7qej185t",
+            "id": "l_x93wmf",
             "text": "SubGraphLocal",
             "description": "Unknown",
             "fields": [
@@ -4299,13 +4441,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "3e4246c770f306975ab723a4b52b193083fe618bdf6cf9e73b65ed55805e3371"
         },
         {
             "category": "PythonApp",
-            "id": "c2imjjuw",
+            "id": "1ndywmf8",
             "text": "UrlRetrieveApp",
             "description": "A simple APP that retrieves the content of a URL and writes it to all outputs.",
             "fields": [
@@ -4402,7 +4544,7 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "8398e06",
+            "commitHash": "e1d49b7",
             "paletteDownloadUrl": "",
             "dataHash": "15686f0842c69b316c895ab519331d1ca4c1d105d1d95ad7c7f2b589390be452"
         }
