@@ -80,12 +80,12 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "35da560b-e9a4-4f0a-a712-cf320356c9d0",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ApplicationArgument",
                     "usage": "NoPort"
                 },
                 {
                     "name": "func_code",
-                    "value": "import dill import base64  # Define your function def decimal_sum(array, precision, output):     from decimal import getcontext     getcontext().prec = precision     dsum = sum(array)     if output:         print(f\"Number of parts: {len(array)}\")         print(f\"{dsum:.{precision}}\")     return dsum  # Serialize and encode pickled_func = dill.dumps(decimal_sum) encoded_func = base64.b64encode(pickled_func).decode(\"utf-8\")",
+                    "value": "from decimal import getcontext  def decimal_sum(array, precision, output):     getcontext().prec = precision     dsum = sum(array)     if output:         print(f\"Number of parts: {len(array)}\")         print(f\"{dsum:.{precision}}\")     return dsum",
                     "defaultValue": "",
                     "description": "Python function code, e.g. 'def function_name(args): return args'",
                     "readonly": false,
@@ -95,7 +95,7 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "e7fde152-3c06-4650-b95b-511458e1f1fa",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ApplicationArgument",
                     "usage": "NoPort"
                 },
                 {
