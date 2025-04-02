@@ -85,7 +85,7 @@
                 },
                 {
                     "name": "func_code",
-                    "value": "import dill  def decimal_sum(array, precision, output):     from decimal import getcontext     getcontext().prec = precision     dsum = sum(array)     if output:         print(f\"Number of parts: {len(array)}\")         print(f\"{dsum:.{precision}}\")     return dsum  func_code = dill.dumps(decimal_sum)  # <-- this is bytes, safe for 'serialized: true'",
+                    "value": "import dill import base64  # Define your function def decimal_sum(array, precision, output):     from decimal import getcontext     getcontext().prec = precision     dsum = sum(array)     if output:         print(f\"Number of parts: {len(array)}\")         print(f\"{dsum:.{precision}}\")     return dsum  # Serialize and encode pickled_func = dill.dumps(decimal_sum) encoded_func = base64.b64encode(pickled_func).decode(\"utf-8\")",
                     "defaultValue": "",
                     "description": "Python function code, e.g. 'def function_name(args): return args'",
                     "readonly": false,
