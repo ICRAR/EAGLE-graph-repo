@@ -303,7 +303,7 @@
                 },
                 {
                     "name": "func_code",
-                    "value": "def printFreq(freq_list):\n    freq_tuple = \"\"\n    for frequencies in freq_list:\n        freq_tuple += f\"{frequencies[0]},{frequencies[1]}\\n\"\n    return freq_tuple\n",
+                    "value": "def printFreq(freq_list):\n    result = []\n    for start, end in freq_list:\n        result.extend([start, end])\n    return result  # This is a list of ints\n",
                     "defaultValue": "",
                     "description": "Python function code, e.g. 'def func_name(args): return args'. Note that func_name above needs to match the defined name here.",
                     "readonly": false,
@@ -486,7 +486,7 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "String",
+                    "type": "list",
                     "precious": false,
                     "options": [],
                     "positional": false,
@@ -799,7 +799,7 @@
                     "defaultValue": "",
                     "description": "Dummy port",
                     "readonly": false,
-                    "type": "String",
+                    "type": "list",
                     "precious": false,
                     "options": [
                         ""
