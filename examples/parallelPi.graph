@@ -80,7 +80,7 @@
                 },
                 {
                     "name": "func_code",
-                    "value": "from decimal import getcontext  def decimal_sum(array, precision, output):     getcontext().prec = precision     dsum = sum(array)     return dsum",
+                    "value": "def decimal_sum(array, precision):     from decimal import getcontext     getcontext().prec = precision     dsum = sum(array)     return dsum",
                     "defaultValue": "",
                     "description": "Python function code, e.g. 'def function_name(args): return args'",
                     "readonly": false,
@@ -122,21 +122,6 @@
                     "id": "aeea33e6-f39c-4e57-982f-bee2d9e377dd",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
-                },
-                {
-                    "name": "output",
-                    "value": true,
-                    "defaultValue": "true",
-                    "description": "",
-                    "readonly": false,
-                    "type": "Boolean",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "encoding": "pickle",
-                    "id": "2480ca62-98f9-4a38-a5d2-ab839c342550",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort"
                 },
                 {
                     "name": "dsum",
