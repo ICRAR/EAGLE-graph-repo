@@ -112,8 +112,8 @@
                 },
                 {
                     "name": "base_name",
-                    "value": "pi_bbp",
-                    "defaultValue": "pi_bbp",
+                    "value": "get_list_frequency_groups",
+                    "defaultValue": "get_list_frequency_groups",
                     "description": "The base class for this member function",
                     "readonly": true,
                     "type": "String",
@@ -157,7 +157,7 @@
                 },
                 {
                     "name": "num_cpus",
-                    "value": 1,
+                    "value": 2,
                     "defaultValue": "dummy",
                     "description": "Number of cores used.",
                     "readonly": false,
@@ -172,7 +172,7 @@
                 },
                 {
                     "name": "func_name",
-                    "value": "get_list_frequency_groups",
+                    "value": "ChiliesSplitFunc.get_list_frequency_groups",
                     "defaultValue": "dlg_example_funcs.pi_bbp.pi_k",
                     "description": "Complete import path of function",
                     "readonly": true,
@@ -187,7 +187,7 @@
                 },
                 {
                     "name": "func_code",
-                    "value": "def get_list_frequency_groups(\n    frequency_width, minimum_frequency=944, maximum_frequency=1420\n):\n    frequency_width_ = int(frequency_width)\n    return [\n        (bottom_frequency, bottom_frequency + frequency_width_)\n        for bottom_frequency in range(\n            minimum_frequency, maximum_frequency, frequency_width_\n        )\n    ]",
+                    "value": "",
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
@@ -276,7 +276,7 @@
             "color": "#0059a5",
             "drawOrderHint": 0,
             "id": "d0ff4a9c-48b8-4b61-9cf3-07594fa22bd9",
-            "name": "printFreq",
+            "name": "splitFreq",
             "description": "An application that wraps a python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output.",
             "x": -465.7630912595671,
             "y": -31.75417460416282,
@@ -288,7 +288,7 @@
             "fields": [
                 {
                     "name": "func_name",
-                    "value": "printFreq",
+                    "value": "ChiliesSplitFunc.splitFreq",
                     "defaultValue": "",
                     "description": "Python function name",
                     "readonly": false,
@@ -303,7 +303,7 @@
                 },
                 {
                     "name": "func_code",
-                    "value": "def printFreq(freq_list):\n    result = []\n    for start, end in freq_list:\n        result.extend([start, end])\n    return result  # This is a list of ints\n",
+                    "value": "",
                     "defaultValue": "",
                     "description": "Python function code, e.g. 'def func_name(args): return args'. Note that func_name above needs to match the defined name here.",
                     "readonly": false,
@@ -333,7 +333,7 @@
                 },
                 {
                     "name": "base_name",
-                    "value": "printFreq",
+                    "value": "splitFreq",
                     "defaultValue": "pyfunc",
                     "description": "Base name of application class",
                     "readonly": false,
@@ -833,18 +833,18 @@
             "closesLoop": false
         },
         {
-            "from": "ed47f869-2465-409a-b943-c1581a4f9057",
-            "fromPort": "d6dc9a09-cd1e-4fe9-9563-54de07023254",
-            "to": "d0ff4a9c-48b8-4b61-9cf3-07594fa22bd9",
-            "toPort": "758aa4ae-2e1a-4c22-97c0-7ef49142095f",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
             "from": "d0ff4a9c-48b8-4b61-9cf3-07594fa22bd9",
             "fromPort": "84d42753-7304-468f-8e90-67c0025bbe64",
             "to": "f4a478a6-b60a-44bf-8e55-ef3cb5df72d0",
             "toPort": "6493baef-7f31-4677-9d86-ee9896b33d2e",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": "ed47f869-2465-409a-b943-c1581a4f9057",
+            "fromPort": "d6dc9a09-cd1e-4fe9-9563-54de07023254",
+            "to": "d0ff4a9c-48b8-4b61-9cf3-07594fa22bd9",
+            "toPort": "758aa4ae-2e1a-4c22-97c0-7ef49142095f",
             "loop_aware": "0",
             "closesLoop": false
         }
