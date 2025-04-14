@@ -521,7 +521,7 @@
                 },
                 {
                     "name": "command",
-                    "value": "jq 'delpaths([paths|select(.[-1]|strings|startswith(\"output\") or startswith(\"input\") or startswith(\"exit\") or test([\"^y$|^x$|height|width|flipPorts|collapsed|color|drawOrderHint|expanded|subject\"]))])' %i0 > %o0",
+                    "value": "jq 'delpaths([paths|select(.[-1]|strings|startswith(\"output\") or startswith(\"input\") or startswith(\"exit\") or test([\"^y$|^x$|height|width|flipPorts|collapsed|color|drawOrderHint|expanded|subject\"]))])' {json} > {json_out}",
                     "defaultValue": "",
                     "description": "The command line to run within the docker instance. The specified command will be executed in a bash shell. That means that images will need a bash shell.",
                     "readonly": false,
@@ -536,7 +536,7 @@
                 },
                 {
                     "name": "user",
-                    "value": "",
+                    "value": "s",
                     "defaultValue": "",
                     "description": "Username of the user who will run the application within the docker image",
                     "readonly": false,
