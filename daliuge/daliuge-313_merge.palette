@@ -1,29 +1,30 @@
 {
     "modelData": {
         "filePath": "daliuge-313_merge.palette",
-        "fileType": "palette",
+        "fileType": "Palette",
         "shortDescription": "",
         "detailedDescription": "",
-        "repoService": "GitHub",
-        "repoBranch": "master",
-        "repo": "ICRAR/EAGLE_test_repo",
-        "eagleVersion": "",
-        "eagleCommitHash": "",
+        "repoService": "",
+        "repoBranch": "",
+        "repo": "",
+        "generatorName": "dlg_paletteGen",
+        "generatorVersion": "0.4.7",
+        "generatorCommitHash": "",
         "schemaVersion": "AppRef",
         "readonly": true,
         "repositoryUrl": "https://github.com/ICRAR/daliuge",
-        "commitHash": "84439e9",
+        "commitHash": "7b03029",
         "downloadUrl": "",
-        "signature": "aa5c766c41700714d1662266bbc3aa08bf7a0fc86be08b73bb49010de31f1d15",
+        "signature": "5609eb5997db1ed2d47174b83a25627a277fa6a286704e041c4f2a21c74e5501",
         "lastModifiedName": "wici",
         "lastModifiedEmail": "",
-        "lastModifiedDatetime": 1741346669.189282,
-        "numLGNodes": 34
+        "lastModifiedDatetime": 1744707092.630482,
+        "numLGNodes": 35
     },
     "nodeDataArray": [
         {
             "category": "PythonApp",
-            "id": "m_cb72jg",
+            "id": "8_68zloo",
             "text": "ArrayGatherApp",
             "description": "App appends all input daata to a list. This app can be used stand-alone without a gather construct.",
             "fields": [
@@ -37,6 +38,26 @@
                     "usage": "OutputPort",
                     "readonly": false,
                     "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
                     "precious": false,
                     "positional": false
                 },
@@ -117,56 +138,16 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "1f502a620f2b9ccbd629f225b9a1fd78e65f3572d32b71389bb9b71d01bee525"
+            "dataHash": "e5a40216b2d5b90bcef76ecaf2804a084d142b1edad5771907371e9c3f1943fa"
         },
         {
             "category": "PythonApp",
-            "id": "k25w5ke8",
+            "id": "q832big8",
             "text": "AverageArrays",
             "description": "A testing APP that takes multiple numpy arrays on input and calculates the mean or the median, depending on the value provided in the method parameter. Users can add as many producers to the input array port as required and the resulting array will also be send to all connected output apps.",
             "fields": [
@@ -182,6 +163,26 @@
                     "options": [
                         "mean",
                         "median"
+                    ],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
                     ],
                     "precious": false,
                     "positional": false
@@ -263,56 +264,178 @@
                     "options": [],
                     "precious": false,
                     "positional": false
+                }
+            ],
+            "repositoryUrl": "https://github.com/ICRAR/daliuge",
+            "commitHash": "7b03029",
+            "paletteDownloadUrl": "",
+            "dataHash": "0f54a4560e742a33df95c21a32992b784b96994ed9ef2fd9a34991933ba6765d"
+        },
+        {
+            "category": "Branch",
+            "id": "lqn1gm3m",
+            "text": "Branch",
+            "description": "A branch application that copies the input to either the 'true' or the 'false' output depending on the result of the provided conditional function. The conditional function can be specified either in-line or as an external function and has to return a boolean value. The inputs of the application are passed on as arguments to the conditional function. The conditional function needs to return a boolean value, but the application will copy the input data to the true or false output, depending on the result of the conditional function.",
+            "fields": [
+                {
+                    "name": "func_name",
+                    "value": "condition",
+                    "defaultValue": "condition",
+                    "description": "Python conditional function name. This can also be a valid import path to an importable function.",
+                    "type": "String",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
                 },
                 {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
+                    "name": "func_code",
+                    "value": "def condition(x): return (x > 0)",
+                    "defaultValue": "def condition(x): return (x > 0)",
+                    "description": "Python function code for the branch condition. Modify as required. Note that func_name above needs to match the defined name here.",
+                    "type": "String",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "x",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Port carrying the input which is also used in the condition function. Note that the name of the parameter has to match the argument of the condition function.",
+                    "type": "Object",
+                    "fieldType": "ComponentParameter",
+                    "usage": "InputPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "true",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "If condition is true the input will be copied to this port",
+                    "type": "Object",
+                    "fieldType": "ComponentParameter",
+                    "usage": "OutputPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "false",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "If condition is false the input will be copied to this port",
+                    "type": "Object",
+                    "fieldType": "ComponentParameter",
+                    "usage": "OutputPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
                     "type": "Select",
                     "fieldType": "ComponentParameter",
                     "usage": "NoPort",
                     "readonly": false,
                     "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
                     ],
                     "precious": false,
                     "positional": false
                 },
                 {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
+                    "name": "dropclass",
+                    "value": "dlg.apps.simple.Branch",
+                    "defaultValue": "dlg.apps.simple.Branch",
+                    "description": "Application class",
+                    "type": "String",
                     "fieldType": "ComponentParameter",
                     "usage": "NoPort",
                     "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "simple",
+                    "defaultValue": "simple",
+                    "description": "Base name of application class",
+                    "type": "String",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "execution_time",
+                    "value": "5",
+                    "defaultValue": "5",
+                    "description": "Estimated execution time",
+                    "type": "Float",
+                    "fieldType": "ConstraintParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "num_cpus",
+                    "value": "1",
+                    "defaultValue": "1",
+                    "description": "Number of cores used",
+                    "type": "Integer",
+                    "fieldType": "ConstraintParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "group_start",
+                    "value": "False",
+                    "defaultValue": "False",
+                    "description": "Is this node the start of a group?",
+                    "type": "Boolean",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
                     "precious": false,
                     "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "38b0d6820e5a5be77a2a242deb3d343702d4f1e672fb10e0caf7b6b6bbfb643a"
+            "dataHash": "fa8b3a7fe5ff225a150aad9fa0fba828816eaf71b73feb1cbf6295379a9464c2"
         },
         {
             "category": "PythonApp",
-            "id": "y1wpu7h7",
+            "id": "uq27khmp",
             "text": "CopyApp",
             "description": "A simple APP that copies its inputs into its outputs. All inputs are copied into all outputs in the order they were declared in the graph. If an input is a container (e.g. a directory) it copies the content recursively.",
             "fields": [
@@ -326,6 +449,26 @@
                     "usage": "NoPort",
                     "readonly": false,
                     "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
                     "precious": false,
                     "positional": false
                 },
@@ -419,59 +562,52 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "95873084647d948f6095b831f4cc96fff168d877239ff32cc10ac90ef8c53ef1"
+            "dataHash": "ea49a0646b714b2e1534465c761a4a79c861931e585414a11fd1e2e91a153848"
         },
         {
             "category": "PythonApp",
-            "id": "cxx32cqs",
+            "id": "zye4mgzr",
             "text": "CRCStreamApp",
             "description": "Calculate CRC in the streaming mode i.e. A \"streamingConsumer\" of its predecessor in the graph",
             "fields": [
+                {
+                    "name": "data",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Input data stream",
+                    "type": "String",
+                    "fieldType": "ApplicationArgument",
+                    "usage": "OutputPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "dropclass",
                     "value": "dlg.apps.crc.CRCStreamApp",
@@ -495,26 +631,6 @@
                     "usage": "NoPort",
                     "readonly": false,
                     "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
                     "precious": false,
                     "positional": false
                 },
@@ -582,49 +698,16 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "data",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Input data stream",
-                    "type": "String",
-                    "fieldType": "ApplicationArgument",
-                    "usage": "OutputPort",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "126ebc107253c8abd4da6d4d8fd605de4cec544575f1c12b665e888b878ace14"
+            "dataHash": "82e0334c5dce904b616d55fa68959a38ce21329fe820f0c5c08bb8360102815f"
         },
         {
             "category": "PythonApp",
-            "id": "tunq5hjw",
+            "id": "ke52calt",
             "text": "DictGatherApp",
             "description": "App packs all data on input into a dictionary using the input drop's names as keys and the reading the dict values from the input drops. This app can be used stand-alone without a gather construct.",
             "fields": [
@@ -633,11 +716,31 @@
                     "value": "value_dict",
                     "defaultValue": "value_dict",
                     "description": "The value dictionary can be initialized here",
-                    "type": "Jasom",
+                    "type": "Jason",
                     "fieldType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
                     "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
                     "precious": false,
                     "positional": false
                 },
@@ -731,56 +834,16 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "5e47d048fd51c25e510aef924460eaa185589209ffefe6b8a8f5efad0d5c01de"
+            "dataHash": "92050f93d340c14efbd1935e26b897b75d44b359f83a404849d0b3bd99a5a3fd"
         },
         {
             "category": "EnvironmentVariables",
-            "id": "1d78cbw2",
+            "id": "31hvufl_",
             "text": "EnvironmentVariables",
             "description": "A set of environment variables, wholly specified in EAGLE and accessible to all drops.",
             "fields": [
@@ -851,13 +914,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
             "dataHash": "7999ee43db1459ec58fe51dc1886e8dd3d3333d24286a91ec12a7b4eddd63c7d"
         },
         {
             "category": "File",
-            "id": "26g9d_aa",
+            "id": "laix409t",
             "text": "File",
             "description": "A standard file on a filesystem mounted to the deployment machine",
             "fields": [
@@ -940,6 +1003,19 @@
                     "positional": false
                 },
                 {
+                    "name": "block_skip",
+                    "value": "False",
+                    "defaultValue": "False",
+                    "description": "If set the drop will block a skipping chain until the last producer has finished and is not also skipped.",
+                    "type": "Boolean",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
                     "name": "data_volume",
                     "value": "5",
                     "defaultValue": "5",
@@ -980,13 +1056,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "fb6b9cc58716743665932ec7d3eba94334ea8ab892708fdb4658751a1878ed22"
+            "dataHash": "5faefd22ae766dfd92d43538fea82985904d48084e2036fac39de111fc1648ca"
         },
         {
             "category": "PythonApp",
-            "id": "_thqtzkc",
+            "id": "uwzelm59",
             "text": "GenericGatherApp",
             "description": "App that reads all its inputs and simply writes them in concatenated to all its outputs. This can be used stand-alone or as part of a Gather. It does not do anything to the data, just passing it on.",
             "fields": [
@@ -1000,6 +1076,26 @@
                     "usage": "NoPort",
                     "readonly": false,
                     "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
                     "precious": false,
                     "positional": false
                 },
@@ -1093,52 +1189,12 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "bf2463ac01d557eda52f164cec431efbe0491f4976e50ad7136a1afba081051b"
+            "dataHash": "af2306e20fa4168a28c2b994f03359de25de8a5b984969619f43fbe847aab146"
         },
         {
             "category": "Gather",
@@ -1149,7 +1205,7 @@
                     "value": "4",
                     "defaultValue": "4",
                     "description": "Specifies the number of inputs that that the gather construct will merge. If it is less than the available number of inputs, the translator will automatically generate additional gathers.",
-                    "type": "Integer",
+                    "type": "int",
                     "fieldType": "ConstructParameter",
                     "usage": "NoPort",
                     "readonly": false,
@@ -1162,8 +1218,8 @@
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
-            "dataHash": "e1a86bc05f1f395b174eee3ce75f2a5776e29ed72746c4dcd4f0f8910d38dd02",
-            "key": "15yq1s21",
+            "dataHash": "bd891849346cc4d907ae3f023f4ba458ce98c9389e09cc60993e02d58280340e",
+            "key": "malhhu65",
             "text": "Gather/GenericGatherApp",
             "inputAppFields": [
                 {
@@ -1172,12 +1228,12 @@
                     "defaultValue": "",
                     "description": "Application class",
                     "readonly": true,
-                    "type": "String",
+                    "type": "str",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "6bc088ee-7609-4d5e-9acd-9c88d8e74c02",
+                    "id": "7585379d-698c-48cc-adcd-7fb72d05a671",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1187,12 +1243,12 @@
                     "defaultValue": "0",
                     "description": "Estimated execution time",
                     "readonly": false,
-                    "type": "Float",
+                    "type": "float",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "63d0ff12-da66-42ad-97df-1975c180147f",
+                    "id": "3ecfa141-e454-4249-889b-4085e2712e9f",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1202,12 +1258,12 @@
                     "defaultValue": "0",
                     "description": "Number of cores used",
                     "readonly": false,
-                    "type": "Integer",
+                    "type": "int",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "08f4b723-5294-4886-9aea-60e2f74ff29d",
+                    "id": "be67a1d2-46f4-49d0-970b-65343b842391",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1217,12 +1273,12 @@
                     "defaultValue": "False",
                     "description": "Component is start of a group",
                     "readonly": false,
-                    "type": "Boolean",
+                    "type": "bool",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "a017f9fd-5efc-4253-a541-454b06da97fe",
+                    "id": "e7990f06-10d9-49f8-bf58-dac1626550f0",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1232,19 +1288,19 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "String",
+                    "type": "str",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "f6630c64-b31f-4c0e-bcf3-8a3bcf1548c9",
+                    "id": "90520af6-2b47-44f9-b124-f0bbee5f6f72",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputOutput"
                 }
             ],
             "outputAppFields": [],
             "inputApplicationName": "GenericGatherApp",
-            "inputApplicationType": "PythonApp",
+            "inputApplicationType": "DALiuGEApp",
             "inputApplicationKey": null,
             "inputApplicationDescription": "",
             "outputApplicationName": "",
@@ -1254,7 +1310,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "3aatn4bq",
+            "id": "ho0wxjsa",
             "text": "GenericNpyGatherApp",
             "description": "A BarrierAppDrop that combines one or more inputs using cumulative operations.",
             "fields": [
@@ -1303,6 +1359,26 @@
                     "usage": "NoPort",
                     "readonly": false,
                     "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
                     "precious": false,
                     "positional": false
                 },
@@ -1396,52 +1472,12 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "bda5db9de660be9c2176ff61f0549942299f9021011f8a18083f9c19503f5e9a"
+            "dataHash": "c49092e344fb0d73cdd95ac13be45be4becd4d5e8d151e7fcbe951ee5c737f43"
         },
         {
             "category": "Gather",
@@ -1452,7 +1488,7 @@
                     "value": "4",
                     "defaultValue": "4",
                     "description": "Specifies the number of inputs that that the gather construct will merge. If it is less than the available number of inputs, the translator will automatically generate additional gathers.",
-                    "type": "Integer",
+                    "type": "int",
                     "fieldType": "ConstructParameter",
                     "usage": "NoPort",
                     "readonly": false,
@@ -1465,8 +1501,8 @@
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
-            "dataHash": "e1a86bc05f1f395b174eee3ce75f2a5776e29ed72746c4dcd4f0f8910d38dd02",
-            "key": "92xiiopo",
+            "dataHash": "bd891849346cc4d907ae3f023f4ba458ce98c9389e09cc60993e02d58280340e",
+            "key": "5g_fitg2",
             "text": "Gather/GenericNpyGatherApp",
             "inputAppFields": [
                 {
@@ -1475,12 +1511,12 @@
                     "defaultValue": "",
                     "description": "Application class",
                     "readonly": true,
-                    "type": "String",
+                    "type": "str",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "7eb74958-c66c-47ed-a865-5252c8e6db98",
+                    "id": "ccc9f016-ed29-47f1-8fe1-18b1cb5a523e",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1490,12 +1526,12 @@
                     "defaultValue": "0",
                     "description": "Estimated execution time",
                     "readonly": false,
-                    "type": "Float",
+                    "type": "float",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "4817ba2d-0b6c-4a84-95e5-6b584ab2ef44",
+                    "id": "e499ddd2-4a20-4a16-9277-e72e3bc04326",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1505,12 +1541,12 @@
                     "defaultValue": "0",
                     "description": "Number of cores used",
                     "readonly": false,
-                    "type": "Integer",
+                    "type": "int",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "07a0a5be-f5ff-48fe-bc7b-93fe13f6b03e",
+                    "id": "a110bd54-163d-4ab3-84bc-b0c4fe932d18",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1520,12 +1556,12 @@
                     "defaultValue": "False",
                     "description": "Component is start of a group",
                     "readonly": false,
-                    "type": "Boolean",
+                    "type": "bool",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "0e9336b4-fc86-4a14-be88-1e501236e8d3",
+                    "id": "5e277c2d-4682-473e-bfee-9159472ed869",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1535,19 +1571,19 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "String",
+                    "type": "str",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "3008a64d-c3d0-478e-aa46-d117a55aceac",
+                    "id": "c86fccbe-f7c5-486c-ad82-1b418949aa33",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputOutput"
                 }
             ],
             "outputAppFields": [],
             "inputApplicationName": "GenericNpyGatherApp",
-            "inputApplicationType": "PythonApp",
+            "inputApplicationType": "DALiuGEApp",
             "inputApplicationKey": null,
             "inputApplicationDescription": "",
             "outputApplicationName": "",
@@ -1557,7 +1593,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "rp2ffvp5",
+            "id": "7z6doe9k",
             "text": "GenericNpyScatterApp",
             "description": "An APP that splits about any axis on any npy format data drop into as many part./run s as the app has outputs, provided that the initially converted numpy array has enough elements. The return will be a numpy array of arrays, where the first axis is of length len(outputs). The modulo remainder of the length of the original array and the number of outputs will be distributed across the first len(outputs)-1 elements of the resulting array.",
             "fields": [
@@ -1597,6 +1633,26 @@
                     "usage": "NoPort",
                     "readonly": false,
                     "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
                     "precious": false,
                     "positional": false
                 },
@@ -1677,52 +1733,12 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "7578e879a15f69c056104a5cae62aba16949eea1b20c3387f1fb220484eb422d"
+            "dataHash": "6fd514ce530a44f410cad360555d28fa9a1675b128a0a5d2013b5110d1ad5b11"
         },
         {
             "category": "Scatter",
@@ -1733,7 +1749,7 @@
                     "value": "4",
                     "defaultValue": "4",
                     "description": "Specifies the number of replications that will be generated of the scatter construct's contents.",
-                    "type": "Integer",
+                    "type": "int",
                     "fieldType": "ConstructParameter",
                     "usage": "NoPort",
                     "readonly": false,
@@ -1746,8 +1762,8 @@
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
-            "dataHash": "c868ad4cf7149a40e25478337ff6a47c6d5998e8c740d6b0a791158d3550acc4",
-            "key": "qnhdsrz8",
+            "dataHash": "1c154b7a3f769797047ab358f3f0bb53f2a63da3a192ab7f5e81ae4a587f62df",
+            "key": "7dxk1ij9",
             "text": "Scatter/GenericNpyScatterApp",
             "inputAppFields": [
                 {
@@ -1756,12 +1772,12 @@
                     "defaultValue": "",
                     "description": "Application class",
                     "readonly": true,
-                    "type": "String",
+                    "type": "str",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "3ec12d20-05f8-4d89-af11-fecc756ab544",
+                    "id": "ebea65b1-8173-47ae-a1e4-05d3ffcf29f2",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1771,12 +1787,12 @@
                     "defaultValue": "0",
                     "description": "Estimated execution time",
                     "readonly": false,
-                    "type": "Float",
+                    "type": "float",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "e2631834-df99-427b-b133-06ba64bd9fdb",
+                    "id": "6cd85dc6-4cd2-4d69-84b0-949d62349ff4",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1786,12 +1802,12 @@
                     "defaultValue": "0",
                     "description": "Number of cores used",
                     "readonly": false,
-                    "type": "Integer",
+                    "type": "int",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "c71c5448-580a-4b0b-b7be-360d93b22004",
+                    "id": "f93be312-5e00-4be4-9858-539570ce4739",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1801,12 +1817,12 @@
                     "defaultValue": "False",
                     "description": "Component is start of a group",
                     "readonly": false,
-                    "type": "Boolean",
+                    "type": "bool",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "a1b96104-1e27-4caf-ba85-bbfe69905e0d",
+                    "id": "b889367c-c593-44ff-9cb1-f4e43421cb04",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1821,7 +1837,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "be1616fc-0925-4f28-a23f-dd0407c7176f",
+                    "id": "31b849ab-9f7e-44e8-b3da-1994468ae3b7",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
                 },
@@ -1836,14 +1852,14 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "4a07a90e-635b-43d2-b90e-8f0ca52295ff",
+                    "id": "ee2f964e-48f6-4350-8606-6ffc85593727",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort"
                 }
             ],
             "outputAppFields": [],
             "inputApplicationName": "GenericNpyScatterApp",
-            "inputApplicationType": "PythonApp",
+            "inputApplicationType": "DALiuGEApp",
             "inputApplicationKey": null,
             "inputApplicationDescription": "",
             "outputApplicationName": "",
@@ -1853,7 +1869,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "rukn52n0",
+            "id": "5_hks9jb",
             "text": "GenericScatterApp",
             "description": "An APP that splits about any object that can be converted to a numpy array into as many parts as the app has outputs, provided that the initially converted numpy array has enough elements. The return will be a numpy array of arrays, where the first axis is of length len(outputs). The modulo remainder of the length of the original array and the number of outputs will be distributed across the first len(outputs)-1 elements of the resulting array.",
             "fields": [
@@ -1910,6 +1926,39 @@
                     "positional": false
                 },
                 {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "dropclass",
+                    "value": "dlg.apps.simple.GenericScatterApp",
+                    "defaultValue": "dlg.apps.simple.GenericScatterApp",
+                    "description": "Application class",
+                    "type": "String",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
                     "name": "group_start",
                     "value": "False",
                     "defaultValue": "False",
@@ -1928,19 +1977,6 @@
                     "defaultValue": "1",
                     "description": "Specifies the number of times the 'run' method will be executed before finally giving up",
                     "type": "Integer",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "dropclass",
-                    "value": "dlg.apps.simple.GenericScatterApp",
-                    "defaultValue": "dlg.apps.simple.GenericScatterApp",
-                    "description": "Application class",
-                    "type": "String",
                     "fieldType": "ComponentParameter",
                     "usage": "NoPort",
                     "readonly": false,
@@ -1986,52 +2022,12 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "88db969d7eb5f8f6cb2b6a31f6b8a9588bf1736ec045c77fcd0c777707ea864d"
+            "dataHash": "f73a30b8f3a6923ad61a550a0304ca1546c52b623e230b5e9bae13419eb0f55a"
         },
         {
             "category": "Scatter",
@@ -2042,7 +2038,7 @@
                     "value": "4",
                     "defaultValue": "4",
                     "description": "Specifies the number of replications that will be generated of the scatter construct's contents.",
-                    "type": "Integer",
+                    "type": "int",
                     "fieldType": "ConstructParameter",
                     "usage": "NoPort",
                     "readonly": false,
@@ -2055,8 +2051,8 @@
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
-            "dataHash": "c868ad4cf7149a40e25478337ff6a47c6d5998e8c740d6b0a791158d3550acc4",
-            "key": "n6ovlwz1",
+            "dataHash": "1c154b7a3f769797047ab358f3f0bb53f2a63da3a192ab7f5e81ae4a587f62df",
+            "key": "2rdels_u",
             "text": "Scatter/GenericScatterApp",
             "inputAppFields": [
                 {
@@ -2065,12 +2061,12 @@
                     "defaultValue": "",
                     "description": "Application class",
                     "readonly": true,
-                    "type": "String",
+                    "type": "str",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "7c751c34-265a-4233-9901-02f1080caccc",
+                    "id": "60155c86-a124-4799-be4c-86c1d238c082",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -2080,12 +2076,12 @@
                     "defaultValue": "0",
                     "description": "Estimated execution time",
                     "readonly": false,
-                    "type": "Float",
+                    "type": "float",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "74f210a3-a217-4c6b-98bc-d2379ec754f5",
+                    "id": "9645c5f9-ad4e-4a8b-9ba6-6aba88f9722e",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -2095,12 +2091,12 @@
                     "defaultValue": "0",
                     "description": "Number of cores used",
                     "readonly": false,
-                    "type": "Integer",
+                    "type": "int",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "506c5ba8-d283-4d3c-b573-ecf6325f3a53",
+                    "id": "394f1b23-4b7e-46c7-a889-78ca413d1abe",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -2110,12 +2106,12 @@
                     "defaultValue": "False",
                     "description": "Component is start of a group",
                     "readonly": false,
-                    "type": "Boolean",
+                    "type": "bool",
                     "precious": false,
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "0e6945bf-52ac-4c61-b081-14796ac9030b",
+                    "id": "ab9c1d35-4a7a-4a2b-9bde-c802333f09ee",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -2130,7 +2126,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "815e538e-896a-4776-baa7-912bb1152379",
+                    "id": "2f8af8c1-ce62-447e-8b2d-d6909f348fe2",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
                 },
@@ -2145,14 +2141,14 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "7099654b-59cb-4517-9991-d4a62b5082d5",
+                    "id": "86e785e5-8eb3-46d2-8d83-9a7d7edf9162",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort"
                 }
             ],
             "outputAppFields": [],
             "inputApplicationName": "GenericScatterApp",
-            "inputApplicationType": "PythonApp",
+            "inputApplicationType": "DALiuGEApp",
             "inputApplicationKey": null,
             "inputApplicationDescription": "",
             "outputApplicationName": "",
@@ -2162,7 +2158,7 @@
         },
         {
             "category": "PythonApp",
-            "id": "fmu_fm40",
+            "id": "sis6pqrt",
             "text": "HelloWorldApp",
             "description": "A simple APP that implements the standard Hello World in DALiuGE. It allows to change 'World' with some other string and it also permits to connect the single output port to multiple sinks, which will all receive the same message. App does not require any input.",
             "fields": [
@@ -2176,6 +2172,26 @@
                     "usage": "NoPort",
                     "readonly": false,
                     "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
                     "precious": false,
                     "positional": false
                 },
@@ -2243,78 +2259,25 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "hello",
-                    "value": "world",
-                    "defaultValue": "world",
-                    "description": "message",
-                    "type": "Object",
-                    "fieldType": "ApplicationArgument",
-                    "usage": "OutputPort",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "29ef26cf76f470a70a72f36eb9f9e88b1da6cf1a662e3935e1476114f1655d78"
+            "dataHash": "0ccad66e4fe7645bc44c93b00a0515a06252934fca4ad723416817c646fd0d27"
         },
         {
             "category": "Memory",
-            "id": "l7h27_ys",
+            "id": "prnx7en4",
             "text": "Memory",
             "description": "In-memory storage of intermediate data products",
             "fields": [
                 {
                     "name": "pydata",
-                    "value": "None",
-                    "defaultValue": "None",
+                    "value": "",
+                    "defaultValue": "",
                     "description": "Data to be loaded into memory",
-                    "type": "String",
+                    "type": "Object",
                     "fieldType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
@@ -2330,6 +2293,19 @@
                     "type": "Object",
                     "fieldType": "ApplicationArgument",
                     "usage": "InputOutput",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "block_skip",
+                    "value": "False",
+                    "defaultValue": "False",
+                    "description": "If set the drop will block a skipping chain until the last producer has finished and is not also skipped.",
+                    "type": "Boolean",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
                     "readonly": false,
                     "options": [],
                     "precious": false,
@@ -2415,16 +2391,114 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "66c8e8c44691e00847d02d2707d65fbc9f5252f260afcfa1bc3bf61abb764a83"
+            "dataHash": "9bed977555cc409f02e9a43fe95c5d83fb6c567b5f8cbb30874be66b0c87a5d3"
         },
         {
             "category": "PythonApp",
-            "id": "5mp7u9u2",
+            "id": "3s9__h9t",
             "text": "NgasArchivingApp",
             "description": "Takes an input and archives it in an NGAS server.",
             "fields": [
+                {
+                    "name": "ngasSrv",
+                    "value": "localhost",
+                    "defaultValue": "localhost",
+                    "description": "URL of the NGAS Server",
+                    "type": "String",
+                    "fieldType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "ngasPort",
+                    "value": "7777",
+                    "defaultValue": "7777",
+                    "description": "TCP/IP Port on the NGAS Server",
+                    "type": "Integer",
+                    "fieldType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "ngasMime",
+                    "value": "application/octet-stream",
+                    "defaultValue": "application/octet-stream",
+                    "description": "Mime-type of the NGAS payload",
+                    "type": "String",
+                    "fieldType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "ngasTimeout",
+                    "value": "2",
+                    "defaultValue": "2",
+                    "description": "Archiving request timeout",
+                    "type": "Integer",
+                    "fieldType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "ngasConnectTimeout",
+                    "value": "2",
+                    "defaultValue": "2",
+                    "description": "NGAS Server connection timeout",
+                    "type": "Integer",
+                    "fieldType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "fileObject",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Input File Object",
+                    "type": "Object.File",
+                    "fieldType": "ApplicationArgument",
+                    "usage": "InputPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "dropclass",
                     "value": "dlg.apps.archiving.NgasArchivingApp",
@@ -2515,134 +2589,16 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "ngasSrv",
-                    "value": "localhost",
-                    "defaultValue": "localhost",
-                    "description": "URL of the NGAS Server",
-                    "type": "String",
-                    "fieldType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "ngasPort",
-                    "value": "7777",
-                    "defaultValue": "7777",
-                    "description": "TCP/IP Port on the NGAS Server",
-                    "type": "Integer",
-                    "fieldType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "ngasMime",
-                    "value": "application/octet-stream",
-                    "defaultValue": "application/octet-stream",
-                    "description": "Mime-type of the NGAS payload",
-                    "type": "String",
-                    "fieldType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "ngasTimeout",
-                    "value": "2",
-                    "defaultValue": "2",
-                    "description": "Archiving request timeout",
-                    "type": "Integer",
-                    "fieldType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "ngasConnectTimeout",
-                    "value": "2",
-                    "defaultValue": "2",
-                    "description": "NGAS Server connection timeout",
-                    "type": "Integer",
-                    "fieldType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "fileObject",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Input File Object",
-                    "type": "Object.File",
-                    "fieldType": "ApplicationArgument",
-                    "usage": "InputPort",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "ea885e91e3063466d59640304aedb768dfb75ad045cde310af3b599bf6df831e"
+            "dataHash": "c4f4423fc64402bca102068a53b80524c4857b9000165e3f837a5255c03ed9fc"
         },
         {
             "category": "NGAS",
-            "id": "hh3g1oii",
+            "id": "kg57chsw",
             "text": "NGAS",
             "description": "An archive on the Next Generation Archive System (NGAS).",
             "fields": [
@@ -2725,6 +2681,32 @@
                     "positional": false
                 },
                 {
+                    "name": "block_skip",
+                    "value": "False",
+                    "defaultValue": "False",
+                    "description": "If set the drop will block a skipping chain until the last producer has finished and is not also skipped.",
+                    "type": "Boolean",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "dummy",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Dummy port",
+                    "type": "Object",
+                    "fieldType": "ApplicationArgument",
+                    "usage": "InputOutput",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
                     "name": "dropclass",
                     "value": "dlg.data.drops.ngas.NgasDROP",
                     "defaultValue": "dlg.data.drops.ngas.NgasDROP",
@@ -2788,42 +2770,16 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "persist",
-                    "value": "False",
-                    "defaultValue": "False",
-                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
-                    "type": "Boolean",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "dummy",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Dummy port",
-                    "type": "Object",
-                    "fieldType": "ApplicationArgument",
-                    "usage": "InputOutput",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "d7c4f310ee8caa3bbe9dd5198a60aab6da138bd1eda33e4052782a80969d33af"
+            "dataHash": "67d325815d27cc1ed322f446f6d172f750a1b27c2ab2b810975b64511363eabb"
         },
         {
             "category": "Memory",
-            "id": "oe5ulm1o",
+            "id": "_yq55wqi",
             "text": "NULL",
             "description": "A Drop not storing any data (useful for just passing on events)",
             "fields": [
@@ -2894,13 +2850,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
             "dataHash": "67ee20b7d89457833f476ac0babd7f58ddfbb32ae42ede7b6fe097439660cdf9"
         },
         {
             "category": "ParameterSet",
-            "id": "mevpslyv",
+            "id": "jnz7zsqb",
             "text": "ParameterSet",
             "description": "A set of parameters, which can be set and modified in EAGLE and thus is part of the graph. Multiple serialisation formats are available.",
             "fields": [
@@ -3016,6 +2972,19 @@
                     "positional": false
                 },
                 {
+                    "name": "block_skip",
+                    "value": "False",
+                    "defaultValue": "False",
+                    "description": "If set the drop will block a skipping chain until the last producer has finished and is not also skipped.",
+                    "type": "Boolean",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
                     "name": "Config",
                     "value": "",
                     "defaultValue": "",
@@ -3030,16 +2999,36 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "94e6c8e6160cfef7b1b32807037c3da5a533576373204b2ca80e979b152a0668"
+            "dataHash": "79ca54756fe4fcb1e214bae4275f3710ea846e4f69b56457a52c1db8eb879280"
         },
         {
             "category": "PythonApp",
-            "id": "hnq922ek",
+            "id": "vjov_p15",
             "text": "PickOne",
             "description": "App that picks the first element of an input list, passes that to all outputs, except the first one. The first output is used to pass the remaining array on. This app is useful for a loop.",
             "fields": [
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "dropclass",
                     "value": "dlg.apps.simple.PickOne",
@@ -3130,56 +3119,16 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "f84a7db9e341bb701ad8837880643de63ba5dac5d5700957ca92859a04973a12"
+            "dataHash": "c79b13b4bb2a914d1e83ff12cd605cd3bb3056f448c9c574adad9217ba5f9012"
         },
         {
             "category": "PythonMemberFunction",
-            "id": "7k_vk6uo",
+            "id": "qflpyaj5",
             "text": "PythonMemberFunction",
             "description": "A placeholder APP to aid construction of new class member function applications. This is mainly useful (and used) when starting a new workflow from scratch.",
             "fields": [
@@ -3206,6 +3155,26 @@
                     "usage": "NoPort",
                     "readonly": false,
                     "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
                     "precious": false,
                     "positional": false
                 },
@@ -3304,7 +3273,7 @@
                     "name": "n_tries",
                     "value": "1",
                     "defaultValue": "1",
-                    "description": "Specifies the number of times the 'run' method will be executed before finally giving up",
+                    "description": "Specifies the number of times the 'run' method will be executed before finally giving up Mapping from argname to default value. Should match only the last part of the argnames list. Values are interpreted as Python code literals and that means string values need to be quoted.",
                     "type": "Integer",
                     "fieldType": "ComponentParameter",
                     "usage": "NoPort",
@@ -3312,56 +3281,16 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique Mapping from argname to default value. Should match only the last part of the argnames list. Values are interpreted as Python code literals and that means string values need to be quoted.",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "8b1dbc790c6c68aebb96edd3d1a9f64fca85fa9951fb06446c47aeeaf913928c"
+            "dataHash": "fe45222aa896372f26a8db2770432457456eaaad1abaf50c91ded08f56a1038d"
         },
         {
             "category": "PythonObject",
-            "id": "756uqvq7",
+            "id": "m5ic0aew",
             "text": "PythonObject",
             "description": "A Python object stored in memory",
             "fields": [
@@ -3432,13 +3361,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
             "dataHash": "be441304326420af479d6a6c5434965d16983703d2ceddaf5918ab662b3bd994"
         },
         {
             "category": "PythonApp",
-            "id": "0vg243qo",
+            "id": "2y8h8jj_",
             "text": "RandomArrayApp",
             "description": "A testing APP that does not take any input and produces a random array of type int64, if integer is set to True, else of type float64. size indicates the number of elements ranging between the values low and high. The resulting array will be send to all connected output apps.",
             "fields": [
@@ -3491,6 +3420,26 @@
                     "usage": "NoPort",
                     "readonly": false,
                     "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
                     "precious": false,
                     "positional": false
                 },
@@ -3571,56 +3520,16 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "1a3268b1b718cc2923de7efa28f1c180aa0c1b108395f5fe1a89c76da5ff32c2"
+            "dataHash": "1d21d4ee7e575d5719d742118a425e16bf310f0bdab78402914b540866205b84"
         },
         {
             "category": "RDBMS",
-            "id": "idgez77a",
+            "id": "ihe52rcy",
             "text": "RDBMS",
             "description": "A Drop allowing storage and retrieval from a SQL DB.",
             "fields": [
@@ -3756,13 +3665,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
             "dataHash": "4f9da82ba803836cfb232b0dbadf152c53681422c3bc6789891746e9265640c5"
         },
         {
             "category": "S3",
-            "id": "rip734ax",
+            "id": "ha9xnwpt",
             "text": "S3",
             "description": "An object available in a bucket on a S3 (Simple Storage Service) object storage platform",
             "fields": [
@@ -3845,6 +3754,19 @@
                     "positional": false
                 },
                 {
+                    "name": "block_skip",
+                    "value": "False",
+                    "defaultValue": "False",
+                    "description": "If set the drop will block a skipping chain until the last producer has finished and is not also skipped.",
+                    "type": "Boolean",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
                     "name": "dropclass",
                     "value": "dlg.data.drops.s3_drop.S3DROP",
                     "defaultValue": "dlg.data.drops.s3_drop.S3DROP",
@@ -3882,14 +3804,26 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
+                }
+            ],
+            "repositoryUrl": "https://github.com/ICRAR/daliuge",
+            "commitHash": "7b03029",
+            "paletteDownloadUrl": "",
+            "dataHash": "4a7331c9f8cb6df8305dfc03d0de2b461cd1b73eb61139eb04477882df777252"
+        },
+        {
+            "category": "PythonApp",
+            "id": "ezcf7bqk",
+            "text": "ScpApp",
+            "description": "A BarrierAppDROP that copies the content of its single input onto its single output via SSH's scp protocol.",
+            "fields": [
                 {
-                    "name": "persist",
-                    "value": "False",
-                    "defaultValue": "False",
-                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
-                    "type": "Boolean",
-                    "fieldType": "ComponentParameter",
+                    "name": "remoteUser",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Remote user address",
+                    "type": "String",
+                    "fieldType": "ApplicationArgument",
                     "usage": "NoPort",
                     "readonly": false,
                     "options": [],
@@ -3897,30 +3831,64 @@
                     "positional": false
                 },
                 {
-                    "name": "dummy",
+                    "name": "pkeyPath",
                     "value": "",
                     "defaultValue": "",
-                    "description": "Dummy port",
-                    "type": "Object",
+                    "description": "Private key path",
+                    "type": "String",
+                    "fieldType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "timeout",
+                    "value": "60",
+                    "defaultValue": "60",
+                    "description": "Connection timeout in seconds",
+                    "type": "Float",
+                    "fieldType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "file",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "File path",
+                    "type": "Object.PathBasedDrop",
                     "fieldType": "ApplicationArgument",
                     "usage": "InputOutput",
                     "readonly": false,
                     "options": [],
                     "precious": false,
                     "positional": false
-                }
-            ],
-            "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
-            "paletteDownloadUrl": "",
-            "dataHash": "5db135d59e62ef43331ad6354d3a6ea2dc64f3c2fd4fd4d16b1900fbbc9f6453"
-        },
-        {
-            "category": "PythonApp",
-            "id": "4ibcg5uc",
-            "text": "ScpApp",
-            "description": "A BarrierAppDROP that copies the content of its single input onto its single output via SSH's scp protocol.",
-            "fields": [
+                },
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "dropclass",
                     "value": "dlg.apps.scp.ScpApp",
@@ -4011,108 +3979,16 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "remoteUser",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Remote user address",
-                    "type": "String",
-                    "fieldType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "pkeyPath",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Private key path",
-                    "type": "String",
-                    "fieldType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "timeout",
-                    "value": "60",
-                    "defaultValue": "60",
-                    "description": "Connection timeout in seconds",
-                    "type": "Float",
-                    "fieldType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "file",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "File path",
-                    "type": "Object.PathBasedDrop",
-                    "fieldType": "ApplicationArgument",
-                    "usage": "InputOutput",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "7721ef6d549667193d42793f9e111e9f087d3e87704d406f1354ad9dd8a2371c"
+            "dataHash": "66224afc0b8d82a28c7e7127eb30e52aab89cdb178ab000d5ebc30557e3f80c7"
         },
         {
             "category": "SharedMemory",
-            "id": "hvuhwhri",
+            "id": "9s1r8bfq",
             "text": "SharedMemory",
             "description": "Data stored in shared memory",
             "fields": [
@@ -4147,6 +4023,19 @@
                     "value": "False",
                     "defaultValue": "False",
                     "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "type": "Boolean",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "block_skip",
+                    "value": "False",
+                    "defaultValue": "False",
+                    "description": "If set the drop will block a skipping chain until the last producer has finished and is not also skipped.",
                     "type": "Boolean",
                     "fieldType": "ComponentParameter",
                     "usage": "NoPort",
@@ -4222,13 +4111,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "d7dedeab5dc372486d3d60aee09bfec1a72a844e695e960f56813f9a3237e1a2"
+            "dataHash": "fd0d4f8f366bdca9a5499e43c5cf56f0b543dd547ab2ae1bc07de9cc8101d05d"
         },
         {
             "category": "PythonApp",
-            "id": "5m2bay4r",
+            "id": "z6owzp_h",
             "text": "SleepAndCopyApp",
             "description": "Unknown",
             "fields": [
@@ -4242,6 +4131,26 @@
                     "usage": "NoPort",
                     "readonly": false,
                     "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
                     "precious": false,
                     "positional": false
                 },
@@ -4309,56 +4218,16 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "ce1507caa78c57febceff6271ecb90282a2dd5d229e06ea643b80281cb7eb05e"
+            "dataHash": "4759873a0f52691eb6642134f07e8457b1de4adf69c8f94ef033f5d56ef3e788"
         },
         {
             "category": "PythonApp",
-            "id": "fohoyoym",
+            "id": "_dprvszz",
             "text": "SleepApp",
             "description": "A simple APP that sleeps the specified amount of time (0 by default). This is mainly useful (and used) to test graph translation and structure without executing real algorithms. Very useful for debugging.",
             "fields": [
@@ -4372,6 +4241,26 @@
                     "usage": "NoPort",
                     "readonly": false,
                     "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
                     "precious": false,
                     "positional": false
                 },
@@ -4439,59 +4328,104 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "a70bfe7588d9dd66e1355f2a8bc4257a5e8c2ca95916923543ecee3427ec8299"
+            "dataHash": "8e531e2da6b16e9406d321610bb598be50f76b5840ee8ddc30bee5e9d622cb8a"
         },
         {
             "category": "PythonApp",
-            "id": "x2cfpwjc",
+            "id": "eq5bzwgs",
             "text": "SocketListenerApp",
             "description": "A BarrierAppDROP that listens on a socket for data. The server-side socket expects only one client, and assumes that the client will close the connection after all its data has been sent. This application expects no input DROPs, and therefore raises an exception whenever one is added. On the output side, one or more outputs can be specified with the restriction that they are not ContainerDROPs so data can be written into them through the framework.",
             "fields": [
+                {
+                    "name": "host",
+                    "value": "localhost",
+                    "defaultValue": "localhost",
+                    "description": "Host address",
+                    "type": "String",
+                    "fieldType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "port",
+                    "value": "1111",
+                    "defaultValue": "1111",
+                    "description": "Host port",
+                    "type": "Integer",
+                    "fieldType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "bufsize",
+                    "value": "4096",
+                    "defaultValue": "4096",
+                    "description": "Receive buffer size",
+                    "type": "String",
+                    "fieldType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "reuseAddr",
+                    "value": "False",
+                    "defaultValue": "False",
+                    "description": "",
+                    "type": "Boolean",
+                    "fieldType": "ApplicationArgument",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "data",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "type": "String",
+                    "fieldType": "ComponentParameter",
+                    "usage": "OutputPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "dropclass",
                     "value": "dlg.apps.socket_listener.SocketListener",
@@ -4582,124 +4516,39 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "host",
-                    "value": "localhost",
-                    "defaultValue": "localhost",
-                    "description": "Host address",
-                    "type": "String",
-                    "fieldType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "port",
-                    "value": "1111",
-                    "defaultValue": "1111",
-                    "description": "Host port",
-                    "type": "Integer",
-                    "fieldType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "bufsize",
-                    "value": "4096",
-                    "defaultValue": "4096",
-                    "description": "Receive buffer size",
-                    "type": "String",
-                    "fieldType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "reuseAddr",
-                    "value": "False",
-                    "defaultValue": "False",
-                    "description": "",
-                    "type": "Boolean",
-                    "fieldType": "ApplicationArgument",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "data",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "type": "String",
-                    "fieldType": "ApplicationArgument",
-                    "usage": "OutputPort",
-                    "readonly": false,
-                    "options": [],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "5bd9b2e6a8af85d56f573fd4872bfa8be9fc0e62faead8b503698f42b4126ec3"
+            "dataHash": "0e245ed2eef178a0af5808d4ae988c2f730c46c8298f58873f894363a4edc92d"
         },
         {
             "category": "PythonApp",
-            "id": "bt120f08",
+            "id": "fcd_77d0",
             "text": "SubGraphLocal",
             "description": "Unknown",
             "fields": [
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "dropclass",
                     "value": "dlg.apps.subgraph.SubGraphLocal",
@@ -4819,13 +4668,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "3e4246c770f306975ab723a4b52b193083fe618bdf6cf9e73b65ed55805e3371"
+            "dataHash": "9766b70c7a99dd93f1c483d85c36cf537a1f9dcabf8b7a614d19aeab09e571a0"
         },
         {
             "category": "PythonApp",
-            "id": "_p30nvfl",
+            "id": "t_jmgb90",
             "text": "UrlRetrieveApp",
             "description": "A simple APP that retrieves the content of a URL and writes it to all outputs.",
             "fields": [
@@ -4839,6 +4688,26 @@
                     "usage": "NoPort",
                     "readonly": false,
                     "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "log_level",
+                    "value": "NOTSET",
+                    "defaultValue": "NOTSET",
+                    "description": "Set the log level for this drop",
+                    "type": "Select",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [
+                        "NOTSET",
+                        "DEBUG",
+                        "INFO",
+                        "WARNING",
+                        "ERROR",
+                        "CRITICAL"
+                    ],
                     "precious": false,
                     "positional": false
                 },
@@ -4919,52 +4788,12 @@
                     "options": [],
                     "precious": false,
                     "positional": false
-                },
-                {
-                    "name": "input_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Input port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "type": "Select",
-                    "fieldType": "ComponentParameter",
-                    "usage": "NoPort",
-                    "readonly": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "precious": false,
-                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "84439e9",
+            "commitHash": "7b03029",
             "paletteDownloadUrl": "",
-            "dataHash": "e125cf6ba6355fa7142d08919a4e04d2132bc20c9995f63f4624eac36a26865b"
+            "dataHash": "2ff508725a5dc5368cfaa35da22db635f0909ec815f93d2c444dd6f4ebeabab8"
         }
     ],
     "linkDataArray": []
