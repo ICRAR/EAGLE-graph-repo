@@ -2039,7 +2039,22 @@
                     "encoding": "pickle",
                     "id": "bdd150ac-4573-458d-b1e3-8bd7e3d49fec",
                     "parameterType": "ApplicationArgument",
-                    "usage": "InputOutput"
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "transform_data_out",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "list",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "encoding": "pickle",
+                    "id": "b0f4dba5-f743-4314-9dce-5a18a251c41f",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
             "inputAppFields": [],
@@ -2264,8 +2279,8 @@
             "id": "3cb34515-7540-4c02-bae8-22a9fbfd8215",
             "name": "transform_data",
             "description": "In-memory storage of intermediate data products",
-            "x": 122.66589863936514,
-            "y": -5.680916144989389,
+            "x": 79.21794543055445,
+            "y": 6.974815894677842,
             "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "786bff7",
@@ -3021,7 +3036,7 @@
             "id": "ef6b13df-3551-4b7e-be2b-562c1cdf272e",
             "name": "Loop",
             "description": "A loop template drop",
-            "x": 53.526889207917016,
+            "x": 52.90410489099762,
             "y": -109.37720509260163,
             "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
@@ -3140,14 +3155,6 @@
             "closesLoop": false
         },
         {
-            "from": "4d5e7768-b963-4f74-a011-8d6e3cb62e2b",
-            "fromPort": "bdd150ac-4573-458d-b1e3-8bd7e3d49fec",
-            "to": "3cb34515-7540-4c02-bae8-22a9fbfd8215",
-            "toPort": "134aa772-68f3-40ab-b1f3-d718b6dd3bbe",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
             "from": "3cb34515-7540-4c02-bae8-22a9fbfd8215",
             "fromPort": "134aa772-68f3-40ab-b1f3-d718b6dd3bbe",
             "to": "73d45c95-1dd4-448a-b2e6-a5d9b3634cb5",
@@ -3200,6 +3207,14 @@
             "fromPort": "8afb694a-e932-4dbe-b915-788414893a6b",
             "to": "4d5e7768-b963-4f74-a011-8d6e3cb62e2b",
             "toPort": "bdd150ac-4573-458d-b1e3-8bd7e3d49fec",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "from": "4d5e7768-b963-4f74-a011-8d6e3cb62e2b",
+            "fromPort": "b0f4dba5-f743-4314-9dce-5a18a251c41f",
+            "to": "3cb34515-7540-4c02-bae8-22a9fbfd8215",
+            "toPort": "134aa772-68f3-40ab-b1f3-d718b6dd3bbe",
             "loop_aware": "0",
             "closesLoop": false
         }
