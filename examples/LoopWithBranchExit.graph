@@ -1,0 +1,28 @@
+{
+    "modelData": {
+        "filePath": "examples/LoopWithBranchExit.graph",
+        "fileType": "Graph",
+        "shortDescription": "Graph using a Branch to check whether array to loop over is exhausted.",
+        "detailedDescription": "The graph is generating an array of random numbers and uses the numbers to sleep for the given amount of seconds. The array could be smaller or bigger than the number of loops. If it is bigger the loop will never exhaust the array, but only use the first num_of_iter numbers, which is the number of iterations the loop will perform. However, if the array is smaller, then the PickOne component will fail to pick a new number once the array is exhausted. In order to prevent that from happening the branch checks the length of the remaining array (rest_array) and exits the loop if is is exhausted (len(rest_array) == 0). There are a few tricks required to make this graph work:\n\n1) The initial array should be used only once when entering the loop, that's why the edge is set to 'loop-aware'\n2) The loop is actually formed by PickOne, the rest_array after PickOne, the Branch and the rest_array in the True leg of the branch going back into the PickOne. The last edge between the rest_array and PickOne needs to close the loop, which will also set the according flags (group_end and group_start) in the rest_array memory component and the PickOne Component, respectively.\n3) The actual action takes place on the other leg of the PickOne component, which passes on the picked element to the Sleep component.\n4) The event link between the SleepApp and the Branch ensures that the execution of the Branch is blocking until the Sleep is completed, which truly finishes the iteration.\n5) The exit memory drop outside the loop on the True leg of the branch needs to get the block_skip flag set, else the skip from the first branch will already send the skip to the exit leg of the branch.",
+        "repoService": "GitHub",
+        "repoBranch": "master",
+        "repo": "ICRAR/EAGLE-graph-repo",
+        "generatorVersion": "v6.6.0",
+        "generatorCommitHash": "459eaa752c5bb5709ef7564e184f38a50c980bf3",
+        "generatorName": "EAGLE",
+        "schemaVersion": "OJS",
+        "readonly": false,
+        "repositoryUrl": "",
+        "commitHash": "",
+        "downloadUrl": "",
+        "signature": "",
+        "lastModifiedName": "",
+        "lastModifiedEmail": "",
+        "lastModifiedDatetime": 0,
+        "numLGNodes": 0
+    },
+    "activeGraphConfigId": null,
+    "graphConfigurations": {},
+    "nodeDataArray": [],
+    "linkDataArray": []
+}
