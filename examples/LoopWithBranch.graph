@@ -7,8 +7,8 @@
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "generatorVersion": "v6.5.0",
-        "generatorCommitHash": "0ca739b5b9f30f254f00d8e639d694640fc758e9",
+        "generatorVersion": "v6.6.0",
+        "generatorCommitHash": "15ef3dbbded2b467b9f37d3717b6f1d9a5940fc2",
         "generatorName": "EAGLE",
         "schemaVersion": "OJS",
         "readonly": true,
@@ -21,8 +21,42 @@
         "lastModifiedDatetime": 0,
         "numLGNodes": 11
     },
-    "activeGraphConfigId": null,
-    "graphConfigurations": {},
+    "activeGraphConfigId": "72c96671-ff99-4841-89eb-c132cf514f68",
+    "graphConfigurations": {
+        "72c96671-ff99-4841-89eb-c132cf514f68": {
+            "name": "Default Configuration",
+            "description": "",
+            "nodes": {
+                "dc7677dd-255b-444b-9c00-af469b33d136": {
+                    "fields": {
+                        "bc72d266-90be-4fe7-bebe-b0a165ad8371": {
+                            "value": 0.5,
+                            "comment": ""
+                        }
+                    }
+                },
+                "0da87122-24bc-4ae0-8f13-987dd892907f": {
+                    "fields": {
+                        "0f875278-1ea6-4eaa-ae5b-ba5745ff2e6d": {
+                            "value": 10,
+                            "comment": ""
+                        },
+                        "03c4c994-b720-4484-9037-41245a5ace3b": {
+                            "value": 0,
+                            "comment": ""
+                        },
+                        "9424b089-c307-4366-b085-b2f6c47bcd39": {
+                            "value": 1,
+                            "comment": ""
+                        }
+                    }
+                }
+            },
+            "lastModifiedName": "",
+            "lastModifiedEmail": "",
+            "lastModifiedDatetime": 0
+        }
+    },
     "nodeDataArray": [
         {
             "category": "Loop",
@@ -33,8 +67,8 @@
             "id": "4a855dc6-9ddf-407f-b10c-c5f60cebc485",
             "name": "Loop",
             "description": "Placeholder 'loop' description",
-            "x": 952.9136184372132,
-            "y": 770.1287679386696,
+            "x": 965.0872504987344,
+            "y": 784.8024000001909,
             "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
@@ -107,8 +141,8 @@
             "id": "0da87122-24bc-4ae0-8f13-987dd892907f",
             "name": "RandomArrayApp",
             "description": "A testing APP that does not take any input and produces a random array of type int64, if integer is set to True, else of type float64. size indicates the number of elements ranging between the values low and high. The resulting array will be send to all connected output apps.",
-            "x": 545.4636648141486,
-            "y": 776.3534262110786,
+            "x": 557.9636648141486,
+            "y": 788.8534262110786,
             "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "927717d",
@@ -147,7 +181,7 @@
                 },
                 {
                     "name": "high",
-                    "value": 5,
+                    "value": 1,
                     "defaultValue": "1",
                     "description": "High value of range of array [exclusive]",
                     "readonly": false,
@@ -316,8 +350,8 @@
             "id": "dc7677dd-255b-444b-9c00-af469b33d136",
             "name": "Branch",
             "description": "A branch application that copies the input to either the 'true' or the 'false' output depending on the result of the provided conditional function. The conditional function can be specified either in-line or as an external function and has to return a boolean value. The inputs of the application are passed on as arguments to the conditional function. The conditional function needs to return a boolean value, but the application will copy the input data to the true or false output, depending on the result of the conditional function.",
-            "x": 1082.4874765882191,
-            "y": 733.9236618674382,
+            "x": 1098.4874765882191,
+            "y": 749.9236618674382,
             "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "4df6f40",
@@ -342,8 +376,8 @@
                 },
                 {
                     "name": "func_code",
-                    "value": "def condition(x):\n  print(f\"{x:.2f} is <= 2.5: {x<=2.5}\")\n  return (x <= 2.5)",
-                    "defaultValue": "condition(x): return (x > 0)",
+                    "value": "def condition(x, limit=0.5):\n  print(f\"{x:.2f} is <= {limit}: {x<=limit}\")\n  return (x <= limit)",
+                    "defaultValue": "condition(x): return (x > 0.5)",
                     "description": "Python function code for the branch condition. Modify as required. Note that func_name above needs to match the defined name here.",
                     "readonly": false,
                     "type": "String",
@@ -369,6 +403,21 @@
                     "id": "84f8fa25-f087-491a-ab35-f47488fa423d",
                     "parameterType": "ComponentParameter",
                     "usage": "InputPort"
+                },
+                {
+                    "name": "limit",
+                    "value": 0.5,
+                    "defaultValue": "",
+                    "description": "The branch is checking whether the value is <= limit",
+                    "readonly": false,
+                    "type": "Float",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "encoding": "pickle",
+                    "id": "bc72d266-90be-4fe7-bebe-b0a165ad8371",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort"
                 },
                 {
                     "name": "true",
@@ -496,8 +545,8 @@
             "id": "67c5883d-b5ea-4a3e-ae38-2b5e6ba3a9bd",
             "name": "true: do something",
             "description": "Unknown",
-            "x": 891.5663238399743,
-            "y": 797.4685986929683,
+            "x": 904.0663238399743,
+            "y": 809.9685986929683,
             "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "4df6f40",
@@ -661,8 +710,8 @@
             "id": "be9d73d9-b31c-4d9c-81dd-891c9d378ae1",
             "name": "with something",
             "description": "In-memory storage of intermediate data products",
-            "x": 945.6742945183203,
-            "y": 635.2327511813972,
+            "x": 954.6742945183203,
+            "y": 644.2327511813972,
             "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "4df6f40",
@@ -796,8 +845,8 @@
             "id": "43e13f1a-44de-4900-9344-39852fcbdcd6",
             "name": "sleep_time",
             "description": "In-memory storage of intermediate data products",
-            "x": 1064.3263098500017,
-            "y": 854.1652065994545,
+            "x": 1073.3263098500017,
+            "y": 863.1652065994545,
             "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "4df6f40",
@@ -946,8 +995,8 @@
             "id": "be4de850-ffd9-47f0-911b-f9df52ab11d6",
             "name": "sleep_time",
             "description": "In-memory storage of intermediate data products",
-            "x": 979.7538367677023,
-            "y": 763.1201024267591,
+            "x": 988.7538367677023,
+            "y": 772.1201024267591,
             "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "4df6f40",
@@ -1096,8 +1145,8 @@
             "id": "15fa6c23-6640-4ebb-a57f-29691025c8ee",
             "name": "PickOne",
             "description": "App that picks the first element of an input list, passes that to all outputs, except the first one. The first output is used to pass the remaining array on. This app is useful for a loop.",
-            "x": 812.1870244092496,
-            "y": 704.0721636403481,
+            "x": 824.6870244092496,
+            "y": 716.5721636403481,
             "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
@@ -1276,8 +1325,8 @@
             "id": "b897f274-f8ba-456b-a5f9-f62621f05755",
             "name": "rest_array",
             "description": "In-memory storage of intermediate data products",
-            "x": 816.8707853824691,
-            "y": 858.6272933056237,
+            "x": 825.8707853824691,
+            "y": 867.6272933056237,
             "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "4df6f40",
@@ -1456,8 +1505,8 @@
             "id": "0f408eb2-d304-482a-9d25-36aed6abc5b4",
             "name": "rest_array",
             "description": "In-memory storage of intermediate data products",
-            "x": 678.7961257777414,
-            "y": 775.7095852801781,
+            "x": 687.7961257777414,
+            "y": 784.7095852801781,
             "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "8f2c81d",
@@ -1605,8 +1654,8 @@
             "id": "2cdf659e-a77f-4376-a4ec-5933b4281dd2",
             "name": "false: do something else",
             "description": "An application that wraps a python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output.",
-            "x": 953.9778229470712,
-            "y": 905.8720488189846,
+            "x": 966.4778229470712,
+            "y": 918.3720488189846,
             "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "8f2c81d",
