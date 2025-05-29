@@ -13,18 +13,18 @@
         "schemaVersion": "AppRef",
         "readonly": true,
         "repositoryUrl": "https://github.com/ICRAR/daliuge",
-        "commitHash": "bc3e728",
+        "commitHash": "4b29603",
         "downloadUrl": "",
-        "signature": "9df7f00c8ad8aa47cb65a36b5b51c0f717d536197f9b5626395332b136b30c23",
+        "signature": "2eda427f7d5916afaf3ec4a1ef3cf4fa44b9ff85b1e20d5cc5fa796917d82800",
         "lastModifiedName": "wici",
         "lastModifiedEmail": "",
-        "lastModifiedDatetime": 1747712509.345108,
+        "lastModifiedDatetime": 1748506026.782607,
         "numLGNodes": 35
     },
     "nodeDataArray": [
         {
             "category": "DALiuGEApp",
-            "id": "64ehbs55",
+            "id": "wchobwh5",
             "text": "ArrayGatherApp",
             "description": "App appends all input daata to a list. This app can be used stand-alone without a gather construct.",
             "fields": [
@@ -141,13 +141,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
             "dataHash": "26be8968ca59b36ad43c7c6565e11b93b3426601b0759bd58fd956d3589380e9"
         },
         {
             "category": "DALiuGEApp",
-            "id": "qi58o9di",
+            "id": "l6zz0609",
             "text": "AverageArrays",
             "description": "A testing APP that takes multiple numpy arrays on input and calculates the mean or the median, depending on the value provided in the method parameter. Users can add as many producers to the input array port as required and the resulting array will also be send to all connected output apps.",
             "fields": [
@@ -267,13 +267,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
             "dataHash": "f8ce04854871d9fd4acdde624d91901f45d05a598b7c5b820aa96aa7e7d5547d"
         },
         {
             "category": "Branch",
-            "id": "n3g7l2e2",
+            "id": "7d25b910",
             "text": "Branch",
             "description": "A branch application that copies the input to either the 'true' or the 'false' output depending on the result of the provided conditional function. The conditional function can be specified either in-line or as an external function and has to return a boolean value. The inputs of the application are passed on as arguments to the conditional function. The conditional function needs to return a boolean value, but the application will copy the input data to the true or false output, depending on the result of the conditional function.",
             "fields": [
@@ -429,13 +429,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
             "dataHash": "fa8b3a7fe5ff225a150aad9fa0fba828816eaf71b73feb1cbf6295379a9464c2"
         },
         {
             "category": "DALiuGEApp",
-            "id": "mcguc85r",
+            "id": "couknbfy",
             "text": "CopyApp",
             "description": "A simple APP that copies its inputs into its outputs. All inputs are copied into all outputs in the order they were declared in the graph. If an input is a container (e.g. a directory) it copies the content recursively.",
             "fields": [
@@ -551,10 +551,10 @@
                     "positional": false
                 },
                 {
-                    "name": "dummy",
+                    "name": "io",
                     "value": "",
                     "defaultValue": "",
-                    "description": "Dummy port",
+                    "description": "Input Output port",
                     "type": "Object",
                     "fieldType": "ApplicationArgument",
                     "usage": "InputOutput",
@@ -565,13 +565,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
-            "dataHash": "dc79497c345f3036872777353832dcea5e9743308ad3b3657018bc2cd31a33fd"
+            "dataHash": "4f6290fa33d15686495997eaa189824a3036ff1c61e46e6d2911d753a78348a9"
         },
         {
             "category": "DALiuGEApp",
-            "id": "dbdsstuj",
+            "id": "po7hq427",
             "text": "CRCStreamApp",
             "description": "Calculate CRC in the streaming mode i.e. A \"streamingConsumer\" of its predecessor in the graph",
             "fields": [
@@ -701,13 +701,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
             "dataHash": "19cd024b61915c5add1a63b6a39006e40d48f7f4a764eb144edde0474aae6c02"
         },
         {
             "category": "DALiuGEApp",
-            "id": "tb0qf2h5",
+            "id": "gsn_mel0",
             "text": "DictGatherApp",
             "description": "App packs all data on input into a dictionary using the input drop's names as keys and the reading the dict values from the input drops. This app can be used stand-alone without a gather construct.",
             "fields": [
@@ -837,16 +837,29 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
             "dataHash": "5f6749772bc9cb45d8a05ea54a3c3f5a679e20e2363019e2b661edbd56e51a0a"
         },
         {
             "category": "EnvironmentVariables",
-            "id": "wu3hympa",
+            "id": "887ffywd",
             "text": "EnvironmentVariables",
             "description": "A set of environment variables, wholly specified in EAGLE and accessible to all drops.",
             "fields": [
+                {
+                    "name": "data_volume",
+                    "value": "5",
+                    "defaultValue": "5",
+                    "description": "Estimated size of the data contained in this node",
+                    "type": "Float",
+                    "fieldType": "ConstraintParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
                 {
                     "name": "dropclass",
                     "value": "dlg.data.drops.environmentvar_drop.EnvironmentVarDROP",
@@ -900,10 +913,10 @@
                     "positional": false
                 },
                 {
-                    "name": "dummy",
+                    "name": "output",
                     "value": "",
                     "defaultValue": "",
-                    "description": "Dummy output port",
+                    "description": "Output port",
                     "type": "Object",
                     "fieldType": "ApplicationArgument",
                     "usage": "OutputPort",
@@ -914,13 +927,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
-            "dataHash": "7999ee43db1459ec58fe51dc1886e8dd3d3333d24286a91ec12a7b4eddd63c7d"
+            "dataHash": "a166bccb279944cb74c85d24d7a93feb1bf8fb65141d365f3744c4b6f3e1e684"
         },
         {
             "category": "File",
-            "id": "i460fe6j",
+            "id": "tplrlrp_",
             "text": "File",
             "description": "A standard file on a filesystem mounted to the deployment machine",
             "fields": [
@@ -1042,10 +1055,10 @@
                     "positional": false
                 },
                 {
-                    "name": "dummy",
+                    "name": "io",
                     "value": "",
                     "defaultValue": "",
-                    "description": "Dummy port",
+                    "description": "Input Output port",
                     "type": "Object",
                     "fieldType": "ApplicationArgument",
                     "usage": "InputOutput",
@@ -1056,13 +1069,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
-            "dataHash": "5faefd22ae766dfd92d43538fea82985904d48084e2036fac39de111fc1648ca"
+            "dataHash": "8617bf7e949ee5c6beea5842d5cc5f639c69ed3442ea804b064912d3cafeccd9"
         },
         {
             "category": "DALiuGEApp",
-            "id": "c6nb0x7o",
+            "id": "gfpu7lxk",
             "text": "GenericGatherApp",
             "description": "App that reads all its inputs and simply writes them in concatenated to all its outputs. This can be used stand-alone or as part of a Gather. It does not do anything to the data, just passing it on.",
             "fields": [
@@ -1192,7 +1205,7 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
             "dataHash": "867d8e00cf63402ebc1c4dfd1b6dc47e80a43914a382e586a100a44ae8e4c8ea"
         },
@@ -1219,7 +1232,7 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "e1a86bc05f1f395b174eee3ce75f2a5776e29ed72746c4dcd4f0f8910d38dd02",
-            "key": "lv7spns_",
+            "key": "2ydsu5n3",
             "text": "Gather/GenericGatherApp",
             "inputAppFields": [
                 {
@@ -1233,7 +1246,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "6870fe67-e006-4364-9540-5f9f74477596",
+                    "id": "35f3af5c-a6fb-4c14-88c1-a4ab6b3723d5",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1248,7 +1261,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "ae78011f-74ad-4cde-be01-803365c7e275",
+                    "id": "69eb1e35-fdcc-4c22-9869-71f6c224db8f",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1263,7 +1276,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "50b2275f-3dc7-4973-8a6a-9af9d3893a8b",
+                    "id": "15c12c6b-65a8-47c2-94a8-6d89cdcfb33a",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1278,7 +1291,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "8273de93-89b8-44f2-99f9-0c882cc47ec1",
+                    "id": "d932471c-dda8-481c-9d95-8ff265dcdc3c",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1293,7 +1306,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "bb65eb72-641a-4831-b1a0-7b46ab8a1edc",
+                    "id": "b4f07283-af1a-436a-89d3-bfe6ae89ea07",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputOutput"
                 }
@@ -1310,7 +1323,7 @@
         },
         {
             "category": "DALiuGEApp",
-            "id": "oep8yhui",
+            "id": "aomingo_",
             "text": "GenericNpyGatherApp",
             "description": "A BarrierAppDrop that combines one or more inputs using cumulative operations.",
             "fields": [
@@ -1475,7 +1488,7 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
             "dataHash": "27eb449966bdb48119317618f8afae64d1f8b97ee1ec1bf200af73ff2aa0fcd0"
         },
@@ -1502,7 +1515,7 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "e1a86bc05f1f395b174eee3ce75f2a5776e29ed72746c4dcd4f0f8910d38dd02",
-            "key": "vf1e6uk2",
+            "key": "zie8ya9p",
             "text": "Gather/GenericNpyGatherApp",
             "inputAppFields": [
                 {
@@ -1516,7 +1529,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "6994d4fb-d1ca-4e10-bf4e-f37547be51c3",
+                    "id": "432b67c4-4d87-43ec-9871-31806e4c6689",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1531,7 +1544,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "cf3363e4-2248-4742-be97-1104b6676858",
+                    "id": "ac491860-720a-4f72-8d41-ad6dc285758c",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1546,7 +1559,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "35a9f763-083a-4a51-b28e-a93c8c72f3e6",
+                    "id": "3a435f5d-7604-4b46-84b2-7049e76817d9",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1561,7 +1574,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "a1330dda-38d7-4826-a07f-1ef1c0ee873c",
+                    "id": "ff38e8b9-7cd9-4d05-97cc-ffd4ed0e1e15",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1576,7 +1589,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "3d5bf28a-2f4a-4826-a452-1e5894d1a53b",
+                    "id": "e78caecb-a9b6-48ac-b47b-27105f92fce8",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputOutput"
                 }
@@ -1593,7 +1606,7 @@
         },
         {
             "category": "DALiuGEApp",
-            "id": "uati9zfl",
+            "id": "0w9lox_9",
             "text": "GenericNpyScatterApp",
             "description": "An APP that splits about any axis on any npy format data drop into as many part./run s as the app has outputs, provided that the initially converted numpy array has enough elements. The return will be a numpy array of arrays, where the first axis is of length len(outputs). The modulo remainder of the length of the original array and the number of outputs will be distributed across the first len(outputs)-1 elements of the resulting array.",
             "fields": [
@@ -1736,7 +1749,7 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
             "dataHash": "9f5157740c7550ef1e63cbf90c55de026997f0dd2726e15952e4087c793b797d"
         },
@@ -1763,7 +1776,7 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "c868ad4cf7149a40e25478337ff6a47c6d5998e8c740d6b0a791158d3550acc4",
-            "key": "v6h3hngp",
+            "key": "17bq81uy",
             "text": "Scatter/GenericNpyScatterApp",
             "inputAppFields": [
                 {
@@ -1777,7 +1790,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "244eab79-6eef-48b0-8e18-3df6f5f89090",
+                    "id": "81ced593-a7e6-4de5-b455-e35973823217",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1792,7 +1805,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "d4dd77e5-700e-4525-a11b-7e5c6c60cea0",
+                    "id": "11925324-2d88-49ce-9997-8f955af3b434",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1807,7 +1820,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "762d5a2c-be7c-4b46-8ba1-d599f5fe393b",
+                    "id": "53d518f2-9c75-4918-b053-415788386961",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -1822,7 +1835,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "4634ca17-4dec-4b21-b0a3-73fba31b824a",
+                    "id": "0f6b341a-2f75-410c-a93e-afb403281c98",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -1837,7 +1850,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "58efee4d-fb2c-46eb-baa8-8c126537db54",
+                    "id": "a1f3c58b-345d-4ee8-809d-260fbebc7723",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
                 },
@@ -1852,7 +1865,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "efbd461b-0226-41b4-89d8-ac65fdad5dd9",
+                    "id": "b8085072-44ab-4cbc-ba09-6c0e2e3add71",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort"
                 }
@@ -1869,7 +1882,7 @@
         },
         {
             "category": "DALiuGEApp",
-            "id": "rtplstkj",
+            "id": "j672rv4c",
             "text": "GenericScatterApp",
             "description": "An APP that splits about any object that can be converted to a numpy array into as many parts as the app has outputs, provided that the initially converted numpy array has enough elements. The return will be a numpy array of arrays, where the first axis is of length len(outputs). The modulo remainder of the length of the original array and the number of outputs will be distributed across the first len(outputs)-1 elements of the resulting array.",
             "fields": [
@@ -2025,7 +2038,7 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
             "dataHash": "881e12024165fede1e3ff18dbcfaca16e4a73742ab4e796c001f6bd4346ab5d4"
         },
@@ -2052,7 +2065,7 @@
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "c868ad4cf7149a40e25478337ff6a47c6d5998e8c740d6b0a791158d3550acc4",
-            "key": "w8fptclj",
+            "key": "hxc1o9a9",
             "text": "Scatter/GenericScatterApp",
             "inputAppFields": [
                 {
@@ -2066,7 +2079,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "01f16e46-03bf-463b-b5f7-483743ca3315",
+                    "id": "1570daac-d906-4275-9c75-6daa98525ad6",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -2081,7 +2094,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "7a8f99e2-d15a-4683-982d-2072f464c6b7",
+                    "id": "6c4a0d19-05d9-438d-8c03-f182bdf3edd0",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -2096,7 +2109,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "54222d1f-90fd-4afb-82f9-9e363a8eea37",
+                    "id": "32c26dd4-fbac-4a14-bd3d-5156674a527a",
                     "parameterType": "ConstraintParameter",
                     "usage": "NoPort"
                 },
@@ -2111,7 +2124,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "7af310e9-a8b7-48f8-acf6-1d569e741559",
+                    "id": "3614887b-e7c1-47c6-a94e-b6e8fe04db83",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -2126,7 +2139,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "b214ecce-0230-4df3-827c-d8f88edf29cc",
+                    "id": "b92121f3-8dbf-42a6-bdc3-db9faaa17632",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
                 },
@@ -2141,7 +2154,7 @@
                     "options": [],
                     "positional": false,
                     "keyAttribute": false,
-                    "id": "f11b8563-a1ef-4d3c-a732-aafe1bd83b70",
+                    "id": "948bb984-dc40-49f9-a683-e9bc582a5466",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort"
                 }
@@ -2158,7 +2171,7 @@
         },
         {
             "category": "DALiuGEApp",
-            "id": "78tx8r9m",
+            "id": "nh7_clqf",
             "text": "HelloWorldApp",
             "description": "A simple APP that implements the standard Hello World in DALiuGE. It allows to change 'World' with some other string and it also permits to connect the single output port to multiple sinks, which will all receive the same message. App does not require any input.",
             "fields": [
@@ -2275,20 +2288,20 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
             "dataHash": "b36444b994c429346f7ee8a06a33204d2430da9151e5931c6734bdc485e34556"
         },
         {
             "category": "Memory",
-            "id": "vjj313on",
+            "id": "3tpt90oy",
             "text": "Memory",
             "description": "In-memory storage of intermediate data products",
             "fields": [
                 {
                     "name": "pydata",
-                    "value": "",
-                    "defaultValue": "",
+                    "value": "None",
+                    "defaultValue": "None",
                     "description": "Data to be loaded into memory",
                     "type": "Object",
                     "fieldType": "ApplicationArgument",
@@ -2299,10 +2312,10 @@
                     "positional": false
                 },
                 {
-                    "name": "dummy",
+                    "name": "io",
                     "value": "",
                     "defaultValue": "",
-                    "description": "Dummy port",
+                    "description": "Input Output port",
                     "type": "Object",
                     "fieldType": "ApplicationArgument",
                     "usage": "InputOutput",
@@ -2404,13 +2417,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
-            "dataHash": "9bed977555cc409f02e9a43fe95c5d83fb6c567b5f8cbb30874be66b0c87a5d3"
+            "dataHash": "6a0582245c5a9b27e63fb9ca483146a3e48450c972d2614bccb2bb51e0998aeb"
         },
         {
             "category": "DALiuGEApp",
-            "id": "1qscur78",
+            "id": "nta3mji7",
             "text": "NgasArchivingApp",
             "description": "Takes an input and archives it in an NGAS server.",
             "fields": [
@@ -2605,13 +2618,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
             "dataHash": "1dd538b99ef8f80ccc57e46decd905a7120b189672218bf1d7dbecb710b35876"
         },
         {
             "category": "NGAS",
-            "id": "uq6ezxpw",
+            "id": "t9ytlpf3",
             "text": "NGAS",
             "description": "An archive on the Next Generation Archive System (NGAS).",
             "fields": [
@@ -2707,10 +2720,10 @@
                     "positional": false
                 },
                 {
-                    "name": "dummy",
+                    "name": "io",
                     "value": "",
                     "defaultValue": "",
-                    "description": "Dummy port",
+                    "description": "Input Output port",
                     "type": "Object",
                     "fieldType": "ApplicationArgument",
                     "usage": "InputOutput",
@@ -2783,16 +2796,29 @@
                     "options": [],
                     "precious": false,
                     "positional": false
+                },
+                {
+                    "name": "persist",
+                    "value": "True",
+                    "defaultValue": "True",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "type": "Boolean",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
-            "dataHash": "67d325815d27cc1ed322f446f6d172f750a1b27c2ab2b810975b64511363eabb"
+            "dataHash": "759f170b3c17e19d426430ddac5756c3fcbba0e18c3e1072d29b4544c211cbbf"
         },
         {
             "category": "Memory",
-            "id": "oi6fb_zl",
+            "id": "zueyoqza",
             "text": "NULL",
             "description": "A Drop not storing any data (useful for just passing on events)",
             "fields": [
@@ -2849,10 +2875,36 @@
                     "positional": false
                 },
                 {
-                    "name": "dummy",
+                    "name": "persist",
+                    "value": "True",
+                    "defaultValue": "True",
+                    "description": "Specifies whether this data component contains data that should not be deleted after execution",
+                    "type": "Boolean",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "streaming",
+                    "value": "False",
+                    "defaultValue": "False",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "type": "Boolean",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "io",
                     "value": "",
                     "defaultValue": "",
-                    "description": "Dummy port",
+                    "description": "Input Output port",
                     "type": "Object",
                     "fieldType": "ApplicationArgument",
                     "usage": "InputOutput",
@@ -2863,13 +2915,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
-            "dataHash": "67ee20b7d89457833f476ac0babd7f58ddfbb32ae42ede7b6fe097439660cdf9"
+            "dataHash": "5fe64cf35d026d6a5b5e14968ee591c41f72165c669a911babea093fc95f5872"
         },
         {
             "category": "ParameterSet",
-            "id": "lrc4mib6",
+            "id": "us0574on",
             "text": "ParameterSet",
             "description": "A set of parameters, which can be set and modified in EAGLE and thus is part of the graph. Multiple serialisation formats are available.",
             "fields": [
@@ -3012,13 +3064,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
             "dataHash": "79ca54756fe4fcb1e214bae4275f3710ea846e4f69b56457a52c1db8eb879280"
         },
         {
             "category": "DALiuGEApp",
-            "id": "zpa_hqq3",
+            "id": "yfuvv6dy",
             "text": "PickOne",
             "description": "App that picks the first element of an input list, passes that to all outputs, except the first one. The first output is used to pass the remaining array on. This app is useful for a loop.",
             "fields": [
@@ -3112,7 +3164,7 @@
                     "value": "",
                     "defaultValue": "",
                     "description": "List of elements",
-                    "type": "Object.array",
+                    "type": "Object.Array",
                     "fieldType": "ApplicationArgument",
                     "usage": "InputOutput",
                     "readonly": false,
@@ -3135,13 +3187,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
-            "dataHash": "c359a3ce8072409ea593d510f16c7ffd6fa28c7f1cf461dfcd82a2f29e6101b5"
+            "dataHash": "c4d842185012dcfd0d99dd169385c7229195a27be6c071cd8422df2485a14856"
         },
         {
             "category": "PythonMemberFunction",
-            "id": "bk1l0rud",
+            "id": "00l8ft4q",
             "text": "PythonMemberFunction",
             "description": "A placeholder APP to aid construction of new class member function applications. This is mainly useful (and used) when starting a new workflow from scratch.",
             "fields": [
@@ -3206,8 +3258,8 @@
                 },
                 {
                     "name": "base_name",
-                    "value": "Object",
-                    "defaultValue": "Object",
+                    "value": "pyfunc",
+                    "defaultValue": "pyfunc",
                     "description": "Base name of application class",
                     "type": "String",
                     "fieldType": "ComponentParameter",
@@ -3223,7 +3275,7 @@
                     "defaultValue": "",
                     "description": "Port exposing the object",
                     "type": "Object",
-                    "fieldType": "ApplicationArgument",
+                    "fieldType": "ComponentParameter",
                     "usage": "InputOutput",
                     "readonly": false,
                     "options": [],
@@ -3297,13 +3349,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
-            "dataHash": "fe45222aa896372f26a8db2770432457456eaaad1abaf50c91ded08f56a1038d"
+            "dataHash": "eff03ba867d7b3d7f940d4b979e5ec6cdb2f79b87b7c6bd5ac21fc2a0a07d8ac"
         },
         {
             "category": "PythonObject",
-            "id": "fl6basae",
+            "id": "21834ly4",
             "text": "PythonObject",
             "description": "A Python object stored in memory",
             "fields": [
@@ -3313,7 +3365,7 @@
                     "defaultValue": "",
                     "description": "Reference to object",
                     "type": "Object",
-                    "fieldType": "ApplicationArgument",
+                    "fieldType": "ComponentParameter",
                     "usage": "InputOutput",
                     "readonly": false,
                     "options": [],
@@ -3361,10 +3413,23 @@
                 },
                 {
                     "name": "base_name",
-                    "value": "Object",
-                    "defaultValue": "Object",
+                    "value": "memory",
+                    "defaultValue": "memory",
                     "description": "Base name of class",
                     "type": "String",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "streaming",
+                    "value": "False",
+                    "defaultValue": "False",
+                    "description": "Specifies whether this data component streams input and output data",
+                    "type": "Boolean",
                     "fieldType": "ComponentParameter",
                     "usage": "NoPort",
                     "readonly": false,
@@ -3374,13 +3439,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
-            "dataHash": "be441304326420af479d6a6c5434965d16983703d2ceddaf5918ab662b3bd994"
+            "dataHash": "29bc82d7e74dda107889ab0ebe087197e9019a890c9de26923c7bd64b75e7834"
         },
         {
             "category": "DALiuGEApp",
-            "id": "sotk8q4f",
+            "id": "ojt655pr",
             "text": "RandomArrayApp",
             "description": "A testing APP that does not take any input and produces a random array of type int64, if integer is set to True, else of type float64. size indicates the number of elements ranging between the values low and high. The resulting array will be send to all connected output apps.",
             "fields": [
@@ -3536,13 +3601,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
             "dataHash": "23566b62e4895fa9789969fdcbf8a3bcfa6f2b3c1ece5a92c589f34f5273f564"
         },
         {
             "category": "RDBMS",
-            "id": "4afzm4l4",
+            "id": "9zk3n888",
             "text": "RDBMS",
             "description": "A Drop allowing storage and retrieval from a SQL DB.",
             "fields": [
@@ -3664,10 +3729,10 @@
                     "positional": false
                 },
                 {
-                    "name": "dummy",
+                    "name": "io",
                     "value": "",
                     "defaultValue": "",
-                    "description": "Dummy port",
+                    "description": "Input Output port",
                     "type": "Object",
                     "fieldType": "ApplicationArgument",
                     "usage": "InputOutput",
@@ -3678,13 +3743,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
-            "dataHash": "4f9da82ba803836cfb232b0dbadf152c53681422c3bc6789891746e9265640c5"
+            "dataHash": "3b9a0af9efddd42756ccb425514ca90156c1222e7568062ce7abe925e81e3fd4"
         },
         {
             "category": "S3",
-            "id": "frtrjysx",
+            "id": "bzngy37m",
             "text": "S3",
             "description": "An object available in a bucket on a S3 (Simple Storage Service) object storage platform",
             "fields": [
@@ -3817,16 +3882,29 @@
                     "options": [],
                     "precious": false,
                     "positional": false
+                },
+                {
+                    "name": "io",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "Input Output port",
+                    "type": "Object",
+                    "fieldType": "ApplicationArgument",
+                    "usage": "InputOutput",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
-            "dataHash": "4a7331c9f8cb6df8305dfc03d0de2b461cd1b73eb61139eb04477882df777252"
+            "dataHash": "b0ca351377ec2b3b09faab4e050a244859aff8465dc9241801c8b134d2b0ef12"
         },
         {
             "category": "DALiuGEApp",
-            "id": "6gcaotsk",
+            "id": "p59ncyby",
             "text": "ScpApp",
             "description": "A BarrierAppDROP that copies the content of its single input onto its single output via SSH's scp protocol.",
             "fields": [
@@ -3995,13 +4073,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
             "dataHash": "a3feae4a043c8994953ded69ab26f7788c804c8947767a5acc2692c6fa536e8f"
         },
         {
             "category": "SharedMemory",
-            "id": "qwnln0hu",
+            "id": "k3b6_ihq",
             "text": "SharedMemory",
             "description": "Data stored in shared memory",
             "fields": [
@@ -4019,10 +4097,10 @@
                     "positional": false
                 },
                 {
-                    "name": "dummy",
+                    "name": "io",
                     "value": "",
                     "defaultValue": "",
-                    "description": "Dummy port",
+                    "description": "Input Output port",
                     "type": "Object",
                     "fieldType": "ApplicationArgument",
                     "usage": "InputOutput",
@@ -4124,13 +4202,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
-            "dataHash": "fd0d4f8f366bdca9a5499e43c5cf56f0b543dd547ab2ae1bc07de9cc8101d05d"
+            "dataHash": "fca4b9a1c0e858d6ab99d9fd411ab4e77abccf7be8baca323f2c2618e4a055a7"
         },
         {
             "category": "DALiuGEApp",
-            "id": "8h1n_ik8",
+            "id": "buw7xfxo",
             "text": "SleepAndCopyApp",
             "description": "Unknown",
             "fields": [
@@ -4234,13 +4312,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
             "dataHash": "cbae9d1e8ab24a6f7668a1fde5e2958f659e124721a9640809943f8d11e1decd"
         },
         {
             "category": "DALiuGEApp",
-            "id": "krs67v0z",
+            "id": "pk7py8sk",
             "text": "SleepApp",
             "description": "A simple APP that sleeps the specified amount of time (0 by default). This is mainly useful (and used) to test graph translation and structure without executing real algorithms. Very useful for debugging.",
             "fields": [
@@ -4344,13 +4422,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
             "dataHash": "b98cc6e538415e880f03ffbbe9699c26d7b430e7f3a60644d9179ee780402b7e"
         },
         {
             "category": "DALiuGEApp",
-            "id": "5onaeowm",
+            "id": "pt6zp_d8",
             "text": "SocketListenerApp",
             "description": "A BarrierAppDROP that listens on a socket for data. The server-side socket expects only one client, and assumes that the client will close the connection after all its data has been sent. This application expects no input DROPs, and therefore raises an exception whenever one is added. On the output side, one or more outputs can be specified with the restriction that they are not ContainerDROPs so data can be written into them through the framework.",
             "fields": [
@@ -4532,13 +4610,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
             "dataHash": "85171360a0cf39601487241c9364d9688407cc2da5b0be2e3048c956f2f314cf"
         },
         {
             "category": "DALiuGEApp",
-            "id": "nzql3h_g",
+            "id": "x8hkdscx",
             "text": "SubGraphLocal",
             "description": "Unknown",
             "fields": [
@@ -4567,6 +4645,19 @@
                     "value": "dlg.apps.subgraph.SubGraphLocal",
                     "defaultValue": "dlg.apps.subgraph.SubGraphLocal",
                     "description": "",
+                    "type": "String",
+                    "fieldType": "ComponentParameter",
+                    "usage": "NoPort",
+                    "readonly": false,
+                    "options": [],
+                    "precious": false,
+                    "positional": false
+                },
+                {
+                    "name": "base_name",
+                    "value": "subgraph",
+                    "defaultValue": "subgraph",
+                    "description": "Base name of application class",
                     "type": "String",
                     "fieldType": "ComponentParameter",
                     "usage": "NoPort",
@@ -4681,13 +4772,13 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
-            "dataHash": "b4abfa3974674a705cca29e22acd509a07c9b1c06ca6d5c813d7a8d7d5f7a446"
+            "dataHash": "521cba226156260bc2d5c512aaa7a5df93e8d38deff1695559ac2ccef72b4181"
         },
         {
             "category": "DALiuGEApp",
-            "id": "dmy6wkgl",
+            "id": "2tplbj_o",
             "text": "UrlRetrieveApp",
             "description": "A simple APP that retrieves the content of a URL and writes it to all outputs.",
             "fields": [
@@ -4804,7 +4895,7 @@
                 }
             ],
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
-            "commitHash": "bc3e728",
+            "commitHash": "4b29603",
             "paletteDownloadUrl": "",
             "dataHash": "b3fcdf814d933b85e7a40c4578c0fef0d5fda4570c3d871d2cedf28a35d636a2"
         }
