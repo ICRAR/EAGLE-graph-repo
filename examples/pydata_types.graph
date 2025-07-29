@@ -3,7 +3,7 @@
         "filePath": "examples/pydata_types.graph",
         "fileType": "Graph",
         "shortDescription": "Test for the different data types supported by the pydata feature of the Memory component. ",
-        "detailedDescription": "The DALiuGE Memory component supports entering data directly using the pydata field. Using the type descriptor of this field allows the user to control the data type of the entered value. Since what can be entered by the user is always a string, DALiuGE will attempt to interpret that string using the type provided. Supported types are:\n\n    - Int\n    - Float\n    - String\n    - Bool\n    - List\n    - Dict\n    - Object\n \n _Object_ is a special type allowing to enter a base64 encoded, dill serialised object. The example object used in the graph is actually the Python function:\n\n\tdef helloDALiuGE():\n\t\treturn \"Hello DALiuGE\"\n\nThe string in the pydata Memory node labelled _object_ has been produced using:\n\n\tdfn = dill.dumps(helloDALiuGE)\n    bfn = base64.b64encode(dfn)\n\nIt is possible to read all the values in the files produced by this graph using the function:\n\n    def read_dlg_types(files):\n        for fn in files:\n            if fn != \"string.file\":\n                 with open(fn,'rb') as f:\n                     value = dill.load(f)\n            else:\n                 with open(fn) as f:\n                     value = f.read()\n            print(f\"{type(value).__name__.upper()}\\\n            \tvalue read from file {fn}: '{value}'\")\n",
+        "detailedDescription": "The DALiuGE Memory component supports entering data directly using the pydata field. Using the type descriptor of this field allows the user to control the data type of the entered value. Since the user can only type a string, DALiuGE will attempt to interpret that string using the type provided. Supported types are:\n\n    - Int\n    - Float\n    - String\n    - Bool\n    - List\n    - Dict\n    - Object\n \n _Object_ is a special type allowing to enter a base64 encoded, dill serialised object. For more information about this special pydata value, please refer to the documentation of the _object_ memory node in this graph.\n\nIt is possible to read all the values in the files produced by this graph using the function:\n\n    def read_dlg_types(files=glob(\"*.data\")):\n        for fn in files:\n            if fn != \"string.data\":\n                 with open(fn,'rb') as f:\n                     value = dill.load(f)\n            else:\n                 with open(fn) as f:\n                     value = f.read()\n            print(f\"{type(value).__name__.upper()}\\\n            \tvalue read from file {fn}: '{value}'\")\n",
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
@@ -32,7 +32,7 @@
             "drawOrderHint": 0,
             "id": "c8b5e533-a08b-42f6-9223-d5129dd24878",
             "name": "float",
-            "description": "In-memory storage of intermediate data products",
+            "description": "The pydata value in this memory node contains a Float. DALiuGE is dill-serialising anything other than a string to allow for data transfer between computers and over the network. Thus reading the file requires to use this approach:\n\n\twith open(\"int.file\",\"rb\") as f:\n    \tvalue = dill.load(f)\n        \nThat has the advantage that the value has the correct type without any type casting.\n",
             "x": 588.9562044302801,
             "y": 223.86860608045907,
             "subject": null,
@@ -348,7 +348,7 @@
             "fields": [
                 {
                     "name": "filepath",
-                    "value": "float.file",
+                    "value": "float.data",
                     "defaultValue": "",
                     "description": "File path for this file. In many cases this does not need to be specified. If it has a \\/ at the end it will be treated as a directory name and the filename will be generated. If it does not have a \\/, the last part will be treated as a filename. If filepath does not start with \\/ (relative path) then the session directory will be prepended to make the path absolute.\"",
                     "readonly": false,
@@ -494,7 +494,7 @@
                     "encoding": "pickle",
                     "id": "95ebd9db-c3a6-4409-8ace-aaf7a7462cd3",
                     "parameterType": "ApplicationArgument",
-                    "usage": "InputOutput"
+                    "usage": "InputPort"
                 }
             ],
             "inputAppFields": [],
@@ -527,7 +527,7 @@
             "fields": [
                 {
                     "name": "filepath",
-                    "value": "int.file",
+                    "value": "int.data",
                     "defaultValue": "",
                     "description": "File path for this file. In many cases this does not need to be specified. If it has a \\/ at the end it will be treated as a directory name and the filename will be generated. If it does not have a \\/, the last part will be treated as a filename. If filepath does not start with \\/ (relative path) then the session directory will be prepended to make the path absolute.\"",
                     "readonly": false,
@@ -673,7 +673,7 @@
                     "encoding": "pickle",
                     "id": "836e077e-f66a-405d-85c8-d53acd026611",
                     "parameterType": "ApplicationArgument",
-                    "usage": "InputOutput"
+                    "usage": "InputPort"
                 }
             ],
             "inputAppFields": [],
@@ -866,7 +866,7 @@
             "drawOrderHint": 0,
             "id": "a48bdd3e-e356-41ab-8b6b-13f5838c5337",
             "name": "int",
-            "description": "In-memory storage of intermediate data products",
+            "description": "The pydata value in this memory node contains an Integer. DALiuGE is dill-serialising anything other than a string to allow for data transfer between computers and over the network. Thus reading the file requires to use this approach:\n\n\twith open(\"int.file\",\"rb\") as f:\n    \tvalue = dill.load(f)\n        \nThat has the advantage that the value has the correct type without any type casting.\n",
             "x": 599.9006975838569,
             "y": 304.54050195149335,
             "subject": null,
@@ -1011,7 +1011,7 @@
             "fields": [
                 {
                     "name": "filepath",
-                    "value": "string.file",
+                    "value": "string.data",
                     "defaultValue": "",
                     "description": "File path for this file. In many cases this does not need to be specified. If it has a \\/ at the end it will be treated as a directory name and the filename will be generated. If it does not have a \\/, the last part will be treated as a filename. If filepath does not start with \\/ (relative path) then the session directory will be prepended to make the path absolute.\"",
                     "readonly": false,
@@ -1157,7 +1157,7 @@
                     "encoding": "pickle",
                     "id": "49d85198-0039-40ba-b7d2-8f0910c2b01a",
                     "parameterType": "ApplicationArgument",
-                    "usage": "InputOutput"
+                    "usage": "InputPort"
                 }
             ],
             "inputAppFields": [],
@@ -1350,7 +1350,7 @@
             "drawOrderHint": 0,
             "id": "4b28f3dc-a0d7-4fcb-af33-7575b49c9bf7",
             "name": "string",
-            "description": "In-memory storage of intermediate data products",
+            "description": "The pydata value in this memory node contains a string with type string and standard UTF-8 encoding. DALiuGE will not do any interpretation of the string and also pass it along as a string. That is why the content of the file `string.file` is actually that string and not the serialised version of the string.\n",
             "x": 602.6259777606508,
             "y": 392.6289328167509,
             "subject": null,
@@ -1495,7 +1495,7 @@
             "fields": [
                 {
                     "name": "filepath",
-                    "value": "list.file",
+                    "value": "list.data",
                     "defaultValue": "",
                     "description": "File path for this file. In many cases this does not need to be specified. If it has a \\/ at the end it will be treated as a directory name and the filename will be generated. If it does not have a \\/, the last part will be treated as a filename. If filepath does not start with \\/ (relative path) then the session directory will be prepended to make the path absolute.\"",
                     "readonly": false,
@@ -1641,7 +1641,7 @@
                     "encoding": "pickle",
                     "id": "8709e903-0664-4ebc-b4c7-92054882ee72",
                     "parameterType": "ApplicationArgument",
-                    "usage": "InputOutput"
+                    "usage": "InputPort"
                 }
             ],
             "inputAppFields": [],
@@ -1834,7 +1834,7 @@
             "drawOrderHint": 0,
             "id": "b953f379-7ac8-4db1-adea-ac0b3d5995cc",
             "name": "list",
-            "description": "In-memory storage of intermediate data products",
+            "description": "The pydata value in this memory node contains a list formatted in Json and using the JSON type. DALiuGE will attempt to use `json.loads(pydata)` to recover the actual list from the string. In this way any Json serialisable object can be entered in the pydata field. Note that the python json loader is very strict and requires valid json formatting, else it will fail loading.\n",
             "x": 591.0205621996639,
             "y": 481.25210619156337,
             "subject": null,
@@ -1979,7 +1979,7 @@
             "fields": [
                 {
                     "name": "filepath",
-                    "value": "bool.file",
+                    "value": "bool.data",
                     "defaultValue": "",
                     "description": "File path for this file. In many cases this does not need to be specified. If it has a \\/ at the end it will be treated as a directory name and the filename will be generated. If it does not have a \\/, the last part will be treated as a filename. If filepath does not start with \\/ (relative path) then the session directory will be prepended to make the path absolute.\"",
                     "readonly": false,
@@ -2125,7 +2125,7 @@
                     "encoding": "pickle",
                     "id": "c5817f5f-3511-4d6b-86c4-eaa0437fa7cf",
                     "parameterType": "ApplicationArgument",
-                    "usage": "InputOutput"
+                    "usage": "InputPort"
                 }
             ],
             "inputAppFields": [],
@@ -2318,7 +2318,7 @@
             "drawOrderHint": 0,
             "id": "c93afc7a-0d29-43c6-9213-3177ce828836",
             "name": "bool",
-            "description": "In-memory storage of intermediate data products",
+            "description": "The pydata value in this memory node contains a Boolean. DALiuGE is dill-serialising anything other than a string to allow for data transfer between computers and over the network. Thus reading the file requires to use this approach:\n\n\twith open(\"int.file\",\"rb\") as f:\n    \tvalue = dill.load(f)\n        \nThat has the advantage that the value has the correct type without any type casting.\n",
             "x": 915.9341828472698,
             "y": 419.4750898054825,
             "subject": null,
@@ -2463,7 +2463,7 @@
             "fields": [
                 {
                     "name": "filepath",
-                    "value": "object.file",
+                    "value": "object.data",
                     "defaultValue": "",
                     "description": "File path for this file. In many cases this does not need to be specified. If it has a \\/ at the end it will be treated as a directory name and the filename will be generated. If it does not have a \\/, the last part will be treated as a filename. If filepath does not start with \\/ (relative path) then the session directory will be prepended to make the path absolute.\"",
                     "readonly": false,
@@ -2609,7 +2609,7 @@
                     "encoding": "pickle",
                     "id": "61bc5ffe-7847-477e-9dce-c7d421d2857c",
                     "parameterType": "ApplicationArgument",
-                    "usage": "InputOutput"
+                    "usage": "InputPort"
                 }
             ],
             "inputAppFields": [],
@@ -2802,7 +2802,7 @@
             "drawOrderHint": 0,
             "id": "e2d4ba9e-b48d-48c6-bb5d-85ba66c8c33d",
             "name": "object",
-            "description": "In-memory storage of intermediate data products",
+            "description": "The pydata value in this memory node has the special type _Object_ allowing to enter a base64 encoded, dill serialised object. The example object used in the graph is actually the Python function:\n\n\tdef helloDALiuGE():\n\t\treturn \"Hello DALiuGE\"\n\nThe strange string in the pydata field has been produced using:\n\n\tdfn = dill.dumps(helloDALiuGE)\n    bfn = base64.b64encode(dfn)\n",
             "x": 914.9171601290366,
             "y": 230.15311496292864,
             "subject": null,
@@ -2936,7 +2936,7 @@
             "drawOrderHint": 0,
             "id": "38c4beea-a5ec-41cb-a00d-e710b2e12301",
             "name": "dict",
-            "description": "In-memory storage of intermediate data products",
+            "description": "The pydata value in this memory node contains a dictionary formatted in Json and using the JSON type. DALiuGE will attempt to use `json.loads(pydata)` to recover the actual dictionary from the string. In this way any Json serialisable object can be entered in the pydata field. Note that the python json loader is very strict and requires valid json formatting, else it will fail loading.\n",
             "x": 913.628844031306,
             "y": 321.6161141879193,
             "subject": null,
@@ -3252,7 +3252,7 @@
             "fields": [
                 {
                     "name": "filepath",
-                    "value": "dict.file",
+                    "value": "dict.data",
                     "defaultValue": "",
                     "description": "File path for this file. In many cases this does not need to be specified. If it has a \\/ at the end it will be treated as a directory name and the filename will be generated. If it does not have a \\/, the last part will be treated as a filename. If filepath does not start with \\/ (relative path) then the session directory will be prepended to make the path absolute.\"",
                     "readonly": false,
@@ -3398,7 +3398,7 @@
                     "encoding": "pickle",
                     "id": "7bea8395-bf56-4658-b260-301236a1696b",
                     "parameterType": "ApplicationArgument",
-                    "usage": "InputOutput"
+                    "usage": "InputPort"
                 }
             ],
             "inputAppFields": [],
