@@ -7,8 +7,8 @@
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "generatorVersion": "v6.5.0",
-        "generatorCommitHash": "558775b2b42a4f218c4f766cbf3465a7bf56cd92",
+        "generatorVersion": "v6.9.0",
+        "generatorCommitHash": "74063517920e5c8fbc2d54d6d1342d50e0bf1935",
         "generatorName": "EAGLE",
         "schemaVersion": "OJS",
         "readonly": true,
@@ -25,7 +25,7 @@
     "graphConfigurations": {},
     "nodeDataArray": [
         {
-            "category": "PythonApp",
+            "category": "PyFuncApp",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
@@ -33,9 +33,9 @@
             "id": "6be88f09-3537-494a-8a3f-7b22a17a62c2",
             "name": "glob",
             "description": "An application that wraps a simple python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output.",
+            "comment": "",
             "x": 1640.414104183584,
             "y": 417.982847200779,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -173,7 +173,7 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "ea7b23bb-eb5d-48b4-a631-6224178a9b92",
-                    "parameterType": "ApplicationArgument",
+                    "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
                 {
@@ -284,10 +284,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "File",
@@ -298,9 +300,9 @@
             "id": "7a9f687a-14c2-4d0c-8650-797380e03a6a",
             "name": "recursive",
             "description": "A standard file on a filesystem mounted to the deployment machine \nIn some cases drops are created **outside** the context of a session, most notably during unit tests. In these cases the base directory is a fixed location under ``/tmp``.\nThe following table summarizes the calculation of the final path used by the ``FileDrop`` class depending on its parameters:\n============ ===================== ===================== ========== . filepath ------------ ------------------------------------------------------ dirname empty relative absolute ============ ===================== ===================== ========== **empty** /``$B``/``$u`` /``$B``/``$f`` /``$f`` **relative** /``$B``/``$d``/``$u`` /``$B``/``$d``/``$f`` **ERROR** **absolute** /``$d``/``$u`` /``$d``/``$f`` **ERROR** ============ ===================== ===================== ==========\nIn the table, ``$f`` is the value of ``filepath``, ``$d`` is the value of ``dirname``, ``$u`` is the drop's UID and ``$B`` is the base directory for this drop's session, namely ``/the/cwd/$session_id``.",
+            "comment": "",
             "x": 1506.75997916706,
             "y": 467.5,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -448,10 +450,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "BashShellApp",
@@ -462,9 +466,9 @@
             "id": "261c79e9-8377-4381-93b3-bd2d12fe65df",
             "name": "generate",
             "description": "An application component able to run an arbitrary command within the Bash Shell",
+            "comment": "",
             "x": 1392.5,
             "y": 488.12805330170943,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -672,10 +676,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "BashShellApp",
@@ -686,9 +692,9 @@
             "id": "b4aed3a3-5cda-4aac-93fc-6e9cc6872d09",
             "name": "output",
             "description": "An application component able to run an arbitrary command within the Bash Shell",
+            "comment": "",
             "x": 1825.5,
             "y": 381.5,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -926,10 +932,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "File",
@@ -940,9 +948,9 @@
             "id": "224d222f-ae90-4397-8f15-637044d5997a",
             "name": "pathname",
             "description": "A standard file on a filesystem mounted to the deployment machine \nIn some cases drops are created **outside** the context of a session, most notably during unit tests. In these cases the base directory is a fixed location under ``/tmp``.\nThe following table summarizes the calculation of the final path used by the ``FileDrop`` class depending on its parameters:\n============ ===================== ===================== ========== . filepath ------------ ------------------------------------------------------ dirname empty relative absolute ============ ===================== ===================== ========== **empty** /``$B``/``$u`` /``$B``/``$f`` /``$f`` **relative** /``$B``/``$d``/``$u`` /``$B``/``$d``/``$f`` **ERROR** **absolute** /``$d``/``$u`` /``$d``/``$f`` **ERROR** ============ ===================== ===================== ==========\nIn the table, ``$f`` is the value of ``filepath``, ``$d`` is the value of ``dirname``, ``$u`` is the drop's UID and ``$B`` is the base directory for this drop's session, namelly ``/the/cwd/$session_id``.",
+            "comment": "",
             "x": 1504,
             "y": 375.5,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -1060,10 +1068,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "BashShellApp",
@@ -1074,9 +1084,9 @@
             "id": "f61da332-0f2d-4b8d-9701-dae865f4968e",
             "name": "generate",
             "description": "An application component able to run an arbitrary command within the Bash Shell",
+            "comment": "",
             "x": 1391.5,
             "y": 377.5,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -1314,10 +1324,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "File",
@@ -1328,9 +1340,9 @@
             "id": "cbb356d0-3068-441e-9bf8-622013469a1b",
             "name": "result",
             "description": "A standard file on a filesystem mounted to the deployment machine",
+            "comment": "",
             "x": 1724.5149375011804,
             "y": 396.6540474837946,
-            "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "54f1aac",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master.palette",
@@ -1463,14 +1475,17 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         }
     ],
     "linkDataArray": [
         {
+            "comment": "",
             "from": "f61da332-0f2d-4b8d-9701-dae865f4968e",
             "fromPort": "41b66724-e51b-43d2-8c5b-1dd58dc97cfd",
             "to": "224d222f-ae90-4397-8f15-637044d5997a",
@@ -1479,6 +1494,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "224d222f-ae90-4397-8f15-637044d5997a",
             "fromPort": "eaf21119-5bc7-45b1-980d-d6c6d428dedc",
             "to": "6be88f09-3537-494a-8a3f-7b22a17a62c2",
@@ -1487,6 +1503,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "261c79e9-8377-4381-93b3-bd2d12fe65df",
             "fromPort": "84777fe6-f52c-4dac-a270-e602d7e91258",
             "to": "7a9f687a-14c2-4d0c-8650-797380e03a6a",
@@ -1495,6 +1512,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "6be88f09-3537-494a-8a3f-7b22a17a62c2",
             "fromPort": "8b8bf43c-ecd9-4bb9-b196-00fe5d107628",
             "to": "cbb356d0-3068-441e-9bf8-622013469a1b",
@@ -1503,6 +1521,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "cbb356d0-3068-441e-9bf8-622013469a1b",
             "fromPort": "49dcc6b7-e5d1-433f-af74-196772b3a558",
             "to": "b4aed3a3-5cda-4aac-93fc-6e9cc6872d09",
@@ -1511,6 +1530,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "7a9f687a-14c2-4d0c-8650-797380e03a6a",
             "fromPort": "c3441383-e511-4899-bfe7-fc27e46a9dc7",
             "to": "6be88f09-3537-494a-8a3f-7b22a17a62c2",
