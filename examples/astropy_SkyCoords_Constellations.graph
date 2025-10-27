@@ -7,8 +7,8 @@
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "generatorVersion": "v6.5.0",
-        "generatorCommitHash": "22837d411f77ee0a7cb7b85cc8bcc89ca8248731",
+        "generatorVersion": "v6.9.0",
+        "generatorCommitHash": "74063517920e5c8fbc2d54d6d1342d50e0bf1935",
         "generatorName": "EAGLE",
         "schemaVersion": "OJS",
         "readonly": true,
@@ -24,12 +24,43 @@
     "activeGraphConfigId": "d376cf67-c4d9-404f-9b5b-4c3e40d6e9cd",
     "graphConfigurations": {
         "d376cf67-c4d9-404f-9b5b-4c3e40d6e9cd": {
-            "name": "newConfig",
-            "description": "",
-            "nodes": {},
-            "lastModifiedName": "",
-            "lastModifiedEmail": "",
-            "lastModifiedDatetime": 0
+            "modelData": {
+                "name": "newConfig",
+                "shortDescription": "",
+                "detailedDescription": "",
+                "type": "GraphConfig",
+                "schemaVersion": "Unknown",
+                "readonly": true,
+                "location": {
+                    "repositoryService": "Unknown",
+                    "repositoryBranch": "",
+                    "repositoryName": "",
+                    "repositoryPath": "",
+                    "repositoryFileName": "",
+                    "commitHash": "",
+                    "downloadUrl": ""
+                },
+                "generatorVersion": "",
+                "generatorCommitHash": "",
+                "generatorName": "",
+                "repositoryUrl": "",
+                "graphLocation": {
+                    "repositoryService": "Unknown",
+                    "repositoryBranch": "",
+                    "repositoryName": "",
+                    "repositoryPath": "",
+                    "repositoryFileName": "",
+                    "commitHash": "",
+                    "downloadUrl": ""
+                },
+                "signature": "",
+                "lastModifiedName": "",
+                "lastModifiedEmail": "",
+                "lastModifiedDatetime": 0,
+                "numLGNodes": 0
+            },
+            "id": "d376cf67-c4d9-404f-9b5b-4c3e40d6e9cd",
+            "nodes": {}
         }
     },
     "nodeDataArray": [
@@ -42,9 +73,9 @@
             "id": "d86645fa-14b8-4579-8850-81814911906f",
             "name": "Constellation",
             "description": "A standard file on a filesystem mounted to the deployment machine",
+            "comment": "",
             "x": 845.303940140973,
             "y": 286.9977375940501,
-            "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "e77aaa2",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master.palette",
@@ -177,10 +208,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "PythonMemberFunction",
@@ -191,9 +224,9 @@
             "id": "22a2321a-b3fa-4c38-90bb-6d68b6589b37",
             "name": "SkyCoord.get_constellation",
             "description": "Determines the constellation(s) of the coordinates this SkyCoord contains.",
+            "comment": "",
             "x": 715.8996236555348,
             "y": 273.2938550042941,
-            "subject": null,
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
@@ -400,10 +433,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "PythonMemberFunction",
@@ -414,9 +449,9 @@
             "id": "73d80d24-c51e-4a22-8df0-4ac78355a639",
             "name": "SkyCoord1.__init__",
             "description": "\nHigh-level object providing a flexible interface for celestial coordinate\n    representation, manipulation, and transformation between systems.\n    \n    The |SkyCoord| class accepts a wide variety of inputs for initialization. At\n    a minimum these must provide one or more celestial coordinate values with\n    unambiguous units.  Inputs may be scalars or lists/tuples/arrays, yielding\n    scalar or array coordinates (can be checked via ``SkyCoord.isscalar``).\n    Typically one also specifies the coordinate frame, though this is not\n    required. The general pattern for spherical representations is::\n    \n      SkyCoord(COORD, [FRAME], keyword_args ...)\n      SkyCoord(LON, LAT, [FRAME], keyword_args ...)\n      SkyCoord(LON, LAT, [DISTANCE], frame=FRAME, unit=UNIT, keyword_args ...)\n      SkyCoord([FRAME], <lon_attr>=LON, <lat_attr>=LAT, keyword_args ...)\n    \n    It is also possible to input coordinate values in other representations\n    such as cartesian or cylindrical.  In this case one includes the keyword\n    argument ``representation_type='cartesian'`` (for example) along with data\n    in ``x``, ``y``, and ``z``.\n    \n    See also: https://docs.astropy.org/en/stable/coordinates/\n    \n    Examples\n    --------\n    The examples below illustrate common ways of initializing a |SkyCoord|\n    object.  For a complete description of the allowed syntax see the\n    full coordinates documentation.  First some imports::\n    \n      >>> from astropy.coordinates import SkyCoord  # High-level coordinates\n      >>> from astropy.coordinates import ICRS, Galactic, FK4, FK5  # Low-level frames\n      >>> from astropy.coordinates import Angle, Latitude, Longitude  # Angles\n      >>> import astropy.units as u\n    \n    The coordinate values and frame specification can now be provided using\n    positional and keyword arguments::\n    \n      >>> c = SkyCoord(10, 20, unit=\"deg\")  # defaults to ICRS frame\n      >>> c = SkyCoord([1, 2, 3], [-30, 45, 8], frame=\"icrs\", unit=\"deg\")  # 3 coords\n    \n      >>> coords = [\"1:12:43.2 +31:12:43\", \"1 12 43.2 +31 12 43\"]\n      >>> c = SkyCoord(coords, frame=FK4, unit=(u.hourangle, u.deg), obstime=\"J1992.21\")\n    \n      >>> c = SkyCoord(\"1h12m43.2s +1d12m43s\", frame=Galactic)  # Units from string\n      >>> c = SkyCoord(frame=\"galactic\", l=\"1h12m43.2s\", b=\"+1d12m43s\")\n    \n      >>> ra = Longitude([1, 2, 3], unit=u.deg)  # Could also use Angle\n      >>> dec = np.array([4.5, 5.2, 6.3]) * u.deg  # Astropy Quantity\n      >>> c = SkyCoord(ra, dec, frame='icrs')\n      >>> c = SkyCoord(frame=ICRS, ra=ra, dec=dec, obstime='2001-01-02T12:34:56')\n    \n      >>> c = FK4(1 * u.deg, 2 * u.deg)  # Uses defaults for obstime, equinox\n      >>> c = SkyCoord(c, obstime='J2010.11', equinox='B1965')  # Override defaults\n    \n      >>> c = SkyCoord(w=0, u=1, v=2, unit='kpc', frame='galactic',\n      ...              representation_type='cartesian')\n    \n      >>> c = SkyCoord([ICRS(ra=1*u.deg, dec=2*u.deg), ICRS(ra=3*u.deg, dec=4*u.deg)])\n    \n    Velocity components (proper motions or radial velocities) can also be\n    provided in a similar manner::\n    \n      >>> c = SkyCoord(ra=1*u.deg, dec=2*u.deg, radial_velocity=10*u.km/u.s)\n    \n      >>> c = SkyCoord(ra=1*u.deg, dec=2*u.deg, pm_ra_cosdec=2*u.mas/u.yr, pm_dec=1*u.mas/u.yr)\n    \n    As shown, the frame can be a `~astropy.coordinates.BaseCoordinateFrame`\n    class or the corresponding string alias -- lower-case versions of the\n    class name that allow for creating a |SkyCoord| object and transforming\n    frames without explicitly importing the frame classes.",
+            "comment": "",
             "x": 462.29986742507646,
             "y": 82.30040829906251,
-            "subject": null,
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
@@ -621,10 +656,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "PythonObject",
@@ -635,9 +672,9 @@
             "id": "c3b1bf9f-476a-4ada-86f4-21fcefbc1886",
             "name": "SkyCoord1",
             "description": "Instance of astropy.coordinates.sky_coordinate.SkyCoord",
+            "comment": "",
             "x": 587.7044334570879,
             "y": 95.6260065427918,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -725,10 +762,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "PythonMemberFunction",
@@ -739,9 +778,9 @@
             "id": "d47e4858-8aed-4dc1-8fac-935b638590cf",
             "name": "SkyCoord2.__init__",
             "description": "\nHigh-level object providing a flexible interface for celestial coordinate\n    representation, manipulation, and transformation between systems.\n    \n    The |SkyCoord| class accepts a wide variety of inputs for initialization. At\n    a minimum these must provide one or more celestial coordinate values with\n    unambiguous units.  Inputs may be scalars or lists/tuples/arrays, yielding\n    scalar or array coordinates (can be checked via ``SkyCoord.isscalar``).\n    Typically one also specifies the coordinate frame, though this is not\n    required. The general pattern for spherical representations is::\n    \n      SkyCoord(COORD, [FRAME], keyword_args ...)\n      SkyCoord(LON, LAT, [FRAME], keyword_args ...)\n      SkyCoord(LON, LAT, [DISTANCE], frame=FRAME, unit=UNIT, keyword_args ...)\n      SkyCoord([FRAME], <lon_attr>=LON, <lat_attr>=LAT, keyword_args ...)\n    \n    It is also possible to input coordinate values in other representations\n    such as cartesian or cylindrical.  In this case one includes the keyword\n    argument ``representation_type='cartesian'`` (for example) along with data\n    in ``x``, ``y``, and ``z``.\n    \n    See also: https://docs.astropy.org/en/stable/coordinates/\n    \n    Examples\n    --------\n    The examples below illustrate common ways of initializing a |SkyCoord|\n    object.  For a complete description of the allowed syntax see the\n    full coordinates documentation.  First some imports::\n    \n      >>> from astropy.coordinates import SkyCoord  # High-level coordinates\n      >>> from astropy.coordinates import ICRS, Galactic, FK4, FK5  # Low-level frames\n      >>> from astropy.coordinates import Angle, Latitude, Longitude  # Angles\n      >>> import astropy.units as u\n    \n    The coordinate values and frame specification can now be provided using\n    positional and keyword arguments::\n    \n      >>> c = SkyCoord(10, 20, unit=\"deg\")  # defaults to ICRS frame\n      >>> c = SkyCoord([1, 2, 3], [-30, 45, 8], frame=\"icrs\", unit=\"deg\")  # 3 coords\n    \n      >>> coords = [\"1:12:43.2 +31:12:43\", \"1 12 43.2 +31 12 43\"]\n      >>> c = SkyCoord(coords, frame=FK4, unit=(u.hourangle, u.deg), obstime=\"J1992.21\")\n    \n      >>> c = SkyCoord(\"1h12m43.2s +1d12m43s\", frame=Galactic)  # Units from string\n      >>> c = SkyCoord(frame=\"galactic\", l=\"1h12m43.2s\", b=\"+1d12m43s\")\n    \n      >>> ra = Longitude([1, 2, 3], unit=u.deg)  # Could also use Angle\n      >>> dec = np.array([4.5, 5.2, 6.3]) * u.deg  # Astropy Quantity\n      >>> c = SkyCoord(ra, dec, frame='icrs')\n      >>> c = SkyCoord(frame=ICRS, ra=ra, dec=dec, obstime='2001-01-02T12:34:56')\n    \n      >>> c = FK4(1 * u.deg, 2 * u.deg)  # Uses defaults for obstime, equinox\n      >>> c = SkyCoord(c, obstime='J2010.11', equinox='B1965')  # Override defaults\n    \n      >>> c = SkyCoord(w=0, u=1, v=2, unit='kpc', frame='galactic',\n      ...              representation_type='cartesian')\n    \n      >>> c = SkyCoord([ICRS(ra=1*u.deg, dec=2*u.deg), ICRS(ra=3*u.deg, dec=4*u.deg)])\n    \n    Velocity components (proper motions or radial velocities) can also be\n    provided in a similar manner::\n    \n      >>> c = SkyCoord(ra=1*u.deg, dec=2*u.deg, radial_velocity=10*u.km/u.s)\n    \n      >>> c = SkyCoord(ra=1*u.deg, dec=2*u.deg, pm_ra_cosdec=2*u.mas/u.yr, pm_dec=1*u.mas/u.yr)\n    \n    As shown, the frame can be a `~astropy.coordinates.BaseCoordinateFrame`\n    class or the corresponding string alias -- lower-case versions of the\n    class name that allow for creating a |SkyCoord| object and transforming\n    frames without explicitly importing the frame classes.",
+            "comment": "",
             "x": 468.8503912904828,
             "y": 199.4355137155727,
-            "subject": null,
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
@@ -946,10 +985,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "PythonObject",
@@ -960,9 +1001,9 @@
             "id": "91334df0-10c9-405c-96a3-9dff4de36746",
             "name": "SkyCoord1",
             "description": "Instance of astropy.coordinates.sky_coordinate.SkyCoord",
+            "comment": "",
             "x": 593.507764203905,
             "y": 212.76111195930207,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -1050,10 +1091,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "File",
@@ -1064,9 +1107,9 @@
             "id": "f1f681a9-8e04-4b58-8fb2-5ab317f239a2",
             "name": "separation",
             "description": "A standard file on a filesystem mounted to the deployment machine",
+            "comment": "",
             "x": 846.4274524910679,
             "y": 140.8863105157472,
-            "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "d075337",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/master/daliuge/daliuge-master.palette",
@@ -1214,10 +1257,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "PythonMemberFunction",
@@ -1228,9 +1273,9 @@
             "id": "831225b2-3e95-406e-8eb1-061369779253",
             "name": "SkyCoord.separation",
             "description": "Computes on-sky separation between this coordinate and another.\n    \n    For more on how to use this (and related) functionality, see the\n    examples in :ref:`astropy-coordinates-separations-matching`.",
+            "comment": "",
             "x": 696.4353271506874,
             "y": 131.14707153872297,
-            "subject": null,
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
@@ -1421,14 +1466,17 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         }
     ],
     "linkDataArray": [
         {
+            "comment": "",
             "from": "22a2321a-b3fa-4c38-90bb-6d68b6589b37",
             "fromPort": "47e17985-a134-4a0a-98a5-2f2ce8d41d5e",
             "to": "d86645fa-14b8-4579-8850-81814911906f",
@@ -1437,6 +1485,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "73d80d24-c51e-4a22-8df0-4ac78355a639",
             "fromPort": "a6dd25b1-d88a-4940-9a1b-151375495bbe",
             "to": "c3b1bf9f-476a-4ada-86f4-21fcefbc1886",
@@ -1445,6 +1494,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "d47e4858-8aed-4dc1-8fac-935b638590cf",
             "fromPort": "c7128a24-c758-42c0-a599-fafbb8082787",
             "to": "91334df0-10c9-405c-96a3-9dff4de36746",
@@ -1453,6 +1503,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "91334df0-10c9-405c-96a3-9dff4de36746",
             "fromPort": "eda851ac-91be-4d12-9a4e-58506252b619",
             "to": "22a2321a-b3fa-4c38-90bb-6d68b6589b37",
@@ -1461,6 +1512,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "c3b1bf9f-476a-4ada-86f4-21fcefbc1886",
             "fromPort": "b6b51fa0-5efb-45dc-a5fc-41bbd14545cd",
             "to": "831225b2-3e95-406e-8eb1-061369779253",
@@ -1469,6 +1521,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "91334df0-10c9-405c-96a3-9dff4de36746",
             "fromPort": "eda851ac-91be-4d12-9a4e-58506252b619",
             "to": "831225b2-3e95-406e-8eb1-061369779253",
@@ -1477,6 +1530,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "831225b2-3e95-406e-8eb1-061369779253",
             "fromPort": "00edde17-1c28-49d8-959e-98ccba2bd6b4",
             "to": "f1f681a9-8e04-4b58-8fb2-5ab317f239a2",
