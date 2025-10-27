@@ -7,8 +7,8 @@
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "generatorVersion": "v6.7.0",
-        "generatorCommitHash": "23f5d29e36e84cd6379c99607bc89f05e4d5d47c",
+        "generatorVersion": "v6.9.0",
+        "generatorCommitHash": "43c986cc3fa198044b9e82107e31bbb327c6eca3",
         "generatorName": "EAGLE",
         "schemaVersion": "OJS",
         "readonly": false,
@@ -25,7 +25,7 @@
     "graphConfigurations": {},
     "nodeDataArray": [
         {
-            "category": "PythonApp",
+            "category": "PyFuncApp",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
@@ -33,9 +33,9 @@
             "id": "bd2ff1aa-4142-4ae7-806f-bbd69e2b142c",
             "name": "EarthLocation.of_address",
             "description": "Return an object of this class for a given address by querying either\n    the OpenStreetMap Nominatim tool [1]_ (default) or the Google geocoding\n    API [2]_, which requires a specified API key.\n    \n    This is intended as a quick convenience function to get easy access to\n    locations. If you need to specify a precise location, you should use the\n    initializer directly and pass in a longitude, latitude, and elevation.\n    \n    In the background, this just issues a web query to either of\n    the APIs noted above. This is not meant to be abused! Both\n    OpenStreetMap and Google use IP-based query limiting and will ban your\n    IP if you send more than a few thousand queries per hour [2]_.\n    \n    .. warning::\n        If the query returns more than one location (e.g., searching on\n        ``address='springfield'``), this function will use the **first**\n        returned location.",
+            "comment": "",
             "x": 561.8780257485739,
             "y": 109.32408045935979,
-            "subject": null,
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
@@ -183,10 +183,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "Memory",
@@ -197,9 +199,9 @@
             "id": "4efdd14a-09b0-4a2b-b0d7-841f1dd3e963",
             "name": "geocentric",
             "description": "In-memory storage of intermediate data products",
+            "comment": "",
             "x": 657.7262311843449,
             "y": 94.55751117015969,
-            "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "ff6f09b",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/master/daliuge/daliuge-master.palette",
@@ -332,10 +334,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "PythonMemberFunction",
@@ -346,9 +350,9 @@
             "id": "23b1347e-9a45-4010-be12-8d8f8d3d7f69",
             "name": "EarthLocation.to_geodetic",
             "description": "Convert to geodetic coordinates.",
+            "comment": "",
             "x": 764.5148790213397,
             "y": 98.02725240234145,
-            "subject": null,
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
@@ -481,10 +485,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "File",
@@ -495,9 +501,9 @@
             "id": "92451949-782c-4136-bcac-6d26e6538e33",
             "name": "geodetic location",
             "description": "A standard file on a filesystem mounted to the deployment machine",
+            "comment": "",
             "x": 848.5955552310504,
             "y": 84.90813720478988,
-            "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "ff6f09b",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/master/daliuge/daliuge-master.palette",
@@ -645,14 +651,17 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         }
     ],
     "linkDataArray": [
         {
+            "comment": "",
             "from": "bd2ff1aa-4142-4ae7-806f-bbd69e2b142c",
             "fromPort": "1d692017-76c5-4966-97dc-7682fdfb9856",
             "to": "4efdd14a-09b0-4a2b-b0d7-841f1dd3e963",
@@ -661,6 +670,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "4efdd14a-09b0-4a2b-b0d7-841f1dd3e963",
             "fromPort": "c7a4bfc4-516e-4f5c-ae53-d164502a5d2b",
             "to": "23b1347e-9a45-4010-be12-8d8f8d3d7f69",
@@ -669,6 +679,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "23b1347e-9a45-4010-be12-8d8f8d3d7f69",
             "fromPort": "35eb30d4-c6bd-4e7c-a80a-f9744a62aa29",
             "to": "92451949-782c-4136-bcac-6d26e6538e33",
