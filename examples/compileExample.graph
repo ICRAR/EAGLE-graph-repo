@@ -8,7 +8,7 @@
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
         "generatorVersion": "v6.9.0",
-        "generatorCommitHash": "43c986cc3fa198044b9e82107e31bbb327c6eca3",
+        "generatorCommitHash": "74063517920e5c8fbc2d54d6d1342d50e0bf1935",
         "generatorName": "EAGLE",
         "schemaVersion": "OJS",
         "readonly": true,
@@ -31,21 +31,21 @@
             "color": "#2c2c2c",
             "drawOrderHint": 0,
             "id": "7c7c3129-b86f-48be-8dea-d713323f988a",
-            "name": "File",
+            "name": "filename",
             "description": "A standard file on a filesystem mounted to the deployment machine",
             "comment": "",
-            "x": 657.9227335895059,
-            "y": 804.3520251122095,
+            "x": 805.6004587079889,
+            "y": 745.2809350648167,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "6ec50ef",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master.palette",
             "dataHash": "a2e75b8b5302b158a6c625551a8137de0f454c4f49d2d5a95501d677bfe021a8",
             "fields": [
                 {
-                    "name": "filepath",
+                    "name": "filename",
                     "value": "",
                     "defaultValue": "",
-                    "description": "File path for this file. In many cases this does not need to be specified. If it has a / at the end it will be treated as a directory name and the filename will be generated. If it does not have a /, the last part will be treated as a filename. If filepath does not start with / (relative path) then the session directory will be prepended to make the path absolute.",
+                    "description": "",
                     "readonly": false,
                     "type": "String",
                     "precious": false,
@@ -54,7 +54,7 @@
                     "encoding": "pickle",
                     "id": "f5fcd28f-f879-425e-8817-d42a1daf6c5a",
                     "parameterType": "ApplicationArgument",
-                    "usage": "NoPort"
+                    "usage": "OutputPort"
                 },
                 {
                     "name": "check_filepath_exists",
@@ -145,21 +145,6 @@
                     "id": "7802dab3-7c7f-4f61-beaa-0848aef5b899",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
-                },
-                {
-                    "name": "dummy",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Dummy input port",
-                    "readonly": false,
-                    "type": "Object",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "encoding": "pickle",
-                    "id": "c3fd39bd-b85e-4a5a-8b12-014bf9be2542",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "InputOutput"
                 },
                 {
                     "name": "dropclass",
@@ -333,13 +318,13 @@
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Object",
+                    "type": "String",
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "encoding": "pickle",
+                    "encoding": "path",
                     "id": "594340db-0508-4058-9e8b-cd279aed5c75",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
                 },
                 {
@@ -427,7 +412,7 @@
         {
             "comment": "",
             "from": "7c7c3129-b86f-48be-8dea-d713323f988a",
-            "fromPort": "c3fd39bd-b85e-4a5a-8b12-014bf9be2542",
+            "fromPort": "f5fcd28f-f879-425e-8817-d42a1daf6c5a",
             "to": "b34f37a1-daf4-46b6-8210-cbc46e5c0f84",
             "toPort": "594340db-0508-4058-9e8b-cd279aed5c75",
             "loop_aware": "0",
