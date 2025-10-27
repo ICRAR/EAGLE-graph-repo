@@ -7,8 +7,8 @@
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "generatorVersion": "v6.5.0",
-        "generatorCommitHash": "990db9fc139d51652306d17fa99877726bdd876a",
+        "generatorVersion": "v6.9.0",
+        "generatorCommitHash": "43c986cc3fa198044b9e82107e31bbb327c6eca3",
         "generatorName": "EAGLE",
         "schemaVersion": "OJS",
         "readonly": true,
@@ -19,7 +19,7 @@
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": 0,
-        "numLGNodes": 9
+        "numLGNodes": 11
     },
     "activeGraphConfigId": null,
     "graphConfigurations": {},
@@ -33,9 +33,9 @@
             "id": "d2af5b46-3e09-46c2-8a73-5f533867f363",
             "name": "ParameterSet",
             "description": "A set of parameters, which can be set and modified in EAGLE and thus is part of the graph. Multiple serialisation formats are available.",
+            "comment": "",
             "x": 238.04984695977714,
             "y": 76.85583028530813,
-            "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "585ff99",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master.palette",
@@ -205,13 +205,15 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
-            "category": "PythonApp",
+            "category": "PyFuncApp",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
@@ -219,9 +221,9 @@
             "id": "1d58f732-d5a9-47c3-978e-64d43aa91089",
             "name": "value_from_dict",
             "description": "An application that wraps a simple python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output.",
+            "comment": "",
             "x": 625.8784928077393,
             "y": 109.12107190518445,
-            "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "585ff99",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master-template.palette",
@@ -230,7 +232,7 @@
             "fields": [
                 {
                     "name": "func_name",
-                    "value": "myFunctions.value_from_dict",
+                    "value": "value_from_dict",
                     "defaultValue": "",
                     "description": "Python function name",
                     "readonly": false,
@@ -240,7 +242,7 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "43892f7b-4bfd-4861-b7a4-5e6726aefd80",
-                    "parameterType": "ApplicationArgument",
+                    "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
                 {
@@ -302,21 +304,6 @@
                     "id": "100cd844-be33-4566-aba6-9c323b6be6bc",
                     "parameterType": "ComponentParameter",
                     "usage": "OutputPort"
-                },
-                {
-                    "name": "func_code",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Python function code, e.g. 'def function_name(args): return args'",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "encoding": "pickle",
-                    "id": "f1282003-3036-4302-a8b6-72aff4f727fc",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
                 },
                 {
                     "name": "dropclass",
@@ -415,23 +402,25 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "Gather",
             "categoryType": "Construct",
             "isGroup": true,
-            "color": "rgb(227 189 100)",
+            "color": "#e3bd64",
             "drawOrderHint": 0,
             "id": "d8daa148-6cc0-4012-9164-b738f89b99d6",
             "name": "Gather/GenericGatherApp",
             "description": "A default Gather construct for the GenericGatherApp component.",
+            "comment": "",
             "x": 870.6639645418489,
             "y": 138.76091396881264,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master.palette",
@@ -532,13 +521,15 @@
             ],
             "outputAppFields": [],
             "inputApplicationName": "GenericGatherApp",
-            "inputApplicationType": "PythonApp",
-            "inputApplicationId": "c15216e0-1577-4e8f-b74b-afd2bdad6fdd",
+            "inputApplicationType": "DALiuGEApp",
+            "inputApplicationId": "49a48b52-ad2f-4e40-928c-45575b6c0e75",
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "File",
@@ -549,9 +540,9 @@
             "id": "7612f195-2a29-450e-90ae-fb11d8508acc",
             "name": "File",
             "description": "A standard file on a filesystem mounted to the deployment machine",
+            "comment": "",
             "x": 870.6639645418489,
             "y": 139.0906806174666,
-            "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "585ff99",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master.palette",
@@ -685,23 +676,25 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "Scatter",
             "categoryType": "Construct",
             "isGroup": true,
-            "color": "rgb(227 189 100)",
+            "color": "#e3bd64",
             "drawOrderHint": 0,
             "id": "b787e4d1-71f5-469b-947d-715d2103627c",
             "name": "Scatter/GenericScatterApp",
             "description": "A default Scatter construct for the GenericScatterApp component.",
+            "comment": "",
             "x": 622.3555397060289,
             "y": 173.3263320541606,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master.palette",
@@ -817,16 +810,18 @@
             ],
             "outputAppFields": [],
             "inputApplicationName": "GenericScatterApp",
-            "inputApplicationType": "PythonApp",
-            "inputApplicationId": "1801ee98-a325-441f-9463-02b79eba771e",
+            "inputApplicationType": "DALiuGEApp",
+            "inputApplicationId": "b24c679e-e5bc-4c5f-9afa-d03cf3a5be61",
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
-            "category": "PythonApp",
+            "category": "PyFuncApp",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
@@ -834,9 +829,9 @@
             "id": "a1b26e1a-6791-44e3-8a9f-c4ba0f923bed",
             "name": "keys_from_dict",
             "description": "An application that wraps a simple python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output.",
+            "comment": "",
             "x": 279.26854822001997,
             "y": 159.88599420887434,
-            "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "585ff99",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master-template.palette",
@@ -854,7 +849,7 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "647a553e-d091-4a11-a21f-be45cd2ab217",
-                    "parameterType": "ApplicationArgument",
+                    "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
                 {
@@ -999,10 +994,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "Memory",
@@ -1013,9 +1010,9 @@
             "id": "59e374cd-24fb-4384-8ba7-abe2fe855b8b",
             "name": "key_list",
             "description": "In-memory storage of intermediate data products",
+            "comment": "",
             "x": 379.6629928380599,
             "y": 164.72539440545344,
-            "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "585ff99",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master.palette",
@@ -1133,10 +1130,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "Memory",
@@ -1147,9 +1146,9 @@
             "id": "e56fd6db-ba52-4265-9797-6c228555da3a",
             "name": "value",
             "description": "In-memory storage of intermediate data products",
+            "comment": "",
             "x": 696.2477136797595,
             "y": 140.1755304719483,
-            "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "585ff99",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master.palette",
@@ -1268,10 +1267,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "Memory",
@@ -1282,9 +1283,9 @@
             "id": "de1a211c-7e73-47ba-a714-758ebe816cbd",
             "name": "split_array",
             "description": "In-memory storage of intermediate data products",
+            "comment": "",
             "x": 560.6647317324944,
             "y": 168.2471185656805,
-            "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "585ff99",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master.palette",
@@ -1403,14 +1404,17 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         }
     ],
     "linkDataArray": [
         {
+            "comment": "",
             "from": "d8daa148-6cc0-4012-9164-b738f89b99d6",
             "fromPort": "eb2079f1-eb1c-4339-bba2-de0f6d6827fe",
             "to": "7612f195-2a29-450e-90ae-fb11d8508acc",
@@ -1419,14 +1423,16 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "d2af5b46-3e09-46c2-8a73-5f533867f363",
             "fromPort": "a773cc3f-8aab-427c-9583-9041c03fc76f",
             "to": "1d58f732-d5a9-47c3-978e-64d43aa91089",
             "toPort": "75d7a00a-ed1d-4b40-9b16-9fe5b29a518c",
-            "loop_aware": "1",
+            "loop_aware": "0",
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "d2af5b46-3e09-46c2-8a73-5f533867f363",
             "fromPort": "a773cc3f-8aab-427c-9583-9041c03fc76f",
             "to": "a1b26e1a-6791-44e3-8a9f-c4ba0f923bed",
@@ -1435,6 +1441,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "a1b26e1a-6791-44e3-8a9f-c4ba0f923bed",
             "fromPort": "ad2384cd-6aee-489e-9947-0167c1a88815",
             "to": "59e374cd-24fb-4384-8ba7-abe2fe855b8b",
@@ -1443,6 +1450,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "59e374cd-24fb-4384-8ba7-abe2fe855b8b",
             "fromPort": "c11002aa-492f-4465-9a77-ebdf854ab48c",
             "to": "b787e4d1-71f5-469b-947d-715d2103627c",
@@ -1451,22 +1459,25 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "1d58f732-d5a9-47c3-978e-64d43aa91089",
             "fromPort": "100cd844-be33-4566-aba6-9c323b6be6bc",
             "to": "e56fd6db-ba52-4265-9797-6c228555da3a",
             "toPort": "4932b394-7e11-4b11-8a48-e0f172783945",
-            "loop_aware": "1",
+            "loop_aware": "0",
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "e56fd6db-ba52-4265-9797-6c228555da3a",
             "fromPort": "4932b394-7e11-4b11-8a48-e0f172783945",
             "to": "d8daa148-6cc0-4012-9164-b738f89b99d6",
             "toPort": "eb2079f1-eb1c-4339-bba2-de0f6d6827fe",
-            "loop_aware": "1",
+            "loop_aware": "0",
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "b787e4d1-71f5-469b-947d-715d2103627c",
             "fromPort": "1db9019d-c424-4aa6-9250-0dd75c9a5f04",
             "to": "de1a211c-7e73-47ba-a714-758ebe816cbd",
@@ -1475,6 +1486,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "de1a211c-7e73-47ba-a714-758ebe816cbd",
             "fromPort": "2a303dd4-496e-40fb-91fc-fa806b7c6909",
             "to": "1d58f732-d5a9-47c3-978e-64d43aa91089",
