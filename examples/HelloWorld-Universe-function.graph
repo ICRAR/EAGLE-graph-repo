@@ -7,8 +7,8 @@
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "generatorVersion": "v6.5.0:eagle-1287",
-        "generatorCommitHash": "e2a10b729104a0bb43cac76db3f477dec615f61f",
+        "generatorVersion": "v6.9.0",
+        "generatorCommitHash": "43c986cc3fa198044b9e82107e31bbb327c6eca3",
         "generatorName": "EAGLE",
         "schemaVersion": "OJS",
         "readonly": true,
@@ -19,13 +19,47 @@
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": 0,
-        "numLGNodes": 8
+        "numLGNodes": 10
     },
     "activeGraphConfigId": "d1ecfb90-ef1f-47ca-b4c3-4bf494bc4e72",
     "graphConfigurations": {
         "d1ecfb90-ef1f-47ca-b4c3-4bf494bc4e72": {
-            "name": "Default Configuration",
-            "description": "Default configuration",
+            "modelData": {
+                "name": "Default Configuration",
+                "shortDescription": "Default configuration",
+                "detailedDescription": "",
+                "type": "GraphConfig",
+                "schemaVersion": "Unknown",
+                "readonly": true,
+                "location": {
+                    "repositoryService": "Unknown",
+                    "repositoryBranch": "",
+                    "repositoryName": "",
+                    "repositoryPath": "",
+                    "repositoryFileName": "",
+                    "commitHash": "",
+                    "downloadUrl": ""
+                },
+                "generatorVersion": "",
+                "generatorCommitHash": "",
+                "generatorName": "",
+                "repositoryUrl": "",
+                "graphLocation": {
+                    "repositoryService": "GitHub",
+                    "repositoryBranch": "master",
+                    "repositoryName": "ICRAR/EAGLE-graph-repo",
+                    "repositoryPath": "examples",
+                    "repositoryFileName": "HelloWorld-Universe-function.graph",
+                    "commitHash": "eeea1c8c97e175641ad4713983268ba27e51099e",
+                    "downloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/eeea1c8c97e175641ad4713983268ba27e51099e/examples/HelloWorld-Universe-function.graph"
+                },
+                "signature": "",
+                "lastModifiedName": "",
+                "lastModifiedEmail": "",
+                "lastModifiedDatetime": 0,
+                "numLGNodes": 0
+            },
+            "id": "d1ecfb90-ef1f-47ca-b4c3-4bf494bc4e72",
             "nodes": {
                 "17391a5a-0987-4330-94fc-4644fbf8b5c3": {
                     "fields": {
@@ -38,7 +72,7 @@
                 "8b5bf614-939b-41cc-a8dc-11112243beb4": {
                     "fields": {
                         "3f99a117-2048-4857-9f9c-f21eadbba9ca": {
-                            "value": "6",
+                            "value": 6,
                             "comment": ""
                         }
                     }
@@ -46,15 +80,12 @@
                 "e793f056-8167-470f-a01d-d89bf478d02b": {
                     "fields": {
                         "09f480d0-a6cb-42a1-aea7-bb0602a6d2cd": {
-                            "value": "6",
+                            "value": 6,
                             "comment": ""
                         }
                     }
                 }
-            },
-            "lastModifiedName": "",
-            "lastModifiedEmail": "",
-            "lastModifiedDatetime": 0
+            }
         }
     },
     "nodeDataArray": [
@@ -67,9 +98,9 @@
             "id": "b228b39e-599c-4a2d-8d61-a551101d8d74",
             "name": "Element",
             "description": "In-memory storage of intermediate data products",
-            "x": 437.34717018954325,
-            "y": 156.093074858665,
-            "subject": null,
+            "comment": "",
+            "x": 453.5425705142303,
+            "y": 160.98225231517452,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -188,10 +219,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "Memory",
@@ -202,9 +235,9 @@
             "id": "40aa4384-4c5f-4ec1-8fe1-a02aaad5d69b",
             "name": "array",
             "description": "In-memory storage of intermediate data products",
+            "comment": "",
             "x": 257.1883465164301,
             "y": 165.26868136404917,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -322,23 +355,25 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "Gather",
             "categoryType": "Construct",
             "isGroup": true,
-            "color": "rgb(227 189 100)",
+            "color": "#e3bd64",
             "drawOrderHint": 0,
             "id": "e793f056-8167-470f-a01d-d89bf478d02b",
             "name": "Gather",
             "description": "A construct that gathers together multiple inputs and processes them using a specified number of instances",
+            "comment": "",
             "x": 753.4358538524228,
             "y": 159.07088344260325,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -469,13 +504,15 @@
             ],
             "outputAppFields": [],
             "inputApplicationName": "GenericGather",
-            "inputApplicationType": "PythonApp",
-            "inputApplicationId": "841ca199-72f3-41d0-8745-d41c772481a0",
+            "inputApplicationType": "DALiuGEApp",
+            "inputApplicationId": "09f0a10b-42ba-4bc3-94d1-3b17246aa951",
             "inputApplicationDescription": "App that reads all its inputs and simply writes them in concatenated to all its outputs. This can be used stand-alone or as part of a Gather. It does not do anything to the data, just passing it on.",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "File",
@@ -486,9 +523,9 @@
             "id": "f1faf1b1-51ff-449a-a1a3-b5168f3c127d",
             "name": "File",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "x": 764.5157547730882,
+            "comment": "",
+            "x": 767.8770642744383,
             "y": 159.37034022424288,
-            "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "6457f4f",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/58305a5c957267f13d80f58f5d1c93d187b31864/daliuge/daliuge-liu-338.palette",
@@ -637,23 +674,25 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "Scatter",
             "categoryType": "Construct",
             "isGroup": true,
-            "color": "rgb(227 189 100)",
+            "color": "#e3bd64",
             "drawOrderHint": 0,
             "id": "8b5bf614-939b-41cc-a8dc-11112243beb4",
             "name": "Scatter",
             "description": "A default Scatter construct for the GenericScatterApp component.",
+            "comment": "",
             "x": 513.1344203460611,
             "y": 163.31134982880604,
-            "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "76b2aaa",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master.palette",
@@ -799,13 +838,15 @@
             ],
             "outputAppFields": [],
             "inputApplicationName": "GenericScatterApp",
-            "inputApplicationType": "PythonApp",
-            "inputApplicationId": "5395c724-a2f2-4a52-a9c5-1d908cba65c0",
+            "inputApplicationType": "DALiuGEApp",
+            "inputApplicationId": "677a2943-76d8-4cd0-9164-a3d3bdfa2fb5",
             "inputApplicationDescription": "An APP that splits about any object that can be converted to a numpy array into as many parts as the app has outputs, provided that the initially converted numpy array has enough elements. The return will be a numpy array of arrays, where the first axis is of length len(outputs). The modulo remainder of the length of the original array and the number of outputs will be distributed across the first len(outputs)-1 elements of the resulting array.",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "Memory",
@@ -816,9 +857,9 @@
             "id": "2616c8ac-e822-458d-af21-2822e9433954",
             "name": "Greeting",
             "description": "In-memory storage of intermediate data products",
-            "x": 588.921670502579,
-            "y": 155.31294077749234,
-            "subject": null,
+            "comment": "",
+            "x": 608.783953919648,
+            "y": 157.1463823236834,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "76b2aaa",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master.palette",
@@ -922,13 +963,15 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
-            "category": "PythonApp",
+            "category": "PyFuncApp",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
@@ -936,9 +979,9 @@
             "id": "17391a5a-0987-4330-94fc-4644fbf8b5c3",
             "name": "string2json",
             "description": "An application that wraps a simple python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output.",
+            "comment": "",
             "x": 124.7714843355206,
             "y": 164.90618559973075,
-            "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "fcce6f3",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master-template.palette",
@@ -1138,13 +1181,15 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
-            "category": "PythonApp",
+            "category": "PyFuncApp",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
@@ -1152,9 +1197,9 @@
             "id": "893d4958-dacc-4df3-ab47-b80ae877f8cb",
             "name": "helloWorldFunc",
             "description": "An application that wraps a python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output.",
-            "x": 515.0271164736236,
-            "y": 158.74208881141905,
-            "subject": null,
+            "comment": "",
+            "x": 529.6946488431514,
+            "y": 158.4365152203872,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "c134e12",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/2b8343b318ff0fb6c252cfef7f3202a25bc77220/daliuge/daliuge-liu-456-template.palette",
@@ -1355,14 +1400,17 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         }
     ],
     "linkDataArray": [
         {
+            "comment": "",
             "from": "8b5bf614-939b-41cc-a8dc-11112243beb4",
             "fromPort": "3cf3ba73-8d1c-477d-b050-058db33cbaef",
             "to": "b228b39e-599c-4a2d-8d61-a551101d8d74",
@@ -1371,6 +1419,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "40aa4384-4c5f-4ec1-8fe1-a02aaad5d69b",
             "fromPort": "a4afc3b2-b693-4a84-a52b-ac84a8634e8b",
             "to": "8b5bf614-939b-41cc-a8dc-11112243beb4",
@@ -1379,6 +1428,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "e793f056-8167-470f-a01d-d89bf478d02b",
             "fromPort": "27c5391e-ad4f-4951-9c16-424857c5ce69",
             "to": "f1faf1b1-51ff-449a-a1a3-b5168f3c127d",
@@ -1387,6 +1437,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "2616c8ac-e822-458d-af21-2822e9433954",
             "fromPort": "3c4a9939-dc64-4d37-a492-7b98b08a52d3",
             "to": "e793f056-8167-470f-a01d-d89bf478d02b",
@@ -1395,6 +1446,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "17391a5a-0987-4330-94fc-4644fbf8b5c3",
             "fromPort": "25e6a8ea-5a23-4c24-9db7-5af388699ed1",
             "to": "40aa4384-4c5f-4ec1-8fe1-a02aaad5d69b",
@@ -1403,6 +1455,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "b228b39e-599c-4a2d-8d61-a551101d8d74",
             "fromPort": "45339a5a-f31f-447b-8e9d-3c4ea0831baa",
             "to": "893d4958-dacc-4df3-ab47-b80ae877f8cb",
@@ -1411,6 +1464,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "893d4958-dacc-4df3-ab47-b80ae877f8cb",
             "fromPort": "520f2edf-27a5-44e3-8201-100db76ae1ce",
             "to": "2616c8ac-e822-458d-af21-2822e9433954",
