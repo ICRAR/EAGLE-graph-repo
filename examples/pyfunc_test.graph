@@ -7,8 +7,8 @@
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "generatorVersion": "v6.5.0",
-        "generatorCommitHash": "558775b2b42a4f218c4f766cbf3465a7bf56cd92",
+        "generatorVersion": "v6.9.0",
+        "generatorCommitHash": "74063517920e5c8fbc2d54d6d1342d50e0bf1935",
         "generatorName": "EAGLE",
         "schemaVersion": "OJS",
         "readonly": true,
@@ -25,7 +25,7 @@
     "graphConfigurations": {},
     "nodeDataArray": [
         {
-            "category": "PythonApp",
+            "category": "PyFuncApp",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
@@ -33,9 +33,9 @@
             "id": "e478e74c-c68c-4388-82e4-9142faa27fd1",
             "name": "os.path.abspath",
             "description": "An application that wraps a simple python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output. \nUsers indicate the function to be wrapped via the ``func_name`` parameter. Otherwise, users can also *send* over the python code using the ``func_code`` parameter. The code needs to be base64-encoded and produced with the marshal module of the same Python version used to run DALiuGE.\nBoth inputs and outputs are serialized using the pickle protocol.",
+            "comment": "",
             "x": 1595.6079642641173,
             "y": 360.9572922365883,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -173,7 +173,7 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "a76be491-b5d0-41a0-a315-c9439903f16b",
-                    "parameterType": "ApplicationArgument",
+                    "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
                 {
@@ -258,10 +258,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "BashShellApp",
@@ -272,9 +274,9 @@
             "id": "0a24e4d9-5df8-47ee-a251-2216d8727dcd",
             "name": "generate",
             "description": "Generate the initial ",
+            "comment": "",
             "x": 1371.6933797909408,
             "y": 357.0966898954704,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -512,10 +514,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "File",
@@ -526,9 +530,9 @@
             "id": "c22faba8-9a69-4751-bee1-50bb46dd06c7",
             "name": "content",
             "description": "A standard file on a filesystem mounted to the deployment machine \nIn some cases drops are created **outside** the context of a session, most notably during unit tests. In these cases the base directory is a fixed location under ``/tmp``.\nThe following table summarizes the calculation of the final path used by the ``FileDrop`` class depending on its parameters:\n============ ===================== ===================== ========== . filepath ------------ ------------------------------------------------------ dirname empty relative absolute ============ ===================== ===================== ========== **empty** /``$B``/``$u`` /``$B``/``$f`` /``$f`` **relative** /``$B``/``$d``/``$u`` /``$B``/``$d``/``$f`` **ERROR** **absolute** /``$d``/``$u`` /``$d``/``$f`` **ERROR** ============ ===================== ===================== ==========\nIn the table, ``$f`` is the value of ``filepath``, ``$d`` is the value of ``dirname``, ``$u`` is the drop's UID and ``$B`` is the base directory for this drop's session, namelly ``/the/cwd/$session_id``.",
+            "comment": "",
             "x": 1485,
             "y": 355.5,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -646,10 +650,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "File",
@@ -660,9 +666,9 @@
             "id": "f9d33b0d-5a75-4cec-9c18-e2eab104858c",
             "name": "result",
             "description": "A standard file on a filesystem mounted to the deployment machine \nIn some cases drops are created **outside** the context of a session, most notably during unit tests. In these cases the base directory is a fixed location under ``/tmp``.\nThe following table summarizes the calculation of the final path used by the ``FileDrop`` class depending on its parameters:\n============ ===================== ===================== ========== . filepath ------------ ------------------------------------------------------ dirname empty relative absolute ============ ===================== ===================== ========== **empty** /``$B``/``$u`` /``$B``/``$f`` /``$f`` **relative** /``$B``/``$d``/``$u`` /``$B``/``$d``/``$f`` **ERROR** **absolute** /``$d``/``$u`` /``$d``/``$f`` **ERROR** ============ ===================== ===================== ==========\nIn the table, ``$f`` is the value of ``filepath``, ``$d`` is the value of ``dirname``, ``$u`` is the drop's UID and ``$B`` is the base directory for this drop's session, namelly ``/the/cwd/$session_id``.",
+            "comment": "",
             "x": 1697.5966898954705,
             "y": 357.4033101045296,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -765,13 +771,15 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
-            "category": "PythonApp",
+            "category": "PyFuncApp",
             "categoryType": "Application",
             "isGroup": false,
             "color": "#0059a5",
@@ -779,9 +787,9 @@
             "id": "b96ff0cc-aed1-46e3-8010-4bbb9325509a",
             "name": "stringsplit",
             "description": "An application that wraps a simple python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output. \nUsers indicate the function to be wrapped via the ``func_name`` parameter. Otherwise, users can also *send* over the python code using the ``func_code`` parameter. The code needs to be base64-encoded and produced with the marshal module of the same Python version used to run DALiuGE.\nBoth inputs and outputs are serialized using the pickle protocol.",
+            "comment": "",
             "x": 1809.4442094767758,
             "y": 362.7047121116134,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -919,7 +927,7 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "4af6640b-d1ac-44af-8e44-1870afabda36",
-                    "parameterType": "ApplicationArgument",
+                    "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
                 {
@@ -1004,10 +1012,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "File",
@@ -1018,9 +1028,9 @@
             "id": "1545e75e-1f5b-487f-b5ea-6d088b485f88",
             "name": "content",
             "description": "A standard file on a filesystem mounted to the deployment machine",
+            "comment": "",
             "x": 1957.1328397212546,
             "y": 359.31406794425084,
-            "subject": null,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "24cd5d5",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/master/daliuge/daliuge-master.palette",
@@ -1168,14 +1178,17 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         }
     ],
     "linkDataArray": [
         {
+            "comment": "",
             "from": "0a24e4d9-5df8-47ee-a251-2216d8727dcd",
             "fromPort": "ff0e33d5-2fa2-4acf-a1b6-769f77a1ec08",
             "to": "c22faba8-9a69-4751-bee1-50bb46dd06c7",
@@ -1184,6 +1197,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "c22faba8-9a69-4751-bee1-50bb46dd06c7",
             "fromPort": "40e3b8c1-3b02-4e36-9699-2a791a28524a",
             "to": "e478e74c-c68c-4388-82e4-9142faa27fd1",
@@ -1192,6 +1206,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "e478e74c-c68c-4388-82e4-9142faa27fd1",
             "fromPort": "82a60cdf-5625-437d-ba2b-80a9fb95a0ee",
             "to": "f9d33b0d-5a75-4cec-9c18-e2eab104858c",
@@ -1200,6 +1215,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "f9d33b0d-5a75-4cec-9c18-e2eab104858c",
             "fromPort": "b2f11521-2eb3-4da9-97be-7bdf620d703c",
             "to": "b96ff0cc-aed1-46e3-8010-4bbb9325509a",
@@ -1208,6 +1224,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "b96ff0cc-aed1-46e3-8010-4bbb9325509a",
             "fromPort": "6d8cb748-7de0-41c1-92ea-bb002e0bf763",
             "to": "1545e75e-1f5b-487f-b5ea-6d088b485f88",
