@@ -7,8 +7,8 @@
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "generatorVersion": "v6.4.2",
-        "generatorCommitHash": "b830889f516516afe728a78fb57878561d70781d",
+        "generatorVersion": "v6.9.1",
+        "generatorCommitHash": "b446e3376c7e58f9521bc3e0efecaed830c4440e",
         "generatorName": "EAGLE",
         "schemaVersion": "OJS",
         "readonly": true,
@@ -21,6 +21,7 @@
         "lastModifiedDatetime": 0,
         "numLGNodes": 4
     },
+    "activeGraphConfigId": null,
     "graphConfigurations": {},
     "nodeDataArray": [
         {
@@ -32,12 +33,9 @@
             "id": "6f11ddca-59b3-4032-85c9-9c912bf30fd9",
             "name": "cal_avg32.ms.tar.xj",
             "description": "A standard file on a filesystem mounted to the deployment machine",
+            "comment": "",
             "x": -411.56024061559964,
             "y": -285.8609636186078,
-            "radius": 25,
-            "collapsed": true,
-            "subject": null,
-            "expanded": true,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -155,10 +153,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "File",
@@ -169,12 +169,9 @@
             "id": "6a1dfc06-94ce-41c2-bf29-31796c35ec73",
             "name": "MS",
             "description": "A standard file on a filesystem mounted to the deployment machine",
+            "comment": "",
             "x": -189.77480321694588,
             "y": -277.23433093761605,
-            "radius": 25,
-            "collapsed": true,
-            "subject": null,
-            "expanded": true,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -337,10 +334,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "Docker",
@@ -351,12 +350,9 @@
             "id": "1c16c638-93a1-4444-b35b-718397d6b8c0",
             "name": "wsclean",
             "description": "WSClean imaging software",
+            "comment": "",
             "x": -90.0022835386405,
             "y": -275.8694490074485,
-            "radius": 25,
-            "collapsed": true,
-            "subject": null,
-            "expanded": true,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -574,7 +570,7 @@
                 },
                 {
                     "name": "j",
-                    "value": null,
+                    "value": "",
                     "defaultValue": "0",
                     "description": "Specify number of computing threads to use, i.e., number of cpu cores that will be used. None means use all  cores",
                     "readonly": false,
@@ -994,7 +990,7 @@
                 },
                 {
                     "name": "channels-out",
-                    "value": null,
+                    "value": "",
                     "defaultValue": "0",
                     "description": "Splits the bandwidth and makes count nr. of images",
                     "readonly": false,
@@ -1009,7 +1005,7 @@
                 },
                 {
                     "name": "nwlayers",
-                    "value": null,
+                    "value": "",
                     "defaultValue": "0",
                     "description": "Use the minimum suggested w-layers for an image of the given size. Can e.g. be used to increase accuracy when predicting small part of full image.",
                     "readonly": false,
@@ -1039,7 +1035,7 @@
                 },
                 {
                     "name": "nwlayers-factor",
-                    "value": null,
+                    "value": "",
                     "defaultValue": "0",
                     "description": "Increase the number of w-layers by this factor.",
                     "readonly": false,
@@ -1084,7 +1080,7 @@
                 },
                 {
                     "name": "kernel-size",
-                    "value": null,
+                    "value": "",
                     "defaultValue": "0",
                     "description": "Gridding antialiasing kernel size",
                     "readonly": false,
@@ -1219,7 +1215,7 @@
                 },
                 {
                     "name": "baseline-averaging",
-                    "value": null,
+                    "value": "",
                     "defaultValue": "0",
                     "description": "Enable baseline-dependent averaging. The specified size is in number of wavelengths (i.e., uvw-units). One way to calculate this is with <baseline in nr. of lambdas> * 2pi * <acceptable integration in s> /(24*60*60).",
                     "readonly": false,
@@ -1279,7 +1275,7 @@
                 },
                 {
                     "name": "intervals-out",
-                    "value": null,
+                    "value": "",
                     "defaultValue": "0",
                     "description": "Number of intervals to image inside the selected global interval",
                     "readonly": false,
@@ -1489,7 +1485,7 @@
                 },
                 {
                     "name": "local-rms-window",
-                    "value": null,
+                    "value": "",
                     "defaultValue": "0",
                     "description": "Size of window for creating the RMS background map, in number of PSFs.",
                     "readonly": false,
@@ -1744,7 +1740,7 @@
                 },
                 {
                     "name": "fit-spectral-pol",
-                    "value": null,
+                    "value": "",
                     "defaultValue": "0",
                     "description": "Fit a polynomial over frequency to each clean component. This has only effect when the channels are joined with 'joinchannels'",
                     "readonly": false,
@@ -1759,7 +1755,7 @@
                 },
                 {
                     "name": "deconvolution-channels",
-                    "value": null,
+                    "value": "",
                     "defaultValue": "0",
                     "description": "Decrease the number of channels as specified by 'channelsout' to the given number for deconvolution. Only possible in combination with one of the 'fit-spectral' options. Proper residuals/restored images will only be returned when mgain < 1.",
                     "readonly": false,
@@ -1924,7 +1920,7 @@
                 },
                 {
                     "name": "nmiter",
-                    "value": null,
+                    "value": "",
                     "defaultValue": "0",
                     "description": "Number of major cycles",
                     "readonly": false,
@@ -2029,7 +2025,7 @@
                 },
                 {
                     "name": "parallel-deconvolution",
-                    "value": null,
+                    "value": "",
                     "defaultValue": "0",
                     "description": "",
                     "readonly": false,
@@ -2094,10 +2090,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "BashShellApp",
@@ -2108,12 +2106,9 @@
             "id": "ef2b2ba6-d501-4146-8099-4e0c8387d7dd",
             "name": "unpack",
             "description": "An application component able to run an arbitrary command within the Bash Shell",
+            "comment": "",
             "x": -297.45371084518365,
             "y": -281.6636207903617,
-            "radius": 25,
-            "collapsed": true,
-            "subject": null,
-            "expanded": true,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "b3716b5",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/edced259d8b64c16bac90a856ae6341f90d51cb6/daliuge/daliuge-liu-355-template.palette",
@@ -2121,7 +2116,7 @@
             "fields": [
                 {
                     "name": "command",
-                    "value": "cd $DLG_ROOT/workspace/$DLG_SESSION_ID && tar -xj",
+                    "value": "cd $DLG_ROOT/workspace/$DLG_SESSION_ID && tar -xjf {f}",
                     "defaultValue": "",
                     "description": "The command to be executed",
                     "readonly": false,
@@ -2144,144 +2139,10 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "encoding": "pickle",
+                    "encoding": "path",
                     "id": "3be69790-8ed5-4f9d-9b98-36b7349cad40",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
-                },
-                {
-                    "name": "strip-components",
-                    "value": "3",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "encoding": "pickle",
-                    "id": "084a1b9b-9dd5-4b09-bd8a-43695ab19080",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort"
-                },
-                {
-                    "name": "input_redirection",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "The command line argument that specifies the input into this application",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "encoding": "pickle",
-                    "id": "b8a017bf-2450-42cb-921d-fead03410f68",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
-                },
-                {
-                    "name": "output_redirection",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "The command line argument that specifies the output from this application",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "encoding": "pickle",
-                    "id": "b99a4551-a56d-4260-ab97-3d68803f3aec",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
-                },
-                {
-                    "name": "command_line_arguments",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Additional command line arguments to be added to the command line to be executed",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "encoding": "pickle",
-                    "id": "d4854027-46ee-439a-965d-9445fad13b68",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
-                },
-                {
-                    "name": "paramValueSeparator",
-                    "value": " ",
-                    "defaultValue": " ",
-                    "description": "Separator character(s) between parameters on the command line",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "encoding": "pickle",
-                    "id": "d9b481db-cce0-48f9-a5cd-3c3108967316",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
-                },
-                {
-                    "name": "argumentPrefix",
-                    "value": "--",
-                    "defaultValue": "--",
-                    "description": "Prefix to each keyed argument on the command line",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "encoding": "pickle",
-                    "id": "d0b1fe30-2e35-49b4-95ba-cb375de3b12c",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
-                },
-                {
-                    "name": "input_parser",
-                    "value": "path",
-                    "defaultValue": "path",
-                    "description": "Input port parsing technique",
-                    "readonly": false,
-                    "type": "Select",
-                    "precious": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "positional": false,
-                    "encoding": "pickle",
-                    "id": "fa3f2f3d-6105-4eeb-a78e-b9fec1348edc",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
-                },
-                {
-                    "name": "output_parser",
-                    "value": "pickle",
-                    "defaultValue": "pickle",
-                    "description": "Output port parsing technique",
-                    "readonly": false,
-                    "type": "Select",
-                    "precious": false,
-                    "options": [
-                        "raw",
-                        "pickle",
-                        "eval",
-                        "npy",
-                        "path",
-                        "dataurl"
-                    ],
-                    "positional": false,
-                    "encoding": "pickle",
-                    "id": "6cc968d2-717d-4962-b215-2826663374f7",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
                 },
                 {
                     "name": "execution_time",
@@ -2395,14 +2256,17 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         }
     ],
     "linkDataArray": [
         {
+            "comment": "",
             "from": "6a1dfc06-94ce-41c2-bf29-31796c35ec73",
             "fromPort": "2ebfb10a-fe6f-4856-87ae-85d601bbf2d6",
             "to": "1c16c638-93a1-4444-b35b-718397d6b8c0",
@@ -2411,6 +2275,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "ef2b2ba6-d501-4146-8099-4e0c8387d7dd",
             "fromPort": "5d65c2fd-6031-4017-9b36-541468465ad2",
             "to": "6a1dfc06-94ce-41c2-bf29-31796c35ec73",
@@ -2419,6 +2284,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "6f11ddca-59b3-4032-85c9-9c912bf30fd9",
             "fromPort": "43d4feb1-ab00-4d09-a8a6-3fb0618bb2b8",
             "to": "ef2b2ba6-d501-4146-8099-4e0c8387d7dd",
