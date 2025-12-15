@@ -4,22 +4,22 @@
         "fileType": "Graph",
         "shortDescription": "Conceptual graph to show how the compression of the MWA archive would work.",
         "detailedDescription": "This graph is conceptual and can't be executed, because the underlying code has not yet been written. It shows the logic of how we envision the compression of the MWA archive could be carried out.",
-        "repoService": "GitHub",
-        "repoBranch": "master",
-        "repo": "ICRAR/EAGLE-graph-repo",
-        "generatorVersion": "v6.9.1",
-        "generatorCommitHash": "253e656fd0a4cc4e1f5ff63bfa70b20da8fd10dc",
+        "generatorVersion": "v6.8.0",
+        "generatorCommitHash": "940fe65c5f8544536cd5826d031fad6cef483dc9",
         "generatorName": "EAGLE",
         "schemaVersion": "OJS",
         "readonly": false,
         "repositoryUrl": "",
-        "commitHash": "",
-        "downloadUrl": "",
         "signature": "",
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": 0,
-        "numLGNodes": 17
+        "numLGNodes": 17,
+        "repo": "ICRAR/EAGLE-graph-repo",
+        "repoBranch": "master",
+        "repoService": "GitHub",
+        "commitHash": "",
+        "downloadUrl": ""
     },
     "activeGraphConfigId": "253aad69-d855-4970-b219-c0b23e5f081d",
     "graphConfigurations": {
@@ -49,9 +49,9 @@
                     "repositoryBranch": "master",
                     "repositoryName": "ICRAR/EAGLE-graph-repo",
                     "repositoryPath": "ADACS",
-                    "repositoryFileName": "ADACS MWA Compress Graph_Scatter.graph",
-                    "commitHash": "2debfe6cb9772f9b36ed95f44fcd28a2e1850cbc",
-                    "downloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/2debfe6cb9772f9b36ed95f44fcd28a2e1850cbc/ADACS/ADACS_MWA_Compress_Graph_Scatter.graph"
+                    "repositoryFileName": "ADACS_MWA_Compress_Graph_Scatter.graph",
+                    "commitHash": "c5566506b1cc7da4f7e003f23de80da69debd453",
+                    "downloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/c5566506b1cc7da4f7e003f23de80da69debd453/ADACS/ADACS_MWA_Compress_Graph_Scatter.graph"
                 },
                 "signature": "",
                 "lastModifiedName": "",
@@ -72,7 +72,7 @@
                             "comment": ""
                         },
                         "d8964548-b2de-427f-92d6-4111ed8dce72": {
-                            "value": "icrar/wsclean:latest",
+                            "value": "stimela/wsclean",
                             "comment": ""
                         },
                         "611e6275-8b63-4b9b-8840-811c6a1350a8": {
@@ -721,8 +721,8 @@
             "name": "array",
             "description": "In-memory storage of intermediate data products",
             "comment": "a CSV file of the files to be downloaded\nfollowing format in https://github.com/MWATelescope/manta-ray-client?tab=readme-ov-file\n\neg\nEach row is a single job and each CSV element must be a key=value pair. Whitespace (blank rows) and comments (lines beginning with #) are allowed. \n\neg:\nobs_id=1104585920, job_type=c, avg_time_res=10, avg_freq_res=80, flag_edge_width=80, output=ms, no_rfi=false, apply_di_cal=true\n\n",
-            "x": 70.18443021800628,
-            "y": 932.7511200795516,
+            "x": -55.02975882899504,
+            "y": 925.0218491507245,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "1a21332",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/master/daliuge/daliuge-master.palette",
@@ -835,7 +835,7 @@
                 },
                 {
                     "name": "array",
-                    "value": "[\"obs_id=1104585920, job_type=c, avg_time_res=10, avg_freq_res=80, flag_edge_width=80, output=ms, no_rfi=false, apply_di_cal=true\",\"obs_id=1104585921, job_type=c, avg_time_res=10, avg_freq_res=80, flag_edge_width=80, output=ms, no_rfi=false, apply_di_cal=true\"]",
+                    "value": "",
                     "defaultValue": "",
                     "description": "Input array",
                     "readonly": false,
@@ -850,11 +850,11 @@
                 },
                 {
                     "name": "pydata",
-                    "value": "None",
+                    "value": "[\"obs_id=1104585920, job_type=c, avg_time_res=10, avg_freq_res=80, flag_edge_width=80, output=ms, no_rfi=false, apply_di_cal=true\",\"obs_id=1104585921, job_type=c, avg_time_res=10, avg_freq_res=80, flag_edge_width=80, output=ms, no_rfi=false, apply_di_cal=true\"]",
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
-                    "type": "Object.Array",
+                    "type": "Json",
                     "precious": false,
                     "options": [],
                     "positional": false,
@@ -1259,7 +1259,7 @@
                     "positional": false,
                     "encoding": "path",
                     "id": "e94facb8-0744-4561-a1a1-aa3c0d933ac8",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
                 },
                 {
@@ -1274,7 +1274,7 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "0e6049a1-7ead-4d95-9120-07decc2c99b7",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
                 },
                 {
@@ -1289,7 +1289,7 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "86ede8e3-0fbc-4181-99b8-ba2fdd69419f",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ApplicationArgument",
                     "usage": "OutputPort"
                 }
             ],
@@ -1877,7 +1877,7 @@
                 },
                 {
                     "name": "func_code",
-                    "value": "def extract_first_el(InputList):\n  return(InputList[0])",
+                    "value": "def extract_first_el(InputList):\n  return InputList[0]",
                     "defaultValue": "t",
                     "description": "Python function code, e.g. 'def func_name(args): return args'. Note that func_name above needs to match the defined name here.",
                     "readonly": false,
@@ -2029,7 +2029,7 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "3f6c311b-e419-4457-8601-ad57b56eda02",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
                 },
                 {
@@ -2189,7 +2189,7 @@
             "outputAppFields": [],
             "inputApplicationName": "GenericScatterApp",
             "inputApplicationType": "DALiuGEApp",
-            "inputApplicationId": "4bb43571-0edc-443e-bd8e-086bd9fa0a0e",
+            "inputApplicationId": "2cb36a1d-acb1-44ec-a647-d291afa09317",
             "inputApplicationDescription": "",
             "inputApplicationComment": "",
             "outputApplicationName": "",
@@ -2208,8 +2208,8 @@
             "name": "InputList",
             "description": "In-memory storage of intermediate data products",
             "comment": "",
-            "x": 537.6836494945829,
-            "y": 925.9893479224655,
+            "x": 548.5046287949414,
+            "y": 966.348561363722,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "9a48e9b",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/master/daliuge/daliuge-master.palette",
@@ -2908,7 +2908,7 @@
             "fields": [
                 {
                     "name": "func_name",
-                    "value": "extract_first_el",
+                    "value": "extract_obsid",
                     "defaultValue": "",
                     "description": "Python function name",
                     "readonly": false,
@@ -2923,7 +2923,7 @@
                 },
                 {
                     "name": "func_code",
-                    "value": "def extract_first_el(InputList):\n  x=InputList[0].split(',')\n  for n in x:\n    if n[:6]=='obs_id':  # \"obs_id=1104585920, ....\n      obsid=n[7:]\n  return(obsid)",
+                    "value": "def extract_obsid(InputList):\n  x=InputList[0].split(',')\n  for n in x:\n    if n[:6]=='obs_id':  # \"obs_id=1104585920, ....\n      obsid=n[7:]\n  return(obsid)",
                     "defaultValue": "t",
                     "description": "Python function code, e.g. 'def func_name(args): return args'. Note that func_name above needs to match the defined name here.",
                     "readonly": false,
@@ -3075,7 +3075,7 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "2ae9c15d-1fa8-4599-bc96-8ecb0fc6212c",
-                    "parameterType": "ComponentParameter",
+                    "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
                 },
                 {
