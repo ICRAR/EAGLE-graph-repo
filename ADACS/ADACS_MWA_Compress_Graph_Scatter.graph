@@ -50,8 +50,8 @@
                     "repositoryName": "ICRAR/EAGLE-graph-repo",
                     "repositoryPath": "ADACS",
                     "repositoryFileName": "ADACS MWA Compress Graph_Scatter.graph",
-                    "commitHash": "2fe4f2a1d5ab4f24794a94e06e9ee217fa2b1b76",
-                    "downloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/2fe4f2a1d5ab4f24794a94e06e9ee217fa2b1b76/ADACS/ADACS%20MWA%20Compress%20Graph_Scatter.graph"
+                    "commitHash": "2debfe6cb9772f9b36ed95f44fcd28a2e1850cbc",
+                    "downloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/2debfe6cb9772f9b36ed95f44fcd28a2e1850cbc/ADACS/ADACS_MWA_Compress_Graph_Scatter.graph"
                 },
                 "signature": "",
                 "lastModifiedName": "",
@@ -72,7 +72,7 @@
                             "comment": ""
                         },
                         "d8964548-b2de-427f-92d6-4111ed8dce72": {
-                            "value": "icrar/wsclean",
+                            "value": "icrar/wsclean:latest",
                             "comment": ""
                         },
                         "611e6275-8b63-4b9b-8840-811c6a1350a8": {
@@ -317,7 +317,7 @@
                 },
                 {
                     "name": "docker_tag",
-                    "value": "1.0",
+                    "value": "latest",
                     "defaultValue": "1.0",
                     "description": "The tag of the docker image to be used for this application",
                     "readonly": false,
@@ -721,7 +721,7 @@
             "name": "array",
             "description": "In-memory storage of intermediate data products",
             "comment": "a CSV file of the files to be downloaded\nfollowing format in https://github.com/MWATelescope/manta-ray-client?tab=readme-ov-file\n\neg\nEach row is a single job and each CSV element must be a key=value pair. Whitespace (blank rows) and comments (lines beginning with #) are allowed. \n\neg:\nobs_id=1104585920, job_type=c, avg_time_res=10, avg_freq_res=80, flag_edge_width=80, output=ms, no_rfi=false, apply_di_cal=true\n\n",
-            "x": 67.74512522191101,
+            "x": 70.18443021800628,
             "y": 932.7511200795516,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "1a21332",
@@ -835,7 +835,7 @@
                 },
                 {
                     "name": "array",
-                    "value": "[\"obs_id=1104585920, job_type=c, avg_time_res=10, avg_freq_res=80, flag_edge_width=80, output=ms, no_rfi=false, apply_di_cal=true\"]",
+                    "value": "[\"obs_id=1104585920, job_type=c, avg_time_res=10, avg_freq_res=80, flag_edge_width=80, output=ms, no_rfi=false, apply_di_cal=true\",\"obs_id=1104585921, job_type=c, avg_time_res=10, avg_freq_res=80, flag_edge_width=80, output=ms, no_rfi=false, apply_di_cal=true\"]",
                     "defaultValue": "",
                     "description": "Input array",
                     "readonly": false,
@@ -847,6 +847,21 @@
                     "id": "852ee3c7-8171-4ba8-85d8-70d695e4b758",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort"
+                },
+                {
+                    "name": "pydata",
+                    "value": "None",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Object.Array",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "encoding": "pickle",
+                    "id": "f801d67b-a463-4862-91f1-b93cb5eaded0",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort"
                 }
             ],
             "inputAppFields": [],
@@ -882,7 +897,7 @@
             "fields": [
                 {
                     "name": "image",
-                    "value": "manta-ray-client",
+                    "value": "manta-ray-client:latest",
                     "defaultValue": "",
                     "description": "The name of the docker image to be used for this application",
                     "readonly": false,
@@ -897,7 +912,7 @@
                 },
                 {
                     "name": "docker_tag",
-                    "value": "1.0",
+                    "value": "latest",
                     "defaultValue": "1.0",
                     "description": "The tag of the docker image to be used for this application",
                     "readonly": false,
@@ -2065,7 +2080,7 @@
             "fields": [
                 {
                     "name": "num_of_copies",
-                    "value": 2,
+                    "value": 1,
                     "defaultValue": "4",
                     "description": "Specifies the number of replications that will be generated of the scatter construct's contents.",
                     "readonly": false,
@@ -2174,7 +2189,7 @@
             "outputAppFields": [],
             "inputApplicationName": "GenericScatterApp",
             "inputApplicationType": "DALiuGEApp",
-            "inputApplicationId": "30f20c4e-fa6c-47c5-8256-69adb2804e19",
+            "inputApplicationId": "4bb43571-0edc-443e-bd8e-086bd9fa0a0e",
             "inputApplicationDescription": "",
             "inputApplicationComment": "",
             "outputApplicationName": "",
