@@ -50,8 +50,8 @@
                     "repositoryName": "ICRAR/EAGLE-graph-repo",
                     "repositoryPath": "ADACS",
                     "repositoryFileName": "ADACS MWA Compress Graph.graph",
-                    "commitHash": "b27a71779e6aab84532475de9934461b7ca4fcdf",
-                    "downloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/b27a71779e6aab84532475de9934461b7ca4fcdf/ADACS/ADACS%20MWA%20Compress%20Graph.graph"
+                    "commitHash": "05ee2fca8df3e12c650bab796f979d351813c1e2",
+                    "downloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/05ee2fca8df3e12c650bab796f979d351813c1e2/ADACS/ADACS_MWA_Compress_Graph.graph"
                 },
                 "signature": "",
                 "lastModifiedName": "",
@@ -2028,7 +2028,7 @@
                 },
                 {
                     "name": "array",
-                    "value": "",
+                    "value": "[\"obs_id=1104585920, job_type=c, avg_time_res=10, avg_freq_res=80, flag_edge_width=80, output=ms, no_rfi=false, apply_di_cal=true\",\"obs_id=1104586520, job_type=c, avg_time_res=10, avg_freq_res=80, flag_edge_width=80, output=ms, no_rfi=false, apply_di_cal=true\",\"obs_id=1197634968, job_type=c, avg_time_res=10, avg_freq_res=80, flag_edge_width=80, output=ms, no_rfi=false, apply_di_cal=true\",\"obs_id=1197634368, job_type=c, avg_time_res=10, avg_freq_res=80, flag_edge_width=80, output=ms, no_rfi=false, apply_di_cal=true\"]",
                     "defaultValue": "",
                     "description": "Input array",
                     "readonly": false,
@@ -3566,7 +3566,7 @@
                 },
                 {
                     "name": "docker_tag",
-                    "value": "1.0",
+                    "value": "latest",
                     "defaultValue": "1.0",
                     "description": "The tag of the docker image to be used for this application",
                     "readonly": false,
@@ -3596,7 +3596,7 @@
                 },
                 {
                     "name": "command",
-                    "value": "docker run --name my_mwa_client --entrypoint=\"\" --volume=$PWD:/data --rm=true -e MWA_ASVO_API_KEY manta-ray-client:latest",
+                    "value": "MWA_ASVO_API_KEY={MWA_ASVO_API_KEY} & mwa_client -c {input_list} -d $PWD",
                     "defaultValue": "",
                     "description": "The command line to run within the docker instance. Leave empty to execute the default command specified as the entrypoint of the image.",
                     "readonly": false,
@@ -3641,7 +3641,7 @@
                 },
                 {
                     "name": "command_line_arguments",
-                    "value": "mwa_client -c {input_list} -d /data",
+                    "value": "",
                     "defaultValue": "",
                     "description": "Additional command line arguments to be added to the command line to be executed",
                     "readonly": false,
@@ -3656,7 +3656,7 @@
                 },
                 {
                     "name": "entrypoint",
-                    "value": "",
+                    "value": "\"\"",
                     "defaultValue": "",
                     "description": "Alternate entrypoint",
                     "readonly": false,
@@ -5300,7 +5300,7 @@
             "fields": [
                 {
                     "name": "num_of_copies",
-                    "value": 2,
+                    "value": 4,
                     "defaultValue": "4",
                     "description": "Specifies the number of replications that will be generated of the scatter construct's contents.",
                     "readonly": false,
@@ -5409,7 +5409,7 @@
             "outputAppFields": [],
             "inputApplicationName": "GenericScatterApp",
             "inputApplicationType": "DALiuGEApp",
-            "inputApplicationId": "600cc4c0-d2fc-42d1-b227-6873f53f1804",
+            "inputApplicationId": "f9013541-b210-4173-b9cf-84ffac28b15a",
             "inputApplicationDescription": "",
             "inputApplicationComment": "",
             "outputApplicationName": "",
