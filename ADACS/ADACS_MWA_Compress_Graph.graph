@@ -50,8 +50,8 @@
                     "repositoryName": "ICRAR/EAGLE-graph-repo",
                     "repositoryPath": "ADACS",
                     "repositoryFileName": "ADACS_MWA_Compress_Graph.graph",
-                    "commitHash": "d65d616e72d4bb928a94460dffa82c298910a9c2",
-                    "downloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/d65d616e72d4bb928a94460dffa82c298910a9c2/ADACS/ADACS_MWA_Compress_Graph.graph"
+                    "commitHash": "0f6b5f1423ee5f4d3d85b33262f2cbeb1a62c903",
+                    "downloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/0f6b5f1423ee5f4d3d85b33262f2cbeb1a62c903/ADACS/ADACS_MWA_Compress_Graph.graph"
                 },
                 "signature": "",
                 "lastModifiedName": "",
@@ -72,7 +72,7 @@
                             "comment": ""
                         },
                         "d8964548-b2de-427f-92d6-4111ed8dce72": {
-                            "value": "icrar/wsclean",
+                            "value": "icrar/wsclean:latest",
                             "comment": ""
                         },
                         "611e6275-8b63-4b9b-8840-811c6a1350a8": {
@@ -82,12 +82,7 @@
                     }
                 },
                 "daad3138-de71-4dbd-ad47-494cc3ad88b0": {
-                    "fields": {
-                        "ef71b226-1dfb-45c8-96b7-72b7eb1c1950": {
-                            "value": "create_compressed_col.py --filename={ObsID}.ms  --compressor=mgard --datacol=CORRECTED_DATA {compr_params} --accuracy=${element}",
-                            "comment": ""
-                        }
-                    }
+                    "fields": {}
                 }
             }
         }
@@ -310,7 +305,7 @@
             "fields": [
                 {
                     "name": "image",
-                    "value": "icrar/wsclean",
+                    "value": "icrar/wsclean:latest",
                     "defaultValue": "",
                     "description": "The name of the docker image to be used for this application",
                     "readonly": false,
@@ -325,7 +320,7 @@
                 },
                 {
                     "name": "docker_tag",
-                    "value": "1.0",
+                    "value": "latest",
                     "defaultValue": "1.0",
                     "description": "The tag of the docker image to be used for this application",
                     "readonly": false,
@@ -355,7 +350,7 @@
                 },
                 {
                     "name": "command",
-                    "value": "python",
+                    "value": "python create_compressed_col.py --filename={ObsID}.ms  --compressor=mgard --datacol=CORRECTED_DATA {compr_params} --accuracy=${element}",
                     "defaultValue": "",
                     "description": "The command line to run within the docker instance. Leave empty to execute the default command specified as the entrypoint of the image.",
                     "readonly": false,
@@ -382,21 +377,6 @@
                     "id": "6b3f74c2-d291-495d-9bc5-33911698d74d",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort"
-                },
-                {
-                    "name": "command_line_arguments",
-                    "value": "create_compressed_col.py --filename={OutputMS} --outfile={CompressedMS}  --compressor=mgard --datacol=CORRECTED_DATA {compr_params} --accuracy=${acc}",
-                    "defaultValue": "",
-                    "description": "Additional command line arguments to be added to the command line to be executed",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "encoding": "pickle",
-                    "id": "ef71b226-1dfb-45c8-96b7-72b7eb1c1950",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
                 },
                 {
                     "name": "entrypoint",
@@ -739,7 +719,7 @@
                 },
                 {
                     "name": "docker_tag",
-                    "value": "1.0",
+                    "value": "latest",
                     "defaultValue": "1.0",
                     "description": "The tag of the docker image to be used for this application",
                     "readonly": false,
@@ -2780,7 +2760,7 @@
             "fields": [
                 {
                     "name": "image",
-                    "value": "manta-ray-client",
+                    "value": "manta-ray-client:latest",
                     "defaultValue": "",
                     "description": "The name of the docker image to be used for this application",
                     "readonly": false,
@@ -2865,21 +2845,6 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "3deaea29-11d5-4b5d-9b97-37cc6a26e670",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
-                },
-                {
-                    "name": "command_line_arguments",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "Additional command line arguments to be added to the command line to be executed",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "encoding": "pickle",
-                    "id": "f8483104-9094-4c20-a55e-ada59e1d85f4",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
                 },
@@ -4471,7 +4436,7 @@
             "outputAppFields": [],
             "inputApplicationName": "GenericScatterApp",
             "inputApplicationType": "DALiuGEApp",
-            "inputApplicationId": "826cbe8d-1a24-461d-8ad1-18a0d04892c4",
+            "inputApplicationId": "5efe70cc-5d05-49ef-a4e9-4b7bd0aeb78a",
             "inputApplicationDescription": "",
             "inputApplicationComment": "",
             "outputApplicationName": "",
@@ -6139,7 +6104,7 @@
             "fields": [
                 {
                     "name": "image",
-                    "value": "wsclean",
+                    "value": "icrar/wsclean:latest",
                     "defaultValue": "",
                     "description": "The name of the docker image to be used for this application",
                     "readonly": false,
@@ -6154,7 +6119,7 @@
                 },
                 {
                     "name": "docker_tag",
-                    "value": "1.0",
+                    "value": "latest",
                     "defaultValue": "1.0",
                     "description": "The tag of the docker image to be used for this application",
                     "readonly": false,
@@ -6184,7 +6149,7 @@
                 },
                 {
                     "name": "command",
-                    "value": "wsclean\n",
+                    "value": "wsclean -auto-threshold 1 -auto-mask 3 -data-column COPY_DATA -size 8000 8000 -name {ObsID} -scale 15arcsec -niter 20000 {ObsID}.ms \n",
                     "defaultValue": "",
                     "description": "The command line to run within the docker instance. Leave empty to execute the default command specified as the entrypoint of the image.",
                     "readonly": false,
@@ -6241,21 +6206,6 @@
                     "id": "4d387604-d29b-4643-ba1d-5cd1a5762168",
                     "parameterType": "ComponentParameter",
                     "usage": "InputPort"
-                },
-                {
-                    "name": "command_line_arguments",
-                    "value": "wsclean -auto-threshold 1 -auto-mask 3 -data-column COPY_DATA -size 8000 8000 -name {ObsID} -scale 15arcsec -niter 20000 {ObsID}.ms ",
-                    "defaultValue": "",
-                    "description": "Additional command line arguments to be added to the command line to be executed",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "encoding": "pickle",
-                    "id": "81b5bab1-731c-4769-a9fb-8ef9dfa8c3dd",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
                 },
                 {
                     "name": "entrypoint",
