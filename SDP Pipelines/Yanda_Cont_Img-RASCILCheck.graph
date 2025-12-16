@@ -7,8 +7,8 @@
         "repoService": "GitHub",
         "repoBranch": "master",
         "repo": "ICRAR/EAGLE-graph-repo",
-        "generatorVersion": "v6.7.0",
-        "generatorCommitHash": "99748785801049ebed287674e774fb633ee0e982",
+        "generatorVersion": "v6.9.0",
+        "generatorCommitHash": "43c986cc3fa198044b9e82107e31bbb327c6eca3",
         "generatorName": "EAGLE",
         "schemaVersion": "OJS",
         "readonly": true,
@@ -33,9 +33,9 @@
             "id": "46863a7a-78ad-4b68-92ea-a6de5599dfef",
             "name": "Config",
             "description": "",
+            "comment": "",
             "x": 305.2040778504977,
             "y": 381.6015862194213,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -183,10 +183,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "Docker",
@@ -197,9 +199,9 @@
             "id": "ba5af4e6-2143-434e-ac72-3136875da53b",
             "name": "yanda_imager",
             "description": "This docker app runs the Yandasoft Imager. It uses an askapsoft compliant configuration file on input, which defines all the required parameters.",
+            "comment": "",
             "x": 404.266586508307,
             "y": 389.68979540257277,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -297,7 +299,7 @@
                 },
                 {
                     "name": "command",
-                    "value": "cd `dirname %i0` && mpirun -np 4 --allow-run-as-root imager -c %i0",
+                    "value": "cd `dirname {config}` && mpirun -np 4 --allow-run-as-root imager -c {config}",
                     "defaultValue": "",
                     "description": "The command line to run within the docker instance",
                     "readonly": false,
@@ -380,7 +382,7 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "encoding": "pickle",
+                    "encoding": "path",
                     "id": "2bd70c65-e0d5-443a-9d64-46724b140491",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
@@ -437,10 +439,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "BashShellApp",
@@ -451,9 +455,9 @@
             "id": "e0c0775b-ca43-4198-8a22-c16eac87ab18",
             "name": "Pack results",
             "description": "This is just a tar command packing the output directories together.",
+            "comment": "",
             "x": 760.6493946791595,
             "y": 392.0840814519464,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -536,7 +540,7 @@
                 },
                 {
                     "name": "command",
-                    "value": "cd `dirname %i0` && tar --dereference -cvjf %o0 %i0 %i1 *.png index.* *.log *pybdsm*",
+                    "value": "cd `dirname {residual_image}` && tar --dereference -cvjf {output} {restored_image} {residual_image} *.png index.* *.log *pybdsm*",
                     "defaultValue": "",
                     "description": "The command line to be executed",
                     "readonly": false,
@@ -559,7 +563,7 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "encoding": "pickle",
+                    "encoding": "path",
                     "id": "f7699400-43c4-4eca-86a6-517a0020ab33",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
@@ -574,7 +578,7 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "encoding": "pickle",
+                    "encoding": "path",
                     "id": "0cac193d-0de9-4aba-9dd5-9344081e6f36",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
@@ -589,7 +593,7 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "encoding": "pickle",
+                    "encoding": "path",
                     "id": "5ecb6344-fe9b-4dcc-bd25-1de15bcd1974",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
@@ -604,7 +608,7 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "encoding": "pickle",
+                    "encoding": "path",
                     "id": "51c774e6-d9cb-4ce1-8cf7-7c669a8bfa56",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort"
@@ -631,10 +635,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "File",
@@ -645,9 +651,9 @@
             "id": "60f17c55-0067-455b-8ec4-075d9d853356",
             "name": "rascil_check_yanda.tar.gz",
             "description": "",
+            "comment": "",
             "x": 870.9391185095233,
             "y": 387.5589604787712,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -810,10 +816,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "File",
@@ -824,9 +832,9 @@
             "id": "759a9d22-9341-4916-babc-9200da0501ff",
             "name": "image.cont.taylor.0.restored.fits",
             "description": "",
+            "comment": "",
             "x": 550.4827592746236,
             "y": 484.80988451870246,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -974,10 +982,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "File",
@@ -988,9 +998,9 @@
             "id": "97d07c88-10a4-4971-acc4-61fbd940b070",
             "name": "residual.cont.taylor.0.fits",
             "description": "",
+            "comment": "",
             "x": 557.5783043522197,
             "y": 381.29488302521185,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -1138,10 +1148,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "NGAS",
@@ -1152,9 +1164,9 @@
             "id": "a9d17455-74e2-42da-b717-db837efc2de2",
             "name": "rascil_check_yanda.tar.gz",
             "description": "",
+            "comment": "",
             "x": 1106.2565749847452,
             "y": 475.86150091580214,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -1317,10 +1329,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "DALiuGEApp",
@@ -1331,9 +1345,9 @@
             "id": "c379f3a6-35b6-49aa-a8e9-824e247eeb91",
             "name": "Archive results",
             "description": "A simple APP that copies its inputs into its outputs. All inputs are copied into all outputs in the order they were declared in the graph. If an input is a container (e.g. a directory) it copies the content recursively.",
+            "comment": "",
             "x": 985.8060512831378,
             "y": 392.8136243407746,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -1451,10 +1465,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "File",
@@ -1465,9 +1481,9 @@
             "id": "8562b8bd-008b-498d-8199-205d632d4016",
             "name": "ContImg_Test.tar.gz",
             "description": "",
+            "comment": "",
             "x": 170.33963159628894,
             "y": 286.70670767243155,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -1615,10 +1631,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "Docker",
@@ -1629,9 +1647,9 @@
             "id": "d63a2da1-868e-4c82-9e49-51b888a199be",
             "name": "RASCIL Checker",
             "description": "This docker app runs the casacore imgstat application on its input.",
+            "comment": "",
             "x": 759.168474366827,
             "y": 595.7695127783683,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -1834,7 +1852,7 @@
                 },
                 {
                     "name": "env",
-                    "value": "{\"CLI_ARGS\": \"--ingest_fitsname_restored %i0 --ingest_fitsname_residual %i1 --finder_beam_maj 0.011 --finder_beam_min 0.0072 --finder_beam_pos_angle=-0.3 --plot_source True --perform_diagnostics True\"}",
+                    "value": "{\"CLI_ARGS\": \"--ingest_fitsname_restored {restore_image} --ingest_fitsname_residual {residual_image} --finder_beam_maj 0.011 --finder_beam_min 0.0072 --finder_beam_pos_angle=-0.3 --plot_source True --perform_diagnostics True\"}",
                     "defaultValue": "",
                     "description": "",
                     "readonly": false,
@@ -1947,7 +1965,7 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "encoding": "pickle",
+                    "encoding": "path",
                     "id": "ce08a43f-9e97-49d4-93d5-6c86e32a6e00",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
@@ -1962,7 +1980,7 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "encoding": "pickle",
+                    "encoding": "path",
                     "id": "6fd97ece-4b06-475b-9120-2b5e4f3aab3e",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
@@ -1977,7 +1995,7 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "encoding": "pickle",
+                    "encoding": "path",
                     "id": "9b1a2d0e-7409-46cf-9067-992db84c7fb6",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
@@ -2019,10 +2037,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "File",
@@ -2033,9 +2053,9 @@
             "id": "42180b04-ac4d-4800-a9f6-3aca2ffdece0",
             "name": "Checker config",
             "description": "",
+            "comment": "",
             "x": 555.0883052867327,
             "y": 602.4102793511942,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -2198,10 +2218,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "NGAS",
@@ -2212,9 +2234,9 @@
             "id": "17b0240c-e4b8-4850-bac8-53a4d61f41a0",
             "name": "NGAS ContImg_Test.tar.gz",
             "description": "",
+            "comment": "",
             "x": 167.97827436537816,
             "y": 72.17182750202383,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -2377,10 +2399,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "DALiuGEApp",
@@ -2391,9 +2415,9 @@
             "id": "8b1edbb7-bcec-4548-adf7-6bd6843cb730",
             "name": "Get data",
             "description": "A simple APP that copies its inputs into its outputs. All inputs are copied into all outputs in the order they were declared in the graph. If an input is a container (e.g. a directory) it copies the content recursively.",
+            "comment": "",
             "x": 176.62550002166165,
             "y": 188.66023076811996,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -2511,10 +2535,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "BashShellApp",
@@ -2525,9 +2551,9 @@
             "id": "5ada5387-8cbd-4aa5-aa5d-a1a1326ff99c",
             "name": "Unpack",
             "description": "An application component run within the Bash Shell",
+            "comment": "",
             "x": 177.0872771829331,
             "y": 393.8191407003058,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -2610,7 +2636,7 @@
                 },
                 {
                     "name": "command",
-                    "value": "cd `dirname %i0` && tar -xvf %i0 && chmod -R a+xw `dirname %i01`",
+                    "value": "cd `dirname {fileObject}` && tar -xvf {fileObject} && chmod -R a+xw `dirname {fileObject}`",
                     "defaultValue": "",
                     "description": "The command line to be executed",
                     "readonly": false,
@@ -2633,7 +2659,7 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "encoding": "pickle",
+                    "encoding": "path",
                     "id": "f8b2a49a-60a4-46a8-b118-199c92ced11a",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputPort"
@@ -2690,10 +2716,12 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         },
         {
             "category": "File",
@@ -2704,9 +2732,9 @@
             "id": "c18c9bc9-24b4-4b3a-8a50-ff26af558f39",
             "name": "event",
             "description": "",
+            "comment": "",
             "x": 734.2040778504977,
             "y": 471.6015862194213,
-            "subject": null,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -2854,14 +2882,17 @@
             "inputApplicationType": "None",
             "inputApplicationId": null,
             "inputApplicationDescription": "",
+            "inputApplicationComment": "",
             "outputApplicationName": "",
             "outputApplicationType": "None",
             "outputApplicationId": null,
-            "outputApplicationDescription": ""
+            "outputApplicationDescription": "",
+            "outputApplicationComment": ""
         }
     ],
     "linkDataArray": [
         {
+            "comment": "",
             "from": "46863a7a-78ad-4b68-92ea-a6de5599dfef",
             "fromPort": "48ad7359-66ab-4d2e-ad04-3c5d4abd7047",
             "to": "ba5af4e6-2143-434e-ac72-3136875da53b",
@@ -2870,6 +2901,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "60f17c55-0067-455b-8ec4-075d9d853356",
             "fromPort": "d8e957ce-07b6-4157-b5c8-b02999cb63e4",
             "to": "c379f3a6-35b6-49aa-a8e9-824e247eeb91",
@@ -2878,6 +2910,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "e0c0775b-ca43-4198-8a22-c16eac87ab18",
             "fromPort": "51c774e6-d9cb-4ce1-8cf7-7c669a8bfa56",
             "to": "60f17c55-0067-455b-8ec4-075d9d853356",
@@ -2886,6 +2919,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "c379f3a6-35b6-49aa-a8e9-824e247eeb91",
             "fromPort": "2dd8717e-6f53-4b4e-96eb-c150afed1b84",
             "to": "a9d17455-74e2-42da-b717-db837efc2de2",
@@ -2894,6 +2928,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "ba5af4e6-2143-434e-ac72-3136875da53b",
             "fromPort": "cff7e896-e69f-4ade-8c59-42346b1b5b91",
             "to": "759a9d22-9341-4916-babc-9200da0501ff",
@@ -2902,6 +2937,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "ba5af4e6-2143-434e-ac72-3136875da53b",
             "fromPort": "d9d67262-47a7-44b3-a7df-ddab74a0dcbe",
             "to": "97d07c88-10a4-4971-acc4-61fbd940b070",
@@ -2910,6 +2946,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "97d07c88-10a4-4971-acc4-61fbd940b070",
             "fromPort": "deac61fc-431f-4103-90bb-39a9aff2166f",
             "to": "e0c0775b-ca43-4198-8a22-c16eac87ab18",
@@ -2918,6 +2955,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "759a9d22-9341-4916-babc-9200da0501ff",
             "fromPort": "9bca7d4d-ce74-457c-bd2a-d1d2bb59482e",
             "to": "e0c0775b-ca43-4198-8a22-c16eac87ab18",
@@ -2926,6 +2964,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "42180b04-ac4d-4800-a9f6-3aca2ffdece0",
             "fromPort": "62f79e96-51c9-4058-8ca7-676ea9b49ee9",
             "to": "d63a2da1-868e-4c82-9e49-51b888a199be",
@@ -2934,6 +2973,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "759a9d22-9341-4916-babc-9200da0501ff",
             "fromPort": "9bca7d4d-ce74-457c-bd2a-d1d2bb59482e",
             "to": "d63a2da1-868e-4c82-9e49-51b888a199be",
@@ -2942,6 +2982,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "97d07c88-10a4-4971-acc4-61fbd940b070",
             "fromPort": "deac61fc-431f-4103-90bb-39a9aff2166f",
             "to": "d63a2da1-868e-4c82-9e49-51b888a199be",
@@ -2950,6 +2991,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "17b0240c-e4b8-4850-bac8-53a4d61f41a0",
             "fromPort": "84d17470-8f96-4e8c-84bf-8fbfed400b65",
             "to": "8b1edbb7-bcec-4548-adf7-6bd6843cb730",
@@ -2958,6 +3000,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "8b1edbb7-bcec-4548-adf7-6bd6843cb730",
             "fromPort": "7e7531e6-cd55-4ea1-a8bb-c75da12d1437",
             "to": "8562b8bd-008b-498d-8199-205d632d4016",
@@ -2966,6 +3009,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "8562b8bd-008b-498d-8199-205d632d4016",
             "fromPort": "2769aca5-365a-45c5-8b16-95b132b0a170",
             "to": "5ada5387-8cbd-4aa5-aa5d-a1a1326ff99c",
@@ -2974,6 +3018,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "5ada5387-8cbd-4aa5-aa5d-a1a1326ff99c",
             "fromPort": "abbc8067-381f-4ecf-a986-98f6348a65c4",
             "to": "46863a7a-78ad-4b68-92ea-a6de5599dfef",
@@ -2982,6 +3027,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "5ada5387-8cbd-4aa5-aa5d-a1a1326ff99c",
             "fromPort": "2d192117-f40f-469b-808f-b1ff579bbc88",
             "to": "42180b04-ac4d-4800-a9f6-3aca2ffdece0",
@@ -2990,6 +3036,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "c18c9bc9-24b4-4b3a-8a50-ff26af558f39",
             "fromPort": "c966e2eb-ff26-4d53-bd61-a579eb5497f9",
             "to": "e0c0775b-ca43-4198-8a22-c16eac87ab18",
@@ -2998,6 +3045,7 @@
             "closesLoop": false
         },
         {
+            "comment": "",
             "from": "d63a2da1-868e-4c82-9e49-51b888a199be",
             "fromPort": "14b47e5b-be46-40f7-b790-405bd99e5ba6",
             "to": "c18c9bc9-24b4-4b3a-8a50-ff26af558f39",
