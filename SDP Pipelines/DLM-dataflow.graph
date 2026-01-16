@@ -735,10 +735,25 @@
                     "precious": false,
                     "options": [],
                     "positional": false,
-                    "encoding": "pickle",
+                    "encoding": "utf-8",
                     "id": "7c06154a-964f-4e58-a399-da4b45286663",
                     "parameterType": "ApplicationArgument",
-                    "usage": "InputOutput"
+                    "usage": "InputPort"
+                },
+                {
+                    "name": "ingest",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "encoding": "utf-8",
+                    "id": "491133d1-a0b1-483c-b51f-fb684c698b47",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
                 }
             ],
             "inputAppFields": [],
@@ -1442,10 +1457,10 @@
             "color": "#800080",
             "drawOrderHint": 0,
             "id": "776576fe-434f-48b6-a3b1-709e6b134abe",
-            "name": "dlm_db",
+            "name": "ingest",
             "description": "A Drop allowing storage and retrieval from a SQL DB.",
             "comment": "",
-            "x": 762.5026175787912,
+            "x": 761.6981754707432,
             "y": 175.9914228366341,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "7420a4a",
@@ -2758,6 +2773,15 @@
             "fromPort": "1475d55d-8eef-4e0e-9069-bdeb4ae8b480",
             "to": "072e7a5c-ae94-4574-b17d-4aa4d582cd8a",
             "toPort": "1bd4ea88-dc79-4cfc-9820-6bb0b27fa899",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "comment": "",
+            "from": "50cec9ea-5904-44ee-b803-c26701418b44",
+            "fromPort": "491133d1-a0b1-483c-b51f-fb684c698b47",
+            "to": "776576fe-434f-48b6-a3b1-709e6b134abe",
+            "toPort": "f6ec7eed-09ba-485b-a918-29aa1612cfdf",
             "loop_aware": "0",
             "closesLoop": false
         }
