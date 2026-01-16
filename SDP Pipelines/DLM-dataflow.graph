@@ -557,7 +557,7 @@
             "color": "#0059a5",
             "drawOrderHint": 0,
             "id": "50cec9ea-5904-44ee-b803-c26701418b44",
-            "name": "ingest_req",
+            "name": "dlm_ingest",
             "description": "An application that wraps a python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output.",
             "comment": "",
             "x": 608.974029028266,
@@ -739,21 +739,6 @@
                     "id": "7c06154a-964f-4e58-a399-da4b45286663",
                     "parameterType": "ApplicationArgument",
                     "usage": "InputOutput"
-                },
-                {
-                    "name": "ingest",
-                    "value": "",
-                    "defaultValue": "",
-                    "description": "",
-                    "readonly": false,
-                    "type": "String",
-                    "precious": false,
-                    "options": [],
-                    "positional": false,
-                    "encoding": "pickle",
-                    "id": "5f06e4f3-5df6-4d5f-8d5f-0f0ddc9f3be4",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "OutputPort"
                 }
             ],
             "inputAppFields": [],
@@ -776,7 +761,7 @@
             "color": "#0059a5",
             "drawOrderHint": 0,
             "id": "072e7a5c-ae94-4574-b17d-4aa4d582cd8a",
-            "name": "dlm_rclone",
+            "name": "rclone_req",
             "description": "An application that wraps a python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output.",
             "comment": "",
             "x": 308.4822612665307,
@@ -945,7 +930,7 @@
                     "usage": "NoPort"
                 },
                 {
-                    "name": "request",
+                    "name": "rclone_req",
                     "value": "",
                     "defaultValue": "",
                     "description": "",
@@ -1238,7 +1223,7 @@
             "color": "#0059a5",
             "drawOrderHint": 0,
             "id": "c1a5434e-97bb-4813-8152-29a0a27c99f0",
-            "name": "register_req",
+            "name": "dlm_request",
             "description": "An application that wraps a python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output.",
             "comment": "",
             "x": 585.7698825095349,
@@ -1639,7 +1624,7 @@
             "color": "#0059a5",
             "drawOrderHint": 0,
             "id": "07e0c8e0-d2f4-40c4-bbba-6a5a613038b0",
-            "name": "migration_req",
+            "name": "dlm_migration",
             "description": "An application that wraps a python function. The inputs of the application are treated as the arguments of the function. Conversely, the output of the function is treated as the output of the application. If the application has more than one output, the result of calling the function is treated as an iterable, with each individual object being written to its corresponding output.",
             "comment": "",
             "x": 657.8733007076738,
@@ -1834,6 +1819,21 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "bd623107-b48f-4cad-8adf-2e78e490d162",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "OutputPort"
+                },
+                {
+                    "name": "rclone_req",
+                    "value": "",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "Event",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "encoding": "pickle",
+                    "id": "1475d55d-8eef-4e0e-9069-bdeb4ae8b480",
                     "parameterType": "ApplicationArgument",
                     "usage": "OutputPort"
                 }
@@ -2673,15 +2673,6 @@
         },
         {
             "comment": "",
-            "from": "50cec9ea-5904-44ee-b803-c26701418b44",
-            "fromPort": "5f06e4f3-5df6-4d5f-8d5f-0f0ddc9f3be4",
-            "to": "776576fe-434f-48b6-a3b1-709e6b134abe",
-            "toPort": "f6ec7eed-09ba-485b-a918-29aa1612cfdf",
-            "loop_aware": "0",
-            "closesLoop": false
-        },
-        {
-            "comment": "",
             "from": "07e0c8e0-d2f4-40c4-bbba-6a5a613038b0",
             "fromPort": "bd623107-b48f-4cad-8adf-2e78e490d162",
             "to": "776576fe-434f-48b6-a3b1-709e6b134abe",
@@ -2758,6 +2749,15 @@
             "fromPort": "4f6209c7-a39f-4b73-af2a-4914c0184117",
             "to": "c1a5434e-97bb-4813-8152-29a0a27c99f0",
             "toPort": "d59618d8-a477-41a9-bfb1-0d4ec99a7037",
+            "loop_aware": "0",
+            "closesLoop": false
+        },
+        {
+            "comment": "",
+            "from": "07e0c8e0-d2f4-40c4-bbba-6a5a613038b0",
+            "fromPort": "1475d55d-8eef-4e0e-9069-bdeb4ae8b480",
+            "to": "072e7a5c-ae94-4574-b17d-4aa4d582cd8a",
+            "toPort": "1bd4ea88-dc79-4cfc-9820-6bb0b27fa899",
             "loop_aware": "0",
             "closesLoop": false
         }
