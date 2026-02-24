@@ -1,47 +1,64 @@
 {
     "modelData": {
-        "filePath": "examples/SkyCoord.graph",
-        "fileType": "Graph",
+        "name": "SkyCoord.graph",
         "shortDescription": "",
         "detailedDescription": "",
-        "repoService": "GitHub",
-        "repoBranch": "master",
-        "repo": "ICRAR/EAGLE-graph-repo",
+        "type": "Graph",
+        "schemaVersion": "V4",
+        "readonly": true,
+        "location": {
+            "repositoryService": "GitHub",
+            "repositoryBranch": "master",
+            "repositoryName": "ICRAR/EAGLE-graph-repo",
+            "repositoryPath": "examples",
+            "repositoryFileName": "SkyCoord.graph",
+            "commitHash": "95251ef2444ddf6fe50bf5efd85919ee70767f34",
+            "downloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/95251ef2444ddf6fe50bf5efd85919ee70767f34/examples/SkyCoord.graph"
+        },
         "generatorVersion": "v6.9.0",
         "generatorCommitHash": "74063517920e5c8fbc2d54d6d1342d50e0bf1935",
         "generatorName": "EAGLE",
-        "schemaVersion": "OJS",
-        "readonly": true,
         "repositoryUrl": "",
-        "commitHash": "",
-        "downloadUrl": "",
+        "graphLocation": {
+            "repositoryService": "Unknown",
+            "repositoryBranch": "",
+            "repositoryName": "",
+            "repositoryPath": "",
+            "repositoryFileName": "",
+            "commitHash": "",
+            "downloadUrl": ""
+        },
         "signature": "",
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": 0,
-        "numLGNodes": 2
+        "numLGNodes": 2,
+        "repo": "ICRAR/EAGLE-graph-repo",
+        "repoBranch": "graph-updater-test",
+        "repoService": "GitHub",
+        "filePath": "examples/SkyCoord.graph",
+        "commitHash": "",
+        "downloadUrl": ""
     },
     "activeGraphConfigId": null,
     "graphConfigurations": {},
-    "nodeDataArray": [
-        {
+    "nodes": {
+        "f7184188-f68a-4d5a-8c5d-bb264025361e": {
             "category": "PyFuncApp",
             "categoryType": "Application",
-            "isGroup": false,
-            "color": "#0059a5",
-            "drawOrderHint": 0,
             "id": "f7184188-f68a-4d5a-8c5d-bb264025361e",
             "name": "SkyCoord.__init__",
             "description": "\nHigh-level object providing a flexible interface for celestial coordinate\n    representation, manipulation, and transformation between systems.\n    \n    The `SkyCoord` class accepts a wide variety of inputs for initialization. At\n    a minimum these must provide one or more celestial coordinate values with\n    unambiguous units.  Inputs may be scalars or lists/tuples/arrays, yielding\n    scalar or array coordinates (can be checked via ``SkyCoord.isscalar``).\n    Typically one also specifies the coordinate frame, though this is not\n    required. The general pattern for spherical representations is::\n    \n      SkyCoord(COORD, [FRAME], keyword_args ...)\n      SkyCoord(LON, LAT, [FRAME], keyword_args ...)\n      SkyCoord(LON, LAT, [DISTANCE], frame=FRAME, unit=UNIT, keyword_args ...)\n      SkyCoord([FRAME], <lon_attr>=LON, <lat_attr>=LAT, keyword_args ...)\n    \n    It is also possible to input coordinate values in other representations\n    such as cartesian or cylindrical.  In this case one includes the keyword\n    argument ``representation_type='cartesian'`` (for example) along with data\n    in ``x``, ``y``, and ``z``.\n    \n    See also: https://docs.astropy.org/en/stable/coordinates/\n    \n    Examples\n    --------\n    The examples below illustrate common ways of initializing a `SkyCoord`\n    object.  For a complete description of the allowed syntax see the\n    full coordinates documentation.  First some imports::\n    \n      >>> from astropy.coordinates import SkyCoord  # High-level coordinates\n      >>> from astropy.coordinates import ICRS, Galactic, FK4, FK5  # Low-level frames\n      >>> from astropy.coordinates import Angle, Latitude, Longitude  # Angles\n      >>> import astropy.units as u\n    \n    The coordinate values and frame specification can now be provided using\n    positional and keyword arguments::\n    \n      >>> c = SkyCoord(10, 20, unit=\"deg\")  # defaults to ICRS frame\n      >>> c = SkyCoord([1, 2, 3], [-30, 45, 8], frame=\"icrs\", unit=\"deg\")  # 3 coords\n    \n      >>> coords = [\"1:12:43.2 +31:12:43\", \"1 12 43.2 +31 12 43\"]\n      >>> c = SkyCoord(coords, frame=FK4, unit=(u.hourangle, u.deg), obstime=\"J1992.21\")\n    \n      >>> c = SkyCoord(\"1h12m43.2s +1d12m43s\", frame=Galactic)  # Units from string\n      >>> c = SkyCoord(frame=\"galactic\", l=\"1h12m43.2s\", b=\"+1d12m43s\")\n    \n      >>> ra = Longitude([1, 2, 3], unit=u.deg)  # Could also use Angle\n      >>> dec = np.array([4.5, 5.2, 6.3]) * u.deg  # Astropy Quantity\n      >>> c = SkyCoord(ra, dec, frame='icrs')\n      >>> c = SkyCoord(frame=ICRS, ra=ra, dec=dec, obstime='2001-01-02T12:34:56')\n    \n      >>> c = FK4(1 * u.deg, 2 * u.deg)  # Uses defaults for obstime, equinox\n      >>> c = SkyCoord(c, obstime='J2010.11', equinox='B1965')  # Override defaults\n    \n      >>> c = SkyCoord(w=0, u=1, v=2, unit='kpc', frame='galactic',\n      ...              representation_type='cartesian')\n    \n      >>> c = SkyCoord([ICRS(ra=1*u.deg, dec=2*u.deg), ICRS(ra=3*u.deg, dec=4*u.deg)])\n    \n    Velocity components (proper motions or radial velocities) can also be\n    provided in a similar manner::\n    \n      >>> c = SkyCoord(ra=1*u.deg, dec=2*u.deg, radial_velocity=10*u.km/u.s)\n    \n      >>> c = SkyCoord(ra=1*u.deg, dec=2*u.deg, pm_ra_cosdec=2*u.mas/u.yr, pm_dec=1*u.mas/u.yr)\n    \n    As shown, the frame can be a `~astropy.coordinates.BaseCoordinateFrame`\n    class or the corresponding string alias.  The frame classes that are built in\n    to astropy are `ICRS`, `FK5`, `FK4`, `FK4NoETerms`, and `Galactic`.\n    The string aliases are simply lower-case versions of the class name, and\n    allow for creating a `SkyCoord` object and transforming frames without\n    explicitly importing the frame classes.",
-            "comment": "",
             "x": 846.6372798699538,
             "y": 412.46190734218357,
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
             "dataHash": "fd51ba0df34bcd3410936f184228b5c8b9cea9c3079572169837bb370a5144a7",
-            "fields": [
-                {
+            "parentId": null,
+            "embedId": null,
+            "fields": {
+                "690c2d95-0bd7-4e79-bdb1-25a7a1537233": {
                     "name": "self",
                     "value": "",
                     "defaultValue": "",
@@ -53,10 +70,13 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "690c2d95-0bd7-4e79-bdb1-25a7a1537233",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "OutputPort"
+                    "parameterType": "Application",
+                    "usage": "OutputPort",
+                    "edgeIds": [
+                        "6152faf5-a158-4d1f-9080-8a5c6826e3a2"
+                    ]
                 },
-                {
+                "e6a69594-5e8a-4492-83a6-515516a7828d": {
                     "name": "ra",
                     "value": 12.3456,
                     "defaultValue": "",
@@ -68,10 +88,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "e6a69594-5e8a-4492-83a6-515516a7828d",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort"
+                    "parameterType": "Application",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "c9f9383b-4154-46df-b731-bc5bb68419cb": {
                     "name": "dec",
                     "value": -23.456,
                     "defaultValue": "",
@@ -83,10 +104,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "c9f9383b-4154-46df-b731-bc5bb68419cb",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort"
+                    "parameterType": "Application",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "dff81bef-fe01-4f89-8c39-752f2c17684f": {
                     "name": "unit",
                     "value": "deg",
                     "defaultValue": "",
@@ -98,10 +120,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "dff81bef-fe01-4f89-8c39-752f2c17684f",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort"
+                    "parameterType": "Application",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "ffe56d8f-89e4-444b-851d-11ecab39f0e3": {
                     "name": "copy",
                     "value": true,
                     "defaultValue": "true",
@@ -113,10 +136,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "ffe56d8f-89e4-444b-851d-11ecab39f0e3",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort"
+                    "parameterType": "Application",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "2f612a0a-c23e-4238-9fbb-5728ee37cf03": {
                     "name": "group_start",
                     "value": false,
                     "defaultValue": "dummy",
@@ -128,10 +152,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "2f612a0a-c23e-4238-9fbb-5728ee37cf03",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "12803406-1d6c-4bd1-a25f-07c835132d72": {
                     "name": "execution_time",
                     "value": 2,
                     "defaultValue": "2",
@@ -143,10 +168,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "12803406-1d6c-4bd1-a25f-07c835132d72",
-                    "parameterType": "ConstraintParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Constraint",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "3fdf4a21-8243-4483-87f6-1ea2de64fd5f": {
                     "name": "num_cpus",
                     "value": 1,
                     "defaultValue": "dummy",
@@ -158,10 +184,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "3fdf4a21-8243-4483-87f6-1ea2de64fd5f",
-                    "parameterType": "ConstraintParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Constraint",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "9541d806-9d93-41a6-90d2-9f828a9505f4": {
                     "name": "func_name",
                     "value": "astropy.coordinates.sky_coordinate.SkyCoord.__init__",
                     "defaultValue": "astropy.coordinates.sky_coordinate.SkyCoord.__init__",
@@ -173,10 +200,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "9541d806-9d93-41a6-90d2-9f828a9505f4",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "6786dd71-ef5f-40cc-a949-0ef0fad18c4b": {
                     "name": "dropclass",
                     "value": "dlg.apps.pyfunc.PyFuncApp",
                     "defaultValue": "dlg.apps.pyfunc.PyFuncApp",
@@ -188,10 +216,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "6786dd71-ef5f-40cc-a949-0ef0fad18c4b",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "a6f92788-fe35-4cae-907c-add7bcb0943b": {
                     "name": "input_parser",
                     "value": "pickle",
                     "defaultValue": "pickle",
@@ -209,10 +238,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "a6f92788-fe35-4cae-907c-add7bcb0943b",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "c0857af9-abf3-4d0c-ad99-997cead4a7d6": {
                     "name": "output_parser",
                     "value": "pickle",
                     "defaultValue": "pickle",
@@ -230,41 +260,30 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "c0857af9-abf3-4d0c-ad99-997cead4a7d6",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
+            },
             "inputApplicationId": null,
-            "inputApplicationDescription": "",
-            "inputApplicationComment": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationId": null,
-            "outputApplicationDescription": "",
-            "outputApplicationComment": ""
+            "outputApplicationId": null
         },
-        {
+        "7393ecdf-d6ae-4215-9c92-eeef26602dfd": {
             "category": "File",
             "categoryType": "Data",
-            "isGroup": false,
-            "color": "#2c2c2c",
-            "drawOrderHint": 0,
             "id": "7393ecdf-d6ae-4215-9c92-eeef26602dfd",
             "name": "File",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "comment": "",
             "x": 1029.2950961798972,
             "y": 423.4589271200217,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "585ff99",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master.palette",
             "dataHash": "f40f919804d78c6b8e2674e3089e84fcb9a43bd732aec6bd8e29ddffb724de4a",
-            "fields": [
-                {
+            "parentId": null,
+            "embedId": null,
+            "fields": {
+                "194dc513-0713-4e1e-ba78-a4c004cef9af": {
                     "name": "filepath",
                     "value": "",
                     "defaultValue": "",
@@ -276,10 +295,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "194dc513-0713-4e1e-ba78-a4c004cef9af",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort"
+                    "parameterType": "Application",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "48b5cf0d-5a2c-4c7c-8a38-0f7c40cc5f10": {
                     "name": "check_filepath_exists",
                     "value": false,
                     "defaultValue": "False",
@@ -291,10 +311,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "48b5cf0d-5a2c-4c7c-8a38-0f7c40cc5f10",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "8cdcee10-b876-4188-9fa9-6e26729f83c8": {
                     "name": "dropclass",
                     "value": "dlg.data.drops.file.FileDROP",
                     "defaultValue": "dlg.data.drops.file.FileDROP",
@@ -306,10 +327,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "8cdcee10-b876-4188-9fa9-6e26729f83c8",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "022bf005-3753-409e-8293-5b83d1b67423": {
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "False",
@@ -321,10 +343,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "022bf005-3753-409e-8293-5b83d1b67423",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "c756750c-e238-4229-a61f-9d1395389331": {
                     "name": "persist",
                     "value": true,
                     "defaultValue": "True",
@@ -336,10 +359,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "c756750c-e238-4229-a61f-9d1395389331",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "f111241a-7b2f-4dcf-be77-1e493dda0935": {
                     "name": "data_volume",
                     "value": 5,
                     "defaultValue": "5",
@@ -351,10 +375,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "f111241a-7b2f-4dcf-be77-1e493dda0935",
-                    "parameterType": "ConstraintParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Constraint",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "7e635ab0-1fb9-458d-9feb-03ed3e84f0e1": {
                     "name": "group_end",
                     "value": false,
                     "defaultValue": "False",
@@ -366,10 +391,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "7e635ab0-1fb9-458d-9feb-03ed3e84f0e1",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "27f9f41c-8341-4063-b705-7b55f1ba40cb": {
                     "name": "dummy",
                     "value": "",
                     "defaultValue": "",
@@ -381,33 +407,26 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "27f9f41c-8341-4063-b705-7b55f1ba40cb",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "InputOutput"
+                    "parameterType": "Application",
+                    "usage": "InputOutput",
+                    "edgeIds": [
+                        "6152faf5-a158-4d1f-9080-8a5c6826e3a2"
+                    ]
                 }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
+            },
             "inputApplicationId": null,
-            "inputApplicationDescription": "",
-            "inputApplicationComment": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationId": null,
-            "outputApplicationDescription": "",
-            "outputApplicationComment": ""
+            "outputApplicationId": null
         }
-    ],
-    "linkDataArray": [
-        {
-            "comment": "",
-            "from": "f7184188-f68a-4d5a-8c5d-bb264025361e",
-            "fromPort": "690c2d95-0bd7-4e79-bdb1-25a7a1537233",
-            "to": "7393ecdf-d6ae-4215-9c92-eeef26602dfd",
-            "toPort": "27f9f41c-8341-4063-b705-7b55f1ba40cb",
-            "loop_aware": "0",
+    },
+    "edges": {
+        "6152faf5-a158-4d1f-9080-8a5c6826e3a2": {
+            "id": "6152faf5-a158-4d1f-9080-8a5c6826e3a2",
+            "srcNodeId": "f7184188-f68a-4d5a-8c5d-bb264025361e",
+            "srcPortId": "690c2d95-0bd7-4e79-bdb1-25a7a1537233",
+            "destNodeId": "7393ecdf-d6ae-4215-9c92-eeef26602dfd",
+            "destPortId": "27f9f41c-8341-4063-b705-7b55f1ba40cb",
+            "loopAware": false,
             "closesLoop": false
         }
-    ]
+    }
 }

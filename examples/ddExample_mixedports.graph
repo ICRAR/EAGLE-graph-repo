@@ -1,47 +1,64 @@
 {
     "modelData": {
-        "filePath": "examples/ddExample_mixedports.graph",
-        "fileType": "Graph",
+        "name": "ddExample_mixedports.graph",
         "shortDescription": "",
         "detailedDescription": "",
-        "repoService": "GitHub",
-        "repoBranch": "master",
-        "repo": "ICRAR/EAGLE-graph-repo",
+        "type": "Graph",
+        "schemaVersion": "V4",
+        "readonly": true,
+        "location": {
+            "repositoryService": "GitHub",
+            "repositoryBranch": "master",
+            "repositoryName": "ICRAR/EAGLE-graph-repo",
+            "repositoryPath": "examples",
+            "repositoryFileName": "ddExample_mixedports.graph",
+            "commitHash": "3105d8180c89f3d7ff9513e214f8e40be47c0521",
+            "downloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/3105d8180c89f3d7ff9513e214f8e40be47c0521/examples/ddExample_mixedports.graph"
+        },
         "generatorVersion": "v6.9.1",
         "generatorCommitHash": "b446e3376c7e58f9521bc3e0efecaed830c4440e",
         "generatorName": "EAGLE",
-        "schemaVersion": "OJS",
-        "readonly": true,
         "repositoryUrl": "",
-        "commitHash": "",
-        "downloadUrl": "",
+        "graphLocation": {
+            "repositoryService": "Unknown",
+            "repositoryBranch": "",
+            "repositoryName": "",
+            "repositoryPath": "",
+            "repositoryFileName": "",
+            "commitHash": "",
+            "downloadUrl": ""
+        },
         "signature": "",
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": 0,
-        "numLGNodes": 5
+        "numLGNodes": 5,
+        "repo": "ICRAR/EAGLE-graph-repo",
+        "repoBranch": "graph-updater-test",
+        "repoService": "GitHub",
+        "filePath": "examples/ddExample_mixedports.graph",
+        "commitHash": "",
+        "downloadUrl": ""
     },
     "activeGraphConfigId": null,
     "graphConfigurations": {},
-    "nodeDataArray": [
-        {
+    "nodes": {
+        "1cdaaf22-2991-4bce-b849-1d1f40afb21b": {
             "category": "BashShellApp",
             "categoryType": "Application",
-            "isGroup": false,
-            "color": "#0059a5",
-            "drawOrderHint": 0,
             "id": "1cdaaf22-2991-4bce-b849-1d1f40afb21b",
             "name": "dd",
             "description": "An application component run within the Bash Shell",
-            "comment": "",
             "x": 727.6304155413827,
             "y": 417.8361437033344,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
-            "fields": [
-                {
+            "parentId": null,
+            "embedId": null,
+            "fields": {
+                "c874755c-488e-48ee-9cda-fad00498a46f": {
                     "name": "execution_time",
                     "value": 5,
                     "defaultValue": "0",
@@ -53,10 +70,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "c874755c-488e-48ee-9cda-fad00498a46f",
-                    "parameterType": "ConstraintParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Constraint",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "b1dfaf7a-86cb-4c91-82bf-2417093b9881": {
                     "name": "num_cpus",
                     "value": 1,
                     "defaultValue": "0",
@@ -68,10 +86,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "b1dfaf7a-86cb-4c91-82bf-2417093b9881",
-                    "parameterType": "ConstraintParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Constraint",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "80bba009-d36f-41ec-9ae0-b81070c74284": {
                     "name": "group_start",
                     "value": false,
                     "defaultValue": "false",
@@ -83,10 +102,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "80bba009-d36f-41ec-9ae0-b81070c74284",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "25c9e070-b5f2-4bc8-99d4-33d238e196dd": {
                     "name": "command",
                     "value": "dd if={if} of={of} count={count} bs={bs}",
                     "defaultValue": "",
@@ -98,10 +118,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "25c9e070-b5f2-4bc8-99d4-33d238e196dd",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "90953ffe-feb1-415a-8490-504e50056c58": {
                     "name": "bs",
                     "value": 2048,
                     "defaultValue": "0",
@@ -113,10 +134,13 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "90953ffe-feb1-415a-8490-504e50056c58",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "InputPort"
+                    "parameterType": "Application",
+                    "usage": "InputPort",
+                    "edgeIds": [
+                        "98e7e530-d86f-4415-a3aa-49c7568f405f"
+                    ]
                 },
-                {
+                "63da6f8a-affc-4a72-939c-318c15615073": {
                     "name": "count",
                     "value": 10,
                     "defaultValue": "0",
@@ -128,10 +152,13 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "63da6f8a-affc-4a72-939c-318c15615073",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "InputPort"
+                    "parameterType": "Application",
+                    "usage": "InputPort",
+                    "edgeIds": [
+                        "3a6c8605-e724-46f2-9287-91a6be5c9c5a"
+                    ]
                 },
-                {
+                "7f30a1f3-cecb-41ad-b247-5bb3c842ce61": {
                     "name": "if",
                     "value": "",
                     "defaultValue": "",
@@ -143,10 +170,13 @@
                     "positional": false,
                     "encoding": "path",
                     "id": "7f30a1f3-cecb-41ad-b247-5bb3c842ce61",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "InputPort"
+                    "parameterType": "Application",
+                    "usage": "InputPort",
+                    "edgeIds": [
+                        "631e4bd9-72a4-4c90-9d10-2b92952e8de2"
+                    ]
                 },
-                {
+                "af3f0f53-903d-4b52-9508-3514d9af9519": {
                     "name": "of",
                     "value": "",
                     "defaultValue": "",
@@ -158,10 +188,13 @@
                     "positional": false,
                     "encoding": "path",
                     "id": "af3f0f53-903d-4b52-9508-3514d9af9519",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "OutputPort"
+                    "parameterType": "Application",
+                    "usage": "OutputPort",
+                    "edgeIds": [
+                        "abb04bec-e381-4c35-b2a7-5a9b4c2cb127"
+                    ]
                 },
-                {
+                "8c8e0108-d2ee-4e52-bff8-a0831a492dda": {
                     "name": "dropclass",
                     "value": "dlg.apps.bash_shell_app.BashShellApp",
                     "defaultValue": "",
@@ -173,41 +206,30 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "8c8e0108-d2ee-4e52-bff8-a0831a492dda",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
+            },
             "inputApplicationId": null,
-            "inputApplicationDescription": "",
-            "inputApplicationComment": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationId": null,
-            "outputApplicationDescription": "",
-            "outputApplicationComment": ""
+            "outputApplicationId": null
         },
-        {
+        "aebf10e1-5512-4f5b-9b06-a6fa3517fee9": {
             "category": "File",
             "categoryType": "Data",
-            "isGroup": false,
-            "color": "#2c2c2c",
-            "drawOrderHint": 0,
             "id": "aebf10e1-5512-4f5b-9b06-a6fa3517fee9",
             "name": "/dev/urandom",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "comment": "",
             "x": 601.9309397907548,
             "y": 409.5760388534597,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
-            "fields": [
-                {
+            "parentId": null,
+            "embedId": null,
+            "fields": {
+                "96a166b2-c278-4a9f-bb72-ae0b94e74918": {
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -219,10 +241,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "96a166b2-c278-4a9f-bb72-ae0b94e74918",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "ff751dc9-b40b-47c7-9a73-07bd2963161e": {
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -234,10 +257,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "ff751dc9-b40b-47c7-9a73-07bd2963161e",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "32ee9503-9f77-443c-84a1-29e37e8d73f3": {
                     "name": "data_volume",
                     "value": 5,
                     "defaultValue": "0",
@@ -249,10 +273,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "32ee9503-9f77-443c-84a1-29e37e8d73f3",
-                    "parameterType": "ConstraintParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Constraint",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "a0c2ada7-4e61-423c-9d20-d44b9508b458": {
                     "name": "group_end",
                     "value": false,
                     "defaultValue": "false",
@@ -264,10 +289,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "a0c2ada7-4e61-423c-9d20-d44b9508b458",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "1ebf352d-bad2-4b2b-8571-77b0f25674ab": {
                     "name": "check_filepath_exists",
                     "value": false,
                     "defaultValue": "false",
@@ -279,10 +305,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "1ebf352d-bad2-4b2b-8571-77b0f25674ab",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "6d88d780-7101-4acc-b63f-e4f5f51da794": {
                     "name": "filepath",
                     "value": "/dev/urandom",
                     "defaultValue": "",
@@ -294,10 +321,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "6d88d780-7101-4acc-b63f-e4f5f51da794",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "9604d17e-3dda-429c-ab36-4a9dc43ff0f8": {
                     "name": "dirname",
                     "value": "",
                     "defaultValue": "",
@@ -309,10 +337,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "9604d17e-3dda-429c-ab36-4a9dc43ff0f8",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "6edcc91a-93b3-4ed6-98a6-bc0c9d0610d6": {
                     "name": "if",
                     "value": "",
                     "defaultValue": "",
@@ -324,10 +353,13 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "6edcc91a-93b3-4ed6-98a6-bc0c9d0610d6",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "OutputPort"
+                    "parameterType": "Application",
+                    "usage": "OutputPort",
+                    "edgeIds": [
+                        "631e4bd9-72a4-4c90-9d10-2b92952e8de2"
+                    ]
                 },
-                {
+                "1757d8dc-89ef-43fa-b243-b61a9637a2ca": {
                     "name": "dropclass",
                     "value": "dlg.data.drops.file.FileDROP",
                     "defaultValue": "dlg.data.drops.file.FileDROP",
@@ -339,41 +371,30 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "1757d8dc-89ef-43fa-b243-b61a9637a2ca",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
+            },
             "inputApplicationId": null,
-            "inputApplicationDescription": "",
-            "inputApplicationComment": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationId": null,
-            "outputApplicationDescription": "",
-            "outputApplicationComment": ""
+            "outputApplicationId": null
         },
-        {
+        "baaab251-3cc0-436e-b752-c258822ffce5": {
             "category": "File",
             "categoryType": "Data",
-            "isGroup": false,
-            "color": "#2c2c2c",
-            "drawOrderHint": 0,
             "id": "baaab251-3cc0-436e-b752-c258822ffce5",
             "name": "OutputFile",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "comment": "",
             "x": 840.3298912920126,
             "y": 409.5348932210704,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
             "dataHash": "",
-            "fields": [
-                {
+            "parentId": null,
+            "embedId": null,
+            "fields": {
+                "4faad2e5-f64a-4573-a62c-c134f3019cdf": {
                     "name": "persist",
                     "value": false,
                     "defaultValue": "false",
@@ -385,10 +406,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "4faad2e5-f64a-4573-a62c-c134f3019cdf",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "7b1c9f31-d943-4daf-9196-1fb1b7d0fa27": {
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "false",
@@ -400,10 +422,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "7b1c9f31-d943-4daf-9196-1fb1b7d0fa27",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "ab595001-ab2b-4801-a9e1-b4109a0a790b": {
                     "name": "data_volume",
                     "value": 5,
                     "defaultValue": "0",
@@ -415,10 +438,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "ab595001-ab2b-4801-a9e1-b4109a0a790b",
-                    "parameterType": "ConstraintParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Constraint",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "458b55bf-6488-461e-92e9-4140a10e456f": {
                     "name": "group_end",
                     "value": false,
                     "defaultValue": "false",
@@ -430,10 +454,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "458b55bf-6488-461e-92e9-4140a10e456f",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "425d86d8-ee30-4957-804d-dcc7fc1444c0": {
                     "name": "check_filepath_exists",
                     "value": false,
                     "defaultValue": "false",
@@ -445,10 +470,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "425d86d8-ee30-4957-804d-dcc7fc1444c0",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "4e60a352-c680-4612-9e4a-966dcebab02c": {
                     "name": "filepath",
                     "value": "",
                     "defaultValue": "",
@@ -460,10 +486,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "4e60a352-c680-4612-9e4a-966dcebab02c",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "ef6b7202-c4cf-4ab7-aa98-9bb486466349": {
                     "name": "dirname",
                     "value": "",
                     "defaultValue": "",
@@ -475,10 +502,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "ef6b7202-c4cf-4ab7-aa98-9bb486466349",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "19c34da9-ab0b-485f-af3c-c92c374fce1b": {
                     "name": "of",
                     "value": "",
                     "defaultValue": "",
@@ -490,10 +518,13 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "19c34da9-ab0b-485f-af3c-c92c374fce1b",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "InputPort"
+                    "parameterType": "Application",
+                    "usage": "InputPort",
+                    "edgeIds": [
+                        "abb04bec-e381-4c35-b2a7-5a9b4c2cb127"
+                    ]
                 },
-                {
+                "34ae6b35-ba93-48f5-97c6-4e11a9c4d6e5": {
                     "name": "dropclass",
                     "value": "dlg.data.drops.file.FileDROP",
                     "defaultValue": "dlg.data.drops.file.FileDROP",
@@ -505,41 +536,30 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "34ae6b35-ba93-48f5-97c6-4e11a9c4d6e5",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
+            },
             "inputApplicationId": null,
-            "inputApplicationDescription": "",
-            "inputApplicationComment": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationId": null,
-            "outputApplicationDescription": "",
-            "outputApplicationComment": ""
+            "outputApplicationId": null
         },
-        {
+        "538a49c2-7627-40a0-9364-0298c335405c": {
             "category": "Memory",
             "categoryType": "Data",
-            "isGroup": false,
-            "color": "#2c2c2c",
-            "drawOrderHint": 0,
             "id": "538a49c2-7627-40a0-9364-0298c335405c",
             "name": "bs",
             "description": "In-memory storage of intermediate data products",
-            "comment": "",
             "x": 620.9301341261383,
             "y": 339.8221621314931,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "24cd5d5",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/master/daliuge/daliuge-master.palette",
             "dataHash": "66c8e8c44691e00847d02d2707d65fbc9f5252f260afcfa1bc3bf61abb764a83",
-            "fields": [
-                {
+            "parentId": null,
+            "embedId": null,
+            "fields": {
+                "14148bd9-ef97-49a3-b829-ac9214f01782": {
                     "name": "pydata",
                     "value": 2048,
                     "defaultValue": "None",
@@ -551,10 +571,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "14148bd9-ef97-49a3-b829-ac9214f01782",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "5491b1ed-08ba-4a51-9000-a41116b44244": {
                     "name": "bs",
                     "value": "",
                     "defaultValue": "",
@@ -566,10 +587,13 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "5491b1ed-08ba-4a51-9000-a41116b44244",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "OutputPort"
+                    "parameterType": "Application",
+                    "usage": "OutputPort",
+                    "edgeIds": [
+                        "98e7e530-d86f-4415-a3aa-49c7568f405f"
+                    ]
                 },
-                {
+                "f43987d8-2f54-4b96-8a6e-ffe291420251": {
                     "name": "persist",
                     "value": false,
                     "defaultValue": "False",
@@ -581,10 +605,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "f43987d8-2f54-4b96-8a6e-ffe291420251",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "893e8f4c-db0b-4e59-8ccc-3b6a5d64b9b3": {
                     "name": "data_volume",
                     "value": 5,
                     "defaultValue": "5",
@@ -596,10 +621,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "893e8f4c-db0b-4e59-8ccc-3b6a5d64b9b3",
-                    "parameterType": "ConstraintParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Constraint",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "ac239c9e-5bbc-4eb6-a44b-c6db428a0111": {
                     "name": "group_end",
                     "value": false,
                     "defaultValue": "False",
@@ -611,10 +637,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "ac239c9e-5bbc-4eb6-a44b-c6db428a0111",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "7a4460e2-f3ff-441e-8cc6-75684372e8f7": {
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "False",
@@ -626,10 +653,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "7a4460e2-f3ff-441e-8cc6-75684372e8f7",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "d62d1d93-dba1-45f0-a904-00fea9011462": {
                     "name": "dropclass",
                     "value": "dlg.data.drops.memory.InMemoryDROP",
                     "defaultValue": "dlg.data.drops.memory.InMemoryDROP",
@@ -641,10 +669,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "d62d1d93-dba1-45f0-a904-00fea9011462",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "9bad936e-7608-4c1e-8fce-016e93b59b27": {
                     "name": "base_name",
                     "value": "memory",
                     "defaultValue": "memory",
@@ -656,41 +685,30 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "9bad936e-7608-4c1e-8fce-016e93b59b27",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
+            },
             "inputApplicationId": null,
-            "inputApplicationDescription": "",
-            "inputApplicationComment": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationId": null,
-            "outputApplicationDescription": "",
-            "outputApplicationComment": ""
+            "outputApplicationId": null
         },
-        {
+        "35815330-8856-4789-9e3d-7822507e0f7b": {
             "category": "Memory",
             "categoryType": "Data",
-            "isGroup": false,
-            "color": "#2c2c2c",
-            "drawOrderHint": 0,
             "id": "35815330-8856-4789-9e3d-7822507e0f7b",
             "name": "count",
             "description": "In-memory storage of intermediate data products",
-            "comment": "",
             "x": 613.6720915972812,
             "y": 474.8288570909831,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "24cd5d5",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/master/daliuge/daliuge-master.palette",
             "dataHash": "66c8e8c44691e00847d02d2707d65fbc9f5252f260afcfa1bc3bf61abb764a83",
-            "fields": [
-                {
+            "parentId": null,
+            "embedId": null,
+            "fields": {
+                "12d83c76-1e61-4b7f-bca3-69fba597ec48": {
                     "name": "pydata",
                     "value": 10,
                     "defaultValue": "None",
@@ -702,10 +720,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "12d83c76-1e61-4b7f-bca3-69fba597ec48",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "ee7113ff-6277-43d2-bb6e-e4c7dc4faec1": {
                     "name": "count",
                     "value": "",
                     "defaultValue": "",
@@ -717,10 +736,13 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "ee7113ff-6277-43d2-bb6e-e4c7dc4faec1",
-                    "parameterType": "ComponentParameter",
-                    "usage": "OutputPort"
+                    "parameterType": "Component",
+                    "usage": "OutputPort",
+                    "edgeIds": [
+                        "3a6c8605-e724-46f2-9287-91a6be5c9c5a"
+                    ]
                 },
-                {
+                "d1c8bea1-f5b4-4d90-a4a0-065fe396da68": {
                     "name": "persist",
                     "value": false,
                     "defaultValue": "False",
@@ -732,10 +754,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "d1c8bea1-f5b4-4d90-a4a0-065fe396da68",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "885b173a-cf1e-49cc-9f97-7447573c4cbb": {
                     "name": "data_volume",
                     "value": 5,
                     "defaultValue": "5",
@@ -747,10 +770,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "885b173a-cf1e-49cc-9f97-7447573c4cbb",
-                    "parameterType": "ConstraintParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Constraint",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "8c797f33-3b11-4cd8-8b91-b587ac9e3f53": {
                     "name": "group_end",
                     "value": false,
                     "defaultValue": "False",
@@ -762,10 +786,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "8c797f33-3b11-4cd8-8b91-b587ac9e3f53",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "4922e326-31f7-4534-9531-686b53b1965d": {
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "False",
@@ -777,10 +802,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "4922e326-31f7-4534-9531-686b53b1965d",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "01a840b4-f770-460b-bfc5-b90e67ad5276": {
                     "name": "dropclass",
                     "value": "dlg.data.drops.memory.InMemoryDROP",
                     "defaultValue": "dlg.data.drops.memory.InMemoryDROP",
@@ -792,10 +818,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "01a840b4-f770-460b-bfc5-b90e67ad5276",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "2ea7eb99-3b1f-4d31-bada-6cb97e5ffd6f": {
                     "name": "base_name",
                     "value": "memory",
                     "defaultValue": "memory",
@@ -807,60 +834,51 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "2ea7eb99-3b1f-4d31-bada-6cb97e5ffd6f",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
+            },
             "inputApplicationId": null,
-            "inputApplicationDescription": "",
-            "inputApplicationComment": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationId": null,
-            "outputApplicationDescription": "",
-            "outputApplicationComment": ""
+            "outputApplicationId": null
         }
-    ],
-    "linkDataArray": [
-        {
-            "comment": "",
-            "from": "aebf10e1-5512-4f5b-9b06-a6fa3517fee9",
-            "fromPort": "6edcc91a-93b3-4ed6-98a6-bc0c9d0610d6",
-            "to": "1cdaaf22-2991-4bce-b849-1d1f40afb21b",
-            "toPort": "7f30a1f3-cecb-41ad-b247-5bb3c842ce61",
-            "loop_aware": "0",
+    },
+    "edges": {
+        "631e4bd9-72a4-4c90-9d10-2b92952e8de2": {
+            "id": "631e4bd9-72a4-4c90-9d10-2b92952e8de2",
+            "srcNodeId": "aebf10e1-5512-4f5b-9b06-a6fa3517fee9",
+            "srcPortId": "6edcc91a-93b3-4ed6-98a6-bc0c9d0610d6",
+            "destNodeId": "1cdaaf22-2991-4bce-b849-1d1f40afb21b",
+            "destPortId": "7f30a1f3-cecb-41ad-b247-5bb3c842ce61",
+            "loopAware": false,
             "closesLoop": false
         },
-        {
-            "comment": "",
-            "from": "1cdaaf22-2991-4bce-b849-1d1f40afb21b",
-            "fromPort": "af3f0f53-903d-4b52-9508-3514d9af9519",
-            "to": "baaab251-3cc0-436e-b752-c258822ffce5",
-            "toPort": "19c34da9-ab0b-485f-af3c-c92c374fce1b",
-            "loop_aware": "0",
+        "abb04bec-e381-4c35-b2a7-5a9b4c2cb127": {
+            "id": "abb04bec-e381-4c35-b2a7-5a9b4c2cb127",
+            "srcNodeId": "1cdaaf22-2991-4bce-b849-1d1f40afb21b",
+            "srcPortId": "af3f0f53-903d-4b52-9508-3514d9af9519",
+            "destNodeId": "baaab251-3cc0-436e-b752-c258822ffce5",
+            "destPortId": "19c34da9-ab0b-485f-af3c-c92c374fce1b",
+            "loopAware": false,
             "closesLoop": false
         },
-        {
-            "comment": "",
-            "from": "538a49c2-7627-40a0-9364-0298c335405c",
-            "fromPort": "5491b1ed-08ba-4a51-9000-a41116b44244",
-            "to": "1cdaaf22-2991-4bce-b849-1d1f40afb21b",
-            "toPort": "90953ffe-feb1-415a-8490-504e50056c58",
-            "loop_aware": "0",
+        "98e7e530-d86f-4415-a3aa-49c7568f405f": {
+            "id": "98e7e530-d86f-4415-a3aa-49c7568f405f",
+            "srcNodeId": "538a49c2-7627-40a0-9364-0298c335405c",
+            "srcPortId": "5491b1ed-08ba-4a51-9000-a41116b44244",
+            "destNodeId": "1cdaaf22-2991-4bce-b849-1d1f40afb21b",
+            "destPortId": "90953ffe-feb1-415a-8490-504e50056c58",
+            "loopAware": false,
             "closesLoop": false
         },
-        {
-            "comment": "",
-            "from": "35815330-8856-4789-9e3d-7822507e0f7b",
-            "fromPort": "ee7113ff-6277-43d2-bb6e-e4c7dc4faec1",
-            "to": "1cdaaf22-2991-4bce-b849-1d1f40afb21b",
-            "toPort": "63da6f8a-affc-4a72-939c-318c15615073",
-            "loop_aware": "0",
+        "3a6c8605-e724-46f2-9287-91a6be5c9c5a": {
+            "id": "3a6c8605-e724-46f2-9287-91a6be5c9c5a",
+            "srcNodeId": "35815330-8856-4789-9e3d-7822507e0f7b",
+            "srcPortId": "ee7113ff-6277-43d2-bb6e-e4c7dc4faec1",
+            "destNodeId": "1cdaaf22-2991-4bce-b849-1d1f40afb21b",
+            "destPortId": "63da6f8a-affc-4a72-939c-318c15615073",
+            "loopAware": false,
             "closesLoop": false
         }
-    ]
+    }
 }

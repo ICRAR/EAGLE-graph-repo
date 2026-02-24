@@ -1,47 +1,64 @@
 {
     "modelData": {
-        "filePath": "examples/earth_location.graph",
-        "fileType": "Graph",
+        "name": "earth_location.graph",
         "shortDescription": "Retrieve geodetic coordinates of address",
         "detailedDescription": "Graph uses astropy's EarthLocation functions to query OpenStreetMap for the geocentric location of an address and converts the coordinates to geodetic.",
-        "repoService": "GitHub",
-        "repoBranch": "master",
-        "repo": "ICRAR/EAGLE-graph-repo",
+        "type": "Graph",
+        "schemaVersion": "V4",
+        "readonly": false,
+        "location": {
+            "repositoryService": "GitHub",
+            "repositoryBranch": "master",
+            "repositoryName": "ICRAR/EAGLE-graph-repo",
+            "repositoryPath": "examples",
+            "repositoryFileName": "earth_location.graph",
+            "commitHash": "d23801461dbb1f013c9f56c8b39e03d998843a51",
+            "downloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/d23801461dbb1f013c9f56c8b39e03d998843a51/examples/earth_location.graph"
+        },
         "generatorVersion": "v6.9.0",
         "generatorCommitHash": "43c986cc3fa198044b9e82107e31bbb327c6eca3",
         "generatorName": "EAGLE",
-        "schemaVersion": "OJS",
-        "readonly": false,
         "repositoryUrl": "",
-        "commitHash": "",
-        "downloadUrl": "",
+        "graphLocation": {
+            "repositoryService": "Unknown",
+            "repositoryBranch": "",
+            "repositoryName": "",
+            "repositoryPath": "",
+            "repositoryFileName": "",
+            "commitHash": "",
+            "downloadUrl": ""
+        },
         "signature": "",
         "lastModifiedName": "",
         "lastModifiedEmail": "",
         "lastModifiedDatetime": 0,
-        "numLGNodes": 4
+        "numLGNodes": 4,
+        "repo": "ICRAR/EAGLE-graph-repo",
+        "repoBranch": "graph-updater-test",
+        "repoService": "GitHub",
+        "filePath": "examples/earth_location.graph",
+        "commitHash": "",
+        "downloadUrl": ""
     },
     "activeGraphConfigId": null,
     "graphConfigurations": {},
-    "nodeDataArray": [
-        {
+    "nodes": {
+        "bd2ff1aa-4142-4ae7-806f-bbd69e2b142c": {
             "category": "PyFuncApp",
             "categoryType": "Application",
-            "isGroup": false,
-            "color": "#0059a5",
-            "drawOrderHint": 0,
             "id": "bd2ff1aa-4142-4ae7-806f-bbd69e2b142c",
             "name": "EarthLocation.of_address",
             "description": "Return an object of this class for a given address by querying either\n    the OpenStreetMap Nominatim tool [1]_ (default) or the Google geocoding\n    API [2]_, which requires a specified API key.\n    \n    This is intended as a quick convenience function to get easy access to\n    locations. If you need to specify a precise location, you should use the\n    initializer directly and pass in a longitude, latitude, and elevation.\n    \n    In the background, this just issues a web query to either of\n    the APIs noted above. This is not meant to be abused! Both\n    OpenStreetMap and Google use IP-based query limiting and will ban your\n    IP if you send more than a few thousand queries per hour [2]_.\n    \n    .. warning::\n        If the query returns more than one location (e.g., searching on\n        ``address='springfield'``), this function will use the **first**\n        returned location.",
-            "comment": "",
             "x": 561.8780257485739,
             "y": 109.32408045935979,
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
             "dataHash": "8c109df1712c9ffefec0d6920879741db46fa186a3de6879814f522d1125f914",
-            "fields": [
-                {
+            "parentId": null,
+            "embedId": null,
+            "fields": {
+                "fdb34b6c-db72-4d81-b078-15cc23b45cba": {
                     "name": "address",
                     "value": "7 Fairway, 6009 Crawley, WA",
                     "defaultValue": "Unknown",
@@ -53,10 +70,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "fdb34b6c-db72-4d81-b078-15cc23b45cba",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort"
+                    "parameterType": "Application",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "96cb19cb-54b8-4273-b672-138c948e6c86": {
                     "name": "get_height",
                     "value": false,
                     "defaultValue": "false",
@@ -68,10 +86,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "96cb19cb-54b8-4273-b672-138c948e6c86",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort"
+                    "parameterType": "Application",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "1d692017-76c5-4966-97dc-7682fdfb9856": {
                     "name": "output",
                     "value": "",
                     "defaultValue": "",
@@ -83,10 +102,13 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "1d692017-76c5-4966-97dc-7682fdfb9856",
-                    "parameterType": "ComponentParameter",
-                    "usage": "OutputPort"
+                    "parameterType": "Component",
+                    "usage": "OutputPort",
+                    "edgeIds": [
+                        "7b141edb-1aaa-48d2-b323-a18ec9d490f1"
+                    ]
                 },
-                {
+                "d3ebfe3c-2bf1-4436-af91-0ce5ebe984f2": {
                     "name": "base_name",
                     "value": "astropy.coordinates.earth.EarthLocation",
                     "defaultValue": "astropy.coordinates.earth.EarthLocation",
@@ -98,10 +120,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "d3ebfe3c-2bf1-4436-af91-0ce5ebe984f2",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "a0dd620a-a387-42d6-8820-ce0a8dafd285": {
                     "name": "group_start",
                     "value": false,
                     "defaultValue": "dummy",
@@ -113,10 +136,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "a0dd620a-a387-42d6-8820-ce0a8dafd285",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "8d21be51-0dfa-4aee-8cc0-2fa6c1c2676d": {
                     "name": "execution_time",
                     "value": 2,
                     "defaultValue": "2",
@@ -128,10 +152,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "8d21be51-0dfa-4aee-8cc0-2fa6c1c2676d",
-                    "parameterType": "ConstraintParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Constraint",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "cdefb869-d0e7-40b1-ac15-f9be3eadaac4": {
                     "name": "num_cpus",
                     "value": 1,
                     "defaultValue": "dummy",
@@ -143,10 +168,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "cdefb869-d0e7-40b1-ac15-f9be3eadaac4",
-                    "parameterType": "ConstraintParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Constraint",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "0cdf8260-0679-44f7-be51-9bae6fc2d2be": {
                     "name": "func_name",
                     "value": "astropy.coordinates.earth.EarthLocation.of_address",
                     "defaultValue": "astropy.coordinates.earth.EarthLocation.of_address",
@@ -158,10 +184,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "0cdf8260-0679-44f7-be51-9bae6fc2d2be",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "7d3da431-554d-4477-8f0b-81db39c4da02": {
                     "name": "dropclass",
                     "value": "dlg.apps.pyfunc.PyFuncApp",
                     "defaultValue": "dlg.apps.pyfunc.PyFuncApp",
@@ -173,41 +200,30 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "7d3da431-554d-4477-8f0b-81db39c4da02",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
+            },
             "inputApplicationId": null,
-            "inputApplicationDescription": "",
-            "inputApplicationComment": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationId": null,
-            "outputApplicationDescription": "",
-            "outputApplicationComment": ""
+            "outputApplicationId": null
         },
-        {
+        "4efdd14a-09b0-4a2b-b0d7-841f1dd3e963": {
             "category": "Memory",
             "categoryType": "Data",
-            "isGroup": false,
-            "color": "#2c2c2c",
-            "drawOrderHint": 0,
             "id": "4efdd14a-09b0-4a2b-b0d7-841f1dd3e963",
             "name": "geocentric",
             "description": "In-memory storage of intermediate data products",
-            "comment": "",
             "x": 657.7262311843449,
             "y": 94.55751117015969,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "ff6f09b",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/master/daliuge/daliuge-master.palette",
             "dataHash": "fb6b9cc58716743665932ec7d3eba94334ea8ab892708fdb4658751a1878ed22",
-            "fields": [
-                {
+            "parentId": null,
+            "embedId": null,
+            "fields": {
+                "c7a4bfc4-516e-4f5c-ae53-d164502a5d2b": {
                     "name": "output",
                     "value": "",
                     "defaultValue": "",
@@ -219,10 +235,14 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "c7a4bfc4-516e-4f5c-ae53-d164502a5d2b",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "InputOutput"
+                    "parameterType": "Application",
+                    "usage": "InputOutput",
+                    "edgeIds": [
+                        "7b141edb-1aaa-48d2-b323-a18ec9d490f1",
+                        "3d4cdff0-0816-457a-be51-9156cd03a0d1"
+                    ]
                 },
-                {
+                "743e3961-6de8-4fd8-9573-12447e6e1abc": {
                     "name": "pydata",
                     "value": "None",
                     "defaultValue": "None",
@@ -234,10 +254,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "743e3961-6de8-4fd8-9573-12447e6e1abc",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort"
+                    "parameterType": "Application",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "673d4a21-e1e6-49dd-a438-5551b218bf2a": {
                     "name": "persist",
                     "value": false,
                     "defaultValue": "False",
@@ -249,10 +270,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "673d4a21-e1e6-49dd-a438-5551b218bf2a",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "7f9df7e2-0a0b-4047-a1d0-4d46a747f464": {
                     "name": "data_volume",
                     "value": 5,
                     "defaultValue": "5",
@@ -264,10 +286,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "7f9df7e2-0a0b-4047-a1d0-4d46a747f464",
-                    "parameterType": "ConstraintParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Constraint",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "9b3d02f8-2288-423f-a7b0-2e300288668e": {
                     "name": "group_end",
                     "value": false,
                     "defaultValue": "False",
@@ -279,10 +302,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "9b3d02f8-2288-423f-a7b0-2e300288668e",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "736d6ed9-3b58-4b51-a508-c3d75aa6d168": {
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "False",
@@ -294,10 +318,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "736d6ed9-3b58-4b51-a508-c3d75aa6d168",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "b43de6be-1381-4761-b470-f7e0fcf3b0ea": {
                     "name": "dropclass",
                     "value": "dlg.data.drops.memory.InMemoryDROP",
                     "defaultValue": "dlg.data.drops.memory.InMemoryDROP",
@@ -309,10 +334,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "b43de6be-1381-4761-b470-f7e0fcf3b0ea",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "e1ba2768-333f-4f95-912e-1a06af9964d7": {
                     "name": "base_name",
                     "value": "memory",
                     "defaultValue": "memory",
@@ -324,41 +350,30 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "e1ba2768-333f-4f95-912e-1a06af9964d7",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
+            },
             "inputApplicationId": null,
-            "inputApplicationDescription": "",
-            "inputApplicationComment": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationId": null,
-            "outputApplicationDescription": "",
-            "outputApplicationComment": ""
+            "outputApplicationId": null
         },
-        {
+        "23b1347e-9a45-4010-be12-8d8f8d3d7f69": {
             "category": "PythonMemberFunction",
             "categoryType": "Application",
-            "isGroup": false,
-            "color": "#00bfa6",
-            "drawOrderHint": 0,
             "id": "23b1347e-9a45-4010-be12-8d8f8d3d7f69",
             "name": "EarthLocation.to_geodetic",
             "description": "Convert to geodetic coordinates.",
-            "comment": "",
             "x": 764.5148790213397,
             "y": 98.02725240234145,
             "repositoryUrl": "dlg_paletteGen.generated",
             "commitHash": "0.1",
             "paletteDownloadUrl": "",
             "dataHash": "b331e69009ca32932ad857f138f58b821509fa8e2907a65cdc41fdf407987391",
-            "fields": [
-                {
+            "parentId": null,
+            "embedId": null,
+            "fields": {
+                "06ca10c1-d714-4468-a520-f2819f1bd552": {
                     "name": "self",
                     "value": "",
                     "defaultValue": "",
@@ -370,10 +385,13 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "06ca10c1-d714-4468-a520-f2819f1bd552",
-                    "parameterType": "ComponentParameter",
-                    "usage": "InputPort"
+                    "parameterType": "Component",
+                    "usage": "InputPort",
+                    "edgeIds": [
+                        "3d4cdff0-0816-457a-be51-9156cd03a0d1"
+                    ]
                 },
-                {
+                "35eb30d4-c6bd-4e7c-a80a-f9744a62aa29": {
                     "name": "latlon",
                     "value": "",
                     "defaultValue": "",
@@ -385,10 +403,13 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "35eb30d4-c6bd-4e7c-a80a-f9744a62aa29",
-                    "parameterType": "ComponentParameter",
-                    "usage": "OutputPort"
+                    "parameterType": "Component",
+                    "usage": "OutputPort",
+                    "edgeIds": [
+                        "817e2110-b480-4b6c-aa93-1eb79fa85fb8"
+                    ]
                 },
-                {
+                "8d6687b1-1355-4ff4-bc12-780a251cd8ee": {
                     "name": "base_name",
                     "value": "astropy.coordinates.earth.EarthLocation",
                     "defaultValue": "astropy.coordinates.earth.EarthLocation",
@@ -400,10 +421,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "8d6687b1-1355-4ff4-bc12-780a251cd8ee",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "4e7471cf-e60a-49e8-84ad-59c183bdb0f7": {
                     "name": "group_start",
                     "value": false,
                     "defaultValue": "dummy",
@@ -415,10 +437,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "4e7471cf-e60a-49e8-84ad-59c183bdb0f7",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "21f99592-2630-42e0-98bd-656dde0c23e9": {
                     "name": "execution_time",
                     "value": 2,
                     "defaultValue": "2",
@@ -430,10 +453,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "21f99592-2630-42e0-98bd-656dde0c23e9",
-                    "parameterType": "ConstraintParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Constraint",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "7b367c7c-87c1-497b-a42d-4b94295332fc": {
                     "name": "num_cpus",
                     "value": 1,
                     "defaultValue": "dummy",
@@ -445,10 +469,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "7b367c7c-87c1-497b-a42d-4b94295332fc",
-                    "parameterType": "ConstraintParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Constraint",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "ff17f0c9-d6ec-4082-8c58-a2107a50a10d": {
                     "name": "func_name",
                     "value": "astropy.coordinates.earth.EarthLocation.to_geodetic",
                     "defaultValue": "astropy.coordinates.earth.EarthLocation.to_geodetic",
@@ -460,10 +485,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "ff17f0c9-d6ec-4082-8c58-a2107a50a10d",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "6fceb600-e987-4f51-9d15-cb42b02975f0": {
                     "name": "dropclass",
                     "value": "dlg.apps.pyfunc.PyFuncApp",
                     "defaultValue": "dlg.apps.pyfunc.PyFuncApp",
@@ -475,41 +501,30 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "6fceb600-e987-4f51-9d15-cb42b02975f0",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
+            },
             "inputApplicationId": null,
-            "inputApplicationDescription": "",
-            "inputApplicationComment": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationId": null,
-            "outputApplicationDescription": "",
-            "outputApplicationComment": ""
+            "outputApplicationId": null
         },
-        {
+        "92451949-782c-4136-bcac-6d26e6538e33": {
             "category": "File",
             "categoryType": "Data",
-            "isGroup": false,
-            "color": "#2c2c2c",
-            "drawOrderHint": 0,
             "id": "92451949-782c-4136-bcac-6d26e6538e33",
             "name": "geodetic location",
             "description": "A standard file on a filesystem mounted to the deployment machine",
-            "comment": "",
             "x": 848.5955552310504,
             "y": 84.90813720478988,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "ff6f09b",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE-graph-repo/master/daliuge/daliuge-master.palette",
             "dataHash": "fb6b9cc58716743665932ec7d3eba94334ea8ab892708fdb4658751a1878ed22",
-            "fields": [
-                {
+            "parentId": null,
+            "embedId": null,
+            "fields": {
+                "f093fc48-ad97-4895-9e26-f16f69f631b5": {
                     "name": "filepath",
                     "value": "",
                     "defaultValue": "",
@@ -521,10 +536,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "f093fc48-ad97-4895-9e26-f16f69f631b5",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "NoPort"
+                    "parameterType": "Application",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "98fe7b0b-cb8a-4f36-a486-037515136d57": {
                     "name": "check_filepath_exists",
                     "value": false,
                     "defaultValue": "False",
@@ -536,10 +552,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "98fe7b0b-cb8a-4f36-a486-037515136d57",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "4700b9ed-1e3f-45ef-baf4-15a45f84ec71": {
                     "name": "dropclass",
                     "value": "dlg.data.drops.file.FileDROP",
                     "defaultValue": "dlg.data.drops.file.FileDROP",
@@ -551,10 +568,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "4700b9ed-1e3f-45ef-baf4-15a45f84ec71",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "61e55403-a49a-4e86-a0c7-4902988f769f": {
                     "name": "base_name",
                     "value": "file",
                     "defaultValue": "file",
@@ -566,10 +584,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "61e55403-a49a-4e86-a0c7-4902988f769f",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "1457af2b-3f7e-4f2c-a023-37150c37b8a9": {
                     "name": "streaming",
                     "value": false,
                     "defaultValue": "False",
@@ -581,10 +600,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "1457af2b-3f7e-4f2c-a023-37150c37b8a9",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "169053ef-c14c-4d90-8854-da2ca2e3a270": {
                     "name": "persist",
                     "value": true,
                     "defaultValue": "True",
@@ -596,10 +616,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "169053ef-c14c-4d90-8854-da2ca2e3a270",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "47d5ac88-c284-47ea-a375-235c4163263f": {
                     "name": "data_volume",
                     "value": 5,
                     "defaultValue": "5",
@@ -611,10 +632,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "47d5ac88-c284-47ea-a375-235c4163263f",
-                    "parameterType": "ConstraintParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Constraint",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "d7c9b6ad-369f-453a-8878-3e609393e89d": {
                     "name": "group_end",
                     "value": false,
                     "defaultValue": "False",
@@ -626,10 +648,11 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "d7c9b6ad-369f-453a-8878-3e609393e89d",
-                    "parameterType": "ComponentParameter",
-                    "usage": "NoPort"
+                    "parameterType": "Component",
+                    "usage": "NoPort",
+                    "edgeIds": []
                 },
-                {
+                "80e3b91f-c130-436a-9158-093be0b1696c": {
                     "name": "latlon",
                     "value": "",
                     "defaultValue": "",
@@ -641,51 +664,44 @@
                     "positional": false,
                     "encoding": "pickle",
                     "id": "80e3b91f-c130-436a-9158-093be0b1696c",
-                    "parameterType": "ApplicationArgument",
-                    "usage": "InputOutput"
+                    "parameterType": "Application",
+                    "usage": "InputOutput",
+                    "edgeIds": [
+                        "817e2110-b480-4b6c-aa93-1eb79fa85fb8"
+                    ]
                 }
-            ],
-            "inputAppFields": [],
-            "outputAppFields": [],
-            "inputApplicationName": "",
-            "inputApplicationType": "None",
+            },
             "inputApplicationId": null,
-            "inputApplicationDescription": "",
-            "inputApplicationComment": "",
-            "outputApplicationName": "",
-            "outputApplicationType": "None",
-            "outputApplicationId": null,
-            "outputApplicationDescription": "",
-            "outputApplicationComment": ""
+            "outputApplicationId": null
         }
-    ],
-    "linkDataArray": [
-        {
-            "comment": "",
-            "from": "bd2ff1aa-4142-4ae7-806f-bbd69e2b142c",
-            "fromPort": "1d692017-76c5-4966-97dc-7682fdfb9856",
-            "to": "4efdd14a-09b0-4a2b-b0d7-841f1dd3e963",
-            "toPort": "c7a4bfc4-516e-4f5c-ae53-d164502a5d2b",
-            "loop_aware": "0",
+    },
+    "edges": {
+        "7b141edb-1aaa-48d2-b323-a18ec9d490f1": {
+            "id": "7b141edb-1aaa-48d2-b323-a18ec9d490f1",
+            "srcNodeId": "bd2ff1aa-4142-4ae7-806f-bbd69e2b142c",
+            "srcPortId": "1d692017-76c5-4966-97dc-7682fdfb9856",
+            "destNodeId": "4efdd14a-09b0-4a2b-b0d7-841f1dd3e963",
+            "destPortId": "c7a4bfc4-516e-4f5c-ae53-d164502a5d2b",
+            "loopAware": false,
             "closesLoop": false
         },
-        {
-            "comment": "",
-            "from": "4efdd14a-09b0-4a2b-b0d7-841f1dd3e963",
-            "fromPort": "c7a4bfc4-516e-4f5c-ae53-d164502a5d2b",
-            "to": "23b1347e-9a45-4010-be12-8d8f8d3d7f69",
-            "toPort": "06ca10c1-d714-4468-a520-f2819f1bd552",
-            "loop_aware": "0",
+        "3d4cdff0-0816-457a-be51-9156cd03a0d1": {
+            "id": "3d4cdff0-0816-457a-be51-9156cd03a0d1",
+            "srcNodeId": "4efdd14a-09b0-4a2b-b0d7-841f1dd3e963",
+            "srcPortId": "c7a4bfc4-516e-4f5c-ae53-d164502a5d2b",
+            "destNodeId": "23b1347e-9a45-4010-be12-8d8f8d3d7f69",
+            "destPortId": "06ca10c1-d714-4468-a520-f2819f1bd552",
+            "loopAware": false,
             "closesLoop": false
         },
-        {
-            "comment": "",
-            "from": "23b1347e-9a45-4010-be12-8d8f8d3d7f69",
-            "fromPort": "35eb30d4-c6bd-4e7c-a80a-f9744a62aa29",
-            "to": "92451949-782c-4136-bcac-6d26e6538e33",
-            "toPort": "80e3b91f-c130-436a-9158-093be0b1696c",
-            "loop_aware": "0",
+        "817e2110-b480-4b6c-aa93-1eb79fa85fb8": {
+            "id": "817e2110-b480-4b6c-aa93-1eb79fa85fb8",
+            "srcNodeId": "23b1347e-9a45-4010-be12-8d8f8d3d7f69",
+            "srcPortId": "35eb30d4-c6bd-4e7c-a80a-f9744a62aa29",
+            "destNodeId": "92451949-782c-4136-bcac-6d26e6538e33",
+            "destPortId": "80e3b91f-c130-436a-9158-093be0b1696c",
+            "loopAware": false,
             "closesLoop": false
         }
-    ]
+    }
 }
