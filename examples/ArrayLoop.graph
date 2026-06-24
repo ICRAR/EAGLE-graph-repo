@@ -64,7 +64,7 @@
                 "561c628f-3b48-47c9-a243-26399ea2ce5c": {
                     "fields": {
                         "9b88af5d-dec2-4783-95d9-f4bfa40b29e3": {
-                            "value": 1,
+                            "value": 10,
                             "comment": ""
                         }
                     }
@@ -72,7 +72,7 @@
                 "fde5eebf-d11c-4847-a30f-72248a836e89": {
                     "fields": {
                         "3bf338a5-f9c7-40c8-956b-6aa60cf65d49": {
-                            "value": 2,
+                            "value": 10,
                             "comment": ""
                         }
                     }
@@ -959,7 +959,7 @@
                 },
                 {
                     "name": "func_code",
-                    "value": "import dill\ndef first_line(filename):\n\tfilename = str(dill.loads(filename))\n\twith open(filename, \"r\") as f:\n\t\tline = f.readline()\n\tprint(f\"First line: {line}\")\n\treturn line\n",
+                    "value": "import dill\ndef first_line(filename):\n\tfilename = str(dill.loads(filename))\n\twith open(filename, \"r\") as f:\n\t\tline = f.readline()\n\tprint(f\"First line: {line}\")\n\treturn f\"{filename}: {line}\"\n",
                     "defaultValue": "",
                     "description": "Python function code, e.g. 'def func_name(args): return args'. Note that func_name above needs to match the defined name here.",
                     "readonly": false,
