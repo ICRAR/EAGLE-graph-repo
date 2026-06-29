@@ -63,16 +63,16 @@
             "nodes": {
                 "f61da332-0f2d-4b8d-9701-dae865f4968e": {
                     "fields": {
-                        "265320dd-c313-4d56-9f0d-aa9c4f3c28c6": {
-                            "value": "echo \"$DLG_ROOT/testdata/*\" >  {content}",
+                        "71ee2e7c-6395-40b4-bd43-0e5462564b8e": {
+                            "value": "$DLG_ROOT/testdata/*",
                             "comment": ""
                         }
                     }
                 },
                 "261c79e9-8377-4381-93b3-bd2d12fe65df": {
                     "fields": {
-                        "8cb23a9d-ac5f-4b36-93f5-822dcf926ebf": {
-                            "value": "echo \"{recursive}\" > {output}",
+                        "84777fe6-f52c-4dac-a270-e602d7e91258": {
+                            "value": false,
                             "comment": ""
                         }
                     }
@@ -317,8 +317,8 @@
             "name": "recursive",
             "description": "A standard file on a filesystem mounted to the deployment machine \nIn some cases drops are created **outside** the context of a session, most notably during unit tests. In these cases the base directory is a fixed location under ``/tmp``.\nThe following table summarizes the calculation of the final path used by the ``FileDrop`` class depending on its parameters:\n============ ===================== ===================== ========== . filepath ------------ ------------------------------------------------------ dirname empty relative absolute ============ ===================== ===================== ========== **empty** /``$B``/``$u`` /``$B``/``$f`` /``$f`` **relative** /``$B``/``$d``/``$u`` /``$B``/``$d``/``$f`` **ERROR** **absolute** /``$d``/``$u`` /``$d``/``$f`` **ERROR** ============ ===================== ===================== ==========\nIn the table, ``$f`` is the value of ``filepath``, ``$d`` is the value of ``dirname``, ``$u`` is the drop's UID and ``$B`` is the base directory for this drop's session, namely ``/the/cwd/$session_id``.",
             "comment": "",
-            "x": 1506.75997916706,
-            "y": 467.5,
+            "x": 1516.0386156845052,
+            "y": 453.25066534820917,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -480,11 +480,11 @@
             "color": "#0059a5",
             "drawOrderHint": 0,
             "id": "261c79e9-8377-4381-93b3-bd2d12fe65df",
-            "name": "generate",
+            "name": "generate recursive",
             "description": "An application component able to run an arbitrary command within the Bash Shell",
             "comment": "",
-            "x": 1392.5,
-            "y": 488.12805330170943,
+            "x": 1393.8255195024922,
+            "y": 481.5004557892486,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -522,7 +522,7 @@
                 },
                 {
                     "name": "command",
-                    "value": "echo \"True\" >",
+                    "value": "echo {recursive} > {output}",
                     "defaultValue": "",
                     "description": "The command to be executed",
                     "readonly": false,
@@ -649,8 +649,8 @@
             "name": "output",
             "description": "An application component able to run an arbitrary command within the Bash Shell",
             "comment": "",
-            "x": 1825.5,
-            "y": 381.5,
+            "x": 1821.8548213681465,
+            "y": 416.2948869404195,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -827,11 +827,11 @@
             "color": "#0059a5",
             "drawOrderHint": 0,
             "id": "f61da332-0f2d-4b8d-9701-dae865f4968e",
-            "name": "generate",
+            "name": "generate path",
             "description": "An application component able to run an arbitrary command within the Bash Shell",
             "comment": "",
-            "x": 1391.5,
-            "y": 377.5,
+            "x": 1394.4824188806074,
+            "y": 352.6465093282718,
             "repositoryUrl": "",
             "commitHash": "",
             "paletteDownloadUrl": "",
@@ -869,7 +869,7 @@
                 },
                 {
                     "name": "command",
-                    "value": "echo \"'**'\" > ",
+                    "value": "echo \"{search_path}\" > {content} ",
                     "defaultValue": "",
                     "description": "The command to be executed",
                     "readonly": false,
@@ -986,6 +986,21 @@
                     "id": "42d33199-1102-4e98-afde-8921afc47052",
                     "parameterType": "ComponentParameter",
                     "usage": "NoPort"
+                },
+                {
+                    "name": "search_path",
+                    "value": "$DLG_ROOT/testdata/*",
+                    "defaultValue": "",
+                    "description": "",
+                    "readonly": false,
+                    "type": "String",
+                    "precious": false,
+                    "options": [],
+                    "positional": false,
+                    "encoding": "pickle",
+                    "id": "71ee2e7c-6395-40b4-bd43-0e5462564b8e",
+                    "parameterType": "ApplicationArgument",
+                    "usage": "NoPort"
                 }
             ],
             "inputAppFields": [],
@@ -1012,7 +1027,7 @@
             "description": "A standard file on a filesystem mounted to the deployment machine",
             "comment": "",
             "x": 1724.5149375011804,
-            "y": 396.6540474837946,
+            "y": 417.86235952366934,
             "repositoryUrl": "https://github.com/ICRAR/daliuge",
             "commitHash": "54f1aac",
             "paletteDownloadUrl": "https://raw.githubusercontent.com/ICRAR/EAGLE_test_repo/master/daliuge/daliuge-master.palette",
